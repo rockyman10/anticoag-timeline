@@ -5,6 +5,16 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-09-26",
+      title: "DDI deferred tranche — release hygiene",
+      items: [
+        "DDI deferred tranche 2026-09-26 → 278 (was advertising 274)",
+        "Replace edoxaban-clarithromycin (Lenard therapeutic-dose); append warfarin-omeprazole/pantoprazole/bosentan/erythromycin",
+        "Oncology TKI pause retained; drafts/ remain local-only in zip"
+      ]
+    },
+
+    {
       date: "2026-09-23",
       title: "DDI clinic-gap expansion — release hygiene",
       items: [

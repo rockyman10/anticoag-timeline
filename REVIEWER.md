@@ -9,6 +9,13 @@ Edit `js/site-meta.js` → `ANTICOAG_SITE_META.reviewedBy` (or replace the place
 This resource is educational only and does not replace guidelines, product labeling, or institutional protocols.
 
 
+## 2026-09-26 accuracy note — DDI deferred tranche
+
+Append-only hygiene after Clinical Reviewer OK: library total **278** (was 274). Replaced live `edoxaban-clarithromycin` with Lenard therapeutic-dose PK (+53% AUC / +27% Cmax; US SAVAYSA NVAF vs DVT/PE fork; microdose GMR 2.03 not taught as clinical magnitude; Hill cohort did not enroll edoxaban). Appended `warfarin-omeprazole`, `warfarin-pantoprazole`, `warfarin-bosentan`, `warfarin-erythromycin`. Re-deferred left untouched (bosentan×DOAC, rifabutin, erythromycin→apix/dabig, colchicine×other DOACs, oncology incomplete AUC). Oncology TKI pause retained. Andexxa not taught as available U.S. reversal. Named `reviewedBy` remains the pending placeholder.
+
+Prior notes retained below.
+
+
 ## 2026-09-23 accuracy note
 
 Site stamp aligned with `ANTICOAG_SITE_META.lastLiteratureSweep`. Named faculty `reviewedBy` remains the pending placeholder (do not invent a reviewer name).

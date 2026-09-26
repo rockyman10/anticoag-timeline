@@ -4,11 +4,13 @@ Teaching timeline of high-impact anticoagulation RCTs (DOAC era → 2026). **Edu
 
 ## Open locally
 
-Open `index.html` in a browser, or from the repository root:
+Open `index.html` in a browser, or from the repository / site-root folder:
 
 ```bash
 python3 -m http.server 8080
 ```
+
+(If working from a parent directory that contains an `anticoag-timeline/` site tree, `cd anticoag-timeline` first.)
 
 ## Features
 
@@ -41,6 +43,8 @@ This repository is the site root (`index.html` at `/`, not nested under `anticoa
 3. **Netlify:** drag-and-drop the repository root or connect the repo; publish directory = site root.
 4. Share URLs like `https://rockyman10.github.io/anticoag-timeline/#/trial/cobrra`, `#/pathway-tx/af-stroke`, `#/framework/cancer-vte`, `#/reversal`.
 5. Embed with `?embed=1` plus an optional hash (see **Embed** in the app).
+
+Drafts under `drafts/` are box/working notes only — not part of the published Pages framing.
 
 ## Regulatory note (U.S.)
 **Andexxa (andexanet alfa)** is **not available in the U.S.** after **Dec 22, 2025** (FDA safety communication / BLA withdrawal for TE risk). Teach U.S. FXa-inhibitor major bleed as supportive care + institutional **4F-PCC**; idarucizumab remains for dabigatran. Ondexxya/andexanet may remain available outside the U.S. — verify formulary. See `#/reversal` and `#/trial/annexa-i`.

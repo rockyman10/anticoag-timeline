@@ -393,6 +393,16 @@
       padding: .55rem .65rem; margin-bottom: .75rem; color: var(--ink-2);
     }
 
+    .board-empty {
+      text-align: center; padding: 2rem 1.25rem; color: var(--muted);
+      max-width: 28rem; margin: 1.5rem auto;
+    }
+    .board-empty h3 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.125rem; font-weight: 600; color: var(--ink); margin: 0 0 .5rem;
+    }
+    .board-empty p { margin: 0 0 1rem; font-size: .875rem; line-height: 1.45; }
+    .board-empty .btn { margin-top: .25rem; }
     .cmp-empty { text-align: center; padding: 1.75rem 1rem; color: var(--muted); }
     .cmp-empty h3 {
       font-family: "Source Serif 4", Georgia, serif;
@@ -646,6 +656,18 @@
       padding: .25rem;
     }
     .teach-menu[hidden] { display: none !important; }
+    .teach-menu-label {
+      font-size: .625rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: .55rem .65rem .15rem;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1.2;
+    }
+    .teach-menu-label:first-child { padding-top: .35rem; }
     .teach-menu .btn, .teach-menu [role="menuitem"] {
       display: block; width: 100%; text-align: left;
       font-size: .8125rem; font-weight: 600;
@@ -950,13 +972,16 @@
         Teach <span class="teach-chev" aria-hidden="true">▾</span>
       </button>
       <div class="teach-menu" id="teach-menu" role="menu" aria-label="Teaching tools" hidden>
+        <div class="teach-menu-label" aria-hidden="true">Practice</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-txpath">Treatment pathways</button>
-        <button type="button" class="btn sm ghost" role="menuitem" id="btn-cacp">CACP prep</button>
+        <button type="button" class="btn sm ghost" role="menuitem" id="btn-reversal">Bleed &amp; reversal</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-ddi">DDI library</button>
+        <div class="teach-menu-label" aria-hidden="true">Teaching tools</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-frameworks">Frameworks</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cases">Cases</button>
-        <button type="button" class="btn sm ghost" role="menuitem" id="btn-reversal">Bleed &amp; reversal</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-nuance">Nuance</button>
+        <button type="button" class="btn sm ghost" role="menuitem" id="btn-cacp">CACP prep</button>
+        <div class="teach-menu-label" aria-hidden="true">Site</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-changelog">Changelog</button>
       </div>
     </div>
@@ -1232,7 +1257,6 @@
   <script src="js/nuances.js"></script>
   <script src="js/cases.js"></script>
   <script src="js/practical.js"></script>
-  <script src="js/ddi.js"></script>
   <script src="js/cacp.js"></script>
   <script>
 (function () {
@@ -1269,7 +1293,64 @@
   const cases = window.ANTICOAG_CASES || [];
   const practical = window.ANTICOAG_PRACTICAL || {};
   const txPathLib = window.ANTICOAG_TX_PATHWAYS || { pathways: [], meta: {} };
-  const ddiLib = window.ANTICOAG_DDI || { entries: [], anticoagulants: [], mechanismFilters: [], meta: {}, primer: {}, howToUse: {}, whyCdsWrong: {} };
+  let ddiLib = window.ANTICOAG_DDI || { entries: [], anticoagulants: [], mechanismFilters: [], meta: {}, primer: {}, howToUse: {}, whyCdsWrong: {} };
+  function refreshDdiLib() {
+    if (window.ANTICOAG_DDI) ddiLib = window.ANTICOAG_DDI;
+  }
+
+  function loadDdiOnce() {
+    if (window.ANTICOAG_DDI) {
+      refreshDdiLib();
+      return Promise.resolve(window.ANTICOAG_DDI);
+    }
+    if (window.__ddiLoadPromise) return window.__ddiLoadPromise;
+    window.__ddiLoadPromise = new Promise((resolve, reject) => {
+      const s = document.createElement("script");
+      s.src = "js/ddi.js";
+      s.async = true;
+      s.onload = () => {
+        if (window.ANTICOAG_DDI) {
+          refreshDdiLib();
+          resolve(window.ANTICOAG_DDI);
+        } else {
+          window.__ddiLoadPromise = null;
+          reject(new Error("DDI script loaded but ANTICOAG_DDI missing"));
+        }
+      };
+      s.onerror = () => {
+        window.__ddiLoadPromise = null;
+        reject(new Error("Failed to load js/ddi.js"));
+      };
+      document.head.appendChild(s);
+    });
+    return window.__ddiLoadPromise;
+  }
+
+  function showDdiLoading(opts) {
+    opts = opts || {};
+    teachRoute = { kind: "ddi", id: null };
+    const titleEl = document.getElementById("teach-title");
+    const subEl = document.getElementById("teach-sub");
+    const body = document.getElementById("teach-body");
+    titleEl.textContent = "DDI library";
+    subEl.textContent = "Loading…";
+    body.innerHTML = `<p class="teach-lead" role="status">Loading DDI library…</p>`;
+    setTeachDocTitle("DDI library");
+    const bd = document.getElementById("bd-teach");
+    if (bd.hidden) openModal("teach");
+    return body;
+  }
+
+  function showDdiLoadError(opts, err) {
+    const body = document.getElementById("teach-body");
+    const subEl = document.getElementById("teach-sub");
+    if (subEl) subEl.textContent = "Unavailable";
+    body.innerHTML = `<p class="teach-lead" role="alert">Could not load DDI library.</p>
+      <p style="color:var(--muted);font-size:.875rem;margin:.5rem 0 1rem">Check your connection and try again.</p>
+      <button type="button" class="btn sm primary" id="ddi-retry">Retry</button>`;
+    const retry = document.getElementById("ddi-retry");
+    if (retry) retry.onclick = () => openDdi(opts || { view: "home" });
+  }
   const siteMeta = window.ANTICOAG_SITE_META || {};
   const BASE_TITLE = "Anticoagulation Trials Timeline";
   let teachRoute = null; // { kind, id? }
@@ -1290,11 +1371,23 @@
   indHost.innerHTML = `<button type="button" class="chip active" data-ind="all">All</button>` +
     LANES.map(l => `<button type="button" class="chip" data-ind="${l.key}" style="--m-color:${l.hex}">${l.label}</button>`).join("");
 
+  function syncOpenIndRow() {
+    const row = document.getElementById("ind-row");
+    const toggle = document.getElementById("ind-toggle");
+    if (!row || !toggle) return;
+    const desktop = window.matchMedia("(min-width: 641px)").matches;
+    const forceOpen = indF.size > 0;
+    const open = forceOpen || desktop;
+    row.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.textContent = open ? "Hide indications" : "Indications";
+  }
+
   document.getElementById("ind-toggle").onclick = function () {
     const row = document.getElementById("ind-row");
     const on = !row.classList.contains("open");
     row.classList.toggle("open", on);
-    this.setAttribute("aria-expanded", on);
+    this.setAttribute("aria-expanded", on ? "true" : "false");
     this.textContent = on ? "Hide indications" : "Indications";
   };
 
@@ -1310,8 +1403,12 @@
       if (b.classList.contains("active")) indF.add(v); else indF.delete(v);
       if (!indF.size) indHost.querySelector('[data-ind="all"]').classList.add("active");
     }
+    syncOpenIndRow();
     draw();
   };
+
+  window.addEventListener("resize", syncOpenIndRow);
+  syncOpenIndRow();
 
   document.getElementById("status-filters").onclick = (e) => {
     const b = e.target.closest("[data-status]"); if (!b) return;
@@ -1369,6 +1466,18 @@
     return { items, subCount: Math.max(1, laneRights.length) };
   }
 
+  function resetFilters() {
+    q = "";
+    const searchEl = document.getElementById("search");
+    if (searchEl) searchEl.value = "";
+    statusF = "all";
+    document.querySelectorAll("#status-filters .chip").forEach(c => c.classList.toggle("active", c.dataset.status === "all"));
+    indF.clear();
+    indHost.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c.dataset.ind === "all"));
+    syncOpenIndRow();
+    draw();
+  }
+
   function draw() {
     const items = list();
     document.getElementById("count").textContent = `${items.length} / ${trials.length}`;
@@ -1391,9 +1500,23 @@
     lanesEl.innerHTML = "";
     order = [];
 
+    if (!items.length) {
+      lanesEl.innerHTML = `<div class="board-empty" role="status" aria-live="polite">
+        <h3>No trials match</h3>
+        <p>Clear search or status / indication filters</p>
+        <button type="button" class="btn sm primary" id="btn-reset-filters">Reset filters</button>
+      </div>`;
+      document.getElementById("legend").innerHTML = LANES.map(l =>
+        `<span><i style="background:${l.hex}"></i>${l.label}</span>`
+      ).join("") + `<span>Sub-lanes separate concurrent trials · Tier badge · Dashed = pending</span>`;
+      const resetBtn = document.getElementById("btn-reset-filters");
+      if (resetBtn) resetBtn.onclick = resetFilters;
+      return;
+    }
+
     const visibleLanes = LANES.filter(l => {
       if (indF.size) return indF.has(l.key);
-      return items.some(t => t.indication === l.key) || !items.length;
+      return items.some(t => t.indication === l.key);
     });
 
     visibleLanes.forEach(lane => {
@@ -2628,8 +2751,26 @@
     );
   }
 
-  function openDdi(opts) {
+  async function openDdi(opts) {
     opts = opts || {};
+    if (!window.ANTICOAG_DDI) {
+      showDdiLoading(opts);
+      if (!opts.skipRoute) {
+        if (opts.view === "detail" && opts.ac && opts.interactor) setRoute("ddi", opts.ac.toLowerCase() + "/" + opts.interactor, opts.replaceRoute);
+        else if (opts.view === "compare" && opts.compare) setRoute("ddi", "compare/" + slugifyDdi(opts.compare), opts.replaceRoute);
+        else if (opts.compare) setRoute("ddi", "compare/" + slugifyDdi(opts.compare), opts.replaceRoute);
+        else if (opts.ac && opts.interactor) setRoute("ddi", opts.ac.toLowerCase() + "/" + opts.interactor, opts.replaceRoute);
+        else setRoute("ddi", null, opts.replaceRoute);
+      }
+      try {
+        await loadDdiOnce();
+      } catch (err) {
+        showDdiLoadError(opts, err);
+        return;
+      }
+    } else {
+      refreshDdiLib();
+    }
     ddiState.view = opts.view || "home";
     if (opts.ac) ddiState.ac = opts.ac === "all" ? "all" : opts.ac;
     if (opts.interactor) {
@@ -3544,6 +3685,12 @@
     const w = document.getElementById("canvas").offsetWidth;
     scroller.scrollLeft = Math.max(0, xOf(2017, w) - scroller.clientWidth * 0.35);
     applyRoute(false);
+    const prefetch = () => { loadDdiOnce().catch(() => {}); };
+    if (typeof requestIdleCallback === "function") {
+      requestIdleCallback(prefetch, { timeout: 4000 });
+    } else {
+      setTimeout(prefetch, 2000);
+    }
   });
 })();
   </script>

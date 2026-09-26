@@ -549,6 +549,10 @@
     body.embed .teach-wrap,
     body.embed #btn-teach,
     body.embed #btn-more,
+    /* Hotfix: hide unfinished Guided overview / Self-check (empty STORY_BEATS / QUIZ_QUESTIONS) */
+    #btn-story,
+    #btn-quiz { display: none !important; }
+
     body.embed #btn-story,
     body.embed #btn-quiz,
     body.embed #btn-embed,
@@ -932,8 +936,8 @@
         <div class="more-wrap" id="more-wrap">
           <button type="button" class="btn sm ghost more-trigger" id="btn-more" aria-expanded="false" aria-controls="more-menu" aria-haspopup="menu" aria-label="More actions">More</button>
           <div class="more-panel" id="more-menu" role="menu" aria-label="More actions" hidden>
-            <button type="button" class="btn sm ghost" role="menuitem" id="btn-story">Guided overview</button>
-            <button type="button" class="btn sm ghost" role="menuitem" id="btn-quiz">Self-check</button>
+            <button type="button" class="btn sm ghost" role="menuitem" id="btn-story" hidden aria-hidden="true" tabindex="-1">Guided overview</button>
+            <button type="button" class="btn sm ghost" role="menuitem" id="btn-quiz" hidden aria-hidden="true" tabindex="-1">Self-check</button>
             <button type="button" class="btn sm ghost" role="menuitem" id="btn-embed">Embed</button>
             <button type="button" class="btn sm ghost" role="menuitem" id="btn-theme" aria-label="Toggle theme">Theme</button>
           </div>
@@ -2161,8 +2165,10 @@
 
   /* Story */
   function openStory(i) {
+    if (!storyBeats.length) return;
     storyI = i;
     const beat = storyBeats[i];
+    if (!beat) return;
     storyFocus = beat.focusIds;
     document.getElementById("s-beat").textContent = `${i + 1} / ${storyBeats.length}. ${beat.title}`;
     document.getElementById("s-body").textContent = beat.body;
@@ -2176,7 +2182,7 @@
       if (b) b.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
     }
   }
-  document.getElementById("btn-story").onclick = () => openStory(0);
+  document.getElementById("btn-story").onclick = () => { if (storyBeats.length) openStory(0); };
   document.getElementById("s-prev").onclick = () => { if (storyI > 0) openStory(storyI - 1); };
   document.getElementById("s-next").onclick = () => {
     if (storyI < storyBeats.length - 1) openStory(storyI + 1);
@@ -2185,11 +2191,14 @@
 
   /* Quiz */
   function showQuiz() {
+    if (!quizQs.length) return;
     quizI = 0; quizScore = 0; quizAns = false; quizDone = false;
     renderQ(); openModal("quiz");
   }
   function renderQ() {
+    if (!quizQs.length) return;
     const qq = quizQs[quizI];
+    if (!qq) return;
     quizAns = false;
     document.getElementById("q-score").textContent = `Score: ${quizScore} / ${quizI}`;
     document.getElementById("q-body").innerHTML =
@@ -2212,7 +2221,7 @@
       };
     });
   }
-  document.getElementById("btn-quiz").onclick = showQuiz;
+  document.getElementById("btn-quiz").onclick = () => { if (quizQs.length) showQuiz(); };
   document.getElementById("q-next").onclick = () => {
     if (quizDone) { showQuiz(); return; }
     if (!quizAns) quizAns = true;

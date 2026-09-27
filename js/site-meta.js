@@ -5,6 +5,16 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-09-27",
+      title: "Core Clinic Path v1 — Learn path chrome",
+      items: [
+        "Teach → Learn path: soft 10-lesson Core Clinic Path over existing teach tools",
+        "On-device progress (localStorage anticoag-learn-v1); Continue + n of 10; no streak UI",
+        "Hash routes #/learn and #/learn/<lessonId>; Story/Quiz stay hidden; chrome-only (no new clinical cards)"
+      ]
+    },
+
+    {
       date: "2026-09-26",
       title: "DDI deferred tranche — release hygiene",
       items: [

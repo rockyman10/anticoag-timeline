@@ -552,6 +552,87 @@
     .cacp-tips summary { cursor: pointer; font-weight: 600; font-size: .875rem; }
     .cacp-tips ul { margin: .4rem 0 0; padding-left: 1.1rem; font-size: .8125rem; color: var(--ink-2); }
 
+
+    /* Learn path (Core Clinic Path) */
+    .modal.learn { max-width: 600px; width: min(600px, 96vw); max-height: 85vh; }
+    .learn-disclaimer {
+      font-size: .8125rem; color: var(--muted); margin: .15rem 0 .35rem; line-height: 1.4;
+    }
+    #learn-progress {
+      padding: .55rem 1.15rem .45rem; border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; background: var(--paper); z-index: 1;
+    }
+    .learn-progress-label {
+      font-size: .8125rem; font-weight: 600; color: var(--ink-2); margin-bottom: .35rem;
+    }
+    .learn-progress-bar {
+      display: flex; gap: .28rem; flex-wrap: nowrap;
+    }
+    .learn-seg {
+      flex: 1; height: 8px; border-radius: 2px; background: var(--line);
+      border: 1px solid transparent; min-width: 0;
+    }
+    .learn-seg.done { background: var(--accent); }
+    .learn-seg.in_progress {
+      background: var(--accent-soft); border-color: var(--accent);
+    }
+    .learn-seg.skipped { background: var(--muted-bg); border: 1px dashed var(--muted); }
+    .learn-hero { margin: 0 0 .75rem; }
+    .learn-hero h3 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.25rem; font-weight: 700; margin: 0 0 .4rem; line-height: 1.25;
+    }
+    .learn-hero p { color: var(--ink-2); font-size: .9375rem; margin: 0 0 .5rem; line-height: 1.45; }
+    .learn-lesson-kicker {
+      font-size: .75rem; font-weight: 700; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: .25rem;
+    }
+    .learn-lesson-title {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.2rem; font-weight: 700; margin: 0 0 .55rem; line-height: 1.25;
+    }
+    .learn-goals { margin: 0 0 .85rem; padding-left: 1.15rem; color: var(--ink-2); }
+    .learn-goals li { margin-bottom: .3rem; font-size: .9375rem; }
+    .learn-cta-stack { display: flex; flex-direction: column; gap: .45rem; margin-bottom: .75rem; }
+    .learn-cta-stack .btn { width: 100%; text-align: center; min-height: 44px; }
+    .learn-callout {
+      font-size: .875rem; color: var(--ink-2); line-height: 1.45;
+      padding: .55rem .7rem; margin: 0 0 .65rem;
+      background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 2px;
+    }
+    .learn-soft-strip {
+      font-size: .875rem; margin: .5rem 0 .65rem; padding: .5rem .65rem;
+      border: 1px dashed var(--line-2); border-radius: 3px; background: var(--bg);
+    }
+    .learn-soft-strip .btn { margin-top: .35rem; }
+    .learn-review-list { display: flex; flex-direction: column; gap: .3rem; margin: .5rem 0 .75rem; }
+    .learn-review-list button {
+      text-align: left; font: inherit; color: var(--ink); background: var(--bg);
+      border: 1px solid var(--line); border-radius: 3px; padding: .45rem .6rem; cursor: pointer;
+      min-height: 44px;
+    }
+    .learn-review-list button:hover { border-color: var(--line-2); background: var(--muted-bg); }
+    .learn-review-list .st { font-size: .75rem; color: var(--muted); margin-left: .35rem; }
+    .m-foot.learn-foot-primary { gap: .4rem; }
+    .m-foot.learn-foot-primary .btn { min-height: 44px; }
+    .m-foot.learn-foot-secondary {
+      justify-content: space-between; align-items: center;
+      border-top: none; padding-top: 0; margin-top: -.35rem;
+    }
+    .m-foot.learn-foot-secondary #learn-explore {
+      min-height: 44px;
+    }
+    .m-foot.learn-foot-secondary .btn-reset-learn {
+      appearance: none; background: none; border: none; color: var(--muted);
+      font: inherit; font-size: .8125rem; text-decoration: underline; cursor: pointer;
+      padding: .35rem .2rem; min-height: 44px;
+    }
+    .m-foot.learn-foot-secondary .btn-reset-learn:hover { color: var(--accent); }
+    @media (max-width: 640px) {
+      .modal.learn { max-width: min(100vw - 16px, 560px); max-height: 92vh; }
+      .learn-cta-stack .btn, .m-foot.learn-foot-primary .btn { min-height: 44px; }
+    }
+
     /* Embed chrome */
     body.embed .topbar .deck,
     body.embed .whats-new,
@@ -977,6 +1058,7 @@
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-reversal">Bleed &amp; reversal</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-ddi">DDI library</button>
         <div class="teach-menu-label" aria-hidden="true">Teaching tools</div>
+        <button type="button" class="btn sm ghost" role="menuitem" id="btn-learn">Learn path</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-frameworks">Frameworks</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cases">Cases</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-nuance">Nuance</button>
@@ -1096,6 +1178,30 @@
 
 
   <!-- Teach pages (frameworks / cases / nuance / reversal / changelog) -->
+
+  <div class="bd" id="bd-learn" hidden>
+    <div class="modal learn" role="dialog" aria-modal="true" aria-labelledby="learn-title" tabindex="-1">
+      <div class="m-head">
+        <div>
+          <h2 id="learn-title">Core Clinic Path</h2>
+          <div class="yrline" id="learn-sub">First anticoagulation clinic week</div>
+          <div class="learn-disclaimer" id="learn-disclaimer"></div>
+        </div>
+        <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
+      </div>
+      <div id="learn-progress" aria-live="polite">
+        <div class="learn-progress-label" id="learn-progress-label">0 of 10</div>
+        <div class="learn-progress-bar" id="learn-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"></div>
+      </div>
+      <div class="m-body" id="learn-body"></div>
+      <div class="m-foot learn-foot-primary" id="learn-foot-primary"></div>
+      <div class="m-foot learn-foot-secondary" id="learn-foot-secondary">
+        <button type="button" class="btn sm ghost" id="learn-explore">Explore Teach freely</button>
+        <button type="button" class="btn-reset-learn" id="learn-reset">Reset Learn path progress</button>
+      </div>
+    </div>
+  </div>
+
   <div class="bd" id="bd-teach" hidden>
     <div class="modal teach" role="dialog" aria-modal="true" aria-labelledby="teach-title" tabindex="-1">
       <div class="m-head">
@@ -1257,6 +1363,7 @@
   <script src="js/nuances.js"></script>
   <script src="js/cases.js"></script>
   <script src="js/practical.js"></script>
+  <script src="js/learn-path.js"></script>
   <script src="js/cacp.js"></script>
   <script>
 (function () {
@@ -2050,6 +2157,15 @@
     if (name === "cacp") {
       teachRoute = null;
       setRoute(null, null, true);
+    }
+    if (name === "learn") {
+      const btnLearn = document.getElementById("btn-learn");
+      if (pathwayId) setRoute("pathway", pathwayId, true);
+      else if (openId) setRoute("trial", trialSlug(byId[openId]), true);
+      else setRoute(null, null, true);
+      if (btnLearn && (!lastFocus || lastFocus === btnLearn || (lastFocus.id === "btn-teach"))) {
+        lastFocus = btnLearn;
+      }
     }
     if (name === "teach") {
       teachRoute = null;
@@ -3605,6 +3721,515 @@
   };
 
 
+
+  /* —— Learn path (Core Clinic Path) —— */
+  const LEARN_STORAGE_KEY = "anticoag-learn-v1";
+  const learnPathData = window.ANTICOAG_LEARN_PATH || { meta: {}, lessons: [] };
+  const learnLessons = Array.isArray(learnPathData.lessons) ? learnPathData.lessons.slice().sort((a, b) => (a.order || 0) - (b.order || 0)) : [];
+  let learnView = { mode: "hub", lessonId: null }; // hub | resume | lesson | complete
+
+  function learnNowIso() {
+    try { return new Date().toISOString(); } catch (e) { return ""; }
+  }
+  function learnEmptyState() {
+    return {
+      schema: 1,
+      trackId: (learnPathData.meta && learnPathData.meta.trackId) || "core-clinic-v1",
+      pathVersion: (learnPathData.meta && learnPathData.meta.pathVersion) || 1,
+      updatedAt: learnNowIso(),
+      lastLessonId: null,
+      lessons: {},
+      streak: null
+    };
+  }
+  function loadLearnProgress() {
+    try {
+      const raw = localStorage.getItem(LEARN_STORAGE_KEY);
+      if (!raw) return learnEmptyState();
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== "object") return learnEmptyState();
+      if (!parsed.lessons || typeof parsed.lessons !== "object") parsed.lessons = {};
+      if (parsed.schema == null) parsed.schema = 1;
+      if (parsed.streak === undefined) parsed.streak = null;
+      if (parsed.pathVersion == null) parsed.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
+      return parsed;
+    } catch (e) {
+      return learnEmptyState();
+    }
+  }
+  function saveLearnProgress(state) {
+    try {
+      state.updatedAt = learnNowIso();
+      state.schema = 1;
+      state.trackId = (learnPathData.meta && learnPathData.meta.trackId) || "core-clinic-v1";
+      state.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
+      if (state.streak === undefined) state.streak = null;
+      localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(state));
+    } catch (e) { /* ignore quota */ }
+  }
+  function resetLearnProgress() {
+    try { localStorage.removeItem(LEARN_STORAGE_KEY); } catch (e) {}
+  }
+  function learnLessonEntry(state, id) {
+    if (!state.lessons[id]) {
+      state.lessons[id] = { status: "not_started", openedPrimary: false, openedDeepen: false };
+    }
+    const e = state.lessons[id];
+    if (e.openedPrimary == null) e.openedPrimary = false;
+    if (e.openedDeepen == null) e.openedDeepen = false;
+    if (!e.status) e.status = "not_started";
+    return e;
+  }
+  function learnStatus(state, id) {
+    return learnLessonEntry(state, id).status;
+  }
+  function countLearnDone(state) {
+    return learnLessons.filter(l => learnStatus(state, l.id) === "done").length;
+  }
+  function allLearnDone(state) {
+    return learnLessons.length > 0 && countLearnDone(state) >= learnLessons.length;
+  }
+  function hasLearnProgress(state) {
+    return learnLessons.some(l => {
+      const s = learnStatus(state, l.id);
+      return s !== "not_started";
+    });
+  }
+  function resumeLessonId(state) {
+    if (state.lastLessonId) {
+      const st = learnStatus(state, state.lastLessonId);
+      if (st !== "done") return state.lastLessonId;
+    }
+    for (const l of learnLessons) {
+      const st = learnStatus(state, l.id);
+      if (st === "not_started" || st === "in_progress") return l.id;
+    }
+    // skipped-only leftovers still incomplete for continue walk
+    for (const l of learnLessons) {
+      if (learnStatus(state, l.id) === "skipped") return l.id;
+    }
+    return learnLessons[0] ? learnLessons[0].id : null;
+  }
+  function nextIncompleteLessonId(state, afterId) {
+    const ids = learnLessons.map(l => l.id);
+    let start = afterId ? ids.indexOf(afterId) + 1 : 0;
+    if (start < 0) start = 0;
+    for (let i = start; i < ids.length; i++) {
+      const st = learnStatus(state, ids[i]);
+      if (st !== "done") return ids[i];
+    }
+    for (let i = 0; i < start; i++) {
+      const st = learnStatus(state, ids[i]);
+      if (st !== "done") return ids[i];
+    }
+    return null;
+  }
+  function findLearnLesson(id) {
+    return learnLessons.find(l => l.id === id) || null;
+  }
+  function learnKindLabel(kind) {
+    const map = {
+      framework: "framework",
+      case: "case",
+      pathway: "playlist",
+      "pathway-tx": "treatment pathway",
+      nuance: "nuance",
+      reversal: "Bleed & reversal",
+      cacp: "CACP",
+      ddi: "DDI"
+    };
+    return map[kind] || kind || "module";
+  }
+  function learnTargetTitle(target) {
+    if (!target) return "";
+    if (target.kind === "framework") {
+      const fw = (typeof frameworks !== "undefined" ? frameworks : []).find(f => f.id === target.id);
+      return fw ? (fw.question || target.id) : target.id;
+    }
+    if (target.kind === "case") {
+      const c = (typeof cases !== "undefined" ? cases : []).find(x => x.id === target.id);
+      return c ? c.title : target.id;
+    }
+    if (target.kind === "pathway") {
+      const p = (typeof pathways !== "undefined" ? pathways : []).find(x => x.id === target.id);
+      return p ? p.title : target.id;
+    }
+    if (target.kind === "nuance") {
+      const n = (typeof nuances !== "undefined" ? nuances : []).find(x => x.id === target.id);
+      return n ? n.title : target.id;
+    }
+    if (target.kind === "reversal") return "Bleed & reversal";
+    if (target.kind === "cacp") return "CACP prep";
+    return target.id || learnKindLabel(target.kind);
+  }
+  function learnPrimaryCtaLabel(lesson) {
+    const t = lesson.primary;
+    const short = learnTargetTitle(t);
+    const clipped = short.length > 42 ? short.slice(0, 40) + "…" : short;
+    if (t.kind === "framework") return "Open framework · " + clipped;
+    if (t.kind === "case") return "Open case · " + clipped;
+    return "Open " + learnKindLabel(t.kind) + " · " + clipped;
+  }
+  function learnDeepenCtaLabel(lesson) {
+    const t = lesson.deepen;
+    if (!t) return "";
+    const short = learnTargetTitle(t);
+    const clipped = short.length > 42 ? short.slice(0, 40) + "…" : short;
+    if (t.kind === "case") return "Deepen · Case: " + clipped;
+    if (t.kind === "pathway") return "Deepen · Playlist: " + clipped;
+    if (t.kind === "nuance") return "Deepen · Nuance: " + clipped;
+    if (t.kind === "reversal") return "Deepen · Bleed & reversal";
+    return "Deepen · " + clipped;
+  }
+
+  function renderLearnProgress(state) {
+    const done = countLearnDone(state);
+    const total = learnLessons.length || 10;
+    const label = document.getElementById("learn-progress-label");
+    const bar = document.getElementById("learn-progress-bar");
+    if (label) label.textContent = done + " of " + total;
+    if (bar) {
+      bar.setAttribute("aria-valuenow", String(done));
+      bar.setAttribute("aria-valuemax", String(total));
+      bar.setAttribute("aria-label", done + " of " + total + " lessons complete");
+      bar.innerHTML = learnLessons.map(l => {
+        const st = learnStatus(state, l.id);
+        const cls = st === "done" ? "done" : (st === "in_progress" ? "in_progress" : (st === "skipped" ? "skipped" : ""));
+        return `<span class="learn-seg ${cls}" title="${esc(l.title)}"></span>`;
+      }).join("");
+    }
+  }
+
+  function renderLearnFooterSecondary() {
+    // static in HTML; wire once
+  }
+
+  function yieldLearnShell() {
+    const bd = document.getElementById("bd-learn");
+    if (!bd || bd.hidden) return;
+    bd.classList.remove("open");
+    bd.hidden = true;
+    if (bd._trap) bd.removeEventListener("keydown", bd._trap);
+    const i = stack.lastIndexOf("learn");
+    if (i >= 0) stack.splice(i, 1);
+  }
+
+  function openLearnTarget(target, lesson, which) {
+    if (!target || !target.kind) return;
+    const state = loadLearnProgress();
+    const entry = learnLessonEntry(state, lesson.id);
+    if (which === "primary") entry.openedPrimary = true;
+    if (which === "deepen") entry.openedDeepen = true;
+    if (entry.status === "not_started" || entry.status === "skipped") entry.status = "in_progress";
+    state.lastLessonId = lesson.id;
+    saveLearnProgress(state);
+
+    yieldLearnShell();
+
+    const kind = target.kind;
+    const id = target.id;
+    if (kind === "framework" || kind === "case" || kind === "nuance" || kind === "reversal") {
+      openTeach(kind === "reversal" ? "reversal" : kind, kind === "reversal" ? null : id);
+    } else if (kind === "pathway") {
+      startPathway(id, 0, false);
+    } else if (kind === "pathway-tx") {
+      openTxPath({ pathwayId: id });
+    } else if (kind === "cacp") {
+      openCacp({});
+    } else if (kind === "ddi") {
+      if (typeof openDdi === "function") openDdi({ view: "home" });
+    }
+  }
+
+  function markLearnLessonDone(lessonId) {
+    const state = loadLearnProgress();
+    const entry = learnLessonEntry(state, lessonId);
+    entry.status = "done";
+    entry.completedAt = learnNowIso();
+    state.lastLessonId = lessonId;
+    saveLearnProgress(state);
+    return state;
+  }
+  function skipLearnLesson(lessonId) {
+    const state = loadLearnProgress();
+    const entry = learnLessonEntry(state, lessonId);
+    if (entry.status !== "done") entry.status = "skipped";
+    state.lastLessonId = lessonId;
+    saveLearnProgress(state);
+    toast("Skipped for now. You can come back anytime — nothing is locked.");
+    return state;
+  }
+
+  function renderLearnBody() {
+    const state = loadLearnProgress();
+    const meta = learnPathData.meta || {};
+    const disc = document.getElementById("learn-disclaimer");
+    if (disc) disc.textContent = meta.disclaimer || "Educational resource — not medical advice.";
+    const titleEl = document.getElementById("learn-title");
+    const subEl = document.getElementById("learn-sub");
+    if (titleEl) titleEl.textContent = meta.title || "Core Clinic Path";
+    if (subEl) subEl.textContent = meta.subtitle || "First anticoagulation clinic week";
+    renderLearnProgress(state);
+
+    const body = document.getElementById("learn-body");
+    const foot = document.getElementById("learn-foot-primary");
+    if (!body || !foot) return;
+
+    if (learnView.mode === "hub") {
+      body.innerHTML = `
+        <div class="learn-hero">
+          <h3>Start the Core Clinic Path</h3>
+          <p>Ten short lessons that open the site’s teaching tools. Skip anytime and explore Teach on your own. Educational resource — not medical advice.</p>
+          <p>Prefer to browse? Teach stays fully available — the path is guidance, not a gate.</p>
+        </div>`;
+      const first = learnLessons[0];
+      foot.innerHTML = first
+        ? `<button type="button" class="btn primary" id="learn-start">${esc("Start lesson 1 · " + first.title)}</button>`
+        : "";
+      const startBtn = document.getElementById("learn-start");
+      if (startBtn) startBtn.onclick = () => {
+        learnView = { mode: "lesson", lessonId: first.id };
+        const st = loadLearnProgress();
+        const e = learnLessonEntry(st, first.id);
+        if (e.status === "not_started") e.status = "in_progress";
+        st.lastLessonId = first.id;
+        saveLearnProgress(st);
+        openLearnPath({ lessonId: first.id, skipRoute: false, replaceRoute: false });
+      };
+      return;
+    }
+
+    if (learnView.mode === "resume") {
+      const rid = resumeLessonId(state);
+      const lesson = findLearnLesson(rid);
+      const n = lesson ? lesson.order : 1;
+      const title = lesson ? lesson.title : "";
+      body.innerHTML = `
+        <div class="learn-hero">
+          <h3>Continue where you left off</h3>
+          <p>Lesson ${n}: ${esc(title)}</p>
+          <p>Prefer to browse? Teach stays fully available — the path is guidance, not a gate.</p>
+        </div>
+        <details>
+          <summary>Review a lesson</summary>
+          <div class="learn-review-list" id="learn-review-list"></div>
+        </details>`;
+      const list = document.getElementById("learn-review-list");
+      if (list) {
+        list.innerHTML = learnLessons.map(l => {
+          const st = learnStatus(state, l.id);
+          const tag = st === "done" ? "Done" : (st === "skipped" ? "Skipped" : (st === "in_progress" ? "In progress" : "Not started"));
+          return `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">${esc(tag)}</span></button>`;
+        }).join("");
+        list.querySelectorAll("[data-review]").forEach(b => {
+          b.onclick = () => openLearnPath({ lessonId: b.dataset.review });
+        });
+      }
+      foot.innerHTML = `<button type="button" class="btn primary" id="learn-continue-resume">Continue</button>`;
+      const c = document.getElementById("learn-continue-resume");
+      if (c) c.onclick = () => openLearnPath({ lessonId: rid });
+      return;
+    }
+
+    if (learnView.mode === "complete") {
+      body.innerHTML = `
+        <div class="learn-hero">
+          <h3>Core Clinic Path complete on this device.</h3>
+          <p>Keep exploring Frameworks, Cases, pathways, DDI, and Bleed &amp; reversal — or try unofficial CACP practice when you want exam-style questions.</p>
+        </div>
+        <details open>
+          <summary>Review a lesson</summary>
+          <div class="learn-review-list" id="learn-review-list"></div>
+        </details>`;
+      const list = document.getElementById("learn-review-list");
+      if (list) {
+        list.innerHTML = learnLessons.map(l =>
+          `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">Done</span></button>`
+        ).join("");
+        list.querySelectorAll("[data-review]").forEach(b => {
+          b.onclick = () => openLearnPath({ lessonId: b.dataset.review });
+        });
+      }
+      foot.innerHTML = `
+        <button type="button" class="btn primary" id="learn-complete-explore">Explore Teach freely</button>
+        <button type="button" class="btn sm" id="learn-complete-cacp">Optional: unofficial CACP practice</button>`;
+      const ex = document.getElementById("learn-complete-explore");
+      if (ex) ex.onclick = () => { closeModal("learn"); };
+      const cacp = document.getElementById("learn-complete-cacp");
+      if (cacp) cacp.onclick = () => {
+        yieldLearnShell();
+        setRoute(null, null, true);
+        openCacp({});
+      };
+      return;
+    }
+
+    // lesson mode
+    const lesson = findLearnLesson(learnView.lessonId);
+    if (!lesson) {
+      learnView = { mode: hasLearnProgress(state) ? (allLearnDone(state) ? "complete" : "resume") : "hub", lessonId: null };
+      renderLearnBody();
+      return;
+    }
+    const entry = learnLessonEntry(state, lesson.id);
+    const goals = (lesson.goals || []).map(g => `<li>${esc(g)}</li>`).join("");
+    let callout = "";
+    if (entry.status === "done") {
+      callout = `<div class="learn-callout"><strong>Lesson complete.</strong> Ready for the next one?</div>`;
+    } else if (entry.openedPrimary) {
+      callout = `<div class="learn-callout"><strong>Nice — you’ve opened the main teach card.</strong> Mark this lesson done, or deepen with the case / pathway.</div>`;
+    }
+    let softExtra = "";
+    if (lesson.softExtra && lesson.softExtra.kind) {
+      softExtra = `<button type="button" class="btn sm ghost" id="learn-soft-extra">Optional nuance · ${esc(learnTargetTitle(lesson.softExtra))}</button>`;
+    }
+    let softReversal = "";
+    if (lesson.id === "doac-bleed-us") {
+      softReversal = `<button type="button" class="btn sm ghost" id="learn-soft-reversal">Optional: Bleed &amp; reversal</button>`;
+    }
+    let softCacp = "";
+    if (entry.status === "done" && (lesson.softInvites || []).some(s => s.kind === "cacp")) {
+      softCacp = `<div class="learn-soft-strip"><button type="button" class="btn sm" id="learn-soft-cacp">Optional: unofficial CACP practice</button></div>`;
+    }
+    const deepenCls = lesson.deepenRequired ? "btn primary" : "btn sm";
+    body.innerHTML = `
+      <div class="learn-lesson-kicker">Lesson ${lesson.order} of ${learnLessons.length}</div>
+      <h3 class="learn-lesson-title">${esc(lesson.title)}</h3>
+      <ul class="learn-goals">${goals}</ul>
+      <div class="learn-cta-stack">
+        <button type="button" class="btn primary" id="learn-open-primary">${esc(learnPrimaryCtaLabel(lesson))}</button>
+        ${lesson.deepen ? `<button type="button" class="${deepenCls}" id="learn-open-deepen">${esc(learnDeepenCtaLabel(lesson))}</button>` : ""}
+        ${softExtra}
+        ${softReversal}
+      </div>
+      ${callout}
+      ${softCacp}`;
+
+    const primaryBtn = document.getElementById("learn-open-primary");
+    if (primaryBtn) primaryBtn.onclick = () => openLearnTarget(lesson.primary, lesson, "primary");
+    const deepenBtn = document.getElementById("learn-open-deepen");
+    if (deepenBtn && lesson.deepen) deepenBtn.onclick = () => openLearnTarget(lesson.deepen, lesson, "deepen");
+    const softEx = document.getElementById("learn-soft-extra");
+    if (softEx && lesson.softExtra) softEx.onclick = () => openLearnTarget(lesson.softExtra, lesson, "deepen");
+    const softRev = document.getElementById("learn-soft-reversal");
+    if (softRev) softRev.onclick = () => openLearnTarget({ kind: "reversal" }, lesson, "deepen");
+    const softC = document.getElementById("learn-soft-cacp");
+    if (softC) softC.onclick = () => {
+      yieldLearnShell();
+      setRoute(null, null, true);
+      openCacp({});
+    };
+
+    const contLabel = entry.status === "done" ? "Continue" : "Continue";
+    foot.innerHTML = `
+      <button type="button" class="btn ${entry.status === "done" ? "primary" : "sm"}" id="learn-mark-done"${entry.status === "done" ? " hidden" : ""}>Mark done</button>
+      <button type="button" class="btn ${entry.status === "done" ? "primary" : "sm"}" id="learn-continue">${contLabel}</button>
+      <button type="button" class="btn sm ghost" id="learn-skip">Skip for now</button>`;
+
+    const mark = document.getElementById("learn-mark-done");
+    if (mark) mark.onclick = () => {
+      const st = markLearnLessonDone(lesson.id);
+      if (allLearnDone(st)) {
+        learnView = { mode: "complete", lessonId: null };
+        openLearnPath({ skipRoute: false, replaceRoute: true });
+      } else {
+        learnView = { mode: "lesson", lessonId: lesson.id };
+        renderLearnBody();
+      }
+    };
+    const cont = document.getElementById("learn-continue");
+    if (cont) cont.onclick = () => {
+      let st = loadLearnProgress();
+      if (learnStatus(st, lesson.id) !== "done" && learnStatus(st, lesson.id) !== "skipped") {
+        // continue without forcing done
+      }
+      if (allLearnDone(st)) {
+        openLearnPath({ skipRoute: false, replaceRoute: true });
+        return;
+      }
+      const next = nextIncompleteLessonId(st, lesson.id);
+      if (next) openLearnPath({ lessonId: next });
+      else openLearnPath({});
+    };
+    const skip = document.getElementById("learn-skip");
+    if (skip) skip.onclick = () => {
+      const st = skipLearnLesson(lesson.id);
+      const next = nextIncompleteLessonId(st, lesson.id);
+      if (next) openLearnPath({ lessonId: next });
+      else openLearnPath({});
+    };
+  }
+
+  function openLearnPath(opts) {
+    opts = opts || {};
+    if (document.body.classList.contains("embed")) return;
+    if (!learnLessons.length) {
+      toast("Learn path data missing");
+      return;
+    }
+    const state = loadLearnProgress();
+    let lessonId = opts.lessonId || null;
+    if (lessonId && !findLearnLesson(lessonId)) lessonId = null;
+
+    if (lessonId) {
+      learnView = { mode: "lesson", lessonId };
+      const e = learnLessonEntry(state, lessonId);
+      if (e.status === "not_started") e.status = "in_progress";
+      state.lastLessonId = lessonId;
+      saveLearnProgress(state);
+    } else if (allLearnDone(state)) {
+      learnView = { mode: "complete", lessonId: null };
+    } else if (hasLearnProgress(state)) {
+      learnView = { mode: "resume", lessonId: null };
+    } else {
+      learnView = { mode: "hub", lessonId: null };
+    }
+
+    if (!opts.skipRoute) {
+      const slug = learnView.mode === "lesson" && learnView.lessonId ? learnView.lessonId : null;
+      setRoute("learn", slug, opts.replaceRoute);
+    }
+
+    renderLearnBody();
+    const bd = document.getElementById("bd-learn");
+    if (bd && bd.hidden) openModal("learn");
+    else if (bd) {
+      const modal = bd.querySelector(".modal");
+      if (modal) modal.scrollTop = 0;
+    }
+  }
+
+  (function wireLearnChrome() {
+    const explore = document.getElementById("learn-explore");
+    if (explore) explore.onclick = () => { closeModal("learn"); };
+    const reset = document.getElementById("learn-reset");
+    if (reset) reset.onclick = () => {
+      const ok = window.confirm("Reset Learn path progress on this device? Your lesson checkmarks will clear. Teach tools and CACP answers are unchanged.");
+      if (!ok) return;
+      resetLearnProgress();
+      learnView = { mode: "hub", lessonId: null };
+      setRoute("learn", null, true);
+      renderLearnBody();
+      toast("Learn path progress cleared");
+    };
+  })();
+
+  (function wireLearnTeachEntry() {
+    const btn = document.getElementById("btn-learn");
+    if (!btn) return;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // Close Teach sheet/menu first (no focus restore) so chrome-backdrop
+      // and menu close cannot race the Learn shell shut.
+      closeTeachMenu(false);
+      const open = () => openLearnPath({});
+      if (typeof requestAnimationFrame === "function") requestAnimationFrame(() => setTimeout(open, 0));
+      else setTimeout(open, 0);
+    });
+  })();
+
+
   /* —— Routing —— */
   function parseRoute() {
     const params = new URLSearchParams(location.search);
@@ -3640,6 +4265,9 @@
       if (id === "q" && parts[2]) return { kind: "cacp", questionId: parts[2] };
       return { kind: "cacp" };
     }
+    if (k === "learn") {
+      return { kind: "learn", lessonId: id || null };
+    }
     if (qTrial && byId[qTrial]) return { kind: "trial", id: qTrial };
     return null;
   }
@@ -3661,6 +4289,9 @@
       openTeach(r.kind, r.id || null, { skipRoute: true, replaceRoute: true });
     } else if (r.kind === "cacp") {
       openCacp({ questionId: r.questionId || null, skipRoute: true, replaceRoute: true });
+    } else if (r.kind === "learn") {
+      if (document.body.classList.contains("embed")) return;
+      openLearnPath({ lessonId: r.lessonId || null, skipRoute: true, replaceRoute: true });
     }
   }
 

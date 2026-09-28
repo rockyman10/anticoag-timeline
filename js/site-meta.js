@@ -5,6 +5,15 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-09-28",
+      title: "Timeline left-edge marker clip fix",
+      items: [
+        "Increase year→x edge inset (X_EDGE 24→96) so earliest centered chips stay inside the track",
+        "Align axis year ticks with lane track via matching left gutter (124px / 88px ≤640); no clinical copy changes"
+      ]
+    },
+
+    {
       date: "2026-09-27",
       title: "Core Clinic Path v1 — Learn path chrome",
       items: [

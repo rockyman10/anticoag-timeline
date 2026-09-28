@@ -170,7 +170,10 @@
     .axis {
       position: sticky; top: 0; z-index: 5; height: var(--axis-h);
       background: var(--paper); border-bottom: 1px solid var(--line);
+      /* Match .lane grid so year ticks share the track origin (not under sticky labels) */
+      display: grid; grid-template-columns: 124px 1fr;
     }
+    .axis::before { content: ""; } /* gutter = lane-label column */
     .axis-inner { position: relative; height: 100%; }
     .yr {
       position: absolute; top: 0; bottom: 0; transform: translateX(-50%);
@@ -450,6 +453,7 @@
     @media (max-width: 640px) {
       .brand .deck { display: none; }
       .lane { grid-template-columns: 88px 1fr; }
+      .axis { grid-template-columns: 88px 1fr; }
       .lane-label { font-size: .6875rem; padding: 0 .35rem; }
       .board-bar .hint { display: none; }
       /* Flex board consumes remaining viewport below chrome (no fragile dvh offset) */
@@ -1534,8 +1538,10 @@
     });
   }
 
+  // Edge inset so centered .mk chips + year ticks stay inside the track (not clipped by .tl-scroll / sticky lane labels)
+  const X_EDGE = 96; // was 24 — half of longest early chips (e.g. PROTECT-AF · year at zoom≥1.15) plus slack
   function xOf(year, w) {
-    return 24 + ((year - Y0) / (Y1 - Y0)) * (w - 48);
+    return X_EDGE + ((year - Y0) / (Y1 - Y0)) * (w - 2 * X_EDGE);
   }
 
   const SUB_H = 36;

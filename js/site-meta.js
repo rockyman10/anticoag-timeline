@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-28",
+      title: "DOI corrections",
+      items: [
+        "COMMANDER HF, ADVANCE-3, ATLANTIS: doi/url corrected to Reviewer-cleared DOIs",
+        "ATLANTIS yearLabel 2021→2022 (cite already 2022); no invented DOIs for pending trials"
+      ]
+    },
+
+    {
+      date: "2026-09-28",
       title: "Timeline left-edge marker clip fix",
       items: [
         "Increase year→x edge inset (X_EDGE 24→96) so earliest centered chips stay inside the track",

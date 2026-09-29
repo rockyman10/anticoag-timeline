@@ -1130,7 +1130,7 @@
       <div class="legend" id="legend"></div>
     </section>
 
-    <footer class="note">Educational resource — not medical advice · Verify with local protocol / primary literature</footer>
+    <footer class="note" id="site-disclaimer">Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.</footer>
     <div class="site-meta" id="site-meta"></div>
   </div>
 
@@ -3166,6 +3166,8 @@
 
   /* —— Site meta —— */
   function fillSiteMeta() {
+    const discEl = document.getElementById("site-disclaimer");
+    if (discEl) discEl.textContent = siteMeta.disclaimer || discEl.textContent;
     const el = document.getElementById("site-meta");
     if (!el) return;
     const sweep = siteMeta.lastLiteratureSweep || "—";

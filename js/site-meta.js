@@ -6,6 +6,28 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-29",
+      title: "VTE / ortho deepen — PDF-backed absolute rates",
+      items: [
+        "RE-COVER, EINSTEIN-DVT, EINSTEIN-PE, AMPLIFY, AMPLIFY-EXT, Hokusai-VTE, ADVANCE-3: PDF-backed absolute rates / HRs on REPLACE/ADD fields only; ADVANCE-3 remains THA prophylaxis"
+      ]
+    },
+    {
+      date: "2026-09-29",
+      title: "ACS / LAAO / PCI deepen — PDF-backed absolute rates",
+      items: [
+        "ATLAS ACS 2–TIMI 51, PROTECT-AF, WOEST: PDF-backed absolute rates / HRs on REPLACE/ADD fields only; ATLAS combined-dose clarify per Reviewer"
+      ]
+    },
+    {
+      date: "2026-09-29",
+      title: "AF DOAC deepen — PDF-backed absolute rates",
+      items: [
+        "RE-LY, ROCKET-AF, ARISTOTLE, AVERROES, ENGAGE AF-TIMI 48: PDF-backed absolute rates / HRs on REPLACE fields only"
+      ]
+    },
+
+    {
+      date: "2026-09-29",
       title: "Footer disclaimer SoT",
       items: [
         "Footer disclaimer reads from ANTICOAG_SITE_META.disclaimer (id=site-disclaimer)"

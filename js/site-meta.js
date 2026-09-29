@@ -5,6 +5,14 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-09-29",
+      title: "Footer disclaimer SoT",
+      items: [
+        "Footer disclaimer reads from ANTICOAG_SITE_META.disclaimer (id=site-disclaimer)"
+      ]
+    },
+
+    {
       date: "2026-09-28",
       title: "DOI corrections",
       items: [

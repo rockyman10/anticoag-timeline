@@ -3771,7 +3771,9 @@
     byDomain: {},
     shuffle: true,
     mode: 'quiz', // quiz | results
-    focusQId: null
+    focusQId: null,
+    choiceOrderQId: null,
+    choiceOrderIds: null
   };
 
   function cacpAllQs() { return cacpLib.questions || []; }
@@ -3787,6 +3789,26 @@
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
+  }
+  function clearCacpChoiceOrder() {
+    cacpState.choiceOrderQId = null;
+    cacpState.choiceOrderIds = null;
+  }
+  /** Display order only — stable choice.id vs correctId for scoring; shuffle once per question view. */
+  function cacpChoicesForDisplay(q) {
+    if (!q) return [];
+    const bank = q.choices || [];
+    if (cacpState.choiceOrderQId === q.id && Array.isArray(cacpState.choiceOrderIds) && cacpState.choiceOrderIds.length) {
+      const byId = {};
+      bank.forEach(c => { byId[c.id] = c; });
+      const ordered = cacpState.choiceOrderIds.map(id => byId[id]).filter(Boolean);
+      if (ordered.length === bank.length) return ordered;
+    }
+    const copy = bank.slice();
+    shuffleInPlace(copy);
+    cacpState.choiceOrderQId = q.id;
+    cacpState.choiceOrderIds = copy.map(c => c.id);
+    return copy;
   }
   function resetDomainScores() {
     cacpState.byDomain = {};
@@ -3808,6 +3830,7 @@
     cacpState.queue = list;
     cacpState.idx = 0;
     cacpState.answered = false;
+    clearCacpChoiceOrder();
     cacpState.score = 0;
     cacpState.answeredCount = 0;
     if (!opts.keepMissed) cacpState.missedIds = [];
@@ -3917,7 +3940,7 @@
       nextBtn.textContent = 'Skip / reveal';
     }
 
-    const choices = (q.choices || []).map(c => {
+    const choices = cacpChoicesForDisplay(q).map(c => {
       let cls = 'btn';
       if (cacpState.answered) {
         if (c.id === q.correctId) cls += ' correct';
@@ -4004,6 +4027,7 @@
     if (cacpState.idx < cacpState.queue.length - 1) {
       cacpState.idx++;
       cacpState.answered = false;
+      clearCacpChoiceOrder();
       const q = cacpState.queue[cacpState.idx];
       (q.choices || []).forEach(c => { delete c._picked; });
       if (cacpState.focusQId) setRoute('cacp/q', q.id, false);

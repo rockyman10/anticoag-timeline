@@ -1,0 +1,68 @@
+# Deploy ONLY the teaching allowlist to GitHub Pages.
+# Excludes: capacitor/, drafts/, docs/, docs/ux-shots/, node_modules/, .git noise.
+name: Deploy teaching Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-teaching
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble teaching allowlist into _site
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site/js _site/icons
+
+          # Required teaching tree
+          cp index.html manifest.webmanifest .nojekyll _site/
+          cp README.md DESIGN.md REVIEWER.md _site/
+          cp -R js/. _site/js/
+          cp -R icons/. _site/icons/
+
+          # Hard-fail if forbidden trees ever land in the artifact
+          for bad in capacitor drafts docs node_modules .git; do
+            if [ -e "_site/$bad" ]; then
+              echo "::error::Forbidden path present in artifact: _site/$bad"
+              exit 1
+            fi
+          done
+
+          echo "=== artifact tree ==="
+          find _site -type f | sort
+          echo "=== counts ==="
+          find _site -type f | wc -l
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

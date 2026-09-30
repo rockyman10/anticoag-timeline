@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Env / secrets — never commit Apple keys or .p12 / provisioning
+.env
+.env.*
+*.p12
+*.mobileprovision
+*.cer
+AuthKey_*.p8
+*.pem
+google-services.json
+GoogleService-Info.plist
+
+# iOS build / CocoaPods / Xcode junk
+ios/App/Pods/
+ios/App/build/
+ios/App/output/
+ios/DerivedData/
+ios/**/DerivedData/
+ios/**/*.xcuserstate
+ios/**/xcuserdata/
+*.xcuserstate
+xcuserdata/
+
+# Sync copies that cap regenerates (kept in ios/.gitignore too)
+ios/App/App/public/
+ios/App/App/capacitor.config.json
+ios/App/App/config.xml
+ios/capacitor-cordova-ios-plugins/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs / coverage
+npm-debug.log*
+yarn-error.log*
+*.log

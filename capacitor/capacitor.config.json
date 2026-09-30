@@ -1,0 +1,8 @@
+{
+  "appId": "com.rockyman10.anticoagtimeline",
+  "appName": "Anticoag Trials",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}

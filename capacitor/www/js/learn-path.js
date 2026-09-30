@@ -26,7 +26,9 @@ window.ANTICOAG_LEARN_PATH = {
       deepenRequired: false,
       hasEvidenceVisual: true,
       softInvites: [
-        { kind: "framework", id: "doac-appropriateness", label: "Before you leave AF dosing: run the DOAC appropriateness checklist — niche, dose family, and three-line documentation." }
+        { kind: "framework", id: "doac-appropriateness", label: "Before you leave AF dosing: run the DOAC appropriateness checklist — niche, dose family, and three-line documentation." },
+        { kind: "compare", pairId: "B2", trialIds: ["re-ly", "rocket-af", "aristotle"], label: "Same DOAC era, three different design stories — compare RE-LY, ROCKET-AF, and ARISTOTLE (question / population / comparator) before the numbers." },
+        { kind: "framework", id: "ttr-vka-quality", label: "If someone is still on warfarin, TTR is the VKA quality lens — DOACs don’t have one." }
       ]
     },
     {
@@ -44,7 +46,9 @@ window.ANTICOAG_LEARN_PATH = {
       deepen: { kind: "case", id: "vte-doac-choice" },
       deepenRequired: false,
       softInvites: [
-        { kind: "framework", id: "doac-appropriateness", label: "Acute VTE DOAC choice isn’t done until indication and load→maintenance family are documented." }
+        { kind: "framework", id: "doac-appropriateness", label: "Acute VTE DOAC choice isn’t done until indication and load→maintenance family are documented." },
+        { kind: "compare", pairId: "B1", trialIds: ["amplify-ext", "einstein-choice"], label: "Extended VTE next: compare AMPLIFY-EXT and EINSTEIN-CHOICE — same ‘after initial therapy’ vibe, different comparators." },
+        { kind: "compare", pairId: "B4", trialIds: ["renove", "api-cat"], label: "Both talk reduced vs full DOAC dosing after months of therapy — compare RENOVE vs API-CAT on who was studied before any numbers." }
       ]
     },
     {
@@ -77,7 +81,8 @@ window.ANTICOAG_LEARN_PATH = {
       deepen: { kind: "case", id: "mechanical-avr-doac-request" },
       deepenRequired: false,
       softInvites: [
-        { kind: "framework", id: "doac-appropriateness", label: "If someone asks for a DOAC on a mechanical valve, the checklist should stop at niche — open the VKA framework." }
+        { kind: "framework", id: "doac-appropriateness", label: "If someone asks for a DOAC on a mechanical valve, the checklist should stop at niche — open the VKA framework." },
+        { kind: "framework", id: "ttr-vka-quality", label: "Optional: TTR is how VKA clinics talk about INR control quality — open TTR / VKA quality (not a DOAC metric)." }
       ]
     },
     {
@@ -148,7 +153,8 @@ window.ANTICOAG_LEARN_PATH = {
       deepenRequired: true,
       softInvites: [
         { kind: "cacp", label: "Optional: unofficial CACP practice" },
-        { kind: "framework", id: "doac-appropriateness", label: "Bleed stewardship is a different checklist — U.S. FXa care without Andexxa as default." }
+        { kind: "framework", id: "doac-appropriateness", label: "Bleed stewardship is a different checklist — U.S. FXa care without Andexxa as default." },
+        { kind: "compare", pairId: "B3", trialIds: ["annexa-4", "annexa-i"], label: "Compare ANNEXA-4 and ANNEXA-I for what they studied — then open the U.S. post-Andexxa framework. Andexxa is not default U.S. care." }
       ]
     },
     {
@@ -182,7 +188,8 @@ window.ANTICOAG_LEARN_PATH = {
       deepen: { kind: "case", id: "cancer-stepdown" },
       deepenRequired: false,
       softInvites: [
-        { kind: "framework", id: "doac-appropriateness", label: "Optional: same documentation habit after you pick acute oral vs LMWH and any later step-down plan." }
+        { kind: "framework", id: "doac-appropriateness", label: "Optional: same documentation habit after you pick acute oral vs LMWH and any later step-down plan." },
+        { kind: "compare", pairId: "B4", trialIds: ["renove", "api-cat"], label: "Both talk reduced vs full DOAC dosing after months of therapy — compare RENOVE vs API-CAT on who was studied (cancer extend ≠ RENOVE’s non-cancer high-risk extend)." }
       ]
     }
   ]

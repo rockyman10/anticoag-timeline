@@ -30,7 +30,7 @@ window.ANTICOAG_CASES = [
     modelReasoning: "AUGUSTUS supports apixaban over VKA and placebo over continued aspirin beyond the early post-PCI window on a P2Y12 background for many patients. Confirm stent details and ischemic risk; if average risk, drop aspirin and keep DOAC + P2Y12. Address modifiable bleed drivers (BP, NSAIDs, alcohol, PPI if appropriate).",
     teachingPoint: "Triple therapy is a peri-PCI bridge. Bleeding is the cue to execute the AUGUSTUS play, not to stop the anticoagulant.",
     links: [
-      { kind: "pathway", id: "af-pci", label: "TX: AF + PCI" },
+      { kind: "tx-pathway", id: "af-pci", label: "TX: AF + PCI" },
       { kind: "nuance", id: "dual-pathway-duration", label: "Nuance: Dual-pathway duration" }
     ]
   },
@@ -56,7 +56,10 @@ window.ANTICOAG_CASES = [
     trialIds: ["frail-af", "eldercare-af"],
     frameworkIds: ["frail-elderly-vka-doac"],
     modelReasoning: "FRAIL-AF argues against routine switching from stable VKA to DOAC in frail older adults because of excess bleeding without clear benefit in that trial’s design. ELDERCARE-AF addresses a different question (carefully selected initiation of low-dose edoxaban). Counsel the daughter on stability, monitoring burden, and when a switch would make sense (labile INR, access, preference).",
-    teachingPoint: "Stable frail VKA success is a feature, not a failure to modernize. Switching is a new risk decision—not a loyalty program upgrade."
+    teachingPoint: "Stable frail VKA success is a feature, not a failure to modernize. Switching is a new risk decision—not a loyalty program upgrade.",
+    links: [
+      { kind: "framework", id: "ttr-vka-quality", label: "Framework: What ‘acceptable TTR’ means — without a fake clinic %" }
+    ]
   },
   {
     id: "post-ich-af",

@@ -393,6 +393,10 @@
       padding: .65rem .75rem; white-space: pre-wrap;
     }
     .fw-cacp-note { margin: .65rem 0 .4rem; }
+    .fw-link-wrap { display: flex; flex-direction: column; align-items: flex-start; gap: .15rem; margin: .25rem .35rem .25rem 0; }
+    .fw-link-wrap .btn { margin: 0; }
+    .fw-link-caption { font-size: .75rem; color: var(--muted); line-height: 1.35; max-width: 28rem; }
+    .fw-teachback { margin-top: .35rem; padding: .55rem .7rem; background: var(--muted-bg); border-left: 3px solid var(--line-2); border-radius: 2px; font-size: .875rem; color: var(--ink-2); }
     .learn-soft-strip .btn { white-space: normal; text-align: left; height: auto; line-height: 1.35; }
 
     .take {
@@ -649,6 +653,31 @@
       border: 1px dashed var(--line-2); border-radius: 3px; background: var(--bg);
     }
     .learn-soft-strip .btn { margin-top: .35rem; }
+    .learn-cmp-coach {
+      margin: 0 0 .85rem; padding: .7rem .8rem;
+      border: 1px solid var(--line); border-left: 3px solid var(--accent);
+      border-radius: 3px; background: var(--accent-soft);
+      font-size: .8125rem; line-height: 1.45; color: var(--ink-2);
+    }
+    .learn-cmp-coach h3 {
+      margin: 0 0 .4rem; font-size: .9375rem; color: var(--ink); font-weight: 650;
+    }
+    .learn-cmp-coach .lcc-orient { margin: 0 0 .55rem; font-weight: 600; color: var(--ink); }
+    .learn-cmp-coach .lcc-grid {
+      display: grid; gap: .45rem; margin: 0 0 .55rem;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .learn-cmp-coach .lcc-card {
+      background: var(--bg); border: 1px solid var(--line); border-radius: 3px; padding: .45rem .55rem;
+    }
+    .learn-cmp-coach .lcc-card strong { display: block; margin-bottom: .25rem; color: var(--ink); font-size: .8125rem; }
+    .learn-cmp-coach .lcc-k { color: var(--muted); font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; }
+    .learn-cmp-coach .lcc-v { margin: 0 0 .3rem; }
+    .learn-cmp-coach .lcc-pearl, .learn-cmp-coach .lcc-teach, .learn-cmp-coach .lcc-pivot, .learn-cmp-coach .lcc-note {
+      margin: .4rem 0 0;
+    }
+    .learn-cmp-coach .lcc-also { margin: .5rem 0 0; display: flex; flex-wrap: wrap; gap: .35rem; }
+    .learn-cmp-coach .lcc-also .btn { white-space: normal; text-align: left; height: auto; line-height: 1.3; }
     .learn-review-list { display: flex; flex-direction: column; gap: .3rem; margin: .5rem 0 .75rem; }
     .learn-review-list button {
       text-align: left; font: inherit; color: var(--ink); background: var(--bg);
@@ -1691,6 +1720,7 @@
   <script src="js/cases.js"></script>
   <script src="js/practical.js"></script>
   <script src="js/learn-path.js"></script>
+  <script src="js/learn-compare-pairs.js"></script>
   <script src="js/learn-visuals.js"></script>
   <script src="js/cacp.js"></script>
   <script>
@@ -1720,6 +1750,7 @@
 
   let zoom = 1, statusF = "all", indF = new Set(), q = "";
   let compare = [], openId = null, order = [], focusIdx = -1;
+  let learnCompareCoach = null;
   let storyI = 0, storyFocus = null;
   let pathwayId = null, pathwayIdx = 0, pathwayFocus = null;
   const pathways = window.ANTICOAG_PATHWAYS || [];
@@ -2380,7 +2411,7 @@
   function removeCmp(id) {
     compare = compare.filter(x => x !== id); syncCmp(); draw();
   }
-  function clearCmp() { compare = []; syncCmp(); draw(); }
+  function clearCmp() { compare = []; learnCompareCoach = null; syncCmp(); draw(); }
   function syncCmp() {
     const n = compare.length;
     document.getElementById("cn").textContent = n;
@@ -2393,6 +2424,58 @@
     document.querySelectorAll("#pills [data-rm]").forEach(b => b.onclick = () => removeCmp(b.dataset.rm));
   }
 
+  function learnCoachMatchesCompare(coach) {
+    if (!coach || !Array.isArray(coach.trialIds) || compare.length < 2) return false;
+    const set = new Set(coach.trialIds);
+    return compare.every(id => set.has(id));
+  }
+  function renderLearnCompareCoach(coach) {
+    if (!coach) return "";
+    const trials = coach.trials || [];
+    let cards = `<div class="lcc-grid">`;
+    trials.forEach(t => {
+      cards += `<div class="lcc-card"><strong>${esc(t.label || t.id)}</strong>`;
+      cards += `<div class="lcc-k">Question</div><p class="lcc-v">${esc(t.question || "")}</p>`;
+      cards += `<div class="lcc-k">Population</div><p class="lcc-v">${esc(t.population || "")}</p>`;
+      cards += `<div class="lcc-k">Comparator</div><p class="lcc-v">${esc(t.comparator || "")}</p>`;
+      if (t.interventionFamily) cards += `<div class="lcc-k">Intervention family</div><p class="lcc-v">${esc(t.interventionFamily)}</p>`;
+      if (t.designCue) cards += `<div class="lcc-k">Design cue</div><p class="lcc-v">${esc(t.designCue)}</p>`;
+      cards += `</div>`;
+    });
+    cards += `</div>`;
+    let h = `<div class="learn-cmp-coach" data-pair="${esc(coach.pairId || "")}">`;
+    h += `<h3>Learn micro-coach · compare questions first</h3>`;
+    h += `<p class="lcc-orient">${esc(coach.orient || "We're comparing questions, not memorizing numbers.")}</p>`;
+    h += cards;
+    if (coach.qualTradeoff) h += `<p class="lcc-note"><strong>Qualitative:</strong> ${esc(coach.qualTradeoff)}</p>`;
+    if (coach.usPivot) h += `<p class="lcc-pivot"><strong>U.S. pivot:</strong> ${esc(coach.usPivot)}</p>`;
+    if (coach.ratesNote) h += `<p class="lcc-note"><strong>Rates:</strong> ${esc(coach.ratesNote)}</p>`;
+    if (coach.pearl) h += `<p class="lcc-pearl"><strong>Pearl:</strong> ${esc(coach.pearl)}</p>`;
+    if (coach.teachBack) h += `<p class="lcc-teach"><strong>Teach-back:</strong> ${esc(coach.teachBack)}</p>`;
+    if (Array.isArray(coach.alsoOpen) && coach.alsoOpen.length) {
+      h += `<div class="lcc-also">`;
+      coach.alsoOpen.forEach((a, i) => {
+        h += `<button type="button" class="btn sm ghost" data-learn-cmp-also="${i}">${esc(a.label || a.id || "Open")}</button>`;
+      });
+      h += `</div>`;
+    }
+    h += `<p class="lcc-note" style="margin-top:.55rem;font-size:.75rem;color:var(--muted)">Coach chrome stays rate-free. Efficacy/Safety rows below come from live Reviewer-gated cards — optional peek after you name Q / P / C.</p>`;
+    h += `</div>`;
+    return h;
+  }
+  function wireLearnCompareCoachAlso() {
+    const coach = learnCompareCoach;
+    if (!coach || !Array.isArray(coach.alsoOpen)) return;
+    document.querySelectorAll("[data-learn-cmp-also]").forEach(b => {
+      b.onclick = () => {
+        const a = coach.alsoOpen[Number(b.dataset.learnCmpAlso)];
+        if (!a || !a.kind) return;
+        if (a.kind === "framework" || a.kind === "case" || a.kind === "nuance" || a.kind === "reversal") {
+          openTeach(a.kind === "reversal" ? "reversal" : a.kind, a.kind === "reversal" ? null : a.id);
+        }
+      };
+    });
+  }
   function renderCompare() {
     const body = document.getElementById("c-body");
     if (compare.length < 2) {
@@ -2410,7 +2493,11 @@
       ["Safety", t => t.safety],
       ["Takeaway", t => t.takeaway]
     ];
-    let h = `<div class="cmp-wrap"><table class="cmp"><thead><tr><th></th>`;
+    let h = "";
+    if (learnCoachMatchesCompare(learnCompareCoach)) {
+      h += renderLearnCompareCoach(learnCompareCoach);
+    }
+    h += `<div class="cmp-wrap"><table class="cmp"><thead><tr><th></th>`;
     cols.forEach(t => { h += `<th>${esc(t.acronym)}<span class="cy">${esc(t.yearLabel)}</span></th>`; });
     h += `</tr></thead><tbody>`;
     rows.forEach(([lab, fn]) => {
@@ -2420,6 +2507,7 @@
     });
     h += `</tbody></table></div>`;
     body.innerHTML = h;
+    wireLearnCompareCoachAlso();
   }
 
   document.getElementById("btn-cmp").onclick = () => { if (compare.length >= 2) { renderCompare(); openModal("compare"); } };
@@ -3586,8 +3674,10 @@
     };
     const list = (links || []).filter(l => l && l.kind && allow[l.kind]);
     if (!list.length) return "";
-    const btn = l =>
-      `<button type="button" class="btn sm" data-cacp-link="${esc(l.kind)}|${esc(l.id || "")}">${esc(l.label || l.id)}</button>`;
+    const btn = l => {
+      const cap = l.caption ? `<span class="fw-link-caption">${esc(l.caption)}</span>` : "";
+      return `<span class="fw-link-wrap"><button type="button" class="btn sm" data-cacp-link="${esc(l.kind)}|${esc(l.id || "")}">${esc(l.label || l.id)}</button>${cap}</span>`;
+    };
     const main = list.filter(l => l.kind !== "cacp" && l.kind !== "cacp-domain");
     const cacp = list.filter(l => l.kind === "cacp" || l.kind === "cacp-domain");
     const note = cacp.length
@@ -3624,12 +3714,28 @@
     </div>`;
   }
 
+  function renderFrameworkTeachingBlocks(fw) {
+    const blocks = fw.teachingBlocks || [];
+    if (!blocks.length) return "";
+    return blocks.map(b => {
+      const lead = b.lead ? `<p>${esc(b.lead)}</p>` : "";
+      const body = b.body ? `<p>${esc(b.body)}</p>` : "";
+      const bullets = (b.bullets || []).length
+        ? `<ul>${(b.bullets || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>`
+        : "";
+      return `<div class="jc-sec"><h3>${esc(b.title || "")}</h3>${lead}${body}${bullets}</div>`;
+    }).join("");
+  }
   function renderFrameworkDetail(fw) {
     const deck = fw.deck ? `<p class="fw-deck">${esc(fw.deck)}</p>` : "";
+    const teachBack = fw.teachBack
+      ? `<div class="jc-sec"><h3>Teach-back</h3><div class="fw-teachback">${esc(fw.teachBack)}</div></div>`
+      : "";
     return `<button type="button" class="back-link" data-back="frameworks">← All frameworks</button>
       <p style="font-size:1.05rem;font-weight:600;margin-bottom:.5rem;">${esc(fw.question)}</p>
       ${deck}
       <div class="jc-sec"><h3>Reasoning path</h3><p>${esc(fw.reasoning)}</p></div>
+      ${renderFrameworkTeachingBlocks(fw)}
       ${renderFrameworkChecklist(fw)}
       <div class="jc-sec"><h3>Key trials</h3>${trialLinkButtons(fw.trialIds)}</div>
       <div class="callouts">
@@ -3637,6 +3743,7 @@
         <div class="callout excludes"><h4>Does not apply</h4><ul>${(fw.doesNotApply||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
       </div>
       <div class="jc-sec"><h3>Practice pearl</h3><div class="take" style="margin:0">${esc(fw.pearl)}</div></div>
+      ${teachBack}
       ${teachRelatedLinksHtml(fw.links)}
       <p class="teach-lead" style="margin-top:.75rem;">Educational framing only — confirm with guidelines and local protocols.</p>`;
   }
@@ -4482,6 +4589,19 @@
       openCacp({});
     } else if (kind === "ddi") {
       if (typeof openDdi === "function") openDdi({ view: "home" });
+    } else if (kind === "compare") {
+      const pairs = window.ANTICOAG_LEARN_COMPARE_PAIRS || {};
+      const pair = (target.pairId && pairs[target.pairId]) ? pairs[target.pairId] : null;
+      const ids = (Array.isArray(target.trialIds) && target.trialIds.length
+        ? target.trialIds
+        : (pair && pair.trialIds) || []).slice(0, 3);
+      clearCmp();
+      ids.forEach(id => { if (byId[id]) addCmp(id); });
+      learnCompareCoach = pair ? pair : (target.pairId ? { pairId: target.pairId, trialIds: ids, orient: "We're comparing questions, not memorizing numbers." } : null);
+      syncCmp();
+      draw();
+      renderCompare();
+      openModal("compare");
     }
   }
 
@@ -4695,8 +4815,16 @@
         bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm" id="learn-soft-cacp">Optional: unofficial CACP practice</button></div>`;
       }
       (lesson.softInvites || []).forEach(s => {
-        if (!s || s.kind !== "framework" || !s.id) return;
-        bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-fw" data-learn-soft-fw="${esc(s.id)}">${esc(s.label || "Open framework")}</button></div>`;
+        if (!s) return;
+        if (s.kind === "framework" && s.id) {
+          bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-fw" data-learn-soft-fw="${esc(s.id)}">${esc(s.label || "Open framework")}</button></div>`;
+          return;
+        }
+        if (s.kind === "compare" && (s.pairId || (s.trialIds && s.trialIds.length))) {
+          const pid = s.pairId || "";
+          const tids = (s.trialIds || []).join(",");
+          bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-cmp" data-learn-soft-compare="${esc(pid)}" data-learn-soft-trials="${esc(tids)}">${esc(s.label || "Compare trials")}</button></div>`;
+        }
       });
       if (lesson.softExtra && lesson.softExtra.kind) {
         bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost" id="learn-soft-extra">Optional nuance · ${esc(learnTargetTitle(lesson.softExtra))}</button></div>`;
@@ -4729,6 +4857,13 @@
     };
     body.querySelectorAll("[data-learn-soft-fw]").forEach(b => {
       b.onclick = () => openLearnTarget({ kind: "framework", id: b.dataset.learnSoftFw }, lesson, "soft");
+    });
+    body.querySelectorAll("[data-learn-soft-compare]").forEach(b => {
+      b.onclick = () => {
+        const pairId = b.dataset.learnSoftCompare || "";
+        const trialIds = (b.dataset.learnSoftTrials || "").split(",").map(s => s.trim()).filter(Boolean);
+        openLearnTarget({ kind: "compare", pairId, trialIds }, lesson, "soft");
+      };
     });
 
     let secHtml = `<div class="learn-coach-sec">`;

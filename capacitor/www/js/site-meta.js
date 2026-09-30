@@ -6,6 +6,22 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-30",
+      title: "Sprint B — Compare-two-trials Learn soft invites",
+      items: [
+        "Learn soft invites B1–B4 preload compare tray (max 3) + open compare modal; reuse existing compare UI",
+        "Rate-free Learn coach strip above compare table (orient · Q/P/C · pearl · teach-back); B3 Andexxa≠U.S. default pivot + alsoOpen; no efficacy %/HRs in coach chrome"
+      ]
+    },
+    {
+      date: "2026-09-30",
+      title: "Sprint C — TTR / VKA quality framework",
+      items: [
+        "Framework ttr-vka-quality: calm warfarin-clinic TTR literacy (Rosendaal method name only; no calculator/dashboard/fake benchmarks); TTR ≠ DOAC metric",
+        "Learn soft invites L4 primary + L1 light; CACP v-01 caption (warfarin-clinic TTR literacy — not a DOAC metric; no clinic TTR%)"
+      ]
+    },
+    {
+      date: "2026-09-30",
       title: "DOAC appropriateness checklist",
       items: [
         "Framework doac-appropriateness: rate-free stewardship checklist (niche, dose family, three-line documentation); label-only renal/age/weight with no numeric cutoffs; Andexxa is not the U.S. default",

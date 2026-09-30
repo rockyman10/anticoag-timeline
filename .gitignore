@@ -1,0 +1,29 @@
+# Capacitor / Node (keep capacitor/ sources in git; ignore installs + iOS build)
+capacitor/node_modules/
+capacitor/ios/App/Pods/
+capacitor/ios/App/build/
+capacitor/ios/App/output/
+capacitor/ios/DerivedData/
+capacitor/ios/**/DerivedData/
+capacitor/ios/**/*.xcuserstate
+capacitor/ios/**/xcuserdata/
+capacitor/ios/App/App/public/
+capacitor/ios/App/App/capacitor.config.json
+capacitor/ios/App/App/config.xml
+capacitor/ios/capacitor-cordova-ios-plugins/
+*.xcuserstate
+
+# Secrets
+.env
+.env.*
+*.p12
+*.mobileprovision
+AuthKey_*.p8
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Local zips / scratch (Ops rebuilds anticoag-timeline.zip outside tree)
+*.zip

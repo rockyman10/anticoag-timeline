@@ -1,0 +1,22 @@
+{
+  "name": "anticoag-trials-capacitor",
+  "version": "1.0.0",
+  "description": "Capacitor iOS shell for Anticoagulation Trials Timeline (Store = bundled www).",
+  "scripts": {
+    "sync:www": "bash scripts/sync-www.sh",
+    "cap:sync": "npm run sync:www && npx cap sync ios",
+    "cap:open": "npx cap open ios",
+    "cap:copy": "npx cap copy ios"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@capacitor/cli": "^7.6.9",
+    "@capacitor/core": "^7.6.9",
+    "@capacitor/ios": "^7.6.9"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  }
+}

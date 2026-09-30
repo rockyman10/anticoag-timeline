@@ -638,6 +638,198 @@
     }
 
     /* First-run Learn welcome strip (stress-free guided) */
+
+    /* Learn v2b coach + v2c Evidence visuals */
+    .learn-why {
+      margin: 0 0 .65rem;
+      padding: .55rem .7rem;
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      color: var(--ink-2);
+      font-size: .9375rem;
+      line-height: 1.45;
+      border-radius: 0 3px 3px 0;
+    }
+    .learn-why strong { color: var(--ink); }
+    .learn-hero-cta { width: 100%; min-height: 48px; font-size: 1.05rem; margin-top: .35rem; }
+    .learn-path-details {
+      margin: .85rem 0 0;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--paper);
+      padding: .35rem .55rem .55rem;
+    }
+    .learn-path-details > summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: .875rem;
+      color: var(--ink-2);
+      padding: .35rem .15rem;
+      list-style: none;
+    }
+    .learn-path-details > summary::-webkit-details-marker { display: none; }
+    .learn-path-details > summary::before { content: "▸ "; color: var(--accent); }
+    .learn-path-details[open] > summary::before { content: "▾ "; }
+    .learn-step-tag {
+      display: inline-block;
+      font-size: .6875rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: .35rem;
+    }
+    .learn-orient-tip {
+      color: var(--ink-2);
+      font-size: .9375rem;
+      margin: 0 0 .75rem;
+      line-height: 1.45;
+    }
+    .learn-coach-body { margin-bottom: .5rem; }
+    .modal.learn .m-foot.learn-foot-primary.learn-coach-sticky {
+      position: sticky;
+      bottom: 0;
+      z-index: 3;
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      flex-direction: column;
+      align-items: stretch;
+      gap: .45rem;
+      padding-top: .65rem;
+      padding-bottom: .55rem;
+    }
+    .learn-coach-primary { width: 100%; min-height: 44px; }
+    .learn-coach-sec {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem .5rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .learn-coach-sec .btn { min-height: 40px; }
+    .learn-graphic-progress {
+      font-size: .8125rem;
+      color: var(--muted);
+      margin: 0 0 .5rem;
+    }
+    /* Evidence visuals */
+    .lv-chart {
+      margin: 0 0 .75rem;
+      padding: .65rem .7rem .75rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      max-width: 680px;
+    }
+    .lv-hook {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--ink);
+      margin: 0 0 .35rem;
+    }
+    .lv-title {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin: 0 0 .55rem;
+      color: var(--ink);
+    }
+    .lv-svg { width: 100%; height: auto; display: block; background: var(--paper); }
+    .lv-val { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: var(--ink); }
+    .lv-xlabel, .lv-ytick, .lv-leg, .lv-ylabel { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 11px; fill: var(--muted); }
+    .lv-inset-title { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: var(--ink); }
+    .lv-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin: .45rem 0 .35rem; }
+    .lv-chip {
+      display: inline-block;
+      font-size: .75rem;
+      padding: .2rem .45rem;
+      background: var(--muted-bg);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      color: var(--ink-2);
+    }
+    .lv-takeaway {
+      margin: .55rem 0 .4rem;
+      padding: .45rem .6rem;
+      border-left: 3px solid var(--accent);
+      background: var(--accent-soft);
+      font-size: .875rem;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+    .lv-disclaimer {
+      font-size: .6875rem;
+      color: var(--muted);
+      margin: .35rem 0 .15rem;
+      line-height: 1.35;
+    }
+    .lv-cite { font-size: .6875rem; color: var(--muted); margin: 0; font-family: ui-monospace, monospace; }
+    .lv-caption-band {
+      font-size: .8125rem;
+      color: var(--ink-2);
+      margin: .4rem 0 .25rem;
+      padding: .35rem .5rem;
+      background: var(--muted-bg);
+      border-radius: 3px;
+    }
+    .lv-footnote { font-size: .75rem; color: var(--muted); margin: .35rem 0 0; line-height: 1.35; }
+    .lv-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .8125rem;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+    .lv-table caption {
+      caption-side: top;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: .35rem;
+      color: var(--ink);
+    }
+    .lv-table th, .lv-table td {
+      border: 1px solid var(--line);
+      padding: .35rem .45rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .lv-table thead th { background: var(--muted-bg); font-weight: 600; }
+    .lv-table tbody th { font-weight: 600; background: var(--paper); }
+    .lv-row-quirk { background: var(--accent-soft); }
+    .lv-badge {
+      display: inline-block;
+      font-size: .6875rem;
+      font-weight: 700;
+      padding: .1rem .35rem;
+      border-radius: 2px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      white-space: nowrap;
+    }
+    .lv-sub { font-size: .6875rem; color: var(--muted); font-weight: 400; }
+    .lv-swatch {
+      display: inline-block;
+      width: 10px; height: 10px;
+      margin-right: .25rem;
+      vertical-align: middle;
+      border: 1px solid var(--line-2);
+    }
+    .lv-swatch-hd { background: #975a16; }
+    .lv-swatch-ld { background: #2c5282; }
+    .lv-swatch-w {
+      background: repeating-linear-gradient(45deg, #3d3a34, #3d3a34 1px, transparent 1px, transparent 4px);
+    }
+    .lv-sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    @media (max-width: 640px) {
+      .modal.learn { max-width: min(100vw - 12px, 600px); }
+      .lv-chart { padding: .5rem; }
+    }
+
     .learn-welcome {
       margin: .55rem 0 .45rem;
       padding: .65rem .85rem;
@@ -699,6 +891,7 @@
     body.embed .topbar .deck,
     body.embed .whats-new,
     body.embed #learn-welcome,
+    body.embed #btn-learn-chip,
     body.embed .sec-nav,
     body.embed .teach-wrap,
     body.embed #btn-teach,
@@ -781,6 +974,26 @@
       position: relative;
       align-self: flex-start;
       padding: .05rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .35rem;
+    }
+    #btn-learn-chip {
+      font-size: .8125rem;
+      font-weight: 600;
+      min-height: 36px;
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    #btn-learn-chip:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    @media (max-width: 640px) {
+      #btn-learn-chip { min-height: 44px; }
     }
     .teach-wrap #btn-teach {
       font-size: .8125rem; font-weight: 600;
@@ -838,7 +1051,8 @@
     }
     body.embed .sec-nav,
     body.embed .teach-wrap,
-    body.embed #btn-teach { display: none !important; }
+    body.embed #btn-teach,
+    body.embed #btn-learn-chip { display: none !important; }
 
     /* Mobile ≤640: More overflow + Teach bottom sheet (after base so cascade wins) */
     @media (max-width: 640px) {
@@ -1115,6 +1329,7 @@
       <button type="button" class="btn sm" id="btn-teach" aria-expanded="false" aria-controls="teach-menu" aria-haspopup="menu">
         Teach <span class="teach-chev" aria-hidden="true">▾</span>
       </button>
+      <button type="button" class="btn sm" id="btn-learn-chip" aria-label="Start here — open Learn path">Start here</button>
       <div class="teach-menu" id="teach-menu" role="menu" aria-label="Teaching tools" hidden>
         <div class="teach-menu-label" aria-hidden="true">Practice</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-txpath">Treatment pathways</button>
@@ -1133,10 +1348,10 @@
 
     <aside id="learn-welcome" class="learn-welcome" hidden aria-label="Guided start">
       <h2 class="learn-welcome-title" id="learn-welcome-title">Start here — or browse freely</h2>
-      <p class="learn-welcome-body" id="learn-welcome-body">Ten short guided steps for a first clinic week. Skip anytime. The timeline stays available if you just want to explore. Educational resource — not medical advice.</p>
+      <p class="learn-welcome-body" id="learn-welcome-body">Ten short steps for a first clinic week. Skip anytime.</p>
       <div class="learn-welcome-actions">
         <button type="button" class="btn primary" id="learn-welcome-start">Start guided path</button>
-        <button type="button" class="btn sm" id="learn-welcome-browse">Browse the timeline</button>
+        <button type="button" class="btn sm" id="learn-welcome-browse">Browse for now</button>
       </div>
     </aside>
 
@@ -1269,7 +1484,7 @@
       <div class="m-foot learn-foot-primary" id="learn-foot-primary"></div>
       <div class="m-foot learn-foot-secondary" id="learn-foot-secondary">
         <button type="button" class="btn sm ghost" id="learn-explore">Explore Teach freely</button>
-        <button type="button" class="btn-reset-learn" id="learn-reset">Reset Learn path progress</button>
+        <button type="button" class="btn-reset-learn" id="learn-reset">Reset for next learner</button>
       </div>
     </div>
   </div>
@@ -1436,6 +1651,7 @@
   <script src="js/cases.js"></script>
   <script src="js/practical.js"></script>
   <script src="js/learn-path.js"></script>
+  <script src="js/learn-visuals.js"></script>
   <script src="js/cacp.js"></script>
   <script>
 (function () {
@@ -3800,9 +4016,10 @@
 
   /* —— Learn path (Core Clinic Path) —— */
   const LEARN_STORAGE_KEY = "anticoag-learn-v1";
+  const LEARN_WELCOME_SESSION_KEY = "anticoag-learn-welcome-session";
   const learnPathData = window.ANTICOAG_LEARN_PATH || { meta: {}, lessons: [] };
   const learnLessons = Array.isArray(learnPathData.lessons) ? learnPathData.lessons.slice().sort((a, b) => (a.order || 0) - (b.order || 0)) : [];
-  let learnView = { mode: "hub", lessonId: null }; // hub | resume | lesson | complete
+  let learnView = { mode: "hub", lessonId: null, step: null, graphicIdx: 0 }; // hub | lesson | complete
 
   function learnNowIso() {
     try { return new Date().toISOString(); } catch (e) { return ""; }
@@ -3819,6 +4036,27 @@
       ui: {}
     };
   }
+  function isLearnWelcomeSessionHidden() {
+    try { return sessionStorage.getItem(LEARN_WELCOME_SESSION_KEY) === "1"; }
+    catch (e) { return false; }
+  }
+  function softHideLearnWelcome() {
+    try { sessionStorage.setItem(LEARN_WELCOME_SESSION_KEY, "1"); }
+    catch (e) { /* ignore */ }
+    updateLearnWelcome();
+  }
+  function clearLearnWelcomeSessionHide() {
+    try { sessionStorage.removeItem(LEARN_WELCOME_SESSION_KEY); }
+    catch (e) { /* ignore */ }
+  }
+  function stripLegacyWelcomeDismiss(state) {
+    if (!state || typeof state !== "object") return state;
+    if (state.ui && typeof state.ui === "object" && state.ui.welcomeDismissedAt) {
+      delete state.ui.welcomeDismissedAt;
+    }
+    if (state.welcomeDismissedAt) delete state.welcomeDismissedAt;
+    return state;
+  }
   function loadLearnProgress() {
     try {
       const raw = localStorage.getItem(LEARN_STORAGE_KEY);
@@ -3830,11 +4068,8 @@
       if (parsed.streak === undefined) parsed.streak = null;
       if (parsed.pathVersion == null) parsed.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
       if (!parsed.ui || typeof parsed.ui !== "object") parsed.ui = {};
-      // Migrate accidental top-level welcomeDismissedAt into ui
-      if (parsed.welcomeDismissedAt && !parsed.ui.welcomeDismissedAt) {
-        parsed.ui.welcomeDismissedAt = parsed.welcomeDismissedAt;
-      }
-      delete parsed.welcomeDismissedAt;
+      // v2: ignore legacy permanent dismiss for show; strip field in memory (persisted on next save)
+      stripLegacyWelcomeDismiss(parsed);
       return parsed;
     } catch (e) {
       return learnEmptyState();
@@ -3848,43 +4083,35 @@
       state.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
       if (state.streak === undefined) state.streak = null;
       if (!state.ui || typeof state.ui !== "object") state.ui = {};
+      // Optional cleanup: never re-write permanent welcomeDismissedAt
+      stripLegacyWelcomeDismiss(state);
       localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(state));
     } catch (e) { /* ignore quota */ }
     try { if (typeof updateLearnWelcome === "function") updateLearnWelcome(); } catch (e2) {}
   }
-  function getWelcomeDismissedAt(state) {
-    if (!state) return null;
-    if (state.ui && state.ui.welcomeDismissedAt) return state.ui.welcomeDismissedAt;
-    if (state.welcomeDismissedAt) return state.welcomeDismissedAt;
-    return null;
-  }
   function dismissLearnWelcome() {
-    const state = loadLearnProgress();
-    if (!state.ui || typeof state.ui !== "object") state.ui = {};
-    state.ui.welcomeDismissedAt = learnNowIso();
-    saveLearnProgress(state);
-    updateLearnWelcome();
+    // Session soft-hide only (shared-machine / v2a) — no permanent localStorage dismiss
+    softHideLearnWelcome();
   }
   function resetLearnProgress() {
-    // Clear progress fields only; preserve ui.welcomeDismissedAt (do not re-spam strip)
-    const prev = loadLearnProgress();
-    const keptWelcome = getWelcomeDismissedAt(prev);
+    // Clear progress + session soft-hide; do NOT write permanent dismiss
     const next = learnEmptyState();
-    if (keptWelcome) {
-      next.ui = { welcomeDismissedAt: keptWelcome };
-    }
+    next.ui = {};
     try {
       localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(next));
     } catch (e) { /* ignore quota */ }
+    clearLearnWelcomeSessionHide();
   }
   function learnLessonEntry(state, id) {
     if (!state.lessons[id]) {
-      state.lessons[id] = { status: "not_started", openedPrimary: false, openedDeepen: false };
+      state.lessons[id] = { status: "not_started", openedPrimary: false, openedDeepen: false, coachStep: "orient", graphicIdx: 0 };
     }
     const e = state.lessons[id];
     if (e.openedPrimary == null) e.openedPrimary = false;
     if (e.openedDeepen == null) e.openedDeepen = false;
     if (!e.status) e.status = "not_started";
+    if (!e.coachStep) e.coachStep = "orient";
+    if (e.graphicIdx == null) e.graphicIdx = 0;
     return e;
   }
   function learnStatus(state, id) {
@@ -3989,6 +4216,98 @@
     return "Deepen · " + clipped;
   }
 
+  const LEARN_WHY = {
+    "af-doac-start": "Start with AF stroke-prevention teaching, then see how landmark DOAC trials sit on the timeline.",
+    "acute-vte-doac": "Move from AF to acute VTE — open the DOAC-choice framework, then a concrete case.",
+    "peri-bridge": "Elective procedures are where reflexive bridging shows up — use the peri framework + BRIDGE-era case.",
+    "mech-valve": "Mechanical valves break the “just use a DOAC” habit — contrast with AF/VTE defaults.",
+    "aps-vka": "APS (especially triple-positive) is another VKA-first niche — practice the DOAC-request case.",
+    "compass-dose": "Vascular-dose rivaroxaban is not an AF/VTE dose — this lesson exists to prevent that mix-up.",
+    "post-tavi": "Post-TAVI antithrombotic choices differ from mechanical-valve and routine AF care.",
+    "doac-bleed-us": "U.S. major-bleed teaching after Andexxa withdrawal — framework, then the ICH case.",
+    "af-pci": "After PCI, dual-pathway duration (not endless triple therapy) is the teachable fork.",
+    "cancer-vte": "Cancer-associated VTE has its own pathway — framework plus a step-down case."
+  };
+  const LEARN_ORIENT_TIP = {
+    "af-doac-start": "Open the AF stroke-prevention framework first.",
+    "acute-vte-doac": "Open the acute VTE DOAC framework first.",
+    "peri-bridge": "Open the peri-procedural OAC framework first.",
+    "mech-valve": "Open the mechanical-valve VKA framework first.",
+    "aps-vka": "Open the APS triple-positive VKA framework first.",
+    "compass-dose": "Open the COMPASS vascular-dose framework first.",
+    "post-tavi": "Open the post-TAVI antithrombotic framework first.",
+    "doac-bleed-us": "Open the U.S. major-bleed framework first.",
+    "af-pci": "Open the AF-after-PCI dual-pathway framework first.",
+    "cancer-vte": "Open the cancer-associated VTE framework first."
+  };
+  function learnWhy(lesson) {
+    if (!lesson) return "";
+    return lesson.whyThis || LEARN_WHY[lesson.id] || "";
+  }
+  function learnOrientTip(lesson) {
+    if (!lesson) return "";
+    return lesson.orientTip || LEARN_ORIENT_TIP[lesson.id] || "";
+  }
+  function learnHasEvidence(lesson) {
+    if (!lesson) return false;
+    const LV = window.ANTICOAG_LEARN_VISUALS;
+    if (LV && typeof LV.hasEvidence === "function") return LV.hasEvidence(lesson.id);
+    return !!lesson.hasEvidenceVisual;
+  }
+  function learnGraphics(lesson) {
+    const LV = window.ANTICOAG_LEARN_VISUALS;
+    if (!LV || !lesson) return [];
+    return (typeof LV.graphicsForLesson === "function" ? LV.graphicsForLesson(lesson.id) : []) || [];
+  }
+  function learnCoachSteps(lesson) {
+    const steps = ["orient"];
+    if (learnHasEvidence(lesson)) steps.push("evidence");
+    steps.push("practice", "wrap");
+    return steps;
+  }
+  function learnNormalizeStep(lesson, step) {
+    const steps = learnCoachSteps(lesson);
+    if (step && steps.indexOf(step) >= 0) return step;
+    return steps[0];
+  }
+  function learnNextStepName(lesson, step) {
+    const steps = learnCoachSteps(lesson);
+    const i = steps.indexOf(step);
+    if (i < 0 || i >= steps.length - 1) return null;
+    return steps[i + 1];
+  }
+  function learnDeepenVerb(lesson) {
+    const t = lesson && lesson.deepen;
+    if (!t) return "Open deepen";
+    if (t.kind === "case") return "Open case";
+    if (t.kind === "pathway") return "Open playlist";
+    if (t.kind === "nuance") return "Open nuance";
+    if (t.kind === "reversal") return "Open Bleed & reversal";
+    return "Open " + learnKindLabel(t.kind);
+  }
+  function setLearnFootSecondaryVisible(vis) {
+    const sec = document.getElementById("learn-foot-secondary");
+    if (sec) sec.hidden = !vis;
+  }
+  function persistCoachStep(lessonId, step, graphicIdx) {
+    const state = loadLearnProgress();
+    const entry = learnLessonEntry(state, lessonId);
+    entry.coachStep = step;
+    if (graphicIdx != null) entry.graphicIdx = graphicIdx;
+    if (entry.status === "not_started") entry.status = "in_progress";
+    state.lastLessonId = lessonId;
+    saveLearnProgress(state);
+    return state;
+  }
+  function advanceCoachAfterPrimary(lesson) {
+    if (!lesson) return;
+    const next = learnHasEvidence(lesson) ? "evidence" : "practice";
+    persistCoachStep(lesson.id, next, 0);
+    learnView.step = next;
+    learnView.graphicIdx = 0;
+  }
+
+
   function renderLearnProgress(state) {
     const done = countLearnDone(state);
     const total = learnLessons.length || 10;
@@ -4025,8 +4344,20 @@
     if (!target || !target.kind) return;
     const state = loadLearnProgress();
     const entry = learnLessonEntry(state, lesson.id);
-    if (which === "primary") entry.openedPrimary = true;
-    if (which === "deepen") entry.openedDeepen = true;
+    if (which === "primary") {
+      entry.openedPrimary = true;
+      // Soft advance: after teaching card, resume at Evidence (if any) or Practice
+      const next = learnHasEvidence(lesson) ? "evidence" : "practice";
+      entry.coachStep = next;
+      entry.graphicIdx = 0;
+      learnView.step = next;
+      learnView.graphicIdx = 0;
+    }
+    if (which === "deepen") {
+      entry.openedDeepen = true;
+      entry.coachStep = "wrap";
+      learnView.step = "wrap";
+    }
     if (entry.status === "not_started" || entry.status === "skipped") entry.status = "in_progress";
     state.lastLessonId = lesson.id;
     saveLearnProgress(state);
@@ -4081,44 +4412,33 @@
     const body = document.getElementById("learn-body");
     const foot = document.getElementById("learn-foot-primary");
     if (!body || !foot) return;
+    foot.classList.remove("learn-coach-sticky");
 
-    if (learnView.mode === "hub") {
-      body.innerHTML = `
-        <div class="learn-hero">
-          <h3>Start the Core Clinic Path</h3>
-          <p>Ten short lessons that open the site’s teaching tools. Skip anytime and explore Teach on your own. Educational resource — not medical advice.</p>
-          <p>Prefer to browse? Teach stays fully available — the path is guidance, not a gate.</p>
-        </div>`;
-      const first = learnLessons[0];
-      foot.innerHTML = first
-        ? `<button type="button" class="btn primary" id="learn-start">${esc("Start lesson 1 · " + first.title)}</button>`
-        : "";
-      const startBtn = document.getElementById("learn-start");
-      if (startBtn) startBtn.onclick = () => {
-        learnView = { mode: "lesson", lessonId: first.id };
-        const st = loadLearnProgress();
-        const e = learnLessonEntry(st, first.id);
-        if (e.status === "not_started") e.status = "in_progress";
-        st.lastLessonId = first.id;
-        saveLearnProgress(st);
-        openLearnPath({ lessonId: first.id, skipRoute: false, replaceRoute: false });
-      };
-      return;
-    }
-
-    if (learnView.mode === "resume") {
+    // —— Hub (unified cold + resume) ——
+    if (learnView.mode === "hub" || learnView.mode === "resume") {
+      setLearnFootSecondaryVisible(true);
+      const doneAll = allLearnDone(state);
+      if (doneAll) {
+        learnView = { mode: "complete", lessonId: null, step: null, graphicIdx: 0 };
+        renderLearnBody();
+        return;
+      }
       const rid = resumeLessonId(state);
-      const lesson = findLearnLesson(rid);
-      const n = lesson ? lesson.order : 1;
-      const title = lesson ? lesson.title : "";
+      const lesson = findLearnLesson(rid) || learnLessons[0];
+      const hasProg = hasLearnProgress(state);
+      const why = learnWhy(lesson);
+      const ctaLabel = hasProg
+        ? ("Continue · Lesson " + (lesson ? lesson.order : 1) + ": " + (lesson ? lesson.title : ""))
+        : ("Start · Lesson " + (lesson ? lesson.order : 1) + ": " + (lesson ? lesson.title : ""));
       body.innerHTML = `
         <div class="learn-hero">
-          <h3>Continue where you left off</h3>
-          <p>Lesson ${n}: ${esc(title)}</p>
-          <p>Prefer to browse? Teach stays fully available — the path is guidance, not a gate.</p>
+          <h3>${hasProg ? "Continue where you left off" : "Start the Core Clinic Path"}</h3>
+          <p class="learn-why"><strong>Why this step:</strong> ${esc(why)}</p>
+          <p>Ten short lessons that open the site’s teaching tools. Skip anytime — soft path, no rush. Educational resource — not medical advice.</p>
+          <button type="button" class="btn primary learn-hero-cta" id="learn-hub-cta">${esc(ctaLabel)}</button>
         </div>
-        <details>
-          <summary>Review a lesson</summary>
+        <details class="learn-path-details">
+          <summary>Show all 10 steps</summary>
           <div class="learn-review-list" id="learn-review-list"></div>
         </details>`;
       const list = document.getElementById("learn-review-list");
@@ -4132,20 +4452,29 @@
           b.onclick = () => openLearnPath({ lessonId: b.dataset.review });
         });
       }
-      foot.innerHTML = `<button type="button" class="btn primary" id="learn-continue-resume">Continue</button>`;
-      const c = document.getElementById("learn-continue-resume");
-      if (c) c.onclick = () => openLearnPath({ lessonId: rid });
+      foot.innerHTML = "";
+      const hubCta = document.getElementById("learn-hub-cta");
+      if (hubCta && lesson) hubCta.onclick = () => {
+        const st = loadLearnProgress();
+        const e = learnLessonEntry(st, lesson.id);
+        if (e.status === "not_started") e.status = "in_progress";
+        st.lastLessonId = lesson.id;
+        saveLearnProgress(st);
+        openLearnPath({ lessonId: lesson.id });
+      };
       return;
     }
 
+    // —— Complete ——
     if (learnView.mode === "complete") {
+      setLearnFootSecondaryVisible(true);
       body.innerHTML = `
         <div class="learn-hero">
           <h3>Core Clinic Path complete on this device.</h3>
           <p>Keep exploring Frameworks, Cases, pathways, DDI, and Bleed &amp; reversal — or try unofficial CACP practice when you want exam-style questions.</p>
         </div>
-        <details open>
-          <summary>Review a lesson</summary>
+        <details class="learn-path-details" open>
+          <summary>Show all 10 steps</summary>
           <div class="learn-review-list" id="learn-review-list"></div>
         </details>`;
       const list = document.getElementById("learn-review-list");
@@ -4171,51 +4500,113 @@
       return;
     }
 
-    // lesson mode
+    // —— Lesson coach steps ——
     const lesson = findLearnLesson(learnView.lessonId);
     if (!lesson) {
-      learnView = { mode: hasLearnProgress(state) ? (allLearnDone(state) ? "complete" : "resume") : "hub", lessonId: null };
+      learnView = { mode: hasLearnProgress(state) ? (allLearnDone(state) ? "complete" : "hub") : "hub", lessonId: null, step: null, graphicIdx: 0 };
       renderLearnBody();
       return;
     }
-    const entry = learnLessonEntry(state, lesson.id);
-    const goals = (lesson.goals || []).map(g => `<li>${esc(g)}</li>`).join("");
-    let callout = "";
-    if (entry.status === "done") {
-      callout = `<div class="learn-callout"><strong>Lesson complete.</strong> Next when you’re ready.</div>`;
-    } else if (entry.openedPrimary) {
-      callout = `<div class="learn-callout"><strong>Nice — you’ve opened the main teach card.</strong> Mark this lesson done, or deepen with the case / pathway.</div>`;
-    }
-    let softExtra = "";
-    if (lesson.softExtra && lesson.softExtra.kind) {
-      softExtra = `<button type="button" class="btn sm ghost" id="learn-soft-extra">Optional nuance · ${esc(learnTargetTitle(lesson.softExtra))}</button>`;
-    }
-    let softReversal = "";
-    if (lesson.id === "doac-bleed-us") {
-      softReversal = `<button type="button" class="btn sm ghost" id="learn-soft-reversal">Optional: Bleed &amp; reversal</button>`;
-    }
-    let softCacp = "";
-    if (entry.status === "done" && (lesson.softInvites || []).some(s => s.kind === "cacp")) {
-      softCacp = `<div class="learn-soft-strip"><button type="button" class="btn sm" id="learn-soft-cacp">Optional: unofficial CACP practice</button></div>`;
-    }
-    const deepenCls = lesson.deepenRequired ? "btn primary" : "btn sm";
-    body.innerHTML = `
-      <div class="learn-lesson-kicker">Lesson ${lesson.order} of ${learnLessons.length}</div>
-      <h3 class="learn-lesson-title">${esc(lesson.title)}</h3>
-      <ul class="learn-goals">${goals}</ul>
-      <div class="learn-cta-stack">
-        <button type="button" class="btn primary" id="learn-open-primary">${esc(learnPrimaryCtaLabel(lesson))}</button>
-        ${lesson.deepen ? `<button type="button" class="${deepenCls}" id="learn-open-deepen">${esc(learnDeepenCtaLabel(lesson))}</button>` : ""}
-        ${softExtra}
-        ${softReversal}
-      </div>
-      ${callout}
-      ${softCacp}`;
+    setLearnFootSecondaryVisible(false);
+    foot.classList.add("learn-coach-sticky");
 
-    const primaryBtn = document.getElementById("learn-open-primary");
-    if (primaryBtn) primaryBtn.onclick = () => openLearnTarget(lesson.primary, lesson, "primary");
-    const deepenBtn = document.getElementById("learn-open-deepen");
-    if (deepenBtn && lesson.deepen) deepenBtn.onclick = () => openLearnTarget(lesson.deepen, lesson, "deepen");
+    const entry = learnLessonEntry(state, lesson.id);
+    let step = learnNormalizeStep(lesson, learnView.step || entry.coachStep);
+    if (entry.status === "done" && !learnView.step) step = "wrap";
+    learnView.step = step;
+    let gIdx = learnView.graphicIdx != null ? learnView.graphicIdx : (entry.graphicIdx || 0);
+    const graphics = learnGraphics(lesson);
+    if (gIdx < 0) gIdx = 0;
+    if (graphics.length && gIdx >= graphics.length) gIdx = graphics.length - 1;
+    learnView.graphicIdx = gIdx;
+
+    const tip = learnOrientTip(lesson);
+    const why = learnWhy(lesson);
+    let bodyHtml = `
+      <div class="learn-lesson-kicker">Lesson ${lesson.order} of ${learnLessons.length}</div>
+      <h3 class="learn-lesson-title">${esc(lesson.title)}</h3>`;
+
+    let primaryLabel = "Continue";
+    let primaryAction = null;
+    let showSkipVisual = false;
+
+    if (step === "orient") {
+      bodyHtml += `
+        <div class="learn-step-tag">Orient</div>
+        <p class="learn-orient-tip">${esc(tip)}</p>
+        <p class="learn-coach-body">You’ll open a short teaching card first — one decision surface, not the whole site.</p>
+        <p class="learn-why"><strong>Why this step:</strong> ${esc(why)}</p>`;
+      primaryLabel = "Open teaching";
+      primaryAction = () => openLearnTarget(lesson.primary, lesson, "primary");
+    } else if (step === "evidence") {
+      const g = graphics[gIdx];
+      const LV = window.ANTICOAG_LEARN_VISUALS;
+      const htmlG = g && LV && typeof LV.renderGraphic === "function" ? LV.renderGraphic(g) : (g && g.html) || "";
+      bodyHtml += `
+        <div class="learn-step-tag">Evidence</div>
+        <h4 class="learn-lesson-title" style="font-size:1.05rem;margin-bottom:.35rem">Evidence at a glance</h4>
+        <p class="learn-coach-body">A friendly teaching chart/table from landmark trials — built for learning, not a paper screenshot.</p>
+        <p class="learn-graphic-progress">Visual ${gIdx + 1} of ${graphics.length || 1}</p>
+        <div class="learn-evidence-mount">${htmlG}</div>`;
+      showSkipVisual = true;
+      primaryLabel = "Continue";
+      primaryAction = () => {
+        if (gIdx + 1 < graphics.length) {
+          learnView.graphicIdx = gIdx + 1;
+          persistCoachStep(lesson.id, "evidence", learnView.graphicIdx);
+          renderLearnBody();
+        } else {
+          learnView.step = "practice";
+          learnView.graphicIdx = 0;
+          persistCoachStep(lesson.id, "practice", 0);
+          renderLearnBody();
+        }
+      };
+    } else if (step === "practice") {
+      bodyHtml += `
+        <div class="learn-step-tag">Practice</div>
+        <p class="learn-coach-body">Nice — next, try the linked case (or skip if you only wanted the framework).</p>`;
+      if (lesson.deepen) {
+        primaryLabel = learnDeepenVerb(lesson);
+        primaryAction = () => openLearnTarget(lesson.deepen, lesson, "deepen");
+      } else {
+        primaryLabel = "Continue";
+        primaryAction = () => {
+          learnView.step = "wrap";
+          persistCoachStep(lesson.id, "wrap", 0);
+          renderLearnBody();
+        };
+      }
+    } else {
+      // wrap
+      bodyHtml += `
+        <div class="learn-step-tag">Wrap</div>
+        <div class="learn-callout"><strong>Lesson complete.</strong> Next when you’re ready.</div>`;
+      if (lesson.id === "doac-bleed-us") {
+        bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost" id="learn-soft-reversal">Optional: Bleed &amp; reversal</button></div>`;
+      }
+      if ((lesson.softInvites || []).some(s => s.kind === "cacp")) {
+        bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm" id="learn-soft-cacp">Optional: unofficial CACP practice</button></div>`;
+      }
+      if (lesson.softExtra && lesson.softExtra.kind) {
+        bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost" id="learn-soft-extra">Optional nuance · ${esc(learnTargetTitle(lesson.softExtra))}</button></div>`;
+      }
+      primaryLabel = "Next lesson";
+      primaryAction = () => {
+        const st = markLearnLessonDone(lesson.id);
+        if (allLearnDone(st)) {
+          learnView = { mode: "complete", lessonId: null, step: null, graphicIdx: 0 };
+          openLearnPath({ skipRoute: false, replaceRoute: true });
+          return;
+        }
+        const next = nextIncompleteLessonId(st, lesson.id);
+        if (next) openLearnPath({ lessonId: next });
+        else openLearnPath({});
+      };
+    }
+
+    body.innerHTML = bodyHtml;
+
     const softEx = document.getElementById("learn-soft-extra");
     if (softEx && lesson.softExtra) softEx.onclick = () => openLearnTarget(lesson.softExtra, lesson, "deepen");
     const softRev = document.getElementById("learn-soft-reversal");
@@ -4227,36 +4618,37 @@
       openCacp({});
     };
 
-    const contLabel = entry.status === "done" ? "Continue" : "Continue";
-    foot.innerHTML = `
-      <button type="button" class="btn ${entry.status === "done" ? "primary" : "sm"}" id="learn-mark-done"${entry.status === "done" ? " hidden" : ""}>Mark done</button>
-      <button type="button" class="btn ${entry.status === "done" ? "primary" : "sm"}" id="learn-continue">${contLabel}</button>
-      <button type="button" class="btn sm ghost" id="learn-skip">Skip for now</button>`;
+    let secHtml = `<div class="learn-coach-sec">`;
+    if (showSkipVisual) {
+      secHtml += `<button type="button" class="btn sm ghost" id="learn-skip-visual">Skip visual</button>`;
+    } else if (step === "practice" && lesson.deepen) {
+      secHtml += `<button type="button" class="btn sm ghost" id="learn-skip-deepen">Skip deepen</button>`;
+    } else {
+      secHtml += `<button type="button" class="btn sm ghost" id="learn-skip">Skip</button>`;
+    }
+    secHtml += `<button type="button" class="btn sm ghost" id="learn-back-hub">Back to hub</button></div>`;
 
-    const mark = document.getElementById("learn-mark-done");
-    if (mark) mark.onclick = () => {
-      const st = markLearnLessonDone(lesson.id);
-      if (allLearnDone(st)) {
-        learnView = { mode: "complete", lessonId: null };
-        openLearnPath({ skipRoute: false, replaceRoute: true });
-      } else {
-        learnView = { mode: "lesson", lessonId: lesson.id };
-        renderLearnBody();
-      }
+    foot.innerHTML = `
+      <button type="button" class="btn primary learn-coach-primary" id="learn-coach-next">${esc(primaryLabel)}</button>
+      ${secHtml}`;
+
+    const nextBtn = document.getElementById("learn-coach-next");
+    if (nextBtn && primaryAction) nextBtn.onclick = primaryAction;
+
+    const skipVis = document.getElementById("learn-skip-visual");
+    if (skipVis) skipVis.onclick = () => {
+      learnView.step = "practice";
+      learnView.graphicIdx = 0;
+      persistCoachStep(lesson.id, "practice", 0);
+      renderLearnBody();
     };
-    const cont = document.getElementById("learn-continue");
-    if (cont) cont.onclick = () => {
-      let st = loadLearnProgress();
-      if (learnStatus(st, lesson.id) !== "done" && learnStatus(st, lesson.id) !== "skipped") {
-        // continue without forcing done
-      }
-      if (allLearnDone(st)) {
-        openLearnPath({ skipRoute: false, replaceRoute: true });
-        return;
-      }
-      const next = nextIncompleteLessonId(st, lesson.id);
-      if (next) openLearnPath({ lessonId: next });
-      else openLearnPath({});
+    const skipDeep = document.getElementById("learn-skip-deepen");
+    if (skipDeep) skipDeep.onclick = () => {
+      learnView.step = "wrap";
+      persistCoachStep(lesson.id, "wrap", 0);
+      // Soft: mark done without requiring deepen (even if deepenRequired — soft path)
+      markLearnLessonDone(lesson.id);
+      renderLearnBody();
     };
     const skip = document.getElementById("learn-skip");
     if (skip) skip.onclick = () => {
@@ -4264,6 +4656,11 @@
       const next = nextIncompleteLessonId(st, lesson.id);
       if (next) openLearnPath({ lessonId: next });
       else openLearnPath({});
+    };
+    const backHub = document.getElementById("learn-back-hub");
+    if (backHub) backHub.onclick = () => {
+      learnView = { mode: "hub", lessonId: null, step: null, graphicIdx: 0 };
+      openLearnPath({ skipRoute: false, replaceRoute: true });
     };
   }
 
@@ -4279,17 +4676,21 @@
     if (lessonId && !findLearnLesson(lessonId)) lessonId = null;
 
     if (lessonId) {
-      learnView = { mode: "lesson", lessonId };
+      const lesson = findLearnLesson(lessonId);
       const e = learnLessonEntry(state, lessonId);
       if (e.status === "not_started") e.status = "in_progress";
       state.lastLessonId = lessonId;
       saveLearnProgress(state);
+      let step = opts.step || e.coachStep || "orient";
+      if (e.status === "done" && !opts.step) step = "wrap";
+      step = learnNormalizeStep(lesson, step);
+      const gIdx = opts.graphicIdx != null ? opts.graphicIdx : (e.graphicIdx || 0);
+      learnView = { mode: "lesson", lessonId, step, graphicIdx: gIdx };
     } else if (allLearnDone(state)) {
-      learnView = { mode: "complete", lessonId: null };
-    } else if (hasLearnProgress(state)) {
-      learnView = { mode: "resume", lessonId: null };
+      learnView = { mode: "complete", lessonId: null, step: null, graphicIdx: 0 };
     } else {
-      learnView = { mode: "hub", lessonId: null };
+      // Unified hub (cold start + resume)
+      learnView = { mode: "hub", lessonId: null, step: null, graphicIdx: 0 };
     }
 
     if (!opts.skipRoute) {
@@ -4312,8 +4713,9 @@
       const params = new URLSearchParams(location.search);
       if (params.get("embed") === "1") return false;
     } catch (e) {}
+    // v2: do NOT gate on welcomeDismissedAt (legacy ignored)
+    if (isLearnWelcomeSessionHidden()) return false;
     const state = loadLearnProgress();
-    if (getWelcomeDismissedAt(state)) return false;
     if (hasLearnProgress(state)) return false;
     return true;
   }
@@ -4345,14 +4747,14 @@
     if (explore) explore.onclick = () => { closeModal("learn"); };
     const reset = document.getElementById("learn-reset");
     if (reset) reset.onclick = () => {
-      const ok = window.confirm("Reset Learn path progress on this device? Your lesson checkmarks will clear. Teach tools and CACP answers are unchanged.");
+      const ok = window.confirm("Reset for next learner? Clears Learn progress on this device and brings back the Start here tip for the next person. Teach tools stay available. Theme is unchanged.");
       if (!ok) return;
       resetLearnProgress();
-      learnView = { mode: "hub", lessonId: null };
+      learnView = { mode: "hub", lessonId: null, step: null, graphicIdx: 0 };
       setRoute("learn", null, true);
       renderLearnBody();
       updateLearnWelcome();
-      toast("Learn path progress cleared");
+      toast("Learn path cleared for next learner");
     };
   })();
 
@@ -4370,6 +4772,22 @@
       else setTimeout(open, 0);
     });
   })();
+
+  (function wireLearnChip() {
+    const chip = document.getElementById("btn-learn-chip");
+    if (!chip) return;
+    chip.addEventListener("click", (e) => {
+      e.preventDefault();
+      openLearnPath({});
+    });
+  })();
+
+  // Multi-tab: refresh welcome after other tabs change anticoag-learn-v1 (no permanent dismiss to resurrect)
+  window.addEventListener("storage", (ev) => {
+    if (ev.key === LEARN_STORAGE_KEY || ev.key === null) {
+      try { updateLearnWelcome(); } catch (e) {}
+    }
+  });
 
   wireLearnWelcome();
 

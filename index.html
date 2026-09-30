@@ -699,6 +699,7 @@
     body.embed .topbar .deck,
     body.embed .whats-new,
     body.embed #learn-welcome,
+    body.embed #btn-learn-chip,
     body.embed .sec-nav,
     body.embed .teach-wrap,
     body.embed #btn-teach,
@@ -781,6 +782,26 @@
       position: relative;
       align-self: flex-start;
       padding: .05rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .35rem;
+    }
+    #btn-learn-chip {
+      font-size: .8125rem;
+      font-weight: 600;
+      min-height: 36px;
+      border-color: var(--accent);
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    #btn-learn-chip:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    @media (max-width: 640px) {
+      #btn-learn-chip { min-height: 44px; }
     }
     .teach-wrap #btn-teach {
       font-size: .8125rem; font-weight: 600;
@@ -838,7 +859,8 @@
     }
     body.embed .sec-nav,
     body.embed .teach-wrap,
-    body.embed #btn-teach { display: none !important; }
+    body.embed #btn-teach,
+    body.embed #btn-learn-chip { display: none !important; }
 
     /* Mobile ≤640: More overflow + Teach bottom sheet (after base so cascade wins) */
     @media (max-width: 640px) {
@@ -1115,6 +1137,7 @@
       <button type="button" class="btn sm" id="btn-teach" aria-expanded="false" aria-controls="teach-menu" aria-haspopup="menu">
         Teach <span class="teach-chev" aria-hidden="true">▾</span>
       </button>
+      <button type="button" class="btn sm" id="btn-learn-chip" aria-label="Start here — open Learn path">Start here</button>
       <div class="teach-menu" id="teach-menu" role="menu" aria-label="Teaching tools" hidden>
         <div class="teach-menu-label" aria-hidden="true">Practice</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-txpath">Treatment pathways</button>
@@ -1133,10 +1156,10 @@
 
     <aside id="learn-welcome" class="learn-welcome" hidden aria-label="Guided start">
       <h2 class="learn-welcome-title" id="learn-welcome-title">Start here — or browse freely</h2>
-      <p class="learn-welcome-body" id="learn-welcome-body">Ten short guided steps for a first clinic week. Skip anytime. The timeline stays available if you just want to explore. Educational resource — not medical advice.</p>
+      <p class="learn-welcome-body" id="learn-welcome-body">Ten short steps for a first clinic week. Skip anytime.</p>
       <div class="learn-welcome-actions">
         <button type="button" class="btn primary" id="learn-welcome-start">Start guided path</button>
-        <button type="button" class="btn sm" id="learn-welcome-browse">Browse the timeline</button>
+        <button type="button" class="btn sm" id="learn-welcome-browse">Browse for now</button>
       </div>
     </aside>
 
@@ -1269,7 +1292,7 @@
       <div class="m-foot learn-foot-primary" id="learn-foot-primary"></div>
       <div class="m-foot learn-foot-secondary" id="learn-foot-secondary">
         <button type="button" class="btn sm ghost" id="learn-explore">Explore Teach freely</button>
-        <button type="button" class="btn-reset-learn" id="learn-reset">Reset Learn path progress</button>
+        <button type="button" class="btn-reset-learn" id="learn-reset">Reset for next learner</button>
       </div>
     </div>
   </div>
@@ -3800,6 +3823,7 @@
 
   /* —— Learn path (Core Clinic Path) —— */
   const LEARN_STORAGE_KEY = "anticoag-learn-v1";
+  const LEARN_WELCOME_SESSION_KEY = "anticoag-learn-welcome-session";
   const learnPathData = window.ANTICOAG_LEARN_PATH || { meta: {}, lessons: [] };
   const learnLessons = Array.isArray(learnPathData.lessons) ? learnPathData.lessons.slice().sort((a, b) => (a.order || 0) - (b.order || 0)) : [];
   let learnView = { mode: "hub", lessonId: null }; // hub | resume | lesson | complete
@@ -3819,6 +3843,27 @@
       ui: {}
     };
   }
+  function isLearnWelcomeSessionHidden() {
+    try { return sessionStorage.getItem(LEARN_WELCOME_SESSION_KEY) === "1"; }
+    catch (e) { return false; }
+  }
+  function softHideLearnWelcome() {
+    try { sessionStorage.setItem(LEARN_WELCOME_SESSION_KEY, "1"); }
+    catch (e) { /* ignore */ }
+    updateLearnWelcome();
+  }
+  function clearLearnWelcomeSessionHide() {
+    try { sessionStorage.removeItem(LEARN_WELCOME_SESSION_KEY); }
+    catch (e) { /* ignore */ }
+  }
+  function stripLegacyWelcomeDismiss(state) {
+    if (!state || typeof state !== "object") return state;
+    if (state.ui && typeof state.ui === "object" && state.ui.welcomeDismissedAt) {
+      delete state.ui.welcomeDismissedAt;
+    }
+    if (state.welcomeDismissedAt) delete state.welcomeDismissedAt;
+    return state;
+  }
   function loadLearnProgress() {
     try {
       const raw = localStorage.getItem(LEARN_STORAGE_KEY);
@@ -3830,11 +3875,8 @@
       if (parsed.streak === undefined) parsed.streak = null;
       if (parsed.pathVersion == null) parsed.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
       if (!parsed.ui || typeof parsed.ui !== "object") parsed.ui = {};
-      // Migrate accidental top-level welcomeDismissedAt into ui
-      if (parsed.welcomeDismissedAt && !parsed.ui.welcomeDismissedAt) {
-        parsed.ui.welcomeDismissedAt = parsed.welcomeDismissedAt;
-      }
-      delete parsed.welcomeDismissedAt;
+      // v2: ignore legacy permanent dismiss for show; strip field in memory (persisted on next save)
+      stripLegacyWelcomeDismiss(parsed);
       return parsed;
     } catch (e) {
       return learnEmptyState();
@@ -3848,34 +3890,24 @@
       state.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
       if (state.streak === undefined) state.streak = null;
       if (!state.ui || typeof state.ui !== "object") state.ui = {};
+      // Optional cleanup: never re-write permanent welcomeDismissedAt
+      stripLegacyWelcomeDismiss(state);
       localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(state));
     } catch (e) { /* ignore quota */ }
     try { if (typeof updateLearnWelcome === "function") updateLearnWelcome(); } catch (e2) {}
   }
-  function getWelcomeDismissedAt(state) {
-    if (!state) return null;
-    if (state.ui && state.ui.welcomeDismissedAt) return state.ui.welcomeDismissedAt;
-    if (state.welcomeDismissedAt) return state.welcomeDismissedAt;
-    return null;
-  }
   function dismissLearnWelcome() {
-    const state = loadLearnProgress();
-    if (!state.ui || typeof state.ui !== "object") state.ui = {};
-    state.ui.welcomeDismissedAt = learnNowIso();
-    saveLearnProgress(state);
-    updateLearnWelcome();
+    // Session soft-hide only (shared-machine / v2a) — no permanent localStorage dismiss
+    softHideLearnWelcome();
   }
   function resetLearnProgress() {
-    // Clear progress fields only; preserve ui.welcomeDismissedAt (do not re-spam strip)
-    const prev = loadLearnProgress();
-    const keptWelcome = getWelcomeDismissedAt(prev);
+    // Clear progress + session soft-hide; do NOT write permanent dismiss
     const next = learnEmptyState();
-    if (keptWelcome) {
-      next.ui = { welcomeDismissedAt: keptWelcome };
-    }
+    next.ui = {};
     try {
       localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(next));
     } catch (e) { /* ignore quota */ }
+    clearLearnWelcomeSessionHide();
   }
   function learnLessonEntry(state, id) {
     if (!state.lessons[id]) {
@@ -4312,8 +4344,9 @@
       const params = new URLSearchParams(location.search);
       if (params.get("embed") === "1") return false;
     } catch (e) {}
+    // v2: do NOT gate on welcomeDismissedAt (legacy ignored)
+    if (isLearnWelcomeSessionHidden()) return false;
     const state = loadLearnProgress();
-    if (getWelcomeDismissedAt(state)) return false;
     if (hasLearnProgress(state)) return false;
     return true;
   }
@@ -4345,14 +4378,14 @@
     if (explore) explore.onclick = () => { closeModal("learn"); };
     const reset = document.getElementById("learn-reset");
     if (reset) reset.onclick = () => {
-      const ok = window.confirm("Reset Learn path progress on this device? Your lesson checkmarks will clear. Teach tools and CACP answers are unchanged.");
+      const ok = window.confirm("Reset for next learner? Clears Learn progress on this device and brings back the Start here tip for the next person. Teach tools stay available. Theme is unchanged.");
       if (!ok) return;
       resetLearnProgress();
       learnView = { mode: "hub", lessonId: null };
       setRoute("learn", null, true);
       renderLearnBody();
       updateLearnWelcome();
-      toast("Learn path progress cleared");
+      toast("Learn path cleared for next learner");
     };
   })();
 
@@ -4370,6 +4403,22 @@
       else setTimeout(open, 0);
     });
   })();
+
+  (function wireLearnChip() {
+    const chip = document.getElementById("btn-learn-chip");
+    if (!chip) return;
+    chip.addEventListener("click", (e) => {
+      e.preventDefault();
+      openLearnPath({});
+    });
+  })();
+
+  // Multi-tab: refresh welcome after other tabs change anticoag-learn-v1 (no permanent dismiss to resurrect)
+  window.addEventListener("storage", (ev) => {
+    if (ev.key === LEARN_STORAGE_KEY || ev.key === null) {
+      try { updateLearnWelcome(); } catch (e) {}
+    }
+  });
 
   wireLearnWelcome();
 

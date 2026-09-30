@@ -6,6 +6,13 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-30",
+      title: "Learn v2a",
+      items: [
+        "Start here chip; session Browse for now; Reset for next learner"
+      ]
+    },
+    {
+      date: "2026-09-30",
       title: "Stress-free Learn welcome",
       items: [
         "Dismissible first-run welcome strip (Start guided path / Browse the timeline) + calm Learn chrome (n of 10 · no rush; lesson-complete copy)"

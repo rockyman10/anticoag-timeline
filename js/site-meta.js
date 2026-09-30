@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-30",
+      title: "App Store Phase A — PWA foundations",
+      items: [
+        "Web App Manifest + icons (192/512/apple-touch/favicon); theme-color #b83a1f; start_url/scope /anticoag-timeline/",
+        "viewport-fit=cover + safe-area insets on .app; Teach sheet bottom safe-area kept; no service worker (D5)"
+      ]
+    },
+
+    {
+      date: "2026-09-30",
       title: "RENOVE scaffold (rate-free)",
       items: [
         "Add renove 2025 VTE-extend card (DOI live; absolute rates/HRs pending PDF + Clinical Reviewer)",

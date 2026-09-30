@@ -533,6 +533,47 @@ window.ANTICOAG_TRIALS = [
     "practiceTakeaway": "If extending prevention after VTE, prefer low-dose rivaroxaban over aspirin for most eligible patients."
   },
   {
+    "id": "renove",
+    "acronym": "RENOVE",
+    "year": 2025,
+    "yearLabel": "2025",
+    "indication": "VTE",
+    "status": "practice",
+    "impact": 2,
+    "title": "Extended treatment of VTE with reduced-dose vs full-dose DOAC in high recurrence-risk patients",
+    "population": "Adults with PE or proximal DVT who completed 6–24 months full-dose anticoagulation and have indication for extended therapy (first unprovoked, recurrent VTE, persistent risk factors, or other high-recurrence situations per protocol)",
+    "intervention": "Reduced-dose DOAC: apixaban 2.5 mg BID or rivaroxaban 10 mg daily",
+    "comparator": "Full-dose DOAC: apixaban 5 mg BID or rivaroxaban 20 mg daily",
+    "primaryResult": "Deepen pending Lancet PDF + Clinical Reviewer — primary endpoint symptomatic recurrent VTE (fatal/nonfatal PE or isolated proximal DVT); noninferiority design (protocol). No absolute rates or HRs on this card yet.",
+    "safety": "Deepen pending Lancet PDF + Clinical Reviewer — clinically relevant bleeding (and hierarchical secondaries) per protocol. No absolute rates on this card yet.",
+    "takeaway": "Head-to-head reduced vs full apixaban/rivaroxaban for extended therapy in patients at high recurrence risk who already completed 6–24 months full-dose anticoagulation — complements AMPLIFY-EXT / EINSTEIN-CHOICE (different comparators).",
+    "cite": "Couturaud F, et al. Lancet. 2025;405:725-735.",
+    "doi": "10.1016/S0140-6736(24)02842-3",
+    "url": "https://doi.org/10.1016/S0140-6736(24)02842-3",
+    "expectedResults": null,
+    "background": "Prior extend RCTs used placebo (AMPLIFY-EXT) or aspirin (EINSTEIN-CHOICE). Optimal dose when indefinite anticoagulation is already indicated was uncertain.",
+    "designNotes": "Investigator-initiated, multicentre (France), randomised 1:1, open-label, blinded-endpoint adjudication; stratified by centre, DOAC type, antiplatelet use; NCT03285438. Reduced (apixaban 2.5 BID / rivaroxaban 10 QD) vs full (apixaban 5 BID / rivaroxaban 20 QD). N and follow-up duration pending PDF deepen.",
+    "strengths": "Clinically relevant dose question; high-risk extend population; dual-drug (apixaban or rivaroxaban) pragmatic design; long follow-up intent.",
+    "limitations": "Open-label; France multicentre generalizability; noninferiority interpretation nuances; not cancer-VTE primary; clinician-chosen DOAC type.",
+    "journalClub": "After you decide to extend in high-risk non-cancer VTE, does reduced-dose DOAC hold up vs continuing full dose — and what happens to bleeding?",
+    "guidelines": [
+      {
+        "society": "CHEST",
+        "document": "Extended VTE therapy",
+        "note": "Too recent for current cycle — check for guideline updates; do not invent incorporation language.",
+        "year": 2021
+      },
+      {
+        "society": "ASH",
+        "document": "VTE treatment guidelines",
+        "note": "Too recent for current cycle — check for guideline updates; do not invent incorporation language.",
+        "year": 2020
+      }
+    ],
+    "caveats": "Do not conflate with API-CAT (cancer). Do not use as acute VTE start evidence. Selection already assumes extension is indicated. Absolute rates pending PDF + Clinical Reviewer.",
+    "practiceTakeaway": "When teaching extended VTE dosing in high-risk non-cancer patients, place RENOVE next to AMPLIFY-EXT / EINSTEIN-CHOICE and stress comparator differences; finalize dose messaging only after Reviewer-gated numbers."
+  },
+  {
     "id": "atlas-acs2",
     "acronym": "ATLAS ACS 2–TIMI 51",
     "year": 2012,

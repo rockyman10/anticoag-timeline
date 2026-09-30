@@ -7,6 +7,12 @@ window.ANTICOAG_PATHWAYS = [
     trialIds: ["re-ly", "rocket-af", "aristotle", "averroes", "engage-af", "re-cover", "einstein-dvt", "einstein-pe", "amplify", "hokusai-vte", "amplify-ext"]
   },
   {
+    id: "vte-extend",
+    title: "VTE extended secondary prevention",
+    description: "After acute treatment: reduced-dose vs placebo/aspirin/full-dose DOAC for patients who need extension (non-cancer primary).",
+    trialIds: ["amplify-ext", "einstein-choice", "renove"]
+  },
+  {
     id: "cancer-vte",
     title: "Cancer-associated VTE",
     description: "From LMWH preference through oral DOACs to extended reduced-dose therapy.",

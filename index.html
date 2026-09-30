@@ -637,9 +637,68 @@
       .learn-cta-stack .btn, .m-foot.learn-foot-primary .btn { min-height: 44px; }
     }
 
+    /* First-run Learn welcome strip (stress-free guided) */
+    .learn-welcome {
+      margin: .55rem 0 .45rem;
+      padding: .65rem .85rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 3px;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .learn-welcome[hidden] { display: none !important; }
+    .learn-welcome-title {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: .9375rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.3;
+    }
+    .learn-welcome-body {
+      font-size: .8125rem;
+      color: var(--ink-2);
+      margin: 0;
+      line-height: 1.45;
+    }
+    .learn-welcome-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      align-items: stretch;
+    }
+    .learn-welcome-actions .btn {
+      min-height: 44px;
+    }
+    @media (min-width: 641px) {
+      .learn-welcome-actions {
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+    }
+    @media (max-width: 640px) {
+      .learn-welcome-actions {
+        flex-direction: column;
+      }
+      .learn-welcome-actions .btn {
+        width: 100%;
+        min-height: 44px;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .learn-welcome {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+
     /* Embed chrome */
     body.embed .topbar .deck,
     body.embed .whats-new,
+    body.embed #learn-welcome,
     body.embed .sec-nav,
     body.embed .teach-wrap,
     body.embed #btn-teach,
@@ -1072,6 +1131,15 @@
       </div>
     </div>
 
+    <aside id="learn-welcome" class="learn-welcome" hidden aria-label="Guided start">
+      <h2 class="learn-welcome-title" id="learn-welcome-title">Start here — or browse freely</h2>
+      <p class="learn-welcome-body" id="learn-welcome-body">Ten short guided steps for a first clinic week. Skip anytime. The timeline stays available if you just want to explore. Educational resource — not medical advice.</p>
+      <div class="learn-welcome-actions">
+        <button type="button" class="btn primary" id="learn-welcome-start">Start guided path</button>
+        <button type="button" class="btn sm" id="learn-welcome-browse">Browse the timeline</button>
+      </div>
+    </aside>
+
     <details class="whats-new" id="whats-new">
       <summary>What's new</summary>
       <ul id="whats-new-list"></ul>
@@ -1194,7 +1262,7 @@
         <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
       </div>
       <div id="learn-progress" aria-live="polite">
-        <div class="learn-progress-label" id="learn-progress-label">0 of 10</div>
+        <div class="learn-progress-label" id="learn-progress-label">0 of 10 · no rush</div>
         <div class="learn-progress-bar" id="learn-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"></div>
       </div>
       <div class="m-body" id="learn-body"></div>
@@ -3747,7 +3815,8 @@
       updatedAt: learnNowIso(),
       lastLessonId: null,
       lessons: {},
-      streak: null
+      streak: null,
+      ui: {}
     };
   }
   function loadLearnProgress() {
@@ -3760,6 +3829,12 @@
       if (parsed.schema == null) parsed.schema = 1;
       if (parsed.streak === undefined) parsed.streak = null;
       if (parsed.pathVersion == null) parsed.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
+      if (!parsed.ui || typeof parsed.ui !== "object") parsed.ui = {};
+      // Migrate accidental top-level welcomeDismissedAt into ui
+      if (parsed.welcomeDismissedAt && !parsed.ui.welcomeDismissedAt) {
+        parsed.ui.welcomeDismissedAt = parsed.welcomeDismissedAt;
+      }
+      delete parsed.welcomeDismissedAt;
       return parsed;
     } catch (e) {
       return learnEmptyState();
@@ -3772,11 +3847,35 @@
       state.trackId = (learnPathData.meta && learnPathData.meta.trackId) || "core-clinic-v1";
       state.pathVersion = (learnPathData.meta && learnPathData.meta.pathVersion) || 1;
       if (state.streak === undefined) state.streak = null;
+      if (!state.ui || typeof state.ui !== "object") state.ui = {};
       localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(state));
     } catch (e) { /* ignore quota */ }
+    try { if (typeof updateLearnWelcome === "function") updateLearnWelcome(); } catch (e2) {}
+  }
+  function getWelcomeDismissedAt(state) {
+    if (!state) return null;
+    if (state.ui && state.ui.welcomeDismissedAt) return state.ui.welcomeDismissedAt;
+    if (state.welcomeDismissedAt) return state.welcomeDismissedAt;
+    return null;
+  }
+  function dismissLearnWelcome() {
+    const state = loadLearnProgress();
+    if (!state.ui || typeof state.ui !== "object") state.ui = {};
+    state.ui.welcomeDismissedAt = learnNowIso();
+    saveLearnProgress(state);
+    updateLearnWelcome();
   }
   function resetLearnProgress() {
-    try { localStorage.removeItem(LEARN_STORAGE_KEY); } catch (e) {}
+    // Clear progress fields only; preserve ui.welcomeDismissedAt (do not re-spam strip)
+    const prev = loadLearnProgress();
+    const keptWelcome = getWelcomeDismissedAt(prev);
+    const next = learnEmptyState();
+    if (keptWelcome) {
+      next.ui = { welcomeDismissedAt: keptWelcome };
+    }
+    try {
+      localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(next));
+    } catch (e) { /* ignore quota */ }
   }
   function learnLessonEntry(state, id) {
     if (!state.lessons[id]) {
@@ -3895,11 +3994,11 @@
     const total = learnLessons.length || 10;
     const label = document.getElementById("learn-progress-label");
     const bar = document.getElementById("learn-progress-bar");
-    if (label) label.textContent = done + " of " + total;
+    if (label) label.textContent = done + " of " + total + " · no rush";
     if (bar) {
       bar.setAttribute("aria-valuenow", String(done));
       bar.setAttribute("aria-valuemax", String(total));
-      bar.setAttribute("aria-label", done + " of " + total + " lessons complete");
+      bar.setAttribute("aria-label", done + " of " + total + " lessons complete · no rush");
       bar.innerHTML = learnLessons.map(l => {
         const st = learnStatus(state, l.id);
         const cls = st === "done" ? "done" : (st === "in_progress" ? "in_progress" : (st === "skipped" ? "skipped" : ""));
@@ -4083,7 +4182,7 @@
     const goals = (lesson.goals || []).map(g => `<li>${esc(g)}</li>`).join("");
     let callout = "";
     if (entry.status === "done") {
-      callout = `<div class="learn-callout"><strong>Lesson complete.</strong> Ready for the next one?</div>`;
+      callout = `<div class="learn-callout"><strong>Lesson complete.</strong> Next when you’re ready.</div>`;
     } else if (entry.openedPrimary) {
       callout = `<div class="learn-callout"><strong>Nice — you’ve opened the main teach card.</strong> Mark this lesson done, or deepen with the case / pathway.</div>`;
     }
@@ -4207,6 +4306,40 @@
     }
   }
 
+  function shouldShowLearnWelcome() {
+    if (document.body.classList.contains("embed")) return false;
+    try {
+      const params = new URLSearchParams(location.search);
+      if (params.get("embed") === "1") return false;
+    } catch (e) {}
+    const state = loadLearnProgress();
+    if (getWelcomeDismissedAt(state)) return false;
+    if (hasLearnProgress(state)) return false;
+    return true;
+  }
+  function updateLearnWelcome() {
+    const el = document.getElementById("learn-welcome");
+    if (!el) return;
+    if (shouldShowLearnWelcome()) {
+      el.hidden = false;
+    } else {
+      el.hidden = true;
+    }
+  }
+  function wireLearnWelcome() {
+    const start = document.getElementById("learn-welcome-start");
+    const browse = document.getElementById("learn-welcome-browse");
+    if (start) start.onclick = () => {
+      // User-initiated only — open existing Learn hub; do NOT write dismiss
+      // (strip hides once progress starts, or if user later Browsed)
+      openLearnPath({});
+    };
+    if (browse) browse.onclick = () => {
+      dismissLearnWelcome();
+    };
+    updateLearnWelcome();
+  }
+
   (function wireLearnChrome() {
     const explore = document.getElementById("learn-explore");
     if (explore) explore.onclick = () => { closeModal("learn"); };
@@ -4218,6 +4351,7 @@
       learnView = { mode: "hub", lessonId: null };
       setRoute("learn", null, true);
       renderLearnBody();
+      updateLearnWelcome();
       toast("Learn path progress cleared");
     };
   })();
@@ -4236,6 +4370,8 @@
       else setTimeout(open, 0);
     });
   })();
+
+  wireLearnWelcome();
 
 
   /* —— Routing —— */
@@ -4320,9 +4456,15 @@
     const wn = document.getElementById("whats-new");
     if (wn && window.matchMedia("(min-width: 641px)").matches) wn.open = true;
   })();
+  // Re-evaluate welcome after body embed class may have been set by parseRoute callers;
+  // parseRoute itself runs in rAF below — refresh again there too.
+  updateLearnWelcome();
   requestAnimationFrame(() => {
     const w = document.getElementById("canvas").offsetWidth;
     scroller.scrollLeft = Math.max(0, xOf(2017, w) - scroller.clientWidth * 0.35);
+    // Ensure embed class from ?embed=1 is applied before welcome visibility
+    parseRoute();
+    updateLearnWelcome();
     applyRoute(false);
     const prefetch = () => { loadDdiOnce().catch(() => {}); };
     if (typeof requestIdleCallback === "function") {

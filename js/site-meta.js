@@ -5,6 +5,13 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-09-30",
+      title: "Stress-free Learn welcome",
+      items: [
+        "Dismissible first-run welcome strip (Start guided path / Browse the timeline) + calm Learn chrome (n of 10 · no rush; lesson-complete copy)"
+      ]
+    },
+    {
       date: "2026-09-29",
       title: "VTE / ortho deepen — PDF-backed absolute rates",
       items: [

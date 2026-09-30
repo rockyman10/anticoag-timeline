@@ -6,6 +6,14 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-30",
+      title: "CACP choice order shuffle",
+      items: [
+        "Randomize answer choice display order on each question view (stable choice.id scoring; bank unchanged)"
+      ]
+    },
+
+    {
+      date: "2026-09-30",
       title: "App Store Phase A — PWA foundations",
       items: [
         "Web App Manifest + icons (192/512/apple-touch/favicon); theme-color #b83a1f; start_url/scope /anticoag-timeline/",

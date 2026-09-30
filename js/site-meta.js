@@ -6,6 +6,14 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-30",
+      title: "DOAC appropriateness checklist",
+      items: [
+        "Framework doac-appropriateness: rate-free stewardship checklist (niche, dose family, three-line documentation); label-only renal/age/weight with no numeric cutoffs; Andexxa is not the U.S. default",
+        "Learn soft invites (not auto-open) on L1, L2, L6 and optional L4, L5, L8, L9, L10"
+      ]
+    },
+    {
+      date: "2026-09-30",
       title: "CACP choice order shuffle",
       items: [
         "Randomize answer choice display order on each question view (stable choice.id scoring; bank unchanged)"

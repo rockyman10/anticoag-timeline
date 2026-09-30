@@ -363,6 +363,38 @@
       font-size: 1rem; font-style: italic; color: var(--ink-2);
       margin-bottom: .75rem; padding-bottom: .65rem; border-bottom: 1px solid var(--line);
     }
+
+    .fw-deck {
+      font-size: .9375rem; color: var(--ink-2); margin: -.15rem 0 .75rem; line-height: 1.4;
+    }
+    .fw-checklist h4 {
+      font-size: .8125rem; font-weight: 700; letter-spacing: .02em;
+      text-transform: uppercase; color: var(--muted); margin: .85rem 0 .35rem;
+    }
+    .fw-check-lock {
+      font-size: .9375rem; color: var(--ink); margin: 0 0 .65rem; line-height: 1.45;
+    }
+    .fw-check-list { list-style: none; margin: 0; padding: 0; }
+    .fw-check-item {
+      margin: 0 0 .55rem; font-size: .9375rem; color: var(--ink); line-height: 1.4;
+    }
+    .fw-box { margin-right: .35rem; }
+    .fw-check-help {
+      margin: .2rem 0 0 1.35rem; font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
+    }
+    .fw-section-body {
+      margin: 0 0 .55rem; font-size: .9rem; color: var(--ink-2); line-height: 1.45;
+    }
+    .fw-doc-template {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .8125rem; line-height: 1.55; margin: 0;
+      background: var(--bg); color: var(--ink);
+      border: 1px solid var(--line); border-radius: 2px;
+      padding: .65rem .75rem; white-space: pre-wrap;
+    }
+    .fw-cacp-note { margin: .65rem 0 .4rem; }
+    .learn-soft-strip .btn { white-space: normal; text-align: left; height: auto; line-height: 1.35; }
+
     .take {
       font-size: 1.0625rem; /* ~17px emphasized */
       font-weight: 500; color: var(--ink); line-height: 1.45;
@@ -3548,14 +3580,20 @@
   }
 
   function teachRelatedLinksHtml(links) {
-    const list = (links || []).filter(l => l && l.kind && (
-      l.kind === "trial" || l.kind === "framework" || l.kind === "case" ||
-      l.kind === "nuance" || l.kind === "pathway" || l.kind === "page" || l.kind === "ddi"
-    ));
+    const allow = {
+      trial: 1, framework: 1, case: 1, nuance: 1, pathway: 1, page: 1, ddi: 1,
+      "tx-pathway": 1, tx: 1, "pathway-tx": 1, cacp: 1, "cacp-domain": 1
+    };
+    const list = (links || []).filter(l => l && l.kind && allow[l.kind]);
     if (!list.length) return "";
-    return `<div class="jc-sec"><h3>Related</h3><div class="cacp-links">${list.map(l =>
-      `<button type="button" class="btn sm" data-cacp-link="${esc(l.kind)}|${esc(l.id || "")}">${esc(l.label || l.id)}</button>`
-    ).join("")}</div></div>`;
+    const btn = l =>
+      `<button type="button" class="btn sm" data-cacp-link="${esc(l.kind)}|${esc(l.id || "")}">${esc(l.label || l.id)}</button>`;
+    const main = list.filter(l => l.kind !== "cacp" && l.kind !== "cacp-domain");
+    const cacp = list.filter(l => l.kind === "cacp" || l.kind === "cacp-domain");
+    const note = cacp.length
+      ? `<p class="teach-lead fw-cacp-note">Unofficial educational practice only. NCBAP does not endorse this site or any preparatory materials.</p>`
+      : "";
+    return `<div class="jc-sec"><h3>Related</h3><div class="cacp-links">${main.map(btn).join("")}${note}${cacp.map(btn).join("")}</div></div>`;
   }
 
   function renderFrameworkList() {
@@ -3565,10 +3603,34 @@
       ).join("")}</div>`;
   }
 
+  function renderFrameworkChecklist(fw) {
+    const items = fw.checklist || [];
+    if (!items.length && !fw.docTemplate) return "";
+    const sections = (fw.checklistSections || []).map(s =>
+      `<h4>${esc(s.title || "")}</h4><p class="fw-section-body">${esc(s.body || "")}</p>`
+    ).join("");
+    const lines = items.map(item => {
+      const help = item.help ? `<p class="fw-check-help">${esc(item.help)}</p>` : "";
+      return `<li class="fw-check-item"><span class="fw-box" aria-hidden="true">☐</span>${esc(item.label || "")}${help}</li>`;
+    }).join("");
+    const doc = fw.docTemplate || "Indication:     ________________________________\nPlanned duration: _____________________________\nDose rationale: _______________________________\n(Reviewed when / by: __________________________)";
+    return `<div class="jc-sec fw-checklist">
+      <h3>Stewardship checklist</h3>
+      <p class="fw-check-lock"><strong>No numeric renal, age, or weight cutoffs ship with this card — label and local protocol only.</strong></p>
+      ${sections}
+      ${lines ? `<ul class="fw-check-list">${lines}</ul>` : ""}
+      <h4>Documentation template</h4>
+      <pre class="fw-doc-template">${esc(doc)}</pre>
+    </div>`;
+  }
+
   function renderFrameworkDetail(fw) {
+    const deck = fw.deck ? `<p class="fw-deck">${esc(fw.deck)}</p>` : "";
     return `<button type="button" class="back-link" data-back="frameworks">← All frameworks</button>
       <p style="font-size:1.05rem;font-weight:600;margin-bottom:.5rem;">${esc(fw.question)}</p>
+      ${deck}
       <div class="jc-sec"><h3>Reasoning path</h3><p>${esc(fw.reasoning)}</p></div>
+      ${renderFrameworkChecklist(fw)}
       <div class="jc-sec"><h3>Key trials</h3>${trialLinkButtons(fw.trialIds)}</div>
       <div class="callouts">
         <div class="callout applies"><h4>Applies to</h4><ul>${(fw.appliesTo||[]).map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>
@@ -3844,6 +3906,10 @@
       cacpState.focusQId = opts.questionId;
       cacpState.domainId = 'all';
       buildCacpQueue({ focusQId: opts.questionId });
+    } else if (opts.domainId) {
+      cacpState.focusQId = null;
+      cacpState.domainId = opts.domainId;
+      buildCacpQueue({});
     } else if (opts.missedOnly) {
       cacpState.focusQId = null;
       buildCacpQueue({ missedOnly: true, keepMissed: true });
@@ -3870,7 +3936,15 @@
     else if (l.kind === 'framework') openTeach('framework', l.id);
     else if (l.kind === 'case') openTeach('case', l.id);
     else if (l.kind === 'nuance') openTeach('nuance', l.id);
-    else if (l.kind === 'pathway') openTxPath({ pathwayId: l.id });
+    else if (l.kind === 'tx-pathway' || l.kind === 'tx' || l.kind === 'pathway-tx') openTxPath({ pathwayId: l.id });
+    else if (l.kind === 'cacp') openCacp({ questionId: l.id });
+    else if (l.kind === 'cacp-domain') openCacp({ domainId: l.id });
+    else if (l.kind === 'pathway') {
+      // Playlist if the id is a trial pathway; otherwise treatment pathway (TX-only ids).
+      const inPlaylist = (pathways || []).some(p => p.id === l.id);
+      if (inPlaylist) startPathway(l.id, 0, false);
+      else openTxPath({ pathwayId: l.id });
+    }
     else if (l.kind === 'ddi' || l.kind === 'page') {
       if (l.id === 'reversal') openTeach('reversal');
       else openDdi({ view: 'home', q: l.id || '' });
@@ -4620,6 +4694,10 @@
       if ((lesson.softInvites || []).some(s => s.kind === "cacp")) {
         bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm" id="learn-soft-cacp">Optional: unofficial CACP practice</button></div>`;
       }
+      (lesson.softInvites || []).forEach(s => {
+        if (!s || s.kind !== "framework" || !s.id) return;
+        bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-fw" data-learn-soft-fw="${esc(s.id)}">${esc(s.label || "Open framework")}</button></div>`;
+      });
       if (lesson.softExtra && lesson.softExtra.kind) {
         bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost" id="learn-soft-extra">Optional nuance · ${esc(learnTargetTitle(lesson.softExtra))}</button></div>`;
       }
@@ -4649,6 +4727,9 @@
       setRoute(null, null, true);
       openCacp({});
     };
+    body.querySelectorAll("[data-learn-soft-fw]").forEach(b => {
+      b.onclick = () => openLearnTarget({ kind: "framework", id: b.dataset.learnSoftFw }, lesson, "soft");
+    });
 
     let secHtml = `<div class="learn-coach-sec">`;
     if (showSkipVisual) {

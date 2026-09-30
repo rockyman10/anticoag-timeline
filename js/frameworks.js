@@ -69,7 +69,7 @@ window.ANTICOAG_FRAMEWORKS = [
     ],
     pearl: "Monday morning template: DOAC + P2Y12, drop aspirin early when feasible. Triple therapy is a short bridge, not a lifestyle.",
     links: [
-      { kind: "pathway", id: "af-pci", label: "TX: AF + PCI" },
+      { kind: "tx-pathway", id: "af-pci", label: "TX: AF + PCI" },
       { kind: "case", id: "af-pci-week2", label: "Case: AF + PCI week 2" },
       { kind: "nuance", id: "dual-pathway-duration", label: "Nuance: Dual-pathway duration" }
     ]
@@ -288,7 +288,77 @@ window.ANTICOAG_FRAMEWORKS = [
       { kind: "framework", id: "af-stroke-prevention", label: "Framework: AF stroke prevention" },
       { kind: "framework", id: "doac-major-bleed-us", label: "Framework: U.S. DOAC major bleed (emergency fork)" }
     ]
+  },
+
+  {
+    id: "doac-appropriateness",
+    question: "Is this DOAC appropriate — and is the indication documented?",
+    deck: "Stewardship checklist: right niche · right dose family · right documentation",
+    reasoning: "Anticoagulation stewardship starts before the first capsule: confirm the patient is in a DOAC-eligible niche, pick the correct dose family for that indication (AF stroke-prevention ≠ acute/therapeutic VTE ≠ COMPASS vascular-dose), screen label-directed renal/age/weight and drug–drug issues, and document why this regimen exists. This card ships with no numeric renal, age, or weight cutoffs — confirm current product labeling and local protocol only; do not memorize informal slide cutoffs. Use this checklist as a teach-back frame with the linked frameworks and cases — not as auto-approval CDS. When the niche is mechanical valve, moderate–severe rheumatic mitral stenosis, or high-risk / triple-positive APS, pivot to VKA frameworks instead of forcing a DOAC. For U.S. major bleed on an FXa inhibitor, teach current institutional pathways — do not present Andexxa as default care.",
+    trialIds: ["re-ly", "rocket-af", "aristotle", "engage-af", "amplify", "einstein-dvt", "einstein-pe", "hokusai-vte", "compass", "frail-af", "eldercare-af"],
+    appliesTo: [
+      "New DOAC starts (AF, VTE, selected cancer-VTE when oral pathway chosen)",
+      "Dose or agent switches (including “someone ordered low-dose Eliquis for PAD”)",
+      "Clinic / discharge reconciliation and shared-clinic teach-backs",
+      "Unofficial CACP Domain II/V stewardship practice (see links)"
+    ],
+    doesNotApply: [
+      "Writing institutional protocols or auto-verifying orders",
+      "Inventing clinic quality scores or comparing “your TTR” to a fake benchmark",
+      "Replacing specialty pathways (pregnancy, HIT, massive PE reperfusion, post-ICH restart timing)",
+      "Using COMPASS 2.5 mg BID rivaroxaban as AF or therapeutic VTE coverage"
+    ],
+    pearl: "Appropriateness is indication + dose family + labeled eligibility — not “newer is better.” Write Indication · Planned duration · Dose rationale before you walk away.",
+    checklist: [
+      { id: "niche", label: "Indication niche confirmed (DOAC-eligible vs VKA-only)" },
+      { id: "dose-family", label: "Dose family named (AF / VTE / COMPASS / dual-pathway)" },
+      { id: "renal-age-weight", label: "Labeled renal/age/weight criteria verified — no numeric cutoffs on this card", reviewerGate: true, help: "No numeric renal, age, or weight cutoffs ship with this card — label and local protocol only. Confirm labeled criteria for this DOAC and indication — do not memorize informal cutoffs from slides." },
+      { id: "ddi", label: "DDI screen via library + label" },
+      { id: "bleed", label: "Bleed history + mitigation; major bleed → U.S. bleed framework" },
+      { id: "doc-indication", label: "Documented: Indication" },
+      { id: "doc-duration", label: "Documented: Planned duration" },
+      { id: "doc-rationale", label: "Documented: Dose rationale" }
+    ],
+    checklistSections: [
+      {
+        title: "Indication niche — stop if not DOAC",
+        body: "Confirm one primary teaching niche before dosing: NVAF stroke prevention; acute/therapeutic VTE; cancer-associated VTE (oral vs LMWH individualized); COMPASS vascular-dose (not an AF/VTE dose); AF with recent PCI/ACS (dual pathway, short triple at most). Mechanical valve, moderate–severe rheumatic mitral stenosis, and high-risk / triple-positive APS are VKA territory. Pregnancy / breastfeeding is LMWH usual practice, not a DOAC. If the niche is VKA-only or non-DOAC, stop — do not finish DOAC dose-family checks."
+      },
+      {
+        title: "Dose family — name one, do not mix",
+        body: "AF stroke-prevention DOAC (labeled AF regimen — not a VTE load “just in case”). Acute/therapeutic VTE DOAC (drug-specific load → maintenance). Extended VTE secondary prevention (reduced- vs full-dose questions after initial therapy — qualitative only; not the same as an acute start). COMPASS/vascular: rivaroxaban 2.5 mg BID + aspirin — not AF or therapeutic VTE coverage, and not stacked on full-dose DOAC. AF + antiplatelet dual pathway: OAC + P2Y12, aspirin in an early window only."
+      }
+    ],
+    docTemplate: "Indication:     ________________________________\nPlanned duration: _____________________________\nDose rationale: _______________________________\n(Reviewed when / by: __________________________)",
+    links: [
+      { kind: "framework", id: "af-stroke-prevention", label: "Framework: AF stroke prevention" },
+      { kind: "framework", id: "acute-vte-doac", label: "Framework: Acute VTE DOAC" },
+      { kind: "framework", id: "cancer-vte", label: "Framework: Cancer-associated VTE" },
+      { kind: "framework", id: "compass-vascular-dose", label: "Framework: COMPASS vascular dose" },
+      { kind: "framework", id: "mechanical-valve-vka", label: "Framework: Mechanical valve (VKA)" },
+      { kind: "framework", id: "aps-triple-positive-vka", label: "Framework: APS triple-positive (VKA)" },
+      { kind: "framework", id: "af-pci-dual-pathway", label: "Framework: AF + PCI dual pathway" },
+      { kind: "framework", id: "doac-major-bleed-us", label: "Framework: U.S. DOAC major bleed" },
+      { kind: "framework", id: "peri-procedural-oac", label: "Framework: Peri-procedural OAC" },
+      { kind: "pathway", id: "doac-landmarks", label: "Playlist: DOAC landmarks" },
+      { kind: "pathway", id: "cancer-vte", label: "Playlist: Cancer-associated VTE" },
+      { kind: "pathway", id: "af-pci", label: "Playlist: AF + PCI" },
+      { kind: "pathway", id: "reversal", label: "Playlist: Reversal / bleed trials" },
+      { kind: "case", id: "vte-doac-choice", label: "Case: VTE DOAC choice" },
+      { kind: "case", id: "compass-vs-af-dose-trap", label: "Case: COMPASS vs AF dose trap" },
+      { kind: "case", id: "mechanical-avr-doac-request", label: "Case: Mechanical AVR DOAC request" },
+      { kind: "case", id: "aps-triple-positive-doac", label: "Case: Triple-positive APS DOAC request" },
+      { kind: "case", id: "af-pci-week2", label: "Case: AF + PCI week 2" },
+      { kind: "case", id: "fxa-ich-post-andexxa", label: "Case: FXa ICH after Andexxa withdrawal" },
+      { kind: "nuance", id: "annexa-historical-vs-us-4fpcc", label: "Nuance: ANNEXA historical vs U.S. 4F-PCC" },
+      { kind: "nuance", id: "dual-pathway-duration", label: "Nuance: Dual-pathway duration" },
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "cacp-domain", id: "II", label: "CACP Domain II" },
+      { kind: "cacp-domain", id: "V", label: "CACP Domain V" },
+      { kind: "cacp", id: "v-03", label: "CACP: Stewardship aims" },
+      { kind: "cacp", id: "ii-12", label: "CACP: COMPASS appropriateness" },
+      { kind: "cacp", id: "ii-36", label: "CACP: COMPASS is not an AF/VTE substitute" },
+      { kind: "cacp", id: "iii-10", label: "CACP: Shared-decision documentation" }
+    ]
   }
 ];
-
-

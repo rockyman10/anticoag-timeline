@@ -25,7 +25,9 @@ window.ANTICOAG_LEARN_PATH = {
       deepen: { kind: "pathway", id: "doac-landmarks" },
       deepenRequired: false,
       hasEvidenceVisual: true,
-      softInvites: []
+      softInvites: [
+        { kind: "framework", id: "doac-appropriateness", label: "Before you leave AF dosing: run the DOAC appropriateness checklist — niche, dose family, and three-line documentation." }
+      ]
     },
     {
       id: "acute-vte-doac",
@@ -41,7 +43,9 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "acute-vte-doac" },
       deepen: { kind: "case", id: "vte-doac-choice" },
       deepenRequired: false,
-      softInvites: []
+      softInvites: [
+        { kind: "framework", id: "doac-appropriateness", label: "Acute VTE DOAC choice isn’t done until indication and load→maintenance family are documented." }
+      ]
     },
     {
       id: "peri-bridge",
@@ -72,7 +76,9 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "mechanical-valve-vka" },
       deepen: { kind: "case", id: "mechanical-avr-doac-request" },
       deepenRequired: false,
-      softInvites: []
+      softInvites: [
+        { kind: "framework", id: "doac-appropriateness", label: "If someone asks for a DOAC on a mechanical valve, the checklist should stop at niche — open the VKA framework." }
+      ]
     },
     {
       id: "aps-vka",
@@ -88,7 +94,9 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "aps-triple-positive-vka" },
       deepen: { kind: "case", id: "aps-triple-positive-doac" },
       deepenRequired: false,
-      softInvites: []
+      softInvites: [
+        { kind: "framework", id: "doac-appropriateness", label: "Triple-positive APS: appropriateness means VKA-first teaching, not a DOAC default." }
+      ]
     },
     {
       id: "compass-dose",
@@ -103,7 +111,9 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "compass-vascular-dose" },
       deepen: { kind: "case", id: "compass-vs-af-dose-trap" },
       deepenRequired: false,
-      softInvites: []
+      softInvites: [
+        { kind: "framework", id: "doac-appropriateness", label: "Spot-check: is this COMPASS vascular dosing or an AF/VTE dose trap? Use the appropriateness checklist." }
+      ]
     },
     {
       id: "post-tavi",
@@ -137,7 +147,8 @@ window.ANTICOAG_LEARN_PATH = {
       deepen: { kind: "case", id: "fxa-ich-post-andexxa" },
       deepenRequired: true,
       softInvites: [
-        { kind: "cacp", label: "Optional: unofficial CACP practice" }
+        { kind: "cacp", label: "Optional: unofficial CACP practice" },
+        { kind: "framework", id: "doac-appropriateness", label: "Bleed stewardship is a different checklist — U.S. FXa care without Andexxa as default." }
       ]
     },
     {
@@ -153,7 +164,9 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "af-pci-dual-pathway" },
       deepen: { kind: "case", id: "af-pci-week2" },
       deepenRequired: false,
-      softInvites: []
+      softInvites: [
+        { kind: "framework", id: "doac-appropriateness", label: "Dual-pathway patients still need a named OAC indication + a plan to drop aspirin — document duration." }
+      ]
     },
     {
       id: "cancer-vte",
@@ -168,7 +181,9 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "cancer-vte" },
       deepen: { kind: "case", id: "cancer-stepdown" },
       deepenRequired: false,
-      softInvites: []
+      softInvites: [
+        { kind: "framework", id: "doac-appropriateness", label: "Optional: same documentation habit after you pick acute oral vs LMWH and any later step-down plan." }
+      ]
     }
   ]
 };

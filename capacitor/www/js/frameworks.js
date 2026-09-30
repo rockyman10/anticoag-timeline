@@ -128,7 +128,8 @@ window.ANTICOAG_FRAMEWORKS = [
     ],
     pearl: "FRAIL-AF: stable frail VKA ≠ automatic DOAC upgrade. ELDERCARE: low-dose DOAC can still be right at initiation in selected very elderly—different question than switching.",
     links: [
-      { kind: "case", id: "frail-vka-switch", label: "Case: Frail VKA switch" }
+      { kind: "case", id: "frail-vka-switch", label: "Case: Frail VKA switch" },
+      { kind: "framework", id: "ttr-vka-quality", label: "Framework: What ‘acceptable TTR’ means — without a fake clinic %" }
     ]
   },
   {
@@ -193,7 +194,8 @@ window.ANTICOAG_FRAMEWORKS = [
     pearl: "Mechanical valve → warfarin. Say DOAC is off the table first, then set INR from the society table for that valve’s position and risk — not from AF DOAC habit.",
     links: [
       { kind: "pathway", id: "mechanical-valve", label: "TX: Mechanical heart valve" },
-      { kind: "case", id: "mechanical-avr-doac-request", label: "Case: Mechanical AVR DOAC request" }
+      { kind: "case", id: "mechanical-avr-doac-request", label: "Case: Mechanical AVR DOAC request" },
+      { kind: "framework", id: "ttr-vka-quality", label: "Framework: TTR / VKA quality — INR follow-up literacy (not a DOAC metric)" }
     ]
   },
   {
@@ -359,6 +361,74 @@ window.ANTICOAG_FRAMEWORKS = [
       { kind: "cacp", id: "ii-12", label: "CACP: COMPASS appropriateness" },
       { kind: "cacp", id: "ii-36", label: "CACP: COMPASS is not an AF/VTE substitute" },
       { kind: "cacp", id: "iii-10", label: "CACP: Shared-decision documentation" }
+    ]
+  },
+  {
+    id: "ttr-vka-quality",
+    question: "What is TTR — and how do VKA clinics use it without turning it into a fake scoreboard?",
+    deck: "Warfarin-clinic quality literacy · Domain V crosswalk · calm teaching, not a dashboard",
+    reasoning: "Time in Therapeutic Range (TTR) estimates the proportion of time a patient’s INR is within the prescribed target range while on warfarin (VKA). Clinics use TTR as a process/quality signal for anticoagulation services: persistently low TTR should trigger review of adherence, diet/drug interactions, visit cadence, lab/POC processes, and whether a DOAC-eligible patient might be better served on a labeled DOAC pathway — or, conversely, whether a stable frail patient with acceptable TTR should not be auto-switched (FRAIL-AF teaching via frail-elderly-vka-doac). Method literacy (concept only): many programs summarize TTR with approaches such as Rosendaal linear interpolation between INR dates (a common teaching name). Exact clinic software formulas, inclusion/exclusion of extreme gaps, and target-range definitions are institutional — this card teaches the idea, not a calculable protocol. Hard limits: TTR does not apply to DOACs (no INR target). Do not display “your clinic vs national” figures on this site. Do not invent a target % for learners to memorize. Mechanical-valve and other niche INR intensities still come from society tables — TTR assumes a named target range first. Trial-reported warfarin TTRs on live cards are study descriptors, not clinic goals.",
+    trialIds: ["frail-af", "eldercare-af"],
+    appliesTo: [
+      "Warfarin / VKA clinic teaching and unofficial CACP Domain V prep",
+      "Interpreting “acceptable TTR” language in frail-switch / mechanical-valve stewardship",
+      "Explaining why DOAC patients are not managed with TTR"
+    ],
+    doesNotApply: [
+      "DOAC adherence “TTR equivalents” or invented surrogate scores",
+      "Fake dashboards, App Store–style rankings, or national benchmark widgets",
+      "Replacing product labels, society INR tables, or local QI protocols",
+      "Pregnancy, HIT, or other specialty pathways"
+    ],
+    pearl: "TTR measures how often INR stays in range for people on warfarin — use it to improve monitoring and adherence conversations, not to invent a DOAC “TTR” or a national leaderboard.",
+    teachBack: "In one sentence: who is TTR for, and name one thing it is not.",
+    teachingBlocks: [
+      {
+        title: "What TTR is",
+        bullets: [
+          "A summary of how much time INR values (and the intervals between them) are estimated to fall inside the prescribed INR target for a patient on warfarin.",
+          "Usually discussed at patient and clinic-panel levels as a quality lens.",
+          "Requires a named INR target (e.g. typical AF 2–3 teaching vs valve-specific targets — verify society/label tables elsewhere)."
+        ]
+      },
+      {
+        title: "Common method name",
+        bullets: [
+          "Rosendaal linear interpolation is a common method name used in TTR teaching.",
+          "Your clinic software may differ on gaps, exclusions, and range definitions.",
+          "No formula, worked numeric example, or “calculate TTR here” widget ships on this card."
+        ]
+      },
+      {
+        title: "Uses (stewardship — still no %)",
+        body: "When TTR looks poor (qualitative teaching — no cutoff % on this card): recheck adherence, vitamin K diet pattern, alcohol, new drugs/herbals, dosing errors; recheck visit / lab follow-up after out-of-range INRs; recheck whether the patient is DOAC-eligible and might benefit from a labeled DOAC pathway; escalate messy panels to clinic pharmacist / MD pathways. When TTR looks acceptable and the patient is stable on VKA: do not auto-switch to a DOAC solely because DOACs exist — see frail-elderly-vka-doac / FRAIL-AF teaching; keep documenting indication · duration · regimen."
+      },
+      {
+        title: "Limits (must teach)",
+        bullets: [
+          "Not a DOAC metric — DOACs have no INR therapeutic range → no TTR.",
+          "Not a stroke-risk score — CHA₂DS₂-VASc ≠ TTR.",
+          "Not a national leaderboard — this site will not show fake “top quartile” or U.S. average TTR.",
+          "Method-dependent — different software/rules → different TTR for the same INRs.",
+          "Target-range dependent — wrong assumed range → meaningless TTR.",
+          "Trial TTR ≠ clinic goal — published trial warfarin TTRs describe those trials; open live cards if curious; do not memorize as clinic targets."
+        ]
+      }
+    ],
+    links: [
+      { kind: "framework", id: "frail-elderly-vka-doac", label: "Framework: Frail elderly VKA ↔ DOAC" },
+      { kind: "framework", id: "mechanical-valve-vka", label: "Framework: Mechanical valve (VKA)" },
+      { kind: "framework", id: "af-stroke-prevention", label: "Framework: AF stroke prevention" },
+      { kind: "framework", id: "doac-appropriateness", label: "Framework: DOAC appropriateness" },
+      { kind: "framework", id: "peri-procedural-oac", label: "Framework: Peri-procedural OAC" },
+      { kind: "case", id: "frail-vka-switch", label: "Case: Frail VKA switch" },
+      { kind: "case", id: "mechanical-avr-doac-request", label: "Case: Mechanical AVR DOAC request" },
+      { kind: "cacp-domain", id: "V", label: "CACP Domain V" },
+      { kind: "cacp-domain", id: "II", label: "CACP Domain II" },
+      { kind: "cacp", id: "v-01", label: "CACP: v-01 TTR literacy", caption: "Warfarin-clinic TTR literacy — not a DOAC metric; no clinic TTR% on this card." },
+      { kind: "cacp", id: "v-02", label: "CACP: v-02 POC INR / QC" },
+      { kind: "cacp", id: "v-03", label: "CACP: v-03 Stewardship aims" },
+      { kind: "cacp", id: "ii-05", label: "CACP: ii-05 FRAIL-AF + acceptable TTR" }
     ]
   }
 ];

@@ -6,6 +6,16 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-09-30",
+      title: "DOI / citation hygiene re-check",
+      items: [
+        "Re-verified HI-PRO, SINGLE-AF, EPIDAURUS, LIBREXIA ACS, and NOTION-4 against Crossref and PubMed; existing DOIs and publisher URLs left in place",
+        "ENRICH-AF: still no results paper (doi null, doiPending); cite tightened to Hot Line 29 Aug 2026 plus NCT03950076; ESC press URL kept",
+        "ASTER/MAGNOLIA: cite and source URL anchored to ClinicalTrials.gov NCT05171049 and NCT05171075 (terminated, sponsor decision); doi left null",
+        "LIBREXIA-AF, LIBREXIA-STROKE, ASPIRE: doi left null; cites name ongoing registry records and state that results are not published"
+      ]
+    },
+    {
+      date: "2026-09-30",
       title: "Sprint B — Compare-two-trials Learn soft invites",
       items: [
         "Learn soft invites B1–B4 preload compare tray (max 3) + open compare modal; reuse existing compare UI",

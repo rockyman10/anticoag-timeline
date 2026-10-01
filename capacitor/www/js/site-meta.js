@@ -5,6 +5,16 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-10-01",
+      title: "CACP deepen — Domains III and V",
+      items: [
+        "Unofficial practice bank 121 → 134 (I 27 / II 39 / III 23 / IV 27 / V 18). Handbook weights left as published; new items add depth in III and V only",
+        "Domain III +6 advanced (iii-18–iii-23): dabigatran bottle adherence, rivaroxaban/apixaban/warfarin missed-dose counseling without new hour cutoffs, failed teach-back, skipped-day stretching",
+        "Domain V +7 (v-12–v-18): TTR is not a DOAC metric and has no target percent; poor-TTR workup; INR recall owner; POC vs lab hold; dose-family audit; patient self-testing oversight; three-line stewardship note",
+        "NCBAP non-endorsement disclaimer unchanged. reviewedBy unchanged. DDI library not touched"
+      ]
+    },
+    {
       date: "2026-09-30",
       title: "Sprint B — Compare-two-trials Learn soft invites",
       items: [

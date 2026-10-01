@@ -4,7 +4,7 @@ window.ANTICOAG_CACP = {
     "title": "CACP exam prep (unofficial)",
     "disclaimer": "Unofficial educational practice only. The National Certification Board for Anticoagulation Providers (NCBAP) does not endorse this or any preparatory materials. These are not real CACP examination questions. Verify all clinical decisions with current guidelines, product labeling, and institutional protocols.",
     "handbookNote": "Domain weights follow the NCBAP CACP Candidate Handbook: I Applied Pathophysiology 25%, II Patient Assessment and Management 35%, III Patient Education 10%, IV Applied Pharmacology 25%, V Operational/Administrative 5%. Handbook PDF: https://ncbap.org/web/documents/CACP_Candidate_Handbook.pdf — NCBAP states it does not endorse prep courses or study guides (https://ncbap.org/web/exam-prep.php).",
-    "version": "2026-09-23",
+    "version": "2026-10-01",
     "domains": [
       {
         "id": "I",
@@ -4850,6 +4850,511 @@ window.ANTICOAG_CACP = {
     { "kind": "framework", "id": "peri-procedural-oac", "label": "Framework: Peri-procedural OAC" },
     { "kind": "case", "id": "af-warfarin-bridge-reflex", "label": "Case: Bridge reflex" }
   ]
-}
+},
+    {
+      "id": "iii-18",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient newly started on dabigatran twice daily asks to pour the capsules into a weekly pill organizer “so I won’t forget.” Best counseling?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Yes — dabigatran is stable in any open container, and taking both capsules once a week is an equivalent schedule"
+        },
+        {
+          "id": "b",
+          "text": "Keep the capsules in the original bottle, tightly closed. They are moisture-sensitive. Use a reminder that does not empty the bottle, and teach-back the twice-daily schedule"
+        },
+        {
+          "id": "c",
+          "text": "Store the opened bottle in a steamy bathroom so the capsules stay activated"
+        },
+        {
+          "id": "d",
+          "text": "Empty the bottle into the organizer and take the whole week’s capsules every Sunday morning"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Dabigatran may be taken with or without food, and it should stay in the original bottle because it is moisture-sensitive. An adherence tool that exposes the capsules or collapses a twice-daily schedule into a weekly catch-up works against the labeled regimen.",
+      "teachingPoints": [
+        "Do not invent a food rule for dabigatran the way rivaroxaban 15–20 mg has one.",
+        "If a pill organizer is non-negotiable, ask pharmacy for a method that protects the capsules rather than guessing."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "re-ly",
+          "label": "RE-LY"
+        }
+      ]
+    },
+    {
+      "id": "iii-19",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient on rivaroxaban 20 mg once daily with the evening meal calls the next morning: “I missed last night. I’ll take two tablets with dinner tonight to catch up.” Best education?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Agree — any missed once-daily anticoagulant is corrected by doubling the next dose"
+        },
+        {
+          "id": "b",
+          "text": "Do not take two 20 mg tablets to catch up. Use that product’s missed-dose instructions or call before improvising; whenever a 15 or 20 mg dose is taken, it still goes with food"
+        },
+        {
+          "id": "c",
+          "text": "Skip rivaroxaban for the rest of the month so the schedule resets"
+        },
+        {
+          "id": "d",
+          "text": "Replace the missed dose with two aspirin 325 mg tablets"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Missed-dose counseling for rivaroxaban 20 mg is drug-specific: do not double the next tablet, and do not drop the food requirement on 15–20 mg doses. This item does not add an hour cutoff — when the timing is unclear, the patient uses the label or calls the clinic.",
+      "teachingPoints": [
+        "Repeated misses are an adherence problem, not a reason to invent a double dose.",
+        "The 15 mg twice-daily VTE lead-in has its own instructions — do not teach the AF 20 mg plan as if it covered every rivaroxaban schedule."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "rocket-af",
+          "label": "ROCKET AF"
+        }
+      ]
+    },
+    {
+      "id": "iii-20",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient on apixaban 5 mg twice daily remembers at the evening dose that the morning dose was missed and wants to swallow 10 mg now “to catch up,” then skip tomorrow morning. Best counseling?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Yes — stacking both doses is the standard make-up rule for every twice-daily anticoagulant"
+        },
+        {
+          "id": "b",
+          "text": "Do not stack the morning and evening doses into one 10 mg sitting or skip the next morning by guesswork. Keep doses about 12 hours apart and follow apixaban’s missed-dose instructions or call the clinic"
+        },
+        {
+          "id": "c",
+          "text": "Stop apixaban until the next routine clinic visit"
+        },
+        {
+          "id": "d",
+          "text": "Take the extra 5 mg together with a scheduled ibuprofen"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Apixaban adherence teaching keeps the twice-daily rhythm. Stacking 10 mg, skipping the next morning, or adding an NSAID are not make-up plans. Hour-by-hour cutoffs stay on the product label and the clinic line — they are not a new number to memorize here.",
+      "teachingPoints": [
+        "Apixaban may be taken with or without food; do not add a rivaroxaban food rule.",
+        "A written morning/evening card beats a verbal “catch up later.”"
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "aristotle",
+          "label": "ARISTOTLE"
+        }
+      ]
+    },
+    {
+      "id": "iii-21",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient on warfarin for atrial fibrillation missed last night’s tablet and plans to take two tonight “so the level doesn’t drop.” Best counseling?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Agree — a missed warfarin dose is always corrected by doubling, and no INR check is needed"
+        },
+        {
+          "id": "b",
+          "text": "Do not double warfarin on your own. Call the clinic so the dose and the next INR follow-up can be planned. A missed VKA tablet is not a DOAC catch-up, and aspirin does not replace it"
+        },
+        {
+          "id": "c",
+          "text": "Eat a very large kale meal tonight instead of the tablet"
+        },
+        {
+          "id": "d",
+          "text": "Stop INR checks for the rest of the year because one missed tablet resets the range"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Warfarin missed-dose counseling goes through the clinic because INR monitoring is the feedback loop. Patients should not double the tablet, “replace” it with a vitamin K binge, or substitute aspirin when anticoagulation is indicated.",
+      "teachingPoints": [
+        "Vitamin K teaching stays “consistent intake,” not a one-night rescue meal.",
+        "If misses are repeating, treat that as an adherence barrier, not a math problem."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Framework: TTR / VKA quality"
+        }
+      ]
+    },
+    {
+      "id": "iii-22",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "After rivaroxaban is started for atrial fibrillation, teach-back shows the patient can say “blood thinner” but cannot state once daily, with food, what bleeding should prompt a call, or whom to call. Best next step?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Document “education complete” because a package insert was placed in the bag"
+        },
+        {
+          "id": "b",
+          "text": "Do not close the encounter. Use plain language and a simple once-daily-with-food schedule (a picture card if reading is hard), an interpreter when needed, and repeat teach-back until schedule, food, bleed warnings, and the contact plan are clear"
+        },
+        {
+          "id": "c",
+          "text": "Hand over the full prescribing monograph as the only remaining method"
+        },
+        {
+          "id": "d",
+          "text": "Reassure them that missing most doses is acceptable if the weekly average looks okay"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "A failed teach-back means the method changes — shorter words, a pictorial schedule, an interpreter when language is the barrier — and the teach-back is repeated. Printing a monograph is not proof the patient can take rivaroxaban 15–20 mg with food or recognize a bleed.",
+      "teachingPoints": [
+        "Interpreter services are part of safe anticoagulation education, not an optional extra.",
+        "Document what the patient could and could not teach back, and the plan to close the gap."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "rocket-af",
+          "label": "ROCKET AF"
+        }
+      ]
+    },
+    {
+      "id": "iii-23",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient on apixaban says they take it every other day “so the bottle lasts.” Best adherence counseling?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Approve alternate-day use as a safe way to stretch any DOAC"
+        },
+        {
+          "id": "b",
+          "text": "Do not endorse skipped days. Name the barrier (cost, routine, side effects, or understanding), connect them with the clinic or pharmacy for access help, and rebuild the labeled twice-daily schedule with teach-back"
+        },
+        {
+          "id": "c",
+          "text": "Tell them to double up every Sunday so the week averages out"
+        },
+        {
+          "id": "d",
+          "text": "Change them to rivaroxaban 2.5 mg twice daily plus aspirin without checking the indication"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Stretching a DOAC by skipping days drops the labeled schedule. Counseling names the real barrier and routes access problems to the clinic or pharmacy instead of authorizing a homemade regimen or a COMPASS-dose switch.",
+      "teachingPoints": [
+        "COMPASS vascular dosing is a different niche — not a cheaper substitute for AF apixaban.",
+        "Confirm the patient can state morning and evening after the new plan."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Framework: DOAC appropriateness"
+        },
+        {
+          "kind": "trial",
+          "id": "aristotle",
+          "label": "ARISTOTLE"
+        }
+      ]
+    },
+    {
+      "id": "v-12",
+      "domainId": "V",
+      "difficulty": "core",
+      "stem": "The quality committee asks the anticoagulation clinic to add a “DOAC TTR” tile and a single national target percent to the public dashboard. Best operational response?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Build the tile from refill gaps and publish one pass/fail percent for every patient, including mechanical valves"
+        },
+        {
+          "id": "b",
+          "text": "Decline both. TTR is a warfarin/VKA INR-control lens (Rosendaal linear interpolation is a method name only). DOACs have no INR target, so they have no TTR, and this program does not adopt a memorized clinic or national target percent"
+        },
+        {
+          "id": "c",
+          "text": "Substitute the clinic’s average CHA₂DS₂-VASc score for TTR"
+        },
+        {
+          "id": "d",
+          "text": "Use Andexxa doses administered as the TTR stand-in after the Dec 22, 2025 U.S. withdrawal"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "TTR estimates time inside the prescribed INR range for someone on warfarin. It is not a DOAC metric, not a stroke-risk score, and not a leaderboard. Trial-reported warfarin TTRs describe those trials; they are not clinic goals. No target percent is taught here.",
+      "teachingPoints": [
+        "A named INR target has to exist before TTR means anything — valve ranges are not the same conversation as typical AF teaching, and this item does not invent either number.",
+        "Poor control is a workup (see the related Domain V item), not a dashboard contest."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Framework: TTR / VKA quality"
+        }
+      ]
+    },
+    {
+      "id": "v-13",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "A warfarin panel’s TTR looks persistently poor. No numeric cutoff is used. Which operations response fits stewardship teaching?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Auto-switch every patient to a DOAC the same day, including mechanical valves and stable frail patients"
+        },
+        {
+          "id": "b",
+          "text": "Review adherence, vitamin K pattern, alcohol, new drugs and herbals, and whether out-of-range INRs have an owner. Offer a labeled DOAC only when the niche is DOAC-eligible. Do not auto-switch a stable frail patient solely because DOACs exist, and do not invent a TTR percent that forces the switch"
+        },
+        {
+          "id": "c",
+          "text": "Delete out-of-range INRs so the dashboard improves"
+        },
+        {
+          "id": "d",
+          "text": "Add full-dose rivaroxaban on top of warfarin until the next INR"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "A poor TTR is a process signal: adherence, diet, interacting substances, and follow-up ownership come first. A labeled DOAC is a consideration only in a DOAC-eligible niche. Mechanical valves stay on VKA teaching, and FRAIL-AF teaching argues against switching a stable frail patient just because a DOAC exists. No TTR percent is supplied here.",
+      "teachingPoints": [
+        "Escalate a still-messy panel to the clinic pharmacist or physician pathway and document the handoff.",
+        "Do not quote a trial bleeding percentage in the operations note — the linked FRAIL-AF card already carries that teaching."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Framework: TTR / VKA quality"
+        },
+        {
+          "kind": "framework",
+          "id": "frail-elderly-vka-doac",
+          "label": "Framework: Frail elderly VKA"
+        },
+        {
+          "kind": "trial",
+          "id": "frail-af",
+          "label": "FRAIL-AF"
+        },
+        {
+          "kind": "case",
+          "id": "frail-vka-switch",
+          "label": "Case: frail VKA switch"
+        }
+      ]
+    },
+    {
+      "id": "v-14",
+      "domainId": "V",
+      "difficulty": "core",
+      "stem": "An out-of-range INR posts late Friday and would change the warfarin plan. Which clinic design is the operations standard?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Rely on the patient to call if they feel unwell; nobody is assigned"
+        },
+        {
+          "id": "b",
+          "text": "A named recall owner contacts the patient, documents the plan, and does not leave the result in an unowned queue over the weekend"
+        },
+        {
+          "id": "c",
+          "text": "Wait for the next annual visit to mention the result"
+        },
+        {
+          "id": "d",
+          "text": "Apply a standing rule to double the dose for every high INR, with no clinician review"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Time-to-follow-up after an out-of-range INR is an operations metric only if someone owns it. An unassigned queue, an annual-visit delay, or a standing double-dose rule are not a recall system. This item does not set an hour limit or an INR cutoff.",
+      "teachingPoints": [
+        "Pair the contact with a documented plan, not a voicemail that nobody reads.",
+        "The same ownership idea applies when the result came from patient self-testing — the clinic still covers the patient."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Framework: TTR / VKA quality"
+        }
+      ]
+    },
+    {
+      "id": "v-15",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "A point-of-care INR and a same-day laboratory INR disagree enough that the warfarin dose would change. Device QC was skipped this morning. Best operations rule?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Report the point-of-care value now — waived tests never need controls or a correlation policy"
+        },
+        {
+          "id": "b",
+          "text": "Do not dose from an unresolved split. Follow the correlation policy, repeat or verify, and hold patient-result reporting until QC and the discrepancy are addressed"
+        },
+        {
+          "id": "c",
+          "text": "Average the two numbers and dose to that average without a written policy"
+        },
+        {
+          "id": "d",
+          "text": "Discard the laboratory result because point-of-care devices are always the higher-complexity method"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Point-of-care INR still sits inside a quality system: QC, training, and a rule for when the lab must confirm. A skipped control plus a split that would change the dose is a stop-the-line event, not a moment to average numbers or to assume the waived result wins.",
+      "teachingPoints": [
+        "Expired strips and failed QC block patient results the same way.",
+        "Document the lot, the control failure, and who released the device back into use."
+      ],
+      "links": []
+    },
+    {
+      "id": "v-16",
+      "domainId": "V",
+      "difficulty": "core",
+      "stem": "A stewardship audit finds atrial-fibrillation patients on rivaroxaban 2.5 mg twice daily plus aspirin, and separate charts labeled “COMPASS” that were written for rivaroxaban 20 mg daily. Best operations response?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Ignore milligram and schedule differences; dose family is optional documentation"
+        },
+        {
+          "id": "b",
+          "text": "Treat the mix-up as a tracked defect. COMPASS/vascular dosing is rivaroxaban 2.5 mg twice daily plus aspirin — not an AF or therapeutic VTE regimen — and it is not stacked on full-dose anticoagulation. Reconcile indication, regimen, and the note"
+        },
+        {
+          "id": "c",
+          "text": "Recode every chart as a mechanical valve so billing is uniform"
+        },
+        {
+          "id": "d",
+          "text": "Resolve the audit by ordering Andexxa for the panel (U.S., after Dec 22, 2025)"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Dose-family errors are an anticoagulation-stewardship metric. Vascular-dose rivaroxaban 2.5 mg twice daily plus aspirin is a different regimen from AF or therapeutic VTE dosing, and the two are not combined. Fixing the chart means indication, regimen, and documentation — not a fake valve code or a withdrawn reversal agent.",
+      "teachingPoints": [
+        "The same audit should catch acute VTE load schedules still running past the labeled lead-in, without inventing a new calendar here.",
+        "Local compliance owns coding; the clinical mix-up is still a clinic defect."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Framework: DOAC appropriateness"
+        },
+        {
+          "kind": "framework",
+          "id": "compass-vascular-dose",
+          "label": "Framework: COMPASS vascular dose"
+        },
+        {
+          "kind": "case",
+          "id": "compass-vs-af-dose-trap",
+          "label": "Case: COMPASS vs AF dose trap"
+        }
+      ]
+    },
+    {
+      "id": "v-17",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "The clinic wants to offer INR patient self-testing. Which operations package is required before go-live?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Mail devices to anyone who asks, with no training, no result path, and no covering service"
+        },
+        {
+          "id": "b",
+          "text": "Documented training and competency, a result-reporting pathway, device quality-control expectations, and clinic oversight — self-testing is not an unsupervised gadget"
+        },
+        {
+          "id": "c",
+          "text": "A policy that self-testing abolishes the target INR range"
+        },
+        {
+          "id": "d",
+          "text": "Procedure codes chosen to maximize payment without documenting the service performed"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Who may self-test is a clinical selection question. Whether the program may open is operational: training, competency, quality control, a way for results to reach a covering clinic, and honest documentation. An unsupervised mail-out or a billing-only code is not that package.",
+      "teachingPoints": [
+        "Unreliable reporters stay on clinic-based testing.",
+        "Out-of-range home results still need the same named recall owner as clinic results."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Framework: TTR / VKA quality"
+        }
+      ]
+    },
+    {
+      "id": "v-18",
+      "domainId": "V",
+      "difficulty": "core",
+      "stem": "What should an auditor be able to find in a routine anticoagulation stewardship note?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Only the phrase “blood thinner — continue,” with no indication"
+        },
+        {
+          "id": "b",
+          "text": "Indication, planned duration, and dose-family rationale (AF stroke prevention vs acute/therapeutic VTE vs extended prevention vs COMPASS vascular dosing), plus when and by whom it was reviewed"
+        },
+        {
+          "id": "c",
+          "text": "The patient’s copay and nothing clinical"
+        },
+        {
+          "id": "d",
+          "text": "A line that Andexxa is the default U.S. reversal option after Dec 22, 2025"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Operational stewardship is auditable when the note names why the anticoagulant exists, how long it is planned, and which dose family was chosen. A one-line “blood thinner” note, a copay-only note, or a post-withdrawal Andexxa default fails that standard.",
+      "teachingPoints": [
+        "The same three lines belong in the discharge handoff, with a named follow-up owner.",
+        "Peri-procedural bridge/no-bridge detail is additional standard work when a procedure is planned — it does not replace indication and dose family."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Framework: DOAC appropriateness"
+        }
+      ]
+    }
   ]
 };

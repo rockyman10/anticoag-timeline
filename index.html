@@ -2156,6 +2156,23 @@
     return String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
   }
 
+  function linkifyText(text) {
+    const raw = String(text ?? "");
+    const re = /https?:\/\/[^\s<>"']+/g;
+    let out = "";
+    let last = 0;
+    let m;
+    while ((m = re.exec(raw))) {
+      out += esc(raw.slice(last, m.index));
+      let href = m[0].replace(/[),.;]+$/, "");
+      const trail = m[0].slice(href.length);
+      out += `<a href="${esc(href)}" target="_blank" rel="noopener">${esc(href)}</a>${esc(trail)}`;
+      last = m.index + m[0].length;
+    }
+    out += esc(raw.slice(last));
+    return out;
+  }
+
   let detailMode = "summary"; // summary | journal
 
 
@@ -2242,7 +2259,7 @@
         <div class="fld span2"><div class="lab">Important caveats</div><div class="val">${esc(jc.caveats)}</div></div>
       </div>
       <div class="fld" style="margin-top:.55rem"><div class="lab">Guidelines</div>${renderGuidelinesBlock(jc.guidelines, true)}</div>
-      <div class="cite">${esc(t.cite || "")}${doi}</div>`;
+      <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
   }
 
   function renderJournalBody(t) {
@@ -2270,7 +2287,7 @@
       <div class="jc-sec"><h3>Practice takeaway</h3><div class="take" style="margin:0">${esc(jc.practiceTakeaway)}</div></div>
       ${renderPracticalStrip(t)}
       ${renderGuidelinesBlock(jc.guidelines, false)}
-      <div class="cite">${esc(t.cite || "")}${doi}</div>`;
+      <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
   }
 
   function syncDetailChrome(t) {
@@ -2378,7 +2395,7 @@
       <div class="print-sec"><h2>Strengths / limitations</h2><p><strong>Strengths:</strong> ${esc(jc.strengths)}<br/><strong>Limitations:</strong> ${esc(jc.limitations)}</p></div>
       <div class="print-sec"><h2>Practice takeaway</h2><div class="pearl">${esc(jc.practiceTakeaway)}</div></div>
       <div class="print-sec"><h2>Guidelines</h2>${gLines}</div>
-      <div class="cite">${esc(t.cite || "")}${t.url ? "<br/>" + esc(t.url) : ""}</div>`;
+      <div class="cite">${linkifyText(t.cite)}${t.url ? "<br/>" + linkifyText(t.url) : ""}</div>`;
   }
   function printTrial() {
     if (!openId) return;

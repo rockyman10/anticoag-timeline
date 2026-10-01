@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-01",
+      title: "ASTER / MAGNOLIA registry correction",
+      items: [
+        "aster-magnolia: ASTER comparator is apixaban (NCT05171049), not dalteparin; MAGNOLIA remains abelacimab vs dalteparin in GI/GU cancer-associated VTE (NCT05171075)",
+        "Both terminated (sponsor decision) with hasResults false; removed the sponsor-communication inferior-efficacy line; no results DOI and no invented rates",
+        "Cite links both ClinicalTrials.gov study pages; efficacy and bleeding outcomes stay unknown"
+      ]
+    },
+    {
+      date: "2026-10-01",
       title: "CACP deepen — Domains III and V",
       items: [
         "Unofficial practice bank 121 → 134 (I 27 / II 39 / III 23 / IV 27 / V 18). Handbook weights left as published; new items add depth in III and V only",

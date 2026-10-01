@@ -2694,27 +2694,31 @@ window.ANTICOAG_TRIALS = [
     "indication": "FXI pipeline",
     "status": "recent",
     "impact": 3,
-    "title": "Abelacimab Cancer-Associated VTE Phase 3 Programs (Terminated)",
-    "population": "Cancer-associated VTE (ASTER vs dalteparin; MAGNOLIA GI cancer VTE)",
-    "intervention": "Abelacimab (factor XI/XIa inhibitor) for cancer-associated VTE",
-    "comparator": "Dalteparin (ASTER)",
-    "primaryResult": "Programs terminated (2026): ASTER reported an inferior efficacy signal per sponsor communications; MAGNOLIA stopped strategically — full public datasets incomplete",
-    "safety": "Public detail limited at termination",
-    "takeaway": "Pipeline setback for FXI in cancer VTE — incomplete data; do not extrapolate to clinical use.",
-    "cite": "No peer-reviewed results paper identified (doi unset). ClinicalTrials.gov: ASTER NCT05171049 (terminated, sponsor decision; last update posted 2026-02-23; https://clinicaltrials.gov/study/NCT05171049) and MAGNOLIA NCT05171075 (terminated, sponsor decision; last update posted 2026-04-17; https://clinicaltrials.gov/study/NCT05171075).",
+    "title": "Abelacimab Cancer-Associated VTE Phase 3 Programs (Terminated; No Posted Results)",
+    "population": "ASTER: cancer-associated VTE. MAGNOLIA: gastrointestinal or genitourinary cancer-associated VTE.",
+    "intervention": "Abelacimab (factor XI/XIa inhibitor) for treatment of cancer-associated VTE",
+    "comparator": "ASTER: apixaban. MAGNOLIA: dalteparin.",
+    "primaryResult": "No efficacy or safety results posted. ClinicalTrials.gov lists both studies as terminated (sponsor decision) with hasResults false. No results DOI and no PubMed results paper.",
+    "safety": "Bleeding outcomes are not posted on either registry record.",
+    "takeaway": "Terminated cancer-VTE phase 3 programs with no public results — do not read this card as an efficacy signal.",
+    "cite": "ClinicalTrials.gov. ASTER NCT05171049: https://clinicaltrials.gov/study/NCT05171049 (abelacimab vs apixaban; TERMINATED, sponsor decision; hasResults false; last update posted 2026-02-23). MAGNOLIA NCT05171075: https://clinicaltrials.gov/study/NCT05171075 (abelacimab vs dalteparin; GI/GU cancer-associated VTE; TERMINATED, sponsor decision; hasResults false; last update posted 2026-04-17). No results DOI.",
     "url": "https://clinicaltrials.gov/study/NCT05171049",
     "doi": null,
     "expectedResults": null,
+    "background": "ASTER and MAGNOLIA were separate phase 3 studies of abelacimab in cancer-associated VTE. They used different comparators. Both are terminated on ClinicalTrials.gov, and neither record posts results.",
+    "designNotes": "ASTER (NCT05171049, ANT-007): randomized open-label blinded-endpoint phase 3 of abelacimab versus apixaban in cancer-associated VTE. Registry enrollment 1,150 (actual). Primary completion 2026-02-04. Overall status TERMINATED; why stopped: sponsor decision. MAGNOLIA (NCT05171075, ANT-008): abelacimab versus dalteparin in GI/GU cancer-associated VTE. Registry enrollment 417 (actual). Primary completion 2026-04-10. Overall status TERMINATED; why stopped: sponsor decision. The registry primary outcome for both is time to centrally adjudicated VTE recurrence through about 6 months. That is the protocol endpoint, not a result. Registry dose labels: abelacimab 150 mg; apixaban 10 mg then 5 mg; dalteparin 200 IU/kg/day then 150 IU/kg/day.",
+    "strengths": "Comparators, populations, and termination status come from the two ClinicalTrials.gov study pages.",
+    "limitations": "No posted results, no results DOI, and no PubMed results paper (checked 2026-10-01). Why the sponsor stopped the studies, and any effect on VTE recurrence or bleeding, are not known from public trial results.",
+    "journalClub": "Teach the comparators separately: ASTER is abelacimab versus apixaban; MAGNOLIA is abelacimab versus dalteparin. Both are terminated with no public outcome data.",
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Cancer VTE pipeline",
-        "note": "Terminated programs—no practice change; incomplete public efficacy datasets.",
-        "year": 2026
+        "document": "Cancer-associated VTE (teaching note)",
+        "note": "These terminated programs have no posted results. They do not change approved DOAC or LMWH cancer-VTE pathways."
       }
     ],
-    "caveats": "Sponsor-reported signals/strategic stops—do not extrapolate to clinical use.",
-    "practiceTakeaway": "Ignore abelacimab cancer-VTE phase 3 for prescribing—stick to approved DOAC/LMWH pathways."
+    "caveats": "Termination on the registry is not an efficacy or safety result. VTE recurrence and bleeding effects are unknown until results are posted.",
+    "practiceTakeaway": "Do not prescribe abelacimab for cancer-associated VTE from ASTER or MAGNOLIA. Use approved DOAC or LMWH pathways until a results paper or registry results exist."
   },
   {
     "id": "librexia-af",

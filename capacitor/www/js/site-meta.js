@@ -5,6 +5,15 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-10-02",
+      title: "RENOVE rates — Couturaud et al., Lancet 2025",
+      items: [
+        "renove card: 5-year recurrent VTE 2.2% reduced-dose vs 1.8% full-dose (adjusted HR 1.32; 95% CI 0.67–2.60; non-inferiority p=0.23; non-inferiority not shown)",
+        "Major or CRNM bleeding 9.9% vs 15.2% (adjusted HR 0.61; 95% CI 0.48–0.79); hierarchical testing did not formally test this secondary",
+        "DOI unchanged (10.1016/S0140-6736(24)02842-3). Learn coach B4 stays rate-free and points at the live card. reviewedBy unchanged"
+      ]
+    },
+    {
       date: "2026-10-01",
       title: "ASTER / MAGNOLIA registry correction",
       items: [

@@ -112,7 +112,7 @@ window.ANTICOAG_LEARN_COMPARE_PAIRS = {
         interventionFamily: "Apixaban 2.5 mg BID × 12 months"
       }
     ],
-    ratesNote: "RENOVE rates: qualitative only until Lancet PDF + Reviewer deepen. API-CAT gated peek is on the live card — not forced into this coach.",
+    ratesNote: "RENOVE published rates (Couturaud et al., Lancet 2025) are on the live card — not repeated in this coach. API-CAT gated peek is on the live card — not forced into this coach.",
     pearl: "Same “2.5 vs 5” apixaban rhyme ≠ same disease. Cancer extend ≠ non-cancer high-risk extend.",
     teachBack: "Which population belongs to RENOVE vs API-CAT — one phrase each?"
   }

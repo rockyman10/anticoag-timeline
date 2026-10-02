@@ -544,18 +544,18 @@ window.ANTICOAG_TRIALS = [
     "population": "Adults with PE or proximal DVT who completed 6–24 months full-dose anticoagulation and have indication for extended therapy (first unprovoked, recurrent VTE, persistent risk factors, or other high-recurrence situations per protocol)",
     "intervention": "Reduced-dose DOAC: apixaban 2.5 mg BID or rivaroxaban 10 mg daily",
     "comparator": "Full-dose DOAC: apixaban 5 mg BID or rivaroxaban 20 mg daily",
-    "primaryResult": "Deepen pending Lancet PDF + Clinical Reviewer — primary endpoint symptomatic recurrent VTE (fatal/nonfatal PE or isolated proximal DVT); noninferiority design (protocol). No absolute rates or HRs on this card yet.",
-    "safety": "Deepen pending Lancet PDF + Clinical Reviewer — clinically relevant bleeding (and hierarchical secondaries) per protocol. No absolute rates on this card yet.",
-    "takeaway": "Head-to-head reduced vs full apixaban/rivaroxaban for extended therapy in patients at high recurrence risk who already completed 6–24 months full-dose anticoagulation — complements AMPLIFY-EXT / EINSTEIN-CHOICE (different comparators).",
+    "primaryResult": "5-year symptomatic recurrent VTE (fatal or non-fatal PE or isolated proximal DVT): 2.2% reduced-dose vs 1.8% full-dose (adjusted HR 1.32; 95% CI 0.67–2.60; non-inferiority p=0.23). Non-inferiority was not shown (prespecified margin HR 1.7).",
+    "safety": "Major or CRNM bleeding, 5-year cumulative incidence: 9.9% reduced-dose vs 15.2% full-dose (adjusted HR 0.61; 95% CI 0.48–0.79). Published adjusted estimate; hierarchical testing did not formally test this secondary after non-inferiority was not shown.",
+    "takeaway": "Reduced vs full DOAC after extension is already indicated: 5-year recurrent VTE 2.2% vs 1.8% (non-inferiority not shown); major or CRNM bleeding 9.9% vs 15.2% (adjusted HR 0.61). Different question from AMPLIFY-EXT / EINSTEIN-CHOICE.",
     "cite": "Couturaud F, et al. Lancet. 2025;405:725-735.",
     "doi": "10.1016/S0140-6736(24)02842-3",
     "url": "https://doi.org/10.1016/S0140-6736(24)02842-3",
     "expectedResults": null,
     "background": "Prior extend RCTs used placebo (AMPLIFY-EXT) or aspirin (EINSTEIN-CHOICE). Optimal dose when indefinite anticoagulation is already indicated was uncertain.",
-    "designNotes": "Investigator-initiated, multicentre (France), randomised 1:1, open-label, blinded-endpoint adjudication; stratified by centre, DOAC type, antiplatelet use; NCT03285438. Reduced (apixaban 2.5 BID / rivaroxaban 10 QD) vs full (apixaban 5 BID / rivaroxaban 20 QD). N and follow-up duration pending PDF deepen.",
-    "strengths": "Clinically relevant dose question; high-risk extend population; dual-drug (apixaban or rivaroxaban) pragmatic design; long follow-up intent.",
-    "limitations": "Open-label; France multicentre generalizability; noninferiority interpretation nuances; not cancer-VTE primary; clinician-chosen DOAC type.",
-    "journalClub": "After you decide to extend in high-risk non-cancer VTE, does reduced-dose DOAC hold up vs continuing full dose — and what happens to bleeding?",
+    "designNotes": "Investigator-initiated, multicentre (France), randomised 1:1, open-label, blinded-endpoint adjudication; stratified by centre, DOAC type, antiplatelet use; NCT03285438. Reduced (apixaban 2.5 BID / rivaroxaban 10 QD) vs full (apixaban 5 BID / rivaroxaban 20 QD). N=2,768 (reduced 1,383; full 1,385); median follow-up 37.1 months (IQR 24.0–48.3). Non-inferiority margin HR 1.7.",
+    "strengths": "Clinically relevant dose question; high-risk extend population; dual-drug (apixaban or rivaroxaban) pragmatic design. 5-year recurrent VTE was low in both arms; the major or CRNM bleeding point estimate was lower with reduced dose. Non-inferiority vs full dose was not shown.",
+    "limitations": "Open-label; France multicentre generalizability; non-inferiority was not met (upper CI crossed the HR 1.7 margin) and the key bleeding secondary was not formally tested; not cancer-VTE primary; clinician-chosen DOAC type.",
+    "journalClub": "After extension is already indicated in high-risk non-cancer VTE, RENOVE did not show reduced-dose non-inferiority (5-year recurrent VTE 2.2% vs 1.8%; adjusted HR 1.32; non-inferiority p=0.23). Major or CRNM bleeding was 9.9% vs 15.2% (adjusted HR 0.61).",
     "guidelines": [
       {
         "society": "CHEST",
@@ -570,8 +570,8 @@ window.ANTICOAG_TRIALS = [
         "year": 2020
       }
     ],
-    "caveats": "Do not conflate with API-CAT (cancer). Do not use as acute VTE start evidence. Selection already assumes extension is indicated. Absolute rates pending PDF + Clinical Reviewer.",
-    "practiceTakeaway": "When teaching extended VTE dosing in high-risk non-cancer patients, place RENOVE next to AMPLIFY-EXT / EINSTEIN-CHOICE and stress comparator differences; finalize dose messaging only after Reviewer-gated numbers."
+    "caveats": "API-CAT is a different population (cancer-associated VTE). This is not acute VTE start evidence. Enrollment already assumes extension is indicated. Non-inferiority of reduced vs full dose was not shown. The bleeding HR is the published adjusted estimate; hierarchical testing stopped before a formal superiority test of that secondary.",
+    "practiceTakeaway": "When teaching extended VTE dosing in high-risk non-cancer patients, place RENOVE next to AMPLIFY-EXT / EINSTEIN-CHOICE and stress comparator differences. Couturaud et al.: 5-year recurrent VTE 2.2% reduced-dose vs 1.8% full-dose (adjusted HR 1.32; 95% CI 0.67–2.60; non-inferiority p=0.23) and major or CRNM bleeding 9.9% vs 15.2% (adjusted HR 0.61). Teach the published trade-off as a journal-club finding."
   },
   {
     "id": "atlas-acs2",

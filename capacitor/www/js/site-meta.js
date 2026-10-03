@@ -5,6 +5,18 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-10-03",
+      title: "Nine anticoagulation teaching cards",
+      items: [
+        "Added CLOT, PEITHO, AVERT, CASSINI, ARTESiA, NOAH-AFNET 6, APPRAISE-2, AQUATIC, and ENVISAGE-TAVI AF. Counts, hazard or odds ratios, and DOIs were checked against the PubMed abstracts of the primary NEJM papers. ClinicalTrials.gov was used only where a dose or masking detail was not in the abstract (NOAH-AFNET 6, ENVISAGE-TAVI AF).",
+        "CLOT: six-month recurrent-VTE probabilities 9% vs 17% and HR 0.48 match Lee et al. The abstract reports 336 vs 336. Randomized N=676 and the word open-label are not in that abstract; they are stated in the published CLOT methods description (PMID 27344439). The NEJM PDF was not retrievable from this environment.",
+        "AVERT major bleeding 3.5% vs 1.8% is the modified intention-to-treat result (HR 2.00; P=0.046). On-treatment major bleeding was 2.1% vs 1.1% (HR 1.89; 95% CI 0.39–9.24).",
+        "NOAH-AFNET 6 safety figure on the card is the published composite of death or major bleeding. The abstract does not separate major bleeding. The registry control arm is aspirin 100 mg or placebo, depending on an antiplatelet indication.",
+        "Pairing notes on the cards: PEITHO is not HI-PEITHO; AVERT is taught beside CASSINI; ARTESiA beside NOAH-AFNET 6; APPRAISE-2 beside ATLAS ACS 2–TIMI 51; ENVISAGE-TAVI AF is not POPular TAVI.",
+        "Timeline axis start moved from 2009 to 2003 so the CLOT marker is on the track. Cancer-VTE and PE playlists include the new related ids. reviewedBy unchanged."
+      ]
+    },
+    {
       date: "2026-10-02",
       title: "RENOVE rates — Couturaud et al., Lancet 2025",
       items: [

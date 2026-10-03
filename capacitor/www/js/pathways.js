@@ -15,8 +15,8 @@ window.ANTICOAG_PATHWAYS = [
   {
     id: "cancer-vte",
     title: "Cancer-associated VTE",
-    description: "From LMWH preference through oral DOACs to extended reduced-dose therapy.",
-    trialIds: ["catch", "hokusai-vte-cancer", "select-d", "adam-vte", "caravaggio", "api-cat", "aster-magnolia"]
+    description: "CLOT (LMWH versus a coumarin), later treatment trials, extended reduced-dose therapy, and primary prophylaxis (AVERT beside CASSINI).",
+    trialIds: ["clot", "catch", "hokusai-vte-cancer", "select-d", "adam-vte", "caravaggio", "api-cat", "avert", "cassini", "aster-magnolia"]
   },
   {
     id: "af-pci",
@@ -33,8 +33,8 @@ window.ANTICOAG_PATHWAYS = [
   {
     id: "pe-reperfusion",
     title: "PE reperfusion / intermediate-risk PE",
-    description: "Oral PE treatment landmarks and catheter-directed therapy for enriched intermediate-risk PE.",
-    trialIds: ["einstein-pe", "hi-peitho"]
+    description: "Oral PE treatment, systemic fibrinolysis in intermediate-risk PE (PEITHO), and catheter-directed therapy (HI-PEITHO). Those reperfusion trials are not interchangeable.",
+    trialIds: ["einstein-pe", "peitho", "hi-peitho"]
   },
   {
     id: "reversal",

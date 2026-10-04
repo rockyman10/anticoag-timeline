@@ -345,11 +345,11 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "recommendation",
           "title": "Consider LAAO referral — shared decision",
           "body": "Percutaneous LAAO is an alternative when long-term OAC is contraindicated, refused, or repeatedly interrupted for bleeding.",
-          "why": "CHAMPION-AF supports modern LAAO as a credible alternative to long-term NOAC in selected anticoagulated patients — not for everyone.",
+          "why": "CHAMPION-AF supports modern LAAO as a credible alternative to long-term DOAC in selected anticoagulated patients — not for everyone.",
           "evidence": [
             {
               "trial": "champion-af",
-              "effect": "CV death/stroke/SE noninferior vs NOAC at 3 y in selected patients"
+              "effect": "CV death/stroke/SE noninferior vs DOAC at 3 y in selected patients"
             }
           ],
           "caveats": [

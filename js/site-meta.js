@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-03",
+      title: "Literature-review corrections",
+      items: [
+        "Trial cards: ASPIRE is apixaban versus aspirin 81 mg (quadruple-blind, NCT03907046), results pending. PRESTIGE-AF intervention is DOAC versus no anticoagulation (open-label). SELECT-D now states CRNMB 13% vs 4% (HR 3.76) and the esophageal or gastroesophageal major-bleeding counts (4 of 11 vs 1 of 19); the urinary-tract cancer warning is gone. OPTION has two primaries (NEJM 2025;392:1277-1287). NOTION-4 leads with 12-month HALT. EPIDAURUS leads with the primary win ratios. CATCH, COMMANDER HF, GALILEO, RE-DUAL PCI, Hokusai VTE Cancer, AFIRE, FRAIL-AF, AZALEA-TIMI 71, COMPASS, ENRICH-AF, and POPular TAVI population wording were aligned to the cited papers. Hokusai-VTE citation pages are 1406-1415.",
+        "Where the review note and the source differed, the card follows the source. EPIDAURUS extended-data BARC ≥3 P is 0.027 (the note said 0.028), and the safety win-ratio superiority P is for the control group. NOTION-4 composite CI is printed as 1.2% to 10.6%. SELECT-D calls the interim esophageal difference nonsignificant; the 4 of 11 vs 1 of 19 counts are the published totals. GALILEO’s conclusion says a higher bleeding risk; the primary safety test is P=0.08. ENRICH-AF rates stay attributed to the 29 August 2026 ESC Hot Line press release (page date 28 Aug). The XTANDI label effective 2026-07-28 has no INR sentence; S-warfarin AUC fell 56%. SOLTAMOX says coagulation indices, not the word INR.",
+        "DDI cards: dabigatran and edoxaban with enzalutamide are increased exposure (P-gp; digoxin AUC +33% is the labeled probe). Apixaban and rivaroxaban with enzalutamide stay decreased (CYP3A4 induction). Idelalisib and ribociclib are CYP3A4-only in Hellfritzsch Table 3, so the theoretical increase stays on apixaban and rivaroxaban. Venetoclax is blank in that table. Crizotinib is moderate CYP3A4; P-gp is in vitro only. Warfarin cards for enzalutamide, imatinib, crizotinib, nilotinib, and dasatinib use warfarin label language. Tamoxifen is split by SOLTAMOX indication. reviewedBy unchanged."
+      ]
+    },
+    {
+      date: "2026-10-03",
       title: "Nine anticoagulation teaching cards",
       items: [
         "Added CLOT, PEITHO, AVERT, CASSINI, ARTESiA, NOAH-AFNET 6, APPRAISE-2, AQUATIC, and ENVISAGE-TAVI AF. Counts, hazard or odds ratios, and DOIs were checked against the PubMed abstracts of the primary NEJM papers. ClinicalTrials.gov was used only where a dose or masking detail was not in the abstract (NOAH-AFNET 6, ENVISAGE-TAVI AF).",

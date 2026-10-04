@@ -1804,25 +1804,25 @@ window.ANTICOAG_TRIALS = [
     "status": "recent",
     "impact": 1,
     "title": "Left Atrial Appendage Closure or Anticoagulation for Atrial Fibrillation",
-    "population": "3,000 AF patients suitable for anticoagulation (Watchman FLX vs NOAC)",
+    "population": "3,000 AF patients suitable for anticoagulation (Watchman FLX vs DOAC)",
     "intervention": "Device LAA closure (Watchman FLX)",
-    "comparator": "Physician-choice NOAC",
+    "comparator": "Physician-choice DOAC",
     "primaryResult": "CV death/stroke/SE at 3 y: 5.7% vs 4.8% — noninferior (P<0.001 for NI)",
     "safety": "Non–procedure-related bleeding 10.9% vs 19.0%; HR 0.55. Ischemic stroke numerically higher with device",
-    "takeaway": "Modern LAAO is a credible alternative to long-term NOAC in selected anticoagulation-eligible patients.",
+    "takeaway": "Modern LAAO is a credible alternative to long-term DOAC in selected anticoagulation-eligible patients.",
     "cite": "Doshi SK, et al. Left Atrial Appendage Closure or Anticoagulation for Atrial Fibrillation. N Engl J Med. 2026. doi:10.1056/NEJMoa2517213 (CHAMPION-AF; ACC.26 simultaneous).",
     "doi": "10.1056/NEJMoa2517213",
     "url": "https://doi.org/10.1056/NEJMoa2517213",
     "expectedResults": null,
-    "background": "Percutaneous LAAO had been positioned mainly for anticoagulation-intolerant patients; CHAMPION-AF tested modern LAAO vs NOAC in eligible AF.",
-    "designNotes": "RCT of Watchman FLX vs physician-choice NOAC in anticoagulation-suitable AF (N≈3,000); 3-year primary analysis.",
+    "background": "Percutaneous LAAO had been positioned mainly for anticoagulation-intolerant patients; CHAMPION-AF tested modern LAAO vs DOAC in eligible AF.",
+    "designNotes": "RCT of Watchman FLX vs physician-choice DOAC in anticoagulation-suitable AF (N≈3,000); 3-year primary analysis.",
     "strengths": "Noninferior efficacy composite; superior nonprocedural bleeding; contemporary device.",
     "limitations": "Ischemic stroke numerically higher with device; procedural risk; longer stroke follow-up ongoing.",
     "journalClub": "CHAMPION-AF moves LAAO toward a shared-decision alternative even for anticoagulation-eligible patients.",
     "guidelines": [
       {
         "society": "ACC/AHA",
-        "document": "LAAO vs NOAC",
+        "document": "LAAO vs DOAC",
         "note": "Too new for full guideline incorporation as of mid-2026 briefings; likely to influence next LAAO updates.",
         "year": 2026
       },
@@ -1834,7 +1834,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Ischemic stroke numerically higher with device; procedural risk; longer follow-up ongoing.",
-    "practiceTakeaway": "Discuss modern LAAO as a credible alternative to long-term NOAC in selected anticoagulation-eligible AF—with ischemic-stroke nuance."
+    "practiceTakeaway": "Discuss modern LAAO as a credible alternative to long-term DOAC in selected anticoagulation-eligible AF—with ischemic-stroke nuance."
   },
   {
     "id": "galileo",
@@ -2081,19 +2081,19 @@ window.ANTICOAG_TRIALS = [
     "indication": "valvular/TAVI",
     "status": "recent",
     "impact": 3,
-    "title": "NOAC Monotherapy versus Aspirin after TAVI (No Other OAC Indication)",
+    "title": "DOAC Monotherapy versus Aspirin after TAVI (No Other OAC Indication)",
     "population": "360 patients aged 65–80 undergoing TAVI in Norway without long-term OAC indication",
-    "intervention": "NOAC monotherapy after TAVI (vs antiplatelet strategy per protocol)",
+    "intervention": "DOAC monotherapy after TAVI (vs antiplatelet strategy per protocol)",
     "comparator": "Aspirin monotherapy",
     "primaryResult": "HALT 16.2% vs 28.6%; RR 0.55; P=0.004",
     "safety": "Bleed/TE/death composite 7.5% vs 10.6% — noninferior",
-    "takeaway": "NOAC halved HALT imaging endpoint — suggestive but not a mandate for routine post-TAVI OAC.",
+    "takeaway": "DOAC halved HALT imaging endpoint — suggestive but not a mandate for routine post-TAVI OAC.",
     "cite": "JAMA. Published online Aug 30, 2026.",
     "doi": "10.1001/jama.2026.17036",
     "url": "https://jamanetwork.com/journals/jama/fullarticle/2853401",
     "expectedResults": null,
-    "background": "ACASA-TAVI tested ongoing NOAC vs aspirin after TAVI without other OAC indication, focusing on HALT.",
-    "designNotes": "RCT in Norway (ages 65–80) of NOAC monotherapy vs aspirin after TAVI.",
+    "background": "ACASA-TAVI tested ongoing DOAC vs aspirin after TAVI without other OAC indication, focusing on HALT.",
+    "designNotes": "RCT in Norway (ages 65–80) of DOAC monotherapy vs aspirin after TAVI.",
     "strengths": "HALT reduced (RR 0.55); safety composite noninferior in this cohort.",
     "limitations": "Imaging primary endpoint; clinical outcomes underpowered — not a mandate for routine post-TAVI OAC.",
     "journalClub": "ACASA-TAVI is hypothesis-generating for HALT — weigh against NOTION-4 and guidelines discouraging routine OAC without indication.",
@@ -2112,7 +2112,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "HALT imaging primary; clinical outcomes underpowered; weigh against NOTION-4/GALILEO.",
-    "practiceTakeaway": "Do not change practice to routine post-TAVI NOAC based on HALT alone—await clearer clinical outcome guidance."
+    "practiceTakeaway": "Do not change practice to routine post-TAVI DOAC based on HALT alone—await clearer clinical outcome guidance."
   },
   {
     "id": "notion-4",

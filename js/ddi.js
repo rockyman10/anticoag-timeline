@@ -7,7 +7,7 @@ window.ANTICOAG_DDI = {
     "lastCurated": "2026-09-26",
     "primaryReferences": [
       {
-        "label": "EHRA 2021 Practical Guide on NOACs in AF",
+        "label": "EHRA 2021 Practical Guide on DOACs in AF",
         "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
         "url": "https://doi.org/10.1093/europace/euab065"
       },
@@ -304,7 +304,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Confirm current country-specific dabigatran–ketoconazole dosing text before teaching a fixed dose.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         },
@@ -495,7 +495,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact pair beyond class extrapolation from ketoconazole/ritonavir-type inhibitors.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -522,7 +522,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact pair beyond class extrapolation from ketoconazole/ritonavir-type inhibitors.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -666,7 +666,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact pair.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -696,7 +696,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact pair.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2319,7 +2319,7 @@ window.ANTICOAG_DDI = {
           "url": "https://doi.org/10.1016/j.jacc.2019.12.068"
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2479,7 +2479,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact card — mechanism + label guidance emphasized.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2575,7 +2575,7 @@ window.ANTICOAG_DDI = {
           "url": "https://pubmed.ncbi.nlm.nih.gov/31925665/"
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2607,7 +2607,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact card — mechanism + label guidance emphasized.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2638,7 +2638,7 @@ window.ANTICOAG_DDI = {
           "url": "https://pubmed.ncbi.nlm.nih.gov/31925665/"
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2676,7 +2676,7 @@ window.ANTICOAG_DDI = {
           "url": "https://pubmed.ncbi.nlm.nih.gov/31925665/"
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2761,7 +2761,7 @@ window.ANTICOAG_DDI = {
           "url": "https://pubmed.ncbi.nlm.nih.gov/31925665/"
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2799,7 +2799,7 @@ window.ANTICOAG_DDI = {
           "url": "https://pubmed.ncbi.nlm.nih.gov/31925665/"
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2964,7 +2964,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact card — mechanism + label guidance emphasized.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -2990,7 +2990,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact card — mechanism + label guidance emphasized.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -3020,7 +3020,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for every DOAC–cyclosporine pair.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -3283,7 +3283,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact pair.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -3310,7 +3310,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact pair.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -3338,7 +3338,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for this exact pair.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -4969,7 +4969,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR change / bleeding or thrombosis",
           "signal": "Established clinical pharmacology of warfarin DDIs — manage by INR monitoring rather than DOAC-style AUC percentages",
-          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -4985,7 +4985,7 @@ window.ANTICOAG_DDI = {
           "url": null
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -5008,7 +5008,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR change / bleeding or thrombosis",
           "signal": "Established clinical pharmacology of warfarin DDIs — manage by INR monitoring rather than DOAC-style AUC percentages",
-          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -5024,7 +5024,7 @@ window.ANTICOAG_DDI = {
           "url": null
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -5049,7 +5049,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR change / bleeding or thrombosis",
           "signal": "Established clinical pharmacology of warfarin DDIs — manage by INR monitoring rather than DOAC-style AUC percentages",
-          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -5065,7 +5065,7 @@ window.ANTICOAG_DDI = {
           "url": null
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -5089,7 +5089,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR change / bleeding or thrombosis",
           "signal": "Established clinical pharmacology of warfarin DDIs — manage by INR monitoring rather than DOAC-style AUC percentages",
-          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin product labeling; clinical pharmacology references; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -5105,7 +5105,7 @@ window.ANTICOAG_DDI = {
           "url": null
         },
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -5130,7 +5130,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR decrease / thrombosis risk if under-anticoagulated",
           "signal": "Classic clinical pharmacology — manage by intensified INR monitoring rather than DOAC-style AUC%.",
-          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -5171,7 +5171,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR decrease / thrombosis risk if under-anticoagulated",
           "signal": "Classic clinical pharmacology — manage by intensified INR monitoring rather than DOAC-style AUC%.",
-          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -5212,7 +5212,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR decrease / thrombosis risk if under-anticoagulated",
           "signal": "Classic clinical pharmacology — manage by intensified INR monitoring rather than DOAC-style AUC%.",
-          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -5254,7 +5254,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources for typical dietary exposure.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -5281,7 +5281,7 @@ window.ANTICOAG_DDI = {
       "uncertainty": "Quantitative PK not identified in curated sources.",
       "sources": [
         {
-          "label": "EHRA 2021 Practical Guide on NOACs in AF",
+          "label": "EHRA 2021 Practical Guide on DOACs in AF",
           "citation": "Steffel J, et al. Europace. 2021;23:1612-1676.",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
@@ -8262,7 +8262,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR decrease / thrombosis risk if under-anticoagulated",
           "signal": "Classic clinical pharmacology — manage by intensified INR monitoring rather than DOAC-style AUC%.",
-          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -8303,7 +8303,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR decrease / thrombosis risk if under-anticoagulated",
           "signal": "Classic clinical pharmacology — manage by intensified INR monitoring rather than DOAC-style AUC%.",
-          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],
@@ -8344,7 +8344,7 @@ window.ANTICOAG_DDI = {
         {
           "outcome": "INR decrease / thrombosis risk if under-anticoagulated",
           "signal": "Classic clinical pharmacology — manage by intensified INR monitoring rather than DOAC-style AUC%.",
-          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs NOAC DDI patterns",
+          "citation": "Warfarin PI / clinical pharmacology; EHRA contrasts VKA vs DOAC DDI patterns",
           "url": "https://doi.org/10.1093/europace/euab065"
         }
       ],

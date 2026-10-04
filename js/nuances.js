@@ -6,7 +6,7 @@ window.ANTICOAG_NUANCES = [
     topic: "Antithrombotic strategy after TAVI",
     sideA: {
       label: "ACASA-TAVI lens",
-      points: "Emphasizes NOAC monotherapy strategies in selected post-TAVI patients without another mandate for combination therapy. Frames bleeding reduction when antiplatelet burden can be minimized."
+      points: "Emphasizes DOAC monotherapy strategies in selected post-TAVI patients without another mandate for combination therapy. Frames bleeding reduction when antiplatelet burden can be minimized."
     },
     sideB: {
       label: "NOTION-4 lens",

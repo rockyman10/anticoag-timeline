@@ -2368,7 +2368,10 @@
     if (!opts.skipRoute) setRoute("trial", trialSlug(t), opts.replaceRoute);
     const bd = document.getElementById("bd-detail");
     if (bd.hidden) openModal("detail");
-    else document.querySelector("#bd-detail .modal").scrollTop = 0;
+    else {
+      document.querySelector("#bd-detail .modal").scrollTop = 0;
+      bd.style.zIndex = String(200 + stack.length + 1);
+    }
     // Scroll marker into view when deep-linked
     requestAnimationFrame(() => {
       const b = document.querySelector(`.mk button[data-id="${id}"]`);
@@ -2560,6 +2563,7 @@
     lastFocus = document.activeElement;
     bd.hidden = false; bd.classList.add("open");
     stack.push(name);
+    bd.style.zIndex = String(200 + stack.length);
     const f = getFocusable(modal);
     (f[0] || modal).focus();
     bd._trap = (e) => {
@@ -3368,7 +3372,10 @@
     }
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else {
+      document.querySelector("#bd-teach .modal").scrollTop = 0;
+      bd.style.zIndex = String(200 + stack.length + 1);
+    }
   }
 
   function slugifyDdi(s) {
@@ -3710,7 +3717,10 @@
     wireTeachBody(body);
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else {
+      document.querySelector("#bd-teach .modal").scrollTop = 0;
+      bd.style.zIndex = String(200 + stack.length + 1);
+    }
   }
 
   function teachRelatedLinksHtml(links) {
@@ -3900,7 +3910,7 @@
     // Unconditional lock. Do not read localStorage, canRead, or any unlock.
     return `<div class="members-lock" data-member-id="${esc(id)}" data-access="${esc(tier)}">
       <p class="members-lock-status">Locked</p>
-      <p class="teach-lead"><strong>${esc(label)}</strong> is closed. Membership is not open. Nothing on this site is for sale.</p>
+      <p class="teach-lead"><strong>${esc(label)}</strong> are closed. Membership is not open. Nothing on this site is for sale.</p>
       <p class="teach-lead">The timeline, recaps, Learn path, playlists, pathways, frameworks, cases, reversal, nuance, DDI, and the current CACP bank stay free.</p>
       ${notice ? `<p class="teach-lead">${esc(notice)}</p>` : ""}
     </div>`;
@@ -4093,6 +4103,7 @@
     renderCacp();
     const bd = document.getElementById('bd-cacp');
     if (bd.hidden) openModal('cacp');
+    else bd.style.zIndex = String(200 + stack.length + 1);
     teachRoute = { kind: 'cacp', id: cacpState.focusQId || null };
     if (!opts.skipRoute) {
       if (cacpState.focusQId) setRoute('cacp/q', cacpState.focusQId, opts.replaceRoute);
@@ -5016,6 +5027,7 @@
     else if (bd) {
       const modal = bd.querySelector(".modal");
       if (modal) modal.scrollTop = 0;
+      bd.style.zIndex = String(200 + stack.length + 1);
     }
   }
 

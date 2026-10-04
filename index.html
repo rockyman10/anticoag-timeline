@@ -274,6 +274,19 @@
       margin-right: .25rem; vertical-align: middle;
     }
     footer.note { font-size: .75rem; color: var(--faint); text-align: center; }
+    .edu-notice {
+      font-size: .75rem; color: var(--faint); text-align: center; line-height: 1.45;
+    }
+    .members-lock {
+      border: 1px dashed var(--line-2); border-radius: 3px;
+      padding: .85rem .9rem; background: var(--muted-bg);
+    }
+    .members-lock-status {
+      display: inline-block; font-size: .7rem; font-weight: 700;
+      letter-spacing: .05em; text-transform: uppercase; color: var(--muted);
+      border: 1px solid var(--line-2); padding: .12rem .4rem; border-radius: 2px;
+      margin-bottom: .55rem;
+    }
 
 
     /* Journal club deep dive */
@@ -976,6 +989,7 @@
     body.embed #btn-txpath,
     body.embed #btn-cacp,
     body.embed footer.note,
+    body.embed .edu-notice,
     body.embed .site-meta { display: none !important; }
     body.embed .app { padding-top: .4rem; }
     body.embed .brand h1 { font-size: 1.35rem; }
@@ -1410,6 +1424,9 @@
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cases">Cases</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-nuance">Nuance</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cacp">CACP prep</button>
+        <div class="teach-menu-label" aria-hidden="true">Members</div>
+        <button type="button" class="btn sm ghost" role="menuitem" id="btn-exam-notes">Exam-depth notes</button>
+        <button type="button" class="btn sm ghost" role="menuitem" id="btn-saved-sets">Saved sets</button>
         <div class="teach-menu-label" aria-hidden="true">Site</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-changelog">Changelog</button>
       </div>
@@ -1483,6 +1500,8 @@
     </section>
 
     <footer class="note" id="site-disclaimer">Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.</footer>
+    <!-- DRAFT wording for a lawyer — not legal protection. Does not claim clinician-only access can be enforced. -->
+    <p class="edu-notice" id="edu-notice">For clinicians. Educational use only — not medical advice, and not a substitute for clinical judgment. Cite the paper you are teaching from.</p>
     <div class="site-meta" id="site-meta"></div>
   </div>
 
@@ -1723,6 +1742,7 @@
   <script src="js/learn-compare-pairs.js"></script>
   <script src="js/learn-visuals.js"></script>
   <script src="js/cacp.js"></script>
+  <script src="js/access.js"></script>
   <script>
 (function () {
   const Y0 = 2003, Y1 = 2028;
@@ -2573,6 +2593,7 @@
         else if (k === "nuance" && id) setRoute("nuance", id, true);
         else if (k === "reversal") setRoute("reversal", null, true);
         else if (k === "changelog") setRoute("changelog", null, true);
+        else if (k === "members" && (id === "exam-notes" || id === "saved-sets")) setRoute("members", id, true);
         else if (k === "ddi") setRoute("ddi", null, true);
         else if (k === "frameworks") setRoute("frameworks", null, true);
         else if (k === "cases") setRoute("cases", null, true);
@@ -3597,11 +3618,12 @@
   function fillSiteMeta() {
     const discEl = document.getElementById("site-disclaimer");
     if (discEl) discEl.textContent = siteMeta.disclaimer || discEl.textContent;
+    const eduEl = document.getElementById("edu-notice");
+    if (eduEl && siteMeta.educationalUseNotice) eduEl.textContent = siteMeta.educationalUseNotice;
     const el = document.getElementById("site-meta");
     if (!el) return;
     const sweep = siteMeta.lastLiteratureSweep || "—";
-    const rev = siteMeta.reviewedBy || "Clinical review pending — add your name";
-    el.innerHTML = `<strong>Last literature sweep:</strong> ${esc(sweep)} · <strong>Reviewed by:</strong> ${esc(rev)} · <a href="#/changelog">Changelog</a>`;
+    el.innerHTML = `<strong>Last literature sweep:</strong> ${esc(sweep)} · <a href="#/changelog">Changelog</a>`;
   }
 
   /* —— Teach pages —— */
@@ -3673,6 +3695,15 @@
       htmlOut = renderChangelog();
       setTeachDocTitle("Changelog");
       if (!opts.skipRoute) setRoute("changelog", null, opts.replaceRoute);
+    } else if (kind === "members") {
+      if (id !== "exam-notes" && id !== "saved-sets") return;
+      const access = window.ANTICOAG_ACCESS;
+      const shelf = access && access.membersOnly && access.membersOnly[id];
+      title = (shelf && shelf.label) || (id === "saved-sets" ? "Saved sets" : "Exam-depth notes");
+      sub = "Locked";
+      htmlOut = renderMembersLocked(id);
+      setTeachDocTitle(title);
+      if (!opts.skipRoute) setRoute("members", id, opts.replaceRoute);
     }
 
     titleEl.textContent = title;
@@ -3862,10 +3893,25 @@
     return h;
   }
 
+  function renderMembersLocked(id) {
+    const access = window.ANTICOAG_ACCESS;
+    const shelf = access && access.membersOnly && access.membersOnly[id];
+    const label = (shelf && shelf.label) || (id === "saved-sets" ? "Saved sets" : "Exam-depth notes");
+    const tier = access && typeof access.accessFor === "function" ? access.accessFor(id) : "members";
+    const notice = siteMeta.educationalUseNotice || "";
+    // Unconditional lock. Do not read localStorage, canRead, or any unlock.
+    return `<div class="members-lock" data-member-id="${esc(id)}" data-access="${esc(tier)}">
+      <p class="members-lock-status">Locked</p>
+      <p class="teach-lead"><strong>${esc(label)}</strong> is closed. Membership is not open. Nothing on this site is for sale.</p>
+      <p class="teach-lead">The timeline, recaps, Learn path, playlists, pathways, frameworks, cases, reversal, nuance, DDI, and the current CACP bank stay free.</p>
+      ${notice ? `<p class="teach-lead">${esc(notice)}</p>` : ""}
+    </div>`;
+  }
+
   function renderChangelog() {
     const items = siteMeta.changelog || [];
     return `<p class="teach-lead">${esc(siteMeta.disclaimer || "")}</p>
-      <p class="teach-lead"><strong>Last literature sweep:</strong> ${esc(siteMeta.lastLiteratureSweep || "—")} · <strong>Reviewed by:</strong> ${esc(siteMeta.reviewedBy || "—")} (edit <code>js/site-meta.js</code> or <code>REVIEWER.md</code>)</p>
+      <p class="teach-lead"><strong>Last literature sweep:</strong> ${esc(siteMeta.lastLiteratureSweep || "—")}</p>
       ${items.map(ch => `<div class="change-item">
         <div class="cd">${esc(ch.date)} — ${esc(ch.title)}</div>
         <ul>${(ch.items||[]).map(i => `<li>${esc(i)}</li>`).join("")}</ul>
@@ -3917,6 +3963,8 @@
   document.getElementById("btn-nuance").onclick = () => openTeach("nuances");
   document.getElementById("btn-reversal").onclick = () => openTeach("reversal");
   document.getElementById("btn-changelog").onclick = () => openTeach("changelog");
+  document.getElementById("btn-exam-notes").onclick = () => openTeach("members", "exam-notes");
+  document.getElementById("btn-saved-sets").onclick = () => openTeach("members", "saved-sets");
 
   document.getElementById("teach-copy").onclick = () => {
     const kind = teachRoute && teachRoute.kind;
@@ -3938,6 +3986,7 @@
     else if (kind === "nuances") hash = "#/nuances";
     else if (kind === "reversal") hash = "#/reversal";
     else if (kind === "changelog") hash = "#/changelog";
+    else if (kind === "members" && (id === "exam-notes" || id === "saved-sets")) hash = "#/members/" + id;
     const url = `${location.origin}${location.pathname}${location.search}${hash}`;
     navigator.clipboard.writeText(url).then(() => toast("Link copied"), () => prompt("Copy link:", url));
   };
@@ -5088,6 +5137,7 @@
     if (k === "nuances") return { kind: "nuances" };
     if (k === "reversal") return { kind: "reversal" };
     if (k === "changelog") return { kind: "changelog" };
+    if (k === "members" && (id === "exam-notes" || id === "saved-sets")) return { kind: "members", id };
     if (k === "cacp") {
       if (id === "q" && parts[2]) return { kind: "cacp", questionId: parts[2] };
       return { kind: "cacp" };
@@ -5114,6 +5164,8 @@
       else openDdi({ view: "home", skipRoute: true, replaceRoute: true });
     } else if (r.kind === "framework" || r.kind === "frameworks" || r.kind === "case" || r.kind === "cases" || r.kind === "nuance" || r.kind === "nuances" || r.kind === "reversal" || r.kind === "changelog") {
       openTeach(r.kind, r.id || null, { skipRoute: true, replaceRoute: true });
+    } else if (r.kind === "members") {
+      openTeach("members", r.id, { skipRoute: true, replaceRoute: true });
     } else if (r.kind === "cacp") {
       openCacp({ questionId: r.questionId || null, skipRoute: true, replaceRoute: true });
     } else if (r.kind === "learn") {

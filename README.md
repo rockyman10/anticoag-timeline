@@ -30,7 +30,9 @@ python3 -m http.server 8080
 | **Bleed & reversal** | Teach → **Bleed & reversal** → `#/reversal` |
 | **Nuance / Equipoise** | Teach → **Nuance** → e.g. `#/nuance/oceanic-vs-azalea` |
 | **DDI library** | Teach → **DDI library** → `#/ddi` or `#/ddi/apixaban/ketoconazole`; compare interactors across DOACs |
-| **Changelog / review** | Footer meta + `#/changelog`; edit reviewer in `js/site-meta.js` or `REVIEWER.md` |
+| **Changelog** | Footer literature-sweep stamp + `#/changelog` |
+| **Exam-depth notes** | Teach → **Exam-depth notes** → `#/members/exam-notes` — locked; membership is not open; nothing is for sale |
+| **Saved sets** | Teach → **Saved sets** → `#/members/saved-sets` — locked; same |
 | **Embed** | **Embed** button → iframe snippet; `?embed=1` for slim chrome |
 | Practical dosing strip | On selected trial Rapid Recaps (load/maintain, food, renal, hold heuristic) |
 
@@ -65,6 +67,7 @@ Drafts under `drafts/` are box/working notes only — not part of the published 
 - `js/nuances.js` — equipoise cards
 - `js/practical.js` — dosing logistics + bleed/reversal page
 - `js/ddi.js` — evidence-based anticoagulant DDI library (oncology TKI tranche complete; **expansion paused for clinical review**)
-- `js/site-meta.js` — literature sweep date, reviewer placeholder, changelog
+- `js/site-meta.js` — literature sweep date, educational-use notice, changelog
+- `js/access.js` — content-access flags (current ids free; `exam-notes` and `saved-sets` members-only and locked)
 - `REVIEWER.md` — how to name the clinical reviewer
 - See `DESIGN.md` for visual / interaction rationale

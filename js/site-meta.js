@@ -3,7 +3,20 @@ window.ANTICOAG_SITE_META = {
   lastLiteratureSweep: "2026-09-23",
   reviewedBy: "Clinical review pending — add your name",
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
+  // DRAFT wording for a lawyer — not legal protection.
+  // Written for clinicians. Does not claim clinician-only access can be enforced.
+  educationalUseNotice: "For clinicians. Educational use only — not medical advice, and not a substitute for clinical judgment. Cite the paper you are teaching from.",
   changelog: [
+    {
+      date: "2026-10-04",
+      title: "Membership shell — free library, locked shelves",
+      items: [
+        "Footer educational-use notice (draft wording for a lawyer; not legal protection). Written for clinicians. Does not claim clinician-only access can be enforced.",
+        "js/access.js: every current content id is free. Only exam-notes and saved-sets are members-only.",
+        "Routes #/members/exam-notes and #/members/saved-sets are unconditionally locked. Membership is not open. Nothing is for sale. No checkout, account, or client unlock.",
+        "Footer and changelog no longer show a reviewer line."
+      ]
+    },
     {
       date: "2026-10-04",
       title: "Second accuracy pass",

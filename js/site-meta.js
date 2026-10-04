@@ -5,6 +5,27 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-10-04",
+      title: "Second accuracy pass",
+      items: [
+        "EPIDAURUS eligibility is atrial fibrillation plus successful PCI no more than 5 days before randomization for biomarker-positive STEMI or NSTEMI. The 5-day interval is PCI to randomization.",
+        "RE-DUAL PCI: dabigatran 150 mg bleeding is 20.2% versus 25.7% in the triple-therapy group that excluded elderly patients outside the United States. Efficacy 13.7% is both dabigatran doses combined versus 13.4% on triple therapy.",
+        "OPTION secondary endpoint is major bleeding, including procedure-related bleeding, through 36 months (3.9% vs 5.0%).",
+        "PRESTIGE-AF is survivors of spontaneous intracerebral hemorrhage. First recurrent intracerebral hemorrhage HR 10.89 (90% CI 1.95–60.72).",
+        "FRAIL-AF citation is Joosten et al., Circulation. 2024;149:279–289.",
+        "Idelalisib and ribociclib still have no CYP3A4 degree on the cards. Supplementary Table S1 could not be read. reviewedBy unchanged."
+      ]
+    },
+    {
+      date: "2026-10-03",
+      title: "Literature-review corrections",
+      items: [
+        "Trial cards: ASPIRE is apixaban versus aspirin 81 mg (quadruple-blind, NCT03907046), results pending. PRESTIGE-AF intervention is DOAC versus no anticoagulation (open-label). SELECT-D now states CRNMB 13% vs 4% (HR 3.76) and the esophageal or gastroesophageal major-bleeding counts (4 of 11 vs 1 of 19); the urinary-tract cancer warning is gone. OPTION has two primaries (NEJM 2025;392:1277-1287). NOTION-4 leads with 12-month HALT. EPIDAURUS leads with the primary win ratios. CATCH, COMMANDER HF, GALILEO, RE-DUAL PCI, Hokusai VTE Cancer, AFIRE, FRAIL-AF, AZALEA-TIMI 71, COMPASS, ENRICH-AF, and POPular TAVI population wording were aligned to the cited papers. Hokusai-VTE citation pages are 1406-1415.",
+        "Where the review note and the source differed, the card follows the source. EPIDAURUS extended-data BARC ≥3 P is 0.027 (the note said 0.028), and the safety win-ratio superiority P is for the control group. NOTION-4 composite CI is printed as 1.2% to 10.6%. SELECT-D calls the interim esophageal difference nonsignificant; the 4 of 11 vs 1 of 19 counts are the published totals. GALILEO’s conclusion says a higher bleeding risk; the primary safety test is P=0.08. ENRICH-AF rates stay attributed to the 29 August 2026 ESC Hot Line press release (page date 28 Aug). The XTANDI label effective 2026-07-28 has no INR sentence; S-warfarin AUC fell 56%. SOLTAMOX says coagulation indices, not the word INR.",
+        "DDI cards: dabigatran and edoxaban with enzalutamide are increased exposure (P-gp; digoxin AUC +33% is the labeled probe). Apixaban and rivaroxaban with enzalutamide stay decreased (CYP3A4 induction). Idelalisib and ribociclib are CYP3A4-only in Hellfritzsch Table 3, so the theoretical increase stays on apixaban and rivaroxaban. Venetoclax is blank in that table. Crizotinib is moderate CYP3A4; P-gp is in vitro only. Warfarin cards for enzalutamide, imatinib, crizotinib, nilotinib, and dasatinib use warfarin label language. Tamoxifen is split by SOLTAMOX indication. reviewedBy unchanged."
+      ]
+    },
+    {
       date: "2026-10-03",
       title: "Nine anticoagulation teaching cards",
       items: [

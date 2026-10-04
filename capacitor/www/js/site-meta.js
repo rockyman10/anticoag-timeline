@@ -6,6 +6,13 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-04",
+      title: "Phone-width layout",
+      items: [
+        "Viewports 640px and narrower reflow the same library in place: larger type, 44px controls, full-width sheets, and data tables stacked so the page does not scroll sideways. The timeline still pans inside its board. Desktop at 641px and wider is unchanged. No login and no separate mobile site."
+      ]
+    },
+    {
+      date: "2026-10-04",
       title: "Second accuracy pass",
       items: [
         "EPIDAURUS eligibility is atrial fibrillation plus successful PCI no more than 5 days before randomization for biomarker-positive STEMI or NSTEMI. The 5-day interval is PCI to randomization.",

@@ -1233,6 +1233,15 @@
     .prac-box .row { font-size: .8125rem; color: var(--ink-2); margin-bottom: .2rem; line-height: 1.35; }
     .prac-box .row strong { color: var(--ink); font-weight: 600; }
     .prac-box .disc { font-size: .75rem; color: var(--muted); margin-top: .35rem; font-style: italic; }
+    .teach-not-rx {
+      font-size: .8125rem; font-weight: 650; color: var(--ink);
+      background: var(--muted-bg); border: 1px solid var(--line); border-radius: 3px;
+      padding: .4rem .55rem; margin: 0 0 .65rem; line-height: 1.4;
+    }
+    .teach-dose-label {
+      font-size: .75rem; font-weight: 700; letter-spacing: .02em; color: var(--accent);
+      margin: 0 0 .35rem;
+    }
     .rev-block { margin-bottom: .85rem; padding-bottom: .75rem; border-bottom: 1px solid var(--line); }
     .rev-block:last-child { border-bottom: none; }
     .site-meta {
@@ -2174,13 +2183,17 @@
   let detailMode = "summary"; // summary | journal
 
 
+  const TEACH_NOT_RX = "Teaching example, not a prescription.";
+  const TEACH_NOT_ORDER = "Teaching example, not an order.";
+
   function renderPracticalStrip(t) {
     const d = (practical.dosingByTrial || {})[t.id];
     if (!d) return "";
     const disc = practical.disclaimer || "Verify with local protocol / product labeling.";
     return `<div class="prac-box">
       <div class="lab">Practical — dosing / logistics</div>
-      ${d.regimen ? `<div class="row"><strong>Regimen:</strong> ${esc(d.regimen)}</div>` : ""}
+      <div class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</div>
+      ${d.regimen ? `<div class="row"><strong>Regimen the evidence used:</strong> ${esc(d.regimen)}</div>` : ""}
       ${d.food ? `<div class="row"><strong>Food:</strong> ${esc(d.food)}</div>` : ""}
       ${d.renal ? `<div class="row"><strong>Renal:</strong> ${esc(d.renal)}</div>` : ""}
       ${d.holdHint ? `<div class="row"><strong>Periprocedural hold (heuristic):</strong> ${esc(d.holdHint)}</div>` : ""}
@@ -3113,7 +3126,7 @@
     const disc = (txPathLib.meta && txPathLib.meta.disclaimer) || "Educational — not a protocol.";
     const host = document.getElementById("txp-body");
     host.innerHTML = `<div class="lead-alert">${esc(disc)}</div>
-      <p class="teach-lead">Walk an indication step-by-step. Each node shows what to do, why, published effect sizes when clean, and study caveats. Deep link: <code>#/pathway-tx/af-stroke</code>. Distinct from <strong>Trial playlists</strong> (timeline tours).</p>
+      <p class="teach-lead">Walk an indication as reasoning steps. Each node shows why the branch exists, published effect sizes when clean, and study caveats. Deep link: <code>#/pathway-tx/af-stroke</code>. Distinct from <strong>Trial playlists</strong> (timeline tours).</p>
       <div class="txp-gallery">${txPathways().map(p =>
         `<button type="button" class="txp-card" data-txp="${esc(p.id)}">
           <strong>${esc(p.title)}</strong>
@@ -3134,7 +3147,10 @@
       const hn = txNode(p, hid);
       return hn ? esc(hn.title) : "";
     }).filter(Boolean);
-    const typeLab = ({ start: "Start", question: "Decision", recommendation: "Recommendation", caution: "Caution", end: "Complete" })[n.type] || n.type;
+    const typeLab = ({ start: "Start", question: "Decision", recommendation: "Reasoning step", caution: "Caution", end: "Complete" })[n.type] || n.type;
+    const doseLine = /\b\d+(?:\.\d+)?\s*mg\b|\bINR\b|4F-PCC|dose-adjusted warfarin/i.test(`${n.title || ""} ${n.body || ""}`)
+      ? `<div class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</div>`
+      : "";
 
     let evHtml = (n.evidence || []).map(e => {
       const t = byId[e.trial];
@@ -3168,9 +3184,11 @@
     document.getElementById("txp-body").innerHTML = `
       <div class="txp-crumbs">${crumbs.map((c,i)=> i===crumbs.length-1?`<b>${c}</b>`:c).join(" → ")}</div>
       <div class="txp-progress"><i style="width:${pct}%"></i></div>
+      <p class="teach-not-rx">${esc(TEACH_NOT_RX)}</p>
       <div class="txp-layout">
         <div class="txp-main">
           <div class="txp-type">${typeLab}</div>
+          ${doseLine}
           <h3>${esc(n.title)}</h3>
           <div class="txp-body">${esc(n.body || "")}</div>
           <div class="txp-choices">${choices}${endExtra}</div>
@@ -3256,7 +3274,7 @@
     document.getElementById("print-root").innerHTML = `
       <div class="banner">Treatment pathway summary</div>
       <h1>${esc(p.title)}</h1>
-      <div class="p-meta">${esc(p.indication)} · Educational — not a protocol</div>
+      <div class="p-meta">${esc(p.indication)} · ${esc(TEACH_NOT_RX)}</div>
       ${steps.map((n,i)=>`<h2>${i+1}. ${esc(n.title)}</h2><p>${esc(n.body||"")}</p>
         ${(n.evidence||[]).map(e=>`<p><strong>${esc(e.trial)}:</strong> ${esc(e.effect||"")}${e.nnt?" · "+esc(String(e.nnt)):""}</p>`).join("")}
       `).join("")}
@@ -3773,6 +3791,7 @@
   function renderCaseDetail(c) {
     const fws = (c.frameworkIds || []).map(id => frameworks.find(f => f.id === id)).filter(Boolean);
     return `<button type="button" class="back-link" data-back="cases">← All cases</button>
+      <p class="teach-not-rx">${esc(TEACH_NOT_RX)}</p>
       <p style="font-weight:600;margin-bottom:.25rem;">${esc(c.title)}</p>
       <div class="case-stem">${esc(c.stem)}</div>
       <div class="jc-sec"><h3>Key question</h3><p>${esc(c.keyQuestion)}</p></div>
@@ -3822,7 +3841,8 @@
     (rev.classes || []).forEach(cl => {
       h += `<div class="rev-block">
         <h3 style="font-family:'Source Serif 4',Georgia,serif;font-size:1.1rem;margin-bottom:.35rem;">${esc(cl.agentClass)}</h3>
-        <p style="font-size:.9375rem;margin-bottom:.35rem;"><strong>Specific / preferred teaching path:</strong> ${esc(cl.specific)}</p>
+        <p class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</p>
+        <p style="font-size:.9375rem;margin-bottom:.35rem;"><strong>What the teaching map describes:</strong> ${esc(cl.specific)}</p>
         <p style="font-size:.875rem;color:var(--ink-2);margin-bottom:.35rem;">${esc(cl.notes)}</p>
         ${trialLinkButtons(cl.trialIds)}
       </div>`;
@@ -3841,7 +3861,8 @@
     agents.forEach(a => {
       h += `<div class="prac-box" style="margin-bottom:.45rem;">
         <div class="lab">${esc(a.name)}</div>
-        <div class="row"><strong>Load / maintain:</strong> ${esc(a.loadMaintain)}</div>
+        <div class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</div>
+        <div class="row"><strong>Load / maintain the trials used:</strong> ${esc(a.loadMaintain)}</div>
         <div class="row"><strong>Food:</strong> ${esc(a.food)}</div>
         <div class="row"><strong>Renal:</strong> ${esc(a.renal)}</div>
         <div class="row"><strong>Pearl:</strong> ${esc(a.pearls)}</div>

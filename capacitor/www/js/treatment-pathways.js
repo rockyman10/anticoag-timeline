@@ -74,8 +74,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "af-vka-valve",
           "type": "recommendation",
-          "title": "Use dose-adjusted warfarin (VKA)",
-          "body": "Target INR per valve/guideline; do not switch to a DOAC for stroke prevention in this niche.",
+          "title": "Dose-adjusted warfarin is what this niche’s evidence uses",
+          "body": "Mechanical valves and moderate–severe mitral stenosis sat outside the pivotal DOAC AF trials. Teaching example, not an order: dose-adjusted warfarin, with the INR target taken from the valve or guideline table. A switch to a DOAC is outside that evidence.",
           "why": "ACC/AHA valvular heart disease guideline Class 1 (verify current table) for mechanical valves / moderate–severe MS.",
           "evidence": [],
           "caveats": [
@@ -791,8 +791,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "vte-apix",
           "type": "recommendation",
-          "title": "Apixaban 10 mg BID × 7 d → 5 mg BID",
-          "body": "Counsel load→maintenance calendar; verify renal/hepatic labels.",
+          "title": "AMPLIFY used apixaban 10 mg twice daily for 7 days, then 5 mg twice daily",
+          "body": "Teaching example, not an order. The trial’s load-then-maintenance calendar is what the evidence used. Renal and hepatic limits come from the label.",
           "why": "",
           "evidence": [
             {
@@ -824,8 +824,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "vte-riva",
           "type": "recommendation",
-          "title": "Rivaroxaban 15 mg BID × 21 d → 20 mg daily with food",
-          "body": "Food counseling is part of the prescription for 15/20 mg doses.",
+          "title": "EINSTEIN used rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily with food",
+          "body": "Teaching example, not an order. EINSTEIN-DVT and EINSTEIN-PE dosed the 15 mg and 20 mg tablets with food.",
           "why": "",
           "evidence": [
             {
@@ -860,8 +860,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "vte-edo",
           "type": "recommendation",
-          "title": "Parenteral heparin ≥5 days → edoxaban 60/30 mg daily",
-          "body": "Not a single-drug start from diagnosis in the pivotal design.",
+          "title": "Hokusai-VTE used parenteral heparin for at least 5 days, then edoxaban 60 mg or 30 mg daily",
+          "body": "Teaching example, not an order. That program was not a single-drug start from diagnosis.",
           "why": "",
           "evidence": [
             {
@@ -2394,8 +2394,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "bld-vka",
           "type": "recommendation",
-          "title": "4F-PCC + IV vitamin K per ICH/major bleed bundle",
-          "body": "For warfarin major bleed / ICH: 4F-PCC plus IV vitamin K per institutional bundle. FFP is not first-line when 4F-PCC is available.",
+          "title": "Warfarin major-bleed teaching: 4F-PCC plus IV vitamin K",
+          "body": "Teaching example, not an order. Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. Fresh frozen plasma is the fallback when 4F-PCC is unavailable.",
           "why": "",
           "evidence": [],
           "caveats": [],

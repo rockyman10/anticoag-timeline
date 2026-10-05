@@ -61,7 +61,7 @@ window.ANTICOAG_DDI = {
       "Pick an anticoagulant or search an interactor (generic/brand synonyms).",
       "Optionally filter by mechanism (P-gp, CYP3A4, CYP2C9, PD bleed).",
       "Open a card for quantified PK (when curated), clinical signals, label/EHRA-style guidance, and honest uncertainty.",
-      "Use Compare on an interactor to see AUC/effect direction across DOACs side-by-side.",
+      "Use Compare on an interactor to see AUC/effect direction across anticoagulants side-by-side.",
       "Still verify the current country label before changing therapy.",
       "Oncology/CAT: search TKI names or use the Oncology quick chip; prefer LMWH when strong inducers/inhibitors dominate."
     ]

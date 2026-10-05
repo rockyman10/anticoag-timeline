@@ -1,9 +1,23 @@
 /* Site meta, reviewer placeholder, changelog */
 window.ANTICOAG_SITE_META = {
-  lastLiteratureSweep: "2026-09-23",
-  reviewedBy: "Clinical review pending — add your name",
+  lastLiteratureSweep: "2026-10-04",
+  reviewedBy: "",
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
+    {
+      date: "2026-10-07",
+      title: "Site auditor functionality fixes",
+      items: [
+        "Teach → Learn path opens and keeps #/learn, the same entry as Start here.",
+        "CACP prep: Submit answer and Reveal explanation are separate. A revealed explanation is not scored.",
+        "DOAC appropriateness stewardship rows are a plain list. Empty checkbox glyphs are gone.",
+        "Guided overview and Self-check buttons are removed. Those lists are empty.",
+        "The trial marker popup is titled Rapid Recap. More details stays the journal-club view.",
+        "DDI library legend: HV, PK-patient, Label/extrapolation, RCT-subgroup, ↑ exposure (context-dependent), and “No quantitative PK curated.” Evidence grade stays separate from effect.",
+        "DDI compare says “across anticoagulants” because the table includes warfarin.",
+        "Footer literature-sweep stamp is 2026-10-04, matching the latest accuracy pass. No reviewer name is shown."
+      ]
+    },
     {
       date: "2026-10-05",
       title: "Teaching-tone and API-CAT regimen match",

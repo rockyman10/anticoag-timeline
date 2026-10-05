@@ -1,12 +1,10 @@
 # Clinical reviewer
 
-Edit `js/site-meta.js` → `ANTICOAG_SITE_META.reviewedBy` (or replace the placeholder string below) after local faculty review.
+The public site does not show a named reviewer. `ANTICOAG_SITE_META.reviewedBy` is empty. Do not put a person's name in the footer or changelog header.
 
-**Current placeholder:** Clinical review pending — add your name
+**Last literature sweep (site stamp):** 2026-10-04
 
-**Last literature sweep (site stamp):** 2026-09-23
-
-This resource is educational only and does not replace guidelines, product labeling, or institutional protocols.
+The stamp matches the latest accuracy pass in the changelog (2026-10-04). This resource is educational only and does not replace guidelines, product labeling, or institutional protocols.
 
 
 ## 2026-09-30 accuracy note — DOI / citation hygiene

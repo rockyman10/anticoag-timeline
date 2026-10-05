@@ -282,10 +282,11 @@
       color: var(--ink);
     }
     .jc-sec p, .jc-sec .val { font-size: 1rem; color: var(--ink-2); line-height: 1.5; }
-    .jc-banner {
+    .jc-banner, .capsule-kicker {
       font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
       color: var(--accent); margin-bottom: .5rem;
     }
+    .capsule-kicker { margin-bottom: .2rem; }
     .modal.detail.jc-wide { max-width: 720px; }
 
     /* Tooltip */
@@ -372,13 +373,12 @@
     .fw-check-lock {
       font-size: .9375rem; color: var(--ink); margin: 0 0 .65rem; line-height: 1.45;
     }
-    .fw-check-list { list-style: none; margin: 0; padding: 0; }
+    .fw-check-list { margin: 0; padding-left: 1.15rem; }
     .fw-check-item {
       margin: 0 0 .55rem; font-size: .9375rem; color: var(--ink); line-height: 1.4;
     }
-    .fw-box { margin-right: .35rem; }
     .fw-check-help {
-      margin: .2rem 0 0 1.35rem; font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
+      margin: .2rem 0 0; font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
     }
     .fw-section-body {
       margin: 0 0 .55rem; font-size: .9rem; color: var(--ink-2); line-height: 1.45;
@@ -566,6 +566,9 @@
       border: 1px solid var(--line); background: var(--paper);
     }
     .cacp-choices .btn:hover { border-color: var(--line-2); background: var(--muted-bg); }
+    .cacp-choices .btn.selected {
+      border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent);
+    }
     .cacp-choices .btn.correct {
       border-color: #276749; background: #edf7f1; color: #1a4731; font-weight: 600;
     }
@@ -582,6 +585,8 @@
       color: var(--muted); margin-bottom: .35rem;
     }
     .cacp-explain p { font-size: .9rem; color: var(--ink-2); line-height: 1.45; margin-bottom: .45rem; }
+    .cacp-unscored { font-size: .8125rem; color: var(--muted); margin: 0 0 .45rem; }
+    #cacp-next, #cacp-reveal { min-height: 44px; }
     .cacp-explain ul { margin: 0; padding-left: 1.1rem; font-size: .85rem; color: var(--ink-2); line-height: 1.4; }
     .cacp-links { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
     .cacp-links .btn { font-size: .75rem; padding: .22rem .45rem; }
@@ -963,12 +968,6 @@
     body.embed .teach-wrap,
     body.embed #btn-teach,
     body.embed #btn-more,
-    /* Hotfix: hide unfinished Guided overview / Self-check (empty STORY_BEATS / QUIZ_QUESTIONS) */
-    #btn-story,
-    #btn-quiz { display: none !important; }
-
-    body.embed #btn-story,
-    body.embed #btn-quiz,
     body.embed #btn-embed,
     body.embed #btn-pathways,
     body.embed #btn-txpath,
@@ -1299,6 +1298,14 @@
     .txp-caveat { font-size: .8125rem; color: var(--ink-2); padding-left: 1rem; margin: 0 0 .25rem; }
     .txp-progress { height: 4px; background: var(--muted-bg); border-radius: 2px; margin: .35rem 0 .75rem; overflow: hidden; }
     .txp-progress > i { display: block; height: 100%; background: var(--accent); width: 0%; }
+    .ddi-legend {
+      font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
+      border: 1px solid var(--line); background: var(--bg);
+      border-radius: 3px; padding: .55rem .7rem; margin: 0 0 .75rem;
+    }
+    .ddi-legend p { margin: 0; }
+    .ddi-legend ul { margin: .4rem 0 0; padding-left: 1.1rem; }
+    .ddi-legend li { margin-bottom: .28rem; }
     .ddi-filters { display: flex; flex-wrap: wrap; gap: .4rem .5rem; align-items: center; margin-bottom: .65rem; }
     .ddi-filters select, .ddi-filters input {
       font: inherit; font-size: .875rem; padding: .35rem .5rem; border: 1px solid var(--line);
@@ -1392,8 +1399,6 @@
         <div class="more-wrap" id="more-wrap">
           <button type="button" class="btn sm ghost more-trigger" id="btn-more" aria-expanded="false" aria-controls="more-menu" aria-haspopup="menu" aria-label="More actions">More</button>
           <div class="more-panel" id="more-menu" role="menu" aria-label="More actions" hidden>
-            <button type="button" class="btn sm ghost" role="menuitem" id="btn-story" hidden aria-hidden="true" tabindex="-1">Guided overview</button>
-            <button type="button" class="btn sm ghost" role="menuitem" id="btn-quiz" hidden aria-hidden="true" tabindex="-1">Self-check</button>
             <button type="button" class="btn sm ghost" role="menuitem" id="btn-embed">Embed</button>
             <button type="button" class="btn sm ghost" role="menuitem" id="btn-theme" aria-label="Toggle theme">Theme</button>
           </div>
@@ -1617,7 +1622,8 @@
         <button type="button" class="btn sm" id="cacp-copy">Copy link</button>
         <button type="button" class="btn sm" id="cacp-shuffle">Shuffle</button>
         <button type="button" class="btn sm" id="cacp-missed" hidden>Missed only</button>
-        <button type="button" class="btn primary" id="cacp-next">Next</button>
+        <button type="button" class="btn" id="cacp-reveal">Reveal explanation</button>
+        <button type="button" class="btn primary" id="cacp-next">Submit answer</button>
         <button type="button" class="btn ghost" data-close="cacp">Close</button>
       </div>
     </div>
@@ -1630,6 +1636,7 @@
     <div class="modal detail" role="dialog" aria-modal="true" aria-labelledby="d-title" tabindex="-1">
       <div class="m-head">
         <div>
+          <div class="capsule-kicker" id="d-view">Rapid Recap</div>
           <div class="tags" id="d-tags"></div>
           <h2 id="d-title"></h2>
           <div class="yrline" id="d-year"></div>
@@ -2316,6 +2323,8 @@
       else if (full) { cb.textContent = "Compare full (max 3)"; cb.disabled = true; }
       else { cb.textContent = "Add to compare"; cb.disabled = false; }
     });
+    const view = document.getElementById("d-view");
+    if (view) view.textContent = detailMode === "journal" ? "More details" : "Rapid Recap";
     document.getElementById("d-foot-summary").hidden = detailMode !== "summary";
     document.getElementById("d-foot-jc").hidden = detailMode !== "journal";
     document.querySelector("#bd-detail .modal").classList.toggle("jc-wide", detailMode === "journal");
@@ -2630,9 +2639,28 @@
   document.querySelectorAll("[data-close]").forEach(b => {
     b.onclick = () => closeModal(b.dataset.close);
   });
+  let outsideCloseGuardUntil = 0;
+  function armOutsideCloseGuard(ms) {
+    outsideCloseGuardUntil = Date.now() + (ms || 450);
+  }
+  function outsideCloseGuarded() {
+    return Date.now() < outsideCloseGuardUntil;
+  }
+  function swallowGhostEvent(e) {
+    if (!outsideCloseGuarded()) return;
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  document.addEventListener("pointerdown", swallowGhostEvent, true);
+  document.addEventListener("mousedown", swallowGhostEvent, true);
+  document.addEventListener("mouseup", swallowGhostEvent, true);
+  document.addEventListener("click", swallowGhostEvent, true);
   document.querySelectorAll(".bd").forEach(bd => {
     bd.addEventListener("mousedown", (e) => {
-      if (e.target === bd) closeModal(bd.id.replace("bd-", ""));
+      if (e.target === bd) {
+        if (outsideCloseGuarded()) return;
+        closeModal(bd.id.replace("bd-", ""));
+      }
     });
   });
   /* —— Chrome menus (Teach + mobile More) —— */
@@ -2757,6 +2785,8 @@
       teachMenu.addEventListener("click", (e) => {
         const item = e.target.closest('[role="menuitem"]');
         if (item && teachMenu.contains(item)) {
+          // Learn path closes the sheet itself and must keep #/learn.
+          if (item.id === "btn-learn") return;
           // Existing onclick runs first; close after
           setTimeout(() => closeTeachMenu(true), 0);
         }
@@ -2867,7 +2897,8 @@
       if (b) b.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
     }
   }
-  document.getElementById("btn-story").onclick = () => { if (storyBeats.length) openStory(0); };
+  const storyBtn = document.getElementById("btn-story");
+  if (storyBtn) storyBtn.onclick = () => { if (storyBeats.length) openStory(0); };
   document.getElementById("s-prev").onclick = () => { if (storyI > 0) openStory(storyI - 1); };
   document.getElementById("s-next").onclick = () => {
     if (storyI < storyBeats.length - 1) openStory(storyI + 1);
@@ -2906,7 +2937,8 @@
       };
     });
   }
-  document.getElementById("btn-quiz").onclick = () => { if (quizQs.length) showQuiz(); };
+  const quizBtn = document.getElementById("btn-quiz");
+  if (quizBtn) quizBtn.onclick = () => { if (quizQs.length) showQuiz(); };
   document.getElementById("q-next").onclick = () => {
     if (quizDone) { showQuiz(); return; }
     if (!quizAns) quizAns = true;
@@ -3372,9 +3404,24 @@
     return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
 
+  function renderDdiLegend() {
+    return `<div class="ddi-legend">
+      <p><strong>Effect</strong> is what the card says happens. <strong>Evidence grade</strong> is the kind of source. They are different columns. Other grades you will see — PK-volunteer, Clinical-cohort, Case-report — are grades, not effects.</p>
+      <ul>
+        <li><strong>HV</strong> — healthy volunteer. A PK figure from healthy volunteers is not automatically the effect in patients.</li>
+        <li><strong>PK-patient</strong> (PK-PATIENT) — evidence grade: pharmacokinetic measurements in patients.</li>
+        <li><strong>Label/extrapolation</strong> (LABEL/EXTRAPOLATION) — evidence grade: product labeling, or an extension from a related study. Not a dedicated PK trial of this pair.</li>
+        <li><strong>RCT-subgroup</strong> (RCT-SUBGROUP) — evidence grade: a randomized-trial subgroup or secondary look, not a dedicated interaction study.</li>
+        <li><strong>↑ exposure (context-dependent)</strong> — an effect direction. Exposure may increase, and the size depends on the setting named on the card. Not an evidence grade.</li>
+        <li><strong>No quantitative PK curated</strong> — this card has no AUC or Cmax number. That is a gap in the library, not proof of no interaction.</li>
+      </ul>
+    </div>`;
+  }
+
   function renderDdiShell() {
     const meta = ddiLib.meta || {};
     let h = `<div class="lead-alert"><strong>Educational — not CDS.</strong> ${esc(meta.banner || "Verify labels and local protocols. Evidence graded; gaps labeled.")}</div>`;
+    h += renderDdiLegend();
     h += renderDdiFilters();
     if (ddiState.view === "detail") {
       const e = ddiEntries().find(x => x.id === ddiState.detailId) || findDdi(ddiState.detailId.split("-")[0], ddiState.detailId.split("-").slice(1).join("-"));
@@ -3512,7 +3559,7 @@
     }
 
     h += `<div class="trial-links" style="margin-top:.5rem">
-      <button type="button" class="linkish" data-ddi-compare="${esc(e.interactor)}">Compare ${esc(e.interactor)} across DOACs</button>
+      <button type="button" class="linkish" data-ddi-compare="${esc(e.interactor)}">Compare ${esc(e.interactor)} across anticoagulants</button>
       <button type="button" class="linkish" data-copy-ddi="${esc(e.anticoagulant.toLowerCase())}/${esc(e.interactorSlug)}">Copy deep link</button>
     </div>`;
     return h;
@@ -3616,8 +3663,16 @@
     const el = document.getElementById("site-meta");
     if (!el) return;
     const sweep = siteMeta.lastLiteratureSweep || "—";
-    const rev = siteMeta.reviewedBy || "Clinical review pending — add your name";
-    el.innerHTML = `<strong>Last literature sweep:</strong> ${esc(sweep)} · <strong>Reviewed by:</strong> ${esc(rev)} · <a href="#/changelog">Changelog</a>`;
+    const rev = namedReviewer(siteMeta.reviewedBy);
+    const revHtml = rev ? ` · <strong>Reviewed by:</strong> ${esc(rev)}` : "";
+    el.innerHTML = `<strong>Last literature sweep:</strong> ${esc(sweep)}${revHtml} · <a href="#/changelog">Changelog</a>`;
+  }
+
+  function namedReviewer(value) {
+    const s = String(value || "").trim();
+    if (!s) return "";
+    if (/pending|add your name/i.test(s)) return "";
+    return s;
   }
 
   /* —— Teach pages —— */
@@ -3734,7 +3789,7 @@
     ).join("");
     const lines = items.map(item => {
       const help = item.help ? `<p class="fw-check-help">${esc(item.help)}</p>` : "";
-      return `<li class="fw-check-item"><span class="fw-box" aria-hidden="true">☐</span>${esc(item.label || "")}${help}</li>`;
+      return `<li class="fw-check-item">${esc(item.label || "")}${help}</li>`;
     }).join("");
     const doc = fw.docTemplate || "Indication:     ________________________________\nPlanned duration: _____________________________\nDose rationale: _______________________________\n(Reviewed when / by: __________________________)";
     return `<div class="jc-sec fw-checklist">
@@ -3883,8 +3938,10 @@
 
   function renderChangelog() {
     const items = siteMeta.changelog || [];
+    const rev = namedReviewer(siteMeta.reviewedBy);
+    const revHtml = rev ? ` · <strong>Reviewed by:</strong> ${esc(rev)}` : "";
     return `<p class="teach-lead">${esc(siteMeta.disclaimer || "")}</p>
-      <p class="teach-lead"><strong>Last literature sweep:</strong> ${esc(siteMeta.lastLiteratureSweep || "—")} · <strong>Reviewed by:</strong> ${esc(siteMeta.reviewedBy || "—")} (edit <code>js/site-meta.js</code> or <code>REVIEWER.md</code>)</p>
+      <p class="teach-lead"><strong>Last literature sweep:</strong> ${esc(siteMeta.lastLiteratureSweep || "—")}${revHtml}</p>
       ${items.map(ch => `<div class="change-item">
         <div class="cd">${esc(ch.date)} — ${esc(ch.title)}</div>
         <ul>${(ch.items||[]).map(i => `<li>${esc(i)}</li>`).join("")}</ul>
@@ -3970,6 +4027,9 @@
     queue: [],
     idx: 0,
     answered: false,
+    revealed: false,
+    pickedId: null,
+    revealedCount: 0,
     score: 0,
     answeredCount: 0,
     missedIds: [],
@@ -4035,6 +4095,9 @@
     cacpState.queue = list;
     cacpState.idx = 0;
     cacpState.answered = false;
+    cacpState.revealed = false;
+    cacpState.pickedId = null;
+    cacpState.revealedCount = 0;
     clearCacpChoiceOrder();
     cacpState.score = 0;
     cacpState.answeredCount = 0;
@@ -4099,12 +4162,15 @@
     const title = document.getElementById('cacp-title');
     const sub = document.getElementById('cacp-sub');
     const nextBtn = document.getElementById('cacp-next');
+    const revealBtn = document.getElementById('cacp-reveal');
     const missedBtn = document.getElementById('cacp-missed');
     title.textContent = (cacpLib.meta && cacpLib.meta.title) || 'CACP exam prep';
     sub.textContent = 'Unofficial practice · not NCBAP-endorsed';
 
     if (cacpState.mode === 'results') {
       missedBtn.hidden = cacpState.missedIds.length === 0;
+      if (revealBtn) revealBtn.hidden = true;
+      nextBtn.disabled = false;
       nextBtn.textContent = 'Restart';
       const rows = (cacpLib.meta.domains || []).map(d => {
         const s = cacpState.byDomain[d.id] || { correct: 0, total: 0 };
@@ -4118,6 +4184,7 @@
           <p class="cacp-meta">Score: <strong>${cacpState.score}</strong> / ${cacpState.answeredCount}
             ${cacpState.missedIds.length ? ` · Missed: ${cacpState.missedIds.length}` : ''}</p>
           <table><thead><tr><th>Domain</th><th>Correct</th><th>%</th></tr></thead><tbody>${rows}</tbody></table>
+          ${cacpState.revealedCount ? `<p class="cacp-unscored">Revealed explanations: ${cacpState.revealedCount}. Those are not included in the score.</p>` : ''}
           <p style="font-size:.8125rem;color:var(--muted);line-height:1.45">${esc(cacpLib.meta.handbookNote || '')}</p>
         </div>`;
       return;
@@ -4128,6 +4195,8 @@
     if (!q) {
       body.innerHTML = `<div class="cacp-banner">${esc(cacpLib.meta.disclaimer || '')}</div>
         <p>No questions in this filter.</p>`;
+      if (revealBtn) revealBtn.hidden = true;
+      nextBtn.disabled = false;
       nextBtn.textContent = 'Close';
       return;
     }
@@ -4140,30 +4209,47 @@
       )).join('');
 
     const tips = (cacpLib.studyTips || []).map(t => `<li>${esc(t)}</li>`).join('');
+    const resolved = cacpState.answered || cacpState.revealed;
     let explain = '';
-    if (cacpState.answered) {
+    if (resolved) {
       const links = (q.links || []).map(l =>
         `<button type="button" class="btn sm" data-cacp-link="${esc(l.kind)}|${esc(l.id || '')}">${esc(l.label || l.id)}</button>`
       ).join('');
       const tps = (q.teachingPoints || []).map(t => `<li>${esc(t)}</li>`).join('');
+      const unscored = cacpState.revealed && !cacpState.answered
+        ? `<p class="cacp-unscored">Not scored — you did not submit an answer.</p>`
+        : '';
       explain = `<div class="cacp-explain">
         <h4>Explanation</h4>
+        ${unscored}
         <p>${esc(q.explanation || '')}</p>
         ${tps ? `<h4>Teaching points</h4><ul>${tps}</ul>` : ''}
         ${links ? `<div class="cacp-links">${links}</div>` : ''}
       </div>`;
+      if (revealBtn) revealBtn.hidden = true;
+      nextBtn.disabled = false;
       nextBtn.textContent = cacpState.idx >= cacpState.queue.length - 1 ? 'See results' : 'Next question';
     } else {
-      nextBtn.textContent = 'Skip / reveal';
+      if (revealBtn) {
+        revealBtn.hidden = false;
+        revealBtn.disabled = false;
+        revealBtn.textContent = 'Reveal explanation';
+      }
+      nextBtn.disabled = !cacpState.pickedId;
+      nextBtn.textContent = 'Submit answer';
     }
 
     const choices = cacpChoicesForDisplay(q).map(c => {
       let cls = 'btn';
       if (cacpState.answered) {
         if (c.id === q.correctId) cls += ' correct';
-        else if (c._picked && c.id !== q.correctId) cls += ' wrong';
+        else if (c.id === cacpState.pickedId && c.id !== q.correctId) cls += ' wrong';
+      } else if (cacpState.revealed) {
+        if (c.id === q.correctId) cls += ' correct';
+      } else if (c.id === cacpState.pickedId) {
+        cls += ' selected';
       }
-      return `<button type="button" class="${cls}" data-cacp-choice="${esc(c.id)}" ${cacpState.answered?'disabled':''}>${esc(c.text)}</button>`;
+      return `<button type="button" class="${cls}" data-cacp-choice="${esc(c.id)}" ${resolved?'disabled':''}>${esc(c.text)}</button>`;
     }).join('');
 
     // mark picked for re-render: store on choice objects temporarily via state
@@ -4193,19 +4279,8 @@
     });
     body.querySelectorAll('[data-cacp-choice]').forEach(b => {
       b.onclick = () => {
-        if (cacpState.answered) return;
-        const pick = b.dataset.cacpChoice;
-        cacpState.answered = true;
-        cacpState.answeredCount++;
-        const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
-        dstat.total++;
-        (q.choices || []).forEach(c => { c._picked = c.id === pick; });
-        if (pick === q.correctId) {
-          cacpState.score++;
-          dstat.correct++;
-        } else if (!cacpState.missedIds.includes(q.id)) {
-          cacpState.missedIds.push(q.id);
-        }
+        if (cacpState.answered || cacpState.revealed) return;
+        cacpState.pickedId = b.dataset.cacpChoice;
         renderCacp();
       };
     });
@@ -4226,27 +4301,44 @@
     toast(cacpState.shuffle ? 'Shuffle on' : 'Shuffle off (handbook order)');
   };
   document.getElementById('cacp-missed').onclick = () => openCacp({ missedOnly: true });
+  function submitCacpAnswer() {
+    if (cacpState.answered || cacpState.revealed) return;
+    const q = cacpState.queue[cacpState.idx];
+    if (!q || !cacpState.pickedId) return;
+    cacpState.answered = true;
+    cacpState.answeredCount++;
+    const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
+    dstat.total++;
+    if (cacpState.pickedId === q.correctId) {
+      cacpState.score++;
+      dstat.correct++;
+    } else if (!cacpState.missedIds.includes(q.id)) {
+      cacpState.missedIds.push(q.id);
+    }
+    renderCacp();
+  }
+  function revealCacpExplanation() {
+    if (cacpState.answered || cacpState.revealed) return;
+    if (!cacpState.queue[cacpState.idx]) return;
+    cacpState.revealed = true;
+    cacpState.revealedCount++;
+    renderCacp();
+  }
+  document.getElementById('cacp-reveal').onclick = () => revealCacpExplanation();
   document.getElementById('cacp-next').onclick = () => {
     if (cacpState.mode === 'results') { openCacp({}); return; }
     if (!cacpState.queue.length) { closeModal('cacp'); return; }
-    if (!cacpState.answered) {
-      // reveal without scoring as correct
-      cacpState.answered = true;
-      const q = cacpState.queue[cacpState.idx];
-      (q.choices || []).forEach(c => { c._picked = false; });
-      if (!cacpState.missedIds.includes(q.id)) cacpState.missedIds.push(q.id);
-      const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
-      dstat.total++;
-      cacpState.answeredCount++;
-      renderCacp();
+    if (!cacpState.answered && !cacpState.revealed) {
+      submitCacpAnswer();
       return;
     }
     if (cacpState.idx < cacpState.queue.length - 1) {
       cacpState.idx++;
       cacpState.answered = false;
+      cacpState.revealed = false;
+      cacpState.pickedId = null;
       clearCacpChoiceOrder();
       const q = cacpState.queue[cacpState.idx];
-      (q.choices || []).forEach(c => { delete c._picked; });
       if (cacpState.focusQId) setRoute('cacp/q', q.id, false);
       renderCacp();
     } else {
@@ -5048,12 +5140,12 @@
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      // Close Teach sheet/menu first (no focus restore) so chrome-backdrop
-      // and menu close cannot race the Learn shell shut.
+      // Close the Teach sheet without restoring focus, then open Learn the
+      // same way Start here does. A short guard ignores the ghost click that
+      // can land on the new dialog backdrop after the sheet unmounts.
       closeTeachMenu(false);
-      const open = () => openLearnPath({});
-      if (typeof requestAnimationFrame === "function") requestAnimationFrame(() => setTimeout(open, 0));
-      else setTimeout(open, 0);
+      armOutsideCloseGuard(450);
+      openLearnPath({});
     });
   })();
 

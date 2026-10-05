@@ -29,8 +29,8 @@ python3 -m http.server 8080
 | **Cases** | Teach → **Cases** → e.g. `#/case/af-pci-week2` |
 | **Bleed & reversal** | Teach → **Bleed & reversal** → `#/reversal` |
 | **Nuance / Equipoise** | Teach → **Nuance** → e.g. `#/nuance/oceanic-vs-azalea` |
-| **DDI library** | Teach → **DDI library** → `#/ddi` or `#/ddi/apixaban/ketoconazole`; compare interactors across DOACs |
-| **Changelog / review** | Footer meta + `#/changelog`; edit reviewer in `js/site-meta.js` or `REVIEWER.md` |
+| **DDI library** | Teach → **DDI library** → `#/ddi` or `#/ddi/apixaban/ketoconazole`; compare interactors across anticoagulants |
+| **Changelog** | Footer meta + `#/changelog` |
 | **Embed** | **Embed** button → iframe snippet; `?embed=1` for slim chrome |
 | Practical dosing strip | On selected trial Rapid Recaps (load/maintain, food, renal, hold heuristic) |
 

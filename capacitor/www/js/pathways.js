@@ -9,26 +9,26 @@ window.ANTICOAG_PATHWAYS = [
   {
     id: "vte-extend",
     title: "VTE extended secondary prevention",
-    description: "After acute treatment: reduced-dose vs placebo/aspirin/full-dose DOAC for patients who need extension (non-cancer primary).",
-    trialIds: ["amplify-ext", "einstein-choice", "renove"]
+    description: "After acute treatment: dabigatran versus warfarin (RE-MEDY) or placebo (RE-SONATE), then reduced-dose versus placebo, aspirin, or full-dose DOAC when extension is already indicated (non-cancer primary).",
+    trialIds: ["re-medy", "re-sonate", "amplify-ext", "einstein-choice", "renove"]
   },
   {
     id: "cancer-vte",
     title: "Cancer-associated VTE",
-    description: "CLOT (LMWH versus a coumarin), later treatment trials, extended reduced-dose therapy, and primary prophylaxis (AVERT beside CASSINI).",
-    trialIds: ["clot", "catch", "hokusai-vte-cancer", "select-d", "adam-vte", "caravaggio", "api-cat", "avert", "cassini", "aster-magnolia"]
+    description: "CLOT (LMWH versus a coumarin), later named-drug treatment trials, CANVAS (any DOAC versus LMWH), extended reduced-dose therapy, and primary prophylaxis (AVERT beside CASSINI).",
+    trialIds: ["clot", "catch", "hokusai-vte-cancer", "select-d", "adam-vte", "caravaggio", "canvas", "api-cat", "avert", "cassini", "aster-magnolia"]
   },
   {
     id: "af-pci",
     title: "AF + PCI / dual pathway",
-    description: "Triple therapy to dual pathway: WOEST through AUGUSTUS and 2026 refinements.",
-    trialIds: ["woest", "pioneer-af-pci", "re-dual-pci", "entrust-af-pci", "augustus", "afire", "optima-af", "epidaurus"]
+    description: "Triple therapy to dual pathway: WOEST through AUGUSTUS and 2026 refinements. AFIRE and EPIC-CAD are stable coronary disease, not the early post-PCI window.",
+    trialIds: ["woest", "pioneer-af-pci", "re-dual-pci", "entrust-af-pci", "augustus", "afire", "epic-cad", "optima-af", "epidaurus"]
   },
   {
     id: "laao",
     title: "LAAO vs OAC",
-    description: "Percutaneous and surgical left atrial appendage strategies versus anticoagulation.",
-    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af"]
+    description: "Percutaneous and surgical left atrial appendage strategies versus anticoagulation, plus Amulet versus Watchman (AMULET IDE), which is a device comparison rather than a DOAC comparison.",
+    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af", "amulet-ide"]
   },
   {
     id: "pe-reperfusion",

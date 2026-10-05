@@ -2600,14 +2600,29 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "mv-doac-ban",
           "type": "caution",
           "title": "DOACs are contraindicated for mechanical valves",
-          "body": "Do not substitute a DOAC for warfarin in a mechanical prosthesis. Landmark DOAC AF/VTE trials excluded mechanical valves. Historical RE-ALIGN-era teaching (dabigatran vs warfarin in mechanical valves; trial not curated on this timeline) reinforced excess harm with a DOAC strategy — treat mechanical valves as VKA-only territory.",
+          "body": "Do not substitute a DOAC for warfarin in a mechanical prosthesis. Landmark DOAC AF/VTE trials excluded mechanical valves. RE-ALIGN stopped early after more ischemic or unspecified stroke and more major bleeding with dabigatran than with warfarin. PROACT Xa did not show apixaban noninferior to warfarin for an On-X mechanical aortic valve. Treat mechanical valves as VKA-only territory.",
           "why": "ACC/AHA valvular heart disease guideline Class 1 (verify current table) for VKA; DOAC labels and pivotal programs do not support mechanical valves.",
           "evidence": [],
           "caveats": [
-            "RE-ALIGN / PROACT-style valve programs are not trial cards on this site — cite primary literature if discussing them",
+            "Read the RE-ALIGN, PROACT, and PROACT Xa cards before quoting valve rates. PROACT is warfarin-based. PROACT Xa is apixaban and was stopped early.",
             "GALILEO addressed rivaroxaban after TAVR (bioprosthetic pathway), not mechanical valves"
           ],
           "links": [
+            {
+              "kind": "trial",
+              "id": "re-align",
+              "label": "RE-ALIGN"
+            },
+            {
+              "kind": "trial",
+              "id": "proact",
+              "label": "PROACT"
+            },
+            {
+              "kind": "trial",
+              "id": "proact-xa",
+              "label": "PROACT Xa"
+            },
             {
               "kind": "trial",
               "id": "galileo",
@@ -2704,13 +2719,25 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "caution",
           "title": "On-X aortic lower-INR protocols are specialized — not a DOAC invitation",
           "body": "Selected On-X aortic pathways allow a lower INR target after an initial higher-intensity transition period, usually with aspirin, under protocol. This remains warfarin-based. It does not authorize a DOAC.",
-          "why": "PROACT-era On-X research (not a curated card on this site) informs manufacturer/guideline lower-INR options — follow the labeled protocol and surgical/cardiology ownership.",
+          "why": "The PROACT card reports the 2018 On-X lower-INR comparison. Follow the labeled protocol and surgical/cardiology ownership. PROACT Xa does not turn that pathway into a DOAC.",
           "evidence": [],
           "caveats": [
             "Not applicable to mitral On-X or off-label DOAC substitution",
-            "Confirm timing of transition phase and concomitant aspirin"
+            "Confirm timing of transition phase and concomitant aspirin",
+            "PROACT Xa tested apixaban in On-X aortic valves and did not meet noninferiority"
           ],
-          "links": [],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "proact",
+              "label": "PROACT"
+            },
+            {
+              "kind": "trial",
+              "id": "proact-xa",
+              "label": "PROACT Xa"
+            }
+          ],
           "choices": [
             {
               "label": "Peri-procedural / bridging considerations",

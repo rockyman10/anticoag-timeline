@@ -164,6 +164,78 @@ window.ANTICOAG_TRIALS = [
     "practiceTakeaway": "If warfarin is unsuitable but stroke prevention is indicated, use a DOAC—not aspirin—when appropriate."
   },
   {
+    "id": "active-w",
+    "acronym": "ACTIVE-W",
+    "year": 2006,
+    "yearLabel": "2006",
+    "indication": "AF",
+    "status": "landmark",
+    "impact": 1,
+    "title": "Clopidogrel plus aspirin versus oral anticoagulation for atrial fibrillation",
+    "population": "Patients with atrial fibrillation plus one or more stroke risk factors, randomly allocated to oral anticoagulation (n=3,371) or clopidogrel plus aspirin (n=3,335)",
+    "intervention": "Oral anticoagulation with a target INR of 2.0–3.0",
+    "comparator": "Clopidogrel 75 mg per day plus aspirin (75–100 mg per day recommended)",
+    "primaryResult": "Stopped early for superiority of oral anticoagulation. First stroke, non-CNS systemic embolus, myocardial infarction, or vascular death: 165 events on oral anticoagulation (annual risk 3.93%) vs 234 on clopidogrel plus aspirin (annual risk 5.60%); relative risk 1.44 (1.18–1.76; P=0.0003). The relative risk above 1 is more events on clopidogrel plus aspirin.",
+    "safety": "The abstract does not give one overall major-bleeding rate. It reports a major-bleeding interaction by oral-anticoagulation use at entry (P=0.03). Already on oral anticoagulation at entry: vascular-event relative risk 1.50 (95% CI 1.19–1.89) and major-bleeding relative risk 1.30 (0.94–1.79). Not on oral anticoagulation at entry: 1.27 (0.85–1.89) and 0.59 (0.32–1.08).",
+    "takeaway": "In high-risk atrial fibrillation, oral anticoagulation (INR 2.0–3.0) prevented more vascular events than clopidogrel plus aspirin. The trial was stopped early for that difference.",
+    "cite": "Connolly S, et al. Lancet. 2006;367:1903-1912.",
+    "doi": "10.1016/S0140-6736(06)68845-4",
+    "url": "https://doi.org/10.1016/S0140-6736(06)68845-4",
+    "pmid": "16765759",
+    "expectedResults": null,
+    "background": "Before the DOAC era, some patients with atrial fibrillation were treated with antiplatelet therapy instead of a vitamin K antagonist. ACTIVE-W asked whether clopidogrel plus aspirin was noninferior to oral anticoagulation.",
+    "designNotes": "Randomized: yes. Intention-to-treat. Outcome events were adjudicated by a blinded committee. The abstract does not call the treatment assignment double-blind. Oral anticoagulation target INR 2.0–3.0 versus clopidogrel 75 mg daily plus aspirin 75–100 mg daily (recommended). ClinicalTrials.gov NCT00243178. Stopped early because oral anticoagulation was superior.",
+    "strengths": "Large randomized comparison with a blinded adjudication committee and a clear primary-event difference (annual risk 3.93% vs 5.60%; relative risk 1.44).",
+    "limitations": "Stopped early. The abstract’s comparator is oral anticoagulation at INR 2.0–3.0, not a named DOAC. Major bleeding is reported as an interaction by prior oral-anticoagulation use, not as one overall rate. This card does not choose a DOAC dose.",
+    "journalClub": "Evidence quality: high for more vascular events with clopidogrel plus aspirin than with oral anticoagulation — randomized, stopped early for that superiority finding — and limited because bleeding is a subgroup interaction rather than one overall rate. Teach ACTIVE-W beside BAFTA when the question is anticoagulation versus antiplatelet therapy in atrial fibrillation. This is not a DOAC trial.",
+    "guidelines": [
+      {
+        "society": "ACC/AHA",
+        "document": "AF anticoagulation (teaching note)",
+        "note": "Historical randomized comparison of oral anticoagulation with clopidogrel plus aspirin. This card does not assign a recommendation class and does not choose a DOAC.",
+        "year": 2023
+      }
+    ],
+    "caveats": "Randomized: yes. Stopped early. Evidence quality: high for the primary vascular-event difference (relative risk 1.44; 1.18–1.76; P=0.0003) favoring oral anticoagulation. Do not quote a single major-bleeding percentage from this card. Not evidence for or against a specific DOAC.",
+    "practiceTakeaway": "Use ACTIVE-W to teach that oral anticoagulation at INR 2.0–3.0 prevented more strokes, non-CNS emboli, myocardial infarctions, and vascular deaths than clopidogrel plus aspirin in high-risk atrial fibrillation. It is not a dosing calculator."
+  },
+  {
+    "id": "bafta",
+    "acronym": "BAFTA",
+    "year": 2007,
+    "yearLabel": "2007",
+    "indication": "AF",
+    "status": "landmark",
+    "impact": 1,
+    "title": "Warfarin versus aspirin for stroke prevention in an elderly community population with atrial fibrillation",
+    "population": "973 patients aged 75 years or over with atrial fibrillation, recruited from primary care (mean age 81.5 years, SD 4.2). Mean follow-up 2.7 years (SD 1.2).",
+    "intervention": "Warfarin (target INR 2–3)",
+    "comparator": "Aspirin 75 mg per day",
+    "primaryResult": "Fatal or disabling stroke (ischaemic or haemorrhagic), intracranial haemorrhage, or clinically significant arterial embolism: 24 events on warfarin (21 strokes, two other intracranial haemorrhages, one systemic embolus) vs 48 on aspirin (44 strokes, one other intracranial haemorrhage, three systemic emboli). Yearly risk 1.8% vs 3.8%; relative risk 0.48, 95% CI 0.28–0.80, P=0.003. Absolute yearly risk reduction 2%, 95% CI 0.7–3.2.",
+    "safety": "Yearly risk of extracranial haemorrhage was 1.4% with warfarin versus 1.6% with aspirin (relative risk 0.87, 0.43–1.73; absolute risk reduction 0.2%, −0.7 to 1.2). The primary endpoint already includes haemorrhagic stroke and other intracranial haemorrhage.",
+    "takeaway": "In people aged 75 or older with atrial fibrillation, warfarin reduced the primary stroke, intracranial-haemorrhage, and arterial-embolism endpoint versus aspirin 75 mg, without a detected increase in extracranial haemorrhage.",
+    "cite": "Mant J, et al. Lancet. 2007;370:493-503.",
+    "doi": "10.1016/S0140-6736(07)61233-1",
+    "url": "https://doi.org/10.1016/S0140-6736(07)61233-1",
+    "pmid": "17693178",
+    "expectedResults": null,
+    "background": "Anticoagulation prevents more strokes than antiplatelet therapy in atrial fibrillation, but clinicians worried that the bleeding cost would erase that benefit in people over 75. BAFTA tested that question in primary care.",
+    "designNotes": "Randomized: yes. Intention-to-treat. Open treatment assignment is the usual reading of a warfarin-versus-aspirin primary-care trial; the abstract says randomly assigned and does not say double-blind. Warfarin target INR 2–3 versus aspirin 75 mg daily. ISRCTN89345269. The primary endpoint mixes ischaemic and haemorrhagic strokes with other intracranial haemorrhage.",
+    "strengths": "Elderly primary-care population (mean age 81.5 years) and a primary result that includes intracranial haemorrhage, so the warfarin benefit is not an ischaemic-only finding.",
+    "limitations": "Warfarin, not a DOAC. Aspirin 75 mg is a weak stroke-prevention comparator. Extracranial haemorrhage was similar, and that sentence is not a claim of no bleeding at all. This card does not set an INR for an individual patient.",
+    "journalClub": "Evidence quality: high for fewer primary events with warfarin than with aspirin in people 75 or older — randomized, with a published relative risk — and limited because the comparator is aspirin and the design is not a DOAC trial. Read BAFTA beside ACTIVE-W, then beside the later DOAC-versus-warfarin trials when the question moves from “anticoagulate or not” to “which oral anticoagulant.”",
+    "guidelines": [
+      {
+        "society": "ACC/AHA",
+        "document": "AF anticoagulation in older adults (teaching note)",
+        "note": "Historical warfarin-versus-aspirin trial in people aged 75 or older. This card does not assign a recommendation class and does not choose a DOAC.",
+        "year": 2023
+      }
+    ],
+    "caveats": "Randomized: yes. Evidence quality: high for the primary yearly risk of 1.8% versus 3.8% (relative risk 0.48; 95% CI 0.28–0.80). The primary count includes haemorrhagic strokes. Extracranial haemorrhage was 1.4% versus 1.6% per year. Not a DOAC trial.",
+    "practiceTakeaway": "Use BAFTA to teach that warfarin, compared with aspirin 75 mg, reduced fatal or disabling stroke, intracranial haemorrhage, and significant arterial embolism in people aged 75 or older with atrial fibrillation. Age alone was not the reason to choose aspirin. This is not a dosing calculator."
+  },
+  {
     "id": "engage-af",
     "acronym": "ENGAGE AF-TIMI 48",
     "year": 2013,
@@ -369,6 +441,42 @@ window.ANTICOAG_TRIALS = [
     "practiceTakeaway": "Use rivaroxaban for eligible intermediate/low-risk PE per guideline DOAC pathways—not as a substitute for reperfusion in high-risk PE."
   },
   {
+    "id": "home-pe",
+    "acronym": "HOME-PE",
+    "year": 2021,
+    "yearLabel": "2021",
+    "indication": "PE",
+    "status": "practice",
+    "impact": 2,
+    "title": "Triaging acute pulmonary embolism for home treatment by Hestia or simplified PESI",
+    "population": "1,975 normotensive patients with acute pulmonary embolism at 26 hospitals in France, Belgium, the Netherlands, and Switzerland",
+    "intervention": "Triage with the Hestia rule. Home treatment if the rule was negative and the physician in charge, considering the patient’s opinion, did not require hospitalization.",
+    "comparator": "Triage with the simplified Pulmonary Embolism Severity Index, with the same physician override",
+    "primaryResult": "Main outcomes were the 30-day composite of recurrent venous thromboembolism, major bleeding, or all-cause death (noninferiority margin 2.5% absolute risk difference) and discharge home within 24 hours. In the per-protocol population the composite occurred in 3.82% (34/891) with Hestia and 3.57% (32/896) with the simplified index (P=0.004 for noninferiority). In the intention-to-treat population, 38.4% (378/984) versus 36.6% (361/986) were treated at home (P=0.41 for superiority).",
+    "safety": "Among patients treated at home, the 30-day composite was 1.33% (5/375) with Hestia and 1.11% (4/359) with the simplified index. No recurrent or fatal pulmonary embolism occurred in either home-treatment arm. The abstract prints those home-treatment denominators, which are not identical to 378 and 361.",
+    "takeaway": "Hestia and the simplified Pulmonary Embolism Severity Index, each with physician override, had similar 30-day safety. With either tool, more than a third of patients were treated at home.",
+    "cite": "Roy PM, et al. Eur Heart J. 2021;42:3146-3157.",
+    "doi": "10.1093/eurheartj/ehab373",
+    "url": "https://doi.org/10.1093/eurheartj/ehab373",
+    "pmid": "34363386",
+    "expectedResults": null,
+    "background": "Selected patients with pulmonary embolism can be treated at home, but clinics have used different triage rules. HOME-PE compared the Hestia rule with the simplified Pulmonary Embolism Severity Index. It is not a trial of one anticoagulant versus another, and it is not a reperfusion trial.",
+    "designNotes": "Randomized: yes. Normotensive pulmonary embolism. A negative triage tool was not enough for home treatment: the physician could still admit the patient. Noninferiority margin for the 30-day composite was a 2.5% absolute risk difference. The noninferiority P value is reported for the per-protocol population. ClinicalTrials.gov NCT02811237.",
+    "strengths": "Pragmatic randomized comparison of two triage strategies, with the safety composite and the proportion treated at home both reported, and with physician judgment kept in the pathway.",
+    "limitations": "Not a drug trial. The abstract does not print the absolute risk difference, only the rates, the margin, and the noninferiority P value. Home treatment still required the physician’s agreement. Do not use these rates to choose a DOAC or to decide on thrombolysis.",
+    "journalClub": "Evidence quality: high for similar 30-day outcomes with the two triage strategies — randomized, noninferiority P=0.004 in the per-protocol analysis — and limited to normotensive patients with physician override. HOME-PE is not PEITHO and not HI-PEITHO.",
+    "guidelines": [
+      {
+        "society": "ESC",
+        "document": "Pulmonary embolism home treatment (teaching note)",
+        "note": "Compares Hestia with the simplified severity index for triage. This card does not assign a recommendation class and does not choose an anticoagulant.",
+        "year": 2019
+      }
+    ],
+    "caveats": "Randomized: yes. Evidence quality: high for noninferiority of the 30-day composite in the per-protocol population (3.82% vs 3.57%; P=0.004) against a 2.5% absolute margin. Home treatment was 38.4% vs 36.6% (P=0.41). The physician could override the rule.",
+    "practiceTakeaway": "Use HOME-PE to teach triage of normotensive pulmonary embolism for home treatment: Hestia and the simplified severity index were similar when the physician could still choose admission. It does not compare anticoagulants and it is not a reperfusion trial."
+  },
+  {
     "id": "amplify",
     "acronym": "AMPLIFY",
     "year": 2013,
@@ -449,6 +557,78 @@ window.ANTICOAG_TRIALS = [
     ],
     "caveats": "Not a single-drug start—needs ≥5 days heparin lead-in in the pivotal design.",
     "practiceTakeaway": "Edoxaban is appropriate after a heparin bridge for acute VTE when that workflow fits care."
+  },
+  {
+    "id": "cavent",
+    "acronym": "CaVenT",
+    "year": 2012,
+    "yearLabel": "2012",
+    "indication": "VTE",
+    "status": "practice",
+    "impact": 2,
+    "title": "Additional catheter-directed thrombolysis for acute iliofemoral deep-vein thrombosis",
+    "population": "209 patients aged 18–75 years with a first iliofemoral deep-vein thrombosis, enrolled within 21 days of symptom onset (108 conventional treatment, 101 additional catheter-directed thrombolysis). Clinical status at 24 months was available for 189 patients (99 control, 90 thrombolysis).",
+    "intervention": "Additional catheter-directed thrombolysis with alteplase",
+    "comparator": "Conventional anticoagulant treatment alone",
+    "primaryResult": "Two co-primary outcomes. Post-thrombotic syndrome (Villalta) at 24 months: 37 patients (41.1%; 95% CI 31.5–51.4) with additional thrombolysis vs 55 (55.6%; 95% CI 45.7–65.0) with conventional treatment (P=0.047). Absolute risk reduction 14.4% (95% CI 0.2–27.9); number needed to treat 7 (95% CI 4–502). Iliofemoral patency at 6 months: 58 (65.9%; 95% CI 55.5–75.0) vs 45 (47.4%; 95% CI 37.6–57.3) (P=0.012).",
+    "safety": "Twenty bleeding complications related to catheter-directed thrombolysis included three major and five clinically relevant bleeds. The abstract does not report a control-arm bleeding rate.",
+    "takeaway": "In first iliofemoral deep-vein thrombosis, additional catheter-directed thrombolysis reduced 24-month post-thrombotic syndrome and improved 6-month patency. The post-thrombotic-syndrome confidence interval reaches almost no difference, and thrombolysis caused bleeding.",
+    "cite": "Enden T, et al. Lancet. 2012;379:31-38.",
+    "doi": "10.1016/S0140-6736(11)61753-4",
+    "url": "https://doi.org/10.1016/S0140-6736(11)61753-4",
+    "pmid": "22172244",
+    "expectedResults": null,
+    "background": "Anticoagulation limits extension and recurrence of deep-vein thrombosis. It does not clear the clot. CaVenT asked whether adding catheter-directed alteplase in a first iliofemoral thrombosis reduces the post-thrombotic syndrome. ATTRACT later asked a related question in a broader proximal-thrombosis population.",
+    "designNotes": "Randomized: yes. Open-label. Randomisation was stratified for pelvic-vein involvement. Analyses were by intention to treat. Two co-primary outcomes: Villalta post-thrombotic syndrome at 24 months, and iliofemoral patency at 6 months. ClinicalTrials.gov NCT00251771. The 24-month percentages use patients with clinical status available (189 of 209).",
+    "strengths": "Both co-primary outcomes are reported, including the wide confidence interval around the 14.4% absolute reduction, so a small P value is not taught as a precise effect size.",
+    "limitations": "Open-label. The number-needed-to-treat confidence interval runs from 4 to 502. Bleeding is described for the thrombolysis arm without a printed control rate. Not the same population or intervention as ATTRACT. This card uses the 24-month Lancet report, not a later follow-up paper.",
+    "journalClub": "Evidence quality: moderate — randomized, with two co-primary results, but open-label and imprecise for the post-thrombotic syndrome (absolute risk reduction 14.4%; 95% CI 0.2–27.9). Teach CaVenT as iliofemoral, first-thrombosis, additional alteplase. Teach ATTRACT separately: pharmacomechanical thrombolysis did not reduce the primary post-thrombotic-syndrome outcome in a broader proximal deep-vein thrombosis trial.",
+    "guidelines": [
+      {
+        "society": "ASH",
+        "document": "Deep-vein thrombosis thrombolysis (teaching note)",
+        "note": "Iliofemoral catheter-directed thrombolysis trial with a positive but imprecise post-thrombotic-syndrome result. Not interchangeable with ATTRACT. This card does not assign a recommendation class.",
+        "year": 2020
+      }
+    ],
+    "caveats": "Randomized: yes. Open-label, not blinded. Evidence quality: the patency difference and the post-thrombotic-syndrome difference were both reported, and the syndrome result’s confidence interval nearly includes no difference. Three major bleeds were related to thrombolysis. Do not quote ATTRACT’s 47% versus 48% as a CaVenT result.",
+    "practiceTakeaway": "Use CaVenT to teach additional catheter-directed thrombolysis for selected first iliofemoral deep-vein thrombosis: less post-thrombotic syndrome at 24 months and better 6-month patency, with a wide confidence interval and procedure-related bleeding. It is not a prescription protocol, and it is not ATTRACT."
+  },
+  {
+    "id": "attract",
+    "acronym": "ATTRACT",
+    "year": 2017,
+    "yearLabel": "2017",
+    "indication": "VTE",
+    "status": "practice",
+    "impact": 1,
+    "title": "Pharmacomechanical catheter-directed thrombolysis for deep-vein thrombosis",
+    "population": "692 patients with acute proximal deep-vein thrombosis",
+    "intervention": "Anticoagulation plus pharmacomechanical catheter-directed thrombolysis (intrathrombus recombinant tissue plasminogen activator with aspiration or maceration, with or without stenting)",
+    "comparator": "Anticoagulation alone",
+    "primaryResult": "Post-thrombotic syndrome between 6 and 24 months: 47% with pharmacomechanical thrombolysis vs 48% with anticoagulation alone (risk ratio 0.96; 95% CI 0.82–1.11; P=0.56). Moderate-to-severe post-thrombotic syndrome was a separate finding, not the primary outcome: 18% vs 24% (risk ratio 0.73; 95% CI 0.54–0.98; P=0.04).",
+    "safety": "Major bleeding within 10 days: 1.7% vs 0.3% (P=0.049). Recurrent venous thromboembolism over 24 months: 12% vs 8% (P=0.09). Quality-of-life improvement from baseline to 24 months did not differ significantly. Villalta scores were lower in the thrombolysis group at 6, 12, 18, and 24 months (P<0.01 at each time point).",
+    "takeaway": "Adding pharmacomechanical catheter-directed thrombolysis to anticoagulation did not reduce the primary post-thrombotic-syndrome outcome and increased early major bleeding.",
+    "cite": "Vedantham S, et al. N Engl J Med. 2017;377:2240-2252.",
+    "doi": "10.1056/NEJMoa1615066",
+    "url": "https://doi.org/10.1056/NEJMoa1615066",
+    "pmid": "29211671",
+    "expectedResults": null,
+    "background": "The post-thrombotic syndrome is common after proximal deep-vein thrombosis treated with anticoagulation alone. ATTRACT tested whether rapidly removing thrombus with pharmacomechanical catheter-directed thrombolysis would prevent it.",
+    "designNotes": "Randomized: yes. Anticoagulation alone versus anticoagulation plus pharmacomechanical thrombolysis. Primary outcome: post-thrombotic syndrome between 6 and 24 months. ClinicalTrials.gov NCT00790335. The abstract does not use the word blinded for treatment assignment. CaVenT is an earlier, smaller, iliofemoral alteplase trial and is not this result.",
+    "strengths": "Large randomized test of the strategy clinicians were already using, with the primary syndrome outcome and early major bleeding reported together.",
+    "limitations": "A negative primary outcome. The moderate-to-severe syndrome difference is not the primary endpoint. More early major bleeding. Not a drug-versus-drug anticoagulation trial, and not evidence that anticoagulation can be skipped.",
+    "journalClub": "Evidence quality: high for what was tested — a randomized primary outcome that was not reduced (47% vs 48%; P=0.56) — with more major bleeding within 10 days. Do not let the moderate-to-severe subgroup replace the primary result. CaVenT’s iliofemoral finding is a different trial.",
+    "guidelines": [
+      {
+        "society": "ASH",
+        "document": "Deep-vein thrombosis thrombolysis (teaching note)",
+        "note": "Pharmacomechanical thrombolysis did not reduce the primary post-thrombotic-syndrome outcome in proximal deep-vein thrombosis. This card does not assign a recommendation class.",
+        "year": 2020
+      }
+    ],
+    "caveats": "Randomized: yes. Evidence quality: high for no significant primary difference (risk ratio 0.96; 95% CI 0.82–1.11; P=0.56) and for more major bleeding within 10 days (1.7% vs 0.3%; P=0.049). The 18% vs 24% moderate-to-severe finding is not the primary endpoint.",
+    "practiceTakeaway": "Use ATTRACT to teach that pharmacomechanical thrombolysis added to anticoagulation did not prevent the primary post-thrombotic-syndrome outcome and caused more early major bleeding. Keep CaVenT as the separate iliofemoral trial. This is not a procedure protocol."
   },
   {
     "id": "amplify-ext",
@@ -572,6 +752,78 @@ window.ANTICOAG_TRIALS = [
     ],
     "caveats": "API-CAT is a different population (cancer-associated VTE). This is not acute VTE start evidence. Enrollment already assumes extension is indicated. Non-inferiority of reduced vs full dose was not shown. The bleeding HR is the published adjusted estimate; hierarchical testing stopped before a formal superiority test of that secondary.",
     "practiceTakeaway": "When teaching extended VTE dosing in high-risk non-cancer patients, place RENOVE next to AMPLIFY-EXT / EINSTEIN-CHOICE and stress comparator differences. Couturaud et al.: 5-year recurrent VTE 2.2% reduced-dose vs 1.8% full-dose (adjusted HR 1.32; 95% CI 0.67–2.60; non-inferiority p=0.23) and major or CRNM bleeding 9.9% vs 15.2% (adjusted HR 0.61). Teach the published trade-off as a journal-club finding."
+  },
+  {
+    "id": "re-medy",
+    "acronym": "RE-MEDY",
+    "year": 2013,
+    "yearLabel": "2013",
+    "indication": "VTE",
+    "status": "practice",
+    "impact": 2,
+    "title": "Extended dabigatran versus warfarin after venous thromboembolism",
+    "population": "Patients with venous thromboembolism who had completed at least 3 months of anticoagulation. Active-control study: dabigatran 1,430 patients, warfarin 1,426 patients.",
+    "intervention": "Dabigatran 150 mg twice daily",
+    "comparator": "Warfarin (INR 2.0–3.0)",
+    "primaryResult": "Recurrent venous thromboembolism: 26 of 1,430 (1.8%) with dabigatran vs 18 of 1,426 (1.3%) with warfarin (hazard ratio 1.44; 95% CI 0.78–2.64; P=0.01 for noninferiority). The abstract reports that noninferiority P value and does not print the noninferiority margin.",
+    "safety": "Major bleeding: 13 patients (0.9%) with dabigatran vs 25 (1.8%) with warfarin (hazard ratio 0.52; 95% CI 0.27–1.02). Major or clinically relevant bleeding was less frequent with dabigatran (hazard ratio 0.54; 95% CI 0.41–0.71). Acute coronary syndromes: 13 (0.9%) vs 3 (0.2%) (P=0.02).",
+    "takeaway": "For extended treatment after venous thromboembolism, dabigatran 150 mg twice daily met the paper’s noninferiority test versus warfarin and had less major or clinically relevant bleeding, with more acute coronary syndromes.",
+    "cite": "Schulman S, et al. N Engl J Med. 2013;368:709-718. RE-MEDY is the warfarin comparison in this paper. RE-SONATE is the placebo comparison in the same paper.",
+    "doi": "10.1056/NEJMoa1113697",
+    "url": "https://doi.org/10.1056/NEJMoa1113697",
+    "pmid": "23425163",
+    "expectedResults": null,
+    "background": "After the acute phase of venous thromboembolism, extended anticoagulation can be continued with a vitamin K antagonist. RE-MEDY compared dabigatran with warfarin in people who had already finished at least 3 months of treatment. RE-SONATE, in the same paper, compared dabigatran with placebo.",
+    "designNotes": "Randomized: yes. Double-blind, from the paper (“two double-blind, randomized trials”) and from ClinicalTrials.gov NCT00329238 (dabigatran 150 mg twice daily plus warfarin placebo, versus warfarin INR 2.0–3.0 plus dabigatran placebo). The registry lists the primary composite of recurrent VTE or VTE-related death at 18 months and at 36 months. The published recurrent-VTE counts above are the NEJM results; the abstract does not label them as the 18-month or the 36-month row.",
+    "strengths": "Double-blind active-control comparison with separate reporting of recurrent VTE, major bleeding, major or clinically relevant bleeding, and acute coronary syndromes.",
+    "limitations": "The noninferiority margin is not printed in the abstract, so the P=0.01 result should be quoted with the hazard ratio and confidence interval, not as a margin-free claim. More acute coronary syndromes occurred with dabigatran. This is not the placebo trial (see RE-SONATE) and not an acute-treatment trial (see RE-COVER).",
+    "journalClub": "Evidence quality: high for the published active-control comparison — double-blind and randomized — and limited by the unprinted noninferiority margin and the acute-coronary-syndrome imbalance. Keep RE-MEDY (versus warfarin) separate from RE-SONATE (versus placebo). Same paper, different question.",
+    "guidelines": [
+      {
+        "society": "CHEST",
+        "document": "VTE extended treatment (teaching note)",
+        "note": "Active-control extended-treatment comparison of dabigatran with warfarin. Read RE-SONATE for the placebo comparison. This card does not assign a recommendation class.",
+        "year": 2021
+      }
+    ],
+    "caveats": "Randomized: yes. Double-blind. Evidence quality: high for recurrent VTE 1.8% vs 1.3% (hazard ratio 1.44; 95% CI 0.78–2.64; P=0.01 for noninferiority) and for less major or clinically relevant bleeding (hazard ratio 0.54). Acute coronary syndromes were more frequent with dabigatran (0.9% vs 0.2%). Do not merge these rates with RE-SONATE.",
+    "practiceTakeaway": "Use RE-MEDY when the teaching question is extended dabigatran versus continued warfarin. Use RE-SONATE when the comparator is placebo. This card is not a dosing calculator."
+  },
+  {
+    "id": "re-sonate",
+    "acronym": "RE-SONATE",
+    "year": 2013,
+    "yearLabel": "2013",
+    "indication": "VTE",
+    "status": "practice",
+    "impact": 2,
+    "title": "Extended dabigatran versus placebo after venous thromboembolism",
+    "population": "Patients with venous thromboembolism who had completed at least 3 months of anticoagulation. Placebo-control study: dabigatran 681 patients, placebo 662 patients.",
+    "intervention": "Dabigatran 150 mg twice daily",
+    "comparator": "Placebo",
+    "primaryResult": "Recurrent venous thromboembolism: 3 of 681 (0.4%) with dabigatran vs 37 of 662 (5.6%) with placebo (hazard ratio 0.08; 95% CI 0.02–0.25; P<0.001). ClinicalTrials.gov NCT00558259 lists the primary window as 6 months. The NEJM abstract reports these counts for the placebo-control study and does not restate “6 months” in the results sentence.",
+    "safety": "Major bleeding: 2 patients (0.3%) with dabigatran and 0 with placebo. Major or clinically relevant bleeding: 36 (5.3%) vs 12 (1.8%) (hazard ratio 2.92; 95% CI 1.52–5.60). Acute coronary syndromes: 1 patient in each group.",
+    "takeaway": "Against placebo, extended dabigatran sharply reduced recurrent venous thromboembolism and increased major or clinically relevant bleeding. That is a different result from RE-MEDY versus warfarin.",
+    "cite": "Schulman S, et al. N Engl J Med. 2013;368:709-718. RE-SONATE is the placebo comparison in this paper. RE-MEDY is the warfarin comparison in the same paper.",
+    "doi": "10.1056/NEJMoa1113697",
+    "url": "https://doi.org/10.1056/NEJMoa1113697",
+    "pmid": "23425163",
+    "expectedResults": null,
+    "background": "Some people finish a finite course of anticoagulation for venous thromboembolism and then stop. RE-SONATE asked whether continuing dabigatran, rather than placebo, prevents recurrence. The warfarin comparison is RE-MEDY, published in the same paper.",
+    "designNotes": "Randomized: yes. Double-blind. Dabigatran 150 mg twice daily versus matching placebo. ClinicalTrials.gov NCT00558259. The registry primary outcome is centrally confirmed symptomatic recurrent VTE, including unexplained death, during a 6-month intended treatment period. Do not copy RE-MEDY’s warfarin rates onto this card.",
+    "strengths": "Placebo-controlled estimate of recurrence reduction, with bleeding reported separately so the efficacy result is not mistaken for a net-benefit claim.",
+    "limitations": "More major or clinically relevant bleeding than placebo. Major bleeding was 2 versus 0, so that count is sparse. Not a comparison with warfarin, aspirin, or a reduced-dose DOAC strategy.",
+    "journalClub": "Evidence quality: high for fewer recurrences than placebo — double-blind, with a very low hazard ratio — and the bleeding increase belongs in the same sentence. Teach RE-SONATE next to AMPLIFY-EXT and EINSTEIN-CHOICE as placebo or aspirin extension questions, and RE-MEDY as the warfarin extension question.",
+    "guidelines": [
+      {
+        "society": "CHEST",
+        "document": "VTE extended treatment (teaching note)",
+        "note": "Placebo-controlled extended dabigatran trial. Keep it separate from RE-MEDY. This card does not assign a recommendation class.",
+        "year": 2021
+      }
+    ],
+    "caveats": "Randomized: yes. Double-blind. Evidence quality: high for recurrent VTE 0.4% vs 5.6% (hazard ratio 0.08; 95% CI 0.02–0.25) and for more major or clinically relevant bleeding (hazard ratio 2.92; 95% CI 1.52–5.60). Not the warfarin comparison.",
+    "practiceTakeaway": "Use RE-SONATE to teach the recurrence-versus-bleeding tradeoff of extended dabigatran against placebo. Use RE-MEDY when the alternative is warfarin. This card is not a dosing calculator."
   },
   {
     "id": "appraise-2",
@@ -1050,6 +1302,42 @@ window.ANTICOAG_TRIALS = [
     "practiceTakeaway": "In atrial fibrillation with stable coronary disease (revascularization more than 1 year earlier, or disease not requiring revascularization), rivaroxaban monotherapy was safer than continuing rivaroxaban plus one antiplatelet. This is not a rule for the early period after PCI."
   },
   {
+    "id": "epic-cad",
+    "acronym": "EPIC-CAD",
+    "year": 2024,
+    "yearLabel": "2024",
+    "indication": "AF+PCI",
+    "status": "recent",
+    "impact": 1,
+    "title": "Edoxaban monotherapy versus edoxaban plus an antiplatelet in atrial fibrillation and stable coronary disease",
+    "population": "Patients with atrial fibrillation and stable coronary artery disease (prior revascularization or medically managed disease) at 18 sites in South Korea. Edoxaban monotherapy 524; dual antithrombotic therapy 516. Mean age 72.1 years; 22.9% women; mean CHA2DS2-VASc 4.3.",
+    "intervention": "Edoxaban monotherapy. The NEJM abstract does not print the milligram dose. ClinicalTrials.gov NCT03718559 describes edoxaban 60 mg once daily, reduced to 30 mg once daily if creatinine clearance is 15 to 50 mL/min or weight is 60 kg or less.",
+    "comparator": "Edoxaban plus a single antiplatelet agent. The registry says the antiplatelet type was investigator-chosen, with aspirin 100 mg daily or clopidogrel 75 mg daily recommended.",
+    "primaryResult": "At 12 months, the composite of death from any cause, myocardial infarction, stroke, systemic embolism, unplanned urgent revascularization, or major bleeding or clinically relevant nonmajor bleeding: 34 patients (Kaplan–Meier estimate 6.8%) with edoxaban monotherapy vs 79 (16.2%) with dual therapy (hazard ratio 0.44; 95% CI 0.30–0.65; P<0.001).",
+    "safety": "Major bleeding or clinically relevant nonmajor bleeding: 23 (Kaplan–Meier estimate 4.7%) vs 70 (14.2%) (hazard ratio 0.34; 95% CI 0.22–0.53). The abstract says the cumulative incidence of major ischemic events appeared similar and does not print those ischemic rates.",
+    "takeaway": "In atrial fibrillation with stable coronary disease, edoxaban alone lowered a 12-month composite that includes bleeding, compared with edoxaban plus one antiplatelet. The abstract does not show a separate ischemic-event difference.",
+    "cite": "Cho MS, et al. N Engl J Med. 2024;391:2075-2086.",
+    "doi": "10.1056/NEJMoa2407362",
+    "url": "https://doi.org/10.1056/NEJMoa2407362",
+    "pmid": "39225258",
+    "expectedResults": null,
+    "background": "People with atrial fibrillation and stable coronary disease are often left on an anticoagulant plus an antiplatelet. AFIRE tested rivaroxaban monotherapy. EPIC-CAD tested edoxaban monotherapy. Neither trial is the early period after stent placement.",
+    "designNotes": "Randomized: yes. Multicenter, open-label, adjudicator-masked. Stable coronary disease means previously revascularized or medically managed disease. The primary composite includes major or clinically relevant nonmajor bleeding, so it is not a pure ischemic end point. ClinicalTrials.gov NCT03718559. Dose wording on this card that is absent from the NEJM abstract is labeled as registry text.",
+    "strengths": "Randomized comparison with masked adjudication, a large bleeding difference, and an explicit statement that ischemic events appeared similar rather than an invented ischemic hazard ratio.",
+    "limitations": "Open-label. South Korean sites. The primary win is driven by bleeding inside the composite. Ischemic event rates are not printed in the abstract. Not evidence for dropping an antiplatelet in the early months after PCI. AFIRE is the rivaroxaban trial, not this one.",
+    "journalClub": "Evidence quality: high for a lower primary composite with edoxaban monotherapy — randomized, adjudicator-masked — and the composite includes bleeding (hazard ratio 0.34 for major or clinically relevant nonmajor bleeding). Do not teach an ischemic benefit the abstract does not quantify. Place EPIC-CAD next to AFIRE, and away from AUGUSTUS-era early PCI trials.",
+    "guidelines": [
+      {
+        "society": "ESC",
+        "document": "AF with stable coronary disease (teaching note)",
+        "note": "Edoxaban monotherapy versus edoxaban plus one antiplatelet in stable disease. This card does not assign a recommendation class and is not an early post-PCI trial.",
+        "year": 2024
+      }
+    ],
+    "caveats": "Randomized: yes. Open-label, adjudicator-masked. Evidence quality: high for the primary composite (6.8% vs 16.2%; hazard ratio 0.44; 95% CI 0.30–0.65) and for less bleeding (hazard ratio 0.34). The abstract does not print major-ischemic-event rates. Not the early post-stent window.",
+    "practiceTakeaway": "Use EPIC-CAD, beside AFIRE, to teach edoxaban monotherapy versus edoxaban plus one antiplatelet in stable coronary disease with atrial fibrillation. The reported gain is a composite that includes bleeding. Do not apply it to the early period after PCI, and do not use it as a dosing calculator."
+  },
+  {
     "id": "clot",
     "acronym": "CLOT",
     "year": 2003,
@@ -1291,6 +1579,42 @@ window.ANTICOAG_TRIALS = [
     ],
     "caveats": "Still individualize for GI cancer bleeding risk and drug–drug interactions with cancer therapy.",
     "practiceTakeaway": "Prefer apixaban over indefinite LMWH for many cancer VTE patients who can take oral therapy safely."
+  },
+  {
+    "id": "canvas",
+    "acronym": "CANVAS",
+    "year": 2023,
+    "yearLabel": "2023",
+    "indication": "cancer VTE",
+    "status": "recent",
+    "impact": 1,
+    "title": "DOAC versus low-molecular-weight heparin for recurrent VTE in cancer",
+    "population": "671 adults with cancer (any invasive solid tumor, lymphoma, multiple myeloma, or chronic lymphocytic leukemia) and a new clinical or radiologic VTE, randomized at 67 U.S. oncology practices (DOAC 335, LMWH 336). Median age 64 years; 353 women (55%). 638 (95%) completed the trial.",
+    "intervention": "Any DOAC chosen by the physician and patient. Physicians selected the dose. At least one dose was received by 330 participants.",
+    "comparator": "Any low-molecular-weight heparin, or fondaparinux, chosen by the physician and patient. Physicians selected the dose. At least one dose was received by 308 participants.",
+    "primaryResult": "Recurrent VTE at 6 months, in participants who received at least one dose: 6.1% with a DOAC vs 8.8% with low-molecular-weight heparin (difference −2.7%; 1-sided 95% CI −100% to 0.7%). Noninferiority required the upper limit of that 1-sided interval to be less than 3%. The criterion was met.",
+    "safety": "Of six prespecified secondary outcomes, none were statistically significant. Major bleeding: 5.2% vs 5.6% (difference −0.4%; 1-sided 95% CI −100% to 2.5%). The major-bleeding noninferiority margin was 2.5%, and the abstract says this comparison did not meet noninferiority. Severe adverse events: 33.8% vs 35.1%. The most common serious adverse events were anemia and death.",
+    "takeaway": "In this unblinded U.S. oncology trial, a physician-selected DOAC was noninferior to low-molecular-weight heparin for 6-month recurrent VTE. Major-bleeding noninferiority was not met.",
+    "cite": "Schrag D, et al. JAMA. 2023;329:1924-1933.",
+    "doi": "10.1001/jama.2023.7843",
+    "url": "https://doi.org/10.1001/jama.2023.7843",
+    "pmid": "37266947",
+    "expectedResults": null,
+    "background": "Cancer-associated VTE has been treated with low-molecular-weight heparin since CLOT. Later trials compared a named DOAC with dalteparin. CANVAS let the clinician choose which DOAC and which injectable anticoagulant.",
+    "designNotes": "Randomized: yes. Unblinded noninferiority trial. The primary analysis is the randomized cohort that received at least one dose, not all 671 randomized participants. ClinicalTrials.gov NCT02744092 also describes low-molecular-weight heparin with or without a transition to warfarin, and a preference cohort. The rates on this card are the randomized comparison in the JAMA paper (any DOAC versus any low-molecular-weight heparin or fondaparinux). This is not the canagliflozin cardiovascular trial that shares the CANVAS name.",
+    "strengths": "Pragmatic randomized comparison across real U.S. oncology practices, with a prespecified noninferiority margin and a separate major-bleeding result.",
+    "limitations": "Unblinded. Drug and dose were chosen by clinicians, so this is not evidence for one named DOAC or one named dose. Major-bleeding noninferiority was not met. The primary percentages are among people who received at least one dose.",
+    "journalClub": "Evidence quality: moderate to high for noninferior recurrent VTE — randomized, unblinded, margin met (upper 1-sided bound 0.7%, under 3%) — and the major-bleeding noninferiority miss belongs in the same sentence. Teach CANVAS beside Hokusai VTE Cancer, SELECT-D, and Caravaggio, which name a single DOAC and dalteparin.",
+    "guidelines": [
+      {
+        "society": "ASH",
+        "document": "Cancer-associated VTE (teaching note)",
+        "note": "Pragmatic DOAC-versus-injectable comparison. This card does not assign a recommendation class and does not name a preferred DOAC dose.",
+        "year": 2021
+      }
+    ],
+    "caveats": "Randomized: yes. Unblinded. Evidence quality: the recurrent-VTE noninferiority criterion was met (6.1% vs 8.8%; 1-sided upper bound 0.7%). Major bleeding did not meet its 2.5% noninferiority margin (1-sided upper bound 2.5%). Not a named-drug trial.",
+    "practiceTakeaway": "Use CANVAS to teach that a clinician-selected DOAC was noninferior to low-molecular-weight heparin for 6-month recurrent VTE in cancer, and that major-bleeding noninferiority was not shown. It is not a dosing calculator and it is not the diabetes drug trial of the same acronym."
   },
   {
     "id": "api-cat",
@@ -1593,6 +1917,42 @@ window.ANTICOAG_TRIALS = [
     "practiceTakeaway": "ESUS ≠ automatic DOAC—wait for AF or another indication."
   },
   {
+    "id": "arcadia",
+    "acronym": "ARCADIA",
+    "year": 2024,
+    "yearLabel": "2024",
+    "indication": "ESUS",
+    "status": "recent",
+    "impact": 1,
+    "title": "Apixaban after cryptogenic stroke with atrial cardiopathy",
+    "population": "1,015 participants with cryptogenic stroke and atrial cardiopathy, and no atrial fibrillation at randomization (target 1,100). Mean age 68.0 years (SD 11.0); 54.3% women. Mean follow-up 1.8 years. 185 sites in NIH StrokeNet and the Canadian Stroke Consortium.",
+    "intervention": "Apixaban 5 mg or 2.5 mg twice daily (n=507)",
+    "comparator": "Aspirin 81 mg once daily (n=508)",
+    "primaryResult": "Stopped for futility at a planned interim analysis. Recurrent stroke: 40 patients with apixaban (annualized rate 4.4%) and 40 with aspirin (annualized rate 4.4%) (hazard ratio 1.00; 95% CI 0.64–1.55). Participants diagnosed with atrial fibrillation after randomization stayed in the group to which they were randomized.",
+    "safety": "Symptomatic intracranial hemorrhage: 0 with apixaban and 7 with aspirin (annualized rate 1.1%). Other major hemorrhage: 5 (annualized rate 0.7%) vs 5 (annualized rate 0.8%) (hazard ratio 1.02; 95% CI 0.29–3.52).",
+    "takeaway": "In cryptogenic stroke with atrial cardiopathy and no atrial fibrillation, apixaban did not reduce recurrent stroke compared with aspirin 81 mg. The trial stopped for futility.",
+    "cite": "Kamel H, et al. JAMA. 2024;331:573-581.",
+    "doi": "10.1001/jama.2023.27188",
+    "url": "https://doi.org/10.1001/jama.2023.27188",
+    "pmid": "38324415",
+    "expectedResults": null,
+    "background": "Atrial cardiopathy has been proposed as a reason to anticoagulate after cryptogenic stroke even when atrial fibrillation has not been found. NAVIGATE ESUS and RE-SPECT ESUS did not support a DOAC for unselected embolic stroke of undetermined source. ARCADIA restricted the question to people with atrial cardiopathy.",
+    "designNotes": "Randomized: yes. Double-blind phase 3 trial. Atrial cardiopathy was P-wave terminal force greater than 5,000 μV × ms in lead V1, serum NT-proBNP greater than 250 pg/mL, or left atrial diameter index of 3 cm/m2 or greater. No atrial fibrillation at randomization. ClinicalTrials.gov NCT03192215. Stopped for futility. The abstract does not print which participants received 2.5 mg rather than 5 mg.",
+    "strengths": "Double-blind randomized test of the atrial-cardiopathy hypothesis, stopped on a prespecified futility look, with stroke rates that were the same (4.4% per year each).",
+    "limitations": "Stopped early for futility, so a small true difference is not excluded (95% CI 0.64–1.55). Not a trial of documented atrial fibrillation. Not NAVIGATE ESUS or RE-SPECT ESUS, which enrolled broader embolic-stroke populations.",
+    "journalClub": "Evidence quality: high for no stroke reduction in this population — double-blind, futility stop, hazard ratio 1.00. The intracranial-hemorrhage count was 0 versus 7 and is a safety result, not evidence that apixaban prevents hemorrhage. Teach ARCADIA beside NAVIGATE ESUS and RE-SPECT ESUS: a DOAC is not supported for cryptogenic stroke without atrial fibrillation, including when atrial cardiopathy markers are present.",
+    "guidelines": [
+      {
+        "society": "AHA/ASA",
+        "document": "Cryptogenic stroke antithrombotic therapy (teaching note)",
+        "note": "Apixaban versus aspirin when atrial cardiopathy is present and atrial fibrillation is not. This card does not assign a recommendation class.",
+        "year": 2024
+      }
+    ],
+    "caveats": "Randomized: yes. Double-blind. Stopped for futility. Evidence quality: high for recurrent stroke 4.4% vs 4.4% per year (hazard ratio 1.00; 95% CI 0.64–1.55). Symptomatic intracranial hemorrhage was 0 vs 7. Not a DOAC indication for cryptogenic stroke.",
+    "practiceTakeaway": "Use ARCADIA to teach that apixaban did not beat aspirin 81 mg for recurrent stroke after cryptogenic stroke with atrial cardiopathy and no atrial fibrillation. Find atrial fibrillation, or another anticoagulation indication, before treating this as a DOAC population."
+  },
+  {
     "id": "protect-af",
     "acronym": "PROTECT-AF",
     "year": 2009,
@@ -1837,6 +2197,42 @@ window.ANTICOAG_TRIALS = [
     "practiceTakeaway": "Discuss modern LAAO as a credible alternative to long-term DOAC in selected anticoagulation-eligible AF—with ischemic-stroke nuance."
   },
   {
+    "id": "amulet-ide",
+    "acronym": "AMULET IDE",
+    "year": 2021,
+    "yearLabel": "2021",
+    "indication": "LAAO",
+    "status": "practice",
+    "impact": 2,
+    "title": "Amplatzer Amulet left atrial appendage occluder versus Watchman",
+    "population": "1,878 patients with nonvalvular atrial fibrillation at increased stroke risk, randomly assigned to the Amulet occluder or the Watchman device",
+    "intervention": "Percutaneous Amulet left atrial appendage occluder",
+    "comparator": "Watchman device",
+    "primaryResult": "Three primary end points. Safety at 12 months (procedure-related complications, all-cause death, or major bleeding): Amulet 14.5% vs Watchman 14.7% (difference −0.14; 95% CI −3.42 to 3.13; P<0.001 for noninferiority). Effectiveness at 18 months (ischemic stroke or systemic embolism): 2.8% vs 2.8% (difference 0.00; 95% CI −1.55 to 1.55; P<0.001 for noninferiority). Left atrial appendage occlusion at 45 days: 98.9% vs 96.8% (difference 2.03; 95% CI 0.41–3.66; P<0.001 for noninferiority; P=0.003 for superiority).",
+    "safety": "With the 12-month safety result, major bleeding was 10.6% vs 10.0% and all-cause death was 3.9% vs 5.1%. Procedure-related complications were higher with Amulet (4.5% vs 2.5%), largely from pericardial effusion and device embolization. The composite of stroke, systemic embolism, or cardiovascular/unexplained death at 18 months was 5.6% vs 7.7% (difference −2.12; 95% CI −4.45 to 0.21; P<0.001 for noninferiority). Major bleeding in the superiority comparison was 11.6% vs 12.3% (difference −0.71; 95% CI −3.72 to 2.31; P=0.32). The methods describe that major-bleeding secondary end point at 18 months.",
+    "takeaway": "Amulet was noninferior to Watchman for the 12-month safety composite and the 18-month ischemic-stroke or systemic-embolism end point, and superior for appendage occlusion at 45 days. Procedure-related complications were higher with Amulet.",
+    "cite": "Lakkireddy D, et al. Circulation. 2021;144:1543-1552.",
+    "doi": "10.1161/CIRCULATIONAHA.121.057063",
+    "url": "https://doi.org/10.1161/CIRCULATIONAHA.121.057063",
+    "pmid": "34459659",
+    "expectedResults": null,
+    "background": "Left atrial appendage closure is an alternative to long-term oral anticoagulation in selected nonvalvular atrial fibrillation. AMULET IDE compared two devices, Amulet and Watchman. It is not a trial of closure versus a DOAC.",
+    "designNotes": "Randomized: yes, 1:1. Primary safety, primary effectiveness, and 45-day occlusion were all primary end points. The abstract reports noninferiority P values and does not print the noninferiority margins. ClinicalTrials.gov NCT02879448. PROTECT-AF and PREVAIL compared Watchman with warfarin. PRAGUE-17 and CHAMPION-AF compare closure with a DOAC. Those are different questions.",
+    "strengths": "Randomized device comparison with separate safety, ischemic, and occlusion end points, so a closure difference is not taught as a stroke difference.",
+    "limitations": "Noninferiority margins are not printed in the abstract. Procedure-related complications were higher with Amulet. The 18-month ischemic end point was identical (2.8% vs 2.8%), which supports noninferiority rather than a stroke benefit. Not evidence about DOAC therapy.",
+    "journalClub": "Evidence quality: high for device-versus-device noninferiority on the stated safety and effectiveness end points, and for more complete 45-day occlusion with Amulet. Say the extra procedure-related complications in the same breath. Do not cite AMULET IDE as closure versus anticoagulation.",
+    "guidelines": [
+      {
+        "society": "ACC/AHA",
+        "document": "Left atrial appendage occlusion devices (teaching note)",
+        "note": "Amulet versus Watchman. This card does not assign a recommendation class and does not compare either device with a DOAC.",
+        "year": 2023
+      }
+    ],
+    "caveats": "Randomized: yes. Evidence quality: high for noninferior 12-month safety (14.5% vs 14.7%) and 18-month ischemic effectiveness (2.8% vs 2.8%), and for superior 45-day occlusion (98.9% vs 96.8%; P=0.003). Procedure-related complications were 4.5% vs 2.5%. Not a DOAC trial.",
+    "practiceTakeaway": "Use AMULET IDE to teach Amulet versus Watchman: similar safety and ischemic composites, more complete early occlusion, and more procedure-related complications with Amulet. For closure versus a DOAC, use the DOAC-comparator cards."
+  },
+  {
     "id": "galileo",
     "acronym": "GALILEO",
     "year": 2019,
@@ -1911,8 +2307,44 @@ window.ANTICOAG_TRIALS = [
         "year": 2021
       }
     ],
-    "caveats": "Restricted to no long-term oral-anticoagulation indication (doi:10.1056/NEJMoa2017815). Patients who already had an indication for oral anticoagulation are reported separately (doi:10.1056/NEJMoa1915152). The two results stay separate.",
-    "practiceTakeaway": "After TAVI without a long-term oral-anticoagulation indication, this trial favors aspirin alone over 3 months of aspirin plus clopidogrel. For patients already on oral anticoagulation, open the separate cohort (doi:10.1056/NEJMoa1915152) instead of using these rates."
+    "caveats": "Restricted to no long-term oral-anticoagulation indication (doi:10.1056/NEJMoa2017815). Patients who already had an indication for oral anticoagulation are the separate POPular TAVI OAC card (doi:10.1056/NEJMoa1915152). The two results stay separate.",
+    "practiceTakeaway": "After TAVI without a long-term oral-anticoagulation indication, this trial favors aspirin alone over 3 months of aspirin plus clopidogrel. For patients already on oral anticoagulation, open the POPular TAVI OAC card (doi:10.1056/NEJMoa1915152) instead of using these rates."
+  },
+  {
+    "id": "popular-tavi-oac",
+    "acronym": "POPular TAVI OAC",
+    "year": 2020,
+    "yearLabel": "2020",
+    "indication": "valvular/TAVI",
+    "status": "practice",
+    "impact": 2,
+    "title": "Oral anticoagulation with or without clopidogrel after TAVI",
+    "population": "Patients undergoing TAVI who were receiving oral anticoagulation for appropriate indications. Oral anticoagulation alone 157; oral anticoagulation plus clopidogrel 156. The abstract does not say what fraction of that anticoagulation was a DOAC versus a vitamin K antagonist.",
+    "intervention": "Oral anticoagulation alone. Clopidogrel was not added.",
+    "comparator": "Oral anticoagulation plus clopidogrel for 3 months",
+    "primaryResult": "Two primary outcomes over 12 months. All bleeding: 34 of 157 (21.7%) with oral anticoagulation alone vs 54 of 156 (34.6%) with oral anticoagulation plus clopidogrel (risk ratio 0.63; 95% CI 0.43–0.90; P=0.01). Non-procedure-related bleeding: 34 (21.7%) vs 53 (34.0%) (risk ratio 0.64; 95% CI 0.44–0.92; P=0.02). Procedure-related bleeding was defined as BARC type 4 severe bleeding, so most access-site bleeding counted as non-procedure-related.",
+    "safety": "Most bleeding was in the first month, was minor, and was at the TAVI access site. Secondary composite of cardiovascular death, non-procedure-related bleeding, stroke, or myocardial infarction: 49 (31.2%) vs 71 (45.5%) (difference −14.3 percentage points; 95% CI for noninferiority −25.0 to −3.6; risk ratio 0.69; 95% CI for superiority 0.51–0.92). Secondary composite of cardiovascular death, ischemic stroke, or myocardial infarction: 21 (13.4%) vs 27 (17.3%) (difference −3.9 percentage points; 95% CI for noninferiority −11.9 to 4.0; risk ratio 0.77; 95% CI for superiority 0.46–1.31). The noninferiority margin for both secondary composites was 7.5 percentage points.",
+    "takeaway": "In patients already on oral anticoagulation for TAVI, anticoagulation alone caused less bleeding over 12 months than anticoagulation plus 3 months of clopidogrel. This is not the aspirin-with-or-without-clopidogrel POPular TAVI cohort.",
+    "cite": "Nijenhuis VJ, et al. N Engl J Med. 2020;382:1696-1707.",
+    "doi": "10.1056/NEJMoa1915152",
+    "url": "https://doi.org/10.1056/NEJMoa1915152",
+    "pmid": "32223116",
+    "expectedResults": null,
+    "background": "POPular TAVI has two cohorts published as two papers. This card is the cohort already receiving oral anticoagulation. The cohort without a long-term oral-anticoagulation indication, aspirin alone versus aspirin plus clopidogrel, is the other card (doi:10.1056/NEJMoa2017815).",
+    "designNotes": "Randomized: yes, 1:1, assigned before TAVI. Two bleeding primary outcomes. The ischemic composite is secondary, tested for noninferiority with a 7.5 percentage-point margin and for superiority. EU Clinical Trials Register 2013-003125-28. ClinicalTrials.gov NCT02247128. The abstract does not break results out by DOAC versus vitamin K antagonist.",
+    "strengths": "Randomized bleeding comparison in the anticoagulation cohort, with the ischemic composite reported separately so less bleeding is not taught as fewer strokes.",
+    "limitations": "Bleeding includes access-site events, and most of it was minor and early. The superiority confidence interval for cardiovascular death, ischemic stroke, or myocardial infarction crosses 1 (0.46–1.31). The upper bound of the noninferiority confidence interval for that difference is 4.0 percentage points, which is under the stated 7.5-point margin; the conclusions emphasize bleeding rather than that secondary test. Not the no-anticoagulation cohort. Not ENVISAGE-TAVI AF, which compared edoxaban with a vitamin K antagonist.",
+    "journalClub": "Evidence quality: high for less bleeding with oral anticoagulation alone — randomized, two primary bleeding outcomes, risk ratios 0.63 and 0.64. The ischemic secondary composite was 13.4% vs 17.3% and its superiority interval includes 1. Say “POPular TAVI OAC” so this paper is not merged with Brouwer et al., the aspirin cohort.",
+    "guidelines": [
+      {
+        "society": "ESC",
+        "document": "TAVI antithrombotic therapy (teaching note)",
+        "note": "Oral anticoagulation with or without clopidogrel when an anticoagulation indication already exists. The aspirin cohort is a different card. This card does not assign a recommendation class.",
+        "year": 2021
+      }
+    ],
+    "caveats": "Randomized: yes. Evidence quality: high for the bleeding primaries (21.7% vs 34.6% for all bleeding; risk ratio 0.63; 95% CI 0.43–0.90). Most bleeding was minor access-site bleeding. Do not use the aspirin-cohort rates here. Do not call this ENVISAGE-TAVI AF.",
+    "practiceTakeaway": "Use this card when the patient undergoing TAVI is already on oral anticoagulation: anticoagulation alone had less 12-month bleeding than anticoagulation plus 3 months of clopidogrel. Use the other POPular TAVI card when there is no long-term anticoagulation indication. This is not a dosing calculator."
   },
   {
     "id": "envisage-tavi-af",
@@ -2072,6 +2504,114 @@ window.ANTICOAG_TRIALS = [
     ],
     "caveats": "Rheumatic population—do not extrapolate to bioprosthetic NVAF (RIVER).",
     "practiceTakeaway": "Never swap VKA for rivaroxaban in rheumatic AF/mitral stenosis."
+  },
+  {
+    "id": "re-align",
+    "acronym": "RE-ALIGN",
+    "year": 2013,
+    "yearLabel": "2013",
+    "indication": "valvular/TAVI",
+    "status": "landmark",
+    "impact": 1,
+    "title": "Dabigatran versus warfarin in patients with mechanical heart valves",
+    "population": "Two populations with aortic or mitral mechanical valve replacement: surgery within the past 7 days, or replacement at least 3 months earlier. The trial stopped after 252 patients were enrolled. Randomization to dabigatran or warfarin was 2:1.",
+    "intervention": "Dabigatran. The starting dose (150, 220, or 300 mg twice daily) was based on kidney function and was adjusted to a trough plasma level of at least 50 ng per milliliter.",
+    "comparator": "Warfarin, adjusted to INR 2 to 3 or 2.5 to 3.5 according to thromboembolic risk",
+    "primaryResult": "The primary end point was the trough plasma level of dabigatran, not a clinical event. The trial was stopped early for excess thromboembolic and bleeding events with dabigatran. In the as-treated analysis, dose adjustment or discontinuation of dabigatran was required in 52 of 162 patients (32%).",
+    "safety": "Ischemic or unspecified stroke: 9 patients (5%) with dabigatran and no patients with warfarin. Major bleeding: 7 (4%) vs 2 (2%). All patients with major bleeding had pericardial bleeding.",
+    "takeaway": "Dabigatran was stopped early in mechanical valve patients because of more thromboembolic and bleeding events than warfarin. The primary end point was a drug level. This is a reason not to substitute a DOAC for warfarin in a mechanical valve.",
+    "cite": "Eikelboom JW, et al. N Engl J Med. 2013;369:1206-1214.",
+    "doi": "10.1056/NEJMoa1300615",
+    "url": "https://doi.org/10.1056/NEJMoa1300615",
+    "pmid": "23991661",
+    "expectedResults": null,
+    "background": "Dabigatran had matched or beaten warfarin in atrial fibrillation. Mechanical valves were excluded from that program. RE-ALIGN was the dose-validation study that tested dabigatran in aortic or mitral mechanical valves. PROACT and PROACT Xa later studied the On-X aortic valve and are different trials.",
+    "designNotes": "Randomized: yes. Phase 2 dose-validation study, stopped early. Primary end point: dabigatran trough level. Clinical events were the reason for stopping and are not a completed efficacy comparison. ClinicalTrials.gov NCT01452347 and NCT01505881, as listed in the paper. The abstract gives the clinical counts as percentages of the dabigatran and warfarin groups in the as-treated analysis.",
+    "strengths": "Early stop with a consistent direction of harm — more ischemic or unspecified stroke and more major bleeding — and an explicit statement that the primary end point was pharmacokinetic.",
+    "limitations": "Phase 2, stopped after 252 patients, so the clinical percentages are small counts (9 strokes, 7 vs 2 major bleeds). Dabigatran doses were adjusted to a level and are not a labeled regimen to copy. Not evidence about apixaban (see PROACT Xa) and not a lower-INR warfarin trial (see PROACT).",
+    "journalClub": "Evidence quality: sufficient to reject this dabigatran strategy — randomized, stopped early for excess stroke and bleeding — and too small and too pharmacokinetic in design to quote as a precise event-rate trial. Lead with the primary end point (trough level) so the stroke counts are not mistaken for the planned primary analysis. Mechanical valves stay warfarin territory on this site.",
+    "guidelines": [
+      {
+        "society": "ACC/AHA",
+        "document": "Mechanical valve anticoagulation (teaching note)",
+        "note": "Dabigatran versus warfarin was stopped early for harm. This card does not assign a recommendation class and does not authorize another DOAC.",
+        "year": 2020
+      }
+    ],
+    "caveats": "Randomized: yes. Stopped early. Evidence quality: the primary end point was a trough level; ischemic or unspecified stroke was 9 (5%) versus 0 and major bleeding was 7 (4%) versus 2 (2%), all major bleeds pericardial. Do not treat these doses as a regimen. PROACT Xa is the On-X apixaban trial.",
+    "practiceTakeaway": "Use RE-ALIGN to teach why dabigatran is not a substitute for warfarin in a mechanical aortic or mitral valve. The study stopped early, and the clinical harm was excess stroke and bleeding. It is not a dosing calculator."
+  },
+  {
+    "id": "proact",
+    "acronym": "PROACT",
+    "year": 2018,
+    "yearLabel": "2018",
+    "indication": "valvular/TAVI",
+    "status": "practice",
+    "impact": 2,
+    "title": "Lower-intensity warfarin or dual antiplatelet therapy after On-X mechanical aortic valve replacement",
+    "population": "PROACT (n=576) at 41 sites. Low-risk arm: 201 patients 18 years or older without thromboembolic risk factors undergoing On-X mechanical aortic valve replacement (dual antiplatelet therapy 99; standard warfarin plus aspirin 102). High-risk arm: 375 patients with one or more thromboembolic risk factors (lower-intensity warfarin plus aspirin 185; standard warfarin plus aspirin 190).",
+    "intervention": "Low-risk test: aspirin 325 mg and clopidogrel 75 mg, started 3 months after valve replacement. High-risk test: warfarin with INR 1.5 to 2.0 plus aspirin, started 3 months after valve replacement. The 2018 abstract does not print the aspirin milligram for the high-risk arm.",
+    "comparator": "Standard warfarin plus aspirin (INR 2.0 to 3.0), started 3 months after valve replacement",
+    "primaryResult": "The 2018 paper reports the two aortic arms rather than one shared hazard ratio. Low-risk dual antiplatelet therapy was terminated for excess cerebral thromboembolic events: 3.12% vs 0.29% per patient-year (P=0.02) at up to 8.8 years (631.6 patient-years). High-risk lower-intensity warfarin had less major bleeding (1.59% vs 3.94% per patient-year; P=0.002) and less minor bleeding (1.27% vs 3.49% per patient-year; P=0.002) at up to 8.7 years (2,035.2 patient-years). The abstract lists the lower-intensity figure first in those bleeding comparisons.",
+    "safety": "Low-risk arm: the abstract says no differences in bleeding or all-cause mortality and does not print those rates. High-risk arm: thromboembolism 0.42% vs 0.09% per patient-year (P=0.20), listed in the same first-versus-second order as the bleeding comparison, and no difference reported for all-cause mortality. The abstract does not print a mortality rate.",
+    "takeaway": "After On-X mechanical aortic valve replacement, dual antiplatelet therapy lost to warfarin on cerebral thromboembolism. A lower INR target of 1.5 to 2.0, plus aspirin, reduced bleeding versus INR 2.0 to 3.0 without a detected thromboembolism difference in the 2018 report. Both strategies are warfarin or antiplatelet care, not a DOAC.",
+    "cite": "Puskas JD, et al. J Am Coll Cardiol. 2018;71:2717-2726.",
+    "doi": "10.1016/j.jacc.2018.03.535",
+    "url": "https://doi.org/10.1016/j.jacc.2018.03.535",
+    "pmid": "29903344",
+    "expectedResults": null,
+    "background": "Mechanical aortic valves need anticoagulation. PROACT tested whether selected patients with an On-X aortic valve could use dual antiplatelet therapy, or a lower warfarin INR, instead of standard-intensity warfarin. PROACT Xa later tested apixaban in On-X aortic valves and was stopped for excess valve thrombosis and thromboembolism.",
+    "designNotes": "Randomized: yes. Multicenter noninferiority trial, ClinicalTrials.gov NCT00291525. Randomization of the tested strategy began 3 months after surgery. This card uses only the 2018 completed report. An interim report of the high-risk limb (Puskas et al., J Thorac Cardiovasc Surg. 2014; doi:10.1016/j.jtcvs.2014.01.004) has different follow-up and different bleeding rates and is not mixed into these numbers. The registry also lists mitral arms; the rates on this card are the aortic arms in the 2018 abstract.",
+    "strengths": "Separates a failed antiplatelet strategy from a lower-INR warfarin strategy, with thromboembolism and bleeding both reported for the high-risk arm.",
+    "limitations": "The low-risk bleeding comparison has no printed rates. The high-risk thromboembolism point estimates are 0.42% versus 0.09% per patient-year even though the P value is 0.20. Not a DOAC trial. Not a mitral-valve result. Confirm the labeled transition period and aspirin plan before anyone applies a lower INR.",
+    "journalClub": "Evidence quality: the dual-antiplatelet harm signal is clear (3.12% vs 0.29% per patient-year; P=0.02). The lower-INR bleeding reduction is also clear, and the thromboembolism comparison was not a significant difference. Teach PROACT as warfarin-based On-X care. Teach PROACT Xa as the negative apixaban comparison. Teach RE-ALIGN as the dabigatran mechanical-valve stop.",
+    "guidelines": [
+      {
+        "society": "ACC/AHA",
+        "document": "On-X aortic valve anticoagulation (teaching note)",
+        "note": "Lower-intensity warfarin was studied against standard warfarin. Dual antiplatelet therapy was not an acceptable substitute in the low-risk arm. This card does not assign a recommendation class and does not authorize a DOAC.",
+        "year": 2020
+      }
+    ],
+    "caveats": "Randomized: yes. Evidence quality: high for excess cerebral thromboembolism with dual antiplatelet therapy in the low-risk arm, and for less bleeding with INR 1.5–2.0 than with INR 2.0–3.0 in the high-risk arm. Do not import the 2014 interim rates. Do not read this as PROACT Xa.",
+    "practiceTakeaway": "Use PROACT to teach two On-X aortic results from the 2018 paper: dual antiplatelet therapy increased cerebral thromboembolism, and lower-intensity warfarin reduced bleeding compared with standard warfarin. This remains a warfarin conversation. Apixaban is PROACT Xa, not this card."
+  },
+  {
+    "id": "proact-xa",
+    "acronym": "PROACT Xa",
+    "year": 2023,
+    "yearLabel": "2023",
+    "indication": "valvular/TAVI",
+    "status": "recent",
+    "impact": 1,
+    "title": "Apixaban or warfarin in patients with an On-X mechanical aortic valve",
+    "population": "Patients with an On-X aortic valve implanted at least 3 months before enrollment. The trial stopped after 863 participants were enrolled because of excess thromboembolic events with apixaban. Most participants (94%) took aspirin.",
+    "intervention": "Apixaban 5 mg twice daily. The results abstract states that dose. ClinicalTrials.gov NCT04142658 also lists 2.5 mg twice daily for patients with at least two of age 80 years or older, weight 60 kg or less, or creatinine 1.5 mg/dL (133 micromol/L) or higher.",
+    "comparator": "Warfarin, target INR 2.0 to 3.0",
+    "primaryResult": "Primary efficacy end point: valve thrombosis or valve-related thromboembolism. Coprimary analyses were noninferiority versus warfarin and comparison of the apixaban event rate with an objective performance criterion. Events: 20 (in 16 participants) with apixaban (4.2% per patient-year; 95% CI 2.3 to 6.0) and 6 (in 6 participants) with warfarin (1.3% per patient-year; 95% CI 0.3 to 2.3). Difference 2.9 (95% CI 0.8 to 5.0). Noninferiority and the objective performance criterion were not met. The abstract does not print the noninferiority margin or the performance-criterion threshold.",
+    "safety": "Major bleeding: 3.6% per patient-year with apixaban and 4.5% per patient-year with warfarin. The registry lists major bleeding as a primary outcome; the paper describes the efficacy composite as the primary efficacy end point and reports these bleeding rates separately.",
+    "takeaway": "Apixaban did not meet noninferiority versus warfarin and was less effective for preventing valve thrombosis or valve-related thromboembolism in patients with an On-X mechanical aortic valve.",
+    "cite": "Wang TY, et al. NEJM Evid. 2023;2:EVIDoa2300067.",
+    "doi": "10.1056/EVIDoa2300067",
+    "url": "https://doi.org/10.1056/EVIDoa2300067",
+    "pmid": "38320162",
+    "expectedResults": null,
+    "background": "PROACT had studied lower-intensity warfarin, not a DOAC, in On-X aortic valves. PROACT Xa asked whether apixaban could replace warfarin at least 3 months after On-X aortic valve implantation. It was stopped early.",
+    "designNotes": "Randomized: yes. Open-label (registry masking: none). Stopped for excess thromboembolic events in the apixaban group. The 2.5 mg dose-reduction rule is registry text; the results abstract says apixaban 5 mg twice daily. ClinicalTrials.gov lists the primary time frame as through study closure, a median follow-up of 13.5 months. The results abstract does not print that median. NCT04142658.",
+    "strengths": "Randomized stop with a primary efficacy difference in the direction of harm (difference 2.9 events per 100 patient-years; 95% CI 0.8 to 5.0) and a separate major-bleeding rate that was not higher with apixaban.",
+    "limitations": "Stopped early. One valve model and the aortic position only. Noninferiority margin not printed. Not a test of dabigatran (RE-ALIGN) and not the lower-INR warfarin strategy (PROACT). Aspirin use was 94%, so this is not apixaban without antiplatelet therapy.",
+    "journalClub": "Evidence quality: high for lack of efficacy of apixaban versus warfarin on the valve end point — randomized, stopped early, noninferiority not met. Major bleeding was 3.6% versus 4.5% per patient-year and does not offset the efficacy failure. Keep the name PROACT Xa so it is not confused with PROACT.",
+    "guidelines": [
+      {
+        "society": "ACC/AHA",
+        "document": "Mechanical aortic valve anticoagulation (teaching note)",
+        "note": "Apixaban versus warfarin in On-X aortic valves was stopped for excess valve thrombosis or thromboembolism. This card does not assign a recommendation class.",
+        "year": 2020
+      }
+    ],
+    "caveats": "Randomized: yes. Stopped early. Evidence quality: high for more primary efficacy events with apixaban (4.2% vs 1.3% per patient-year; difference 2.9; 95% CI 0.8 to 5.0). Major bleeding was 3.6% vs 4.5% per patient-year. Not PROACT’s lower-INR result.",
+    "practiceTakeaway": "Use PROACT Xa to teach that apixaban was less effective than warfarin for valve thrombosis or valve-related thromboembolism in patients with an On-X mechanical aortic valve. A lower INR, if discussed, belongs to the PROACT card and is still warfarin."
   },
   {
     "id": "acasa-tavi",
@@ -2242,6 +2782,78 @@ window.ANTICOAG_TRIALS = [
     ],
     "caveats": "Stopped early for futility after 163 primary events. The population was already treated with a VKA. This does not argue against starting a DOAC in a DOAC-naive frail patient when that is otherwise appropriate.",
     "practiceTakeaway": "If a frail patient is stable on VKA, do not switch to a DOAC by default."
+  },
+  {
+    "id": "elan",
+    "acronym": "ELAN",
+    "year": 2023,
+    "yearLabel": "2023",
+    "indication": "AF",
+    "status": "recent",
+    "impact": 1,
+    "title": "Early versus later DOAC initiation after stroke with atrial fibrillation",
+    "population": "2,013 participants with acute ischemic stroke and atrial fibrillation (37% minor, 40% moderate, 23% major stroke). Early anticoagulation 1,006; later anticoagulation 1,007. 103 sites in 15 countries.",
+    "intervention": "Early DOAC: within 48 hours after a minor or moderate stroke, or on day 6 or 7 after a major stroke",
+    "comparator": "Later DOAC: day 3 or 4 after a minor stroke, day 6 or 7 after a moderate stroke, or day 12, 13, or 14 after a major stroke",
+    "primaryResult": "Composite of recurrent ischemic stroke, systemic embolism, major extracranial bleeding, symptomatic intracranial hemorrhage, or vascular death within 30 days: 29 (2.9%) early vs 41 (4.1%) later (risk difference −1.18 percentage points; 95% CI −2.84 to 0.47). The abstract does not report a P value or a noninferiority margin for this primary outcome.",
+    "safety": "Symptomatic intracranial hemorrhage by 30 days: 2 participants (0.2%) in each group. Recurrent ischemic stroke by 30 days: 14 (1.4%) vs 25 (2.5%) (odds ratio 0.57; 95% CI 0.29–1.07). By 90 days: 18 (1.9%) vs 30 (3.1%) (odds ratio 0.60; 95% CI 0.33–1.06).",
+    "takeaway": "Early DOAC timing, scaled to stroke severity, produced a 30-day primary estimate ranging from 2.84 percentage points lower to 0.47 percentage points higher than later timing. The trial does not report that this difference was statistically significant.",
+    "cite": "Fischer U, et al. N Engl J Med. 2023;388:2411-2421.",
+    "doi": "10.1056/NEJMoa2303048",
+    "url": "https://doi.org/10.1056/NEJMoa2303048",
+    "pmid": "37222476",
+    "expectedResults": null,
+    "background": "Starting a DOAC soon after ischemic stroke might prevent early recurrence or might cause intracranial hemorrhage. ELAN compared earlier and later starts, with the clock set by whether the stroke was minor, moderate, or major. OPTIMAS asked a different timing question.",
+    "designNotes": "Randomized: yes. Investigator-initiated, open-label. Assessors were unaware of the assignment. The early and later windows depend on stroke severity; they are not a single “day 1 versus day 14” rule. ClinicalTrials.gov NCT03148457. Primary follow-up is 30 days. The composite includes bleeding and vascular death, so it is not a pure recurrent-stroke endpoint.",
+    "strengths": "Randomized timing comparison with severity-based windows and a symptomatic-intracranial-hemorrhage count that was the same in both groups at 30 days (2 vs 2).",
+    "limitations": "Open-label treatment. The primary confidence interval includes both fewer and slightly more events with early treatment. No noninferiority margin is printed. Not the OPTIMAS comparison of within 4 days versus 7–14 days.",
+    "journalClub": "Evidence quality: moderate to high — randomized, assessor-masked, and imprecise. Quote the risk difference and confidence interval. Do not call the primary result superior or noninferior; the paper does not. Keep ELAN’s severity-based clock separate from OPTIMAS.",
+    "guidelines": [
+      {
+        "society": "AHA/ASA",
+        "document": "Timing of anticoagulation after ischemic stroke (teaching note)",
+        "note": "Severity-based early versus later DOAC initiation. This card does not assign a recommendation class. OPTIMAS is a separate trial.",
+        "year": 2024
+      }
+    ],
+    "caveats": "Randomized: yes. Open-label, with assessors unaware of assignment. Evidence quality: the 30-day primary risk difference was −1.18 percentage points (95% CI −2.84 to 0.47). Symptomatic intracranial hemorrhage was 0.2% in both groups. Not OPTIMAS.",
+    "practiceTakeaway": "Use ELAN to teach severity-based DOAC timing after ischemic stroke with atrial fibrillation: the 30-day composite estimate favored early treatment but the confidence interval included a small increase. It is not a start-time calculator and it is not OPTIMAS."
+  },
+  {
+    "id": "optimas",
+    "acronym": "OPTIMAS",
+    "year": 2024,
+    "yearLabel": "2024",
+    "indication": "AF",
+    "status": "recent",
+    "impact": 1,
+    "title": "Early versus delayed DOAC initiation after ischaemic stroke with atrial fibrillation",
+    "population": "Adults with atrial fibrillation and acute ischaemic stroke whose physician was uncertain about DOAC timing. 3,648 were randomized at 100 UK hospitals; 3,621 were in the modified intention-to-treat analysis (early 1,814, delayed 1,807; 1,981 men and 1,640 women).",
+    "intervention": "Early DOAC initiation, within 4 days from stroke symptom onset. Any DOAC.",
+    "comparator": "Delayed DOAC initiation, 7–14 days from stroke symptom onset. Any DOAC.",
+    "primaryResult": "Composite of recurrent ischaemic stroke, symptomatic intracranial haemorrhage, unclassifiable stroke, or systemic embolism at 90 days: 59 (3.3%) of 1,814 early vs 59 (3.3%) of 1,807 delayed (adjusted risk difference 0.000; 95% CI −0.011 to 0.012). Noninferiority margin 2 percentage points; P=0.0003 for noninferiority. Superiority was not shown (P=0.96).",
+    "safety": "Symptomatic intracranial haemorrhage: 11 (0.6%) early vs 12 (0.7%) delayed (adjusted risk difference 0.001; 95% CI −0.004 to 0.006; P=0.78).",
+    "takeaway": "Starting a DOAC within 4 days was noninferior to waiting 7–14 days for the 90-day composite. It was not superior. Symptomatic intracranial haemorrhage was similar.",
+    "cite": "Werring DJ, et al. Lancet. 2024;404:1731-1741.",
+    "doi": "10.1016/S0140-6736(24)02197-4",
+    "url": "https://doi.org/10.1016/S0140-6736(24)02197-4",
+    "pmid": "39491870",
+    "expectedResults": null,
+    "background": "Guidelines and habit often delay a DOAC for one to two weeks after ischaemic stroke in atrial fibrillation. OPTIMAS compared that delay with a start within 4 days. ELAN used severity-based windows and a 30-day composite that includes bleeding.",
+    "designNotes": "Randomized: yes. Open-label, blinded-endpoint, phase 4. Stratified by stroke severity. Gatekeeper testing: noninferiority margin of 2 percentage points, then superiority. Modified intention-to-treat. ISRCTN17896007 and ClinicalTrials.gov NCT03759938. A 2025 erratum (Lancet 2025;405:32; doi:10.1016/S0140-6736(24)02802-2) corrected the summary spelling to “acute ischaemic stroke” and a figure’s day-0 number at risk in the delayed group to 1,807. That 1,807 count is already the modified intention-to-treat number in the abstract. The erratum does not change the event rates on this card.",
+    "strengths": "Large randomized noninferiority test with masked adjudication and a symptomatic-intracranial-haemorrhage result reported separately from the composite.",
+    "limitations": "Open-label treatment. Superiority was not shown. Eligible physicians were uncertain about timing, so the trial is not a sample of patients in whom the clinician was already sure a delay was required. Not ELAN’s severity-based schedule.",
+    "journalClub": "Evidence quality: high for noninferiority of early versus delayed DOAC initiation on the 90-day composite — randomized, blinded endpoint, margin met — and the result is “not worse within the margin,” not “better.” Keep the within-4-days versus 7–14-days contrast separate from ELAN.",
+    "guidelines": [
+      {
+        "society": "AHA/ASA",
+        "document": "Timing of anticoagulation after ischaemic stroke (teaching note)",
+        "note": "Early versus delayed DOAC initiation when the clinician is uncertain. This card does not assign a recommendation class. ELAN is a separate trial.",
+        "year": 2024
+      }
+    ],
+    "caveats": "Randomized: yes. Open-label, blinded endpoint. Evidence quality: high for noninferiority (adjusted risk difference 0.000; 95% CI −0.011 to 0.012; margin 2 percentage points; P=0.0003) and clear that superiority was not shown (P=0.96). Symptomatic intracranial haemorrhage was 0.6% vs 0.7%.",
+    "practiceTakeaway": "Use OPTIMAS to teach that a DOAC within 4 days was noninferior to a start at 7–14 days for the 90-day composite after ischaemic stroke with atrial fibrillation. It did not show superiority. It is not ELAN and it is not a start-time calculator."
   },
   {
     "id": "prestige-af",

@@ -627,7 +627,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "c",
-      "explanation": "Mechanical valves are VKA territory. DOAC AF/VTE trials excluded them; RE-ALIGN-era teaching (not a card on this site) reinforced dabigatran harm in mechanical valves. Target INR by position/thrombogenicity per guideline tables.",
+      "explanation": "Mechanical valves are VKA territory. DOAC AF/VTE trials excluded them. The RE-ALIGN card is the dabigatran mechanical-valve trial that stopped early for harm. PROACT is warfarin-based On-X care, and PROACT Xa did not show apixaban noninferior to warfarin. Target INR by position/thrombogenicity per guideline tables.",
       "teachingPoints": [
         "BRIDGE (AF without valves) does not justify “never bridge” for mechanical mitral valves.",
         "On-X lower-INR protocols remain warfarin-based specialties."
@@ -637,6 +637,21 @@ window.ANTICOAG_CACP = {
           "kind": "pathway",
           "id": "mechanical-valve",
           "label": "Mechanical valve pathway"
+        },
+        {
+          "kind": "trial",
+          "id": "re-align",
+          "label": "RE-ALIGN"
+        },
+        {
+          "kind": "trial",
+          "id": "proact",
+          "label": "PROACT"
+        },
+        {
+          "kind": "trial",
+          "id": "proact-xa",
+          "label": "PROACT Xa"
         },
         {
           "kind": "trial",

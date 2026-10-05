@@ -6,6 +6,13 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-05",
+      title: "HOME-PE primary endpoint correction",
+      items: [
+        "HOME-PE (Roy et al., Eur Heart J 2021, doi:10.1093/eurheartj/ehab373): the sole primary is the 30-day composite, per-protocol noninferiority, 3.82% (34/891) vs 3.57% (32/896), adjusted absolute difference 0.20%, one-sided 95% upper limit 1.43%, P=0.004, margin 2.5%. Home treatment 38.4% (378/984) vs 36.6% (361/986), P=0.41, is the first secondary outcome (superiority, intention-to-treat). reviewedBy unchanged."
+      ]
+    },
+    {
+      date: "2026-10-05",
       title: "Second tranche of anticoagulation teaching cards",
       items: [
         "Added 17 cards. None of these trials already had a correct card on main. The existing POPular TAVI card remains the no-long-term-anticoagulation cohort (Brouwer et al., doi:10.1056/NEJMoa2017815). The oral-anticoagulation cohort is the new POPular TAVI OAC card.",

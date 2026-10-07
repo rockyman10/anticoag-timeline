@@ -3316,7 +3316,7 @@ window.ANTICOAG_TX_PATHWAYS = {
       "guidelineSources": [
         {
           "society": "ACC/AHA",
-          "note": "Periprocedural teaching aligned with the BRIDGE card: against routine LMWH bridging for warfarin interruption in typical AF"
+          "note": "Periprocedural teaching aligned with the BRIDGE card: arterial thromboembolism 0.4% vs 0.3% (noninferior) and major bleeding 1.3% vs 3.2%; against routine LMWH bridging for warfarin interruption in typical AF"
         },
         {
           "society": "CHEST",
@@ -3529,7 +3529,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "question",
           "title": "Is routine LMWH being added for this warfarin hold?",
           "body": "The usual proposal is a bridge “so the patient is never uncovered” while warfarin is held for an elective procedure. That sentence is the BRIDGE question for typical nonvalvular AF.",
-          "why": "BRIDGE compared bridging with no bridging in AF patients on warfarin having an elective procedure.",
+          "why": "BRIDGE compared bridging with no bridging in AF patients on warfarin having an elective procedure. Arterial thromboembolism was 0.4% without bridging versus 0.3% with bridging, and major bleeding was 1.3% versus 3.2%.",
           "evidence": [],
           "caveats": [],
           "links": [
@@ -3559,13 +3559,13 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-vka",
           "type": "caution",
           "title": "Typical AF on warfarin — BRIDGE teaching is not routine bridging",
-          "body": "Forgoing bridging was noninferior for arterial thromboembolism, and major bleeding was higher with bridging. Teaching example: for typical nonvalvular AF, plan the warfarin hold and the restart with the team, and do not add routine LMWH. “Never uncovered” is not the same as safer, because bridging itself bleeds. This pathway does not print hold-day counts or LMWH doses. Discuss with the team.",
+          "body": "Arterial thromboembolism was 0.4% without bridging and 0.3% with bridging (risk difference 0.1 percentage points; 95% CI −0.6 to 0.8; P=0.01 for noninferiority). Major bleeding was 1.3% without bridging and 3.2% with bridging (relative risk 0.41; 95% CI 0.20 to 0.78; P=0.005 for superiority). Teaching example: for typical nonvalvular AF, plan the warfarin hold and the restart with the team, and do not add routine LMWH. “Never uncovered” is not the same as safer, because bridging itself bleeds. This pathway does not print hold-day counts or LMWH doses. Discuss with the team.",
           "why": "The BRIDGE card is the reason the reflexive bridge is questioned in this phenotype.",
           "evidence": [
             {
               "trial": "bridge",
-              "effect": "Forgoing bridging was noninferior for arterial thromboembolism; major bleeding was higher with bridging",
-              "note": "Direction only. The BRIDGE card does not print event rates. Population: AF on warfarin, elective interruption."
+              "effect": "Arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging); risk difference 0.1 percentage points (95% CI −0.6 to 0.8); P=0.01 for noninferiority",
+              "note": "Major bleeding 1.3% (no bridging) vs 3.2% (bridging); relative risk 0.41 (95% CI 0.20 to 0.78); P=0.005 for superiority. Population: AF on warfarin, elective interruption."
             }
           ],
           "caveats": [
@@ -3637,7 +3637,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-doac",
           "type": "caution",
           "title": "Typical AF on a DOAC — teaching is hold and restart, without a heparin bridge",
-          "body": "The peri-procedural framework teaches that DOAC interruptions in typical AF generally do not need a heparin bridge while the oral agent is held. Use the monograph and the local checklist for timing. Teaching example: discuss dropping the reflexive heparin bridge with the team. BRIDGE studied warfarin interruption, so it is context for the habit, not a DOAC protocol. This pathway does not print hours or doses.",
+          "body": "The peri-procedural framework teaches that DOAC interruptions in typical AF generally do not need a heparin bridge while the oral agent is held. Use the monograph and the local checklist for timing. Teaching example: discuss dropping the reflexive heparin bridge with the team. BRIDGE studied warfarin interruption (arterial thromboembolism 0.4% vs 0.3%, major bleeding 1.3% vs 3.2%), so it is context for the habit, not a DOAC protocol. This pathway does not print hours or doses.",
           "why": "The short DOAC clock is the reason a parenteral bridge is not the usual teaching for this phenotype.",
           "evidence": [],
           "caveats": [
@@ -3681,8 +3681,8 @@ window.ANTICOAG_TX_PATHWAYS = {
           "evidence": [
             {
               "trial": "bridge",
-              "effect": "In nonvalvular AF, forgoing bridging was noninferior for arterial thromboembolism and major bleeding was higher with bridging — do not generalize to mechanical valves",
-              "note": "Direction only. Open the BRIDGE card. Valve bridging is a different pathway."
+              "effect": "In nonvalvular AF, arterial thromboembolism was 0.4% (no bridging) vs 0.3% (bridging) and major bleeding was 1.3% vs 3.2% — do not generalize those rates to mechanical valves",
+              "note": "Open the BRIDGE card for the risk difference and the bleeding relative risk. Valve bridging is a different pathway."
             }
           ],
           "caveats": [
@@ -3757,7 +3757,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-end",
           "type": "end",
           "title": "Pathway complete — elective peri-procedural plan",
-          "body": "In teaching language, record whether interruption was needed, the agent class, the thrombotic risk of the hold, and the bleed risk of the procedure and of any bridge. Typical AF on warfarin: BRIDGE-era teaching is not routine LMWH bridging. Typical DOAC interruption: not a heparin bridge. Mechanical-valve bridging was not decided here. Educational only. Discuss with the team.",
+          "body": "In teaching language, record whether interruption was needed, the agent class, the thrombotic risk of the hold, and the bleed risk of the procedure and of any bridge. Typical AF on warfarin: BRIDGE arterial thromboembolism 0.4% vs 0.3% (noninferior) and major bleeding 1.3% vs 3.2% — not routine LMWH bridging. Typical DOAC interruption: not a heparin bridge. Mechanical-valve bridging was not decided here. Educational only. Discuss with the team.",
           "why": "The four named steps are the plan. A drug name without those steps is not.",
           "evidence": [],
           "caveats": [],

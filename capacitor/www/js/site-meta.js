@@ -5,6 +5,24 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-10-05",
+      title: "HOME-PE primary endpoint correction",
+      items: [
+        "HOME-PE (Roy et al., Eur Heart J 2021, doi:10.1093/eurheartj/ehab373): the sole primary is the 30-day composite, per-protocol noninferiority, 3.82% (34/891) vs 3.57% (32/896), adjusted absolute difference 0.20%, one-sided 95% upper limit 1.43%, P=0.004, margin 2.5%. Home treatment 38.4% (378/984) vs 36.6% (361/986), P=0.41, is the first secondary outcome (superiority, intention-to-treat). reviewedBy unchanged."
+      ]
+    },
+    {
+      date: "2026-10-05",
+      title: "Second tranche of anticoagulation teaching cards",
+      items: [
+        "Added 17 cards. None of these trials already had a correct card on main. The existing POPular TAVI card remains the no-long-term-anticoagulation cohort (Brouwer et al., doi:10.1056/NEJMoa2017815). The oral-anticoagulation cohort is the new POPular TAVI OAC card.",
+        "Sources: ACTIVE-W Connolly et al., Lancet 2006, doi:10.1016/S0140-6736(06)68845-4. BAFTA Mant et al., Lancet 2007, doi:10.1016/S0140-6736(07)61233-1. RE-MEDY and RE-SONATE are separate cards from one paper, Schulman et al., N Engl J Med 2013, doi:10.1056/NEJMoa1113697, with NCT00329238 (warfarin) and NCT00558259 (placebo). CaVenT Enden et al., Lancet 2012, doi:10.1016/S0140-6736(11)61753-4. ATTRACT Vedantham et al., N Engl J Med 2017, doi:10.1056/NEJMoa1615066. HOME-PE Roy et al., Eur Heart J 2021, doi:10.1093/eurheartj/ehab373.",
+        "CANVAS Schrag et al., JAMA 2023, doi:10.1001/jama.2023.7843 (cancer VTE, not the canagliflozin trial). ELAN Fischer et al., N Engl J Med 2023, doi:10.1056/NEJMoa2303048. OPTIMAS Werring et al., Lancet 2024;404:1731-1741, doi:10.1016/S0140-6736(24)02197-4; erratum Lancet 2025;405:32 corrected spelling and a figure number-at-risk to 1807 and did not change the event rates. ARCADIA Kamel et al., JAMA 2024, doi:10.1001/jama.2023.27188. AMULET IDE Lakkireddy et al., Circulation 2021, doi:10.1161/CIRCULATIONAHA.121.057063.",
+        "EPIC-CAD Cho et al., N Engl J Med 2024, doi:10.1056/NEJMoa2407362; milligram dose is from NCT03718559 because the abstract does not print it. RE-ALIGN Eikelboom et al., N Engl J Med 2013, doi:10.1056/NEJMoa1300615. PROACT Puskas et al., J Am Coll Cardiol 2018, doi:10.1016/j.jacc.2018.03.535 (2014 interim rates are not mixed in). PROACT Xa Wang et al., NEJM Evid 2023, doi:10.1056/EVIDoa2300067; the 2.5 mg rule is from NCT04142658. POPular TAVI OAC Nijenhuis et al., N Engl J Med 2020, doi:10.1056/NEJMoa1915152.",
+        "Playlists and the mechanical-valve pathway now point at the new cards. reviewedBy unchanged. No dosing calculator."
+      ]
+    },
+    {
       date: "2026-10-04",
       title: "Second accuracy pass",
       items: [

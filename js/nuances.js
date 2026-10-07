@@ -14,7 +14,7 @@ window.ANTICOAG_NUANCES = [
     },
     synthesis: "Do not force a single post-TAVI cocktail. Stratify by AF vs no AF, recent coronary stent, and bleeding phenotype. Read both trials as population-specific, not as universal TAVI law.",
     whatWouldChange: "A guideline-endorsed default that clearly separates AF-TAVI from sinus-TAVI pathways—or new valve-thrombosis imaging endpoints that favor one strategy—would collapse much of this equipoise.",
-    trialIds: ["acasa-tavi", "notion-4", "galileo", "popular-tavi", "atlantis"],
+    trialIds: ["acasa-tavi", "notion-4", "galileo", "popular-tavi", "popular-tavi-oac", "atlantis"],
     links: [
       { kind: "framework", id: "post-tavi-antithrombotic", label: "Framework: Post-TAVI antithrombotic" },
       { kind: "case", id: "tavi-sinus-routine-doac", label: "Case: TAVI sinus — routine DOAC?" }

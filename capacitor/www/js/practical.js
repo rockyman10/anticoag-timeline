@@ -71,7 +71,7 @@ window.ANTICOAG_PRACTICAL = {
       holdHint: "Periprocedural plans must cover both the DOAC and the P2Y12 — verify locally."
     },
     "cobrra": {
-      regimen: "COBRRA compared apixaban with rivaroxaban for acute VTE (see the primary paper for the regimens used).",
+      regimen: "COBRRA used apixaban 10 mg twice daily for 7 days, then 5 mg twice daily, compared with rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily, for 3 months.",
       food: "If rivaroxaban 15/20 mg: with food.",
       renal: "Eligible VTE patients per protocol; teach bleeding-risk shared decision.",
       holdHint: "Verify locally."

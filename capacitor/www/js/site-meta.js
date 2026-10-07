@@ -6,6 +6,16 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "Journal-club handouts for seven auto-composed cards",
+      items: [
+        "More details for ENTRUST-AF PCI, CATCH, ENSURE-AF, MARINER, RE-SPECT ESUS, POPular TAVI (antiplatelet cohort), and PACIFIC-STROKE now have background, design, strengths, limitations, and a journal-club pearl. The auto-composed banner no longer appears on those seven cards.",
+        "Counts and intervals follow the primary papers. ENTRUST-AF PCI: Vranckx et al., Lancet 2019;394:1335-1343, major or CRNM bleeding 128/751 vs 152/755, HR 0.83 (95% CI 0.65–1.05), noninferiority margin 1.20. CATCH: Lee et al., JAMA 2015;314:677-686, cumulative incidence 7.2% vs 10.5%, HR 0.65, P=0.07. ENSURE-AF: Goette et al., Lancet 2016;388:1995-2003, 5 vs 11 efficacy events. MARINER: Spyropoulos et al., N Engl J Med 2018;379:1118-1127, 0.83% vs 1.10%, HR 0.76, P=0.14; the 7.5 mg renal dose is labeled as NCT02111564 registry text.",
+        "RE-SPECT ESUS: Diener et al., N Engl J Med 2019;380:1906-1917, recurrent stroke 4.1% vs 4.8% per year, HR 0.85, P=0.10. POPular TAVI antiplatelet cohort stays Brouwer et al., doi:10.1056/NEJMoa2017815; ischemic composite 9.7% vs 9.9%. The oral-anticoagulation cohort remains the separate card. PACIFIC-STROKE: Shoamanesh et al., Lancet 2022;400:997-1007; primary dose–response P=0.80. The 50 mg stroke-or-TIA HR 0.64 is labeled post hoc. Intervals on that card are 90% confidence intervals.",
+        "Dose lines stay teaching examples of what the trials used, not orders. Wording stays DOAC. reviewedBy unchanged. The site-wide literature-sweep stamp stays 2026-10-04."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Site auditor functionality fixes",
       items: [
         "Teach → Learn path opens and keeps #/learn, the same entry as Start here.",

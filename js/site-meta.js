@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "ADAM-VTE journal-club handout",
+      items: [
+        "More details for ADAM-VTE now has strengths, limitations, and a journal-club note. Background and design notes were already present and were left in place. Rapid Recap counts were not changed.",
+        "McBane et al., J Thromb Haemost. 2020;18:411-421 (doi:10.1111/jth.14662). Of 300 randomized, 287 were analyzed (145 vs 142). Major bleeding 0% vs 1.4% (P=0.138; hazard ratio not estimable). Recurrent VTE 0.7% vs 6.3% (HR 0.099; 95% CI 0.013–0.780; P=0.0281) stays a secondary result. Major bleeding or clinically relevant nonmajor bleeding was 6% in both groups.",
+        "ENTRUST-AF PCI, CATCH, ENSURE-AF, MARINER, RE-SPECT ESUS, and POPular TAVI already had handouts and were not rewritten. The regimen line stays a teaching example of what the trial used, not an order. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp stays 2026-10-04."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Learn-path graphics for lessons 2–10",
       items: [
         "Lessons 2–10 on the Core Clinic Path now have Evidence visuals in js/learn-visuals.js, in the same chart-or-table pattern as lesson 1. Each picture quotes a trial card, framework, or bleed page already on the site.",

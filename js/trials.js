@@ -1517,6 +1517,9 @@ window.ANTICOAG_TRIALS = [
     "expectedResults": null,
     "background": "ADAM-VTE compared apixaban with dalteparin in cancer-associated VTE with major bleeding as the primary endpoint (not recurrent VTE).",
     "designNotes": "Open-label RCT; primary endpoint = major bleeding vs dalteparin. Recurrent VTE was a secondary/efficacy outcome. Smaller than Caravaggio.",
+    "strengths": "Randomized comparison (NCT02585713) whose abstract states the major-bleeding primary and the recurrent-VTE secondary together. Of 300 patients randomized, 287 were in the primary analysis (145 apixaban, 142 dalteparin). Metastatic disease was present in 66%, and 74% were receiving concurrent chemotherapy.",
+    "limitations": "Major bleeding was 0% of 145 versus 1.4% of 142 (P=0.138). The hazard ratio was not estimable because the apixaban group had zero major-bleeding events, so the numerical difference is not a demonstrated bleeding advantage. Recurrent VTE, 0.7% versus 6.3% (HR 0.099; 95% CI 0.013–0.780; P=0.0281), is a secondary result with a wide interval. Major bleeding or clinically relevant nonmajor bleeding was 6% in both groups. Smaller than Caravaggio, which asked a recurrent-VTE question. The regimen on the card is a teaching example of what the trial used, not an order.",
+    "journalClub": "Evidence quality: moderate for the major-bleeding primary — randomized, not statistically different, hazard ratio not estimable — and the recurrent-VTE reduction is secondary (HR 0.099; 95% CI 0.013–0.780). Teach ADAM-VTE beside Caravaggio so the secondary VTE rate is not taught as the primary lesson. Major bleeding or clinically relevant nonmajor bleeding was 6% in both groups. The regimen on the card is a teaching example of what the trial used, not an order.",
     "guidelines": [
       {
         "society": "ASH",

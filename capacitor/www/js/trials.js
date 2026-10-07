@@ -3243,22 +3243,22 @@ window.ANTICOAG_TRIALS = [
     "intervention": "Apixaban (10 mg BID × 7 d → 5 mg BID)",
     "comparator": "Rivaroxaban (15 mg BID × 21 d → 20 mg daily) for 3 months",
     "primaryResult": "Clinically relevant bleeding 3.3% vs 7.1%; RR 0.46 (95% CI 0.33–0.65); P<0.001",
-    "safety": "Recurrent VTE similar (~1%); deaths rare and similar",
-    "takeaway": "First large head-to-head VTE DOAC RCT — prefer apixaban when bleeding risk matters.",
+    "safety": "Recurrent symptomatic VTE 15/1345 (1.1%) vs 14/1355 (1.0%); RR 1.08 (95% CI 0.52–2.23). Secondary outcome; the interval was not adjusted for multiplicity. Death from any cause 1 (0.1%) vs 4 (0.3%); RR 0.25 (95% CI 0.03–2.26).",
+    "takeaway": "First large head-to-head VTE DOAC RCT. Clinically relevant bleeding was lower with apixaban than with rivaroxaban (3.3% vs 7.1%; RR 0.46). Recurrent symptomatic VTE was 1.1% vs 1.0%.",
     "cite": "Castellucci LA, et al. N Engl J Med. 2026;394:1051-1060.",
     "doi": "10.1056/NEJMoa2510703",
     "url": "https://doi.org/10.1056/NEJMoa2510703",
     "expectedResults": null,
     "background": "Apixaban and rivaroxaban dominate VTE treatment, but head-to-head bleeding RCT evidence was lacking.",
     "designNotes": "RCT of standard apixaban vs rivaroxaban regimens for 3 months in acute PE or proximal DVT (N≈2,760).",
-    "strengths": "Primary bleeding endpoint with large relative reduction (RR 0.46); similar recurrence.",
-    "limitations": "3-month horizon; practical switches and cancer subgroups need clinical judgment.",
-    "journalClub": "COBRRA: when either DOAC fits, apixaban caused substantially less clinically relevant bleeding than rivaroxaban.",
+    "strengths": "Primary bleeding endpoint was lower with apixaban (RR 0.46; 95% CI 0.33–0.65). Recurrent symptomatic VTE was 15/1345 (1.1%) vs 14/1355 (1.0%).",
+    "limitations": "3-month horizon. Not powered for recurrent VTE. Active cancer was an exclusion, not a reported subgroup. The secondary-outcome interval was not adjusted for multiplicity.",
+    "journalClub": "COBRRA reported less clinically relevant bleeding with apixaban than with rivaroxaban (3.3% vs 7.1%; RR 0.46). Recurrent symptomatic VTE was 1.1% vs 1.0% (RR 1.08; 95% CI 0.52–2.23). Teaching example, not an order.",
     "guidelines": [
       {
         "society": "ASH",
         "document": "VTE treatment DOAC choice",
-        "note": "Too new for full incorporation; may drive preferential apixaban when bleeding risk is a concern.",
+        "note": "Too new for full incorporation. The trial reported less clinically relevant bleeding with apixaban than with rivaroxaban.",
         "year": 2026
       },
       {
@@ -3273,7 +3273,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "3-month primary horizon; practical formulary/switch decisions still need clinical context.",
-    "practiceTakeaway": "When apixaban or rivaroxaban both fit acute VTE, prefer apixaban if minimizing clinically relevant bleeding matters."
+    "practiceTakeaway": "COBRRA reported less clinically relevant bleeding with the apixaban regimen than with the rivaroxaban regimen over 3 months (3.3% vs 7.1%; RR 0.46; 95% CI 0.33–0.65). Recurrent symptomatic VTE was 1.1% vs 1.0% (RR 1.08; 95% CI 0.52–2.23). Teaching example, not an order."
   },
   {
     "id": "peitho",

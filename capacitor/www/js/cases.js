@@ -207,6 +207,7 @@ window.ANTICOAG_CASES = [
     modelReasoning: "This is typical nonvalvular AF interrupting warfarin for an elective procedure — the BRIDGE teaching population, not a mechanical-valve or acute-VTE niche. BRIDGE: forgoing bridging was noninferior for arterial thromboembolism, and major bleeding was higher with bridging — so do not routinely bridge. Cancel reflexive enoxaparin. Confirm the procedure’s bleed risk with GI (polypectomy raises bleed risk vs diagnostic-only) and whether any interruption is required; if holding warfarin, use an institutional hold/restart plan without routine LMWH bridge. Counsel that ‘never uncovered’ is not the same as safer — bridging itself bleeds. Document indication (NVAF), no high-risk prosthesis/recent VTE, no-bridge rationale citing BRIDGE-era teaching, and who owns the post-procedure INR/restart. If this were a mechanical mitral valve or very recent VTE, you would not import the BRIDGE ‘skip bridge’ default unchanged.",
     teachingPoint: "Typical AF + elective warfarin hold → plan interruption and restart; do not add routine LMWH bridging. BRIDGE traded more bleeding for no thromboembolic gain in this phenotype.",
     links: [
+      { kind: "tx-pathway", id: "peri-procedural-oac", label: "TX: Peri-procedural OAC" },
       { kind: "trial", id: "bridge", label: "Trial: BRIDGE" }
     ]
   }

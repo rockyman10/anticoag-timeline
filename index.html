@@ -824,6 +824,15 @@
       border-radius: 3px;
       color: var(--ink-2);
     }
+    a.lv-chip {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.lv-chip:hover,
+    a.lv-chip:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
     .lv-takeaway {
       margin: .55rem 0 .4rem;
       padding: .45rem .6rem;
@@ -4563,7 +4572,7 @@
   const LEARN_WHY = {
     "af-doac-start": "Start with AF stroke-prevention teaching, then see how landmark DOAC trials sit on the timeline.",
     "acute-vte-doac": "Move from AF to acute VTE — open the DOAC-choice framework, then a concrete case.",
-    "peri-bridge": "Elective procedures are where reflexive bridging shows up — use the peri framework + BRIDGE-era case.",
+    "peri-bridge": "Elective procedures are where reflexive bridging shows up. Walk the peri-procedural OAC treatment pathway, then the BRIDGE-era case. A typical AF DOAC hold is not a heparin bridge.",
     "mech-valve": "Mechanical valves break the “just use a DOAC” habit — contrast with AF/VTE defaults.",
     "aps-vka": "APS (especially triple-positive) is another VKA-first niche — practice the DOAC-request case.",
     "compass-dose": "Vascular-dose rivaroxaban is not an AF/VTE dose — this lesson exists to prevent that mix-up.",
@@ -4575,7 +4584,7 @@
   const LEARN_ORIENT_TIP = {
     "af-doac-start": "Open the AF stroke-prevention framework first.",
     "acute-vte-doac": "Open the acute VTE DOAC framework first.",
-    "peri-bridge": "Open the peri-procedural OAC framework first.",
+    "peri-bridge": "Open the peri-procedural OAC treatment pathway first.",
     "mech-valve": "Open the mechanical-valve VKA framework first.",
     "aps-vka": "Open the APS triple-positive VKA framework first.",
     "compass-dose": "Open the COMPASS vascular-dose framework first.",
@@ -4951,6 +4960,10 @@
           bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-fw" data-learn-soft-fw="${esc(s.id)}">${esc(s.label || "Open framework")}</button></div>`;
           return;
         }
+        if (s.kind === "pathway-tx" && s.id) {
+          bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-tx" data-learn-soft-tx="${esc(s.id)}">${esc(s.label || "Open treatment pathway")}</button></div>`;
+          return;
+        }
         if (s.kind === "compare" && (s.pairId || (s.trialIds && s.trialIds.length))) {
           const pid = s.pairId || "";
           const tids = (s.trialIds || []).join(",");
@@ -4988,6 +5001,31 @@
     };
     body.querySelectorAll("[data-learn-soft-fw]").forEach(b => {
       b.onclick = () => openLearnTarget({ kind: "framework", id: b.dataset.learnSoftFw }, lesson, "soft");
+    });
+    body.querySelectorAll("[data-learn-soft-tx]").forEach(b => {
+      b.onclick = () => openLearnTarget({ kind: "pathway-tx", id: b.dataset.learnSoftTx }, lesson, "soft");
+    });
+    body.querySelectorAll(".learn-evidence-mount a.lv-chip[href]").forEach(a => {
+      a.addEventListener("click", (ev) => {
+        const parts = (a.getAttribute("href") || "").replace(/^#\/?/, "").split("/").filter(Boolean);
+        const k = parts[0];
+        const id = parts[1];
+        if (!k || !id) return;
+        if (k === "pathway-tx") {
+          ev.preventDefault();
+          openLearnTarget({ kind: "pathway-tx", id }, lesson, "soft");
+        } else if (k === "trial") {
+          ev.preventDefault();
+          yieldLearnShell();
+          if (byId[id]) openDetail(id, "summary");
+        } else if (k === "framework") {
+          ev.preventDefault();
+          openLearnTarget({ kind: "framework", id }, lesson, "soft");
+        } else if (k === "case") {
+          ev.preventDefault();
+          openLearnTarget({ kind: "case", id }, lesson, "soft");
+        }
+      });
     });
     body.querySelectorAll("[data-learn-soft-compare]").forEach(b => {
       b.onclick = () => {

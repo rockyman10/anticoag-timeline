@@ -141,7 +141,7 @@ window.ANTICOAG_PRACTICAL = {
     title: "Bleed & reversal — teaching map",
     leadAlert: "U.S. regulatory status (Andexxa / andexanet alfa): Not available in the United States after Dec 22, 2025. AstraZeneca ended U.S. commercial sales and manufacture and voluntarily withdrew the BLA after FDA concluded that risks outweigh benefits, driven by thromboembolic events. FDA safety communication (URL also in sources): https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication . Geographic nuance: withdrawal communications are U.S.-specific; Ondexxya/andexanet remained available in the UK/EU/Japan per AstraZeneca statements as of late 2025 — always verify local formulary and country labeling. Do not assume global withdrawal.",
     fdaTeSignal: "FDA Advisory Committee discussion of ANNEXA-I safety (Day 30): thrombosis 14.6% vs 6.9% usual care; thrombosis-related deaths 2.5% vs 0.9%. Use these figures when teaching why U.S. risk–benefit was judged unfavorable — cite FDA, not as a substitute for reading the primary paper.",
-    intro: "Stabilize ABCs, localize the bleed, stop the anticoagulant, reverse when life-threatening or emergency surgery requires it, then plan if/when to restart for the underlying indication. In U.S. practice after Dec 2025, FXa-inhibitor major bleeding is taught as supportive care plus institutional 4F-PCC (or equivalent) pathways — not andexanet. Idarucizumab remains the specific agent for dabigatran. ANNEXA-4/ANNEXA-I remain historically important to explain why andexanet was studied and why thromboembolic risk became practice-defining. Not a substitute for your hospital’s hemorrhage pathway.",
+    intro: "Stabilize ABCs, localize the bleed, stop the anticoagulant, reverse when life-threatening or emergency surgery requires it, then plan if/when to restart for the underlying indication. In U.S. practice after Dec 2025, FXa-inhibitor major bleeding is taught as supportive care plus institutional 4F-PCC (or equivalent) pathways — not andexanet. Idarucizumab remains the specific agent for dabigatran. ANNEXA-4/ANNEXA-I remain historically important to explain why andexanet was studied and why thromboembolic risk became practice-defining. Parenteral classes (unfractionated heparin, LMWH, fondaparinux) are the same kind of teaching map as the cancer-VTE and bridging frameworks: name the class and the labeled limit. They are not a protamine protocol. Not a substitute for your hospital’s hemorrhage pathway.",
     classes: [
       {
         id: "dabigatran-rev",
@@ -163,6 +163,27 @@ window.ANTICOAG_PRACTICAL = {
         specific: "Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. Fresh frozen plasma is the fallback when PCC is unavailable.",
         notes: "Goal is rapid INR correction for life-threatening bleed plus sustained vitamin K effect. Not a DOAC problem — included for completeness on mixed wards.",
         trialIds: []
+      },
+      {
+        id: "ufh-rev",
+        agentClass: "Unfractionated heparin (UFH)",
+        specific: "Protamine sulfate is the labeled neutralization class for heparin. The heparin sodium label describes slow infusion of protamine when bleeding requires reversal of heparinization.",
+        notes: "Teaching limit, not a dose chart. Heparin sodium injection labeling (FDA 017029s178): each mg of protamine sulfate neutralizes approximately 100 USP heparin units; the amount required decreases as heparin is metabolized; no more than 50 mg should be administered, very slowly, in any 10-minute period. Fatal reactions resembling anaphylaxis are described, so resuscitation has to be available. Open the institutional heparin-reversal chart. This page does not calculate a protamine dose.",
+        trialIds: []
+      },
+      {
+        id: "lmwh-rev",
+        agentClass: "Low-molecular-weight heparin (LMWH)",
+        specific: "Protamine only partly reverses LMWH. There is no complete specific antidote.",
+        notes: "Lovenox overdosage text (FDA 020164s129): anti-Factor Xa activity is never completely neutralized (maximum about 60%). The milligram schedule in that section stays on the product label and the institutional chart. It is not an order on this page. Other LMWH products do not automatically share that sentence. Protamine can cause hypotension and anaphylactoid reactions.",
+        trialIds: []
+      },
+      {
+        id: "fondaparinux-rev",
+        agentClass: "Fondaparinux",
+        specific: "No specific antidote. Arixtra overdosage states there is no known antidote.",
+        notes: "Protamine is the heparin and partial-LMWH class. It is not a labeled fondaparinux antidote. Teaching is to stop fondaparinux and follow the institutional bleed pathway. This page does not recommend an off-label clotting-factor product as a protocol.",
+        trialIds: []
       }
     ],
     restart: {
@@ -175,12 +196,25 @@ window.ANTICOAG_PRACTICAL = {
       "Non-U.S.: confirm whether Ondexxya/andexanet remains available before teaching ‘give andexanet.’",
       "Reversal / hemostatic agents are for life-threatening bleeding or emergency procedures — not elective anxiety management.",
       "Thrombotic risk was central to the U.S. andexanet risk–benefit reassessment; restart planning belongs in the same note as any hemostatic therapy.",
-      "Verify every step with the institutional bleed pathway, pharmacy, and country formulary."
+      "Verify every step with the institutional bleed pathway, pharmacy, and country formulary.",
+      "UFH, LMWH, and fondaparinux text is education. Protamine amounts stay on the product label and the institutional chart."
     ],
     sources: [
       {
         label: "FDA safety communication — Update on the Safety of Andexxa (AstraZeneca)",
         url: "https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication"
+      },
+      {
+        label: "Heparin sodium injection — neutralization of heparin effect (FDA 017029s178)",
+        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/017029s178lbl.pdf"
+      },
+      {
+        label: "Lovenox — overdosage and protamine limit (FDA 020164s129)",
+        url: "https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/020164s129lbl.pdf"
+      },
+      {
+        label: "Arixtra — no known antidote (DailyMed setid ec235119-cb58-4939-942c-11d3923d289f)",
+        url: "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ec235119-cb58-4939-942c-11d3923d289f"
       }
     ]
   }

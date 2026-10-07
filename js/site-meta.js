@@ -6,6 +6,20 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "Oncology DDI accuracy pass and parenteral reversal teaching",
+      items: [
+        "DDI lastCurated is 2026-10-07. The oncology TKI suite stays paused. reviewedBy is unchanged and unnamed.",
+        "Imatinib DOAC cards: Gleevec (effective 2026-07-13) simvastatin Cmax 2-fold and AUC 3.5-fold is the CYP3A4 probe. P-gp inhibition is in vitro only, so dabigatran and edoxaban no longer teach an exposure increase. The copied dasatinib hemorrhage sentence is off the imatinib cards. No degree word was added.",
+        "Nilotinib DOAC cards: Tasigna (effective 2025-12-16) oral midazolam exposure increased 2.6-fold. P-gp inhibition sits under in vitro studies not evaluated clinically. Dabigatran and edoxaban no longer teach an exposure increase. The 2025-12-16 label does not print a degree next to the 2.6-fold result, so none was added. The dasatinib sentence is off these cards.",
+        "Dasatinib DOAC cards: label effective 2026-03-05. Anticoagulants may increase hemorrhage risk; platelet dysfunction was in vitro. Dasatinib is a time-dependent CYP3A4 inhibitor with no fold-change, and it is not a P-gp inhibitor in vitro. Dabigatran and edoxaban are PD bleed only. “Strong dual inhibition” is removed.",
+        "Palbociclib: IBRANCE (revised 09/2025) is a weak CYP3A inhibitor (midazolam AUCINF +61%, Cmax +37%). “Weak–moderate” is gone. Apixaban and rivaroxaban keep a theoretical increase. Dabigatran and edoxaban do not.",
+        "Dexamethasone: the US label calls it a moderate CYP3A4 inducer and does not describe P-gp induction. Decreased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban no longer teach a decrease. Warfarin uses the corticosteroid sentence (usually less response, conflicting reports, monitor coagulation indices), not the DOAC line.",
+        "Warfarin–ibrutinib practice text no longer tells the reader to choose a DOAC dose.",
+        "Bleed & reversal adds UFH, LMWH, and fondaparinux classes beside dabigatran, oral factor Xa, and warfarin. Protamine limits and the absence of a fondaparinux antidote are teaching, not a dose chart."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Journal-club handouts for seven auto-composed cards",
       items: [
         "More details for ENTRUST-AF PCI, CATCH, ENSURE-AF, MARINER, RE-SPECT ESUS, POPular TAVI (antiplatelet cohort), and PACIFIC-STROKE now have background, design, strengths, limitations, and a journal-club pearl. The auto-composed banner no longer appears on those seven cards.",

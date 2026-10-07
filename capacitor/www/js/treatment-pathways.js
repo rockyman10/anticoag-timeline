@@ -3,7 +3,7 @@ window.ANTICOAG_TX_PATHWAYS = {
   "meta": {
     "title": "Interactive treatment pathways",
     "disclaimer": "Educational algorithms — not institutional protocols or medical advice. Verify guidelines, labels, and local pathways. NNTs shown only when derived from published absolute rates on this site’s trial cards; otherwise omitted.",
-    "version": "2026-09-23"
+    "version": "2026-10-07"
   },
   "pathways": [
     {
@@ -2768,6 +2768,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "label": "BRIDGE (AF — contrast)"
             },
             {
+              "kind": "tx",
+              "id": "peri-procedural-oac",
+              "label": "TX: Peri-procedural OAC (typical AF)"
+            },
+            {
               "kind": "page",
               "id": "ddi",
               "label": "DDI library"
@@ -3297,6 +3302,485 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "case",
               "id": "compass-vs-af-dose-trap",
               "label": "Case: COMPASS vs AF dose trap"
+            }
+          ],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "peri-procedural-oac",
+      "title": "Peri-procedural OAC",
+      "indication": "Elective procedure on oral anticoagulation",
+      "summary": "Elective interruption and bridging teaching for typical AF and DOAC holds. BRIDGE-centered. Mechanical-valve bridging stays on the valve pathway.",
+      "guidelineSources": [
+        {
+          "society": "ACC/AHA",
+          "note": "Periprocedural teaching aligned with the BRIDGE card: against routine LMWH bridging for warfarin interruption in typical AF"
+        },
+        {
+          "society": "CHEST",
+          "note": "Perioperative management aligned with no routine bridging for moderate-risk AF procedural interruptions"
+        }
+      ],
+      "startNodeId": "ppo-start",
+      "nodes": [
+        {
+          "id": "ppo-start",
+          "type": "start",
+          "title": "Start: Elective procedure, patient already on oral anticoagulation",
+          "body": "This walk is elective peri-procedural planning. Name four things before anyone writes a bridge: whether interruption is needed at all, the agent class, the thrombotic risk of holding, and the bleed risk of the procedure and of bridging itself. Discuss the plan with the procedural team. Teaching example, not an order.",
+          "why": "Reflexive “never uncovered” bridging is the habit this pathway slows down. Typical nonvalvular AF is the BRIDGE population.",
+          "evidence": [],
+          "caveats": [
+            "AF plus a recent stent uses the AF + PCI pathway. “Bridge” there means a short aspirin window, not LMWH around a procedure.",
+            "Mechanical-valve bridging is not decided on this walk."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Continue — elective plan or emergency?",
+              "nextNodeId": "ppo-urgency"
+            }
+          ]
+        },
+        {
+          "id": "ppo-urgency",
+          "type": "question",
+          "title": "Is this elective planning, or emergency hemostasis?",
+          "body": "This pathway is for a planned procedure. Life-threatening bleeding or crash surgery is a reversal and hemostasis problem. It is not a hold-and-bridge worksheet.",
+          "why": "Elective BRIDGE teaching does not choose a reversal agent.",
+          "evidence": [],
+          "caveats": [],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "doac-major-bleed-us",
+              "label": "Framework: U.S. DOAC major bleed"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Elective or semi-elective procedure",
+              "nextNodeId": "ppo-interrupt"
+            },
+            {
+              "label": "Emergency major bleed or crash surgery",
+              "nextNodeId": "ppo-emergency"
+            }
+          ]
+        },
+        {
+          "id": "ppo-emergency",
+          "type": "caution",
+          "title": "Leave this elective pathway — use bleed and reversal teaching",
+          "body": "Stop here for elective interruption logic. Life-threatening bleed or crash surgery follows the bleed page. For a U.S. oral factor Xa inhibitor after December 22, 2025, the site teaches supportive care plus an institutional or off-label 4F-PCC pathway. Andexxa is not taught as available in the United States. Dabigatran uses idarucizumab when that agent is indicated. Post-ICH restart timing is a separate pathway. Discuss with the team caring for the bleed.",
+          "why": "Reversal, hemostasis, and a later restart decision are different conversations from BRIDGE.",
+          "evidence": [],
+          "caveats": [
+            "This node does not specify a 4F-PCC dose or a restart hour.",
+            "Non-U.S. formularies may differ — verify local labeling."
+          ],
+          "links": [
+            {
+              "kind": "tx",
+              "id": "doac-bleed-us",
+              "label": "TX: U.S. DOAC major bleed"
+            },
+            {
+              "kind": "page",
+              "id": "reversal",
+              "label": "Bleed & reversal"
+            },
+            {
+              "kind": "framework",
+              "id": "doac-major-bleed-us",
+              "label": "Framework: U.S. DOAC major bleed"
+            },
+            {
+              "kind": "tx",
+              "id": "post-ich",
+              "label": "TX: Post-ICH restart"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Done with this elective walk",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-interrupt",
+          "type": "question",
+          "title": "Does this procedure need an interruption at all?",
+          "body": "Many low-bleed-risk procedures can proceed without stopping therapeutic anticoagulation. A common teaching example is a dental procedure when local hemostasis is reliable. Higher-bleed procedures usually need a hold. Confirm with the proceduralist. This site does not publish a procedure-class protocol.",
+          "why": "Holding a drug that did not need to be held creates a gap, and then a temptation to bridge it.",
+          "evidence": [],
+          "caveats": [
+            "Polypectomy raises bleed risk compared with a diagnostic look — the colonoscopy case asks you to confirm that with GI before assuming a hold."
+          ],
+          "links": [
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Low bleed risk — interruption may be unnecessary",
+              "nextNodeId": "ppo-continue"
+            },
+            {
+              "label": "Higher bleed risk — a hold is the usual teaching frame",
+              "nextNodeId": "ppo-who"
+            }
+          ]
+        },
+        {
+          "id": "ppo-continue",
+          "type": "recommendation",
+          "title": "Continue the current oral anticoagulant if the proceduralist agrees",
+          "body": "Teaching example: when the procedure can be done with local hemostasis and the proceduralist does not require a hold, continue the current oral anticoagulant. Do not add a heparin bridge “just in case.” Document who confirmed that interruption is unnecessary, and what to do if bleeding occurs. Discuss with the team.",
+          "why": "An unnecessary interruption is a thrombotic gap you then have to manage.",
+          "evidence": [],
+          "caveats": [
+            "If the proceduralist later decides a hold is required, return to the phenotype question. Do not bridge by default."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "A hold is still being planned",
+              "nextNodeId": "ppo-who"
+            },
+            {
+              "label": "Done — no interruption",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-who",
+          "type": "question",
+          "title": "Whose thrombotic risk is this hold?",
+          "body": "Typical nonvalvular AF on warfarin is the BRIDGE population. A DOAC interruption in typical AF is a hold-and-restart question. Mechanical valves (especially mitral or a recent implant), recent VTE, and some high-risk antiphospholipid syndrome are not the BRIDGE default.",
+          "why": "“Skip routine bridging” and “always bridge” are both unsafe when applied to the wrong phenotype.",
+          "evidence": [],
+          "caveats": [
+            "Moderate–severe mitral stenosis and mechanical valves stay on VKA pathways. A DOAC is not a substitute there."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "framework",
+              "id": "af-stroke-prevention",
+              "label": "Framework: AF stroke prevention"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Typical nonvalvular AF on warfarin",
+              "nextNodeId": "ppo-vka-ask"
+            },
+            {
+              "label": "Typical AF on a DOAC",
+              "nextNodeId": "ppo-doac-ask"
+            },
+            {
+              "label": "Mechanical valve, recent VTE, or high-risk APS",
+              "nextNodeId": "ppo-high"
+            }
+          ]
+        },
+        {
+          "id": "ppo-vka-ask",
+          "type": "question",
+          "title": "Is routine LMWH being added for this warfarin hold?",
+          "body": "The usual proposal is a bridge “so the patient is never uncovered” while warfarin is held for an elective procedure. That sentence is the BRIDGE question for typical nonvalvular AF.",
+          "why": "BRIDGE compared bridging with no bridging in AF patients on warfarin having an elective procedure.",
+          "evidence": [],
+          "caveats": [],
+          "links": [
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Yes — a routine bridge is proposed",
+              "nextNodeId": "ppo-vka"
+            },
+            {
+              "label": "No — interruption without routine bridging",
+              "nextNodeId": "ppo-restart"
+            }
+          ]
+        },
+        {
+          "id": "ppo-vka",
+          "type": "caution",
+          "title": "Typical AF on warfarin — BRIDGE teaching is not routine bridging",
+          "body": "Forgoing bridging was noninferior for arterial thromboembolism, and major bleeding was higher with bridging. Teaching example: for typical nonvalvular AF, plan the warfarin hold and the restart with the team, and do not add routine LMWH. “Never uncovered” is not the same as safer, because bridging itself bleeds. This pathway does not print hold-day counts or LMWH doses. Discuss with the team.",
+          "why": "The BRIDGE card is the reason the reflexive bridge is questioned in this phenotype.",
+          "evidence": [
+            {
+              "trial": "bridge",
+              "effect": "Forgoing bridging was noninferior for arterial thromboembolism; major bleeding was higher with bridging",
+              "note": "Direction only. The BRIDGE card does not print event rates. Population: AF on warfarin, elective interruption."
+            }
+          ],
+          "caveats": [
+            "Very high thrombotic-risk subgroups were not the BRIDGE default.",
+            "If this is a mechanical valve, recent VTE, or high-risk APS, leave this node."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Drop the routine bridge and plan restart",
+              "nextNodeId": "ppo-restart"
+            },
+            {
+              "label": "This is not typical AF",
+              "nextNodeId": "ppo-high"
+            }
+          ]
+        },
+        {
+          "id": "ppo-doac-ask",
+          "type": "question",
+          "title": "Is a heparin bridge proposed while the DOAC is held?",
+          "body": "DOAC interruptions in typical AF are usually a timed hold and a restart, using the product monograph and the institutional checklist. A heparin bridge while the oral agent is held is a separate proposal. This site does not print hold hours, kidney cutoffs, or doses.",
+          "why": "A warfarin-era “cover the gap” habit does not transfer to a drug with a short offset and onset. Clocks still differ by agent.",
+          "evidence": [],
+          "caveats": [
+            "Dabigatran clearance depends more on the kidneys than some factor Xa inhibitors. Do not invent one clock for every DOAC."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "framework",
+              "id": "af-stroke-prevention",
+              "label": "Framework: AF stroke prevention"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Yes — heparin bridge proposed during the DOAC hold",
+              "nextNodeId": "ppo-doac"
+            },
+            {
+              "label": "No — hold and restart only",
+              "nextNodeId": "ppo-restart"
+            }
+          ]
+        },
+        {
+          "id": "ppo-doac",
+          "type": "caution",
+          "title": "Typical AF on a DOAC — teaching is hold and restart, without a heparin bridge",
+          "body": "The peri-procedural framework teaches that DOAC interruptions in typical AF generally do not need a heparin bridge while the oral agent is held. Use the monograph and the local checklist for timing. Teaching example: discuss dropping the reflexive heparin bridge with the team. BRIDGE studied warfarin interruption, so it is context for the habit, not a DOAC protocol. This pathway does not print hours or doses.",
+          "why": "The short DOAC clock is the reason a parenteral bridge is not the usual teaching for this phenotype.",
+          "evidence": [],
+          "caveats": [
+            "Confirm the indication is still a DOAC-eligible niche. Mechanical valves are not.",
+            "Kidney function, interacting drugs, and procedure bleed risk change the clock. Verify the label locally."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE (warfarin context)"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Plan hold and restart without a heparin bridge",
+              "nextNodeId": "ppo-restart"
+            },
+            {
+              "label": "This is not a typical-AF DOAC interruption",
+              "nextNodeId": "ppo-high"
+            }
+          ]
+        },
+        {
+          "id": "ppo-high",
+          "type": "caution",
+          "title": "Not the BRIDGE default — do not finish the plan here",
+          "body": "Mechanical valves, especially mitral or a recent implant, recent VTE, and some high-risk APS are higher thrombotic-risk interruptions. Do not apply the typical-AF “skip routine bridging” line unchanged. Mechanical-valve bridging stays on the mechanical valve pathway and with the valve clinic. Recent VTE and high-risk APS use specialty or institutional plans. This pathway does not supply LMWH doses or a valve protocol. Discuss with the team that owns that niche.",
+          "why": "Extrapolating BRIDGE to a mechanical mitral valve is unsafe teaching. Importing valve bridging into typical AF is the other error.",
+          "evidence": [
+            {
+              "trial": "bridge",
+              "effect": "In nonvalvular AF, forgoing bridging was noninferior for arterial thromboembolism and major bleeding was higher with bridging — do not generalize to mechanical valves",
+              "note": "Direction only. Open the BRIDGE card. Valve bridging is a different pathway."
+            }
+          ],
+          "caveats": [
+            "Low-bleed procedures may still not need interruption. Confirm with the proceduralist.",
+            "High-risk APS agent choice lives on the APS pathway. That pathway is not an LMWH dose chart."
+          ],
+          "links": [
+            {
+              "kind": "tx",
+              "id": "mechanical-valve",
+              "label": "TX: Mechanical heart valve"
+            },
+            {
+              "kind": "framework",
+              "id": "mechanical-valve-vka",
+              "label": "Framework: Mechanical valve"
+            },
+            {
+              "kind": "tx",
+              "id": "aps",
+              "label": "TX: Antiphospholipid syndrome"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE (contrast)"
+            },
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Done — plan belongs on another pathway",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-restart",
+          "type": "recommendation",
+          "title": "Name who restarts anticoagulation after hemostasis",
+          "body": "Teaching example: the first post-procedure dose waits until the proceduralist says hemostasis allows it. Warfarin and DOAC clocks differ. This site does not assign a restart hour. Write who will confirm the restart, and what happens if bleeding continues. Discuss with the team.",
+          "why": "A hold without an owner for restart is an unfinished plan.",
+          "evidence": [],
+          "caveats": [
+            "Post-ICH timing is a different pathway.",
+            "Emergency reversal, if it happened, does not set the elective restart clock."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Document the plan",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-end",
+          "type": "end",
+          "title": "Pathway complete — elective peri-procedural plan",
+          "body": "In teaching language, record whether interruption was needed, the agent class, the thrombotic risk of the hold, and the bleed risk of the procedure and of any bridge. Typical AF on warfarin: BRIDGE-era teaching is not routine LMWH bridging. Typical DOAC interruption: not a heparin bridge. Mechanical-valve bridging was not decided here. Educational only. Discuss with the team.",
+          "why": "The four named steps are the plan. A drug name without those steps is not.",
+          "evidence": [],
+          "caveats": [],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "tx",
+              "id": "mechanical-valve",
+              "label": "TX: Mechanical valve (bridging contrast)"
             }
           ],
           "choices": []

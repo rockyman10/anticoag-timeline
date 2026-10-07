@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "Peri-procedural OAC treatment pathway",
+      items: [
+        "Teach → Treatment pathways adds peri-procedural-oac at #/pathway-tx/peri-procedural-oac. The walk is elective interruption and bridging teaching for typical AF and for DOAC holds, centered on BRIDGE.",
+        "Nodes ask whether interruption is needed, separate emergency hemostasis from elective planning, and split typical AF on warfarin, typical AF on a DOAC, and higher thrombotic-risk niches. Mechanical-valve bridging stays on the mechanical-valve pathway.",
+        "The pathway links the BRIDGE card, the peri-procedural-oac framework, and the af-warfarin-bridge-reflex case. Those two teaching cards link back. No hold-day counts, LMWH doses, or dosing calculator. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp stays 2026-10-04."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "ADAM-VTE journal-club handout",
       items: [
         "More details for ADAM-VTE now has strengths, limitations, and a journal-club note. Background and design notes were already present and were left in place. Rapid Recap counts were not changed.",

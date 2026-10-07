@@ -329,6 +329,7 @@ window.ANTICOAG_FRAMEWORKS = [
     ],
     pearl: "Say three things out loud before you write LMWH: Must I interrupt? What is the thrombotic risk of the hold? What is the bleed risk of the procedure — and of bridging itself? Typical AF on warfarin → BRIDGE says skip routine bridging.",
     links: [
+      { kind: "tx-pathway", id: "peri-procedural-oac", label: "TX: Peri-procedural OAC" },
       { kind: "case", id: "af-warfarin-bridge-reflex", label: "Case: AF warfarin — reflexive bridge?" },
       { kind: "trial", id: "bridge", label: "Trial: BRIDGE" },
       { kind: "framework", id: "mechanical-valve-vka", label: "Framework: Mechanical valve (high-risk contrast)" },

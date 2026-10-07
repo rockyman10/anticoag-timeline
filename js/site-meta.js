@@ -6,7 +6,17 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
-title: "BRIDGE absolute rates on the trial card",
+      title: "Idelalisib and ribociclib CYP3A fold teaching",
+      items: [
+        "DDI lastCurated stays 2026-10-07. The oncology TKI suite stays paused. reviewedBy is unchanged and unnamed.",
+        "Idelalisib cards: ZYDELIG (DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50, effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. Section 7.2 says coadministration with a CYP3A substrate may increase substrate concentrations and says to avoid sensitive CYP3A substrates. The current label does not print strong for idelalisib as a perpetrator. The labeled 5.4-fold midazolam AUC meets the FDA January 2020 strong-inhibitor criterion (at least a 5-fold AUC increase of a sensitive index CYP substrate; midazolam is a CYP3A sensitive index substrate). The fold is the labeled result. No DOAC percent was added.",
+        "Digoxin exposure was unchanged with ZYDELIG, so dabigatran and edoxaban still do not teach a PK exposure increase. Apixaban and rivaroxaban keep a theoretical CYP3A4 increase. No warfarin–idelalisib card was on the site, so none was added.",
+        "Ribociclib cards: KISQALI (DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8, effective 2026-07-01). Ribociclib 400 mg once daily for 8 days increased midazolam Cmax 2.1-fold and AUCinf 3.8-fold. 600 mg once daily is predicted to increase midazolam Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA product information, secondary to the US folds, says strong at 600 mg and moderate at 400 mg. In vitro, ribociclib has a low potential to inhibit P-gp; dabigatran and edoxaban do not teach an exposure increase. No DOAC percent was added."
+      ]
+    },
+    {
+      date: "2026-10-07",
+      title: "BRIDGE absolute rates on the trial card",
       items: [
         "The BRIDGE Rapid Recap now prints the Douketis NEJM 2015 abstract rates (doi:10.1056/NEJMoa1501035; PMID 26095867). Arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging); risk difference 0.1 percentage points (95% CI −0.6 to 0.8); P=0.01 for noninferiority. Major bleeding 1.3% (no bridging) vs 3.2% (bridging); relative risk 0.41 (95% CI 0.20 to 0.78); P=0.005 for superiority.",
         "Population on the card: 1884 enrolled (950 no bridging, 934 bridging). No hazard ratio was added. Teaching stays skip routine LMWH bridging in typical AF. No hold-day counts, LMWH doses, or dosing calculator.",

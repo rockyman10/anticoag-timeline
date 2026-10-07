@@ -6,6 +6,16 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "Idelalisib and ribociclib CYP3A fold teaching",
+      items: [
+        "DDI lastCurated stays 2026-10-07. The oncology TKI suite stays paused. reviewedBy is unchanged and unnamed.",
+        "Idelalisib cards: ZYDELIG (DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50, effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. Section 7.2 says coadministration with a CYP3A substrate may increase substrate concentrations and says to avoid sensitive CYP3A substrates. The current label does not print strong for idelalisib as a perpetrator. The labeled 5.4-fold midazolam AUC meets the FDA January 2020 strong-inhibitor criterion (at least a 5-fold AUC increase of a sensitive index CYP substrate; midazolam is a CYP3A sensitive index substrate). The fold is the labeled result. No DOAC percent was added.",
+        "Digoxin exposure was unchanged with ZYDELIG, so dabigatran and edoxaban still do not teach a PK exposure increase. Apixaban and rivaroxaban keep a theoretical CYP3A4 increase. No warfarin–idelalisib card was on the site, so none was added.",
+        "Ribociclib cards: KISQALI (DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8, effective 2026-07-01). Ribociclib 400 mg once daily for 8 days increased midazolam Cmax 2.1-fold and AUCinf 3.8-fold. 600 mg once daily is predicted to increase midazolam Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA product information, secondary to the US folds, says strong at 600 mg and moderate at 400 mg. In vitro, ribociclib has a low potential to inhibit P-gp; dabigatran and edoxaban do not teach an exposure increase. No DOAC percent was added."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Peri-procedural OAC treatment pathway",
       items: [
         "Teach → Treatment pathways adds peri-procedural-oac at #/pathway-tx/peri-procedural-oac. The walk is elective interruption and bridging teaching for typical AF and for DOAC holds, centered on BRIDGE.",

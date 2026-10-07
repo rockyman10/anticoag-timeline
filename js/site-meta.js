@@ -6,6 +6,14 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "Learn peri-bridge opens the treatment pathway",
+      items: [
+        "Core Clinic Path lesson peri-bridge now starts on the peri-procedural OAC treatment pathway at #/pathway-tx/peri-procedural-oac. The deepen step stays the af-warfarin-bridge-reflex case. A soft invite walks that same pathway, and the framework card stays one tap away.",
+        "Evidence chips on the three peri-bridge graphics open that treatment pathway. The BRIDGE graphic stays direction-only while the card prints no event rates. Mechanical-valve bridging links to the mechanical-valve pathway. No hold-day counts or LMWH doses. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp stays 2026-10-04."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Peri-procedural OAC treatment pathway",
       items: [
         "Teach → Treatment pathways adds peri-procedural-oac at #/pathway-tx/peri-procedural-oac. The walk is elective interruption and bridging teaching for typical AF and for DOAC holds, centered on BRIDGE.",

@@ -57,17 +57,20 @@ window.ANTICOAG_LEARN_PATH = {
       order: 3,
       title: "Holding for procedures — BRIDGE thinking",
       whyThis:
-        "Elective procedures are where reflexive bridging shows up — use the peri framework + BRIDGE-era case.",
-      orientTip: "Open the peri-procedural OAC framework first.",
+        "Elective procedures are where reflexive bridging shows up. Walk the peri-procedural OAC treatment pathway, then the BRIDGE-era case. A typical AF DOAC hold is not a heparin bridge.",
+      orientTip: "Open the peri-procedural OAC treatment pathway first.",
       goals: [
-        "Use the peri-procedural framework",
-        "Confront reflexive LMWH bridging in typical NVAF"
+        "Walk the peri-procedural OAC treatment pathway",
+        "Separate typical AF on warfarin (BRIDGE) from a DOAC hold without a heparin bridge"
       ],
-      primary: { kind: "framework", id: "peri-procedural-oac" },
+      primary: { kind: "pathway-tx", id: "peri-procedural-oac" },
       deepen: { kind: "case", id: "af-warfarin-bridge-reflex" },
       deepenRequired: false,
       hasEvidenceVisual: true,
-      softInvites: []
+      softInvites: [
+        { kind: "pathway-tx", id: "peri-procedural-oac", label: "Walk the peri-procedural OAC treatment pathway (BRIDGE-centered)." },
+        { kind: "framework", id: "peri-procedural-oac", label: "Optional: the peri-procedural OAC framework — the same four questions, as a card." }
+      ]
     },
     {
       id: "mech-valve",

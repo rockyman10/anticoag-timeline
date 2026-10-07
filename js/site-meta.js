@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "Learn-path graphics for lessons 2–10",
+      items: [
+        "Lessons 2–10 on the Core Clinic Path now have Evidence visuals in js/learn-visuals.js, in the same chart-or-table pattern as lesson 1. Each picture quotes a trial card, framework, or bleed page already on the site.",
+        "Where a card does not print an event rate — BRIDGE, AUGUSTUS, PIONEER, COMPASS primary percentages, EINSTEIN-CHOICE, ATLANTIS, ANNEXA-4 — the graphic says so and does not draw a bar. TRAPS and RAPS rates are not curated here and are not shown.",
+        "Regimen lines stay teaching examples of what the trial used, not orders. No dosing calculator. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp stays 2026-10-04."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Oncology DDI accuracy pass and parenteral reversal teaching",
       items: [
         "DDI lastCurated is 2026-10-07. The oncology TKI suite stays paused. reviewedBy is unchanged and unnamed.",

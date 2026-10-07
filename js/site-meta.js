@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "BRIDGE absolute rates on the trial card",
+      items: [
+        "The BRIDGE Rapid Recap now prints the Douketis NEJM 2015 abstract rates (doi:10.1056/NEJMoa1501035; PMID 26095867). Arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging); risk difference 0.1 percentage points (95% CI −0.6 to 0.8); P=0.01 for noninferiority. Major bleeding 1.3% (no bridging) vs 3.2% (bridging); relative risk 0.41 (95% CI 0.20 to 0.78); P=0.005 for superiority.",
+        "Population on the card: 1884 enrolled (950 no bridging, 934 bridging). No hazard ratio was added. Teaching stays skip routine LMWH bridging in typical AF. No hold-day counts, LMWH doses, or dosing calculator.",
+        "The peri-procedural-oac pathway, framework, and af-warfarin-bridge-reflex case quote those same rates. The Learn graphic g-bridge-direction quotes the card percentages. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp stays 2026-10-04."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Peri-procedural OAC treatment pathway",
       items: [
         "Teach → Treatment pathways adds peri-procedural-oac at #/pathway-tx/peri-procedural-oac. The walk is elective interruption and bridging teaching for typical AF and for DOAC holds, centered on BRIDGE.",

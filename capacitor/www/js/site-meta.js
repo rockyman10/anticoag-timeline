@@ -6,6 +6,16 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-05",
+      title: "Teaching-tone and API-CAT regimen match",
+      items: [
+        "Dose and regimen highlights now say “Teaching example, not an order” and describe what the trial used. API-CAT takeaway no longer says reduced-dose apixaban is preferred.",
+        "API-CAT card and dosing highlight both follow Mahé et al., NEJM (DOI already on the card): after at least 6 months of anticoagulation, 2.5 mg twice daily for 12 months versus 5 mg twice daily for 12 months. No further timed step-down was added.",
+        "Mechanical-valve warfarin node, rivaroxaban VTE load/maintain strip, and warfarin 4F-PCC line rephrased as teaching examples. Pathway nodes that used to say what to do are labeled reasoning steps. Each pathway and case shows “Teaching example, not a prescription.”",
+        "Related links added for acute VTE, cancer VTE, AF stroke prevention, and LAAO versus anticoagulation, plus the CKD/GI-bleed, cancer step-down, LAAO candidate, and acute DVT cases. Factor XI stays a playlist link on the existing nuance. reviewedBy unchanged."
+      ]
+    },
+    {
+      date: "2026-10-05",
       title: "HOME-PE primary endpoint correction",
       items: [
         "HOME-PE (Roy et al., Eur Heart J 2021, doi:10.1093/eurheartj/ehab373): the sole primary is the 30-day composite, per-protocol noninferiority, 3.82% (34/891) vs 3.57% (32/896), adjusted absolute difference 0.20%, one-sided 95% upper limit 1.43%, P=0.004, margin 2.5%. Home treatment 38.4% (378/984) vs 36.6% (361/986), P=0.41, is the first secondary outcome (superiority, intention-to-treat). reviewedBy unchanged."

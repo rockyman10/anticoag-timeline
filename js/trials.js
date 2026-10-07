@@ -1626,20 +1626,20 @@ window.ANTICOAG_TRIALS = [
     "impact": 1,
     "title": "Extended Reduced-Dose Apixaban for Cancer-Associated Venous Thromboembolism",
     "population": "Active cancer + VTE after ≥6 months anticoagulation",
-    "intervention": "Apixaban 2.5 mg BID for 12 months",
-    "comparator": "Apixaban 5 mg BID",
+    "intervention": "Apixaban 2.5 mg twice daily for 12 months (reduced-dose arm)",
+    "comparator": "Apixaban 5 mg twice daily for 12 months (full-dose arm)",
     "primaryResult": "Recurrent VTE 2.1% vs 2.8% (noninferior; P=0.001 for NI)",
     "safety": "Clinically relevant bleeding 12.1% vs 15.6% (P=0.03)",
-    "takeaway": "After 6 months, reduced-dose apixaban is preferred for many patients with cancer-associated VTE.",
+    "takeaway": "In API-CAT, after at least 6 months of anticoagulation, apixaban 2.5 mg twice daily for 12 months was noninferior to 5 mg twice daily for recurrent VTE, with less clinically relevant bleeding.",
     "cite": "Mahé I, et al. N Engl J Med. 2025.",
     "doi": "10.1056/NEJMoa2416112",
     "url": "https://doi.org/10.1056/NEJMoa2416112",
     "expectedResults": null,
     "background": "After ≥6 months of cancer VTE therapy, whether reduced-dose apixaban is enough was unanswered.",
-    "designNotes": "RCT of apixaban 2.5 vs 5 mg BID for 12 months after ≥6 months anticoagulation (active cancer + VTE).",
+    "designNotes": "RCT. After at least 6 months of anticoagulation, patients with active cancer and VTE were assigned apixaban 2.5 mg twice daily or 5 mg twice daily for 12 months. There was no further timed dose change during those 12 months.",
     "strengths": "Noninferior recurrence with less clinically relevant bleeding at reduced dose — immediately actionable.",
     "limitations": "Applies to patients who completed initial therapy; individual cancer/bleeding risk still matters.",
-    "journalClub": "API-CAT: after 6 months, reduced-dose apixaban is preferred for many extended cancer-VTE patients.",
+    "journalClub": "API-CAT assigned apixaban 2.5 mg twice daily or 5 mg twice daily for 12 months after at least 6 months of anticoagulation. Reduced dose was noninferior for recurrent VTE, with less clinically relevant bleeding.",
     "guidelines": [
       {
         "society": "ASH",
@@ -1654,7 +1654,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Applies after ≥6 months completed therapy; cancer activity and bleed risk still guide duration.",
-    "practiceTakeaway": "After ≥6 months for cancer VTE, switch many patients to apixaban 2.5 mg BID if continuing anticoagulation."
+    "practiceTakeaway": "API-CAT studied apixaban 2.5 mg twice daily versus 5 mg twice daily for 12 months in cancer-associated VTE after at least 6 months of anticoagulation. Teaching example of what the trial used — not a prescription."
   },
   {
     "id": "avert",

@@ -17,7 +17,17 @@ window.ANTICOAG_FRAMEWORKS = [
       "Severe renal impairment below labeled thresholds — check product labeling and local protocol",
       "High-risk PE needing reperfusion / hemodynamic support — stabilize first"
     ],
-    pearl: "Pick the DOAC you can dose correctly and the patient can take—then use bleeding-risk nuance (e.g., COBRRA teaching) only when choice among DOACs is otherwise equal. Verify renal cutoffs locally."
+    pearl: "Pick the DOAC you can dose correctly and the patient can take—then use bleeding-risk nuance (e.g., COBRRA teaching) only when choice among DOACs is otherwise equal. Verify renal cutoffs locally.",
+    links: [
+      { kind: "tx-pathway", id: "acute-vte", label: "TX: Acute VTE" },
+      { kind: "case", id: "vte-doac-choice", label: "Case: Acute DVT drug choice" },
+      { kind: "trial", id: "amplify", label: "Trial: AMPLIFY" },
+      { kind: "trial", id: "einstein-dvt", label: "Trial: EINSTEIN-DVT" },
+      { kind: "trial", id: "einstein-pe", label: "Trial: EINSTEIN-PE" },
+      { kind: "trial", id: "hokusai-vte", label: "Trial: Hokusai-VTE" },
+      { kind: "trial", id: "cobrra", label: "Trial: COBRRA" },
+      { kind: "trial", id: "hi-pro", label: "Trial: HI-PRO" }
+    ]
   },
   {
     id: "cancer-vte",
@@ -34,7 +44,19 @@ window.ANTICOAG_FRAMEWORKS = [
       "Pregnancy-associated cancer VTE — specialist pathways",
       "Patients unable to take oral meds or with unresolved vomiting"
     ],
-    pearl: "Acute: DOAC vs LMWH is preference-sensitive after Caravaggio-era data. Extended: think API-CAT-style step-down only after adequate acute therapy and ongoing risk—reassess bleeding and cancer status."
+    pearl: "Acute: DOAC vs LMWH is preference-sensitive after Caravaggio-era data. Extended: think API-CAT-style step-down only after adequate acute therapy and ongoing risk—reassess bleeding and cancer status.",
+    links: [
+      { kind: "tx-pathway", id: "cancer-vte", label: "TX: Cancer VTE" },
+      { kind: "pathway", id: "cancer-vte", label: "Playlist: Cancer-associated VTE" },
+      { kind: "case", id: "cancer-stepdown", label: "Case: Cancer step-down" },
+      { kind: "trial", id: "catch", label: "Trial: CATCH" },
+      { kind: "trial", id: "hokusai-vte-cancer", label: "Trial: Hokusai VTE Cancer" },
+      { kind: "trial", id: "select-d", label: "Trial: SELECT-D" },
+      { kind: "trial", id: "adam-vte", label: "Trial: ADAM-VTE" },
+      { kind: "trial", id: "caravaggio", label: "Trial: Caravaggio" },
+      { kind: "trial", id: "canvas", label: "Trial: CANVAS" },
+      { kind: "trial", id: "api-cat", label: "Trial: API-CAT" }
+    ]
   },
   {
     id: "af-stroke-prevention",
@@ -51,7 +73,20 @@ window.ANTICOAG_FRAMEWORKS = [
       "Severe renal failure below DOAC labels — often VKA or specialist dosing",
       "Absolute contraindication to anticoagulation — consider LAAO pathways instead"
     ],
-    pearl: "Default: labeled-dose DOAC for indicated NVAF. Intermediate risk and SINGLE-AF–style questions are shared decisions—document CHA₂DS₂-VASc, bleeding risk, and patient values."
+    pearl: "Default: labeled-dose DOAC for indicated NVAF. Intermediate risk and SINGLE-AF–style questions are shared decisions—document CHA₂DS₂-VASc, bleeding risk, and patient values.",
+    links: [
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "case", id: "af-renal-bleed", label: "Case: CKD with GI bleed" },
+      { kind: "trial", id: "active-w", label: "Trial: ACTIVE-W" },
+      { kind: "trial", id: "bafta", label: "Trial: BAFTA" },
+      { kind: "trial", id: "re-ly", label: "Trial: RE-LY" },
+      { kind: "trial", id: "rocket-af", label: "Trial: ROCKET-AF" },
+      { kind: "trial", id: "aristotle", label: "Trial: ARISTOTLE" },
+      { kind: "trial", id: "engage-af", label: "Trial: ENGAGE AF" },
+      { kind: "trial", id: "averroes", label: "Trial: AVERROES" },
+      { kind: "trial", id: "single-af", label: "Trial: SINGLE-AF" },
+      { kind: "trial", id: "eldercare-af", label: "Trial: ELDERCARE-AF" }
+    ]
   },
   {
     id: "af-pci-dual-pathway",
@@ -110,7 +145,17 @@ window.ANTICOAG_FRAMEWORKS = [
       "Valvular AF requiring VKA for valve indication — LAAO does not replace VKA for the valve",
       "Inability to complete periprocedural antithrombotic / follow-up imaging"
     ],
-    pearl: "LAAO trades procedural risk for drug exposure—consent must include DRT, peri-device leaks, and the fact that some patients still need antithrombotic therapy afterward."
+    pearl: "LAAO trades procedural risk for drug exposure—consent must include DRT, peri-device leaks, and the fact that some patients still need antithrombotic therapy afterward.",
+    links: [
+      { kind: "pathway", id: "laao", label: "Playlist: LAAO vs OAC" },
+      { kind: "case", id: "laao-candidate", label: "Case: LAAO candidate" },
+      { kind: "trial", id: "protect-af", label: "Trial: PROTECT-AF" },
+      { kind: "trial", id: "prevail", label: "Trial: PREVAIL" },
+      { kind: "trial", id: "prague-17", label: "Trial: PRAGUE-17" },
+      { kind: "trial", id: "laaos-iii", label: "Trial: LAAOS III" },
+      { kind: "trial", id: "option", label: "Trial: OPTION" },
+      { kind: "trial", id: "champion-af", label: "Trial: CHAMPION-AF" }
+    ]
   },
   {
     id: "frail-elderly-vka-doac",

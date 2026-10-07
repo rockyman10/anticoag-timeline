@@ -4,11 +4,20 @@ window.ANTICOAG_CASES = [
     id: "af-renal-bleed",
     title: "AF with CKD and prior GI bleed",
     stem: "78-year-old with NVAF, CHA₂DS₂-VASc 5, CrCl ~38 mL/min, remote melena on aspirin. No mechanical valve. You are starting anticoagulation.",
-    keyQuestion: "Which DOAC framework and dosing mindset fit—and what must you verify before writing the script?",
+    keyQuestion: "Reasoning step: which DOAC framework and dosing checks belong in the discussion?",
     trialIds: ["aristotle", "rocket-af", "engage-af", "re-ly", "averroes"],
     frameworkIds: ["af-stroke-prevention"],
     modelReasoning: "Stroke risk clearly favors anticoagulation over aspirin alone (AVERROES teaching). Prefer a DOAC with labeled dosing at this CrCl; apply dose-reduction criteria only when met (do not ‘under-dose for fear’). Counsel on GI bleed risk differences across agents and gastroprotection/PPI when indicated by history. Recheck CrCl after initiation and with intercurrent illness.",
-    teachingPoint: "CKD shifts dose and agent choice—but fear of bleeding is not an indication for aspirin monotherapy when OAC is warranted. Verify renal cutoffs on the label you actually use."
+    teachingPoint: "CKD shifts dose and agent choice—but fear of bleeding is not an indication for aspirin monotherapy when OAC is warranted. Verify renal cutoffs on the label you actually use.",
+    links: [
+      { kind: "framework", id: "af-stroke-prevention", label: "Framework: AF stroke prevention" },
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "trial", id: "aristotle", label: "Trial: ARISTOTLE" },
+      { kind: "trial", id: "rocket-af", label: "Trial: ROCKET-AF" },
+      { kind: "trial", id: "engage-af", label: "Trial: ENGAGE AF" },
+      { kind: "trial", id: "re-ly", label: "Trial: RE-LY" },
+      { kind: "trial", id: "averroes", label: "Trial: AVERROES" }
+    ]
   },
   {
     id: "cancer-stepdown",
@@ -18,7 +27,16 @@ window.ANTICOAG_CASES = [
     trialIds: ["caravaggio", "hokusai-vte-cancer", "api-cat", "select-d"],
     frameworkIds: ["cancer-vte"],
     modelReasoning: "Acute cancer VTE trials support DOAC options for many solid tumors; GI luminal tumors need extra caution. After adequate acute therapy, API-CAT informs reduced-dose apixaban for extended prevention in selected patients who still need anticoagulation. Reassess cancer activity, bleeding, interactions (including oral anticancer agents), and patient preference.",
-    teachingPoint: "Step-down is an extended-phase decision after Caravaggio-era acute care—not a week-2 shortcut. Reassess the cancer and the bleed risk every time you renew the script."
+    teachingPoint: "The reduced dose in API-CAT was an extended-phase assignment after at least 6 months of anticoagulation — not a week-2 shortcut. Reassess cancer activity and bleeding risk when the plan is renewed.",
+    links: [
+      { kind: "framework", id: "cancer-vte", label: "Framework: Cancer VTE" },
+      { kind: "tx-pathway", id: "cancer-vte", label: "TX: Cancer VTE" },
+      { kind: "pathway", id: "cancer-vte", label: "Playlist: Cancer-associated VTE" },
+      { kind: "trial", id: "api-cat", label: "Trial: API-CAT" },
+      { kind: "trial", id: "caravaggio", label: "Trial: Caravaggio" },
+      { kind: "trial", id: "hokusai-vte-cancer", label: "Trial: Hokusai VTE Cancer" },
+      { kind: "trial", id: "select-d", label: "Trial: SELECT-D" }
+    ]
   },
   {
     id: "af-pci-week2",
@@ -83,7 +101,16 @@ window.ANTICOAG_CASES = [
     trialIds: ["protect-af", "prevail", "prague-17", "champion-af", "option"],
     frameworkIds: ["laao-vs-oac"],
     modelReasoning: "Guideline-supported OAC remains first-line when tolerated. Recurrent major bleeding with mandatory interruptions is a classic shared-decision LAAO scenario (PROTECT/PREVAIL-era framing, modern device iterations). Consent for procedural risk, DRT, and possible post-implant antithrombotic therapy. Optimize GI evaluation in parallel.",
-    teachingPoint: "LAAO is for OAC failure/intolerance narratives—not for patients who simply dislike monitoring. The consult should include life after the implant, not only the implant day."
+    teachingPoint: "LAAO is for OAC failure/intolerance narratives—not for patients who simply dislike monitoring. The consult should include life after the implant, not only the implant day.",
+    links: [
+      { kind: "framework", id: "laao-vs-oac", label: "Framework: LAAO versus anticoagulation" },
+      { kind: "pathway", id: "laao", label: "Playlist: LAAO vs OAC" },
+      { kind: "trial", id: "protect-af", label: "Trial: PROTECT-AF" },
+      { kind: "trial", id: "prevail", label: "Trial: PREVAIL" },
+      { kind: "trial", id: "prague-17", label: "Trial: PRAGUE-17" },
+      { kind: "trial", id: "champion-af", label: "Trial: CHAMPION-AF" },
+      { kind: "trial", id: "option", label: "Trial: OPTION" }
+    ]
   },
   {
     id: "vte-doac-choice",
@@ -93,13 +120,21 @@ window.ANTICOAG_CASES = [
     trialIds: ["amplify", "einstein-dvt", "cobrra", "hokusai-vte"],
     frameworkIds: ["acute-vte-doac"],
     modelReasoning: "Either labeled DOAC is guideline-congruent for eligible acute VTE. Bleeding-sensitive patients and COBRRA-style teaching may tip toward apixaban when both are accessible; rivaroxaban remains appropriate with food counseling for the 15/20 mg doses. Edoxaban if a heparin lead-in workflow is preferred. Exclude APS/pregnancy red flags.",
-    teachingPoint: "When efficacy is comparable in class, logistics and bleeding phenotype decide. Teach the load→maintenance calendar out loud before discharge."
+    teachingPoint: "When efficacy is comparable in class, logistics and bleeding phenotype decide. Teach the load→maintenance calendar out loud before discharge.",
+    links: [
+      { kind: "framework", id: "acute-vte-doac", label: "Framework: Acute VTE" },
+      { kind: "tx-pathway", id: "acute-vte", label: "TX: Acute VTE" },
+      { kind: "trial", id: "amplify", label: "Trial: AMPLIFY" },
+      { kind: "trial", id: "einstein-dvt", label: "Trial: EINSTEIN-DVT" },
+      { kind: "trial", id: "cobrra", label: "Trial: COBRRA" },
+      { kind: "trial", id: "hokusai-vte", label: "Trial: Hokusai-VTE" }
+    ]
   },
   {
     id: "fxa-ich-post-andexxa",
     title: "ICH on apixaban — U.S. reversal after Andexxa withdrawal",
     stem: "72-year-old with NVAF on apixaban 5 mg BID presents with acute lobar ICH, GCS declining. Last apixaban dose ~6 hours ago. BP being controlled. Neurosurgery and pharmacy are on the line. A trainee asks whether to ‘give Andexxa.’",
-    keyQuestion: "In U.S. practice after Dec 22, 2025, what is the teachable reversal branch — and what must you not order?",
+    keyQuestion: "Reasoning step: which reversal branch does the U.S. formulary support after Dec 22, 2025, and which agent sits outside that branch?",
     trialIds: ["annexa-i", "annexa-4"],
     frameworkIds: ["doac-major-bleed-us", "post-ich-anticoagulation"],
     modelReasoning: "ABCs and ICH bundle first; stop apixaban. This is an FXa inhibitor, not dabigatran — idarucizumab does not apply. Andexxa is not available in the U.S. after Dec 22, 2025 (voluntary BLA withdrawal after FDA concluded risks outweighed benefits; thromboembolic signal from the andexanet development program, including ANNEXA-I teaching context). Open the institutional anticoagulant-ICH / FXa-bleed pathway: supportive care and institutional/off-label 4F-PCC per protocol — not an FDA-labeled specific FXa antidote now that Andexxa is withdrawn. Do not invent PCC dose at the bedside; use the hospital order set. ANNEXA-4/I inform history and thrombosis trade-off teaching, not a current U.S. Andexxa order. After hemostasis, plan restart vs delay vs LAAO with a named multidisciplinary owner (post-ICH framework).",

@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-07",
+      title: "COBRRA regimen and recurrent VTE rates",
+      items: [
+        "The COBRRA dosing highlight now names the regimens the trial used: apixaban 10 mg twice daily for 7 days, then 5 mg twice daily, compared with rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily, for 3 months. The rivaroxaban food note is unchanged. The line is a teaching example of what the trial used, not an order.",
+        "Recurrent symptomatic VTE replaces the ~1% line with Castellucci et al., N Engl J Med. 2026;394:1051-1060 (doi:10.1056/NEJMoa2510703), Table 2: 15/1345 (1.1%) with apixaban vs 14/1355 (1.0%) with rivaroxaban; RR 1.08 (95% CI 0.52–2.23). That comparison is a secondary outcome, and the interval was not adjusted for multiplicity. Death from any cause was 1 (0.1%) vs 4 (0.3%); RR 0.25 (95% CI 0.03–2.26).",
+        "Takeaway and practice takeaway state the lower clinically relevant bleeding and those recurrent VTE rates in evidence wording. Strengths, limitations, and the journal-club note use the same published rates. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp stays 2026-10-04."
+      ]
+    },
+    {
+      date: "2026-10-07",
       title: "Peri-procedural OAC treatment pathway",
       items: [
         "Teach → Treatment pathways adds peri-procedural-oac at #/pathway-tx/peri-procedural-oac. The walk is elective interruption and bridging teaching for typical AF and for DOAC holds, centered on BRIDGE.",

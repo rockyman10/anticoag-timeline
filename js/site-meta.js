@@ -6,6 +6,15 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-15",
+      title: "Educational voice: trial and guideline attribution",
+      items: [
+        "Sentences that read as instructions on trial cards, treatment pathways, frameworks, a case, the DDI library, the CACP practice questions and the Learn path now say what the cited trial, guideline or label found or lists.",
+        "Meaning is unchanged and no numbers were added. Doses appear only as a trial or label gave them.",
+        "Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
+      date: "2026-10-15",
       title: "Clinical context: HOME-PE denominators, API-CAT and RENOVE, BRIDGE exclusions, factor XI, neuraxial intervals, apixaban regimens",
       items: [
         "HOME-PE card now shows the thirty-day composite in both published denominators, per-protocol and intention-to-treat, beside the home-treated subgroup.",

@@ -679,7 +679,7 @@ window.ANTICOAG_TRIALS = [
     "background": "Selected patients with pulmonary embolism can be treated at home, but clinics have used different triage rules. HOME-PE compared the Hestia rule with the simplified Pulmonary Embolism Severity Index. It is not a trial of one anticoagulant versus another, and it is not a reperfusion trial.",
     "designNotes": "Randomized: yes. Normotensive pulmonary embolism. A negative triage tool was not enough for home treatment: the physician could still admit the patient. The sole primary outcome was the 30-day composite, analyzed as per-protocol noninferiority with a 2.5% absolute risk-difference margin (adjusted absolute difference 0.20%; one-sided 95% upper limit 1.43%; P=0.004). Home treatment was the first secondary outcome, tested for superiority in the intention-to-treat population. ClinicalTrials.gov NCT02811237.",
     "strengths": "Pragmatic randomized comparison of two triage strategies. The primary 30-day composite and the first secondary outcome, the proportion actually treated at home, are both reported, and physician judgment stayed in the pathway.",
-    "limitations": "Not a drug trial. Home treatment still required the physician’s agreement, so a negative rule did not automatically mean discharge. The home-treatment comparison (38.4% vs 36.6%; P=0.41) is the first secondary superiority test in the intention-to-treat population. Do not use these rates to choose a DOAC or to decide on thrombolysis.",
+    "limitations": "Not a drug trial. Home treatment still required the physician’s agreement, so a negative rule did not automatically mean discharge. The home-treatment comparison (38.4% vs 36.6%; P=0.41) is the first secondary superiority test in the intention-to-treat population. HOME-PE did not compare DOACs or test thrombolysis, so these rates do not inform either choice.",
     "journalClub": "Noninferiority of the sole primary, the 30-day composite — randomized, per-protocol, adjusted absolute difference 0.20% with a one-sided 95% upper limit of 1.43% against a 2.5% margin (P=0.004) — limited to normotensive patients with physician override. Home treatment (38.4% vs 36.6%; P=0.41) is the first secondary superiority test in the intention-to-treat population. HOME-PE is not PEITHO and not HI-PEITHO.",
     "guidelines": [
       {
@@ -1490,7 +1490,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Sinus-rhythm HF population—does not apply to AF needing anticoagulation.",
-    "practiceTakeaway": "Do not prescribe low-dose rivaroxaban for HF with sinus rhythm and CAD hoping to improve outcomes.",
+    "practiceTakeaway": "In COMMANDER HF, low-dose rivaroxaban did not significantly reduce death, MI, or stroke versus placebo in HF with sinus rhythm and CAD, so the trial does not support it for improving outcomes.",
     "questionsAnswered": [
       {
         "text": "In worsening heart failure with coronary disease and sinus rhythm, did rivaroxaban 2.5 mg twice daily, as given in the trial, reduce death, myocardial infarction or stroke compared with placebo? No significant reduction was seen.",
@@ -1937,7 +1937,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Randomized: yes. Open-label, adjudicator-masked. Primary composite 6.8% vs 16.2% (hazard ratio 0.44; 95% CI 0.30–0.65); less bleeding (hazard ratio 0.34). Pooled GRADE (Galli 2026 meta-analysis of 6 RCTs, which includes this trial): high certainty that OAC alone reduced any bleeding (the pooled primary safety endpoint); moderate certainty for no difference in MACE. The abstract does not print major-ischemic-event rates. Not the early post-stent window.",
-    "practiceTakeaway": "Use EPIC-CAD, beside AFIRE, to teach edoxaban monotherapy versus edoxaban plus one antiplatelet in stable coronary disease with atrial fibrillation. The reported gain is a composite that includes bleeding. Do not apply it to the early period after PCI, and do not use it as a dosing calculator."
+    "practiceTakeaway": "Use EPIC-CAD, beside AFIRE, to teach edoxaban monotherapy versus edoxaban plus one antiplatelet in stable coronary disease with atrial fibrillation. The reported gain is a composite that includes bleeding. EPIC-CAD did not study the early period after PCI, and the card is not a dosing calculator."
   },
   {
     "id": "adapt-af-des",
@@ -3369,7 +3369,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Antiplatelet-based strategy",
     "primaryResult": "Stopped early: higher death or thromboembolic events with rivaroxaban strategy",
     "safety": "Primary safety (major, disabling, or life-threatening bleeding): 4.3 vs 2.8 per 100 person-years (HR 1.50; 95% CI 0.95–2.37; P=0.08). This was not a significant bleeding increase.",
-    "takeaway": "Do not use routine rivaroxaban after TAVR without another OAC indication.",
+    "takeaway": "GALILEO, which tested routine rivaroxaban after TAVR in patients without another OAC indication, was stopped early by its data and safety monitoring board because of safety concerns; the rivaroxaban strategy had a higher risk of death or thromboembolic events and a higher risk of bleeding than the antiplatelet strategy.",
     "cite": "Dangas GD, et al. N Engl J Med. 2020.",
     "doi": "10.1056/NEJMoa1911425",
     "url": "https://doi.org/10.1056/NEJMoa1911425",
@@ -3394,7 +3394,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Stopped early. Primary efficacy harm was significant. Primary safety bleeding was not (HR 1.50; 95% CI 0.95–2.37; P=0.08). Patients with a separate indication for oral anticoagulation were not this trial.",
-    "practiceTakeaway": "Do not start routine rivaroxaban after TAVR solely for the valve—use antiplatelet pathways unless another OAC indication exists.",
+    "practiceTakeaway": "GALILEO does not support routine rivaroxaban after TAVR solely for the valve; the antiplatelet strategy fared better when no other OAC indication existed.",
     "questionsAnswered": [
       {
         "text": "After successful TAVR in patients without another indication for anticoagulation, was a rivaroxaban-based strategy better than an antiplatelet-based strategy? No; the trial was stopped early for more death or thromboembolic events with rivaroxaban.",
@@ -3498,7 +3498,7 @@ window.ANTICOAG_TRIALS = [
         "year": 2021
       }
     ],
-    "caveats": "Randomized: yes. Bleeding primaries: 21.7% vs 34.6% for all bleeding (risk ratio 0.63; 95% CI 0.43–0.90). Most bleeding was minor access-site bleeding. Do not use the aspirin-cohort rates here. Do not call this ENVISAGE-TAVI AF.",
+    "caveats": "Randomized: yes. Bleeding primaries: 21.7% vs 34.6% for all bleeding (risk ratio 0.63; 95% CI 0.43–0.90). Most bleeding was minor access-site bleeding. The rates here are from the oral anticoagulation cohort, not the aspirin cohort. This trial is distinct from ENVISAGE-TAVI AF.",
     "practiceTakeaway": "Use this card when the patient undergoing TAVI is already on oral anticoagulation: anticoagulation alone had less 12-month bleeding than anticoagulation plus 3 months of clopidogrel. Use the other POPular TAVI card when there is no long-term anticoagulation indication. This is not a dosing calculator.",
     "questionsAnswered": [
       {
@@ -3668,7 +3668,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Strata by OAC indication matter; concerning signals in the no-indication stratum vs antiplatelet care.",
-    "practiceTakeaway": "Do not use routine apixaban after TAVI without a separate anticoagulation indication.",
+    "practiceTakeaway": "In ATLANTIS, apixaban did not improve the primary net clinical outcome versus standard care, so the trial does not support routine apixaban after TAVI without a separate anticoagulation indication.",
     "questionsAnswered": [
       {
         "text": "After TAVI, did an apixaban-based strategy improve the net clinical outcome compared with standard care (a VKA when anticoagulation was indicated, antiplatelet therapy when it was not)? No, overall.",
@@ -3990,7 +3990,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Primary 12-month HALT was not met (P=0.54). The clinical composite risk difference was 5.9% (95% CI 1.2% to 10.6%), with the higher rate on the DOAC strategy (8.2% vs 2.3%).",
-    "practiceTakeaway": "Do not prescribe a short DOAC course after TAVR solely to prevent HALT. The primary 12-month imaging endpoint was not met.",
+    "practiceTakeaway": "NOTION-4 does not support a short DOAC course after TAVR solely to prevent HALT. The primary 12-month imaging endpoint was not met.",
     "questionsAnswered": [
       {
         "text": "After successful TAVR without an anticoagulation indication, did 3 months of a DOAC followed by single antiplatelet therapy reduce leaflet thickening (HALT) at 12 months compared with lifelong single antiplatelet therapy? No; the primary endpoint was not met.",
@@ -4109,7 +4109,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Stopped early for futility after 163 primary events. The population was already treated with a VKA. This does not argue against starting a DOAC in a DOAC-naive frail patient when that is otherwise appropriate.",
-    "practiceTakeaway": "If a frail patient is stable on VKA, do not switch to a DOAC by default.",
+    "practiceTakeaway": "In FRAIL-AF, switching stable frail patients from VKA to a DOAC increased major or clinically relevant nonmajor bleeding, so the trial does not support a default switch.",
     "questionsAnswered": [
       {
         "text": "In frail older adults already stable on a VKA, did switching to a DOAC reduce bleeding? No; major or clinically relevant nonmajor bleeding was higher after switching, and the trial was stopped early for futility.",
@@ -5397,7 +5397,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Termination on the registry is not an efficacy or safety result. VTE recurrence and bleeding effects are unknown until results are posted.",
-    "practiceTakeaway": "Do not prescribe abelacimab for cancer-associated VTE from ASTER or MAGNOLIA. Use approved DOAC or LMWH pathways until a results paper or registry results exist."
+    "practiceTakeaway": "ASTER and MAGNOLIA have posted no efficacy or safety results, so they give no basis for abelacimab in cancer-associated VTE. Approved DOAC or LMWH pathways remain the evidence base until a results paper or registry results exist."
   },
   {
     "id": "librexia-af",

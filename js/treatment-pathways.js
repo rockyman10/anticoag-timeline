@@ -1950,7 +1950,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "dap-ccs",
           "type": "recommendation",
           "title": "Stable coronary disease beyond 12 months: guidelines favor OAC alone",
-          "body": "ACC/AHA 2023 (Class 1, LOE B-R): in AF with chronic coronary disease beyond 1 year after revascularization, or CAD not requiring revascularization, without history of stent thrombosis, oral anticoagulation monotherapy is recommended over OAC plus a single antiplatelet to decrease major bleeding. ESC AF 2024 (Class III, LOE B): antiplatelet therapy beyond 12 months is not recommended in stable chronic coronary or vascular disease on OAC. ESC CCS 2024 (Class I, LOE B): VKA alone or, preferably, DOAC alone lifelong. Discuss stopping the antiplatelet with the prescriber or cardiologist; do not stop the anticoagulant.",
+          "body": "ACC/AHA 2023 (Class 1, LOE B-R): in AF with chronic coronary disease beyond 1 year after revascularization, or CAD not requiring revascularization, without history of stent thrombosis, oral anticoagulation monotherapy is recommended over OAC plus a single antiplatelet to decrease major bleeding. ESC AF 2024 (Class III, LOE B): antiplatelet therapy beyond 12 months is not recommended in stable chronic coronary or vascular disease on OAC. ESC CCS 2024 (Class I, LOE B): VKA alone or, preferably, DOAC alone lifelong. These statements concern stopping the antiplatelet, a step discussed with the prescriber or cardiologist; none of them supports stopping the anticoagulant.",
           "why": "Adding an antiplatelet significantly increased bleeding in AFIRE, EPIC-CAD, ADAPT AF-DES, and AQUATIC (numerical only in OAC-ALONE), with no ischemic benefit in any. AQUATIC, the only double-blind trial, found harm with aspirin.",
           "evidence": [
             {
@@ -3073,7 +3073,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "recommendation",
           "title": "Typical teaching: INR 2.5–3.5 for mechanical mitral (and many higher-risk aortic)",
           "body": "Dose-adjusted warfarin to the higher guideline intensity appropriate for mitral position or higher-risk aortic prostheses. Coordinate cardiology/valve clinic follow-up.",
-          "why": "Mitral mechanical valves carry higher thromboembolic risk; guidelines generally recommend higher INR intensity than low-risk aortic bileaflet valves.",
+          "why": "Mitral mechanical valves carry higher thromboembolic risk; ACC/AHA and ESC valve guidelines set higher INR intensity than for low-risk aortic bileaflet valves.",
           "evidence": [],
           "caveats": [
             "Verify exact range for the implanted prosthesis and concurrent AF"
@@ -3839,7 +3839,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "why": "An unnecessary interruption is a thrombotic gap you then have to manage.",
           "evidence": [],
           "caveats": [
-            "If the proceduralist later decides a hold is required, return to the phenotype question. Do not bridge by default."
+            "If the proceduralist later decides a hold is required, return to the phenotype question. BRIDGE and the CHEST perioperative guideline cited on this pathway do not support bridging by default."
           ],
           "links": [
             {
@@ -3864,7 +3864,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "question",
           "title": "Whose thrombotic risk is this hold?",
           "body": "Typical nonvalvular AF on warfarin is the BRIDGE population. A DOAC interruption in typical AF is a hold-and-restart question. Mechanical valves (especially mitral or a recent implant), recent VTE, and some high-risk antiphospholipid syndrome are not the BRIDGE default.",
-          "why": "“Skip routine bridging” and “always bridge” are both unsafe when applied to the wrong phenotype.",
+          "why": "“Skip routine bridging” (the BRIDGE finding) and a blanket bridging rule are both unsafe when applied to the wrong phenotype.",
           "evidence": [],
           "caveats": [
             "Moderate–severe mitral stenosis and mechanical valves stay on VKA pathways. A DOAC is not a substitute there."

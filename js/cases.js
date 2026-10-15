@@ -103,7 +103,7 @@ window.ANTICOAG_CASES = [
     keyQuestion: "How do ENRICH-AF and pending ASPIRE frame the options?",
     trialIds: ["enrich-af", "aspire", "prestige-af", "option"],
     frameworkIds: ["post-ich-anticoagulation", "laao-vs-oac"],
-    modelReasoning: "Lobar ICH with possible CAA raises recurrence risk; ENRICH-AF cautions against assuming net benefit from routine restart. Still weigh catastrophic cardioembolic risk. Multidisciplinary plan: delay vs carefully timed restart vs LAAO evaluation. Do not start aspirin as a comforting placebo if the question is OAC vs none.",
+    modelReasoning: "Lobar ICH with possible CAA raises recurrence risk; ENRICH-AF cautions against assuming net benefit from routine restart. Still weigh catastrophic cardioembolic risk. Multidisciplinary plan: delay vs carefully timed restart vs LAAO evaluation. When the question is OAC versus none, the case treats aspirin as no substitute for that decision.",
     teachingPoint: "Post-ICH AF is equipoise territory—document the why for restart, delay, or LAAO. Pending trials may refine subtypes; today’s decision still needs a named owner.",
     links: [
       { kind: "pathway", id: "post-ich", label: "TX: Post-ICH" },

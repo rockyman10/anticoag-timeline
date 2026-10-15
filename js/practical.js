@@ -133,7 +133,7 @@ window.ANTICOAG_PRACTICAL = {
 
   periprocedural: {
     title: "Periprocedural hold — heuristic only",
-    body: "Teaching pattern: hold longer for higher bleed-risk procedures and for lower CrCl / dabigatran. Many elective low-bleed procedures resume within 1 day after a DOAC hold with normal renal function. This is not a protocol — use your institution’s checklist, anesthesia plan, and product monograph.",
+    body: "Teaching pattern: product labeling lists longer interruptions for higher bleed-risk procedures and for lower CrCl / dabigatran. Many elective low-bleed procedures resume within 1 day after a DOAC hold with normal renal function. This is not a protocol — use your institution’s checklist, anesthesia plan, and product monograph.",
     verify: "Verify hold and restart with local protocol / primary paper / pharmacy."
   },
 

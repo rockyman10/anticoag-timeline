@@ -356,7 +356,7 @@ window.ANTICOAG_DDI = {
         }
       ],
       "evidenceGrade": "PK-volunteer",
-      "populationCaveats": "Label often recommends edoxaban 30 mg daily with certain P-gp inhibitors including ketoconazole.",
+      "populationCaveats": "Some edoxaban labels list 30 mg daily with certain P-gp inhibitors including ketoconazole.",
       "practiceInterpretation": "Dose-reduce per label when combination cannot be avoided.",
       "labelGuidance": "EHRA / label: dose reduce to 30 mg daily with ketoconazole (typical pathway).",
       "uncertainty": "Clinical outcome data limited vs PK+label.",
@@ -5988,7 +5988,7 @@ window.ANTICOAG_DDI = {
         }
       ],
       "evidenceGrade": "PK-volunteer",
-      "populationCaveats": "HV single-dose dabigatran 75 mg design. Ritonavir P-gp inhibition can persist for days after the last Paxlovid dose — resume full dabigatran only after the recommended washout (Liverpool often ~3 days after last dose). CPT/Liverpool note analogies to short-course darunavir/cobicistat for dosing algorithms.",
+      "populationCaveats": "HV single-dose dabigatran 75 mg design. Ritonavir P-gp inhibition can persist for days after the last Paxlovid dose. The University of Liverpool COVID-19 Drug Interactions checker (accessed Oct 2026; quality of evidence rated low, extrapolated from other ritonavir- or cobicistat-boosted regimens) describes resuming usual dabigatran treatment 3 days after the last dose of nirmatrelvir/ritonavir. CPT/Liverpool note analogies to short-course darunavir/cobicistat for dosing algorithms.",
       "practiceInterpretation": "Reduce dabigatran or avoid per indication/renal function and SmPC/Liverpool algorithms (e.g., 150→110 mg BID if normal renal function in some pathways; further cuts or LMWH bridge if high thrombotic risk). Do not restart full dose the morning after the last Paxlovid tablet without checking guidance.",
       "labelGuidance": "SmPC/Liverpool: dose-adjust or avoid; bleeding risk ↑.",
       "uncertainty": "AF patient steady-state magnitudes may differ from HV 75 mg single-dose study.",

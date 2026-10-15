@@ -1432,6 +1432,7 @@
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cases">Cases</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-nuance">Nuance</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cacp">CACP prep</button>
+        <button type="button" class="btn sm ghost" role="menuitem" id="btn-open-questions">Open questions</button>
         <div class="teach-menu-label" aria-hidden="true">Site</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-changelog">Changelog</button>
       </div>
@@ -1739,6 +1740,7 @@
   <script src="js/pathways.js"></script>
   <script src="js/treatment-pathways.js"></script>
   <script src="js/site-meta.js"></script>
+  <script src="js/open-questions.js"></script>
   <script src="js/frameworks.js"></script>
   <script src="js/nuances.js"></script>
   <script src="js/cases.js"></script>
@@ -1749,7 +1751,7 @@
   <script src="js/cacp.js"></script>
   <script>
 (function () {
-  const Y0 = 2003, Y1 = 2028;
+  const Y0 = 1999, Y1 = 2028;
   const LANES = [
     { key: "AF", label: "AF", color: "var(--c-af)", hex: "#2c5282" },
     { key: "VTE", label: "VTE", color: "var(--c-vte)", hex: "#276749" },
@@ -2290,6 +2292,18 @@
       <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
   }
 
+  function renderTrialQuestions(t, print) {
+    const A = Array.isArray(t.questionsAnswered) ? t.questionsAnswered : [];
+    const O = Array.isArray(t.questionsOpen) ? t.questionsOpen : [];
+    if (!A.length && !O.length) return "";
+    const li = q => { const S = [q.source, q.addressedBy].filter((x, i, a) => x && a.indexOf(x) === i);
+      return `<li>${esc(q.text)}${S.length ? ` <span style="color:var(--muted);font-size:.85em">(Source: ${esc(S.join("; "))})</span>` : ""}</li>`; };
+    const sec = (h, L) => !L.length ? "" : print
+      ? `<div class="print-sec"><h2>${h}</h2><ul>${L.map(li).join("")}</ul></div>`
+      : `<div class="jc-sec"><h3>${h}</h3><ul style="margin:0;padding-left:1.1rem">${L.map(li).join("")}</ul></div>`;
+    return sec("What it answered", A) + sec("Questions still open", O);
+  }
+
   function renderJournalBody(t) {
     const jc = composeJournal(t);
     const doi = t.doi ? ` · DOI <a href="https://doi.org/${t.doi}" target="_blank" rel="noopener">${t.doi}</a>` : "";
@@ -2312,6 +2326,7 @@
       <div class="jc-sec"><h3>Important caveats</h3><p>${esc(jc.caveats)}</p></div>
       <div class="jc-sec"><h3>Strengths</h3><p>${esc(jc.strengths)}</p></div>
       <div class="jc-sec"><h3>Limitations</h3><p>${esc(jc.limitations)}</p></div>
+      ${renderTrialQuestions(t, false)}
       <div class="jc-sec"><h3>Practice takeaway</h3><div class="take" style="margin:0">${esc(jc.practiceTakeaway)}</div></div>
       ${renderPracticalStrip(t)}
       ${renderGuidelinesBlock(jc.guidelines, false)}
@@ -2423,6 +2438,7 @@
       <div class="print-sec"><h2>Safety / bleeding</h2><p>${esc(t.safety)}</p></div>
       <div class="print-sec"><h2>Important caveats</h2><p>${esc(jc.caveats)}</p></div>
       <div class="print-sec"><h2>Strengths / limitations</h2><p><strong>Strengths:</strong> ${esc(jc.strengths)}<br/><strong>Limitations:</strong> ${esc(jc.limitations)}</p></div>
+      ${renderTrialQuestions(t, true)}
       <div class="print-sec"><h2>Practice takeaway</h2><div class="pearl">${esc(jc.practiceTakeaway)}</div></div>
       <div class="print-sec"><h2>Guidelines</h2>${gLines}</div>
       <div class="cite">${linkifyText(t.cite)}${t.url ? "<br/>" + linkifyText(t.url) : ""}</div>`;
@@ -2603,6 +2619,7 @@
         else if (k === "nuance" && id) setRoute("nuance", id, true);
         else if (k === "reversal") setRoute("reversal", null, true);
         else if (k === "changelog") setRoute("changelog", null, true);
+        else if (k === "open-questions") setRoute("open-questions", null, true);
         else if (k === "ddi") setRoute("ddi", null, true);
         else if (k === "frameworks") setRoute("frameworks", null, true);
         else if (k === "cases") setRoute("cases", null, true);
@@ -3748,6 +3765,12 @@
       htmlOut = renderReversalPage();
       setTeachDocTitle("Bleed & reversal");
       if (!opts.skipRoute) setRoute("reversal", null, opts.replaceRoute);
+    } else if (kind === "open-questions") {
+      title = "Open questions in anticoagulation";
+      sub = "Questions still open, grouped by theme · #/open-questions";
+      htmlOut = renderOpenQuestions();
+      setTeachDocTitle("Open questions");
+      if (!opts.skipRoute) setRoute("open-questions", null, opts.replaceRoute);
     } else if (kind === "changelog") {
       title = "Changelog";
       sub = "Major site updates";
@@ -3946,6 +3969,25 @@
     return h;
   }
 
+  function renderOpenQuestions() {
+    const OQ = window.ANTICOAG_OPEN_QUESTIONS;
+    if (!OQ || !Array.isArray(OQ.themes)) return `<p class="teach-lead">Open questions are not available.</p>`;
+    const chip = (bg, fg, s) => `<span style="display:inline-block;font-size:.75rem;font-weight:600;padding:.05rem .45rem;border-radius:999px;background:${bg};color:${fg}">${s}</span>`;
+    const trialBtn = id => byId[id] ? `<button type="button" class="linkish" data-open-trial="${esc(id)}">${esc(byId[id].acronym)}</button>` : "";
+    const item = ([cid, i]) => {
+      const t = byId[cid]; const q = t && Array.isArray(t.questionsOpen) ? t.questionsOpen[i] : null;
+      if (!q) return "";
+      const lid = q.addressedBy ? (OQ.later || {})[q.addressedBy] : null;
+      const status = q.addressedBy
+        ? chip("var(--accent-soft, #e6f7f1)", "var(--ink-2, #1f2a44)", "Taken up by " + (lid && byId[lid] ? trialBtn(lid) : esc(q.addressedBy)))
+        : chip("var(--line, #e5e7eb)", "var(--ink-2, #1f2a44)", "Still open");
+      return `<li style="margin:.45rem 0"><div>${esc(q.text)}</div><div style="font-size:.8rem;color:var(--muted);margin-top:.15rem">Trial: ${trialBtn(cid)} · ${status}</div></li>`;
+    };
+    return `<p class="teach-lead">${esc(OQ.intro || "")}</p>` + OQ.themes.map(th => {
+      const L = th.items.map(item).filter(Boolean);
+      return !L.length ? "" : `<section class="oq-theme" id="oq-${esc(th.id)}"><h3 style="margin:1rem 0 .25rem">${esc(th.heading)}</h3><ul style="padding-left:1.1rem;font-size:.875rem;color:var(--ink-2)">${L.join("")}</ul></section>`;
+    }).join("");
+  }
   function renderChangelog() {
     const items = siteMeta.changelog || [];
     const rev = namedReviewer(siteMeta.reviewedBy);
@@ -4003,6 +4045,7 @@
   document.getElementById("btn-nuance").onclick = () => openTeach("nuances");
   document.getElementById("btn-reversal").onclick = () => openTeach("reversal");
   document.getElementById("btn-changelog").onclick = () => openTeach("changelog");
+  document.getElementById("btn-open-questions").onclick = () => openTeach("open-questions");
 
   document.getElementById("teach-copy").onclick = () => {
     const kind = teachRoute && teachRoute.kind;
@@ -4024,6 +4067,7 @@
     else if (kind === "nuances") hash = "#/nuances";
     else if (kind === "reversal") hash = "#/reversal";
     else if (kind === "changelog") hash = "#/changelog";
+    else if (kind === "open-questions") hash = "#/open-questions";
     const url = `${location.origin}${location.pathname}${location.search}${hash}`;
     navigator.clipboard.writeText(url).then(() => toast("Link copied"), () => prompt("Copy link:", url));
   };
@@ -5238,6 +5282,7 @@
     if (k === "nuances") return { kind: "nuances" };
     if (k === "reversal") return { kind: "reversal" };
     if (k === "changelog") return { kind: "changelog" };
+    if (k === "open-questions") return { kind: "open-questions" };
     if (k === "cacp") {
       if (id === "q" && parts[2]) return { kind: "cacp", questionId: parts[2] };
       return { kind: "cacp" };
@@ -5264,6 +5309,8 @@
       else openDdi({ view: "home", skipRoute: true, replaceRoute: true });
     } else if (r.kind === "framework" || r.kind === "frameworks" || r.kind === "case" || r.kind === "cases" || r.kind === "nuance" || r.kind === "nuances" || r.kind === "reversal" || r.kind === "changelog") {
       openTeach(r.kind, r.id || null, { skipRoute: true, replaceRoute: true });
+    } else if (r.kind === "open-questions") {
+      openTeach("open-questions", null, { skipRoute: true, replaceRoute: true });
     } else if (r.kind === "cacp") {
       openCacp({ questionId: r.questionId || null, skipRoute: true, replaceRoute: true });
     } else if (r.kind === "learn") {

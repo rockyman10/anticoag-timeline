@@ -20,6 +20,23 @@ window.ANTICOAG_CASES = [
     ]
   },
   {
+    id: "af-hemodialysis-oac",
+    title: "AF on hemodialysis — apixaban, warfarin, or neither?",
+    stem: "Fictional teaching patient: a man in his late seventies with atrial fibrillation, hypertension, and diabetes, on in-center hemodialysis three times a week for kidney failure. He had a GI bleed on aspirin a few years ago; the aspirin was stopped and he is not on it now. He is not on an anticoagulant. His nephrologist asks the anticoagulation clinic whether to start one, and his daughter has read that apixaban is \"proven safer than warfarin in dialysis.\"",
+    keyQuestion: "What can the dialysis RCTs and guidelines actually support here, and how should the decision be framed?",
+    trialIds: ["axadia-afnet-8", "renal-af"],
+    frameworkIds: ["dialysis-af"],
+    modelReasoning: "Start with what is known. Two small randomized trials compared apixaban with a VKA in hemodialysis, and both were underpowered. RENAL-AF stopped early (154 of about 760 planned); major or CRNM bleeding at 1 year was 32% with apixaban vs 26% with warfarin (HR 1.20; 95% CI 0.63–2.30), and the authors said there was inadequate power to draw a conclusion. AXADIA-AFNET 8 (97 patients) used a primary safety composite that includes death from any cause (45.8% vs 51.0%; HR 0.93; 95% CI 0.53–1.65), and noninferiority was not shown. So the daughter's claim is not supported: neither trial shows apixaban is safer, or that the two drugs are equivalent. Whether any anticoagulant beats none in dialysis is unanswered by randomized trials; DANWARD and SACK are still recruiting, and SAFE-D was only a feasibility pilot. ACC/AHA 2023 says warfarin or an evidence-based dose of apixaban \"might be reasonable\" (Class 2b, LOE B-NR) and encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs. KDIGO 2024's DOAC-over-VKA recommendation covers CKD G1–G4, not dialysis, and ESC 2024 gives no graded dialysis recommendation. For this patient, that conversation with him, his family, and nephrology would cover his stroke risk, his prior GI bleed (bleeding outnumbered stroke in both trials), his values, and the monitoring burden of a VKA, whose time in therapeutic range was low in these trials (44% in RENAL-AF). If anticoagulation is chosen, the agent and dose come from the product label and local protocol, not from this case.",
+    teachingPoint: "Among the three guidelines checked here (ACC/AHA 2023, ESC 2024, KDIGO 2024), the only graded dialysis wording is ACC/AHA's \"might be reasonable\" (Class 2b), and two small trials that found no significant difference do not show that one drug is safer. ACC/AHA 2023 encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs; trial doses stay trial protocol.",
+    links: [
+      { kind: "framework", id: "dialysis-af", label: "Framework: AF on dialysis" },
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "trial", id: "axadia-afnet-8", label: "Trial: AXADIA-AFNET 8" },
+      { kind: "trial", id: "renal-af", label: "Trial: RENAL-AF" },
+      { kind: "framework", id: "ttr-vka-quality", label: "Framework: TTR / VKA quality" }
+    ]
+  },
+  {
     id: "cancer-stepdown",
     title: "Cancer VTE — acute DOAC then API-CAT step-down?",
     stem: "62-year-old with metastatic breast cancer, PE 7 months ago, completed apixaban 5 mg BID, now with stable disease on therapy, no recent bleeds, platelets OK. Oncology asks about ‘reducing the dose.’",
@@ -209,6 +226,21 @@ window.ANTICOAG_CASES = [
     links: [
       { kind: "tx-pathway", id: "peri-procedural-oac", label: "TX: Peri-procedural OAC" },
       { kind: "trial", id: "bridge", label: "Trial: BRIDGE" }
+    ]
+  },
+  {
+    id: "doac-legacy-aspirin",
+    title: "VTE on a DOAC — still taking aspirin from years ago",
+    stem: "64-year-old on apixaban for extended treatment after an unprovoked PE. At the annual DOAC review, the medication list also shows low-dose aspirin that a previous clinician started “years ago.” No history of MI, coronary stent, CABG, stroke, or peripheral artery disease; no mechanical valve. Two nosebleeds this year. The patient asks whether they still need “both blood thinners.”",
+    keyQuestion: "What does the evidence say about keeping aspirin on top of a DOAC without a clear indication, and what is the right next step at this visit?",
+    trialIds: [],
+    frameworkIds: ["doac-appropriateness"],
+    modelReasoning: "First establish whether any vascular indication exists — ask the patient, check the record, and ask the original prescriber; a remote stent or known coronary disease moves this to the stable coronary disease branch of the treatment pathway. If none is found, the best direct evidence is observational: in the Michigan registry (Schaefer, JAMA Intern Med 2021), 33.8% of DOAC patients for AF or VTE were also on aspirin without a clear indication. In the matched cohort, any bleeding was 31.60 vs 26.00 per 100 patient-years (P=.009) and bleeding hospitalization 8.20 vs 5.30 (P=.006), with no difference in thrombosis (2.50 vs 2.30; P=.80). Major bleeding was numerically higher but not significant (4.95 vs 3.59; P=.09). Even in patients who do have stable coronary disease, randomized trials (AQUATIC, EPIC-CAD, ADAPT AF-DES, AFIRE) found more bleeding without demonstrated ischemic benefit when an antiplatelet was added to OAC. So the step here is to document the missing indication and raise stopping the aspirin with the prescriber who owns it — not to stop the DOAC, and not for the patient to stop aspirin on their own before that conversation.",
+    teachingPoint: "Every antithrombotic needs a named reason and a planned stop point. “Aspirin just because” on top of a DOAC is a deprescribing conversation with the prescriber — the evidence shows more bleeding and no thrombosis benefit, though the registry data are observational and major bleeding was not significantly different.",
+    links: [
+      { kind: "tx-pathway", id: "oac-antiplatelet-deprescribe", label: "TX: OAC + antiplatelet deprescribing" },
+      { kind: "framework", id: "doac-appropriateness", label: "Framework: DOAC appropriateness" },
+      { kind: "ddi", id: "aspirin", label: "Aspirin DDI card" }
     ]
   }
 ];

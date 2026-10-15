@@ -89,6 +89,73 @@ window.ANTICOAG_FRAMEWORKS = [
     ]
   },
   {
+    id: "dialysis-af",
+    question: "AF on dialysis: what does the evidence actually support for oral anticoagulation?",
+    deck: "Special population · two small, underpowered RCTs · guideline wording quoted · no dosing on this card",
+    reasoning: "Only two small randomized trials have compared apixaban with a VKA in AF on hemodialysis. AXADIA-AFNET 8 (97 patients, apixaban vs phenprocoumon) and RENAL-AF (154 patients, stopped early, apixaban vs warfarin) found no significant differences, and both were underpowered, so they do not show that either drug is safer or that the two are equivalent. Bleeding was far more common than stroke, and death was frequent in both trials. No randomized trial has yet reported whether anticoagulation beats no anticoagulation in dialysis: DANWARD and SACK are recruiting, AVKDIAL stopped for slow enrollment without published results, and SAFE-D was a feasibility pilot. ACC/AHA 2023 rates warfarin or an evidence-based dose of apixaban as Class 2b (\"might be reasonable\") in dialysis. ESC 2024 gives no graded recommendation for dialysis, and KDIGO 2024's recommendation favoring DOACs over VKA covers CKD G1–G4 only. ACC/AHA 2023 encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs. Any dose comes from the product label and local protocol, not from this card.",
+    trialIds: ["axadia-afnet-8", "renal-af"],
+    appliesTo: [
+      "Adults with AF on maintenance dialysis when stroke prevention with an oral anticoagulant is being discussed",
+      "Teaching what the dialysis RCTs can and cannot show (inconclusive, underpowered)",
+      "Shared decision-making conversations between the patient, nephrology, and the anticoagulation team"
+    ],
+    doesNotApply: [
+      "CKD G1–G4 not on dialysis — use the AF stroke prevention framework and the product label (KDIGO's DOAC-favoring recommendation applies there)",
+      "Choosing or calculating a dose — this card has no dosing calculator and no renal dose table; use the product label and local protocol",
+      "Mechanical heart valves or moderate–severe mitral stenosis (VKA territory)",
+      "Non-AF questions in kidney failure, such as VTE treatment or vascular-protection trials — different evidence"
+    ],
+    pearl: "In dialysis, \"no significant difference\" in two small trials is not evidence of equivalence. Bleeding outnumbered stroke, death was common in both arms, and VKA time in therapeutic range was poor. ACC/AHA 2023 encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs.",
+    teachBack: "In one sentence: why can't AXADIA-AFNET 8 or RENAL-AF tell you that apixaban is safer than a VKA in dialysis?",
+    teachingBlocks: [
+      {
+        title: "What the randomized trials show",
+        lead: "Inconclusive and underpowered. Read both as \"no difference detected\", not as equivalence.",
+        bullets: [
+          "AXADIA-AFNET 8 (Circulation 2023): 97 randomized (48 apixaban, 49 phenprocoumon) after the target was cut from 222 to 108 by amendment (powered for noninferiority) following a blinded review of recruitment and event rates in 2020 and newly published data. Primary safety composite of major bleeding, CRNM bleeding, or death from any cause — it includes all-cause death, so it is not a bleeding-only endpoint: 45.8% vs 51.0% (HR 0.93; 95% CI 0.53–1.65); noninferiority was not shown.",
+          "RENAL-AF (Circulation 2022): 154 randomized (82 apixaban, 72 warfarin) of about 760 planned; stopped early for enrollment challenges. Major or CRNM bleeding at 1 year (Kaplan–Meier): 32% vs 26% (HR 1.20; 95% CI 0.63–2.30). Stroke or systemic embolism at 1 year: 3.0% vs 3.3%.",
+          "Different endpoints: AXADIA-AFNET 8's primary safety composite includes death; RENAL-AF's primary is bleeding only. Do not put them side by side as the same endpoint.",
+          "Different comparators: phenprocoumon in AXADIA-AFNET 8, warfarin in RENAL-AF. Apixaban doses differed by protocol; see the trial cards (trial protocol, not a dosing recommendation)."
+        ]
+      },
+      {
+        title: "Guideline wording",
+        bullets: [
+          "ACC/AHA/ACCP/HRS 2023, §6.8.4, Class 2b, LOE B-NR (verbatim): \"For patients with AF at elevated risk for stroke and who have end-stage CKD (CrCl <15 mL/min) or are on dialysis, it might be reasonable to prescribe warfarin (INR 2.0-3.0) or an evidence-based dose of apixaban for oral anticoagulation to reduce the risk of stroke.\" The supporting text encourages shared decision-making pending RCTs.",
+          "ESC 2024, §6.2.1 (paraphrased): no graded recommendation for dialysis. The narrative notes small hemodialysis trials, two of which found no difference between apixaban and VKA [the ESC sentence describes both as testing apixaban 2.5 mg twice daily; the RENAL-AF protocol used 5 mg twice daily, with 2.5 mg only for selected patients], and lists severe end-stage renal failure as an evidence gap.",
+          "KDIGO 2024, Recommendation 3.16.1 (1C), verbatim: \"We recommend use of non–vitamin K antagonist oral anticoagulants ([DOACs]) in preference to vitamin K antagonists (e.g., warfarin) for thromboprophylaxis in atrial fibrillation in people with CKD G1–G4 (1C).\" It applies to G1–G4 only, not dialysis; KDIGO notes that \"Data in CKD G5 on dialysis were limited to observational studies.\""
+        ]
+      },
+      {
+        title: "Pilot and ongoing trials (no answer yet)",
+        bullets: [
+          "SAFE-D (J Am Soc Nephrol 2025) was a feasibility pilot: 151 patients on dialysis randomized to apixaban, warfarin, or no oral anticoagulation for 26 weeks. Its primary outcomes were feasibility, and it was not powered for stroke, bleeding, or death.",
+          "DANWARD (Denmark; warfarin vs no oral anticoagulation) and SACK (Sweden; apixaban vs no anticoagulation) are recruiting. No results yet.",
+          "AVKDIAL (France; VKA vs no oral anticoagulation) was terminated for too few patients, with no results found. SAFE-D2 (apixaban vs no oral anticoagulation) is not yet recruiting.",
+          "Until one of these reports, no randomized trial answers whether anticoagulation beats no anticoagulation in dialysis."
+        ]
+      },
+      {
+        title: "Teaching points",
+        bullets: [
+          "Shared decision (ACC/AHA 2023 encourages it, pending RCTs): stroke risk, bleeding history, patient values, and monitoring burden.",
+          "Bleeding risk is high in both arms: major or CRNM bleeding at 1 year was 32% with apixaban and 26% with warfarin in RENAL-AF, and ACC/AHA notes significantly more bleeding than stroke events in both small trials.",
+          "VKA time in therapeutic range was poor in dialysis: 44% with warfarin in RENAL-AF and 50.7% with phenprocoumon in AXADIA-AFNET 8. These are trial descriptors, not clinic targets.",
+          "Death was common in both trials, which is part of why AXADIA-AFNET 8's death-inclusive composite was high in both arms.",
+          "Apixaban doses on the trial cards are trial protocol, not a dosing recommendation. This card has no dosing calculator and no renal dose table."
+        ]
+      }
+    ],
+    links: [
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "framework", id: "af-stroke-prevention", label: "Framework: AF stroke prevention" },
+      { kind: "framework", id: "ttr-vka-quality", label: "Framework: TTR / VKA quality — INR follow-up literacy (not a DOAC metric)" },
+      { kind: "case", id: "af-hemodialysis-oac", label: "Case: AF on hemodialysis" },
+      { kind: "trial", id: "axadia-afnet-8", label: "Trial: AXADIA-AFNET 8" },
+      { kind: "trial", id: "renal-af", label: "Trial: RENAL-AF" }
+    ]
+  },
+  {
     id: "af-pci-dual-pathway",
     question: "After ACS/PCI in AF, how long is dual pathway (OAC + P2Y12) and when do I drop aspirin?",
     reasoning: "AUGUSTUS-era evidence favors a DOAC (often apixaban) plus a P2Y12 inhibitor, with aspirin limited to the peri-PCI/early window rather than prolonged triple therapy. WOEST → PIONEER / RE-DUAL / ENTRUST → AUGUSTUS define the dual-pathway template. Newer OPTIMA-AF / EPIDAURUS-type readouts refine duration intensity—treat duration as risk-tiered (stent complexity, ACS vs elective, bleeding) and verify with the latest institutional ACS/AF pathway.",

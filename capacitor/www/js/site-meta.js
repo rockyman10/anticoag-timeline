@@ -5,6 +5,103 @@ window.ANTICOAG_SITE_META = {
   disclaimer: "Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.",
   changelog: [
     {
+      date: "2026-10-15",
+      title: "Clinical context: HOME-PE denominators, API-CAT and RENOVE, BRIDGE exclusions, factor XI, neuraxial intervals, apixaban regimens",
+      items: [
+        "HOME-PE card now shows the thirty-day composite in both published denominators, per-protocol and intention-to-treat, beside the home-treated subgroup.",
+        "API-CAT card adds a side-by-side reading with RENOVE. BRIDGE card lists the published exclusion criteria and the baseline stroke-risk score distribution.",
+        "ASTER and MAGNOLIA card adds published factor XI results from AZALEA-TIMI 71, OCEANIC-AF, and LIBREXIA ACS, labeled as other trials.",
+        "Peri-procedural pathway adds what PAUSE studied and excluded, and the neuraxial intervals the ASRA guideline lists. No interactive control and no kidney cutoffs.",
+        "ARISTOTLE and AMPLIFY cards state the apixaban regimens each trial used, worded as trial protocol, not as a recommendation. Educational only."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "Open questions in anticoagulation",
+      items: [
+        "New teaching page, Open questions (Teaching tools menu, #/open-questions), gathers the Questions still open notes from the trial cards and groups them by theme.",
+        "Each item links to its trial card and shows whether it is still open or was taken up by another trial, with a link to that trial's card where the site has one.",
+        "Item wording is unchanged from the trial cards. Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "Trial cards: What it answered and Questions still open",
+      items: [
+        "Landmark AF trial cards (RE-LY, ARISTOTLE, ROCKET AF, ENGAGE AF-TIMI 48, AUGUSTUS, PIONEER AF-PCI, AFIRE, NAVIGATE ESUS) gain two short lists in the journal-club and print views: what the trial answered, and questions it left open.",
+        "Further cards gain the same lists: VTE treatment (EINSTEIN-DVT, EINSTEIN-PE, AMPLIFY, RE-COVER, Hokusai-VTE), cancer-associated thrombosis (Hokusai VTE Cancer, SELECT-D, Caravaggio), device-detected AF (ARTESiA, NOAH-AFNET 6) and AF after PCI (RE-DUAL PCI, ENTRUST-AF PCI).",
+        "The same lists reach cancer thromboprophylaxis (CASSINI, AVERT), left atrial appendage occlusion (PROTECT AF, PREVAIL, PRAGUE-17, LAAOS III, OPTION, CHAMPION-AF, AMULET IDE), older and frail adults with AF (ELDERCARE-AF, FRAIL-AF) and anticoagulation with or without an antiplatelet in stable coronary disease (AQUATIC).",
+        "Coronary and peripheral artery disease (APPRAISE-2, ATLAS ACS 2, COMPASS, VOYAGER PAD), TAVI (GALILEO, ATLANTIS, ENVISAGE-TAVI AF, POPular TAVI) and valve disease (RIVER, INVICTUS, RE-ALIGN, PROACT Xa) cards gain the same lists.",
+        "So do AF trials against antiplatelet therapy (AVERROES, ACTIVE-W), peri-procedural bridging (BRIDGE), reversal agents (RE-VERSE AD, ANNEXA-4, ANNEXA-I), extended and head-to-head VTE treatment (AMPLIFY-EXT, EINSTEIN-CHOICE, API-CAT, COBRRA), dual therapy after PCI (WOEST) and DOAC timing after stroke (ELAN).",
+        "Also covered: BAFTA, CLOT, CATCH, PEITHO, RE-MEDY, RE-SONATE, MARINER, RE-SPECT ESUS, ARCADIA, OPTIMAS, CaVenT and ATTRACT.",
+        "Also covered: ADVANCE-3, HOME-PE, COMMANDER HF, ADAM-VTE, ENSURE-AF, POPular TAVI OAC, PROACT, HI-PRO, OCEANIC-AF, AZALEA-TIMI 71, PACIFIC-STROKE and CANVAS.",
+        "Also covered: NOTION-4, RENOVE, ACASA-TAVI, PRESTIGE-AF, SINGLE-AF, HI-PEITHO, OPTIMA-AF, EPIDAURUS, OCEANIC-STROKE and LIBREXIA ACS.",
+        "Every bullet names its source: the primary paper or a later trial. Where a later trial took up an open question, the bullet names that trial.",
+        "Doses appear only where a bullet describes how the trial used them, never as advice. Cards without these lists render exactly as before.",
+        "Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "AUGUSTUS and PIONEER AF-PCI: published bleeding and ischemic rates",
+      items: [
+        "AUGUSTUS card now shows the published bleeding rates and hazard ratios for both factorial comparisons (apixaban versus VKA, aspirin versus placebo) and the death-or-hospitalization result. Where the abstract says only that ischemic events were similar, the card says so without inventing rates.",
+        "PIONEER AF-PCI card now shows clinically significant bleeding for all three groups with hazard ratios, and the Kaplan–Meier rates for cardiovascular death, myocardial infarction, or stroke, labeled as powered for bleeding. The rivaroxaban regimens are shown as the trial tested them, worded as trial protocol, not as a recommendation.",
+        "Both cards gain a population count and PubMed ID; takeaway, journal-club, and practice wording rewritten in an educational voice. Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "NAVIGATE ESUS: published event counts and annualized rates",
+      items: [
+        "NAVIGATE ESUS card now shows the published event counts, annualized rates, and hazard ratios for recurrent stroke or systemic embolism, recurrent ischemic stroke, and major bleeding, matching the RE-SPECT ESUS card. Annualized-rate wording only; the abstract prints no cumulative percentages.",
+        "Population, design, citation pages, and PubMed ID added. The rivaroxaban and aspirin doses stay in the intervention, comparator, and design cells, worded as what the trial tested, not as a recommendation.",
+        "Takeaway, journal-club, and practice wording rewritten in an educational voice. Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "AF on dialysis: AXADIA-AFNET 8 and RENAL-AF cards, framework, and case",
+      items: [
+        "New trial card AXADIA-AFNET 8 (Reinecke, Circulation 2023): apixaban versus phenprocoumon in AF on chronic hemodialysis. The primary safety composite is labeled as including death from any cause, not a bleeding-only endpoint. The card states the trial was underpowered and that noninferiority was not shown.",
+        "New trial card RENAL-AF (Pokorney, Circulation 2022): apixaban versus warfarin in AF on hemodialysis, stopped early for enrollment challenges with about a fifth of its planned enrollment. One-year Kaplan–Meier bleeding rates are kept apart from crude death counts; pharmacokinetic values are left off.",
+        "New framework dialysis-af (special population): what the two small RCTs show, the ACC/AHA 2023 Class 2b wording quoted verbatim, ESC 2024 having no graded dialysis recommendation, KDIGO 2024's DOAC-favoring recommendation limited to CKD G1–G4, the SAFE-D feasibility pilot, and trials still without results (DANWARD, SACK). New case af-hemodialysis-oac (fictional patient).",
+        "AF stroke prevention treatment pathway: the af-renal step gains a dialysis caveat and a link to the new framework. No dosing calculator and no renal dose table; apixaban regimens on the cards are labeled trial protocol, not a dosing recommendation.",
+        "Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "PAUSE and MEDENOX trial cards; DOAC step on the peri-procedural pathway",
+      items: [
+        "New trial card PAUSE (Douketis, JAMA Intern Med 2019): a prospective management cohort, not a randomized trial, of one standardized DOAC interruption and resumption protocol without heparin bridging in AF. Primary-outcome confidence intervals are labeled 1-sided. The prespecified major-bleeding threshold was excluded only for dabigatran, while the arterial thromboembolism threshold was met in all three cohorts. The interruption schedule is labeled as trial protocol, not a recommendation; no hold-day chart and no kidney-function intervals.",
+        "New trial card MEDENOX (Samama, NEJM 1999): enoxaparin versus placebo for VTE prophylaxis in acutely ill medical inpatients. Only results verified from the paper's abstract and body text are shown; per-arm major bleeding, a relative risk for the lower dose, and three-month rates are left off. Enoxaparin doses are labeled as the trial arms, not an order.",
+        "Peri-procedural OAC treatment pathway: new DOAC step (ppo-doac-pause) that links PAUSE. Both DOAC hold-and-restart branches now pass through it before the restart step, and the summary and end step name PAUSE for DOAC interruption beside BRIDGE for warfarin. No hold days, hours, kidney cutoffs, or doses on the pathway.",
+        "Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "Trial cards: the site’s own quality ratings removed",
+      items: [
+        "Removed the site’s own high / moderate / low quality ratings from the journal-club and caveats text of the 34 trial cards that carried one. Those ratings were the site’s judgment, not a published GRADE rating. The design facts and trial numbers in the same sentences are kept unchanged.",
+        "A published certainty rating is quoted only where a real source gives one: the AQUATIC and EPIC-CAD cards now quote the pooled GRADE from the Galli 2026 meta-analysis of six randomized trials (high certainty that OAC alone reduced any bleeding, the pooled primary safety endpoint; moderate certainty for no difference in MACE), labeled as pooled and not a grade for either trial alone.",
+        "Small accuracy fixes from the literature check: the ARTESiA fatal-bleeding count is labeled as the on-treatment count with the arm named for each number, and the AQUATIC serious adverse events are labeled as event counts, not patients. EPIC-CAD keeps its AF+PCI timeline lane beside AFIRE; its card text already says the population includes medically managed coronary disease.",
+        "Educational only, not prescribing. No numbers or doses added. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "OAC + antiplatelet deprescribing pathway, two trial cards, a case, and CACP practice",
+      items: [
+        "New treatment pathway at #/pathway-tx/oac-antiplatelet-deprescribe: why is the antiplatelet there? Branches cover recent ACS or PCI (hands off to the AF + PCI pathway), ACS managed medically (ESC ACS 2023 Class IIa B, with the AUGUSTUS limit that there was no OAC-alone arm), stable coronary disease beyond 12 months (OAC alone: ACC/AHA 2023 Class 1 B-R; ESC AF 2024 Class III B against the antiplatelet; ESC CCS 2024 Class I B), prior stent thrombosis (specialist exception), and no clear indication or legacy aspirin (discuss with the prescriber).",
+        "New trial cards: ADAPT AF-DES (NEJM 2026; DOAC alone vs DOAC plus clopidogrel at least 1 year after a drug-eluting stent) and OAC-ALONE (Circulation 2019; underpowered and inconclusive, not contrary). No doses added.",
+        "EPIC-CAD card: removed registry-only dose and antiplatelet wording that is not in the NEJM abstract, and replaced the site’s own evidence-quality label with the Galli 2026 pooled GRADE statement. All trial numbers unchanged. AQUATIC card checked; no change.",
+        "New case doac-legacy-aspirin (VTE patient on a DOAC still taking aspirin from years ago; Michigan registry, Schaefer 2021) and six unofficial CACP practice questions (ii-40 to ii-43, iii-24, v-19).",
+        "Educational only, not prescribing. The pathway does not claim that OAC alone reduces mortality. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
       date: "2026-10-07",
       title: "Idelalisib and ribociclib CYP3A fold teaching",
       items: [

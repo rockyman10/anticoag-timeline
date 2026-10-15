@@ -66,5 +66,6 @@ Drafts under `drafts/` are box/working notes only — not part of the published 
 - `js/practical.js` — dosing logistics + bleed/reversal page
 - `js/ddi.js` — evidence-based anticoagulant DDI library (oncology TKI tranche complete; **expansion paused for clinical review**)
 - `js/site-meta.js` — literature sweep date, reviewer placeholder, changelog
+- `js/open-questions.js` — theme index for the Open questions page (`#/open-questions`); bullet text comes from each card's `questionsOpen`
 - `REVIEWER.md` — how to name the clinical reviewer
 - See `DESIGN.md` for visual / interaction rationale

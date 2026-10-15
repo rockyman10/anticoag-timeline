@@ -40,8 +40,24 @@ window.ANTICOAG_OPEN_QUESTIONS = {
           1
         ],
         [
+          "alone-af",
+          0
+        ],
+        [
+          "alone-af",
+          1
+        ],
+        [
           "single-af",
           0
+        ],
+        [
+          "ocean",
+          0
+        ],
+        [
+          "ocean",
+          1
         ]
       ]
     },
@@ -49,6 +65,14 @@ window.ANTICOAG_OPEN_QUESTIONS = {
       "id": "af-pci",
       "heading": "Coronary and vascular disease, including AF after PCI",
       "items": [
+        [
+          "waris-ii",
+          0
+        ],
+        [
+          "wave",
+          0
+        ],
         [
           "aristotle",
           1
@@ -191,6 +215,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         ],
         [
           "peitho",
+          0
+        ],
+        [
+          "prepic2",
           0
         ],
         [
@@ -382,6 +410,14 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         [
           "champion-af",
           0
+        ],
+        [
+          "closure-af",
+          0
+        ],
+        [
+          "closure-af",
+          1
         ]
       ]
     },
@@ -464,6 +500,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         [
           "mariner",
           0
+        ],
+        [
+          "epcat-ii",
+          0
         ]
       ]
     },
@@ -534,6 +574,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "AMPLIFY-EXT": "amplify-ext",
     "ANNEXA-I": "annexa-i",
     "API-CAT": "api-cat",
+    "APPRAISE-2": "appraise-2",
     "ARCADIA": "arcadia",
     "ARISTOTLE": "aristotle",
     "ARTESiA": "artesia",
@@ -543,9 +584,9 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "AUGUSTUS": "augustus",
     "AVERROES": "averroes",
     "AXADIA-AFNET 8": "axadia-afnet-8",
+    "Caravaggio": "caravaggio",
     "CHAMPION-AF": "champion-af",
     "COMPASS": "compass",
-    "Caravaggio": "caravaggio",
     "EINSTEIN-CHOICE": "einstein-choice",
     "ELDERCARE-AF": "eldercare-af",
     "ENTRUST-AF PCI": "entrust-af-pci",

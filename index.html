@@ -252,13 +252,6 @@
       background: var(--accent-soft); border-color: var(--accent); color: var(--accent);
     }
     .mk.in-compare button::before { background: var(--accent); }
-    .mk .tier {
-      font-size: .625rem; font-weight: 700; color: var(--muted);
-      border: 1px solid var(--line); border-radius: 2px; padding: 0 .2rem;
-    }
-    .mk button:hover .tier, .mk button:focus-visible .tier {
-      color: #fff; border-color: rgba(255,255,255,.45);
-    }
     .mk.dim { opacity: .28; }
     .mk.on-path button {
       box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--accent);
@@ -1467,8 +1460,7 @@
       <input class="search" id="search" type="search" placeholder="Search acronym…" autocomplete="off" />
       <div id="status-filters" style="display:flex;flex-wrap:wrap;gap:.3rem;" role="group" aria-label="Status">
         <button type="button" class="chip active" data-status="all">All</button>
-        <button type="button" class="chip" data-status="landmark">Landmark</button>
-        <button type="button" class="chip" data-status="practice">Practice</button>
+        <button type="button" class="chip" data-status="published">Published</button>
         <button type="button" class="chip" data-status="recent">Recent</button>
         <button type="button" class="chip" data-status="pending">Pending</button>
       </div>
@@ -1767,8 +1759,7 @@
     { key: "reversal", label: "Reversal", color: "var(--c-rev)", hex: "#4a5568" },
     { key: "FXI pipeline", label: "FXI / pipeline", color: "var(--c-fxi)", hex: "#702459" }
   ];
-  const STATUS = { landmark: "Landmark DOAC", practice: "Practice-changer", recent: "Recent", pending: "Pending" };
-  const TIER = { 1: "Tier 1", 2: "Tier 2", 3: "Tier 3" };
+  const STATUS = { published: "Published", recent: "Recent", pending: "Pending" };
   const HEX = Object.fromEntries(LANES.map(l => [l.key, l.hex]));
 
   const trials = (window.ANTICOAG_TRIALS || []).slice().sort((a, b) => a.year - b.year || a.acronym.localeCompare(b.acronym));
@@ -1931,7 +1922,7 @@
   const LABEL_PAD = 14; // horizontal padding between markers
 
   function estimateLabelWidth(t) {
-    // Approximate rendered width for full acronym + tier chip + optional DOI-pending chip + dot + padding
+    // Approximate rendered width for full acronym + optional DOI-pending chip + dot + padding (22px slack kept from the removed rating chip)
     const label = t.acronym + (zoom >= 1.15 ? " '" + String(t.yearLabel).slice(-2) : "");
     const doiPad = isDoiPending(t) ? 118 : 0;
     return Math.ceil(12 + label.length * 7.6 + 22 + 16 + doiPad);
@@ -2051,7 +2042,7 @@
         const showYear = zoom >= 1.15;
         const text = showYear ? `${t.acronym} · ${t.yearLabel}` : t.acronym;
         const doiChip = isDoiPending(t) ? `<span class="doi-pend" title="Press-level — DOI pending">Press-level — DOI pending</span>` : "";
-        mk.innerHTML = `<button type="button" data-id="${t.id}" title="${t.acronym} (${t.yearLabel})${isDoiPending(t) ? " · Press-level — DOI pending" : ""}" aria-label="${t.acronym}, ${t.yearLabel}, ${lane.label}${isDoiPending(t) ? ", DOI pending" : ""}">${text}<span class="tier">${t.impact}</span>${doiChip}</button>`;
+        mk.innerHTML = `<button type="button" data-id="${t.id}" title="${t.acronym} (${t.yearLabel})${isDoiPending(t) ? " · Press-level — DOI pending" : ""}" aria-label="${t.acronym}, ${t.yearLabel}, ${lane.label}${isDoiPending(t) ? ", DOI pending" : ""}">${text}${doiChip}</button>`;
         subEl.appendChild(mk);
         order.push(t.id);
       });
@@ -2231,7 +2222,7 @@
 
   function composeJournal(t) {
     const background = t.background ||
-      `This ${STATUS[t.status] || t.status} trial (${t.yearLabel}) addressed ${t.indication} care. Narrative context beyond curated fields is limited—see primary paper for full background.`;
+      `This trial (${t.yearLabel}) addressed ${t.indication} care. Narrative context beyond curated fields is limited—see primary paper for full background.`;
     const designNotes = t.designNotes ||
       `Design details beyond the curated summary are incomplete here. Population: ${t.population}. Intervention: ${t.intervention}. Comparator: ${t.comparator}.`;
     const strengths = t.strengths || "Not summarized here beyond the primary efficacy and safety fields.";
@@ -2387,7 +2378,6 @@
     document.getElementById("d-tags").innerHTML =
       `<span class="tag ind" style="background:${color}">${t.indication}</span>` +
       `<span class="tag">${STATUS[t.status] || t.status}</span>` +
-      `<span class="tag">${TIER[t.impact]}</span>` +
       (t.regulatoryNote ? `<span class="reg-note">${esc(t.regulatoryNote)}</span>` : "");
     document.getElementById("d-title").textContent = t.acronym;
     document.getElementById("d-year").textContent = t.yearLabel + (t.status === "pending" ? " · expected" : "");

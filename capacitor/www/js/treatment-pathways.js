@@ -113,7 +113,18 @@ window.ANTICOAG_TX_PATHWAYS = {
             }
           ],
           "caveats": [],
-          "links": [],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "alone-af",
+              "label": "Trial: ALONE-AF (after ablation)"
+            },
+            {
+              "kind": "trial",
+              "id": "ocean",
+              "label": "Trial: OCEAN (after ablation)"
+            }
+          ],
           "choices": [
             {
               "label": "OAC clearly indicated (elevated score)",
@@ -361,6 +372,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "trial",
               "id": "champion-af",
               "label": "CHAMPION-AF"
+            },
+            {
+              "kind": "trial",
+              "id": "closure-af",
+              "label": "Trial: CLOSURE-AF"
             },
             {
               "kind": "framework",
@@ -2254,6 +2270,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "tx",
               "id": "acute-vte",
               "label": "Acute VTE pathway"
+            },
+            {
+              "kind": "trial",
+              "id": "prepic2",
+              "label": "Trial: PREPIC2 (filter added to anticoagulation)"
             }
           ],
           "choices": [
@@ -3559,6 +3580,16 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "trial",
               "id": "voyager-pad",
               "label": "VOYAGER PAD"
+            },
+            {
+              "kind": "trial",
+              "id": "wave",
+              "label": "Trial: WAVE (INR-targeted anticoagulant in PAD)"
+            },
+            {
+              "kind": "trial",
+              "id": "waris-ii",
+              "label": "Trial: WARIS II (warfarin after MI, historical)"
             }
           ],
           "choices": [

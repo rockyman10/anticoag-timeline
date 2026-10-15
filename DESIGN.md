@@ -10,7 +10,7 @@ Patterns applied from clinical information-design literature and editorial medic
 ## Stacked category lanes (LifeLines / LabVis / BMJ-style timelines)
 - Shared time axis (2009–2027+).
 - One horizontal lane per indication (AF, VTE, cancer VTE, PE, AF+PCI, LAAO, valvular/TAVI, reversal, FXI/pipeline).
-- Compact glyph-style markers (dot + acronym + tier), not oversized bubbles.
+- Compact glyph-style markers (dot + acronym), not oversized bubbles. No trial rating or impact chips.
 - Same-year clustering uses small horizontal offsets within a lane.
 
 ## NEJM-inspired typography & chrome

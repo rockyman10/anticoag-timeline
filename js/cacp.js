@@ -5370,6 +5370,263 @@ window.ANTICOAG_CACP = {
           "label": "Framework: DOAC appropriateness"
         }
       ]
+    },
+    {
+      "id": "ii-40",
+      "domainId": "II",
+      "difficulty": "core",
+      "stem": "A patient with AF had a coronary stent placed 3 years ago, has had no ischemic events since, and no history of stent thrombosis. They take a DOAC plus aspirin. Which statement best reflects current guideline teaching?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Continue both indefinitely, because every stent needs lifelong antiplatelet therapy"
+        },
+        {
+          "id": "b",
+          "text": "OAC alone is favored over OAC plus a single antiplatelet; raise stopping the aspirin with the prescriber, keeping the anticoagulant"
+        },
+        {
+          "id": "c",
+          "text": "Stop the DOAC and keep aspirin, because aspirin protects the stent"
+        },
+        {
+          "id": "d",
+          "text": "Switch to triple therapy to cover both stroke and stent risk"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "2023 ACC/AHA/ACCP/HRS (Class 1, LOE B-R): in AF with chronic coronary disease beyond 1 year after revascularization and without stent thrombosis, OAC monotherapy is recommended over OAC plus a single antiplatelet to decrease major bleeding. 2024 ESC AF (Class III, LOE B) recommends against antiplatelet therapy beyond 12 months in stable chronic coronary or vascular disease on OAC, and 2024 ESC CCS (Class I, LOE B) favors DOAC alone lifelong.",
+      "teachingPoints": [
+        "Aspirin is not a substitute for indicated anticoagulation in AF.",
+        "Trials in this population (AFIRE, EPIC-CAD, ADAPT AF-DES, AQUATIC) found more bleeding without demonstrated ischemic benefit from the added antiplatelet."
+      ],
+      "links": [
+        {
+          "kind": "tx-pathway",
+          "id": "oac-antiplatelet-deprescribe",
+          "label": "TX: OAC + antiplatelet deprescribing"
+        },
+        {
+          "kind": "trial",
+          "id": "afire",
+          "label": "AFIRE"
+        },
+        {
+          "kind": "trial",
+          "id": "epic-cad",
+          "label": "EPIC-CAD"
+        }
+      ]
+    },
+    {
+      "id": "ii-41",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "AUGUSTUS included 1097 patients with AF and ACS managed medically (no PCI), all on a P2Y12 inhibitor. Which statement best describes the bleeding findings and limits of that subgroup?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Dual therapy (OAC plus a single antiplatelet) is proven superior to OAC alone after medically managed ACS"
+        },
+        {
+          "id": "b",
+          "text": "Medically managed ACS patients should never receive an antiplatelet with an OAC"
+        },
+        {
+          "id": "c",
+          "text": "Aspirin reduced ischemic events enough to offset its bleeding"
+        },
+        {
+          "id": "d",
+          "text": "On a P2Y12 background, apixaban was associated with less bleeding than VKA, adding aspirin showed a non-significant trend toward more bleeding (CI crossed 1), and OAC alone was not tested"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Every AUGUSTUS patient was on a P2Y12 inhibitor and there was no OAC-alone arm. In the medically managed subgroup, ISTH major or CRNM bleeding was lower with apixaban vs VKA (HR 0.44; 95% CI 0.28–0.68). Aspirin vs placebo showed only a non-significant trend toward more bleeding (HR 1.49; 95% CI 0.98–2.26 — the CI crosses 1), although aspirin significantly increased bleeding in the full AUGUSTUS population. The trial cannot say whether a single antiplatelet adds benefit over OAC alone. ESC ACS 2023 gives OAC plus a single antiplatelet for up to 1 year a Class IIa, LOE B recommendation in medically treated patients.",
+      "teachingPoints": [
+        "Read what a trial did not randomize: no OAC-alone arm means no OAC-alone answer.",
+        "Subgroup follow-up was 6 months and not powered for ischemic end points."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "augustus",
+          "label": "AUGUSTUS"
+        },
+        {
+          "kind": "tx-pathway",
+          "id": "oac-antiplatelet-deprescribe",
+          "label": "TX: OAC + antiplatelet deprescribing"
+        }
+      ]
+    },
+    {
+      "id": "ii-42",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "AQUATIC randomized patients with chronic coronary syndrome, a stent more than 6 months old, and long-term oral anticoagulation to aspirin or placebo. What did it find?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Aspirin lowered ischemic events at the cost of a small bleeding increase"
+        },
+        {
+          "id": "b",
+          "text": "No difference in any outcome"
+        },
+        {
+          "id": "c",
+          "text": "Aspirin was associated with more ischemic events, more deaths, and more major bleeding; the trial stopped early for excess death"
+        },
+        {
+          "id": "d",
+          "text": "Aspirin reduced all-cause mortality"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "AQUATIC (NEJM 2025; double-blind, n=872) was stopped early after a median 2.2 years because of excess all-cause death with aspirin: 13.4% vs 8.4% (adjusted HR 1.72; 95% CI 1.14–2.58). The primary ischemic composite was 16.9% vs 12.1% (adjusted HR 1.53; 1.07–2.18) and major bleeding 10.2% vs 3.4% (adjusted HR 3.35; 1.87–6.00).",
+      "teachingPoints": [
+        "Early stopping for harm can overestimate the size of the effect — teach the direction firmly and the exact HRs cautiously.",
+        "The abstract says “long-term oral anticoagulation” without naming the agent or limiting it to AF."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "aquatic",
+          "label": "AQUATIC"
+        }
+      ]
+    },
+    {
+      "id": "ii-43",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A colleague's slide says “OAC alone reduces mortality compared with OAC plus an antiplatelet in stable coronary disease.” Which statement best describes the evidence?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Overstated — two early-stopped trials (AFIRE, AQUATIC) showed excess death with combination therapy, but pooled all-cause death is not significant and pooled cardiovascular-death findings are inconsistent"
+        },
+        {
+          "id": "b",
+          "text": "Correct — every meta-analysis shows a significant all-cause mortality reduction"
+        },
+        {
+          "id": "c",
+          "text": "Wrong — OAC alone increases mortality"
+        },
+        {
+          "id": "d",
+          "text": "Unknowable — no randomized trials exist"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "The consistent finding is less bleeding with OAC alone (major bleeding HR 0.46; 95% CI 0.32–0.66 in the 6-trial Galli 2026 meta-analysis, n=5924) with no significant MACE difference. Mortality is a signal, not an established effect: all-cause death was not significant in any meta-analysis, and cardiovascular death was significant in some (Galli, Ibrahim, Garagoli) but not in the Bayesian analysis (Tsarouchas).",
+      "teachingPoints": [
+        "Single early-stopped trials are hypothesis-strengthening, not proof of a survival benefit.",
+        "The well-supported claim is fewer bleeds without demonstrated ischemic benefit from the added antiplatelet."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "afire",
+          "label": "AFIRE"
+        },
+        {
+          "kind": "trial",
+          "id": "aquatic",
+          "label": "AQUATIC"
+        },
+        {
+          "kind": "trial",
+          "id": "oac-alone",
+          "label": "OAC-ALONE"
+        }
+      ]
+    },
+    {
+      "id": "iii-24",
+      "domainId": "III",
+      "difficulty": "core",
+      "stem": "A patient on a DOAC for prior VTE has taken low-dose aspirin for years, and no one can find a reason for it. They ask, “Should I just stop the aspirin today?” Which response is most appropriate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "“Yes, stop both pills today.”"
+        },
+        {
+          "id": "b",
+          "text": "“Aspirin is harmless, so it doesn't matter.”"
+        },
+        {
+          "id": "c",
+          "text": "“Keep taking your anticoagulant. The aspirin may be adding bleeding risk without a clear benefit, so I'll raise stopping it with your prescriber — please don't change it until we hear back.”"
+        },
+        {
+          "id": "d",
+          "text": "“Double the aspirin instead of taking the anticoagulant.”"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Education separates the two drugs: the anticoagulant treats the documented indication; the aspirin needs a named reason. In a Michigan registry (Schaefer 2021), adding aspirin to a DOAC without a clear indication was associated with more bleeding (31.60 vs 26.00 per 100 patient-years) and more bleeding hospitalizations, with no difference in thrombosis. The change itself goes through the prescriber who owns the antiplatelet.",
+      "teachingPoints": [
+        "Teach-back: the patient should be able to say which pill is for which reason.",
+        "Teach bleeding warning signs and to report nosebleeds or dark stools."
+      ],
+      "links": [
+        {
+          "kind": "case",
+          "id": "doac-legacy-aspirin",
+          "label": "Case: DOAC with legacy aspirin"
+        },
+        {
+          "kind": "ddi",
+          "id": "aspirin",
+          "label": "Aspirin DDI card"
+        }
+      ]
+    },
+    {
+      "id": "v-19",
+      "domainId": "V",
+      "difficulty": "core",
+      "stem": "An anticoagulation clinic wants to reduce unintended DOAC plus aspirin combinations. Which operational step best fits the evidence and scope of practice?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Automatically discontinue aspirin for every DOAC patient at intake"
+        },
+        {
+          "id": "b",
+          "text": "Ignore aspirin because it is over the counter"
+        },
+        {
+          "id": "c",
+          "text": "At each DOAC review, document the indication and planned stop point for every antithrombotic and route unexplained antiplatelet use to the prescriber for a decision"
+        },
+        {
+          "id": "d",
+          "text": "Add aspirin for all patients over age 65"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "In the Michigan registry (Schaefer 2021), 33.8% of DOAC patients for AF or VTE were also taking aspirin without a clear indication. A reconciliation step that names the reason and owner for each antithrombotic finds these patients without overriding indicated therapy (for example, a recent ACS or PCI plan).",
+      "teachingPoints": [
+        "Stewardship is documentation plus a referral loop, not automatic discontinuation.",
+        "Over-the-counter aspirin belongs on the medication list."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Framework: DOAC appropriateness"
+        },
+        {
+          "kind": "tx-pathway",
+          "id": "oac-antiplatelet-deprescribe",
+          "label": "TX: OAC + antiplatelet deprescribing"
+        }
+      ]
     }
   ]
 };

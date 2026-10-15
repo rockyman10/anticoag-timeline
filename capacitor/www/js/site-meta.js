@@ -6,6 +6,34 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-15",
+      title: "New trial cards: PREPIC2 and EPCAT II; VTE prophylaxis playlist",
+      items: [
+        "New trial card PREPIC2 (JAMA 2015): a retrievable vena cava filter added to anticoagulation in hospitalized patients with severe acute PE. Added to the PE reperfusion playlist and linked from the anticoagulation step of the intermediate-risk PE pathway.",
+        "New trial card EPCAT II (NEJM 2018): aspirin versus rivaroxaban for extended prophylaxis after hip or knee arthroplasty, after a rivaroxaban lead-in. Its Questions still open section contrasts CRISTAL (JAMA 2022), which has no card on this site.",
+        "New playlist VTE prophylaxis (medical and surgical): MEDENOX, MARINER and EPCAT II.",
+        "Each new card carries What it answered and Questions still open sections. Doses appear only as the trial arms. Educational only, not prescribing."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "New trial cards: ALONE-AF, OCEAN, CLOSURE-AF, WAVE and WARIS II",
+      items: [
+        "New trial cards ALONE-AF (JAMA 2025) and OCEAN (NEJM 2026) on antithrombotic therapy after successful AF ablation, linked from the stroke-risk step of the AF stroke prevention pathway. ALONE-AF compared discontinuing oral anticoagulation with continuing a DOAC; OCEAN compared rivaroxaban with aspirin.",
+        "New trial card CLOSURE-AF (NEJM 2026): left atrial appendage closure versus physician-directed best medical care in patients at high risk of stroke and bleeding. Added to the LAAO playlist after CHAMPION-AF and linked from the LAAO step of the AF stroke prevention pathway.",
+        "New trial cards WAVE (NEJM 2007, peripheral arterial disease) and WARIS II (NEJM 2002, after myocardial infarction), which studied INR-targeted anticoagulation with or without antiplatelet therapy. Linked from the vascular phenotype step of the COMPASS vascular pathway.",
+        "Each new card carries What it answered and Questions still open sections. Doses appear only as the trial arms. Educational only, not prescribing."
+      ]
+    },
+    {
+      date: "2026-10-15",
+      title: "Trial cards no longer show rating labels",
+      items: [
+        "Removed the editorial impact-rating chips from the timeline markers and trial cards, and the matching status labels, because they were not taken from any published grading system. Cards that carried those status labels now read Published; the status filter now offers Published, Recent and Pending.",
+        "No trial result, number or citation changed. Educational only, not prescribing."
+      ]
+    },
+    {
+      date: "2026-10-15",
       title: "Educational voice: trial and guideline attribution",
       items: [
         "Sentences that read as instructions on trial cards, treatment pathways, frameworks, a case, the DDI library, the CACP practice questions and the Learn path now say what the cited trial, guideline or label found or lists.",

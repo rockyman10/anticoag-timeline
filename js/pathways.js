@@ -19,6 +19,12 @@ window.ANTICOAG_PATHWAYS = [
     trialIds: ["clot", "catch", "hokusai-vte-cancer", "select-d", "adam-vte", "caravaggio", "canvas", "api-cat", "avert", "cassini", "aster-magnolia"]
   },
   {
+    id: "vte-prophylaxis",
+    title: "VTE prophylaxis (medical and surgical)",
+    description: "Thromboprophylaxis outside cancer: acutely ill medical inpatients (MEDENOX), medically ill patients after discharge (MARINER), and extended prophylaxis after hip or knee arthroplasty (EPCAT II).",
+    trialIds: ["medenox", "mariner", "epcat-ii"]
+  },
+  {
     id: "af-pci",
     title: "AF + PCI / dual pathway",
     description: "Triple therapy to dual pathway: WOEST through AUGUSTUS and 2026 refinements. AFIRE and EPIC-CAD are stable coronary disease, not the early post-PCI window.",
@@ -28,13 +34,13 @@ window.ANTICOAG_PATHWAYS = [
     id: "laao",
     title: "LAAO vs OAC",
     description: "Percutaneous and surgical left atrial appendage strategies versus anticoagulation, plus Amulet versus Watchman (AMULET IDE), which is a device comparison rather than a DOAC comparison.",
-    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af", "amulet-ide"]
+    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af", "closure-af", "amulet-ide"]
   },
   {
     id: "pe-reperfusion",
     title: "PE reperfusion / intermediate-risk PE",
-    description: "Oral PE treatment, systemic fibrinolysis in intermediate-risk PE (PEITHO), and catheter-directed therapy (HI-PEITHO). Those reperfusion trials are not interchangeable.",
-    trialIds: ["einstein-pe", "peitho", "hi-peitho"]
+    description: "Oral PE treatment, systemic fibrinolysis in intermediate-risk PE (PEITHO), and catheter-directed therapy (HI-PEITHO). Those reperfusion trials are not interchangeable. PREPIC2 tested a retrievable vena cava filter added to anticoagulation.",
+    trialIds: ["einstein-pe", "peitho", "hi-peitho", "prepic2"]
   },
   {
     id: "reversal",

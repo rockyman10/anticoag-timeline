@@ -37,7 +37,7 @@ window.ANTICOAG_DDI = {
     "tranche3": "Strong inducers + antiseizure drugs",
     "tranche4": "Antiplatelet/NSAID PD depth + herbals/OTC",
     "tranche5_oncology": "Oncology TKI / cancer-drug tranche — expansion paused for clinical review",
-    "expansionStatus": "Oncology TKI accuracy pass 2026-10-07 (label and Hellfritzsch corrections only); oncology TKI suite remains paused for clinical review",
+    "expansionStatus": "Oncology TKI accuracy pass 2026-10-07 (label and Hellfritzsch corrections only); idelalisib and ribociclib US-label fold teaching 2026-10-07; oncology TKI suite remains paused for clinical review",
   "clinicGap": "Warfarin clinic gaps + azithromycin DOAC suite + edoxaban–erythromycin Parasrampuria PK + dabigatran–colchicine stack awareness",
   "deferredTranche": "2026-09-26: edoxaban-clarithromycin Lenard therapeutic-dose replace; warfarin omeprazole/pantoprazole/bosentan/erythromycin — bosentan×DOAC, rifabutin, erythromycin→apix/dabig, colchicine×other DOACs, oncology incomplete AUC remain re-deferred"
   },
@@ -11936,22 +11936,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 5.4-fold)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists idelalisib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. Midazolam is the CYP3A probe, not a DOAC. Section 7.2: coadministration with a CYP3A substrate may increase that substrate's concentrations, and the label says to avoid sensitive CYP3A substrates. This label does not print the word strong for idelalisib as a perpetrator. FDA's January 2020 clinical DDI guidance classifies a strong inhibitor as a drug that increases the AUC of a sensitive index CYP substrate ≥5-fold, and midazolam is a CYP3A sensitive index substrate, so the labeled 5.4-fold AUC meets that threshold. The fold-change is the labeled result. Digoxin (P-gp substrate) exposure was unchanged. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for idelalisib. The P-gp cell is blank.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Empty cell = no known effect. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No idelalisib degree (mild, moderate, or strong) is taught from the collapsed table glyphs.",
+      "populationCaveats": "The 2.4-fold and 5.4-fold figures are midazolam, not apixaban or rivaroxaban. Do not invent a DOAC percent. Unchanged digoxin is not a dabigatran or edoxaban exposure increase.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The 5.4-fold figure is midazolam, not a DOAC dose. Dabigatran and edoxaban are not given a PK exposure increase.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Section 7.2: avoid sensitive CYP3A substrates. Digoxin exposure was unchanged. The label does not print strong for idelalisib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The fold taught here is the labeled 5.4-fold midazolam AUC, which meets the FDA ≥5-fold strong-inhibitor criterion. The current ZYDELIG label does not itself print the word strong. Table 3 glyph weight was not re-readable and is not the source of the fold.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
+        {
+          "label": "FDA clinical DDI guidance — strong inhibitor criterion",
+          "citation": "FDA. Clinical Drug Interaction Studies — Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions. Guidance for Industry. January 2020. A strong inhibitor increases the AUC of a sensitive index CYP substrate ≥5-fold. The FDA table of substrates, inhibitors and inducers lists midazolam as a CYP3A sensitive index substrate and states that strong inhibitors increase the AUC of sensitive index substrates ≥5-fold.",
+          "url": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11984,22 +11994,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 5.4-fold)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists idelalisib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. Midazolam is the CYP3A probe, not a DOAC. Section 7.2: coadministration with a CYP3A substrate may increase that substrate's concentrations, and the label says to avoid sensitive CYP3A substrates. This label does not print the word strong for idelalisib as a perpetrator. FDA's January 2020 clinical DDI guidance classifies a strong inhibitor as a drug that increases the AUC of a sensitive index CYP substrate ≥5-fold, and midazolam is a CYP3A sensitive index substrate, so the labeled 5.4-fold AUC meets that threshold. The fold-change is the labeled result. Digoxin (P-gp substrate) exposure was unchanged. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for idelalisib. The P-gp cell is blank.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Empty cell = no known effect. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No idelalisib degree (mild, moderate, or strong) is taught from the collapsed table glyphs.",
+      "populationCaveats": "The 2.4-fold and 5.4-fold figures are midazolam, not apixaban or rivaroxaban. Do not invent a DOAC percent. Unchanged digoxin is not a dabigatran or edoxaban exposure increase.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The 5.4-fold figure is midazolam, not a DOAC dose. Dabigatran and edoxaban are not given a PK exposure increase.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Section 7.2: avoid sensitive CYP3A substrates. Digoxin exposure was unchanged. The label does not print strong for idelalisib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The fold taught here is the labeled 5.4-fold midazolam AUC, which meets the FDA ≥5-fold strong-inhibitor criterion. The current ZYDELIG label does not itself print the word strong. Table 3 glyph weight was not re-readable and is not the source of the fold.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
+        {
+          "label": "FDA clinical DDI guidance — strong inhibitor criterion",
+          "citation": "FDA. Clinical Drug Interaction Studies — Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions. Guidance for Industry. January 2020. A strong inhibitor increases the AUC of a sensitive index CYP substrate ≥5-fold. The FDA table of substrates, inhibitors and inducers lists midazolam as a CYP3A sensitive index substrate and states that strong inhibitors increase the AUC of sensitive index substrates ≥5-fold.",
+          "url": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12030,24 +12050,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Digoxin (P-gp substrate) unchanged"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Idelalisib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. That result is a CYP3A probe. No changes in digoxin exposure (P-gp substrate) were observed. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, and unchanged digoxin is not a PK exposure increase.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Idelalisib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with idelalisib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
-      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here.",
+      "populationCaveats": "Do not apply the midazolam 5.4-fold AUC to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given a PK exposure increase with idelalisib. The midazolam fold stays on apixaban and rivaroxaban.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Digoxin exposure was unchanged. The midazolam result is CYP3A.",
+      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here. Unchanged digoxin is not an exposure increase.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12078,24 +12103,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Digoxin (P-gp substrate) unchanged"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Idelalisib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. That result is a CYP3A probe. No changes in digoxin exposure (P-gp substrate) were observed. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, and unchanged digoxin is not a PK exposure increase.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Idelalisib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with idelalisib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
-      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here.",
+      "populationCaveats": "Do not apply the midazolam 5.4-fold AUC to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given a PK exposure increase with idelalisib. The midazolam fold stays on apixaban and rivaroxaban.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Digoxin exposure was unchanged. The midazolam result is CYP3A.",
+      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here. Unchanged digoxin is not an exposure increase.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12128,22 +12158,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 3.8-fold at 400 mg, predicted 5.2-fold at 600 mg)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists ribociclib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "KISQALI (effective 2026-07-01): ribociclib 400 mg once daily for 8 days increased midazolam Cmax 2.1-fold and AUCinf 3.8-fold. KISQALI 600 mg once daily is predicted to increase midazolam Cmax 2.4-fold and AUC 5.2-fold. Midazolam is the CYP3A4 probe, not a DOAC. Section 7.3 says the dose of a sensitive CYP3A substrate may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA product information, secondary to these US folds, says ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for ribociclib. The P-gp cell is blank. No CYP3A4 degree is stated.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No CYP3A4 degree is stated for ribociclib.",
+      "populationCaveats": "The 2.1-fold, 3.8-fold, 2.4-fold, and 5.2-fold figures are midazolam. The 600 mg result is predicted. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The folds are midazolam, not a DOAC dose. Dabigatran and edoxaban are not given that increase.",
+      "labelGuidance": "KISQALI section 12.3, effective 2026-07-01. Midazolam Cmax 2.1-fold and AUCinf 3.8-fold after 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. Section 7.3: the sensitive CYP3A substrate dose may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The US folds are the teaching. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA degree words are secondary and are not US label language. The 600 mg midazolam AUC is predicted. Table 3 glyph weight was not re-readable and is not the source of the folds.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
+        {
+          "label": "EMA Kisqali product information",
+          "citation": "EMA Kisqali product information. Ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. Secondary to the US fold-changes.",
+          "url": "https://www.ema.europa.eu/en/documents/product-information/kisqali-epar-product-information_en.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12176,22 +12216,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 3.8-fold at 400 mg, predicted 5.2-fold at 600 mg)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists ribociclib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "KISQALI (effective 2026-07-01): ribociclib 400 mg once daily for 8 days increased midazolam Cmax 2.1-fold and AUCinf 3.8-fold. KISQALI 600 mg once daily is predicted to increase midazolam Cmax 2.4-fold and AUC 5.2-fold. Midazolam is the CYP3A4 probe, not a DOAC. Section 7.3 says the dose of a sensitive CYP3A substrate may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA product information, secondary to these US folds, says ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for ribociclib. The P-gp cell is blank. No CYP3A4 degree is stated.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No CYP3A4 degree is stated for ribociclib.",
+      "populationCaveats": "The 2.1-fold, 3.8-fold, 2.4-fold, and 5.2-fold figures are midazolam. The 600 mg result is predicted. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The folds are midazolam, not a DOAC dose. Dabigatran and edoxaban are not given that increase.",
+      "labelGuidance": "KISQALI section 12.3, effective 2026-07-01. Midazolam Cmax 2.1-fold and AUCinf 3.8-fold after 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. Section 7.3: the sensitive CYP3A substrate dose may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The US folds are the teaching. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA degree words are secondary and are not US label language. The 600 mg midazolam AUC is predicted. Table 3 glyph weight was not re-readable and is not the source of the folds.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
+        {
+          "label": "EMA Kisqali product information",
+          "citation": "EMA Kisqali product information. Ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. Secondary to the US fold-changes.",
+          "url": "https://www.ema.europa.eu/en/documents/product-information/kisqali-epar-product-information_en.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12222,24 +12272,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Low in vitro P-gp potential (not a clinical increase)"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Ribociclib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. KISQALI midazolam folds are a CYP3A4 probe (400 mg once daily for 8 days: Cmax 2.1-fold and AUCinf 3.8-fold; 600 mg once daily predicted: Cmax 2.4-fold and AUC 5.2-fold). Dabigatran and edoxaban are not meaningful CYP3A4 substrates. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. That in vitro line is not a clinical DOAC AUC.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Ribociclib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
+      "populationCaveats": "Do not apply the midazolam folds to dabigatran or edoxaban. Do not invent a DOAC percent. Low in vitro P-gp potential is not an exposure increase.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The midazolam folds stay on apixaban and rivaroxaban.",
+      "labelGuidance": "KISQALI, effective 2026-07-01. The midazolam study is CYP3A4. In vitro, ribociclib has a low potential to inhibit P-gp. Hellfritzsch Table 3 P-gp cell is blank.",
       "uncertainty": "No dabigatran or edoxaban AUC with ribociclib is transcribed here.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12270,24 +12325,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Low in vitro P-gp potential (not a clinical increase)"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Ribociclib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. KISQALI midazolam folds are a CYP3A4 probe (400 mg once daily for 8 days: Cmax 2.1-fold and AUCinf 3.8-fold; 600 mg once daily predicted: Cmax 2.4-fold and AUC 5.2-fold). Dabigatran and edoxaban are not meaningful CYP3A4 substrates. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. That in vitro line is not a clinical DOAC AUC.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Ribociclib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
+      "populationCaveats": "Do not apply the midazolam folds to dabigatran or edoxaban. Do not invent a DOAC percent. Low in vitro P-gp potential is not an exposure increase.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The midazolam folds stay on apixaban and rivaroxaban.",
+      "labelGuidance": "KISQALI, effective 2026-07-01. The midazolam study is CYP3A4. In vitro, ribociclib has a low potential to inhibit P-gp. Hellfritzsch Table 3 P-gp cell is blank.",
       "uncertainty": "No dabigatran or edoxaban AUC with ribociclib is transcribed here.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",

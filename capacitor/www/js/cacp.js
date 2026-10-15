@@ -422,7 +422,7 @@ window.ANTICOAG_CACP = {
       "explanation": "HIT is immune-mediated and paradoxically prothrombotic. Management uses non-heparin anticoagulants and avoids warfarin until platelets recover — details follow specialty protocols.",
       "teachingPoints": [
         "4Ts score helps pretest probability before laboratory testing.",
-        "Do not start warfarin alone in acute HIT."
+        "The ASH 2018 HIT guideline recommends against starting a VKA such as warfarin in acute HIT before platelet count recovery, citing harms that include new or progressive thrombosis and venous limb gangrene."
       ],
       "links": []
     },
@@ -1474,7 +1474,7 @@ window.ANTICOAG_CACP = {
       "explanation": "Labeled counseling: rivaroxaban 15–20 mg should be taken with food. Missing this detail is a common adherence/efficacy error.",
       "teachingPoints": [
         "Also counsel bleed precautions and what to do for missed doses per label.",
-        "Avoid teaching patients to self-hold for minor reasons without a contact plan."
+        "This item describes patient-initiated pauses paired with a contact plan, as opposed to self-pausing for minor reasons."
       ],
       "links": [
         {
@@ -2011,7 +2011,7 @@ window.ANTICOAG_CACP = {
       "correctId": "b",
       "explanation": "AMPLIFY: apixaban 10 mg BID × 7 days → 5 mg BID. Extended prevention may later use 2.5 mg BID (AMPLIFY-EXT) — different phase.",
       "teachingPoints": [
-        "Do not start 2.5 mg BID for acute VTE treatment.",
+        "The AMPLIFY protocol did not start acute VTE treatment at 2.5 mg BID.",
         "COBRRA informs bleed comparison vs rivaroxaban when choosing."
       ],
       "links": [
@@ -3804,7 +3804,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Do not give generic catch-up advice. Use the specific product’s missed-dose instructions and clinic protocols; when unsure, patients should call before improvising.",
+      "explanation": "Generic catch-up advice does not fit every product. Each product’s labeling gives its own missed-dose instructions, alongside clinic protocols; when unsure, patients call the clinic rather than improvising.",
       "teachingPoints": [
         "Rivaroxaban food rules still apply when doses are taken.",
         "Repeated misses are an adherence intervention trigger."

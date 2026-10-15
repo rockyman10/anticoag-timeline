@@ -87,7 +87,7 @@ window.ANTICOAG_LEARN_PATH = {
       deepenRequired: false,
       hasEvidenceVisual: true,
       softInvites: [
-        { kind: "framework", id: "doac-appropriateness", label: "If someone asks for a DOAC on a mechanical valve, the checklist should stop at niche — open the VKA framework." },
+        { kind: "framework", id: "doac-appropriateness", label: "If someone asks for a DOAC on a mechanical valve, the checklist stops at niche — open the VKA framework." },
         { kind: "framework", id: "ttr-vka-quality", label: "Optional: TTR is how VKA clinics talk about INR control quality — open TTR / VKA quality (not a DOAC metric)." }
       ]
     },

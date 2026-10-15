@@ -1774,21 +1774,22 @@ window.ANTICOAG_TRIALS = [
     "status": "practice",
     "impact": 2,
     "title": "Perioperative Bridging Anticoagulation in Patients with Atrial Fibrillation",
-    "population": "AF patients on warfarin undergoing elective procedures requiring interruption",
+    "population": "1884 enrolled (950 no bridging, 934 bridging). AF patients on warfarin undergoing an elective operation or other elective invasive procedure that requires interruption.",
     "intervention": "LMWH bridging around warfarin interruption for procedures",
     "comparator": "No bridging (placebo)",
-    "primaryResult": "Forgoing bridging was noninferior for arterial thromboembolism",
-    "safety": "Major bleeding higher with bridging",
-    "takeaway": "Do not routinely bridge warfarin interruptions in typical AF — more bleeding, no thromboembolic gain.",
+    "primaryResult": "Arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging); risk difference 0.1 percentage points (95% CI −0.6 to 0.8); P=0.01 for noninferiority",
+    "safety": "Major bleeding 1.3% (no bridging) vs 3.2% (bridging); relative risk 0.41 (95% CI 0.20 to 0.78); P=0.005 for superiority",
+    "takeaway": "Skip routine LMWH bridging in typical AF — arterial thromboembolism was noninferior without bridging, and major bleeding was lower without a bridge.",
     "cite": "Douketis JD, et al. N Engl J Med. 2015;373:823-833.",
     "doi": "10.1056/NEJMoa1501035",
     "url": "https://doi.org/10.1056/NEJMoa1501035",
+    "pmid": "26095867",
     "expectedResults": null,
     "background": "Perioperative bridging with LMWH for warfarin interruption in AF was common despite uncertain benefit.",
-    "designNotes": "RCT of LMWH bridging vs no bridging for elective warfarin interruption in AF.",
-    "strengths": "Forgoing bridging noninferior for arterial thromboembolism; bridging caused more major bleeding.",
+    "designNotes": "Randomized: yes. Double-blind, placebo-controlled. Forgoing bridging was tested for noninferiority on arterial thromboembolism and for superiority on major bleeding. The abstract reports a risk difference for arterial thromboembolism and a relative risk for major bleeding. ClinicalTrials.gov NCT00786474.",
+    "strengths": "Arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging) met noninferiority (risk difference 0.1 percentage points). Major bleeding was 1.3% vs 3.2%, lower without bridging (relative risk 0.41).",
     "limitations": "Typical AF surgical risk — very high thrombotic-risk subgroups may differ.",
-    "journalClub": "BRIDGE: do not routinely bridge warfarin interruptions in typical AF.",
+    "journalClub": "BRIDGE: skip routine LMWH bridging for warfarin interruption in typical AF. Arterial thromboembolism 0.4% without bridging vs 0.3% with bridging (risk difference 0.1 percentage points; P=0.01 for noninferiority). Major bleeding 1.3% vs 3.2% (relative risk 0.41; P=0.005 for superiority).",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -1803,8 +1804,8 @@ window.ANTICOAG_TRIALS = [
         "year": 2022
       }
     ],
-    "caveats": "Typical AF surgical risk—very high thrombotic-risk subgroups may still need individualized plans.",
-    "practiceTakeaway": "For most AF patients interrupting warfarin for procedures, skip LMWH bridging."
+    "caveats": "Typical AF surgical risk—very high thrombotic-risk subgroups may still need individualized plans. The abstract gives a risk difference for arterial thromboembolism and a relative risk for major bleeding.",
+    "practiceTakeaway": "Skip routine LMWH bridging in typical AF. Arterial thromboembolism was 0.4% without bridging versus 0.3% with bridging (noninferior), and major bleeding was 1.3% versus 3.2%. Teaching example, not an order."
   },
   {
     "id": "mariner",

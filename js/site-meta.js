@@ -6,6 +6,16 @@ window.ANTICOAG_SITE_META = {
   changelog: [
     {
       date: "2026-10-15",
+      title: "Shareable links, cleaner printing and a data integrity check",
+      items: [
+        "Opening a trial card or treatment pathway now puts it in the address bar (card, pathway or playlist), so a copied link opens straight to it. Existing links keep working.",
+        "Printing an open card, pathway or handout from the browser hides the header, filters and close buttons and lets the dialog run across pages without clipping.",
+        "Clinical data now lives in its own folder, separate from page layout code, with an automatic check for missing card fields, dead-end buttons, small touch targets and site wording rules.",
+        "No clinical wording changed. Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
+      date: "2026-10-15",
       title: "New trial cards: PREPIC2 and EPCAT II; VTE prophylaxis playlist",
       items: [
         "New trial card PREPIC2 (JAMA 2015): a retrievable vena cava filter added to anticoagulation in hospitalized patients with severe acute PE. Added to the PE reperfusion playlist and linked from the anticoagulation step of the intermediate-risk PE pathway.",

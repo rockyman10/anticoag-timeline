@@ -2224,21 +2224,15 @@
   let detailMode = "summary"; // summary | journal
 
 
-  const TEACH_NOT_RX = "Teaching example, not a prescription.";
-  const TEACH_NOT_ORDER = "Teaching example, not an order.";
-
   function renderPracticalStrip(t) {
     const d = (practical.dosingByTrial || {})[t.id];
     if (!d) return "";
-    const disc = practical.disclaimer || "Verify with local protocol / product labeling.";
     return `<div class="prac-box">
       <div class="lab">Practical — dosing / logistics</div>
-      <div class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</div>
       ${d.regimen ? `<div class="row"><strong>Regimen the evidence used:</strong> ${esc(d.regimen)}</div>` : ""}
       ${d.food ? `<div class="row"><strong>Food:</strong> ${esc(d.food)}</div>` : ""}
       ${d.renal ? `<div class="row"><strong>Renal:</strong> ${esc(d.renal)}</div>` : ""}
       ${d.holdHint ? `<div class="row"><strong>Periprocedural hold (heuristic):</strong> ${esc(d.holdHint)}</div>` : ""}
-      <div class="disc">${esc(disc)}</div>
       <div class="trial-links" style="margin-top:.35rem"><button type="button" class="linkish" data-open-ddi="1">Open DDI library</button></div>
     </div>`;
   }
@@ -2289,7 +2283,7 @@
     if (t.doi) return false;
     return !!(t.doiPending || isPresentedCite(t));
   }
-  const DOI_PENDING_BANNER_HTML = `<div class="lead-alert doi-pending-banner" style="margin-bottom:.55rem"><strong>Presented / simultaneous report — peer-reviewed DOI not linked yet.</strong> Figures reflect congress or simultaneous press reporting and may change when the full paper posts. Verify against the published article before journal club or protocol decisions. Educational only — not medical advice.</div>`;
+  const DOI_PENDING_BANNER_HTML = `<div class="lead-alert doi-pending-banner" style="margin-bottom:.55rem"><strong>Presented / simultaneous report — peer-reviewed DOI not linked yet.</strong> Figures reflect congress or simultaneous press reporting and may change when the full paper posts. Verify against the published article before journal club or protocol decisions.</div>`;
 
   function renderSummaryBody(t) {
     const jc = composeJournal(t);
@@ -3244,10 +3238,6 @@
       return hn ? esc(hn.title) : "";
     }).filter(Boolean);
     const typeLab = ({ start: "Start", question: "Decision", recommendation: "Reasoning step", caution: "Caution", end: "Complete" })[n.type] || n.type;
-    const doseLine = /\b\d+(?:\.\d+)?\s*mg\b|\bINR\b|4F-PCC|dose-adjusted warfarin/i.test(`${n.title || ""} ${n.body || ""}`)
-      ? `<div class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</div>`
-      : "";
-
     let evHtml = (n.evidence || []).map(e => {
       const t = byId[e.trial];
       const nnt = e.nnt ? `<div class="nnt">NNT/effect: ${esc(String(e.nnt))}${e.arr ? " · ARR " + esc(String(e.arr)) : ""}</div>` : `<div class="nnt" style="color:var(--muted);font-weight:600">NNT: not reported here</div>`;
@@ -3280,11 +3270,9 @@
     document.getElementById("txp-body").innerHTML = `
       <div class="txp-crumbs">${crumbs.map((c,i)=> i===crumbs.length-1?`<b>${c}</b>`:c).join(" → ")}</div>
       <div class="txp-progress"><i style="width:${pct}%"></i></div>
-      <p class="teach-not-rx">${esc(TEACH_NOT_RX)}</p>
       <div class="txp-layout">
         <div class="txp-main">
           <div class="txp-type">${typeLab}</div>
-          ${doseLine}
           <h3>${esc(n.title)}</h3>
           <div class="txp-body">${esc(n.body || "")}</div>
           <div class="txp-choices">${choices}${endExtra}</div>
@@ -3370,7 +3358,7 @@
     document.getElementById("print-root").innerHTML = `
       <div class="banner">Treatment pathway summary</div>
       <h1>${esc(p.title)}</h1>
-      <div class="p-meta">${esc(p.indication)} · ${esc(TEACH_NOT_RX)}</div>
+      <div class="p-meta">${esc(p.indication)}</div>
       ${steps.map((n,i)=>`<h2>${i+1}. ${esc(n.title)}</h2><p>${esc(n.body||"")}</p>
         ${(n.evidence||[]).map(e=>`<p><strong>${esc(e.trial)}:</strong> ${esc(e.effect||"")}${e.nnt?" · "+esc(String(e.nnt)):""}</p>`).join("")}
       `).join("")}
@@ -3904,7 +3892,7 @@
       <div class="jc-sec"><h3>Practice pearl</h3><div class="take" style="margin:0">${esc(fw.pearl)}</div></div>
       ${teachBack}
       ${teachRelatedLinksHtml(fw.links)}
-      <p class="teach-lead" style="margin-top:.75rem;">Educational framing only — confirm with guidelines and local protocols.</p>`;
+`;
   }
 
   function renderCaseList() {
@@ -3917,7 +3905,6 @@
   function renderCaseDetail(c) {
     const fws = (c.frameworkIds || []).map(id => frameworks.find(f => f.id === id)).filter(Boolean);
     return `<button type="button" class="back-link" data-back="cases">← All cases</button>
-      <p class="teach-not-rx">${esc(TEACH_NOT_RX)}</p>
       <p style="font-weight:600;margin-bottom:.25rem;">${esc(c.title)}</p>
       <div class="case-stem">${esc(c.stem)}</div>
       <div class="jc-sec"><h3>Key question</h3><p>${esc(c.keyQuestion)}</p></div>
@@ -3967,7 +3954,6 @@
     (rev.classes || []).forEach(cl => {
       h += `<div class="rev-block">
         <h3 style="font-family:'Source Serif 4',Georgia,serif;font-size:1.1rem;margin-bottom:.35rem;">${esc(cl.agentClass)}</h3>
-        <p class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</p>
         <p style="font-size:.9375rem;margin-bottom:.35rem;"><strong>What the teaching map describes:</strong> ${esc(cl.specific)}</p>
         <p style="font-size:.875rem;color:var(--ink-2);margin-bottom:.35rem;">${esc(cl.notes)}</p>
         ${trialLinkButtons(cl.trialIds)}
@@ -3987,8 +3973,7 @@
     agents.forEach(a => {
       h += `<div class="prac-box" style="margin-bottom:.45rem;">
         <div class="lab">${esc(a.name)}</div>
-        <div class="teach-dose-label">${esc(TEACH_NOT_ORDER)}</div>
-        <div class="row"><strong>Load / maintain the trials used:</strong> ${esc(a.loadMaintain)}</div>
+          <div class="row"><strong>Load / maintain the trials used:</strong> ${esc(a.loadMaintain)}</div>
         <div class="row"><strong>Food:</strong> ${esc(a.food)}</div>
         <div class="row"><strong>Renal:</strong> ${esc(a.renal)}</div>
         <div class="row"><strong>Pearl:</strong> ${esc(a.pearls)}</div>

@@ -101,7 +101,6 @@ window.ANTICOAG_FRAMEWORKS = [
     ],
     doesNotApply: [
       "CKD G1–G4 not on dialysis — use the AF stroke prevention framework and the product label (KDIGO's DOAC-favoring recommendation applies there)",
-      "Choosing or calculating a dose — this card has no dosing calculator and no renal dose table; use the product label and local protocol",
       "Mechanical heart valves or moderate–severe mitral stenosis (VKA territory)",
       "Non-AF questions in kidney failure, such as VTE treatment or vascular-protection trials — different evidence"
     ],
@@ -115,7 +114,7 @@ window.ANTICOAG_FRAMEWORKS = [
           "AXADIA-AFNET 8 (Circulation 2023): 97 randomized (48 apixaban, 49 phenprocoumon) after the target was cut from 222 to 108 by amendment (powered for noninferiority) following a blinded review of recruitment and event rates in 2020 and newly published data. Primary safety composite of major bleeding, CRNM bleeding, or death from any cause — it includes all-cause death, so it is not a bleeding-only endpoint: 45.8% vs 51.0% (HR 0.93; 95% CI 0.53–1.65); noninferiority was not shown.",
           "RENAL-AF (Circulation 2022): 154 randomized (82 apixaban, 72 warfarin) of about 760 planned; stopped early for enrollment challenges. Major or CRNM bleeding at 1 year (Kaplan–Meier): 32% vs 26% (HR 1.20; 95% CI 0.63–2.30). Stroke or systemic embolism at 1 year: 3.0% vs 3.3%.",
           "Different endpoints: AXADIA-AFNET 8's primary safety composite includes death; RENAL-AF's primary is bleeding only. Do not put them side by side as the same endpoint.",
-          "Different comparators: phenprocoumon in AXADIA-AFNET 8, warfarin in RENAL-AF. Apixaban doses differed by protocol; see the trial cards (trial protocol, not a dosing recommendation)."
+          "Different comparators: phenprocoumon in AXADIA-AFNET 8, warfarin in RENAL-AF. Apixaban doses differed by protocol; see the trial cards."
         ]
       },
       {
@@ -142,7 +141,7 @@ window.ANTICOAG_FRAMEWORKS = [
           "Bleeding risk is high in both arms: major or CRNM bleeding at 1 year was 32% with apixaban and 26% with warfarin in RENAL-AF, and ACC/AHA notes significantly more bleeding than stroke events in both small trials.",
           "VKA time in therapeutic range was poor in dialysis: 44% with warfarin in RENAL-AF and 50.7% with phenprocoumon in AXADIA-AFNET 8. These are trial descriptors, not clinic targets.",
           "Death was common in both trials, which is part of why AXADIA-AFNET 8's death-inclusive composite was high in both arms.",
-          "Apixaban doses on the trial cards are trial protocol, not a dosing recommendation. This card has no dosing calculator and no renal dose table."
+          "Apixaban doses on the trial cards are trial protocol."
         ]
       }
     ],

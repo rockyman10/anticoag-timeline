@@ -12860,7 +12860,7 @@ window.ANTICOAG_DDI = {
       ],
       "evidenceGrade": "Label/extrapolation",
       "populationCaveats": "Moderate is the dexamethasone label’s word for CYP3A4 induction. Do not invent a DOAC percent.",
-      "practiceInterpretation": "For prolonged cancer-dose dexamethasone, the CYP3A4-induction concern is lower apixaban or rivaroxaban exposure. LMWH is the teaching escape hatch when that interaction dominates. This is not an order.",
+      "practiceInterpretation": "For prolonged cancer-dose dexamethasone, the CYP3A4-induction concern is lower apixaban or rivaroxaban exposure. LMWH is the teaching escape hatch when that interaction dominates.",
       "labelGuidance": "Dexamethasone label: moderate CYP3A4 inducer. Opposite clinical worry from inhibitor-related bleeding.",
       "uncertainty": "No curated dexamethasone–DOAC AUC. P-gp induction is not on the dexamethasone label.",
       "sources": [
@@ -12915,7 +12915,7 @@ window.ANTICOAG_DDI = {
       ],
       "evidenceGrade": "Label/extrapolation",
       "populationCaveats": "Moderate is the dexamethasone label’s word for CYP3A4 induction. Do not invent a DOAC percent.",
-      "practiceInterpretation": "For prolonged cancer-dose dexamethasone, the CYP3A4-induction concern is lower apixaban or rivaroxaban exposure. LMWH is the teaching escape hatch when that interaction dominates. This is not an order.",
+      "practiceInterpretation": "For prolonged cancer-dose dexamethasone, the CYP3A4-induction concern is lower apixaban or rivaroxaban exposure. LMWH is the teaching escape hatch when that interaction dominates.",
       "labelGuidance": "Dexamethasone label: moderate CYP3A4 inducer. Opposite clinical worry from inhibitor-related bleeding.",
       "uncertainty": "No curated dexamethasone–DOAC AUC. P-gp induction is not on the dexamethasone label.",
       "sources": [

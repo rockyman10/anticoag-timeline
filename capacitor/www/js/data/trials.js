@@ -98,7 +98,7 @@ window.ANTICOAG_TRIALS = [
         "year": 2024
       }
     ],
-    "caveats": "Higher-risk AF cohort; warfarin TTR varied by region; take with food at the 20 mg dose; more GI bleeding vs warfarin despite less ICH.",
+    "caveats": "Higher-risk AF cohort; warfarin TTR varied by region; more GI bleeding vs warfarin despite less ICH.",
     "practiceTakeaway": "Once-daily rivaroxaban is a guideline-supported warfarin alternative in eligible NVAF—counsel on food and bleeding trade-offs.",
     "questionsAnswered": [
       {

@@ -76,7 +76,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "recommendation",
           "title": "Dose-adjusted warfarin is what this niche’s evidence uses",
           "body": "Mechanical valves and moderate–severe mitral stenosis sat outside the pivotal DOAC AF trials. The 2020 ACC/AHA valvular heart disease guideline lists VKA anticoagulation (dose-adjusted warfarin) for mechanical valves and for AF with rheumatic mitral stenosis, with the INR target from the guideline's valve table. A switch to a DOAC is outside that evidence.",
-          "why": "ACC/AHA valvular heart disease guideline Class 1 (verify current table) for mechanical valves / moderate–severe MS.",
+          "why": "2020 ACC/AHA valvular heart disease guideline: VKA is Class 1 for mechanical valves and for AF with rheumatic mitral stenosis (verify the current table).",
           "evidence": [],
           "caveats": [
             "DOAC trials do not apply here"
@@ -846,7 +846,7 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "vte-riva",
           "type": "recommendation",
-          "title": "EINSTEIN used rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily with food",
+          "title": "EINSTEIN used rivaroxaban 15 mg twice daily for 3 weeks, then 20 mg once daily",
           "body": "",
           "why": "",
           "evidence": [

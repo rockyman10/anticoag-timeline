@@ -160,7 +160,7 @@ window.ANTICOAG_PRACTICAL = {
       {
         id: "vka-rev",
         agentClass: "Vitamin K antagonists (warfarin)",
-        specific: "Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. Fresh frozen plasma is the fallback when PCC is unavailable.",
+        specific: "The 2020 ACC Expert Consensus Decision Pathway on bleeding with oral anticoagulants lists 4-factor PCC plus vitamin K for warfarin reversal, and plasma when 4F-PCC is not available.",
         notes: "Goal is rapid INR correction for life-threatening bleed plus sustained vitamin K effect. Not a DOAC problem — included for completeness on mixed wards.",
         trialIds: []
       },

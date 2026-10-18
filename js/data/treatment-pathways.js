@@ -2788,7 +2788,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "bld-vka",
           "type": "recommendation",
           "title": "Warfarin major-bleed teaching: 4F-PCC plus IV vitamin K",
-          "body": "Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. Those bundles list fresh frozen plasma as the fallback when 4F-PCC is unavailable.",
+          "body": "Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. The 2020 ACC Expert Consensus Decision Pathway lists fresh frozen plasma as the fallback when 4F-PCC is unavailable.",
           "why": "",
           "evidence": [],
           "caveats": [],

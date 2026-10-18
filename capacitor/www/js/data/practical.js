@@ -36,9 +36,8 @@ window.ANTICOAG_PRACTICAL = {
     },
     "einstein-dvt": {
       regimen: "EINSTEIN-DVT used rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily.",
-      food: "Label: 15 mg and 20 mg tablets are taken with food (AF: with the evening meal); 10 mg and 2.5 mg with or without food.",
+      food: "Label: 15 mg and 20 mg tablets are taken with food (AF: with the evening meal); 10 mg and 2.5 mg with or without food. The label reports that food raises 20 mg exposure (AUC up 39%).",
       renal: "Follow VTE label.",
-      holdHint: "The label reports that food raises 20 mg exposure (AUC up 39%)."
     },
     "einstein-pe": {
       regimen: "EINSTEIN-PE used rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily.",

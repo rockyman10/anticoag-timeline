@@ -168,7 +168,7 @@ window.ANTICOAG_PRACTICAL = {
         id: "ufh-rev",
         agentClass: "Unfractionated heparin (UFH)",
         specific: "Protamine sulfate is the labeled neutralization class for heparin. The heparin sodium label describes slow infusion of protamine when bleeding requires reversal of heparinization.",
-        notes: "Heparin sodium injection labeling (FDA 017029s178): each mg of protamine sulfate neutralizes approximately 100 USP heparin units; the amount required decreases as heparin is metabolized; no more than 50 mg should be administered, very slowly, in any 10-minute period. Fatal reactions resembling anaphylaxis are described, so resuscitation has to be available. Open the institutional heparin-reversal chart.",
+        notes: "Heparin sodium injection labeling (FDA 017029s178): each mg of protamine sulfate neutralizes approximately 100 USP heparin units; the amount required decreases as heparin is metabolized; no more than 50 mg should be administered, very slowly, in any 10-minute period. Fatal reactions resembling anaphylaxis are described, so resuscitation has to be available. That label text is read beside the institutional heparin-reversal chart.",
         trialIds: []
       },
       {

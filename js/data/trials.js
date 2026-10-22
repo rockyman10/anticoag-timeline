@@ -257,7 +257,7 @@ window.ANTICOAG_TRIALS = [
     "population": "Patients with atrial fibrillation plus one or more stroke risk factors, randomly allocated to oral anticoagulation (n=3,371) or clopidogrel plus aspirin (n=3,335)",
     "intervention": "Oral anticoagulation with a target INR of 2.0–3.0",
     "comparator": "Clopidogrel 75 mg per day plus aspirin (75–100 mg per day, as recommended in the trial)",
-    "primaryResult": "Stopped early for superiority of oral anticoagulation. First stroke, non-central nervous system systemic embolus, myocardial infarction, or vascular death: 165 events on oral anticoagulation (annual risk 3.93%) vs 234 on clopidogrel plus aspirin (annual risk 5.60%). Relative risk 1.44 (1.18–1.76; P=0.0003). The relative risk above 1 is more events on clopidogrel plus aspirin.",
+    "primaryResult": "Stopped early for superiority of oral anticoagulation. First stroke, non-central nervous system systemic embolus, myocardial infarction, or vascular death: 165 events on oral anticoagulation (annual risk 3.93%) vs 234 on clopidogrel plus aspirin (annual risk 5.60%). Relative risk 1.44 for clopidogrel plus aspirin versus OAC (1.18–1.76; P=0.0003). The relative risk above 1 is more events on clopidogrel plus aspirin.",
     "safety": "The abstract does not give one overall major-bleeding rate. It reports a major-bleeding interaction by oral-anticoagulation use at entry (P=0.03). Already on oral anticoagulation at entry: vascular-event relative risk 1.50 (95% CI 1.19–1.89) and major-bleeding relative risk 1.30 (0.94–1.79). Not on oral anticoagulation at entry: 1.27 (0.85–1.89) and 0.59 (0.32–1.08).",
     "takeaway": "In high-risk atrial fibrillation, oral anticoagulation (INR 2.0–3.0) prevented more vascular events than clopidogrel plus aspirin. The trial was stopped early for that difference.",
     "cite": "Connolly S, et al. Lancet. 2006;367:1903-1912.",
@@ -267,7 +267,7 @@ window.ANTICOAG_TRIALS = [
     "expectedResults": null,
     "background": "Before the DOAC era, some patients with atrial fibrillation were treated with antiplatelet therapy instead of a vitamin K antagonist. ACTIVE-W asked whether clopidogrel plus aspirin was noninferior to oral anticoagulation.",
     "designNotes": "Randomized: yes. Intention-to-treat. Outcome events were adjudicated by a blinded committee. The abstract does not call the treatment assignment double-blind. Oral anticoagulation target INR 2.0–3.0 versus clopidogrel 75 mg daily plus aspirin (75–100 mg per day, as recommended in the trial). ClinicalTrials.gov NCT00243178. Stopped early because oral anticoagulation was superior.",
-    "strengths": "Large randomized comparison with a blinded adjudication committee and a clear primary-event difference (annual risk 3.93% vs 5.60%; relative risk 1.44).",
+    "strengths": "Large randomized comparison with a blinded adjudication committee and a clear primary-event difference (annual risk 3.93% vs 5.60%; relative risk 1.44 for clopidogrel plus aspirin versus OAC).",
     "limitations": "Stopped early. The abstract’s comparator is oral anticoagulation at INR 2.0–3.0, not a named DOAC. Major bleeding is reported as an interaction by prior oral-anticoagulation use, not as one overall rate.",
     "journalClub": "More vascular events with clopidogrel plus aspirin than with oral anticoagulation. Randomized, stopped early for that superiority finding. And limited because bleeding is a subgroup interaction rather than one overall rate. ACTIVE-W is read beside BAFTA when the question is anticoagulation versus antiplatelet therapy in atrial fibrillation. This is not a DOAC trial.",
     "guidelines": [
@@ -278,8 +278,8 @@ window.ANTICOAG_TRIALS = [
         "year": 2023
       }
     ],
-    "caveats": "Randomized: yes. Stopped early. The primary vascular-event difference (relative risk 1.44; 1.18–1.76; P=0.0003) favored oral anticoagulation. The abstract does not give one overall major-bleeding percentage. Not evidence for or against a specific DOAC.",
-    "practiceTakeaway": "In ACTIVE-W, oral anticoagulation at INR 2.0–3.0 had a lower annual rate of stroke, systemic embolus, myocardial infarction, or vascular death than clopidogrel 75 mg plus aspirin 75–100 mg in AF (3.93% vs 5.60%; relative risk 1.44; 95% CI 1.18–1.76). The trial stopped early.",
+    "caveats": "Randomized: yes. Stopped early. The primary vascular-event difference (relative risk 1.44 for clopidogrel plus aspirin versus OAC; 1.18–1.76; P=0.0003) favored oral anticoagulation. The abstract does not give one overall major-bleeding percentage. Not evidence for or against a specific DOAC.",
+    "practiceTakeaway": "In ACTIVE-W, oral anticoagulation at INR 2.0–3.0 had a lower annual rate of stroke, systemic embolus, myocardial infarction, or vascular death than clopidogrel 75 mg plus aspirin 75–100 mg in AF (3.93% vs 5.60%; relative risk 1.44 for clopidogrel plus aspirin versus OAC; 95% CI 1.18–1.76). The trial stopped early.",
     "questionsAnswered": [
       {
         "text": "In AF with stroke risk factors, was clopidogrel plus aspirin as good as oral anticoagulation (target INR 2.0–3.0)? No. The trial was stopped early because oral anticoagulation had fewer strokes, emboli, myocardial infarctions or vascular deaths.",
@@ -1054,7 +1054,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Full-dose DOAC: apixaban 5 mg twice daily or rivaroxaban 20 mg daily",
     "primaryResult": "5-year symptomatic recurrent VTE (fatal or non-fatal PE or isolated proximal DVT): 2.2% reduced-dose vs 1.8% full-dose (adjusted HR 1.32; 95% CI 0.67–2.60; non-inferiority p=0.23). Non-inferiority was not shown (prespecified margin HR 1.7).",
     "safety": "Major or CRNM bleeding, 5-year cumulative incidence: 9.9% reduced-dose vs 15.2% full-dose (adjusted HR 0.61; 95% CI 0.48–0.79). Published adjusted estimate. Hierarchical testing did not formally test this secondary after non-inferiority was not shown.",
-    "takeaway": "Reduced vs full DOAC after extension is already indicated: 5-year recurrent VTE 2.2% vs 1.8% (non-inferiority not shown). Major or CRNM bleeding 9.9% vs 15.2% (adjusted HR 0.61). Different question from AMPLIFY-EXT / EINSTEIN-CHOICE.",
+    "takeaway": "Reduced vs full DOAC after extension is already indicated: 5-year recurrent VTE 2.2% vs 1.8% (non-inferiority not shown). Major or CRNM bleeding 9.9% vs 15.2% (adjusted HR 0.61); this secondary result was not formally tested because noninferiority was not shown. Different question from AMPLIFY-EXT / EINSTEIN-CHOICE.",
     "cite": "Couturaud F, et al. Lancet. 2025;405:725-735.",
     "doi": "10.1016/S0140-6736(24)02842-3",
     "url": "https://doi.org/10.1016/S0140-6736(24)02842-3",
@@ -1063,7 +1063,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Investigator-initiated, multicentre (France), randomised 1:1, open-label, blinded-endpoint adjudication. Stratified by centre, DOAC type, antiplatelet use. NCT03285438. Reduced (apixaban 2.5 twice daily / rivaroxaban 10 once daily) vs full (apixaban 5 twice daily / rivaroxaban 20 once daily). N=2,768 (reduced 1,383; full 1,385). Median follow-up 37.1 months (interquartile range 24.0–48.3). Non-inferiority margin HR 1.7.",
     "strengths": "Clinically relevant dose question. High-risk extend population. Dual-drug (apixaban or rivaroxaban) pragmatic design. 5-year recurrent VTE was low in both arms. The major or CRNM bleeding point estimate was lower with reduced dose. Non-inferiority vs full dose was not shown.",
     "limitations": "Open-label. France multicentre generalizability. Non-inferiority was not met (upper CI crossed the HR 1.7 margin) and the key bleeding secondary was not formally tested. Not cancer-VTE primary. Clinician-chosen DOAC type.",
-    "journalClub": "After extension is already indicated in high-risk non-cancer VTE, RENOVE did not show reduced-dose non-inferiority (5-year recurrent VTE 2.2% vs 1.8%; adjusted HR 1.32; non-inferiority p=0.23). Major or CRNM bleeding was 9.9% vs 15.2% (adjusted HR 0.61).",
+    "journalClub": "After extension is already indicated in high-risk non-cancer VTE, RENOVE did not show reduced-dose non-inferiority (5-year recurrent VTE 2.2% vs 1.8%; adjusted HR 1.32; non-inferiority p=0.23). Major or CRNM bleeding was 9.9% vs 15.2% (adjusted HR 0.61); this secondary result was not formally tested because noninferiority was not shown.",
     "guidelines": [
       {
         "society": "CHEST",
@@ -1079,7 +1079,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "API-CAT is a different population (cancer-associated VTE). This is not acute VTE start evidence. Enrollment already assumes extension is indicated. Non-inferiority of reduced vs full dose was not shown. The bleeding HR is the published adjusted estimate. Hierarchical testing stopped before a formal superiority test of that secondary.",
-    "practiceTakeaway": "In RENOVE, after 6–24 months of full-dose anticoagulation, reduced-dose apixaban or rivaroxaban did not meet noninferiority versus full dose for 5-year recurrent VTE (2.2% vs 1.8%; adjusted HR 1.32; 95% CI 0.67–2.60). Major or clinically relevant nonmajor bleeding was 9.9% versus 15.2% (adjusted HR 0.61).",
+    "practiceTakeaway": "In RENOVE, after 6–24 months of full-dose anticoagulation, reduced-dose apixaban or rivaroxaban did not meet noninferiority versus full dose for 5-year recurrent VTE (2.2% vs 1.8%; adjusted HR 1.32; 95% CI 0.67–2.60). Major or clinically relevant nonmajor bleeding was 9.9% versus 15.2% (adjusted HR 0.61); this secondary result was not formally tested because noninferiority was not shown.",
     "questionsAnswered": [
       {
         "text": "After 6–24 months of full-dose treatment for VTE, was a reduced-dose DOAC noninferior to a full-dose DOAC for 5-year recurrent VTE? No. Noninferiority was not shown.",
@@ -1130,7 +1130,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Randomized: yes. Double-blind. Recurrent VTE 1.8% vs 1.3% (hazard ratio 1.44; 95% CI 0.78–2.64; P=0.01 for noninferiority) and less major or clinically relevant bleeding (hazard ratio 0.54). Acute coronary syndromes were more frequent with dabigatran (0.9% vs 0.2%). These rates stay separate from RE-SONATE.",
-    "practiceTakeaway": "In RE-MEDY, dabigatran 150 mg twice daily was noninferior to warfarin for recurrent VTE after at least 3 months of anticoagulation (1.8% vs 1.3%; HR 1.44; 95% CI 0.78–2.64), with less major bleeding (0.9% vs 1.8%) and more acute coronary syndromes (0.9% vs 0.2%).",
+    "practiceTakeaway": "In RE-MEDY, dabigatran 150 mg twice daily was noninferior to warfarin for recurrent VTE after at least 3 months of anticoagulation (1.8% vs 1.3%; HR 1.44; 95% CI 0.78–2.64). Major bleeding was 0.9% vs 1.8% (HR 0.52; 95% CI 0.27–1.02, not significant). Major or clinically relevant nonmajor bleeding had HR 0.54 (95% CI 0.41–0.71), and acute coronary syndromes were 0.9% vs 0.2%.",
     "questionsAnswered": [
       {
         "text": "After at least 3 months of anticoagulation for VTE, was extended dabigatran 150 mg twice daily, as given in the trial, noninferior to warfarin for recurrent VTE? Yes, by the paper's noninferiority test.",
@@ -2014,7 +2014,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Randomized: yes. Open-label, not blinded. Less recurrent VTE with dalteparin than with a coumarin, with two limits that belong in the same sentence: the design was open-label, and six-month mortality was 39% vs 41%. Major bleeding was 6% vs 4%, without a detected difference.",
-    "practiceTakeaway": "In CLOT, six months of dalteparin lowered recurrent VTE versus a coumarin in cancer with acute VTE (9% vs 17%; HR 0.48). Six-month mortality was 39% versus 41%, and major bleeding was 6% versus 4%.",
+    "practiceTakeaway": "In CLOT, six months of dalteparin lowered recurrent VTE versus a coumarin in cancer with acute VTE (9% vs 17%; HR 0.48). Six-month mortality was 39% versus 41%, and major bleeding was 6% versus 4% (no significant difference).",
     "questionsAnswered": [
       {
         "text": "In cancer-associated VTE, did six months of dalteparin alone, as given in the trial, reduce recurrent VTE compared with dalteparin followed by a coumarin? Yes.",
@@ -2663,7 +2663,7 @@ window.ANTICOAG_TRIALS = [
     "limitations": "No comparator arm. Edoxaban not studied. Patients with VTE excluded. Mostly White patients. The 50 ng/mL residual-level cut point has not been validated. Bleeding was higher with high-bleeding-risk procedures in the apixaban and rivaroxaban cohorts. Patients with severely reduced kidney function were excluded (drug-specific creatinine-clearance cutoffs; not printed here).",
     "journalClub": "Not randomized: a single-strategy management cohort judged against prespecified thresholds, so it shows low event rates with this protocol, not that bridging or a different schedule is worse. The bleeding threshold reads cohort by cohort: excluded only for dabigatran in the primary analysis (apixaban P=.051; rivaroxaban P=.36). In the per-protocol analysis it was met for dabigatran and apixaban, not rivaroxaban. It stands beside BRIDGE (warfarin, randomized).",
     "guidelines": [],
-    "caveats": "Randomized: no (prospective management cohort). Primary-outcome CIs are 1-sided. The arterial thromboembolism threshold (<1.5%) was met in all three cohorts. The 2% major-bleeding threshold was excluded only for dabigatran. Protocol timings are trial protocol. Hold hours, the dabigatran kidney-function intervals, and a heparin dose are not printed in the summary. Edoxaban not studied. Patients with VTE not included.",
+    "caveats": "Randomized: no (prospective management cohort). Primary-outcome CIs are 1-sided. The arterial thromboembolism threshold (<1.5%) was met in all three cohorts. The 2% major-bleeding threshold was excluded only for dabigatran. Protocol timings are trial protocol. Edoxaban not studied. Patients with VTE not included.",
     "practiceTakeaway": "In PAUSE, a standardized DOAC interruption without heparin bridging in AF had 30-day major bleeding of 1.35% with apixaban, 0.90% with dabigatran, and 1.85% with rivaroxaban, and arterial thromboembolism stayed below 1.5% in each cohort. The 2% major-bleeding threshold was excluded only for dabigatran."
   },
   {
@@ -4345,7 +4345,7 @@ window.ANTICOAG_TRIALS = [
     "intervention": "Apixaban 5 mg twice daily or rivaroxaban 20 mg daily",
     "comparator": "No anticoagulation",
     "primaryResult": "Stroke/SE/major bleed/CV death at 24 mo: 0.5% vs 1.5%. HR 0.31. P=0.028",
-    "safety": "Ischemic stroke 0.1% vs 1.1%. Major bleeding 0.3% vs 0.5%",
+    "safety": "Post hoc for ischemic stroke or systemic embolism: 0.1% vs 1.1%. Major bleeding 0.3% vs 0.5%",
     "takeaway": "First dedicated randomized trial: DOACs benefit intermediate-risk AF without increasing major bleeding.",
     "cite": "Kim D, et al. Anticoagulation for Atrial Fibrillation with Intermediate Stroke Risk. N Engl J Med. 2026. doi:10.1056/NEJMoa2607978 (SINGLE-AF; ESC 2026 simultaneous).",
     "url": "https://doi.org/10.1056/NEJMoa2607978",
@@ -4371,7 +4371,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "South Korean cohort. Low absolute event rates. Generalizability and precision warrant caution.",
-    "practiceTakeaway": "In SINGLE-AF, apixaban 5 mg twice daily or rivaroxaban 20 mg daily lowered the 24-month composite of stroke, systemic embolism, major bleeding, or cardiovascular death versus no anticoagulation in AF with CHA₂DS₂-VASc 1 in men or 2 in women (0.5% vs 1.5%; HR 0.31). Ischemic stroke was 0.1% versus 1.1%, and major bleeding was 0.3% versus 0.5%.",
+    "practiceTakeaway": "In SINGLE-AF, apixaban 5 mg twice daily or rivaroxaban 20 mg daily lowered the 24-month composite of stroke, systemic embolism, major bleeding, or cardiovascular death versus no anticoagulation in AF with CHA₂DS₂-VASc 1 in men or 2 in women (0.5% vs 1.5%; HR 0.31). Major bleeding was 0.3% versus 0.5%.",
     "questionsAnswered": [
       {
         "text": "In South Korean patients with AF and intermediate stroke risk (CHA₂DS₂-VASc 1 in men or 2 in women), did a DOAC reduce the 24-month composite of stroke, systemic embolism, major bleeding or cardiovascular death compared with no anticoagulation? Yes.",
@@ -4902,7 +4902,7 @@ window.ANTICOAG_TRIALS = [
     "indication": "AF+PCI",
     "status": "recent",
     "title": "1-Month versus 12-Month Dual Antithrombotic Therapy after PCI in AF",
-    "population": "1,079 full analysis set patients (Japan) with NVAF undergoing imaging-guided PCI (mostly non-MI)",
+    "population": "1,079 full analysis set patients (Japan) with NVAF undergoing imaging-guided PCI for chronic coronary syndrome or unstable angina",
     "intervention": "1-month DOAC + P2Y12 then DOAC monotherapy",
     "comparator": "12-month dual therapy then DOAC monotherapy",
     "primaryResult": "Death/thromboembolism 5.4% vs 4.3%. HR 1.25. Met noninferiority framework",
@@ -4913,9 +4913,9 @@ window.ANTICOAG_TRIALS = [
     "doi": "10.1016/S0140-6736(26)00665-3",
     "expectedResults": null,
     "background": "How short dual therapy can be after PCI in AF on DOAC remained an open refinement of AUGUSTUS-era care.",
-    "designNotes": "Randomized trial in Japan: 1-month DOAC+P2Y12 then DOAC mono vs 12-month dual then mono (largely non-MI, imaging-guided PCI).",
+    "designNotes": "Randomized trial in Japan: 1-month DOAC+P2Y12 then DOAC mono vs 12-month dual then mono (imaging-guided PCI for chronic coronary syndrome or unstable angina).",
     "strengths": "Less bleeding with very short dual therapy. Noninferiority efficacy framework met as reported.",
-    "limitations": "East Asian, mostly non-MI cohort. Caution extrapolating to ACS/MI or other regions.",
+    "limitations": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. Caution extrapolating to ACS/MI or other regions.",
     "journalClub": "OPTIMA-AF supports very short dual therapy in selected cohorts. The result does not extend generally to ACS.",
     "guidelines": [
       {
@@ -4930,8 +4930,8 @@ window.ANTICOAG_TRIALS = [
         "note": "Likely to inform next updates on very short dual therapy after imaging-guided PCI in selected cohorts."
       }
     ],
-    "caveats": "East Asian, largely non-MI cohort. The result does not extend indiscriminately to ACS/MI or other regions. Lower-than-anticipated events.",
-    "practiceTakeaway": "In OPTIMA-AF, 1 month of a DOAC plus a P2Y12 inhibitor, then DOAC monotherapy, was noninferior to 12 months of dual therapy for death or thromboembolism after PCI in Japanese, mostly non-MI NVAF (5.4% vs 4.3%; HR 1.25) and had less major or clinically relevant nonmajor bleeding (4.5% vs 8.8%; HR 0.50).",
+    "caveats": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. The result does not extend indiscriminately to ACS/MI or other regions. Lower-than-anticipated events.",
+    "practiceTakeaway": "In OPTIMA-AF, 1 month of a DOAC plus a P2Y12 inhibitor, then DOAC monotherapy, was noninferior to 12 months of dual therapy for death or thromboembolism after PCI for chronic coronary syndrome or unstable angina in Japanese NVAF (5.4% vs 4.3%; HR 1.25) and had less major or clinically relevant nonmajor bleeding (4.5% vs 8.8%; HR 0.50).",
     "questionsAnswered": [
       {
         "text": "In Japanese patients with AF after imaging-guided PCI for chronic coronary syndrome or unstable angina, was stopping the P2Y12 inhibitor at 1 month noninferior to 12 months of dual therapy for death or thromboembolism? Yes.",
@@ -5500,7 +5500,7 @@ window.ANTICOAG_TRIALS = [
     "background": "Catheter-based appendage closure is an alternative to oral anticoagulation for stroke prevention in AF. The trial report states that its effectiveness compared with physician-directed best medical care in patients at high risk of stroke and bleeding was unknown.",
     "designNotes": "Multicenter randomized trial in Germany. Time-to-event noninferiority analysis with a hazard-ratio margin of 1.3. Median follow-up 3 years (interquartile range 1.7 to 4.7). The comparator was physician-directed care rather than a single protocol drug.",
     "strengths": "Randomized. Enrolled the older, high-risk population often discussed for closure (mean age 77.9 years; mean CHA2DS2-VASc score 5.2; mean HAS-BLED score 3.0). Net composite that included bleeding and death.",
-    "limitations": "Medical-therapy regimens varied, because the comparator was physician-directed best medical care (DOACs if eligible). Single-country trial. The composite mixes thromboembolic, bleeding, and death components. Component results are not in the abstract.",
+    "limitations": "Medical-therapy regimens varied, because the comparator was physician-directed best medical care (DOACs if eligible). Single-country trial. The composite mixes thromboembolic, bleeding, and death components.",
     "journalClub": "Contrast with CHAMPION-AF: CHAMPION-AF enrolled anticoagulation-suitable patients and compared closure with a DOAC. CLOSURE-AF enrolled patients at high risk of stroke and bleeding and compared closure with physician-directed best medical care. The populations, comparators, and composites differ, and so did the results.",
     "guidelines": [],
     "caveats": "Noninferiority was not shown. The abstract reports the noninferiority test and does not describe a superiority result. Component outcomes are not shown here.",
@@ -5513,7 +5513,7 @@ window.ANTICOAG_TRIALS = [
     ],
     "questionsOpen": [
       {
-        "text": "Which parts of the composite (stroke, bleeding, or death) accounted for the higher event rate with the device? Component results are not in the abstract.",
+        "text": "Which parts of the composite (stroke, bleeding, or death) accounted for the higher event rate with the device?",
         "source": "CLOSURE-AF"
       },
       {
@@ -5544,7 +5544,7 @@ window.ANTICOAG_TRIALS = [
     "background": "Antiplatelet drugs reduce the risk of myocardial infarction, stroke, and cardiovascular death in peripheral arterial disease. The role of oral anticoagulants was unclear. WAVE tested adding an INR-targeted oral anticoagulant to antiplatelet therapy, a question COMPASS and VOYAGER PAD later revisited with low-dose rivaroxaban.",
     "designNotes": "Randomized trial with two coprimary outcomes. Mean follow-up 35 months. Anticoagulant intensity was set by an INR target of 2.0 to 3.0. No DOAC was studied.",
     "strengths": "Randomized. Large population limited to peripheral arterial disease. The second coprimary outcome counted peripheral or coronary ischemia leading to urgent intervention.",
-    "limitations": "Studied an INR-targeted oral anticoagulant, so it does not test DOACs or low-dose rivaroxaban. Time in therapeutic range is not in the abstract.",
+    "limitations": "Studied an INR-targeted oral anticoagulant, so it does not test DOACs or low-dose rivaroxaban.",
     "journalClub": "WAVE is background for COMPASS and VOYAGER PAD: an INR-targeted anticoagulant (target 2.0 to 3.0) added to antiplatelet therapy increased life-threatening bleeding without reducing major cardiovascular events, and the later trials tested a low-dose rivaroxaban regimen with aspirin instead.",
     "guidelines": [],
     "caveats": "Vitamin K antagonist–era trial. No DOAC was tested.",
@@ -5585,7 +5585,7 @@ window.ANTICOAG_TRIALS = [
     "background": "The trial report notes that the literature suggested warfarin was superior to aspirin after myocardial infarction, while aspirin was the more widely used drug. WARIS II compared warfarin, aspirin, and the combination.",
     "designNotes": "Randomized, multicenter, three-arm trial. Mean observation 4 years. Warfarin intensity was set by INR targets that differed between the warfarin-alone and combination arms.",
     "strengths": "Randomized three-arm design comparing each warfarin strategy with aspirin. Large sample. Long follow-up.",
-    "limitations": "Studied INR-targeted warfarin, not a DOAC. Stenting and P2Y12 inhibitor therapy are not in the report summary. Enrolled patients after myocardial infarction, not patients with AF.",
+    "limitations": "Studied INR-targeted warfarin, not a DOAC. Enrolled patients after myocardial infarction, not patients with AF.",
     "journalClub": "WARIS II shows an efficacy–bleeding trade-off for warfarin added to or replacing aspirin after myocardial infarction. Later trials on this site revisit the question with DOACs added to antiplatelet therapy after an acute coronary syndrome (APPRAISE-2, ATLAS ACS 2–TIMI 51) and with DOAC-based dual therapy in AF after PCI (AUGUSTUS).",
     "guidelines": [],
     "caveats": "Doses are shown only as the trial arms. Pre-DOAC trial.",

@@ -9,8 +9,9 @@
  *   noac        "NOAC" in reader-visible text (citation, DOI, URL and reference fields exempt)
  *   reviewedBy  any non-empty reviewedBy
  *   evidence    any "Evidence quality" label (key or reader-visible label)
- *   rating      unsourced rating labels "Practice-changer", "Tier 1/2/3", "Landmark DOAC" in reader-visible text (owner decisions 2026-10-14);
+ *   rating      unsourced rating labels "Practice-changer", "Practice-defining", "Tier 1/2/3", "Landmark DOAC" in reader-visible text (owner decisions 2026-10-14);
  *               "Landmark DOAC" is case-sensitive and, in data prose, only the bare label (not followed by a word, e.g. "Landmark DOAC trials") is ERROR; prose mentions are INFO
+ *   garble      doubled "the the", empty parentheses, or "for of" in trial-card reader-visible prose
  *   imperative  imperative dosing language outside trial-attributed fields; sentences that name a trial,
  *               guideline, label or protocol are listed as INFO (attributed), the rest are ERROR
  *   mirror      capacitor/www/js and README equal the root copies (index.html allowed to differ only in the font links)
@@ -133,13 +134,25 @@ for (const k of keyPaths) if (EQ.test(k.k)) add("ERROR", "evidence", k.p, `key "
 for (const x of visible) if (EQ.test(x.s)) add(x.p.includes(".changelog[") ? "INFO" : "ERROR", "evidence", `${x.file} ${x.p}`, `"${ctxOf(x.s, x.s.search(EQ))}"${x.p.includes(".changelog[") ? " (changelog history mention)" : ""}`);
 for (const { h, t } of htmlText) for (const m of t.matchAll(new RegExp(EQ.source, "gi"))) add("ERROR", "evidence", `${h}:${lineOf(t, m.index)}`, `"${ctxOf(t, m.index)}"`);
 // unsourced rating labels (same treatment as Evidence quality; changelog history mentions are INFO)
-const RATING = /\bPractice[\s-]*changer\b|\bTier\s*[123]\b/i;
+const RATING = /\bPractice[\s-]*changer\b|\bPractice[\s-]*defining\b|\bTier\s*[123]\b/i;
 for (const x of visible) if (RATING.test(x.s)) add(x.p.includes(".changelog[") ? "INFO" : "ERROR", "rating", `${x.file} ${x.p}`, `"${ctxOf(x.s, x.s.search(RATING))}"`);
 const LANDMARK = /\bLandmark DOAC\b/g, LANDMARK_LABEL = /\bLandmark DOAC\b(?!\s+\w)/;
 for (const x of visible) for (const m of x.s.matchAll(LANDMARK)) { const lbl = LANDMARK_LABEL.test(x.s.slice(m.index)) && !/^Landmark DOAC\s+\w/.test(x.s.slice(m.index));
   add(lbl && !x.p.includes(".changelog[") ? "ERROR" : "INFO", "rating", `${x.file} ${x.p}`, `"${ctxOf(x.s, m.index)}"${lbl ? "" : " (prose mention, not the status label)"}`); }
 for (const { h, t } of htmlText) for (const m of t.matchAll(LANDMARK)) add("ERROR", "rating", `${h}:${lineOf(t, m.index)}`, `"${ctxOf(t, m.index)}"`);
 for (const { h, t } of htmlText) for (const m of t.matchAll(new RegExp(RATING.source, "gi"))) add("ERROR", "rating", `${h}:${lineOf(t, m.index)}`, `"${ctxOf(t, m.index)}"`);
+// doubled words, empty parentheses, and "for of" in trial-card reader-visible prose
+const GARBLE = [[/\bthe\s+the\b/gi, "doubled word"], [/\(\s*\)/g, "empty parentheses"], [/\bfor\s+of\b/gi, "for of"]];
+const proseKeys = ["title", "population", "intervention", "comparator", "primaryResult", "safety", "takeaway", "background", "designNotes", "strengths", "limitations", "caveats", "practiceTakeaway", "journalClub", "regulatoryNote", "expectedResults"];
+if (Array.isArray(T)) T.forEach((t, i) => {
+  const scan = (s, p) => {
+    if (typeof s !== "string" || !s) return;
+    for (const [re, name] of GARBLE) { re.lastIndex = 0; for (const m of s.matchAll(re)) add("ERROR", "garble", `trials[${i}] ${t.id || "?"} ${p}`, `${name}: "${ctxOf(s, m.index)}"`); }
+  };
+  for (const k of proseKeys) scan(t[k], k);
+  for (const k of ["questionsAnswered", "questionsOpen"]) (t[k] || []).forEach((q, j) => scan(q && q.text, `${k}[${j}].text`));
+  (t.guidelines || []).forEach((g, j) => { if (!g) return; scan(g.document, `guidelines[${j}].document`); scan(g.note, `guidelines[${j}].note`); });
+});
 // imperative dosing language
 const IMP = [
   /\brecommend(?:s|ed|ing)?\b/i,

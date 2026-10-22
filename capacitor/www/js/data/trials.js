@@ -37,7 +37,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Open-label design. GI bleeding higher with 150 mg. Dyspepsia and renal dosing considerations matter in practice. Labeled dose-adjustment criteria apply.",
-    "practiceTakeaway": "For eligible NVAF, this trial supports a DOAC over warfarin. The dabigatran dose in the trial followed stroke risk, bleeding risk, and renal function.",
+    "practiceTakeaway": "RE-LY found dabigatran noninferior (110 mg) or superior (150 mg) to warfarin for stroke or systemic embolism in NVAF. The two doses were randomized, not chosen by patient risk.",
     "questionsAnswered": [
       {
         "text": "Could an oral direct thrombin inhibitor without routine INR monitoring match warfarin for stroke or systemic embolism in AF? Yes: dabigatran 150 mg twice daily, as given in the trial, was superior and 110 mg twice daily was noninferior.",
@@ -206,7 +206,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Double-blind randomized trial of apixaban 5 mg twice daily (2.5 mg if dose-reduction criteria) vs aspirin 81–324 mg daily in AF unsuitable for VKA (N=5,599). Mean follow-up 1.1 years. Stopped early for efficacy.",
     "strengths": "Clear superiority vs aspirin without significant major-bleeding excess. Addresses a common real-world gap.",
     "limitations": "Stopped early. Aspirin is a weak comparator for stroke prevention in AF.",
-    "journalClub": "If warfarin is unsuitable, apixaban beats aspirin. Aspirin is not the stroke-prevention default in this AF trial.",
+    "journalClub": "In patients unsuitable for warfarin, aspirin prevented fewer strokes than apixaban.",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -256,7 +256,7 @@ window.ANTICOAG_TRIALS = [
     "title": "Clopidogrel plus aspirin versus oral anticoagulation for atrial fibrillation",
     "population": "Patients with atrial fibrillation plus one or more stroke risk factors, randomly allocated to oral anticoagulation (n=3,371) or clopidogrel plus aspirin (n=3,335)",
     "intervention": "Oral anticoagulation with a target INR of 2.0–3.0",
-    "comparator": "Clopidogrel 75 mg per day plus aspirin (75–100 mg per day, as the trial listed)",
+    "comparator": "Clopidogrel 75 mg per day plus aspirin (75–100 mg per day, as recommended in the trial)",
     "primaryResult": "Stopped early for superiority of oral anticoagulation. First stroke, non-central nervous system systemic embolus, myocardial infarction, or vascular death: 165 events on oral anticoagulation (annual risk 3.93%) vs 234 on clopidogrel plus aspirin (annual risk 5.60%). Relative risk 1.44 (1.18–1.76; P=0.0003). The relative risk above 1 is more events on clopidogrel plus aspirin.",
     "safety": "The abstract does not give one overall major-bleeding rate. It reports a major-bleeding interaction by oral-anticoagulation use at entry (P=0.03). Already on oral anticoagulation at entry: vascular-event relative risk 1.50 (95% CI 1.19–1.89) and major-bleeding relative risk 1.30 (0.94–1.79). Not on oral anticoagulation at entry: 1.27 (0.85–1.89) and 0.59 (0.32–1.08).",
     "takeaway": "In high-risk atrial fibrillation, oral anticoagulation (INR 2.0–3.0) prevented more vascular events than clopidogrel plus aspirin. The trial was stopped early for that difference.",
@@ -266,7 +266,7 @@ window.ANTICOAG_TRIALS = [
     "pmid": "16765759",
     "expectedResults": null,
     "background": "Before the DOAC era, some patients with atrial fibrillation were treated with antiplatelet therapy instead of a vitamin K antagonist. ACTIVE-W asked whether clopidogrel plus aspirin was noninferior to oral anticoagulation.",
-    "designNotes": "Randomized: yes. Intention-to-treat. Outcome events were adjudicated by a blinded committee. The abstract does not call the treatment assignment double-blind. Oral anticoagulation target INR 2.0–3.0 versus clopidogrel 75 mg daily plus aspirin 75–100 mg daily (as the trial listed). ClinicalTrials.gov NCT00243178. Stopped early because oral anticoagulation was superior.",
+    "designNotes": "Randomized: yes. Intention-to-treat. Outcome events were adjudicated by a blinded committee. The abstract does not call the treatment assignment double-blind. Oral anticoagulation target INR 2.0–3.0 versus clopidogrel 75 mg daily plus aspirin 75–100 mg daily (as recommended in the trial). ClinicalTrials.gov NCT00243178. Stopped early because oral anticoagulation was superior.",
     "strengths": "Large randomized comparison with a blinded adjudication committee and a clear primary-event difference (annual risk 3.93% vs 5.60%; relative risk 1.44).",
     "limitations": "Stopped early. The abstract’s comparator is oral anticoagulation at INR 2.0–3.0, not a named DOAC. Major bleeding is reported as an interaction by prior oral-anticoagulation use, not as one overall rate. This card does not choose a DOAC dose.",
     "journalClub": "More vascular events with clopidogrel plus aspirin than with oral anticoagulation. Randomized, stopped early for that superiority finding. And limited because bleeding is a subgroup interaction rather than one overall rate. ACTIVE-W is read beside BAFTA when the question is anticoagulation versus antiplatelet therapy in atrial fibrillation. This is not a DOAC trial.",
@@ -383,8 +383,8 @@ window.ANTICOAG_TRIALS = [
         "year": 2024
       }
     ],
-    "caveats": "Dose reduction rules affect efficacy. High-dose increased GI bleeding. Check CrCl, weight, and interacting P-glycoprotein inhibitors per label.",
-    "practiceTakeaway": "Edoxaban is a guideline-supported once-daily DOAC. Dose-adjust correctly to preserve efficacy.",
+    "caveats": "Dose reduction rules affect efficacy. High-dose increased GI bleeding. The label's dose reduction uses CrCl, weight, and P-glycoprotein inhibitors.",
+    "practiceTakeaway": "Edoxaban is a once-daily DOAC in this trial. The trial's dose-reduction rules applied to efficacy.",
     "questionsAnswered": [
       {
         "text": "Were once-daily edoxaban regimens noninferior to warfarin? Yes: both the higher-dose (60 mg) and lower-dose (30 mg) regimens as given in the trial, with dose halving for prespecified criteria, met noninferiority for stroke or systemic embolism.",
@@ -446,7 +446,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Requires initial parenteral anticoagulation. Dabigatran not a single-drug start like apixaban/rivaroxaban regimens.",
-    "practiceTakeaway": "Dabigatran can treat acute VTE after a heparin bridge. Later single-drug DOAC regimens apply when a bridge is undesirable.",
+    "practiceTakeaway": "Dabigatran can treat acute VTE after a heparin bridge. Later trials (EINSTEIN, AMPLIFY) tested single-drug regimens without a parenteral lead-in.",
     "questionsAnswered": [
       {
         "text": "After initial parenteral anticoagulation, was dabigatran 150 mg twice daily (as given in the trial) noninferior to warfarin for acute VTE? Yes, for recurrent VTE.",
@@ -626,7 +626,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Not for high-risk PE needing thrombolysis/hemodynamic support. Open-label design.",
-    "practiceTakeaway": "Rivaroxaban in this trial was for eligible intermediate-risk or low-risk PE on guideline DOAC pathways. It was not a substitute for reperfusion in high-risk PE.",
+    "practiceTakeaway": "EINSTEIN-PE found rivaroxaban noninferior to enoxaparin then VKA in acute symptomatic PE. It is not a reperfusion trial and does not address high-risk PE.",
     "questionsAnswered": [
       {
         "text": "Could the same single-drug rivaroxaban regimen used in EINSTEIN-DVT treat symptomatic PE? Yes: it was noninferior to enoxaparin followed by a VKA for recurrent VTE.",
@@ -734,7 +734,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Cancer VTE was not the primary AMPLIFY question. Cancer-specific trials and guidelines cover that question.",
-    "practiceTakeaway": "Apixaban 10 then 5 mg twice daily is the acute VTE regimen this trial studied when a single-drug oral pathway and bleeding minimization matter.",
+    "practiceTakeaway": "Apixaban 10 then 5 mg twice daily is the single-drug oral regimen AMPLIFY studied, with less major bleeding than conventional therapy.",
     "questionsAnswered": [
       {
         "text": "Was apixaban as given in the trial (10 mg twice daily for seven days, then 5 mg twice daily) noninferior to enoxaparin followed by warfarin for acute VTE? Yes, for recurrent VTE or VTE-related death.",
@@ -890,7 +890,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized: yes. Anticoagulation alone versus anticoagulation plus pharmacomechanical thrombolysis. Primary outcome: post-thrombotic syndrome between 6 and 24 months. ClinicalTrials.gov NCT00790335. The abstract does not use the word blinded for treatment assignment. CaVenT is an earlier, smaller, iliofemoral alteplase trial and is not this result.",
     "strengths": "Large randomized test of the strategy clinicians were already using, with the primary syndrome outcome and early major bleeding reported together.",
     "limitations": "A negative primary outcome. The moderate-to-severe syndrome difference is not the primary endpoint. More early major bleeding. Not a drug-versus-drug anticoagulation trial, and not evidence that anticoagulation can be skipped.",
-    "journalClub": "What was tested: a randomized primary outcome that was not reduced (47% vs 48%; P=0.56), with more major bleeding within 10 days. The the moderate-to-severe subgroup does not replace the primary result. CaVenT’s iliofemoral finding is a different trial.",
+    "journalClub": "What was tested: a randomized primary outcome that was not reduced (47% vs 48%; P=0.56), with more major bleeding within 10 days. The moderate-to-severe subgroup does not replace the primary result. CaVenT’s iliofemoral finding is a different trial.",
     "guidelines": [
       {
         "society": "ASH",
@@ -900,7 +900,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Randomized: yes. No significant primary difference (risk ratio 0.96; 95% CI 0.82–1.11; P=0.56) and more major bleeding within 10 days (1.7% vs 0.3%; P=0.049). The 18% vs 24% moderate-to-severe finding is not the primary endpoint.",
-    "practiceTakeaway": "ATTRACT found that pharmacomechanical thrombolysis added to anticoagulation did not prevent the primary post-thrombotic-syndrome outcome and caused more early major bleeding. CaVenT as the stays separate iliofemoral trial. This is not a procedure protocol.",
+    "practiceTakeaway": "ATTRACT found that pharmacomechanical thrombolysis added to anticoagulation did not prevent the primary post-thrombotic-syndrome outcome and caused more early major bleeding. CaVenT stays the separate iliofemoral trial. This is not a procedure protocol.",
     "questionsAnswered": [
       {
         "text": "In acute proximal DVT, did adding pharmacomechanical catheter-directed thrombolysis to anticoagulation reduce post-thrombotic syndrome between 6 and 24 months? No. The primary outcome did not differ.",
@@ -1017,7 +1017,7 @@ window.ANTICOAG_TRIALS = [
         "year": 2020
       }
     ],
-    "caveats": "Aspirin is a weak comparator. Decide first whether extended anticoagulation is indicated.",
+    "caveats": "Aspirin is a weak comparator. The trial enrolled patients in equipoise about extended anticoagulation.",
     "practiceTakeaway": "If prevention is extended after VTE, this trial supports low-dose rivaroxaban over aspirin for most eligible patients.",
     "questionsAnswered": [
       {
@@ -1448,7 +1448,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial of rivaroxaban 2.5 mg twice daily vs placebo in worsening heart failure, sinus rhythm, and CAD.",
     "strengths": "Clear negative primary result. Avoids ineffective therapy.",
     "limitations": "The principal safety outcome was neutral. On-treatment ISTH major bleeding was higher and is secondary. This sinus-rhythm heart-failure population is not an AF anticoagulation population.",
-    "journalClub": "COMMANDER HF: low-dose rivaroxaban did not reduce death, MI, or stroke in heart failure with sinus rhythm. Lead with the neutral principal safety result. The ISTH major-bleeding increase is secondary.",
+    "journalClub": "COMMANDER HF: low-dose rivaroxaban did not reduce death, MI, or stroke in heart failure with sinus rhythm. The neutral principal safety result is the lead finding. The ISTH major-bleeding increase is secondary.",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -1893,7 +1893,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized: yes. Multicenter, open-label, adjudicator-masked. Stable coronary disease means previously revascularized or medically managed disease. The primary composite includes major or clinically relevant nonmajor bleeding, so it is not a pure ischemic end point. ClinicalTrials.gov NCT03718559. The edoxaban dose and the antiplatelet mix are not in the New England Journal of Medicine abstract and are not shown on this card.",
     "strengths": "Randomized comparison with masked adjudication, a large bleeding difference, and an explicit statement that ischemic events appeared similar rather than an invented ischemic hazard ratio.",
     "limitations": "Open-label. South Korean sites. The primary win is driven by bleeding inside the composite. Ischemic event rates are not printed in the abstract. Not evidence for dropping an antiplatelet in the early months after PCI. AFIRE is the rivaroxaban trial, not this one.",
-    "journalClub": "Lower primary composite with edoxaban monotherapy in a randomized, adjudicator-masked trial. And the composite includes bleeding (hazard ratio 0.34 for major or clinically relevant nonmajor bleeding). The text does not present an ischemic benefit the abstract does not quantify. Place EPIC-CAD next to AFIRE, and away from AUGUSTUS-era early PCI trials.",
+    "journalClub": "Lower primary composite with edoxaban monotherapy in a randomized, adjudicator-masked trial. And the composite includes bleeding (hazard ratio 0.34 for major or clinically relevant nonmajor bleeding). The text does not present an ischemic benefit the abstract does not quantify. EPIC-CAD sits beside AFIRE, apart from AUGUSTUS-era early PCI trials.",
     "guidelines": [
       {
         "society": "ESC",
@@ -2277,7 +2277,7 @@ window.ANTICOAG_TRIALS = [
     "expectedResults": null,
     "background": "Cancer-associated VTE was LMWH-centric. Oral DOAC evidence without major-bleeding excess vs dalteparin was needed.",
     "designNotes": "Randomized trial of apixaban vs dalteparin in cancer-associated VTE (N≈1,155).",
-    "strengths": "Noninferior recurrent VTE. No excess major bleeding vs LMWH— an oral option in this trial.",
+    "strengths": "Noninferior recurrent VTE. No excess major bleeding vs LMWH, as an oral option in this trial.",
     "limitations": "GI cancer bleeding caution still applies clinically. Not all cancer types equally represented.",
     "journalClub": "Caravaggio supports oral apixaban as a guideline-endorsed alternative to injectable LMWH for cancer VTE.",
     "guidelines": [
@@ -2562,7 +2562,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Randomized: yes. Open-label, blinded endpoint. Events were rare (5 vs 11 efficacy events; 16 of 1,067 vs 11 of 1,082 bleeding events). Intervals are wide.",
-    "practiceTakeaway": "ENSURE-AF found that thromboembolism and major or clinically relevant nonmajor bleeding were uncommon with either the edoxaban regimen or enoxaparin–warfarin around electrical cardioversion. The the wide odds ratios are not a ranking.",
+    "practiceTakeaway": "ENSURE-AF found that thromboembolism and major or clinically relevant nonmajor bleeding were uncommon with either the edoxaban regimen or enoxaparin–warfarin around electrical cardioversion. The wide odds ratios are not a ranking.",
     "questionsAnswered": [
       {
         "text": "For electrical cardioversion of AF, how did edoxaban (60 mg once daily, or 30 mg once daily for those meeting the paper's dose-reduction criteria, as given in the trial) compare with enoxaparin–warfarin? Stroke, embolism, myocardial infarction, cardiovascular death and bleeding were all low in both groups.",
@@ -2918,8 +2918,8 @@ window.ANTICOAG_TRIALS = [
     "population": "Nonvalvular AF patients eligible for warfarin",
     "intervention": "Watchman left atrial appendage closure device",
     "comparator": "Warfarin",
-    "primaryResult": "Stroke/CV death/SE: 3.0 vs 4.9 per 100 patient-years (RR 0.62; 95% credible interval 0.35–1.25). Noninferiority probability >99.9%",
-    "safety": "Primary safety events 7.4 vs 4.4 per 100 patient-years (RR 1.69; 95% credible interval 1.01–3.19). Excess driven mainly by periprocedural complications",
+    "primaryResult": "Stroke/CV death/SE: 3.0 vs 4.9 per 100 patient-years (rate ratio 0.62; 95% credible interval 0.35–1.25). Noninferiority probability >99.9%",
+    "safety": "Primary safety events 7.4 vs 4.4 per 100 patient-years (rate ratio 1.69; 95% credible interval 1.01–3.19). Excess driven mainly by periprocedural complications",
     "takeaway": "Foundational percutaneous LAAO evidence vs warfarin.",
     "cite": "Holmes DR, et al. Lancet. 2009;374:534-542.",
     "doi": "10.1016/S0140-6736(09)61343-X",
@@ -2945,7 +2945,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Early procedural complication rates higher than later device generations. Warfarin-era comparator.",
-    "practiceTakeaway": "PROTECT-AF is the start of LAAO evidence. Counsel using contemporary device data and shared decisions.",
+    "practiceTakeaway": "PROTECT-AF is the start of LAAO evidence. Later device trials supply the contemporary data.",
     "questionsAnswered": [
       {
         "text": "Could a Watchman left atrial appendage closure device stand in for warfarin in nonvalvular AF? It was noninferior for the composite of stroke, cardiovascular death or systemic embolism.",
@@ -3111,7 +3111,7 @@ window.ANTICOAG_TRIALS = [
         "year": 2024
       }
     ],
-    "caveats": "Surgical candidates only. Continue OAC afterward. Occlusion is additive.",
+    "caveats": "Surgical candidates only. OAC continued after occlusion in the trial. Occlusion is additive.",
     "practiceTakeaway": "If operating on a patient with AF, occlude the LAA and continue indicated anticoagulation.",
     "questionsAnswered": [
       {
@@ -3168,7 +3168,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Ablation population is not general AF stroke-prevention cohorts.",
-    "practiceTakeaway": "After AF ablation, LAAO vs continued OAC is a shared decision. Ablation alone did not remove stroke risk in this comparison.",
+    "practiceTakeaway": "After AF ablation, OPTION compared LAAO with continued OAC. It had no ablation-only arm, so it does not test whether ablation alone removes stroke risk.",
     "questionsAnswered": [
       {
         "text": "After catheter ablation for AF, did left atrial appendage closure cause less non-procedure-related major or clinically relevant nonmajor bleeding than continued oral anticoagulation? Yes, closure was superior on that safety endpoint.",
@@ -3225,7 +3225,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Ischemic stroke numerically higher with device. Procedural risk. Longer follow-up ongoing.",
-    "practiceTakeaway": "Discuss modern LAAO as a credible alternative to long-term DOAC in selected anticoagulation-eligible AF. With ischemic-stroke nuance.",
+    "practiceTakeaway": "In CHAMPION-AF, modern LAAO was a credible alternative to long-term DOAC in selected anticoagulation-eligible AF, with an ischemic-stroke nuance.",
     "questionsAnswered": [
       {
         "text": "In AF patients suitable for anticoagulation, was Watchman FLX closure noninferior to a DOAC for cardiovascular death, stroke or systemic embolism over 3 years? Yes.",
@@ -3639,7 +3639,7 @@ window.ANTICOAG_TRIALS = [
     "expectedResults": null,
     "background": "Rheumatic AF (often mitral stenosis) is common globally. Whether rivaroxaban can replace VKA was critical.",
     "designNotes": "Randomized trial of rivaroxaban vs dose-adjusted VKA in rheumatic heart disease–associated AF.",
-    "strengths": "Practice-defining negative for DOAC substitution. VKA favored for primary composite.",
+    "strengths": "Rivaroxaban was not noninferior to VKA, and VKA had a lower rate of the primary composite.",
     "limitations": "Specific to rheumatic disease/mitral stenosis context. Not bioprosthetic NVAF (see RIVER).",
     "journalClub": "INVICTUS: do not replace VKA with rivaroxaban in rheumatic AF.",
     "guidelines": [
@@ -3698,7 +3698,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized: yes. Phase 2 dose-validation study, stopped early. Primary end point: dabigatran trough level. Clinical events were the reason for stopping and are not a completed efficacy comparison. ClinicalTrials.gov NCT01452347 and NCT01505881, as listed in the paper. The abstract gives the clinical counts as percentages of the dabigatran and warfarin groups in the as-treated analysis.",
     "strengths": "Early stop with a consistent direction of harm. More ischemic or unspecified stroke and more major bleeding. And an explicit statement that the primary end point was pharmacokinetic.",
     "limitations": "Phase 2, stopped after 252 patients, so the clinical percentages are small counts (9 strokes, 7 vs 2 major bleeds). Dabigatran doses were adjusted to a level and are not a labeled regimen to copy. Not evidence about apixaban (see PROACT Xa) and not a lower-INR warfarin trial (see PROACT).",
-    "journalClub": "Randomized and stopped early for excess stroke and bleeding with dabigatran. Too small and too pharmacokinetic in design to quote as a precise event-rate trial. Lead with the primary end point (trough level) so the stroke counts are not mistaken for the planned primary analysis. Mechanical valves stay warfarin territory on this site.",
+    "journalClub": "Randomized and stopped early for excess stroke and bleeding with dabigatran. Too small and too pharmacokinetic in design to quote as a precise event-rate trial. The primary end point was the trough level, so the stroke counts are not the planned primary analysis. Mechanical valves stay warfarin territory on this site.",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -3745,7 +3745,7 @@ window.ANTICOAG_TRIALS = [
     "background": "Mechanical aortic valves need anticoagulation. PROACT tested whether selected patients with an On-X aortic valve could use dual antiplatelet therapy, or a lower warfarin INR, instead of standard-intensity warfarin. PROACT Xa later tested apixaban in On-X aortic valves and was stopped for excess valve thrombosis and thromboembolism.",
     "designNotes": "Randomized: yes. Multicenter noninferiority trial, ClinicalTrials.gov NCT00291525. Randomization of the tested strategy began 3 months after surgery. This card uses only the 2018 completed report. An interim report of the high-risk limb (Puskas et al., J Thorac Cardiovasc Surg. 2014; doi:10.1016/j.jtcvs.2014.01.004) has different follow-up and different bleeding rates and is not mixed into these numbers. The registry also lists mitral arms. The rates on this card are the aortic arms in the 2018 abstract.",
     "strengths": "Separates a failed antiplatelet strategy from a lower-INR warfarin strategy, with thromboembolism and bleeding both reported for the high-risk arm.",
-    "limitations": "The low-risk bleeding comparison has no printed rates. The high-risk thromboembolism point estimates are 0.42% versus 0.09% per patient-year even though the P value is 0.20. Not a DOAC trial. Not a mitral-valve result. Confirm the labeled transition period and aspirin plan before anyone applies a lower INR.",
+    "limitations": "The low-risk bleeding comparison has no printed rates. The high-risk thromboembolism point estimates are 0.42% versus 0.09% per patient-year even though the P value is 0.20. Not a DOAC trial. Not a mitral-valve result. The lower INR in this trial sat inside a labeled transition period and an aspirin plan.",
     "journalClub": "The dual-antiplatelet harm signal is clear (3.12% vs 0.29% per patient-year; P=0.02). The lower-INR bleeding reduction is also clear, and the thromboembolism comparison was not a significant difference. PROACT is read as warfarin-based On-X care. PROACT Xa is read as the negative apixaban comparison. RE-ALIGN is read as the dabigatran mechanical-valve stop.",
     "guidelines": [
       {
@@ -3844,7 +3844,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial in Norway (ages 65–80) of DOAC monotherapy vs aspirin after TAVI.",
     "strengths": "HALT reduced (RR 0.55). Safety composite noninferior in this cohort.",
     "limitations": "Imaging primary endpoint. Clinical outcomes underpowered. Not a mandate for routine post-TAVI OAC.",
-    "journalClub": "ACASA-TAVI is hypothesis-generating for HALT. Weigh against NOTION-4 and guidelines discouraging routine OAC without indication.",
+    "journalClub": "ACASA-TAVI is hypothesis-generating for HALT. NOTION-4 and guidelines that discourage routine OAC without an indication are the comparison.",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -3859,7 +3859,7 @@ window.ANTICOAG_TRIALS = [
         "year": 2021
       }
     ],
-    "caveats": "HALT imaging primary. Clinical outcomes underpowered. Weigh against NOTION-4/GALILEO.",
+    "caveats": "HALT imaging primary. Clinical outcomes underpowered. NOTION-4 and GALILEO are the comparison.",
     "practiceTakeaway": "A routine post-TAVI DOAC is not established from HALT alone in this trial. Clearer clinical outcome guidance was still outstanding.",
     "questionsAnswered": [
       {
@@ -3901,7 +3901,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial of 3 months DOAC then single antiplatelet therapy vs lifelong single antiplatelet therapy after TAVR without OAC indication.",
     "strengths": "The primary 12-month HALT comparison was not met (28.3% vs 32.2%; P=0.54). The 3-month HALT difference (12.1% vs 31.8%) occurred while DOAC was still being taken and is not the primary endpoint.",
     "limitations": "Imaging-heavy endpoint. Clinical events limited in number.",
-    "journalClub": "Lead with the primary result: 12-month HALT 28.3% vs 32.2%, P=0.54, not met. The 3-month HALT rates and the clinical composite (risk difference 5.9%, 95% CI 1.2% to 10.6%) are not substitutes for that primary.",
+    "journalClub": "The primary result is: 12-month HALT 28.3% vs 32.2%, P=0.54, not met. The 3-month HALT rates and the clinical composite (risk difference 5.9%, 95% CI 1.2% to 10.6%) are not substitutes for that primary.",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -4000,8 +4000,8 @@ window.ANTICOAG_TRIALS = [
     "status": "published",
     "title": "Safety of Switching from a Vitamin K Antagonist to a DOAC in Frail Older Patients with Atrial Fibrillation",
     "population": "Frail older adults with AF on well-managed VKA",
-    "intervention": "Switch from VKA to DOAC in frail older adults with AF",
-    "comparator": "Continue VKA",
+    "intervention": "Switch from VKA to a DOAC, as studied in the trial",
+    "comparator": "Continued VKA, as studied in the trial",
     "primaryResult": "Major or CRNM bleeding 15.3% after switching to a DOAC vs 9.4% continuing VKA (HR 1.69; 95% CI 1.23–2.32). Stopped early for futility after 163 primary events.",
     "safety": "No thromboembolic benefit from switching. More bleeding",
     "takeaway": "This trial does not support a routine switch from a stable VKA to a DOAC in frail elderly patients.",
@@ -4116,7 +4116,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized: yes. Open-label with blinded end-point adjudication (prospective, randomized, open-label, blinded-endpoint), noninferiority design (margin HR 1.25; noninferiority tested first, then superiority), 39 German sites, ClinicalTrials.gov NCT02933697. The sample size was planned at 222, then cut by amendment to 108 (powered for noninferiority) after a blinded review of recruitment and event rates in 2020 and newly published data. 108 patients were screened and 97 randomized. The trial ended at its planned maximum duration in July 2022. It was not stopped early for harm or benefit.",
     "strengths": "Randomized, with blinded end-point adjudication and more than a year of median follow-up in a population excluded from the pivotal DOAC trials.",
     "limitations": "Too small to answer its noninferiority question (97 randomized; fewer events than planned). The composite endpoints are dominated by death. A single apixaban protocol dose was tested, against phenprocoumon rather than warfarin. Open-label.",
-    "journalClub": "Randomized and adjudicated, but too small to show noninferiority. It reads as \"no difference detected\", not as equivalence, and remember that its primary safety endpoint counts deaths as well as bleeds.",
+    "journalClub": "Randomized and adjudicated, but too small to show noninferiority. It reads as \"no difference detected\", not as equivalence, and its primary safety endpoint counts deaths as well as bleeds.",
     "guidelines": [
       {
         "society": "ACC/AHA/ACCP/HRS",
@@ -4132,7 +4132,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Underpowered: 97 randomized against a revised target of 108 and an original target of 222, with fewer events than planned. Absence of a significant difference is not evidence of equivalence. The primary safety endpoint includes death from any cause, so it is not a bleeding-only endpoint and is not lined up against RENAL-AF's bleeding-only primary. One apixaban protocol dose (2.5 mg twice daily) was tested against phenprocoumon, which is not warfarin. Open-label. Published in the 2023 issue (Epub 2022).",
-    "practiceTakeaway": "Randomized evidence on DOAC vs VKA in dialysis is small and imprecise. AXADIA-AFNET 8 does not show that either agent is better or that they are equivalent. Treat the apixaban dose as the trial protocol."
+    "practiceTakeaway": "Randomized evidence on DOAC vs VKA in dialysis is small and imprecise. AXADIA-AFNET 8 does not show that either agent is better or that they are equivalent. The apixaban dose is the trial protocol."
   },
   {
     "id": "elan",
@@ -4157,7 +4157,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized: yes. Investigator-initiated, open-label. Assessors were unaware of the assignment. The early and later windows depend on stroke severity. They are not a single “day 1 versus day 14” rule. ClinicalTrials.gov NCT03148457. Primary follow-up is 30 days. The composite includes bleeding and vascular death, so it is not a pure recurrent-stroke endpoint.",
     "strengths": "Randomized timing comparison with severity-based windows and a symptomatic-intracranial-hemorrhage count that was the same in both groups at 30 days (2 vs 2).",
     "limitations": "Open-label treatment. The primary confidence interval includes both fewer and slightly more events with early treatment. No noninferiority margin is printed. Not the OPTIMAS comparison of within 4 days versus 7–14 days.",
-    "journalClub": "Randomized, assessor-masked, and imprecise. The risk difference and confidence interval are the cited figures. The paper does not call the primary result superior or noninferior. The paper does not. ELAN’s severity-based clock stays separate from OPTIMAS.",
+    "journalClub": "Randomized, assessor-masked, and imprecise. The risk difference and confidence interval are the cited figures. The paper does not call the primary result superior or noninferior. ELAN’s severity-based clock stays separate from OPTIMAS.",
     "guidelines": [
       {
         "society": "AHA/ASA",
@@ -4313,10 +4313,10 @@ window.ANTICOAG_TRIALS = [
     "doiPending": true,
     "expectedResults": null,
     "background": "Restarting anticoagulation after ICH in high-risk AF is a high-stakes gray zone.",
-    "designNotes": "Prospective, randomized, open-label, blinded-endpoint design (), as stated on ClinicalTrials.gov NCT03950076: open-label edoxaban versus no anticoagulation (no antithrombotic therapy or antiplatelet monotherapy), with blinded outcome assessment. The rates on this card are from the European Society of Cardiology Congress 2026 Hot Line press release of 29 August 2026, not from a peer-reviewed results paper. Enrollment of lobar intraparenchymal hemorrhage and convexity subarachnoid hemorrhage had already been stopped for safety.",
+    "designNotes": "Prospective, randomized, open-label, blinded-endpoint (PROBE) design, as stated on ClinicalTrials.gov NCT03950076: open-label edoxaban versus no anticoagulation (no antithrombotic therapy or antiplatelet monotherapy), with blinded outcome assessment. The rates on this card are from the European Society of Cardiology Congress 2026 Hot Line press release of 29 August 2026, not from a peer-reviewed results paper. Enrollment of lobar intraparenchymal hemorrhage and convexity subarachnoid hemorrhage had already been stopped for safety.",
     "strengths": "Addresses a critical evidence gap with multicenter data.",
     "limitations": "Rates are press-release figures, not a published journal result. No significant reduction in stroke or systemic embolism, and more ISTH major bleeding in the press release. Lobar intraparenchymal hemorrhage enrollment had previously been stopped for safety.",
-    "journalClub": "ENRICH-AF: do not routinely restart edoxaban in unselected post-ICH AF. Individualize and await complementary data.",
+    "journalClub": "ENRICH-AF does not support routinely restarting edoxaban in unselected post-ICH AF. Complementary data were still outstanding.",
     "guidelines": [
       {
         "society": "ESC",
@@ -4511,7 +4511,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Prospective cohort (no randomized control)",
     "primaryResult": "Rapid, complete reversal of dabigatran anticoagulation in nearly all patients by diluted thrombin time or ecarin clotting time",
     "safety": "Thrombotic events occurred after reversal in a minority",
-    "takeaway": "Specific reversal agent for dabigatran. Practice-defining for emergency management.",
+    "takeaway": "Specific reversal agent for dabigatran.",
     "cite": "Pollack CV, et al. N Engl J Med. 2017;377:431-441.",
     "doi": "10.1056/NEJMoa1707278",
     "url": "https://doi.org/10.1056/NEJMoa1707278",
@@ -4568,7 +4568,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Single-cohort efficacy study",
     "primaryResult": "Effective hemostasis in a high proportion. Anti-FXa activity rapidly reduced",
     "safety": "Thrombotic events observed after andexanet. Later ANNEXA-I and FDA review made TE risk central to U.S. market withdrawal of Andexxa (effective Dec 22, 2025).",
-    "takeaway": "Historically important hemostasis cohort for andexanet. U.S. practice after Dec 22, 2025 is not a direction to choose Andexxa (U.S. market withdrawn).",
+    "takeaway": "Historically important hemostasis cohort for andexanet. The trial is not a basis for using Andexxa in the U.S. after the Dec 22, 2025 market withdrawal.",
     "cite": "Connolly SJ, et al. N Engl J Med. 2019.",
     "doi": "10.1056/NEJMoa1814051",
     "url": "https://doi.org/10.1056/NEJMoa1814051",
@@ -4593,7 +4593,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Single-cohort design. TE after reversal. U.S. Andexxa withdrawn Dec 22, 2025. Geographic availability differs (United Kingdom/European Union/Japan statements late 2025).",
-    "practiceTakeaway": "ANNEXA-4 is not a reason to order andexanet in the U.S. after Dec 2025. For U.S. FXa-inhibitor major bleeding, the cited approach is institutional supportive care and 4F-PCC pathways. Outside the U.S., the formulary may differ.",
+    "practiceTakeaway": "ANNEXA-4 is the hemostasis cohort. After Dec 2025, U.S. institutional pathways for FXa-inhibitor major bleeding use supportive care and 4F-PCC.",
     "regulatoryNote": "U.S. withdrawn Dec 2025",
     "questionsAnswered": [
       {
@@ -4626,7 +4626,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Usual care",
     "primaryResult": "Hemostatic efficacy 67.0% vs 53.1%",
     "safety": "FDA advisory committee discussion (Day 30): thrombosis 14.6% vs 6.9% usual care. Thrombosis-related deaths 2.5% vs 0.9%. Published New England Journal of Medicine thrombotic events ~10.3% vs 5.6% (Connolly 2024). Figures differ from FDA advisory committee Day-30 rates used for U.S. withdrawal teaching. Site cites FDA advisory committee for that teaching. Both sources are part of the record. Excess TE without a clear early functional/mortality win was central to U.S. Andexxa withdrawal (Dec 22, 2025).",
-    "takeaway": "Randomized trial showed hemostasis gain vs usual care at a thrombotic cost. U.S. aftermath is market withdrawal of Andexxa (Dec 22, 2025). The lesson is the TE risk. It is not a direction to give andexanet.",
+    "takeaway": "Randomized trial showed hemostasis gain vs usual care at a thrombotic cost. U.S. aftermath is market withdrawal of Andexxa (Dec 22, 2025). The lesson is the TE risk.",
     "cite": "Connolly SJ, et al. N Engl J Med. 2024.",
     "doi": "10.1056/NEJMoa2313040",
     "url": "https://doi.org/10.1056/NEJMoa2313040",
@@ -4652,7 +4652,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "TE excess is the teaching point. Published New England Journal of Medicine TE rates (~10.3% vs 5.6%) differ from FDA advisory committee Day-30 figures above. Site uses FDA advisory committee for U.S. withdrawal teaching. U.S. Andexxa unavailable after Dec 22, 2025 (AstraZeneca voluntary biologics license application withdrawal). Non-U.S. availability may differ. It is not a universal direction to give Andexxa.",
-    "practiceTakeaway": "In the U.S., andexanet is not ordered from this card after Dec 22, 2025. For FXa-inhibitor ICH, institutional supportive care and 4F-PCC (or equivalent) bundles are the cited approach. ANNEXA-I is the trial that showed why TE risk mattered. Outside the U.S., Ondexxya formulary is a local question before any andexanet discussion.",
+    "practiceTakeaway": "In the U.S., andexanet has not been available since Dec 22, 2025. Institutional ICH bundles use supportive care and 4F-PCC (or equivalent). ANNEXA-I is the trial that showed why TE risk mattered.",
     "regulatoryNote": "U.S. withdrawn Dec 2025",
     "questionsAnswered": [
       {
@@ -4852,7 +4852,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Anticoagulation alone",
     "primaryResult": "7-day PE death/decompensation/recurrent PE: 4.0% vs 10.3%. RR 0.39. P=0.005",
     "safety": "Major bleeding not significantly higher. No ICH in either arm",
-    "takeaway": "CDT reduces early deterioration in enriched intermediate-risk PE. PERT-guided, not blanket use.",
+    "takeaway": "Ultrasound-facilitated catheter-directed fibrinolysis reduced early deterioration in enriched intermediate-risk PE. The trial was PERT-guided, not blanket use.",
     "cite": "Rosenfield K, et al. N Engl J Med. 2026;394:1979-1990.",
     "doi": "10.1056/NEJMoa2516567",
     "url": "https://doi.org/10.1056/NEJMoa2516567",
@@ -4861,7 +4861,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial of ultrasound-facilitated catheter-directed alteplase + anticoagulation vs anticoagulation alone in enriched intermediate-risk PE (N≈544).",
     "strengths": "Hard clinical primary endpoint improved (RR 0.39). No ICH reported in primary reports.",
     "limitations": "Enriched population. Not all intermediate-risk PE. Procedural expertise/PERT context required.",
-    "journalClub": "HI-PEITHO supports PERT-guided CDT in carefully selected intermediate-risk PE, not blanket use.",
+    "journalClub": "HI-PEITHO supports PERT-guided ultrasound-facilitated catheter-directed fibrinolysis in carefully selected intermediate-risk PE, not blanket use.",
     "guidelines": [
       {
         "society": "ESC",
@@ -4876,7 +4876,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Enriched intermediate-risk phenotype (distress markers). Not all intermediate-risk PE.",
-    "practiceTakeaway": "Offer ultrasound-facilitated CDT via PERT for carefully enriched intermediate-risk PE. Not routinely for all.",
+    "practiceTakeaway": "HI-PEITHO studied ultrasound-facilitated catheter-directed fibrinolysis via PERT in carefully enriched intermediate-risk PE. It was not routine for every intermediate-risk PE.",
     "questionsAnswered": [
       {
         "text": "In intermediate-risk PE with right-ventricular strain, raised troponin and additional distress markers, did ultrasound-facilitated catheter-directed alteplase plus anticoagulation reduce 7-day PE death, decompensation or recurrent PE compared with anticoagulation alone? Yes.",
@@ -4931,7 +4931,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "East Asian, largely non-MI cohort. The result does not extend indiscriminately to ACS/MI or other regions. Lower-than-anticipated events.",
-    "practiceTakeaway": "Consider very short dual therapy then DOAC mono in selected non-MI PCI patients. Be cautious outside that context.",
+    "practiceTakeaway": "OPTIMA-AF studied very short dual therapy then DOAC monotherapy after PCI in a Japanese, largely non-MI population. It does not extend beyond that context.",
     "questionsAnswered": [
       {
         "text": "In Japanese patients with AF after imaging-guided PCI for chronic coronary syndrome or unstable angina, was stopping the P2Y12 inhibitor at 1 month noninferior to 12 months of dual therapy for death or thromboembolism? Yes.",
@@ -4987,7 +4987,7 @@ window.ANTICOAG_TRIALS = [
         "year": 2019
       }
     ],
-    "caveats": "Stopped early at 602 of 1,474. Lead with the primary win-ratios (efficacy 1.19, P=0.610; safety 0.66, superiority of the control group P=0.115, noninferiority P=0.713). BARC ≥3 HR 3.54 (P=0.027) is secondary.",
+    "caveats": "Stopped early at 602 of 1,474. The primary win-ratios come first (efficacy 1.19, P=0.610; safety 0.66, superiority of the control group P=0.115, noninferiority P=0.713). BARC ≥3 HR 3.54 (P=0.027) is secondary.",
     "practiceTakeaway": "This trial does not support pairing prasugrel or ticagrelor with a DOAC early after MI in AF. The contrast was with clopidogrel-based strategies.",
     "questionsAnswered": [
       {
@@ -5035,7 +5035,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Randomized: yes. Double-blind. Phase 2b. A null primary composite (19% placebo vs 19%, 22%, and 20%; dose–response P=0.80). Pooled major or clinically relevant nonmajor bleeding HR 1.57 (90% CI 0.91–2.71). The 50 mg stroke-or-TIA finding is post hoc. Not a reason to prescribe asundexian.",
-    "practiceTakeaway": "PACIFIC-STROKE covers a phase 2b factor XIa result whose primary magnetic resonance imaging composite was not reduced. The 50 mg stroke-or-TIA reduction stays labeled post hoc, and look to OCEANIC-STROKE for the phase 3 question.",
+    "practiceTakeaway": "PACIFIC-STROKE covers a phase 2b factor XIa result whose primary magnetic resonance imaging composite was not reduced. The 50 mg stroke-or-TIA reduction stays labeled post hoc; OCEANIC-STROKE is the phase 3 trial.",
     "questionsAnswered": [
       {
         "text": "After acute non-cardioembolic ischemic stroke on antiplatelet therapy, did asundexian (10, 20 or 50 mg once daily, as given in the trial) reduce covert brain infarcts or recurrent ischemic stroke at 26 weeks? No. There was no reduction and no dose-response.",
@@ -5127,7 +5127,7 @@ window.ANTICOAG_TRIALS = [
     "background": "Abelacimab (FXI monoclonal) was compared with rivaroxaban primarily for bleeding in AF.",
     "designNotes": "Randomized comparison of abelacimab 150 mg or 90 mg monthly (blinded doses) versus open-label rivaroxaban in atrial fibrillation, with major or CRNM bleeding as the primary endpoint. Stopped early on the data-monitoring committee’s recommendation because the bleeding reduction was greater than anticipated. Stroke-prevention efficacy was not established by this design.",
     "strengths": "Marked reduction in major/CRNM bleeding vs rivaroxaban.",
-    "limitations": "Stroke-prevention efficacy unproven. The text does not cast as DOAC replacement.",
+    "limitations": "Stroke-prevention efficacy unproven. The text does not cast abelacimab as a DOAC replacement.",
     "journalClub": "AZALEA: FXI blockade can slash bleeding. Efficacy for AF stroke prevention remains the missing piece.",
     "guidelines": [
       {
@@ -5144,7 +5144,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Stopped early for a greater-than-anticipated bleeding reduction. Bleeding hazard ratios were 0.38 (150 mg) and 0.31 (90 mg). Stroke-prevention efficacy is not established. This trial does not support abelacimab as a replacement for a DOAC.",
-    "practiceTakeaway": "Abelacimab’s bleeding advantage is promising research. Keep patients on proven DOACs for AF stroke prevention for now.",
+    "practiceTakeaway": "Abelacimab’s bleeding advantage is promising research. Proven DOACs remained the AF stroke-prevention treatment while abelacimab’s stroke-prevention efficacy stayed unproven.",
     "questionsAnswered": [
       {
         "text": "In AF, did the factor XI antibody abelacimab cause less major or clinically relevant nonmajor bleeding than rivaroxaban? Yes, at both doses tested, and the trial was stopped early because the bleeding reduction was larger than anticipated.",
@@ -5196,7 +5196,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Not an AF trial. Regulatory status separate. Early hierarchical secondary nuance in reports.",
-    "practiceTakeaway": "Guideline and regulatory uptake remains open for of asundexian add-on after noncardioembolic stroke. It is separate from AF care.",
+    "practiceTakeaway": "Guideline and regulatory uptake of asundexian add-on after noncardioembolic stroke remains open. It is separate from AF care.",
     "questionsAnswered": [
       {
         "text": "After noncardioembolic ischemic stroke or high-risk TIA, did the factor XIa inhibitor asundexian added to antiplatelet therapy reduce ischemic stroke compared with placebo? Yes.",
@@ -5289,7 +5289,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "ASTER (NCT05171049, ANT-007): randomized open-label blinded-endpoint phase 3 of abelacimab versus apixaban in cancer-associated VTE. Registry enrollment 1,150 (actual). Primary completion 2026-02-04. Overall status terminated. Why stopped: sponsor decision. MAGNOLIA (NCT05171075, ANT-008): abelacimab versus dalteparin in GI/genitourinary cancer-associated VTE. Registry enrollment 417 (actual). Primary completion 2026-04-10. Overall status terminated. Why stopped: sponsor decision. The registry primary outcome for both is time to centrally adjudicated VTE recurrence through about 6 months. That is the protocol endpoint, not a result. Registry dose labels: abelacimab 150 mg. Apixaban 10 mg then 5 mg. Dalteparin 200 IU/kg/day then 150 IU/kg/day.",
     "strengths": "Comparators, populations, and termination status come from the two ClinicalTrials.gov study pages.",
     "limitations": "No posted results, no results digital object identifier, and no PubMed results paper (checked 2026-10-01). Why the sponsor stopped the studies, and any effect on VTE recurrence or bleeding, are not known from public trial results.",
-    "journalClub": "The comparators stands separately: ASTER is abelacimab versus apixaban. MAGNOLIA is abelacimab versus dalteparin. Both are terminated with no public outcome data. Factor XI context from other published trials (none of them enrolled cancer-associated VTE, so none is an ASTER or MAGNOLIA result): in AZALEA–TIMI 71 (1,287 patients with AF), major or clinically relevant nonmajor bleeding was 3.2 and 2.6 events per 100 person-years with the two abelacimab doses versus 8.4 with rivaroxaban (HR 0.38; 95% CI 0.24–0.60 and HR 0.31; 95% CI 0.19–0.51), and the trial was stopped early for a greater-than-anticipated bleeding reduction. It was not designed to test stroke prevention. In OCEANIC-AF (14,810 patients with AF), asundexian was stopped prematurely: stroke or systemic embolism 1.3% versus 0.4% with apixaban (HR 3.79; 95% CI 2.46–5.83), with less major bleeding (0.2% versus 0.7%; HR 0.32; 95% CI 0.18–0.55). In LIBREXIA ACS (14,194 patients after acute coronary syndrome), milvexian added to antiplatelet therapy was terminated for futility: cardiovascular death, myocardial infarction, or ischemic stroke 5.4% versus 5.1% with placebo (HR 1.05; 95% CI 0.91–1.21), with intracranial or fatal (BARC 3c or 5) bleeding 0.3% in both groups.",
+    "journalClub": "The comparators stand separately: ASTER is abelacimab versus apixaban. MAGNOLIA is abelacimab versus dalteparin. Both are terminated with no public outcome data. Factor XI context from other published trials (none of them enrolled cancer-associated VTE, so none is an ASTER or MAGNOLIA result): in AZALEA–TIMI 71 (1,287 patients with AF), major or clinically relevant nonmajor bleeding was 3.2 and 2.6 events per 100 person-years with the two abelacimab doses versus 8.4 with rivaroxaban (HR 0.38; 95% CI 0.24–0.60 and HR 0.31; 95% CI 0.19–0.51), and the trial was stopped early for a greater-than-anticipated bleeding reduction. It was not designed to test stroke prevention. In OCEANIC-AF (14,810 patients with AF), asundexian was stopped prematurely: stroke or systemic embolism 1.3% versus 0.4% with apixaban (HR 3.79; 95% CI 2.46–5.83), with less major bleeding (0.2% versus 0.7%; HR 0.32; 95% CI 0.18–0.55). In LIBREXIA ACS (14,194 patients after acute coronary syndrome), milvexian added to antiplatelet therapy was terminated for futility: cardiovascular death, myocardial infarction, or ischemic stroke 5.4% versus 5.1% with placebo (HR 1.05; 95% CI 0.91–1.21), with intracranial or fatal (BARC 3c or 5) bleeding 0.3% in both groups.",
     "guidelines": [
       {
         "society": "ASH",
@@ -5326,7 +5326,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Results not public as of mid-Sep 2026 briefings.",
-    "practiceTakeaway": "Await LIBREXIA-AF before considering milvexian for AF stroke prevention."
+    "practiceTakeaway": "LIBREXIA-AF results are not yet available, so milvexian for AF stroke prevention is not established on this card."
   },
   {
     "id": "librexia-stroke",
@@ -5350,11 +5350,11 @@ window.ANTICOAG_TRIALS = [
       {
         "society": "AHA/ASA",
         "document": "Secondary stroke prevention pipeline",
-        "note": "Pending FXIa stroke program. Watch relative to OCEANIC-STROKE."
+        "note": "Pending FXIa stroke program. The comparison point is OCEANIC-STROKE."
       }
     ],
     "caveats": "No public primary results yet in the mid-2026 briefing window.",
-    "practiceTakeaway": "Track LIBREXIA-STROKE as a potential confirmation/extension of FXIa stroke add-on strategies."
+    "practiceTakeaway": "LIBREXIA-STROKE is a potential confirmation or extension of FXIa stroke add-on strategies."
   },
   {
     "id": "aspire",
@@ -5373,7 +5373,7 @@ window.ANTICOAG_TRIALS = [
     "cite": "Ongoing quadruple-blind phase 3 trial; results not published. ClinicalTrials.gov NCT03907046 (ASPIRE; recruiting; last update posted 2026-05-08; estimated primary completion 2027-04). Arms are apixaban versus aspirin 81 mg, not anticoagulation versus no anticoagulation. This card is not a journal publication.",
     "url": "https://clinicaltrials.gov/study/NCT03907046",
     "designNotes": "Quadruple-blind randomized trial (NCT03907046): apixaban 5 mg twice daily, or 2.5 mg twice daily if at least two of age ≥80 years, weight ≤60 kg, or serum creatinine 1.5–2.4 mg/dL are present, or if the patient is taking a strong CYP3A4/P-glycoprotein inhibitor, versus aspirin 81 mg once daily. Masking covers participant, care provider, investigator, and outcomes assessor. Primary aim is stroke of any type or death. Results are not published.",
-    "expectedResults": "Expected in coming years. Watch for conference late-breakers",
+    "expectedResults": "Expected in coming years, including conference late-breakers.",
     "doi": null,
     "guidelines": [
       {
@@ -5384,7 +5384,7 @@ window.ANTICOAG_TRIALS = [
       {
         "society": "ESC",
         "document": "AF after ICH",
-        "note": "Await before routine re-anticoagulation algorithms."
+        "note": "Routine re-anticoagulation algorithms wait on this trial."
       }
     ],
     "caveats": "Recruiting and quadruple-blind (participant, care provider, investigator, and outcomes assessor). The arms are apixaban versus aspirin 81 mg. No results to quote.",
@@ -5457,7 +5457,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "International, open-label, randomized trial with blinded outcome assessment. Head magnetic resonance imaging after enrollment and at 3 years. Primary outcome: stroke, systemic embolism, or new covert embolic stroke (at least 1 new infarct of 15 mm or larger on magnetic resonance imaging) at 3 years. Published online November 2025.",
     "strengths": "Randomized, with blinded outcome assessment. Systematic magnetic resonance imaging counted covert embolic strokes as well as clinical events. Three years of follow-up.",
     "limitations": "Open-label treatment. Low event counts (5 vs 9 primary events), so the relative-risk confidence interval was wide (0.19 to 1.65). The comparator was aspirin, not no antithrombotic therapy. The aspirin dose varied with local availability.",
-    "journalClub": "OCEAN and ALONE-AF asked related questions with different comparators: OCEAN compared rivaroxaban with aspirin and counted magnetic resonance imaging-detected covert strokes. ALONE-AF compared continuing a DOAC with discontinuing oral anticoagulation. Neither primary result tests the other trial's question. Note the bleeding direction in OCEAN: 1.6% vs 0.6%, hazard ratio 2.51 with a confidence interval crossing 1.",
+    "journalClub": "OCEAN and ALONE-AF asked related questions with different comparators: OCEAN compared rivaroxaban with aspirin and counted magnetic resonance imaging-detected covert strokes. ALONE-AF compared continuing a DOAC with discontinuing oral anticoagulation. Neither primary result tests the other trial's question. Bleeding in OCEAN was 1.6% vs 0.6%, hazard ratio 2.51 with a confidence interval crossing 1.",
     "guidelines": [],
     "caveats": "Rivaroxaban and aspirin doses are shown only as the trial arms. The primary result was not significant, and event rates were low in both groups.",
     "practiceTakeaway": "OCEAN reported low rates of stroke, systemic embolism, and covert embolic stroke after successful ablation with either rivaroxaban or aspirin, with no significant difference between them, and numerically more fatal or major bleeding with rivaroxaban.",

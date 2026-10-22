@@ -956,7 +956,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Placebo-controlled extension. Patient selection for who needs extension remains clinical.",
-    "practiceTakeaway": "In AMPLIFY-EXT, after 6–12 months of anticoagulation for VTE, apixaban 2.5 mg or 5 mg twice daily lowered recurrent VTE versus placebo (1.7% with each dose vs 8.8%). Major bleeding stayed low: 0.2% with 2.5 mg, 0.1% with 5 mg, and 0.5% with placebo.",
+    "practiceTakeaway": "In AMPLIFY-EXT, after 6–12 months of anticoagulation for VTE, apixaban 2.5 mg or 5 mg twice daily lowered recurrent VTE or VTE-related death versus placebo (1.7% with each dose vs 8.8%). Major bleeding stayed low: 0.2% with 2.5 mg, 0.1% with 5 mg, and 0.5% with placebo.",
     "questionsAnswered": [
       {
         "text": "After 6–12 months of initial treatment, did extended apixaban (2.5 mg or 5 mg twice daily, as given in the trial) reduce recurrent VTE or VTE-related death compared with placebo? Yes, with both doses.",
@@ -1213,7 +1213,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Placebo, added to standard antiplatelet therapy",
     "primaryResult": "Cardiovascular death, myocardial infarction, or ischemic stroke: 279/3705 (7.5%; 13.2 per 100 patient-years) with apixaban vs 293/3687 (7.9%; 14.0 per 100 patient-years) with placebo (HR 0.95; 95% CI 0.80–1.11; P=0.51). Median follow-up 241 days. The ischemic primary endpoint was not met.",
     "safety": "TIMI major bleeding, among patients who received at least one dose: 46/3673 (1.3%; 2.4 per 100 patient-years) vs 18/3642 (0.5%; 0.9 per 100 patient-years) (HR 2.59; 95% CI 1.50–4.46; P=0.001). The abstract reports more intracranial and fatal bleeding with apixaban than with placebo. It does not give those counts.",
-    "takeaway": "Full-dose apixaban after recent ACS did not reduce ischemic events and increased major bleeding. The trial stopped early. It is read beside ATLAS ACS 2–TIMI 51.",
+    "takeaway": "Full-dose apixaban after recent ACS did not reduce ischemic events and increased major bleeding. The trial stopped early because of more major bleeding without a reduction in recurrent ischemic events. It is read beside ATLAS ACS 2–TIMI 51.",
     "cite": "Alexander JH, et al. N Engl J Med. 2011;365:699-708.",
     "doi": "10.1056/NEJMoa1105819",
     "url": "https://doi.org/10.1056/NEJMoa1105819",
@@ -4167,7 +4167,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Randomized: yes. Open-label, with assessors unaware of assignment. The 30-day primary risk difference was −1.18 percentage points (95% CI −2.84 to 0.47). Symptomatic intracranial hemorrhage was 0.2% in both groups. Not OPTIMAS.",
-    "practiceTakeaway": "In ELAN, starting a DOAC early after ischemic stroke with AF (timing based on stroke severity) led to a 30-day rate of recurrent ischemic stroke, systemic embolism, major extracranial bleeding, symptomatic intracranial hemorrhage, or vascular death of 2.9%, versus 4.1% with later starts (risk difference −1.18 percentage points; 95% CI −2.84 to 0.47). Symptomatic intracranial hemorrhage was 0.2% in each group.",
+    "practiceTakeaway": "In ELAN, starting a DOAC early after ischemic stroke with AF (timing based on stroke severity) had a 30-day rate of recurrent ischemic stroke, systemic embolism, major extracranial bleeding, symptomatic intracranial hemorrhage, or vascular death of 2.9%, versus 4.1% with later starts (risk difference −1.18 percentage points; 95% CI −2.84 to 0.47). Symptomatic intracranial hemorrhage was 0.2% in each group.",
     "questionsAnswered": [
       {
         "text": "After acute ischemic stroke with AF, did starting a DOAC early (within 48 hours after a minor or moderate stroke, or on day 6 or 7 after a major stroke) change 30-day outcomes compared with later starts? The composite was 2.9% versus 4.1%, with a confidence interval that included both fewer and slightly more events with early treatment.",
@@ -4915,7 +4915,7 @@ window.ANTICOAG_TRIALS = [
     "background": "How short dual therapy can be after PCI in AF on DOAC remained an open refinement of AUGUSTUS-era care.",
     "designNotes": "Randomized trial in Japan: 1-month DOAC+P2Y12 then DOAC mono vs 12-month dual then mono (imaging-guided PCI for chronic coronary syndrome or unstable angina).",
     "strengths": "Less bleeding with very short dual therapy. Noninferiority efficacy framework met as reported.",
-    "limitations": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. Caution extrapolating to ACS/MI or other regions.",
+    "limitations": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. Caution extrapolating to MI or other regions.",
     "journalClub": "OPTIMA-AF supports very short dual therapy in selected cohorts. The result does not extend generally to ACS.",
     "guidelines": [
       {
@@ -4930,7 +4930,7 @@ window.ANTICOAG_TRIALS = [
         "note": "Likely to inform next updates on very short dual therapy after imaging-guided PCI in selected cohorts."
       }
     ],
-    "caveats": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. The result does not extend indiscriminately to ACS/MI or other regions. Lower-than-anticipated events.",
+    "caveats": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. The result does not extend indiscriminately to MI or other regions. Lower-than-anticipated events.",
     "practiceTakeaway": "In OPTIMA-AF, among Japanese patients with NVAF having PCI for chronic coronary syndrome or unstable angina, 1 month of a DOAC plus a P2Y12 inhibitor followed by DOAC alone was noninferior to 12 months of dual therapy for death or thromboembolism (5.4% vs 4.3%; HR 1.25) and caused less major or clinically relevant nonmajor bleeding (4.5% vs 8.8%; HR 0.50).",
     "questionsAnswered": [
       {

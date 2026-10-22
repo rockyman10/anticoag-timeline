@@ -40,7 +40,7 @@ window.ANTICOAG_SITE_META = {
     ["PCI", "percutaneous coronary intervention"],
     ["PE", "pulmonary embolism"],
     ["PERT", "pulmonary embolism response team"],
-    ["RR", "relative risk (risk ratio); PROTECT-AF's RR is a rate ratio"],
+    ["RR", "relative risk (risk ratio)"],
     ["SE", "systemic embolism"],
     ["TAVI", "transcatheter aortic valve implantation"],
     ["TAVR", "transcatheter aortic valve replacement"],

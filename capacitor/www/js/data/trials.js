@@ -383,8 +383,8 @@ window.ANTICOAG_TRIALS = [
         "year": 2024
       }
     ],
-    "caveats": "Dose reduction rules affect efficacy. High-dose increased GI bleeding. The label's dose reduction uses CrCl, weight, and P-glycoprotein inhibitors.",
-    "practiceTakeaway": "Edoxaban is a once-daily DOAC in this trial. The trial's dose-reduction rules applied to efficacy.",
+    "caveats": "Dose reduction rules affect efficacy. High-dose increased GI bleeding. The trial halved the dose by CrCl, weight, or potent P-glycoprotein inhibitor use (see design notes). The U.S. label's AF dose reduction is by CrCl alone.",
+    "practiceTakeaway": "ENGAGE AF-TIMI 48 found once-daily edoxaban noninferior to warfarin, with dose halving under the trial's rules.",
     "questionsAnswered": [
       {
         "text": "Were once-daily edoxaban regimens noninferior to warfarin? Yes: both the higher-dose (60 mg) and lower-dose (30 mg) regimens as given in the trial, with dose halving for prespecified criteria, met noninferiority for stroke or systemic embolism.",
@@ -3225,7 +3225,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Ischemic stroke numerically higher with device. Procedural risk. Longer follow-up ongoing.",
-    "practiceTakeaway": "In CHAMPION-AF, modern LAAO was a credible alternative to long-term DOAC in selected anticoagulation-eligible AF, with an ischemic-stroke nuance.",
+    "practiceTakeaway": "In CHAMPION-AF, modern LAAO was a credible alternative to long-term DOAC in selected anticoagulation-eligible AF. Ischemic stroke was numerically higher with the device.",
     "questionsAnswered": [
       {
         "text": "In AF patients suitable for anticoagulation, was Watchman FLX closure noninferior to a DOAC for cardiovascular death, stroke or systemic embolism over 3 years? Yes.",
@@ -3745,7 +3745,7 @@ window.ANTICOAG_TRIALS = [
     "background": "Mechanical aortic valves need anticoagulation. PROACT tested whether selected patients with an On-X aortic valve could use dual antiplatelet therapy, or a lower warfarin INR, instead of standard-intensity warfarin. PROACT Xa later tested apixaban in On-X aortic valves and was stopped for excess valve thrombosis and thromboembolism.",
     "designNotes": "Randomized: yes. Multicenter noninferiority trial, ClinicalTrials.gov NCT00291525. Randomization of the tested strategy began 3 months after surgery. This card uses only the 2018 completed report. An interim report of the high-risk limb (Puskas et al., J Thorac Cardiovasc Surg. 2014; doi:10.1016/j.jtcvs.2014.01.004) has different follow-up and different bleeding rates and is not mixed into these numbers. The registry also lists mitral arms. The rates on this card are the aortic arms in the 2018 abstract.",
     "strengths": "Separates a failed antiplatelet strategy from a lower-INR warfarin strategy, with thromboembolism and bleeding both reported for the high-risk arm.",
-    "limitations": "The low-risk bleeding comparison has no printed rates. The high-risk thromboembolism point estimates are 0.42% versus 0.09% per patient-year even though the P value is 0.20. Not a DOAC trial. Not a mitral-valve result. The lower INR in this trial sat inside a labeled transition period and an aspirin plan.",
+    "limitations": "The low-risk bleeding comparison has no printed rates. The high-risk thromboembolism point estimates are 0.42% versus 0.09% per patient-year even though the P value is 0.20. Not a DOAC trial. Not a mitral-valve result. The lower INR started three months after valve replacement and was given with aspirin.",
     "journalClub": "The dual-antiplatelet harm signal is clear (3.12% vs 0.29% per patient-year; P=0.02). The lower-INR bleeding reduction is also clear, and the thromboembolism comparison was not a significant difference. PROACT is read as warfarin-based On-X care. PROACT Xa is read as the negative apixaban comparison. RE-ALIGN is read as the dabigatran mechanical-valve stop.",
     "guidelines": [
       {
@@ -3901,7 +3901,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial of 3 months DOAC then single antiplatelet therapy vs lifelong single antiplatelet therapy after TAVR without OAC indication.",
     "strengths": "The primary 12-month HALT comparison was not met (28.3% vs 32.2%; P=0.54). The 3-month HALT difference (12.1% vs 31.8%) occurred while DOAC was still being taken and is not the primary endpoint.",
     "limitations": "Imaging-heavy endpoint. Clinical events limited in number.",
-    "journalClub": "The primary result is: 12-month HALT 28.3% vs 32.2%, P=0.54, not met. The 3-month HALT rates and the clinical composite (risk difference 5.9%, 95% CI 1.2% to 10.6%) are not substitutes for that primary.",
+    "journalClub": "The primary result: 12-month HALT 28.3% vs 32.2%, P=0.54, not met. The 3-month HALT rates and the clinical composite (risk difference 5.9%, 95% CI 1.2% to 10.6%) are not substitutes for that primary.",
     "guidelines": [
       {
         "society": "ACC/AHA",

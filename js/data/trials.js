@@ -266,7 +266,7 @@ window.ANTICOAG_TRIALS = [
     "pmid": "16765759",
     "expectedResults": null,
     "background": "Before the DOAC era, some patients with atrial fibrillation were treated with antiplatelet therapy instead of a vitamin K antagonist. ACTIVE-W asked whether clopidogrel plus aspirin was noninferior to oral anticoagulation.",
-    "designNotes": "Randomized: yes. Intention-to-treat. Outcome events were adjudicated by a blinded committee. The abstract does not call the treatment assignment double-blind. Oral anticoagulation target INR 2.0–3.0 versus clopidogrel 75 mg daily plus aspirin 75–100 mg daily (as recommended in the trial). ClinicalTrials.gov NCT00243178. Stopped early because oral anticoagulation was superior.",
+    "designNotes": "Randomized: yes. Intention-to-treat. Outcome events were adjudicated by a blinded committee. The abstract does not call the treatment assignment double-blind. Oral anticoagulation target INR 2.0–3.0 versus clopidogrel 75 mg daily plus aspirin (75–100 mg per day, as recommended in the trial). ClinicalTrials.gov NCT00243178. Stopped early because oral anticoagulation was superior.",
     "strengths": "Large randomized comparison with a blinded adjudication committee and a clear primary-event difference (annual risk 3.93% vs 5.60%; relative risk 1.44).",
     "limitations": "Stopped early. The abstract’s comparator is oral anticoagulation at INR 2.0–3.0, not a named DOAC. Major bleeding is reported as an interaction by prior oral-anticoagulation use, not as one overall rate. This card does not choose a DOAC dose.",
     "journalClub": "More vascular events with clopidogrel plus aspirin than with oral anticoagulation. Randomized, stopped early for that superiority finding. And limited because bleeding is a subgroup interaction rather than one overall rate. ACTIVE-W is read beside BAFTA when the question is anticoagulation versus antiplatelet therapy in atrial fibrillation. This is not a DOAC trial.",
@@ -2339,7 +2339,7 @@ window.ANTICOAG_TRIALS = [
     "pmid": "37266947",
     "expectedResults": null,
     "background": "Cancer-associated VTE has been treated with low-molecular-weight heparin since CLOT. Later trials compared a named DOAC with dalteparin. CANVAS let the clinician choose which DOAC and which injectable anticoagulant.",
-    "designNotes": "Randomized: yes. Unblinded noninferiority trial. The primary analysis is the randomized cohort that received at least one dose, not all 671 randomized participants. ClinicalTrials.gov NCT02744092 also describes low-molecular-weight heparin with or without a transition to warfarin, and a preference cohort. The rates on this card are the randomized comparison in the Journal of the American Medical Association paper (any DOAC versus any low-molecular-weight heparin or fondaparinux). This is not the canagliflozin cardiovascular trial that shares the CANVAS name.",
+    "designNotes": "Randomized: yes. Unblinded noninferiority trial. The primary analysis is the randomized cohort that received at least one dose, not all 671 randomized participants. ClinicalTrials.gov NCT02744092 also describes low-molecular-weight heparin with or without a transition to warfarin, and a preference cohort. The rates on this card are the randomized comparison in the JAMA paper (any DOAC versus any low-molecular-weight heparin or fondaparinux). This is not the canagliflozin cardiovascular trial that shares the CANVAS name.",
     "strengths": "Pragmatic randomized comparison across real U.S. oncology practices, with a prespecified noninferiority margin and a separate major-bleeding result.",
     "limitations": "Unblinded. Drug and dose were chosen by clinicians, so this is not evidence for one named DOAC or one named dose. Major-bleeding noninferiority was not met. The primary percentages are among people who received at least one dose.",
     "journalClub": "Noninferior recurrent VTE. Randomized, unblinded, margin met (upper 1-sided bound 0.7%, under 3%). And the major-bleeding noninferiority miss belongs in the same sentence. CANVAS is read beside Hokusai VTE Cancer, SELECT-D, and Caravaggio, which name a single DOAC and dalteparin.",
@@ -4568,7 +4568,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Single-cohort efficacy study",
     "primaryResult": "Effective hemostasis in a high proportion. Anti-FXa activity rapidly reduced",
     "safety": "Thrombotic events observed after andexanet. Later ANNEXA-I and FDA review made TE risk central to U.S. market withdrawal of Andexxa (effective Dec 22, 2025).",
-    "takeaway": "Historically important hemostasis cohort for andexanet. The trial is not a basis for using Andexxa in the U.S. after the Dec 22, 2025 market withdrawal.",
+    "takeaway": "Historically important hemostasis cohort for andexanet. ANNEXA-4 is not a basis for using Andexxa in the U.S. after the Dec 22, 2025 market withdrawal.",
     "cite": "Connolly SJ, et al. N Engl J Med. 2019.",
     "doi": "10.1056/NEJMoa1814051",
     "url": "https://doi.org/10.1056/NEJMoa1814051",
@@ -4593,7 +4593,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "Single-cohort design. TE after reversal. U.S. Andexxa withdrawn Dec 22, 2025. Geographic availability differs (United Kingdom/European Union/Japan statements late 2025).",
-    "practiceTakeaway": "ANNEXA-4 is the hemostasis cohort. After Dec 2025, U.S. institutional pathways for FXa-inhibitor major bleeding use supportive care and 4F-PCC.",
+    "practiceTakeaway": "U.S. institutional pathways for FXa-inhibitor major bleeding use supportive care and 4F-PCC.",
     "regulatoryNote": "U.S. withdrawn Dec 2025",
     "questionsAnswered": [
       {
@@ -4652,7 +4652,7 @@ window.ANTICOAG_TRIALS = [
       }
     ],
     "caveats": "TE excess is the teaching point. Published New England Journal of Medicine TE rates (~10.3% vs 5.6%) differ from FDA advisory committee Day-30 figures above. Site uses FDA advisory committee for U.S. withdrawal teaching. U.S. Andexxa unavailable after Dec 22, 2025 (AstraZeneca voluntary biologics license application withdrawal). Non-U.S. availability may differ. It is not a universal direction to give Andexxa.",
-    "practiceTakeaway": "In the U.S., andexanet has not been available since Dec 22, 2025. Institutional ICH bundles use supportive care and 4F-PCC (or equivalent). ANNEXA-I is the trial that showed why TE risk mattered.",
+    "practiceTakeaway": "In the U.S., andexanet has not been available since Dec 22, 2025. Institutional ICH bundles use supportive care and 4F-PCC (or equivalent).",
     "regulatoryNote": "U.S. withdrawn Dec 2025",
     "questionsAnswered": [
       {
@@ -5667,7 +5667,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Multicenter, double-blind, randomized, controlled trial. Every patient received rivaroxaban until postoperative day 5 before randomization. Follow-up 90 days. Primary effectiveness outcome: symptomatic VTE. Primary safety outcome: major or clinically relevant nonmajor bleeding.",
     "strengths": "Double-blind. Large. DOAC comparator. Symptomatic end point.",
     "limitations": "Aspirin was studied only after a rivaroxaban lead-in to postoperative day 5, so the trial does not describe aspirin as the only prophylaxis drug after surgery. Low event rates in both groups.",
-    "journalClub": "The design comes before the result: randomization happened on postoperative day 5, after every patient had received rivaroxaban. CRISTAL (Journal of the American Medical Association 2022) randomized 31 Australian hospitals to aspirin or enoxaparin for 35 days after hip and 14 days after knee arthroplasty, counted below-knee DVT in its primary outcome, and found that aspirin did not meet noninferiority (symptomatic VTE 3.45% vs 1.82%).",
+    "journalClub": "The design comes before the result: randomization happened on postoperative day 5, after every patient had received rivaroxaban. CRISTAL (JAMA 2022) randomized 31 Australian hospitals to aspirin or enoxaparin for 35 days after hip and 14 days after knee arthroplasty, counted below-knee DVT in its primary outcome, and found that aspirin did not meet noninferiority (symptomatic VTE 3.45% vs 1.82%).",
     "guidelines": [],
     "caveats": "Doses are shown only as the trial arms. The result describes aspirin after a rivaroxaban lead-in to postoperative day 5.",
     "practiceTakeaway": "EPCAT II reported that switching to aspirin after 5 days of rivaroxaban was noninferior to continuing rivaroxaban for symptomatic VTE within 90 days of hip or knee arthroplasty. CRISTAL, with a different design and comparator, reported that aspirin did not meet noninferiority against enoxaparin.",
@@ -5679,7 +5679,7 @@ window.ANTICOAG_TRIALS = [
     ],
     "questionsOpen": [
       {
-        "text": "Does aspirin perform as well when it is the prophylaxis drug from surgery onward, without a rivaroxaban lead-in? CRISTAL (Journal of the American Medical Association 2022), across 31 Australian hospitals, compared aspirin with enoxaparin and found that aspirin did not meet noninferiority for symptomatic VTE within 90 days (3.45% vs 1.82%), with below-knee DVT included in the outcome. The trials differ in comparator, outcome definition, and design, so the question stays open.",
+        "text": "Does aspirin perform as well when it is the prophylaxis drug from surgery onward, without a rivaroxaban lead-in? CRISTAL (JAMA 2022), across 31 Australian hospitals, compared aspirin with enoxaparin and found that aspirin did not meet noninferiority for symptomatic VTE within 90 days (3.45% vs 1.82%), with below-knee DVT included in the outcome. The trials differ in comparator, outcome definition, and design, so the question stays open.",
         "source": "EPCAT II",
         "addressedBy": "CRISTAL"
       }

@@ -529,6 +529,26 @@
     }
     .whats-new .wn-tag.pending { border-style: dashed; color: var(--accent); border-color: var(--accent); }
 
+    /* Abbreviation key — collapsed, footer-adjacent */
+    .abbr-key {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 3px;
+      padding: .45rem .7rem; margin-top: .75rem;
+    }
+    .abbr-key summary {
+      cursor: pointer; font-size: .8125rem; font-weight: 700; color: var(--ink-2);
+      list-style: none; display: flex; align-items: center; gap: .45rem;
+    }
+    .abbr-key summary::-webkit-details-marker { display: none; }
+    .abbr-key summary::before { content: "▸"; color: var(--accent); font-size: .75rem; }
+    .abbr-key[open] summary::before { content: "▾"; }
+    .abbr-key dl {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      gap: .28rem .9rem; margin: .5rem 0 .15rem;
+    }
+    .abbr-key dl div { display: flex; gap: .45rem; align-items: baseline; min-width: 0; }
+    .abbr-key dt { font-weight: 700; font-size: .75rem; color: var(--ink); flex: 0 0 4.6rem; }
+    .abbr-key dd { margin: 0; font-size: .75rem; color: var(--muted); line-height: 1.35; }
+
     /* Pathway tray */
     .pathway-tray {
       display: none; flex-wrap: wrap; align-items: center; gap: .4rem .55rem;
@@ -967,6 +987,7 @@
     /* Embed chrome */
     body.embed .topbar .deck,
     body.embed .whats-new,
+    body.embed .abbr-key,
     body.embed #learn-welcome,
     body.embed #btn-learn-chip,
     body.embed .sec-nav,
@@ -1033,6 +1054,7 @@
       body:not(.print-sheet) .pathway-tray,
       body:not(.print-sheet) .learn-welcome,
       body:not(.print-sheet) .whats-new,
+      body:not(.print-sheet) .abbr-key,
       body:not(.print-sheet) .tip,
       body:not(.print-sheet) .toast,
       body:not(.print-sheet) .x,
@@ -1529,6 +1551,11 @@
       </div>
       <div class="legend" id="legend"></div>
     </section>
+
+    <details class="abbr-key" id="abbr-key">
+      <summary>Abbreviations</summary>
+      <dl id="abbr-list"></dl>
+    </details>
 
     <footer class="note" id="site-disclaimer">Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.</footer>
     <div class="site-meta" id="site-meta"></div>
@@ -3721,6 +3748,17 @@
     const rev = namedReviewer(siteMeta.reviewedBy);
     const revHtml = rev ? ` · <strong>Reviewed by:</strong> ${esc(rev)}` : "";
     el.innerHTML = `<strong>Last literature sweep:</strong> ${esc(sweep)}${revHtml} · <a href="#/changelog">Changelog</a>`;
+    fillAbbreviations();
+  }
+
+  function fillAbbreviations() {
+    const host = document.getElementById("abbr-list");
+    const box = document.getElementById("abbr-key");
+    const list = Array.isArray(siteMeta.abbreviations) ? siteMeta.abbreviations : [];
+    if (!host || !box) return;
+    if (!list.length) { box.hidden = true; return; }
+    host.innerHTML = list.map(([short, expansion]) =>
+      `<div><dt>${esc(short)}</dt><dd>${esc(expansion)}</dd></div>`).join("");
   }
 
   function namedReviewer(value) {

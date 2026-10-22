@@ -2323,6 +2323,7 @@
       <div class="ftitle">${esc(t.title)}</div>
       ${reg}
       ${doiPend}
+      <div class="fld" style="margin-bottom:.35rem"><div class="lab">Key takeaway</div></div>
       <div class="take">${esc(jc.practiceTakeaway || t.takeaway)}</div>
       ${t.expectedResults ? `<div class="expected"><strong>Expected results:</strong> ${esc(t.expectedResults)}</div>` : ""}
       <div class="fields">
@@ -2372,7 +2373,7 @@
       <div class="jc-sec"><h3>Strengths</h3><p>${esc(jc.strengths)}</p></div>
       <div class="jc-sec"><h3>Limitations</h3><p>${esc(jc.limitations)}</p></div>
       ${renderTrialQuestions(t, false)}
-      <div class="jc-sec"><h3>Practice takeaway</h3><div class="take" style="margin:0">${esc(jc.practiceTakeaway)}</div></div>
+      <div class="jc-sec"><h3>Key takeaway</h3><div class="take" style="margin:0">${esc(jc.practiceTakeaway)}</div></div>
       ${renderPracticalStrip(t)}
       ${renderGuidelinesBlock(jc.guidelines, false)}
       <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
@@ -2497,7 +2498,7 @@
       <div class="print-sec"><h2>Important caveats</h2><p>${esc(jc.caveats)}</p></div>
       <div class="print-sec"><h2>Strengths / limitations</h2><p><strong>Strengths:</strong> ${esc(jc.strengths)}<br/><strong>Limitations:</strong> ${esc(jc.limitations)}</p></div>
       ${renderTrialQuestions(t, true)}
-      <div class="print-sec"><h2>Practice takeaway</h2><div class="pearl">${esc(jc.practiceTakeaway)}</div></div>
+      <div class="print-sec"><h2>Key takeaway</h2><div class="pearl">${esc(jc.practiceTakeaway)}</div></div>
       <div class="print-sec"><h2>Guidelines</h2>${gLines}</div>
       <div class="cite">${linkifyText(t.cite)}${t.url ? "<br/>" + linkifyText(t.url) : ""}</div>`;
   }

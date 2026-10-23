@@ -255,19 +255,19 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "af-doac-pick",
           "type": "recommendation",
-          "title": "Prescribe labeled-dose DOAC; verify dose-reduction criteria",
-          "body": "Apixaban, rivaroxaban, edoxaban, or dabigatran per label, renal function, and DDIs. Do not under-dose 'for safety' without meeting criteria. The U.S. SAVAYSA label states edoxaban should not be used in NVAF when CrCl is above 95 mL/min, because ENGAGE AF-TIMI 48 showed a higher ischemic-stroke rate than warfarin in that group (0.9% vs 0.4% per year; HR 2.16; 95% CI 1.17–3.97).",
+          "title": "Labeled-dose DOAC",
+          "body": "Apixaban, rivaroxaban, edoxaban, or dabigatran per label, renal function, and DDIs. Labels describe a lower dose when their dose-reduction criteria are met. The U.S. SAVAYSA label's boxed warning, titled 'Reduced efficacy in nonvalvular atrial fibrillation patients with CrCL > 95 mL/min', states that SAVAYSA 'should not be used in patients with CrCL > 95 mL/min', because, in the ENGAGE AF-TIMI 48 subgroup with CrCl above 95 mL/min, ischemic stroke was higher with edoxaban 60 mg than with warfarin (0.9% vs 0.4% per year; HR 2.16; 95% CI 1.17–3.97). In the label's indicated population (CrCl ≤ 95 mL/min), stroke or systemic embolic event was 1.2% vs 1.8% per year (HR 0.68; 95% CI 0.55–0.84). ENGAGE AF-TIMI 48 was noninferior overall.",
           "why": "ARISTOTLE supports apixaban efficacy + bleed profile; all four agents are guideline options. The U.S. label's boxed warning is the edoxaban high-CrCl limit.",
           "graphicId": "g-engage-crcl",
           "evidence": [
             {
               "trial": "aristotle",
-              "effect": "First-line apixaban option in eligible NVAF"
+              "effect": "ARISTOTLE compared apixaban with warfarin in eligible NVAF"
             },
             {
               "trial": "engage-af",
-              "effect": "U.S. label Table 14.2, CrCl > 95 mL/min: ischemic stroke 0.9% vs 0.4% per year (HR 2.16; 95% CI 1.17–3.97); stroke or systemic embolic event 1.0% vs 0.6% per year (HR 1.87; 95% CI 1.10–3.17)",
-              "note": "SAVAYSA label, DailyMed set id e77d3400-56ad-11e3-949a-0800200c9a66, SPL version 26, effective 6 February 2024, section 14.1. Not the overall rate on the ENGAGE AF-TIMI 48 card."
+              "effect": "U.S. label Table 14.2 subgroup, CrCl > 95 mL/min: ischemic stroke 0.9% vs 0.4% per year (HR 2.16; 95% CI 1.17–3.97); stroke or systemic embolic event 1.0% vs 0.6% per year (HR 1.87; 95% CI 1.10–3.17). Indicated population (CrCl ≤ 95 mL/min): stroke or systemic embolic event 1.2% vs 1.8% per year (HR 0.68; 95% CI 0.55–0.84)",
+              "note": "SAVAYSA label, DailyMed set id e77d3400-56ad-11e3-949a-0800200c9a66, label version 28, effective 10 July 2025 (Table 14.2 unchanged since version 26), section 14.1. Subgroup rows, not the overall rate on the ENGAGE AF-TIMI 48 card."
             }
           ],
           "caveats": [

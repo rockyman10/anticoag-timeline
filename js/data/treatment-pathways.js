@@ -256,12 +256,18 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "af-doac-pick",
           "type": "recommendation",
           "title": "Prescribe labeled-dose DOAC; verify dose-reduction criteria",
-          "body": "Apixaban, rivaroxaban, edoxaban, or dabigatran per label, renal function, and DDIs. Do not under-dose 'for safety' without meeting criteria.",
-          "why": "ARISTOTLE supports apixaban efficacy + bleed profile; all four agents are guideline options.",
+          "body": "Apixaban, rivaroxaban, edoxaban, or dabigatran per label, renal function, and DDIs. Do not under-dose 'for safety' without meeting criteria. The U.S. SAVAYSA label states edoxaban should not be used in NVAF when CrCl is above 95 mL/min, because ENGAGE AF-TIMI 48 showed a higher ischemic-stroke rate than warfarin in that group (0.9% vs 0.4% per year; HR 2.16; 95% CI 1.17–3.97).",
+          "why": "ARISTOTLE supports apixaban efficacy + bleed profile; all four agents are guideline options. The U.S. label's boxed warning is the edoxaban high-CrCl limit.",
+          "graphicId": "g-engage-crcl",
           "evidence": [
             {
               "trial": "aristotle",
               "effect": "First-line apixaban option in eligible NVAF"
+            },
+            {
+              "trial": "engage-af",
+              "effect": "U.S. label Table 14.2, CrCl > 95 mL/min: ischemic stroke 0.9% vs 0.4% per year (HR 2.16; 95% CI 1.17–3.97); stroke or systemic embolic event 1.0% vs 0.6% per year (HR 1.87; 95% CI 1.10–3.17)",
+              "note": "SAVAYSA label, DailyMed set id e77d3400-56ad-11e3-949a-0800200c9a66, SPL version 26, effective 6 February 2024, section 14.1. Not the overall rate on the ENGAGE AF-TIMI 48 card."
             }
           ],
           "caveats": [
@@ -274,6 +280,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "trial",
               "id": "aristotle",
               "label": "ARISTOTLE"
+            },
+            {
+              "kind": "trial",
+              "id": "engage-af",
+              "label": "ENGAGE AF-TIMI 48"
             },
             {
               "kind": "page",

@@ -52,6 +52,15 @@ window.ANTICOAG_SITE_META = {
   ],
   changelog: [
     {
+      date: "2026-10-23",
+      title: "Edoxaban creatinine-clearance band on the AF pathway",
+      items: [
+        "The AF stroke-prevention pathway, at the labeled DOAC choice, now shows the U.S. SAVAYSA label Table 14.2: higher ischemic stroke with edoxaban than warfarin when CrCl is above 95 mL/min, and a higher stroke or systemic embolic event rate in that band.",
+        "Numbers are from DailyMed set id e77d3400-56ad-11e3-949a-0800200c9a66, SPL version 26, effective 6 February 2024, sections 1.1, 5.1, and 14.1. The ENGAGE AF-TIMI 48 card is unchanged.",
+        "Educational only, not prescribing. Wording stays DOAC. reviewedBy unchanged; no named reviewer. The literature-sweep stamp is unchanged."
+      ]
+    },
+    {
       date: "2026-10-22",
       title: "Abbreviation key and plainer trial cards",
       items: [

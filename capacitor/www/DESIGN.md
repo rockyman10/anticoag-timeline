@@ -10,7 +10,7 @@ Patterns applied from clinical information-design literature and editorial medic
 ## Stacked category lanes (LifeLines / LabVis / BMJ-style timelines)
 - Shared time axis (2009–2027+).
 - One horizontal lane per indication (AF, VTE, cancer VTE, PE, AF+PCI, LAAO, valvular/TAVI, reversal, FXI/pipeline).
-- Compact glyph-style markers (dot + acronym + tier), not oversized bubbles.
+- Compact glyph-style markers (dot + acronym), not oversized bubbles. No trial rating or impact chips.
 - Same-year clustering uses small horizontal offsets within a lane.
 
 ## NEJM-inspired typography & chrome
@@ -19,7 +19,7 @@ Patterns applied from clinical information-design literature and editorial medic
 - One restrained accent (terracotta/burgundy) for primary actions and takeaway callout.
 - Minimal toolbar; filters stay slim; indications expand on demand.
 
-## DigiTeam / AC Forum Rapid Recap capsule
+## Trial snapshot capsule
 - Popup max-width ~680px, height hugs content (max 85vh with internal scroll).
 - Emphasized takeaway first, then compact labeled fields (Population, Arms, Efficacy, Safety, Citation).
 - Actions: Add to compare · Open source · Close.
@@ -37,7 +37,7 @@ Patterns applied from clinical information-design literature and editorial medic
 - Layout recomputes on zoom and filter changes.
 
 ## Journal club deep dive
-- Rapid Recap popup includes **More details** → journal-club handout (background, design, results, safety, strengths/limitations, pearl, citation).
+- Trial snapshot popup includes **More details** → journal-club handout (background, design, results, safety, strengths/limitations, pearl, citation).
 - Optional curated fields on trials (`background`, `designNotes`, `strengths`, `limitations`, `journalClub`); otherwise auto-composed from existing fields without inventing statistics.
 
 

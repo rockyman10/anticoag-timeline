@@ -5557,7 +5557,7 @@ window.ANTICOAG_TRIALS = [
     ],
     "questionsOpen": [
       {
-        "text": "Could a lower-intensity anticoagulant added to antiplatelet therapy reduce vascular events in peripheral arterial disease without the bleeding seen in WAVE? COMPASS and VOYAGER PAD later tested low-dose rivaroxaban with aspirin.",
+        "text": "Could a lower-intensity anticoagulant added to antiplatelet therapy reduce vascular events in peripheral arterial disease without the bleeding seen in WAVE? COMPASS later found that rivaroxaban 2.5 mg twice daily plus aspirin, as used in that trial, reduced cardiovascular death, stroke, or myocardial infarction compared with aspirin alone (4.1% vs 5.4%), with more major bleeding (3.1% vs 1.9%); VOYAGER PAD later found that a similar low-dose rivaroxaban regimen after lower-extremity revascularization reduced acute limb ischemia, major amputation for vascular causes, myocardial infarction, ischemic stroke, or cardiovascular death (17.3% vs 19.9% at 3 years).",
         "source": "WAVE",
         "addressedBy": "COMPASS"
       }
@@ -5598,7 +5598,7 @@ window.ANTICOAG_TRIALS = [
     ],
     "questionsOpen": [
       {
-        "text": "Would a DOAC added to antiplatelet therapy after an acute coronary syndrome show a similar trade-off? APPRAISE-2 (apixaban) and ATLAS ACS 2–TIMI 51 (rivaroxaban) later tested this.",
+        "text": "Would a DOAC added to antiplatelet therapy after an acute coronary syndrome show a similar trade-off? APPRAISE-2 later found that full-dose apixaban after ACS did not reduce ischemic events and increased major bleeding; ATLAS ACS 2–TIMI 51 later found that low-dose rivaroxaban reduced cardiovascular death, myocardial infarction, or stroke with more major bleeding.",
         "source": "WARIS II",
         "addressedBy": "APPRAISE-2"
       }

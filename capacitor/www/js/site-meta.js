@@ -62,6 +62,15 @@ window.ANTICOAG_SITE_META = {
     },
     {
       date: "2026-10-15",
+      title: "Open questions for scout cards, and timeline wording",
+      items: [
+        "The Open questions page now includes the Questions still open notes from the seven scout-wave trial cards, grouped into the existing themes. Two Taken-up-by bullets (WAVE and WARIS II) now state what the later trials found.",
+        "The site header and search descriptions now describe anticoagulation trials from the earliest card on the timeline through the published year named in the header.",
+        "Educational only, not prescribing. Wording stays DOAC."
+      ]
+    },
+    {
+      date: "2026-10-15",
       title: "Shareable links, cleaner printing and a data integrity check",
       items: [
         "Opening a trial card or treatment pathway now puts it in the address bar (card, pathway or playlist), so a copied link opens straight to it. Existing links keep working.",

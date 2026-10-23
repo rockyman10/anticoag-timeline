@@ -168,14 +168,14 @@ window.ANTICOAG_PRACTICAL = {
         id: "ufh-rev",
         agentClass: "Unfractionated heparin (UFH)",
         specific: "Protamine sulfate is the labeled neutralization class for heparin. The heparin sodium label describes slow infusion of protamine when bleeding requires reversal of heparinization.",
-        notes: "Teaching limit, not a dose chart. Heparin sodium injection labeling (FDA 017029s178): each mg of protamine sulfate neutralizes approximately 100 USP heparin units; the amount required decreases as heparin is metabolized; no more than 50 mg should be administered, very slowly, in any 10-minute period. Fatal reactions resembling anaphylaxis are described, so resuscitation has to be available. Open the institutional heparin-reversal chart. This page does not calculate a protamine dose.",
+        notes: "Heparin sodium injection labeling (FDA 017029s178): each mg of protamine sulfate neutralizes approximately 100 USP heparin units; the amount required decreases as heparin is metabolized; no more than 50 mg should be administered, very slowly, in any 10-minute period. Fatal reactions resembling anaphylaxis are described, so resuscitation has to be available. The institutional heparin-reversal chart is the companion to this label text.",
         trialIds: []
       },
       {
         id: "lmwh-rev",
         agentClass: "Low-molecular-weight heparin (LMWH)",
         specific: "Protamine only partly reverses LMWH. There is no complete specific antidote.",
-        notes: "Lovenox overdosage text (FDA 020164s129): anti-Factor Xa activity is never completely neutralized (maximum about 60%). The milligram schedule in that section stays on the product label and the institutional chart. It is not an order on this page. Other LMWH products do not automatically share that sentence. Protamine can cause hypotension and anaphylactoid reactions.",
+        notes: "Lovenox overdosage text (FDA 020164s129): anti-Factor Xa activity is never completely neutralized (maximum about 60%). The milligram schedule in that section stays on the product label and the institutional chart. Other LMWH products do not automatically share that sentence. Protamine can cause hypotension and anaphylactoid reactions.",
         trialIds: []
       },
       {

@@ -75,7 +75,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "af-vka-valve",
           "type": "recommendation",
           "title": "Dose-adjusted warfarin is what this niche’s evidence uses",
-          "body": "Mechanical valves and moderate–severe mitral stenosis sat outside the pivotal DOAC AF trials. Teaching example, not an order: dose-adjusted warfarin, with the INR target taken from the valve or guideline table. A switch to a DOAC is outside that evidence.",
+          "body": "Mechanical valves and moderate–severe mitral stenosis sat outside the pivotal DOAC AF trials. The 2020 ACC/AHA valvular heart disease guideline lists VKA anticoagulation (dose-adjusted warfarin) for mechanical valves and for AF with rheumatic mitral stenosis, with the INR target from the guideline's valve table. A switch to a DOAC is outside that evidence.",
           "why": "ACC/AHA valvular heart disease guideline Class 1 (verify current table) for mechanical valves / moderate–severe MS.",
           "evidence": [],
           "caveats": [
@@ -575,7 +575,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "af-end",
           "type": "end",
           "title": "Pathway complete — AF stroke prevention",
-          "body": "Document indication, agent/dose, renal function, DDIs, and follow-up. Educational only — verify local protocols.",
+          "body": "The close of this pathway names indication, agent/dose, renal function, DDIs, and follow-up.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -814,7 +814,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "vte-apix",
           "type": "recommendation",
           "title": "AMPLIFY used apixaban 10 mg twice daily for 7 days, then 5 mg twice daily",
-          "body": "Teaching example, not an order. The trial’s load-then-maintenance calendar is what the evidence used. Renal and hepatic limits come from the label.",
+          "body": "The trial’s load-then-maintenance calendar is what the evidence used. Renal and hepatic limits come from the label.",
           "why": "",
           "evidence": [
             {
@@ -847,7 +847,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "vte-riva",
           "type": "recommendation",
           "title": "EINSTEIN used rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily with food",
-          "body": "Teaching example, not an order. EINSTEIN-DVT and EINSTEIN-PE dosed the 15 mg and 20 mg tablets with food.",
+          "body": "",
           "why": "",
           "evidence": [
             {
@@ -883,7 +883,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "vte-edo",
           "type": "recommendation",
           "title": "Hokusai-VTE used parenteral heparin for at least 5 days, then edoxaban 60 mg or 30 mg daily",
-          "body": "Teaching example, not an order. That program was not a single-drug start from diagnosis.",
+          "body": "That program was not a single-drug start from diagnosis.",
           "why": "",
           "evidence": [
             {
@@ -965,7 +965,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "vte-end",
           "type": "end",
           "title": "Pathway complete — acute VTE",
-          "body": "Educational only. Verify dosing, renal cutoffs, and cancer screening as indicated.",
+          "body": "The close of this pathway names dosing, renal cutoffs, and cancer screening.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -1252,7 +1252,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "cat-end",
           "type": "end",
           "title": "Pathway complete — cancer VTE",
-          "body": "Reassess at cancer transitions. Educational only.",
+          "body": "The close of this pathway names cancer transitions as the reassessment point.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -1802,7 +1802,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "dap-start",
           "type": "start",
           "title": "Start: On an anticoagulant and an antiplatelet",
-          "body": "A patient takes oral anticoagulation (for AF or VTE) plus aspirin or a P2Y12 inhibitor. Before anything changes, write down why the antiplatelet was started, when, and by whom. This walk is a teaching frame for a conversation with the prescriber, not an order to stop or start anything.",
+          "body": "A patient takes oral anticoagulation (for AF or VTE) plus aspirin or a P2Y12 inhibitor. Before anything changes, the walk names why the antiplatelet was started, when, and by whom.",
           "why": "Combination therapy is often continued by inertia long after the reason for it has passed. Each added antithrombotic adds bleeding risk.",
           "evidence": [],
           "caveats": [
@@ -2788,7 +2788,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "bld-vka",
           "type": "recommendation",
           "title": "Warfarin major-bleed teaching: 4F-PCC plus IV vitamin K",
-          "body": "Teaching example, not an order. Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. Fresh frozen plasma is the fallback when 4F-PCC is unavailable.",
+          "body": "Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. Those bundles list fresh frozen plasma as the fallback when 4F-PCC is unavailable.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -2915,7 +2915,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "bld-end",
           "type": "end",
           "title": "Pathway complete — DOAC bleed (U.S.)",
-          "body": "Verify institutional protocol. Educational only.",
+          "body": "The close of this pathway points at the institutional protocol.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -3182,7 +3182,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "mv-end",
           "type": "end",
           "title": "Pathway complete — mechanical valve",
-          "body": "Document prosthesis, INR target, aspirin status, and who owns peri-procedural planning. Educational only.",
+          "body": "The close of this pathway names the prosthesis, the INR target, aspirin status, and who owns peri-procedural planning.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -3383,7 +3383,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "aps-end",
           "type": "end",
           "title": "Pathway complete — APS",
-          "body": "Document antibody profile, target INR, and specialty follow-up. Educational only.",
+          "body": "The close of this pathway names the antibody profile, the target INR, and specialty follow-up.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -3691,7 +3691,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "cv-end",
           "type": "end",
           "title": "Pathway complete — COMPASS vascular",
-          "body": "Educational only. Verify label and local vascular pathways.",
+          "body": "The close of this pathway points at the product label and local vascular pathways.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -3732,7 +3732,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-start",
           "type": "start",
           "title": "Start: Elective procedure, patient already on oral anticoagulation",
-          "body": "This walk is elective peri-procedural planning. Name four things before anyone writes a bridge: whether interruption is needed at all, the agent class, the thrombotic risk of holding, and the bleed risk of the procedure and of bridging itself. Discuss the plan with the procedural team. Teaching example, not an order.",
+          "body": "This walk is elective peri-procedural planning. Before a bridge is written, the walk names four things: whether interruption is needed at all, the agent class, the thrombotic risk of holding, and the bleed risk of the procedure and of bridging itself. The plan is discussed with the procedural team.",
           "why": "Reflexive “never uncovered” bridging is the habit this pathway slows down. Typical nonvalvular AF is the BRIDGE population.",
           "evidence": [],
           "caveats": [
@@ -3833,7 +3833,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-interrupt",
           "type": "question",
           "title": "Does this procedure need an interruption at all?",
-          "body": "Many low-bleed-risk procedures can proceed without stopping therapeutic anticoagulation. A common teaching example is a dental procedure when local hemostasis is reliable. Higher-bleed procedures usually need a hold. Confirm with the proceduralist. This site does not publish a procedure-class protocol.",
+          "body": "Many low-bleed-risk procedures can proceed without stopping therapeutic anticoagulation. A common teaching example is a dental procedure when local hemostasis is reliable. Higher-bleed procedures usually need a hold. Whether a hold is required is confirmed with the proceduralist.",
           "why": "Holding a drug that did not need to be held creates a gap, and then a temptation to bridge it.",
           "evidence": [],
           "caveats": [
@@ -3866,7 +3866,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-continue",
           "type": "recommendation",
           "title": "Continue the current oral anticoagulant if the proceduralist agrees",
-          "body": "Teaching example: when the procedure can be done with local hemostasis and the proceduralist does not require a hold, continue the current oral anticoagulant. Do not add a heparin bridge “just in case.” Document who confirmed that interruption is unnecessary, and what to do if bleeding occurs. Discuss with the team.",
+          "body": "When the procedure can be done with local hemostasis and the proceduralist does not require a hold, this node describes continuing the current oral anticoagulant without adding a heparin bridge “just in case.” BRIDGE and the CHEST perioperative guideline cited on this pathway do not support bridging by default. The record names who confirmed that interruption is unnecessary, and what happens if bleeding occurs.",
           "why": "An unnecessary interruption is a thrombotic gap you then have to manage.",
           "evidence": [],
           "caveats": [
@@ -3962,7 +3962,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-vka",
           "type": "caution",
           "title": "Typical AF on warfarin — BRIDGE teaching is not routine bridging",
-          "body": "Arterial thromboembolism was 0.4% without bridging and 0.3% with bridging (risk difference 0.1 percentage points; 95% CI −0.6 to 0.8; P=0.01 for noninferiority). Major bleeding was 1.3% without bridging and 3.2% with bridging (relative risk 0.41; 95% CI 0.20 to 0.78; P=0.005 for superiority). Teaching example: for typical nonvalvular AF, plan the warfarin hold and the restart with the team, and do not add routine LMWH. “Never uncovered” is not the same as safer, because bridging itself bleeds. This pathway does not print hold-day counts or LMWH doses. Discuss with the team.",
+          "body": "Arterial thromboembolism was 0.4% without bridging and 0.3% with bridging (risk difference 0.1 percentage points; 95% CI −0.6 to 0.8; P=0.01 for noninferiority). Major bleeding was 1.3% without bridging and 3.2% with bridging (relative risk 0.41; 95% CI 0.20 to 0.78; P=0.005 for superiority). In BRIDGE (patients with AF on warfarin; mechanical valves excluded), forgoing a heparin bridge was noninferior for arterial thromboembolism and had less major bleeding. “Never uncovered” is not the same as safer, because bridging itself bleeds. This pathway does not print hold-day counts or LMWH doses.",
           "why": "The BRIDGE card is the reason the reflexive bridge is questioned in this phenotype.",
           "evidence": [
             {
@@ -4040,7 +4040,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-doac",
           "type": "caution",
           "title": "Typical AF on a DOAC — teaching is hold and restart, without a heparin bridge",
-          "body": "The peri-procedural framework teaches that DOAC interruptions in typical AF generally do not need a heparin bridge while the oral agent is held. Use the monograph and the local checklist for timing. Teaching example: discuss dropping the reflexive heparin bridge with the team. BRIDGE studied warfarin interruption (arterial thromboembolism 0.4% vs 0.3%, major bleeding 1.3% vs 3.2%), so it is context for the habit, not a DOAC protocol. This pathway does not print surgical hold hours or doses; the neuraxial caveat quotes the intervals the ASRA guideline lists.",
+          "body": "The peri-procedural framework teaches that DOAC interruptions in typical AF generally do not need a heparin bridge while the oral agent is held. Timing on this node comes from the monograph and the local checklist. BRIDGE studied warfarin interruption (arterial thromboembolism 0.4% vs 0.3%, major bleeding 1.3% vs 3.2%), so it is context for the habit, not a DOAC protocol. This pathway does not print surgical hold hours or doses; the neuraxial caveat quotes the intervals the ASRA guideline lists.",
           "why": "The short DOAC clock is the reason a parenteral bridge is not the usual teaching for this phenotype.",
           "evidence": [],
           "caveats": [
@@ -4086,7 +4086,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-doac-pause",
           "type": "recommendation",
           "title": "Typical AF on a DOAC — what PAUSE adds to a hold and restart",
-          "body": "PAUSE followed patients with AF taking apixaban, dabigatran, or rivaroxaban through an elective surgery or procedure. One standardized interruption and resumption protocol, set by the drug, the procedure bleed risk, and kidney function, was used without heparin bridging or preoperative coagulation testing. Major bleeding at 30 days was under 2% and arterial thromboembolism under 1% in each cohort, but only the dabigatran cohort passed the trial's prespecified bleeding test. Teaching example: use PAUSE to explain why a timed hold and restart, without a heparin bridge, is the usual DOAC teaching in typical AF. Timing still comes from the product monograph and the institutional checklist. This pathway does not print hold days, hours, kidney cutoffs, or doses. Discuss with the team.",
+          "body": "PAUSE followed patients with AF taking apixaban, dabigatran, or rivaroxaban through an elective surgery or procedure. One standardized interruption and resumption protocol, set by the drug, the procedure bleed risk, and kidney function, was used without heparin bridging or preoperative coagulation testing. Major bleeding at 30 days was under 2% and arterial thromboembolism under 1% in each cohort, but only the dabigatran cohort passed the trial's prespecified bleeding test. The timed hold and restart without a heparin bridge that this pathway describes for typical AF is the strategy PAUSE studied. Timing still comes from the product monograph and the institutional checklist. This pathway does not print hold days, hours, kidney cutoffs, or doses.",
           "why": "BRIDGE is warfarin evidence. PAUSE is the DOAC-specific anchor for a hold-and-restart plan without a heparin bridge, but it is a single-strategy cohort, not a randomized comparison with bridging.",
           "evidence": [
             {
@@ -4099,7 +4099,7 @@ window.ANTICOAG_TX_PATHWAYS = {
             "No comparator arm: PAUSE shows low event rates with this protocol. It does not show that bridging, or a different schedule, is worse.",
             "Bleeding was higher with high-bleeding-risk procedures in the apixaban and rivaroxaban cohorts.",
             "Edoxaban was not studied, and patients with VTE were not included. Say so before extending the result.",
-            "The schedule on the PAUSE card is labeled trial protocol. It is not a recommendation or a hold-day chart."
+            "The schedule on the PAUSE card is labeled trial protocol."
           ],
           "links": [
             {
@@ -4184,7 +4184,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-restart",
           "type": "recommendation",
           "title": "Name who restarts anticoagulation after hemostasis",
-          "body": "Teaching example: the first post-procedure dose waits until the proceduralist says hemostasis allows it. Warfarin and DOAC clocks differ. This site does not assign a restart hour. Write who will confirm the restart, and what happens if bleeding continues. Discuss with the team.",
+          "body": "The first post-procedure dose waits until the proceduralist says hemostasis allows it. Warfarin and DOAC clocks differ. This site does not assign a restart hour. The pathway names who will confirm the restart, and what happens if bleeding continues.",
           "why": "A hold without an owner for restart is an unfinished plan.",
           "evidence": [],
           "caveats": [
@@ -4214,7 +4214,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "ppo-end",
           "type": "end",
           "title": "Pathway complete — elective peri-procedural plan",
-          "body": "In teaching language, record whether interruption was needed, the agent class, the thrombotic risk of the hold, and the bleed risk of the procedure and of any bridge. Typical AF on warfarin: BRIDGE arterial thromboembolism 0.4% vs 0.3% (noninferior) and major bleeding 1.3% vs 3.2% — not routine LMWH bridging. Typical DOAC interruption: a timed hold and restart, not a heparin bridge (PAUSE). Mechanical-valve bridging was not decided here. Educational only. Discuss with the team.",
+          "body": "In teaching language, the close names whether interruption was needed, the agent class, the thrombotic risk of the hold, and the bleed risk of the procedure and of any bridge. Typical AF on warfarin: BRIDGE arterial thromboembolism 0.4% vs 0.3% (noninferior) and major bleeding 1.3% vs 3.2% — not routine LMWH bridging. Typical DOAC interruption: a timed hold and restart, not a heparin bridge (PAUSE). Mechanical-valve bridging was not decided here.",
           "why": "The four named steps are the plan. A drug name without those steps is not.",
           "evidence": [],
           "caveats": [],

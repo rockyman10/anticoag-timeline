@@ -1,10 +1,10 @@
 # Clinical reviewer
 
-The public site does not show a named reviewer. `ANTICOAG_SITE_META.reviewedBy` is empty. Do not put a person's name in the footer or changelog header.
+The public site does not show a named reviewer. `ANTICOAG_SITE_META.reviewedBy` is empty. Do not put a person's name in the footer or in a CHANGELOG.md entry header.
 
 **Last literature sweep (site stamp):** 2026-10-04
 
-The stamp matches the latest accuracy pass in the changelog (2026-10-04). This resource is educational only and does not replace guidelines, product labeling, or institutional protocols.
+The stamp matches the latest accuracy pass recorded in CHANGELOG.md (2026-10-04). This resource is educational only and does not replace guidelines, product labeling, or institutional protocols.
 
 
 ## 2026-09-30 accuracy note — DOI / citation hygiene
@@ -30,7 +30,7 @@ Prior notes retained below.
 
 Site stamp aligned with `ANTICOAG_SITE_META.lastLiteratureSweep`. Named faculty `reviewedBy` remains the pending placeholder (do not invent a reviewer name).
 
-Ships reflected in the stamp (high level; see changelog for detail):
+Ships reflected in the stamp (high level; see CHANGELOG.md for detail):
 
 - DOI poll Sprint B: NOTION-4, EPIDAURUS, and LIBREXIA ACS filled from PubMed/DOI resolution; ENRICH-AF still presentation/press-only (`doiPending` banner kept).
 - DDI library majors (through oncology TKI tranche) plus later DOI-pending / DDI hygiene cards — quantified claims only where published.

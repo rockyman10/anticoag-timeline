@@ -15,6 +15,7 @@
  *   imperative  imperative dosing language outside trial-attributed fields; sentences that name a trial,
  *               guideline, label or protocol are listed as INFO (attributed), the rest are ERROR
  *   mirror      capacitor/www/js and README equal the root copies (index.html allowed to differ only in the font links)
+ * The site changelog is CHANGELOG.md and is not loaded or scanned. A leftover .changelog array, if present, is history text (INFO or skipped), not visitor copy.
  * It never edits files. Findings in clinical text are for human/literature review, not auto-fix.
  */
 const fs = require("fs"), path = require("path"), vm = require("vm");

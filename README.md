@@ -17,11 +17,11 @@ python3 -m http.server 8080
 | Feature | How to try |
 |--------|------------|
 | Timeline lanes | Scan indication rows; click a marker |
-| Rapid Recap / More details | Click trial → **More details** for journal-club handout |
+| Trial snapshot / More details | Click trial → **More details** for journal-club handout |
 | Compare | **Add to compare** (2–3) → Compare |
 | **Deep links** | `#/trial/cobrra` or `?trial=cobrra` — **Copy link** on the popup |
 | **What's new** | Compact strip under the header (recent + pending) |
-| **Print / Save PDF** | On Rapid Recap or More details → browser print dialog |
+| **Print / Save PDF** | On a Trial snapshot or More details → browser print dialog |
 | **Trial playlists** | Top bar **Trial playlists** → highlight & step trials on the timeline (`#/pathway/cancer-vte`) |
 | **CACP prep (unofficial)** | Teach → **CACP prep** → practice questions by NCBAP domain (`#/cacp`) — not endorsed by NCBAP; not real exam items |
 | **Treatment pathways** | Teach → **Treatment pathways** → interactive algorithms (`#/pathway-tx/af-stroke`) |
@@ -30,9 +30,8 @@ python3 -m http.server 8080
 | **Bleed & reversal** | Teach → **Bleed & reversal** → `#/reversal` |
 | **Nuance / Equipoise** | Teach → **Nuance** → e.g. `#/nuance/oceanic-vs-azalea` |
 | **DDI library** | Teach → **DDI library** → `#/ddi` or `#/ddi/apixaban/ketoconazole`; compare interactors across anticoagulants |
-| **Changelog** | Footer meta + `#/changelog` |
 | **Embed** | **Embed** button → iframe snippet; `?embed=1` for slim chrome |
-| Practical dosing strip | On selected trial Rapid Recaps (load/maintain, food, renal, hold heuristic) |
+| Practical dosing strip | On selected Trial snapshots (load/maintain, food, renal, hold heuristic) |
 
 ## Hosting (GitHub Pages / Netlify)
 
@@ -50,7 +49,7 @@ Drafts under `drafts/` are box/working notes only — not part of the published 
 **Andexxa (andexanet alfa)** is **not available in the U.S.** after **Dec 22, 2025** (FDA safety communication / BLA withdrawal for TE risk). Teach U.S. FXa-inhibitor major bleed as supportive care + institutional **4F-PCC**; idarucizumab remains for dabigatran. Ondexxya/andexanet may remain available outside the U.S. — verify formulary. See `#/reversal` and `#/trial/annexa-i`.
 
 ## Guidelines & journal club
-- Rapid Recap and More details include a **Guidelines** crosswalk (society + note).
+- A Trial snapshot and More details include a **Guidelines** crosswalk (society + note).
 - More details: Population → Intervention → Results → Safety → Caveats → Practice takeaway → Guidelines → Citation.
 - Print/Save PDF uses the same teaching blocks.
 
@@ -66,7 +65,8 @@ Drafts under `drafts/` are box/working notes only — not part of the published 
 - `js/data/nuances.js` — equipoise cards
 - `js/data/practical.js` — dosing logistics + bleed/reversal page
 - `js/data/ddi.js` — evidence-based anticoagulant DDI library (oncology TKI tranche complete; **expansion paused for clinical review**)
-- `js/site-meta.js` — literature sweep date, reviewer placeholder, changelog
+- `js/site-meta.js` — literature sweep date, reviewer placeholder, abbreviation key
+- `CHANGELOG.md` — site change log (newest first). Log changes here. The site does not render it. An old `#/changelog` address opens the home timeline.
 - `js/data/open-questions.js` — theme index for the Open questions page (`#/open-questions`); bullet text comes from each card's `questionsOpen`
 - `REVIEWER.md` — how to name the clinical reviewer
 - See `DESIGN.md` for visual / interaction rationale

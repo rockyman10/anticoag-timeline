@@ -1471,10 +1471,9 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Labeled counseling: rivaroxaban 15–20 mg should be taken with food. Missing this detail is a common adherence/efficacy error.",
+      "explanation": "The XARELTO label states that 15 mg and 20 mg tablets should be taken with food; food raises 20 mg exposure.",
       "teachingPoints": [
-        "Also counsel bleed precautions and what to do for missed doses per label.",
-        "This item describes patient-initiated pauses paired with a contact plan, as opposed to self-pausing for minor reasons."
+        "The label also gives bleeding precautions and missed-dose instructions."
       ],
       "links": [
         {
@@ -2051,9 +2050,9 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "EINSTEIN DVT/PE: 15 mg BID × 21 days → 20 mg daily, with food for these doses. COMPASS 2.5 mg BID is a different indication.",
+      "explanation": "EINSTEIN-DVT and EINSTEIN-PE used 15 mg twice daily for 3 weeks, then 20 mg once daily; the XARELTO label describes these doses as taken with food. COMPASS 2.5 mg BID is a different indication.",
       "teachingPoints": [
-        "Food counseling is part of the prescription.",
+        "The label pairs the 15 mg and 20 mg tablets with food.",
         "Edoxaban still needs heparin lead-in in its pivotal VTE design."
       ],
       "links": [
@@ -4422,8 +4421,8 @@ window.ANTICOAG_CACP = {
       "correctId": "c",
       "explanation": "Travel counseling preserves the labeled interval and food requirement for rivaroxaban 15–20 mg. Patients need a simple written plan for the transition day—not skipped therapy, doubled doses, or aspirin substitution when OAC is indicated.",
       "teachingPoints": [
-        "Teach-back the food requirement and the ‘about 24 hours apart’ idea before they leave.",
-        "Complex itineraries → encourage a call to the clinic rather than improvising."
+        "The label pairs 15 mg and 20 mg doses with food and once-daily dosing at about the same time each day; teach-back confirms the patient can state both before travel.",
+        "For complex itineraries, the answer points to a clinic call rather than improvising."
       ],
       "links": [
         {
@@ -4927,10 +4926,10 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Missed-dose counseling for rivaroxaban 20 mg is drug-specific: do not double the next tablet, and do not drop the food requirement on 15–20 mg doses. This item does not add an hour cutoff — when the timing is unclear, the patient uses the label or calls the clinic.",
+      "explanation": "The label's missed-dose instruction for once-daily rivaroxaban is to take the missed dose as soon as remembered on the same day and not to double the dose; 15 mg and 20 mg doses are labeled with food. This item adds no hour cutoff.",
       "teachingPoints": [
         "Repeated misses are an adherence problem, not a reason to invent a double dose.",
-        "The 15 mg twice-daily VTE lead-in has its own instructions — do not teach the AF 20 mg plan as if it covered every rivaroxaban schedule."
+        "The 15 mg twice-daily lead-in has a different labeled missed-dose rule (two 15 mg tablets may be taken at once to reach 30 mg that day)."
       ],
       "links": [
         {

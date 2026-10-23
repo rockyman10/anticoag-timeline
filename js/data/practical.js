@@ -12,7 +12,7 @@ window.ANTICOAG_PRACTICAL = {
     },
     "rocket-af": {
       regimen: "ROCKET-AF used rivaroxaban 20 mg daily (15 mg daily if CrCl 30–49 in that AF design).",
-      food: "15–20 mg doses: take with food.",
+      food: "Label: 15 mg and 20 mg tablets are taken with food (AF: with the evening meal); 10 mg and 2.5 mg with or without food.",
       renal: "Dose-reduce for moderate CKD per AF label; avoid below labeled floor.",
       holdHint: "Often held ~24 h before lower-bleed-risk procedures with normal renal function — verify locally."
     },
@@ -36,13 +36,12 @@ window.ANTICOAG_PRACTICAL = {
     },
     "einstein-dvt": {
       regimen: "EINSTEIN-DVT used rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily.",
-      food: "15–20 mg with food.",
+      food: "Label: 15 mg and 20 mg tablets are taken with food (AF: with the evening meal); 10 mg and 2.5 mg with or without food. The label reports that food raises 20 mg exposure (AUC up 39%).",
       renal: "Follow VTE label.",
-      holdHint: "Verify locally; food counseling prevents under-exposure on maintenance doses."
     },
     "einstein-pe": {
       regimen: "EINSTEIN-PE used rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily.",
-      food: "15–20 mg with food.",
+      food: "Label: 15 mg and 20 mg tablets are taken with food (AF: with the evening meal); 10 mg and 2.5 mg with or without food.",
       renal: "Follow VTE label; not a high-risk PE reperfusion strategy.",
       holdHint: "Verify locally."
     },
@@ -72,7 +71,7 @@ window.ANTICOAG_PRACTICAL = {
     },
     "cobrra": {
       regimen: "COBRRA used apixaban 10 mg twice daily for 7 days, then 5 mg twice daily, compared with rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily, for 3 months.",
-      food: "If rivaroxaban 15/20 mg: with food.",
+      food: "Label: 15 mg and 20 mg tablets are taken with food (AF: with the evening meal); 10 mg and 2.5 mg with or without food.",
       renal: "Eligible VTE patients per protocol; teach bleeding-risk shared decision.",
       holdHint: "Verify locally."
     },
@@ -109,7 +108,7 @@ window.ANTICOAG_PRACTICAL = {
       id: "rivaroxaban",
       name: "Rivaroxaban (FXa)",
       loadMaintain: "VTE (EINSTEIN-DVT and EINSTEIN-PE): the trials used 15 mg twice daily for 21 days, then 20 mg daily. AF (ROCKET-AF): the trial used 20 mg daily (15 mg daily if CrCl 30–49 in that design).",
-      food: "15–20 mg doses with food.",
+      food: "Label: 15 mg and 20 mg tablets are taken with food (AF: with the evening meal); 10 mg and 2.5 mg with or without food.",
       renal: "Avoid below labeled CrCl; AF dose-reduce in moderate CKD per label.",
       pearls: "U.S. major-bleed teaching: supportive care + institutional 4F-PCC pathway — Andexxa not available in U.S. after Dec 22, 2025."
     },
@@ -160,7 +159,7 @@ window.ANTICOAG_PRACTICAL = {
       {
         id: "vka-rev",
         agentClass: "Vitamin K antagonists (warfarin)",
-        specific: "Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. Fresh frozen plasma is the fallback when PCC is unavailable.",
+        specific: "The 2020 ACC Expert Consensus Decision Pathway on bleeding with oral anticoagulants lists 4-factor PCC plus vitamin K for warfarin reversal, and plasma when 4F-PCC is not available.",
         notes: "Goal is rapid INR correction for life-threatening bleed plus sustained vitamin K effect. Not a DOAC problem — included for completeness on mixed wards.",
         trialIds: []
       },

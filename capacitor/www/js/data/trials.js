@@ -98,8 +98,8 @@ window.ANTICOAG_TRIALS = [
         "year": 2024
       }
     ],
-    "caveats": "Higher-risk AF cohort; warfarin TTR varied by region; take with food at the 20 mg dose; more GI bleeding vs warfarin despite less ICH.",
-    "practiceTakeaway": "Once-daily rivaroxaban is a guideline-supported warfarin alternative in eligible NVAF—counsel on food and bleeding trade-offs.",
+    "caveats": "Higher-risk AF cohort; warfarin TTR varied by region; more GI bleeding vs warfarin despite less ICH.",
+    "practiceTakeaway": "ROCKET AF found once-daily rivaroxaban noninferior to warfarin for stroke or systemic embolism in higher-risk NVAF, with less intracranial and more GI bleeding; the label describes the ROCKET AF regimen as taken with the evening meal.",
     "questionsAnswered": [
       {
         "text": "Was once-daily rivaroxaban (20 mg, or 15 mg with CrCl 30–49 mL/min, as given in the trial) noninferior to warfarin in higher-risk AF? Yes, for stroke or systemic embolism.",

@@ -3290,6 +3290,10 @@
     const choices = (n.choices || []).map(c =>
       `<button type="button" class="btn ${n.type === "recommendation" || n.type === "end" ? "primary" : ""}" data-tx-next="${esc(c.nextNodeId)}">${esc(c.label)}</button>`
     ).join("");
+    const lv = window.ANTICOAG_LEARN_VISUALS;
+    const graphicHtml = (n.graphicId && lv && lv.byId[n.graphicId])
+      ? `<div class="learn-evidence-mount">${lv.renderGraphic(lv.byId[n.graphicId])}</div>`
+      : "";
 
     const endExtra = n.type === "end"
       ? `<button type="button" class="btn" data-tx-gallery="1">All treatment pathways</button>`
@@ -3303,6 +3307,7 @@
           <div class="txp-type">${typeLab}</div>
           <h3>${esc(n.title)}</h3>
           <div class="txp-body">${esc(n.body || "")}</div>
+          ${graphicHtml}
           <div class="txp-choices">${choices}${endExtra}</div>
         </div>
         <div class="txp-side">

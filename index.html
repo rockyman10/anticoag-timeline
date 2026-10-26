@@ -398,6 +398,35 @@
       padding: .65rem .75rem; margin-bottom: .85rem;
       background: var(--accent-soft); border-left: 3px solid var(--accent);
     }
+    .predict-gate, .predict-again {
+      border: 1px solid var(--line); border-radius: 3px; background: var(--bg);
+      padding: .75rem .8rem; margin: 0 0 .85rem;
+    }
+    .predict-prompt, .predict-help, .predict-again p, .predict-feedback p {
+      margin: 0 0 .55rem; color: var(--ink-2); font-size: .9375rem; line-height: 1.45;
+    }
+    .predict-gate label.predict-note-lab { display: block; font-weight: 600; font-size: .875rem; margin-bottom: .3rem; }
+    .predict-gate textarea {
+      width: 100%; min-height: 5.5rem; box-sizing: border-box; font: inherit; font-size: 1rem;
+      color: var(--ink); background: var(--paper); border: 1px solid var(--line-2); border-radius: 3px;
+      padding: .5rem .6rem; line-height: 1.4;
+    }
+    .predict-conf { border: 0; margin: .7rem 0 0; padding: 0; }
+    .predict-conf legend { font-weight: 600; font-size: .875rem; margin-bottom: .35rem; padding: 0; }
+    .predict-conf-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .predict-conf-row label {
+      display: inline-flex; align-items: center; gap: .35rem; min-height: 44px;
+      padding: .35rem .7rem; border: 1px solid var(--line-2); border-radius: 3px; background: var(--paper);
+      font-size: .9375rem;
+    }
+    .predict-actions { display: flex; flex-direction: column; gap: .45rem; margin-top: .75rem; }
+    .predict-actions .btn, .predict-again .btn { width: 100%; min-height: 44px; }
+    .predict-feedback {
+      margin: -.35rem 0 .85rem; padding: .55rem .7rem;
+      background: var(--bg); border-left: 3px solid var(--line-2); border-radius: 0 3px 3px 0;
+    }
+    .predict-wrote { margin: 0 0 .4rem; color: var(--ink); font-size: .9375rem; line-height: 1.45; white-space: pre-wrap; }
+    .predict-rest.is-concealed { display: none; }
     .fields {
       display: grid; gap: .65rem .9rem;
       grid-template-columns: 1fr;
@@ -1075,6 +1104,8 @@
       body:not(.print-sheet) .bd.open .m-body { overflow: visible !important; }
       body:not(.print-sheet) .bd.open h2,
       body:not(.print-sheet) .bd.open h3 { break-after: avoid; page-break-after: avoid; }
+      .predict-gate, .predict-again, .predict-feedback, .predict-context { display: none !important; }
+      .predict-rest.is-concealed { display: block !important; }
     }
 
     .path-list { display: flex; flex-direction: column; gap: .45rem; }
@@ -2117,7 +2148,8 @@
 
   const tip = document.getElementById("tip");
   function showTip(t, r) {
-    tip.innerHTML = `<strong>${t.acronym}</strong><div class="meta">${t.yearLabel} · ${t.indication} · ${STATUS[t.status] || t.status}</div><div class="one">${t.takeaway}</div>`;
+    const revealedTip = (predictRecord(t.id) || {}).revealed;
+    tip.innerHTML = `<strong>${t.acronym}</strong><div class="meta">${t.yearLabel} · ${t.indication} · ${STATUS[t.status] || t.status}</div>${revealedTip ? `<div class="one">${t.takeaway}</div>` : ""}`;
     tip.classList.add("on");
     const tw = 280;
     let left = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
@@ -2312,17 +2344,88 @@
   }
   const DOI_PENDING_BANNER_HTML = `<div class="lead-alert doi-pending-banner" style="margin-bottom:.55rem"><strong>Presented / simultaneous report — peer-reviewed DOI not linked yet.</strong> Figures reflect congress or simultaneous press reporting and may change when the full paper posts. Verify against the published article before journal club or protocol decisions.</div>`;
 
-  function renderSummaryBody(t) {
-    const jc = composeJournal(t);
-    const doi = t.doi ? ` · DOI <a href="https://doi.org/${t.doi}" target="_blank" rel="noopener">${t.doi}</a>` : "";
-    const reg = t.regulatoryNote ? `<div class="lead-alert" style="margin-bottom:.55rem"><strong>Regulatory:</strong> ${esc(t.regulatoryNote)}. ${t.id === "annexa-4" || t.id === "annexa-i" ? "Andexxa (andexanet) is not available in the U.S. after Dec 22, 2025 — see Bleed &amp; reversal and FDA safety communication." : ""}</div>` : "";
-    const doiPend = isDoiPending(t) ? DOI_PENDING_BANNER_HTML : "";
+  const PREDICT_STORAGE_KEY = "anticoag-predict-v1";
+
+  function loadPredictStore() {
+    try {
+      const raw = localStorage.getItem(PREDICT_STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      if (!parsed || typeof parsed !== "object") return { schema: 1, trials: {} };
+      if (!parsed.trials || typeof parsed.trials !== "object") parsed.trials = {};
+      parsed.schema = 1;
+      return parsed;
+    } catch (e) {
+      return { schema: 1, trials: {} };
+    }
+  }
+  function savePredictStore(store) {
+    try {
+      store.schema = 1;
+      store.updatedAt = new Date().toISOString();
+      localStorage.setItem(PREDICT_STORAGE_KEY, JSON.stringify(store));
+    } catch (e) { /* ignore quota */ }
+  }
+  function predictRecord(id) {
+    const rec = loadPredictStore().trials[id];
+    return rec && typeof rec === "object" ? rec : null;
+  }
+  function predictConfLabel(v) {
+    return v === "low" ? "Low" : v === "medium" ? "Medium" : v === "high" ? "High" : "";
+  }
+  function savePredictDraft(id, note, confidence) {
+    const store = loadPredictStore();
+    const prev = store.trials[id] || {};
+    if (prev.revealed) return;
+    store.trials[id] = {
+      revealed: false,
+      skipped: false,
+      confidence: confidence || null,
+      note: String(note || "").slice(0, 500),
+      revealedAt: ""
+    };
+    savePredictStore(store);
+  }
+  function markPredictRevealed(id, opts) {
+    const store = loadPredictStore();
+    store.trials[id] = {
+      revealed: true,
+      skipped: !!opts.skipped,
+      confidence: opts.skipped ? null : (opts.confidence || null),
+      note: String(opts.note || "").slice(0, 500),
+      revealedAt: new Date().toISOString()
+    };
+    savePredictStore(store);
+  }
+  function practicePredictAgain(id) {
+    const store = loadPredictStore();
+    const prev = store.trials[id] || {};
+    store.trials[id] = {
+      revealed: false,
+      skipped: false,
+      confidence: null,
+      note: prev.note || "",
+      revealedAt: prev.revealedAt || ""
+    };
+    savePredictStore(store);
+  }
+  function renderPredictFeedback(t, rec) {
+    if (!rec || !rec.revealed) return "";
+    const conf = predictConfLabel(rec.confidence);
+    const wrote = rec.note ? `<p class="predict-wrote">You wrote: ${esc(rec.note)}</p>` : "";
+    let lead;
+    if (rec.skipped && rec.note) lead = "You chose Just show me. Your note is saved only in this browser.";
+    else if (rec.skipped) lead = "You chose Just show me.";
+    else if (conf && rec.note) lead = "You marked " + conf + " confidence. Your prediction is saved only in this browser.";
+    else if (conf) lead = "You marked " + conf + " confidence and left the prediction blank.";
+    else lead = "This card is revealed in this browser.";
+    return `<div class="predict-feedback">${wrote}<p>${lead} The key takeaway above is the result already on this card for ${esc(t.acronym)} (${esc(t.indication)}): the intervention compared with the comparator.</p></div>`;
+  }
+  function renderSummaryAnswer(t, jc, doi) {
+    const rec = predictRecord(t.id);
     return `
-      <div class="ftitle">${esc(t.title)}</div>
-      ${reg}
-      ${doiPend}
       <div class="fld" style="margin-bottom:.35rem"><div class="lab">Key takeaway</div></div>
       <div class="take">${esc(jc.practiceTakeaway || t.takeaway)}</div>
+      ${renderPredictFeedback(t, rec)}
       ${t.expectedResults ? `<div class="expected"><strong>Expected results:</strong> ${esc(t.expectedResults)}</div>` : ""}
       <div class="fields">
         <div class="fld span2"><div class="lab">Population</div><div class="val">${esc(t.population)}</div></div>
@@ -2334,6 +2437,97 @@
       </div>
       <div class="fld" style="margin-top:.55rem"><div class="lab">Guidelines</div>${renderGuidelinesBlock(jc.guidelines, true)}</div>
       <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
+  }
+  function renderPredictGate() {
+    return `<div class="predict-gate" role="group" aria-labelledby="predict-prompt">
+      <p class="predict-prompt" id="predict-prompt">Predict the main result in your own words. Use the population, intervention, and comparator above. This is a self-check. The site does not score what you write.</p>
+      <label class="predict-note-lab" for="predict-note">Your prediction</label>
+      <textarea id="predict-note" maxlength="500"></textarea>
+      <fieldset class="predict-conf">
+        <legend>How sure are you?</legend>
+        <div class="predict-conf-row">
+          <label><input type="radio" name="predict-conf" value="low"> Low</label>
+          <label><input type="radio" name="predict-conf" value="medium"> Medium</label>
+          <label><input type="radio" name="predict-conf" value="high"> High</label>
+        </div>
+      </fieldset>
+      <p class="predict-help">Pick Low, Medium, or High, then Reveal.</p>
+      <div class="predict-actions">
+        <button type="button" class="btn primary" id="predict-reveal" disabled>Reveal</button>
+        <button type="button" class="btn ghost" id="predict-skip">Just show me</button>
+      </div>
+    </div>`;
+  }
+
+  function renderSummaryBody(t) {
+    const jc = composeJournal(t);
+    const doi = t.doi ? ` · DOI <a href="https://doi.org/${t.doi}" target="_blank" rel="noopener">${t.doi}</a>` : "";
+    const reg = t.regulatoryNote ? `<div class="lead-alert" style="margin-bottom:.55rem"><strong>Regulatory:</strong> ${esc(t.regulatoryNote)}. ${t.id === "annexa-4" || t.id === "annexa-i" ? "Andexxa (andexanet) is not available in the U.S. after Dec 22, 2025 — see Bleed &amp; reversal and FDA safety communication." : ""}</div>` : "";
+    const doiPend = isDoiPending(t) ? DOI_PENDING_BANNER_HTML : "";
+    const head = `
+      <div class="ftitle">${esc(t.title)}</div>
+      ${reg}
+      ${doiPend}`;
+    const answer = renderSummaryAnswer(t, jc, doi);
+    const rec = predictRecord(t.id);
+    if (rec && rec.revealed) {
+      return `${head}
+      <div class="predict-again"><p>Revealed in this browser.</p>
+        <button type="button" class="btn ghost" id="predict-again">Practice again</button>
+      </div>
+      ${answer}`;
+    }
+    return `${head}
+      <div class="predict-context">
+        <div class="fields">
+          <div class="fld span2"><div class="lab">Population</div><div class="val">${esc(t.population)}</div></div>
+          <div class="fld"><div class="lab">Intervention</div><div class="val">${esc(t.intervention)}</div></div>
+          <div class="fld"><div class="lab">Comparator</div><div class="val">${esc(t.comparator)}</div></div>
+        </div>
+      </div>
+      ${renderPredictGate()}
+      <div class="predict-rest is-concealed" hidden aria-hidden="true">${answer}</div>`;
+  }
+  function wirePredict(t) {
+    const noteEl = document.getElementById("predict-note");
+    const revealBtn = document.getElementById("predict-reveal");
+    const skipBtn = document.getElementById("predict-skip");
+    const againBtn = document.getElementById("predict-again");
+    const radios = [...document.querySelectorAll('input[name="predict-conf"]')];
+    const syncReveal = () => {
+      if (!revealBtn) return;
+      revealBtn.disabled = !radios.some(r => r.checked);
+    };
+    const draft = () => {
+      const confidence = (radios.find(r => r.checked) || {}).value || null;
+      savePredictDraft(t.id, noteEl ? noteEl.value : "", confidence);
+      syncReveal();
+    };
+    if (noteEl) {
+      const rec = predictRecord(t.id);
+      if (rec && rec.note) noteEl.value = rec.note;
+      noteEl.addEventListener("input", draft);
+    }
+    radios.forEach(r => r.addEventListener("change", draft));
+    syncReveal();
+    if (revealBtn) revealBtn.onclick = () => {
+      const confidence = (radios.find(r => r.checked) || {}).value;
+      if (!confidence) return;
+      markPredictRevealed(t.id, { note: noteEl ? noteEl.value.trim() : "", confidence, skipped: false });
+      openDetail(t.id, "summary", { skipRoute: true });
+      const take = document.querySelector("#d-body .take");
+      if (take) take.scrollIntoView({ block: "nearest" });
+    };
+    if (skipBtn) skipBtn.onclick = () => {
+      markPredictRevealed(t.id, { note: noteEl ? noteEl.value.trim() : "", confidence: null, skipped: true });
+      openDetail(t.id, "summary", { skipRoute: true });
+    };
+    if (againBtn) againBtn.onclick = () => {
+      practicePredictAgain(t.id);
+      openDetail(t.id, "summary", { skipRoute: true });
+      const box = document.getElementById("predict-note");
+      if (box) box.focus();
+    };
   }
 
   function renderTrialQuestions(t, print) {
@@ -2447,6 +2641,7 @@
     document.getElementById("d-title").textContent = t.acronym;
     document.getElementById("d-year").textContent = t.yearLabel + (t.status === "pending" ? " · expected" : "");
     document.getElementById("d-body").innerHTML = detailMode === "journal" ? renderJournalBody(t) : renderSummaryBody(t);
+    if (detailMode !== "journal") wirePredict(t);
     syncDetailChrome(t);
     setDocTitle(t);
     if (!opts.skipRoute) setRoute("trial", trialSlug(t), opts.replaceRoute);

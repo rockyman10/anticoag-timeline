@@ -2,6 +2,13 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-26 — Learn recall, then review on day 2, 7, and 30
+
+- Each Learn lesson asks one line before the card, then two or three recall lines after practice, then a short why prompt. Feedback quotes the lesson line already on that step. The orient, evidence, practice, and wrap steps stay.
+- A passed recall is stored for that calendar day. The lesson counts as mastered after passed recall on two different days. Reviews are due on day 2, day 7, and day 30 from the first recall.
+- Review (n due) in the header opens what is due: Learn recall, and trial snapshots already revealed (practice again). Dates stay in this browser under a new key. Predict-then-reveal is unchanged.
+- Educational only. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp is unchanged.
+
 ## 2026-10-25 — Predict, then reveal, on Trial snapshot
 
 - A Trial snapshot asks for a short prediction and a confidence mark (Low, Medium, or High) before the key takeaway and the primary result. Reveal shows the card as before, plus a short note that points at that takeaway. Just show me skips the prompt and still reveals the card.

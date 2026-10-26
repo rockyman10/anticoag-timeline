@@ -666,6 +666,7 @@
       border: 1px solid transparent; min-width: 0;
     }
     .learn-seg.done { background: var(--accent); }
+    .learn-seg.mastered { box-shadow: inset 0 0 0 1px var(--ink); }
     .learn-seg.in_progress {
       background: var(--accent-soft); border-color: var(--accent);
     }
@@ -1017,6 +1018,7 @@
     body.embed .abbr-key,
     body.embed #learn-welcome,
     body.embed #btn-learn-chip,
+    body.embed #btn-review,
     body.embed .sec-nav,
     body.embed .teach-wrap,
     body.embed #btn-teach,
@@ -1145,8 +1147,32 @@
       color: #fff;
       border-color: var(--accent);
     }
+    #btn-review {
+      font-size: .8125rem;
+      font-weight: 600;
+      min-height: 44px;
+    }
+    .recall-q { margin: 0 0 .85rem; }
+    .recall-q > p { margin: 0 0 .4rem; font-weight: 650; color: var(--ink); line-height: 1.35; }
+    .recall-opt {
+      display: block; width: 100%; text-align: left; white-space: normal;
+      height: auto; min-height: 44px; line-height: 1.35; margin: 0 0 .35rem;
+    }
+    .recall-opt.is-on { border-color: var(--accent); background: var(--accent-soft); }
+    .recall-fb { margin: .35rem 0 0; font-size: .875rem; color: var(--ink-2); line-height: 1.45; }
+    .recall-why { margin: .35rem 0 .5rem; }
+    .recall-why label { display: block; font-weight: 650; margin: 0 0 .35rem; line-height: 1.35; }
+    .recall-why textarea {
+      display: block; width: 100%; min-height: 88px; font: inherit; color: var(--ink);
+      background: var(--paper); border: 1px solid var(--line-2); border-radius: 3px; padding: .45rem .55rem;
+    }
+    .recall-note { margin: .35rem 0 0; color: var(--muted); font-size: .8125rem; line-height: 1.4; }
+    .review-queue { display: flex; flex-direction: column; gap: .4rem; }
+    .review-queue .path-item { min-height: 44px; }
+    .review-empty { color: var(--ink-2); line-height: 1.45; margin: 0; }
     @media (max-width: 640px) {
       #btn-learn-chip { min-height: 44px; }
+      #btn-review { min-height: 44px; }
     }
     .teach-wrap #btn-teach {
       font-size: .8125rem; font-weight: 600;
@@ -1205,7 +1231,8 @@
     body.embed .sec-nav,
     body.embed .teach-wrap,
     body.embed #btn-teach,
-    body.embed #btn-learn-chip { display: none !important; }
+    body.embed #btn-learn-chip,
+    body.embed #btn-review { display: none !important; }
 
     /* Mobile ≤640: More overflow + Teach bottom sheet (after base so cascade wins) */
     @media (max-width: 640px) {
@@ -1498,6 +1525,7 @@
         Teach <span class="teach-chev" aria-hidden="true">▾</span>
       </button>
       <button type="button" class="btn sm" id="btn-learn-chip" aria-label="Start here — open Learn path">Start here</button>
+      <button type="button" class="btn sm" id="btn-review" aria-label="Review, 0 due">Review (0 due)</button>
       <div class="teach-menu" id="teach-menu" role="menu" aria-label="Teaching tools" hidden>
         <div class="teach-menu-label" aria-hidden="true">Practice</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-txpath">Treatment pathways</button>
@@ -1656,6 +1684,22 @@
       <div class="m-foot learn-foot-secondary" id="learn-foot-secondary">
         <button type="button" class="btn sm ghost" id="learn-explore">Explore Teach freely</button>
         <button type="button" class="btn-reset-learn" id="learn-reset">Reset for next learner</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bd" id="bd-review" hidden>
+    <div class="modal learn" role="dialog" aria-modal="true" aria-labelledby="review-title" tabindex="-1">
+      <div class="m-head">
+        <div>
+          <h2 id="review-title">Review</h2>
+          <div class="yrline">Learn lessons and revealed trial snapshots</div>
+        </div>
+        <button type="button" class="x" data-close="review" aria-label="Close">×</button>
+      </div>
+      <div class="m-body" id="review-body"></div>
+      <div class="m-foot">
+        <button type="button" class="btn ghost" id="review-close" data-close="review">Close</button>
       </div>
     </div>
   </div>
@@ -2393,6 +2437,7 @@
       revealedAt: new Date().toISOString()
     };
     savePredictStore(store);
+    try { reviewOnPredictRevealed(id); } catch (e) {}
   }
   function practicePredictAgain(id) {
     const store = loadPredictStore();
@@ -4734,7 +4779,11 @@
     try {
       localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(next));
     } catch (e) { /* ignore quota */ }
+    try { localStorage.removeItem(REVIEW_STORAGE_KEY); } catch (e2) { /* ignore */ }
+    learnRecallSession = null;
+    learnPreSession = null;
     clearLearnWelcomeSessionHide();
+    try { updateReviewChip(); } catch (e3) {}
   }
   function learnLessonEntry(state, id) {
     if (!state.lessons[id]) {
@@ -4896,7 +4945,7 @@
   function learnCoachSteps(lesson) {
     const steps = ["orient"];
     if (learnHasEvidence(lesson)) steps.push("evidence");
-    steps.push("practice", "wrap");
+    steps.push("practice", "recall", "wrap");
     return steps;
   }
   function learnNormalizeStep(lesson, step) {
@@ -4941,20 +4990,470 @@
     learnView.graphicIdx = 0;
   }
 
+  const REVIEW_STORAGE_KEY = "anticoag-review-v1";
+  const REVIEW_GAPS = [2, 7, 30];
+  let reviewClock = null;
+  let learnRecallSession = null;
+  let learnPreSession = null;
+
+  function reviewToday() {
+    if (reviewClock) return reviewClock;
+    const dt = new Date();
+    const z = v => String(v).padStart(2, "0");
+    return dt.getFullYear() + "-" + z(dt.getMonth() + 1) + "-" + z(dt.getDate());
+  }
+  function reviewAddDays(iso, n) {
+    const p = String(iso || "").split("-");
+    const dt = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+    if (Number.isNaN(dt.getTime())) return reviewToday();
+    dt.setDate(dt.getDate() + n);
+    const z = v => String(v).padStart(2, "0");
+    return dt.getFullYear() + "-" + z(dt.getMonth() + 1) + "-" + z(dt.getDate());
+  }
+  function loadReviewStore() {
+    try {
+      const raw = localStorage.getItem(REVIEW_STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      if (!parsed || typeof parsed !== "object" || !parsed.items || typeof parsed.items !== "object") {
+        return { schema: 1, items: {} };
+      }
+      parsed.schema = 1;
+      return parsed;
+    } catch (e) {
+      return { schema: 1, items: {} };
+    }
+  }
+  function saveReviewStore(store) {
+    try {
+      store.schema = 1;
+      store.updatedAt = new Date().toISOString();
+      localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(store));
+    } catch (e) { /* ignore quota */ }
+    try { updateReviewChip(); } catch (e2) {}
+  }
+  function reviewAdvance(item, today) {
+    const anchor = item.anchor || today;
+    item.anchor = anchor;
+    let stage = item.stage || 0;
+    while (stage < REVIEW_GAPS.length && reviewAddDays(anchor, REVIEW_GAPS[stage]) <= today) stage += 1;
+    item.stage = stage;
+    item.nextDue = stage < REVIEW_GAPS.length ? reviewAddDays(anchor, REVIEW_GAPS[stage]) : null;
+  }
+  function reviewPassed(correct, total) {
+    if (!total) return false;
+    if (total < 2) return correct >= 1;
+    return correct >= 2;
+  }
+  function reviewTouchLearn(lessonId, correct, total, whyNote) {
+    const store = loadReviewStore();
+    const key = "learn:" + lessonId;
+    const today = reviewToday();
+    const passed = reviewPassed(correct, total);
+    let item = store.items[key];
+    if (!item || item.source !== "learn") {
+      item = {
+        source: "learn",
+        lessonId: lessonId,
+        stage: 0,
+        anchor: today,
+        nextDue: reviewAddDays(today, REVIEW_GAPS[0]),
+        successDays: [],
+        mastered: false,
+        whyNote: ""
+      };
+    } else if (passed && item.nextDue && item.nextDue <= today) {
+      reviewAdvance(item, today);
+    }
+    if (passed) {
+      const days = Array.isArray(item.successDays) ? item.successDays : [];
+      if (days.indexOf(today) < 0) days.push(today);
+      item.successDays = days;
+    }
+    item.mastered = Array.isArray(item.successDays) && item.successDays.length >= 2;
+    item.whyNote = String(whyNote || "").slice(0, 500);
+    item.lastCorrect = correct;
+    item.lastTotal = total;
+    store.items[key] = item;
+    saveReviewStore(store);
+    return item;
+  }
+  function reviewOnPredictRevealed(trialId) {
+    if (!trialId || typeof byId === "undefined" || !byId[trialId]) return;
+    const store = loadReviewStore();
+    const key = "predict:" + trialId;
+    const today = reviewToday();
+    let item = store.items[key];
+    if (!item || item.source !== "predict") {
+      item = {
+        source: "predict",
+        trialId: trialId,
+        stage: 0,
+        anchor: today,
+        nextDue: reviewAddDays(today, REVIEW_GAPS[0]),
+        successDays: [],
+        mastered: false
+      };
+    } else if (item.nextDue && item.nextDue <= today) {
+      reviewAdvance(item, today);
+    }
+    store.items[key] = item;
+    saveReviewStore(store);
+  }
+  function learnIsMastered(id) {
+    const item = loadReviewStore().items["learn:" + id];
+    return !!(item && item.mastered);
+  }
+  function learnListTag(state, lesson) {
+    if (learnIsMastered(lesson.id)) return "Mastered";
+    const st = learnStatus(state, lesson.id);
+    if (st === "done") return "Done";
+    if (st === "skipped") return "Skipped";
+    if (st === "in_progress") return "In progress";
+    return "Not started";
+  }
+  function reviewDueList() {
+    const store = loadReviewStore();
+    const today = reviewToday();
+    const out = [];
+    Object.keys(store.items).forEach(key => {
+      const item = store.items[key];
+      if (!item || !item.nextDue || item.nextDue > today) return;
+      if (item.source === "learn") {
+        if (!findLearnLesson(item.lessonId)) return;
+        out.push(item);
+      } else if (item.source === "predict" && typeof byId !== "undefined" && byId[item.trialId]) {
+        out.push(item);
+      }
+    });
+    out.sort((a, b) => {
+      if (a.source !== b.source) return a.source === "learn" ? -1 : 1;
+      if (a.source === "learn") {
+        const la = findLearnLesson(a.lessonId);
+        const lb = findLearnLesson(b.lessonId);
+        return ((la && la.order) || 0) - ((lb && lb.order) || 0);
+      }
+      const aa = (byId[a.trialId] && byId[a.trialId].acronym) || a.trialId;
+      const bb = (byId[b.trialId] && byId[b.trialId].acronym) || b.trialId;
+      return String(aa).localeCompare(String(bb));
+    });
+    return out;
+  }
+  function updateReviewChip() {
+    const btn = document.getElementById("btn-review");
+    if (!btn) return;
+    const n = reviewDueList().length;
+    btn.textContent = "Review (" + n + " due)";
+    btn.setAttribute("aria-label", "Review, " + n + " due");
+  }
+  function recallBlocked(text) {
+    const s = String(text || "");
+    if (/\d+(?:\.\d+)?\s*mg\b/i.test(s)) return true;
+    if (/\bholds?\b/i.test(s) || /\bholding\b/i.test(s)) return true;
+    return false;
+  }
+  function learnTxTitle(id) {
+    const pack = window.ANTICOAG_TX_PATHWAYS;
+    const list = pack && Array.isArray(pack.pathways) ? pack.pathways : [];
+    const hit = list.find(x => x && x.id === id);
+    return hit && hit.title ? String(hit.title) : "";
+  }
+  function recallLinesFor(lesson) {
+    const lines = [];
+    const add = (kind, text) => {
+      const t = String(text || "").replace(/\s+/g, " ").trim();
+      if (!t || recallBlocked(t)) return;
+      if (lines.some(x => x.text === t)) return;
+      lines.push({ kind: kind, text: t, lessonId: lesson.id });
+    };
+    add("title", lesson.title);
+    add("why", learnWhy(lesson));
+    add("orient", learnOrientTip(lesson));
+    (lesson.goals || []).forEach(g => add("goal", g));
+    if (lesson.primary && lesson.primary.kind === "pathway-tx") add("opens", learnTxTitle(lesson.primary.id));
+    return lines;
+  }
+  function recallPrompt(kind) {
+    if (kind === "title") return "Which title is this lesson?";
+    if (kind === "why") return "Which line says why this lesson is in the path?";
+    if (kind === "orient") return "Which line is this lesson's orient note?";
+    if (kind === "goal") return "Which goal is listed on this lesson?";
+    if (kind === "opens") return "Which card does this lesson open first?";
+    return "Which line is on this lesson?";
+  }
+  function reviewHash(str) {
+    let h = 2166136261;
+    const s = String(str);
+    for (let i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return h >>> 0;
+  }
+  function reviewShuffle(arr, seed) {
+    const a = arr.slice();
+    let h = reviewHash(seed) || 1;
+    for (let i = a.length - 1; i > 0; i--) {
+      h = (Math.imul(h, 1664525) + 1013904223) >>> 0;
+      const j = h % (i + 1);
+      const tmp = a[i];
+      a[i] = a[j];
+      a[j] = tmp;
+    }
+    return a;
+  }
+  function recallDistractors(line) {
+    const all = [];
+    learnLessons.forEach(l => recallLinesFor(l).forEach(row => all.push(row)));
+    const same = all.filter(x => x.text !== line.text && x.lessonId !== line.lessonId && x.kind === line.kind);
+    const other = all.filter(x => x.text !== line.text && x.lessonId !== line.lessonId && x.kind !== line.kind);
+    const picked = [];
+    const seen = new Set([line.text]);
+    [same, other].forEach(src => {
+      reviewShuffle(src, line.lessonId + "|" + line.kind + "|" + line.text).forEach(item => {
+        if (picked.length >= 2 || seen.has(item.text)) return;
+        seen.add(item.text);
+        picked.push(item.text);
+      });
+    });
+    return picked;
+  }
+  function recallMakeQuestion(line, salt) {
+    const options = reviewShuffle(
+      recallDistractors(line).concat([line.text]),
+      line.lessonId + "|" + salt + "|" + line.text
+    );
+    return {
+      prompt: recallPrompt(line.kind),
+      options: options,
+      answer: options.indexOf(line.text),
+      answerText: line.text
+    };
+  }
+  function buildPreQuestion(lesson) {
+    const lines = recallLinesFor(lesson);
+    const line = lines.find(l => l.kind === "orient") || lines.find(l => l.kind === "title") || lines[0];
+    return line ? recallMakeQuestion(line, "pre") : null;
+  }
+  function buildRecallQuestions(lesson) {
+    const lines = recallLinesFor(lesson);
+    let pool = lines.filter(l => l.kind !== "orient");
+    if (pool.length < 2) pool = lines;
+    const prefer = ["title", "why", "goal", "opens", "orient"];
+    const chosen = [];
+    prefer.forEach(kind => {
+      if (chosen.length >= 3) return;
+      const line = pool.find(l => l.kind === kind && chosen.indexOf(l) < 0);
+      if (line) chosen.push(line);
+    });
+    pool.forEach(line => {
+      if (chosen.length >= 3) return;
+      if (chosen.indexOf(line) < 0) chosen.push(line);
+    });
+    return chosen.slice(0, 3).map((line, i) => recallMakeQuestion(line, "q" + i));
+  }
+  function ensurePreSession(lesson) {
+    if (!learnPreSession || learnPreSession.lessonId !== lesson.id) {
+      learnPreSession = { lessonId: lesson.id, question: buildPreQuestion(lesson), pick: null };
+    }
+    return learnPreSession;
+  }
+  function ensureRecallSession(lesson) {
+    if (!learnRecallSession || learnRecallSession.lessonId !== lesson.id) {
+      const prev = loadReviewStore().items["learn:" + lesson.id];
+      learnRecallSession = {
+        lessonId: lesson.id,
+        questions: buildRecallQuestions(lesson),
+        picks: {},
+        checked: false,
+        whyNote: prev && prev.whyNote ? String(prev.whyNote) : ""
+      };
+    }
+    return learnRecallSession;
+  }
+  function renderRecallQuestions(questions, picks, checked) {
+    return questions.map((q, qi) => {
+      const opts = q.options.map((text, oi) => {
+        const on = picks[qi] === oi ? " is-on" : "";
+        return `<button type="button" class="btn recall-opt${on}" data-recall-q="${qi}" data-recall-i="${oi}">${esc(text)}</button>`;
+      }).join("");
+      let fb = "";
+      if (checked && picks[qi] != null) {
+        const ok = picks[qi] === q.answer;
+        const lead = ok ? "That matches the line on this lesson." : "That line is not the one saved on this lesson.";
+        fb = `<p class="recall-fb">${lead} Lesson line: ${esc(q.answerText)}</p>`;
+      }
+      return `<div class="recall-q"><p>${esc(q.prompt)}</p>${opts}${fb}</div>`;
+    }).join("");
+  }
+  function recallStatusLine(lessonId, correct, total) {
+    const item = loadReviewStore().items["learn:" + lessonId];
+    const days = item && Array.isArray(item.successDays) ? item.successDays : [];
+    const today = reviewToday();
+    const passed = reviewPassed(correct, total);
+    const head = correct + " of " + total + ". ";
+    if (!passed) return head + "Not passed. Change a pick and check again, or continue without counting today.";
+    const nextCount = days.indexOf(today) >= 0 ? days.length : days.length + 1;
+    if (nextCount >= 2) return head + "Passed. Continue saves a second day, so this lesson counts as mastered.";
+    return head + "Passed. Continue saves this day. A second day of passed recall marks the lesson mastered.";
+  }
+  function renderPreHtml(lesson) {
+    const pre = ensurePreSession(lesson);
+    if (!pre || !pre.question) return { html: "", blocking: false };
+    const picks = pre.pick == null ? {} : { 0: pre.pick };
+    const html = `<div class="learn-step-tag">Before the card</div>` + renderRecallQuestions([pre.question], picks, pre.pick != null);
+    return { html: html, blocking: pre.pick == null };
+  }
+  function renderRecallHtml(lesson) {
+    const session = ensureRecallSession(lesson);
+    let html = `<div class="learn-step-tag">Recall</div>`;
+    html += renderRecallQuestions(session.questions, session.picks, session.checked);
+    html += `<div class="recall-why"><label for="learn-why-note">Why this lesson? Write one sentence in your own words.</label>`;
+    html += `<textarea id="learn-why-note" maxlength="500"></textarea>`;
+    if (session.checked) {
+      const correct = session.questions.filter((q, i) => session.picks[i] === q.answer).length;
+      html += `<p class="recall-fb" id="learn-recall-status">${esc(recallStatusLine(lesson.id, correct, session.questions.length))}</p>`;
+      html += `<p class="recall-fb">Lesson line: ${esc(learnWhy(lesson))}</p>`;
+    } else {
+      html += `<p class="recall-note">The lesson's own line shows after you check. This box is not scored.</p>`;
+    }
+    html += `</div>`;
+    return html;
+  }
+  function checkRecallStep() {
+    const session = learnRecallSession;
+    if (!session) return;
+    const box = document.getElementById("learn-why-note");
+    if (box) session.whyNote = box.value.slice(0, 500);
+    if (session.questions.some((q, i) => session.picks[i] == null)) {
+      toast("Pick a line for each item, then check.");
+      return;
+    }
+    session.checked = true;
+    renderLearnBody();
+  }
+  function finishRecallStep(lesson) {
+    const session = learnRecallSession;
+    const box = document.getElementById("learn-why-note");
+    const whyNote = box ? box.value.slice(0, 500) : (session && session.whyNote) || "";
+    const correct = session ? session.questions.filter((q, i) => session.picks[i] === q.answer).length : 0;
+    const total = session ? session.questions.length : 0;
+    reviewTouchLearn(lesson.id, correct, total, whyNote);
+    learnRecallSession = null;
+    learnView.step = "wrap";
+    persistCoachStep(lesson.id, "wrap", 0);
+    renderLearnBody();
+  }
+  function wireRecallOptions(lesson) {
+    document.querySelectorAll("[data-recall-q]").forEach(btn => {
+      btn.onclick = () => {
+        const qi = Number(btn.dataset.recallQ);
+        const oi = Number(btn.dataset.recallI);
+        if (learnView.step === "orient") {
+          const pre = ensurePreSession(lesson);
+          pre.pick = oi;
+          renderLearnBody();
+          return;
+        }
+        if (learnView.step === "recall" && learnRecallSession) {
+          const box = document.getElementById("learn-why-note");
+          if (box) learnRecallSession.whyNote = box.value.slice(0, 500);
+          learnRecallSession.picks[qi] = oi;
+          learnRecallSession.checked = false;
+          renderLearnBody();
+        }
+      };
+    });
+    const whyBox = document.getElementById("learn-why-note");
+    if (whyBox && learnRecallSession && learnRecallSession.lessonId === lesson.id) {
+      whyBox.value = learnRecallSession.whyNote || "";
+      whyBox.addEventListener("input", () => {
+        if (learnRecallSession) learnRecallSession.whyNote = whyBox.value.slice(0, 500);
+      });
+    }
+  }
+  function renderReviewBody() {
+    const body = document.getElementById("review-body");
+    if (!body) return;
+    const due = reviewDueList();
+    updateReviewChip();
+    if (!due.length) {
+      body.innerHTML = `<p class="review-empty">Nothing is due today. A finished lesson, and a trial snapshot you have revealed, come back on day 2, day 7, and day 30.</p>`;
+      return;
+    }
+    body.innerHTML = `<h3 class="learn-lesson-title">Due now</h3><div class="review-queue">` + due.map(item => {
+      if (item.source === "learn") {
+        const lesson = findLearnLesson(item.lessonId);
+        const tag = item.mastered ? "Mastered · lesson recall" : "Lesson recall";
+        return `<button type="button" class="path-item" data-review-item="learn:${esc(item.lessonId)}"><strong>${esc(lesson.title)}</strong><span>${tag}</span></button>`;
+      }
+      const t = byId[item.trialId];
+      const name = t ? t.acronym : item.trialId;
+      return `<button type="button" class="path-item" data-review-item="predict:${esc(item.trialId)}"><strong>${esc(name)}</strong><span>Trial snapshot · practice again</span></button>`;
+    }).join("") + `</div>`;
+    body.querySelectorAll("[data-review-item]").forEach(btn => {
+      btn.onclick = () => {
+        const raw = btn.dataset.reviewItem || "";
+        const kind = raw.split(":")[0];
+        const id = raw.slice(kind.length + 1);
+        if (kind === "learn") openDueLearn(id);
+        else if (kind === "predict") openDuePredict(id);
+      };
+    });
+  }
+  function openReviewQueue() {
+    if (document.body.classList.contains("embed")) return;
+    renderReviewBody();
+    const bd = document.getElementById("bd-review");
+    if (bd && bd.hidden) openModal("review");
+  }
+  function openDueLearn(lessonId) {
+    const reviewBd = document.getElementById("bd-review");
+    if (reviewBd && !reviewBd.hidden) closeModal("review");
+    learnRecallSession = null;
+    openLearnPath({ lessonId: lessonId, step: "recall" });
+  }
+  function openDuePredict(trialId) {
+    const reviewBd = document.getElementById("bd-review");
+    if (reviewBd && !reviewBd.hidden) closeModal("review");
+    yieldLearnShell();
+    const rec = predictRecord(trialId);
+    if (rec && rec.revealed) practicePredictAgain(trialId);
+    if (byId[trialId]) openDetail(trialId, "summary");
+  }
+  window.ANTICOAG_REVIEW = {
+    key: REVIEW_STORAGE_KEY,
+    setToday: function (iso) {
+      reviewClock = /^\d{4}-\d{2}-\d{2}$/.test(String(iso || "")) ? String(iso) : null;
+      updateReviewChip();
+      const bd = document.getElementById("bd-review");
+      if (bd && !bd.hidden) renderReviewBody();
+    },
+    clearToday: function () {
+      reviewClock = null;
+      updateReviewChip();
+    },
+    today: function () { return reviewToday(); },
+    dueCount: function () { return reviewDueList().length; },
+    mastered: function (lessonId) { return learnIsMastered(lessonId); }
+  };
+
 
   function renderLearnProgress(state) {
     const done = countLearnDone(state);
     const total = learnLessons.length || 10;
+    const masteredN = learnLessons.filter(l => learnIsMastered(l.id)).length;
+    const masteredBit = masteredN ? " · " + masteredN + " mastered" : "";
     const label = document.getElementById("learn-progress-label");
     const bar = document.getElementById("learn-progress-bar");
-    if (label) label.textContent = done + " of " + total + " · no rush";
+    if (label) label.textContent = done + " of " + total + masteredBit + " · no rush";
     if (bar) {
       bar.setAttribute("aria-valuenow", String(done));
       bar.setAttribute("aria-valuemax", String(total));
-      bar.setAttribute("aria-label", done + " of " + total + " lessons complete · no rush");
+      bar.setAttribute("aria-label", done + " of " + total + " lessons complete" + masteredBit + " · no rush");
       bar.innerHTML = learnLessons.map(l => {
         const st = learnStatus(state, l.id);
-        const cls = st === "done" ? "done" : (st === "in_progress" ? "in_progress" : (st === "skipped" ? "skipped" : ""));
+        const mastered = learnIsMastered(l.id);
+        const cls = (st === "done" || mastered ? "done" : (st === "in_progress" ? "in_progress" : (st === "skipped" ? "skipped" : ""))) + (mastered ? " mastered" : "");
         return `<span class="learn-seg ${cls}" title="${esc(l.title)}"></span>`;
       }).join("");
     }
@@ -4989,8 +5488,8 @@
     }
     if (which === "deepen") {
       entry.openedDeepen = true;
-      entry.coachStep = "wrap";
-      learnView.step = "wrap";
+      entry.coachStep = "recall";
+      learnView.step = "recall";
     }
     if (entry.status === "not_started" || entry.status === "skipped") entry.status = "in_progress";
     state.lastLessonId = lesson.id;
@@ -5091,8 +5590,7 @@
       const list = document.getElementById("learn-review-list");
       if (list) {
         list.innerHTML = learnLessons.map(l => {
-          const st = learnStatus(state, l.id);
-          const tag = st === "done" ? "Done" : (st === "skipped" ? "Skipped" : (st === "in_progress" ? "In progress" : "Not started"));
+          const tag = learnListTag(state, l);
           return `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">${esc(tag)}</span></button>`;
         }).join("");
         list.querySelectorAll("[data-review]").forEach(b => {
@@ -5127,7 +5625,7 @@
       const list = document.getElementById("learn-review-list");
       if (list) {
         list.innerHTML = learnLessons.map(l =>
-          `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">Done</span></button>`
+          `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">${esc(learnListTag(state, l))}</span></button>`
         ).join("");
         list.querySelectorAll("[data-review]").forEach(b => {
           b.onclick = () => openLearnPath({ lessonId: b.dataset.review });
@@ -5178,13 +5676,20 @@
     let showSkipVisual = false;
 
     if (step === "orient") {
-      bodyHtml += `
+      const pre = renderPreHtml(lesson);
+      if (pre.html) bodyHtml += pre.html;
+      if (!pre.blocking) {
+        bodyHtml += `
         <div class="learn-step-tag">Orient</div>
         <p class="learn-orient-tip">${esc(tip)}</p>
         <p class="learn-coach-body">You’ll open a short teaching card first — one decision surface, not the whole site.</p>
         <p class="learn-why"><strong>Why this step:</strong> ${esc(why)}</p>`;
-      primaryLabel = "Open teaching";
-      primaryAction = () => openLearnTarget(lesson.primary, lesson, "primary");
+        primaryLabel = "Open teaching";
+        primaryAction = () => openLearnTarget(lesson.primary, lesson, "primary");
+      } else {
+        primaryLabel = "Open teaching";
+        primaryAction = () => toast("Pick a line first.");
+      }
     } else if (step === "evidence") {
       const g = graphics[gIdx];
       const LV = window.ANTICOAG_LEARN_VISUALS;
@@ -5219,16 +5724,25 @@
       } else {
         primaryLabel = "Continue";
         primaryAction = () => {
-          learnView.step = "wrap";
-          persistCoachStep(lesson.id, "wrap", 0);
+          learnView.step = "recall";
+          persistCoachStep(lesson.id, "recall", 0);
           renderLearnBody();
         };
+      }
+    } else if (step === "recall") {
+      bodyHtml += renderRecallHtml(lesson);
+      if (learnRecallSession && learnRecallSession.checked) {
+        primaryLabel = "Continue";
+        primaryAction = () => finishRecallStep(lesson);
+      } else {
+        primaryLabel = "Check recall";
+        primaryAction = () => checkRecallStep();
       }
     } else {
       // wrap
       bodyHtml += `
         <div class="learn-step-tag">Wrap</div>
-        <div class="learn-callout"><strong>Lesson complete.</strong> Next when you’re ready.</div>`;
+        <div class="learn-callout"><strong>Lesson complete.</strong> Next when you’re ready. Review brings this lesson back on day 2, day 7, and day 30. Passed recall on two different days marks it mastered.</div>`;
       if (lesson.id === "doac-bleed-us") {
         bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost" id="learn-soft-reversal">Optional: Bleed &amp; reversal</button></div>`;
       }
@@ -5342,12 +5856,11 @@
     };
     const skipDeep = document.getElementById("learn-skip-deepen");
     if (skipDeep) skipDeep.onclick = () => {
-      learnView.step = "wrap";
-      persistCoachStep(lesson.id, "wrap", 0);
-      // Soft: mark done without requiring deepen (even if deepenRequired — soft path)
-      markLearnLessonDone(lesson.id);
+      learnView.step = "recall";
+      persistCoachStep(lesson.id, "recall", 0);
       renderLearnBody();
     };
+    wireRecallOptions(lesson);
     const skip = document.getElementById("learn-skip");
     if (skip) skip.onclick = () => {
       const st = skipLearnLesson(lesson.id);
@@ -5378,10 +5891,11 @@
       const e = learnLessonEntry(state, lessonId);
       if (e.status === "not_started") e.status = "in_progress";
       state.lastLessonId = lessonId;
-      saveLearnProgress(state);
       let step = opts.step || e.coachStep || "orient";
       if (e.status === "done" && !opts.step) step = "wrap";
       step = learnNormalizeStep(lesson, step);
+      if (opts.step) e.coachStep = step;
+      saveLearnProgress(state);
       const gIdx = opts.graphicIdx != null ? opts.graphicIdx : (e.graphicIdx || 0);
       learnView = { mode: "lesson", lessonId, step, graphicIdx: gIdx };
     } else if (allLearnDone(state)) {
@@ -5445,7 +5959,7 @@
     if (explore) explore.onclick = () => { closeModal("learn"); };
     const reset = document.getElementById("learn-reset");
     if (reset) reset.onclick = () => {
-      const ok = window.confirm("Reset for next learner? Clears Learn progress on this device and brings back the Start here tip for the next person. Teach tools stay available. Theme is unchanged.");
+      const ok = window.confirm("Reset for next learner? Clears Learn progress and review dates on this device. The Start here tip comes back. Teach tools stay available. Theme is unchanged.");
       if (!ok) return;
       resetLearnProgress();
       learnView = { mode: "hub", lessonId: null, step: null, graphicIdx: 0 };
@@ -5480,10 +5994,21 @@
     });
   })();
 
+  (function wireReviewChip() {
+    const btn = document.getElementById("btn-review");
+    if (!btn) return;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openReviewQueue();
+    });
+    updateReviewChip();
+  })();
+
   // Multi-tab: refresh welcome after other tabs change anticoag-learn-v1 (no permanent dismiss to resurrect)
   window.addEventListener("storage", (ev) => {
-    if (ev.key === LEARN_STORAGE_KEY || ev.key === null) {
+    if (ev.key === LEARN_STORAGE_KEY || ev.key === REVIEW_STORAGE_KEY || ev.key === null) {
       try { updateLearnWelcome(); } catch (e) {}
+      try { updateReviewChip(); } catch (e2) {}
     }
   });
 

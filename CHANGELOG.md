@@ -2,6 +2,12 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-25 — Predict, then reveal, on Trial snapshot
+
+- A Trial snapshot asks for a short prediction and a confidence mark (Low, Medium, or High) before the key takeaway and the primary result. Reveal shows the card as before, plus a short note that points at that takeaway. Just show me skips the prompt and still reveals the card.
+- The prediction is saved in that browser only. A later visit opens the revealed card and offers Practice again. More details, compare, copy, print, and source stay in place. Print shows the key takeaway without the prediction prompt.
+- No trial card text was changed. Educational only. reviewedBy unchanged. The literature-sweep stamp is unchanged.
+
 ## 2026-10-23 — Trial snapshot label; changelog leaves the site
 
 - The trial popup kicker is Trial snapshot. More details is unchanged. Page descriptions in the HTML head use the same name.

@@ -2,6 +2,12 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-27 — Optional clotting cascade on Learn lesson 1
+
+- Learn lesson 1 (AF and choosing anticoagulation) now offers an optional physiology strip. Show cascade opens a classic Y clotting map with mechanism labels only. Hide closes it. Skip hides the strip for this visit on this device. Reset for next learner brings it back. Open teaching stays the main button.
+- The strip sits on Orient, after why this step, and again above the Evidence charts. On Evidence it starts collapsed when the map was already opened. Visual n of N still counts the nine AF DOAC charts. The cascade is its own mechanism pack.
+- Educational only. Wording stays DOAC. reviewedBy unchanged. No drug targets, doses, or trial rates on this figure.
+
 ## 2026-10-26 — Learn recall, then review on day 2, 7, and 30
 
 - Each Learn lesson asks one line before the card, then two or three recall lines after practice, then a short why prompt. Feedback quotes the lesson line already on that step. The orient, evidence, practice, and wrap steps stay.

@@ -14,6 +14,11 @@ Newest first. Record site changes here. The site does not render this file.
 - The strip sits on Orient, after why this step, and again above the Evidence charts. On Evidence it starts collapsed when the map was already opened. Visual n of N still counts the nine AF DOAC charts. The cascade is its own mechanism pack.
 - Educational only. Wording stays DOAC. reviewedBy unchanged. No drug targets, doses, or trial rates on this figure.
 
+## 2026-10-26 — POPular TAVI snapshot shows both cohorts
+
+- The POPular TAVI Trial snapshot now labels cohort A (no long-term oral-anticoagulation indication; Brouwer et al., doi:10.1056/NEJMoa2017815) and cohort B (already on oral anticoagulation; Nijenhuis et al., doi:10.1056/NEJMoa1915152). Cohort A bleeding and ischemic numbers stay. Cohort B headline results from that abstract are in the key takeaway, primary result, safety, and caveats. The rates are not pooled.
+- Cohort letters follow registry NCT02247128. The dedicated POPular TAVI OAC card remains the cohort B paper. Educational only. Wording stays DOAC. reviewedBy unchanged. The literature-sweep stamp is unchanged.
+
 ## 2026-10-26 — Learn recall, then review on day 2, 7, and 30
 
 - Each Learn lesson asks one line before the card, then two or three recall lines after practice, then a short why prompt. Feedback quotes the lesson line already on that step. The orient, evidence, practice, and wrap steps stay.

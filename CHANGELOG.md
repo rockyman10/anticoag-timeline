@@ -5,6 +5,7 @@ Newest first. Record site changes here. The site does not render this file.
 ## 2026-10-31 — Trial-card lead-ins read as sentences
 
 - Field text that opened with a second heading, such as “Major bleeding:” or “Stopped early:”, now reads as a sentence under the bold section name. Endpoint names, arm names, and cohort names stay in the sentence. Group, cohort, and early-versus-later labels use the same “In …” style where a card has more than one arm.
+- A literature check then corrected 34 sentences: stray commas between a composite subject and its verb, and a few lines that named the wrong subject (OPTION endpoints, HOME-PE noninferiority, CLOT limits, CASSINI’s intervention-period analysis, RENAL-AF “so it was underpowered”, CLOSURE-AF’s closing comma, plus ENRICH-AF design and ALONE-AF age wording). Numbers were not changed.
 - No count, rate, hazard ratio, confidence interval, P value, comparison direction, citation, or DOI was changed. `node scripts/check-trial-digits.js` compares every card string with `main` and reports digit mismatches.
 - Educational only. Wording stays DOAC. reviewedBy unchanged.
 

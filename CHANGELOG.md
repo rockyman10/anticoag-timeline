@@ -2,6 +2,12 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-31 — Drug-target marks on the clotting cascade
+
+- Learn lesson 1 still opens the classic Y from Show cascade. Hide and Skip are unchanged. A new button, Show where drugs act, draws marks on that same map. Hide drug targets clears the marks and returns the classic map. The nine AF DOAC evidence charts are unchanged.
+- Squares and dashed outlines mark factors II, VII, IX, and X for warfarin (a vitamin K antagonist). A diamond marks factor Xa for apixaban, rivaroxaban, and edoxaban. A circle marks thrombin (IIa) for dabigatran. Factor VIIIa and factor Va are not marked. Proteins C and S are not on this map, so they are not marked. No doses and no trial rates.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-10-28 — Cascade strip shows its hook once
 
 - When Show cascade is open, “Learn the Y before the pills.” stays in the Optional · Physiology header. The same line inside the figure caption is hidden in that strip, so it is not repeated. The figure itself is unchanged for direct lookup. Show, Hide, and Skip behave as before. Skip still hides the strip for this visit on this device until Reset for next learner. Open teaching stays the main button. Visual n of N still counts the nine AF DOAC charts.

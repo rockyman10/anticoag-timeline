@@ -2,6 +2,12 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-31 — Trial-card lead-ins read as sentences
+
+- Field text that opened with a second heading, such as “Major bleeding:” or “Stopped early:”, now reads as a sentence under the bold section name. Endpoint names, arm names, and cohort names stay in the sentence. Group, cohort, and early-versus-later labels use the same “In …” style where a card has more than one arm.
+- No count, rate, hazard ratio, confidence interval, P value, comparison direction, citation, or DOI was changed. `node scripts/check-trial-digits.js` compares every card string with `main` and reports digit mismatches.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-10-30 — Trial cards share one set of section names
 
 - Trial snapshot, More details, the print one-pager, and Compare now use the same bold section names. Primary / key efficacy and Bleeding / safety are the names in every view. Print calls the design section Design, and lists Strengths and Limitations as two sections. Compare’s Key takeaway row shows the same sentence as the card.

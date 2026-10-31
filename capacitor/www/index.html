@@ -827,6 +827,77 @@
       color: var(--muted);
       margin: 0 0 .5rem;
     }
+
+    .learn-soft-physio {
+      margin: .75rem 0 .35rem;
+      padding: .7rem .75rem .8rem;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--muted-bg);
+    }
+    .learn-soft-physio-eyebrow {
+      margin: 0 0 .35rem;
+      font-size: .6875rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .learn-soft-physio-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .65rem;
+    }
+    .learn-soft-physio-hook {
+      margin: .15rem 0 .2rem;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+    .learn-soft-physio-head .learn-soft-physio-hook { margin: 0; flex: 1 1 auto; }
+    .learn-soft-physio-title {
+      margin: 0 0 .55rem;
+      font-size: .875rem;
+      color: var(--ink-2);
+      line-height: 1.4;
+    }
+    .learn-soft-physio-count {
+      margin: 0 0 .45rem;
+      font-size: .8125rem;
+      color: var(--muted);
+    }
+    .learn-soft-physio-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem .5rem;
+      align-items: center;
+    }
+    .learn-soft-physio-actions .btn,
+    .learn-soft-physio-head .btn { min-height: 44px; }
+    .learn-soft-physio-head .btn { flex: 0 0 auto; }
+    .learn-soft-physio-mount {
+      margin-top: .55rem;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .learn-soft-physio-mount .lv-chart { margin-bottom: 0; }
+    /* The strip header already says the hook. Hide the figure caption in this mount only. */
+    .learn-soft-physio-mount .lv-hook { display: none; }
+    @media (max-width: 640px) {
+      .learn-soft-physio-mount { max-height: 55vh; overflow: auto; }
+      .learn-soft-physio-actions .btn,
+      .learn-soft-physio-head .btn { min-height: 44px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .learn-soft-physio,
+      .learn-soft-physio-mount {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
     /* Evidence visuals */
     .lv-chart {
       margin: 0 0 .75rem;
@@ -899,6 +970,12 @@
       border-radius: 3px;
     }
     .lv-footnote { font-size: .75rem; color: var(--muted); margin: .35rem 0 0; line-height: 1.35; }
+    .lv-legend-note {
+      font-size: .75rem;
+      color: var(--muted);
+      margin: .4rem 0 .25rem;
+      line-height: 1.35;
+    }
     .lv-table {
       width: 100%;
       border-collapse: collapse;
@@ -4795,6 +4872,8 @@
     if (!e.status) e.status = "not_started";
     if (!e.coachStep) e.coachStep = "orient";
     if (e.graphicIdx == null) e.graphicIdx = 0;
+    if (e.softInviteGraphicsOpen == null) e.softInviteGraphicsOpen = false;
+    if (e.softInviteGraphicsDismissed == null) e.softInviteGraphicsDismissed = false;
     return e;
   }
   function learnStatus(state, id) {
@@ -4941,6 +5020,77 @@
     const LV = window.ANTICOAG_LEARN_VISUALS;
     if (!LV || !lesson) return [];
     return (typeof LV.graphicsForLesson === "function" ? LV.graphicsForLesson(lesson.id) : []) || [];
+  }
+
+  function learnSoftInviteGraphics(lesson) {
+    const LV = window.ANTICOAG_LEARN_VISUALS;
+    if (!LV || !lesson) return [];
+    return (typeof LV.softInviteGraphicsForLesson === "function"
+      ? LV.softInviteGraphicsForLesson(lesson.id) : []) || [];
+  }
+  function learnGraphicHook(g) {
+    if (!g || typeof g.html !== "string") return "";
+    const m = g.html.match(/class="lv-hook">([^<]*)</);
+    return m ? m[1] : "";
+  }
+  function learnSoftPhysioExpanded(entry, step) {
+    if (!entry || entry.softInviteGraphicsDismissed) return false;
+    if (learnView.softPhysioOpenStep === step && typeof learnView.softPhysioOpen === "boolean") {
+      return learnView.softPhysioOpen;
+    }
+    // Evidence stays collapsed when the map was already opened on Orient.
+    if (step === "evidence") return false;
+    return !!entry.softInviteGraphicsOpen;
+  }
+  function renderSoftPhysioStrip(lesson, entry, step) {
+    const pack = learnSoftInviteGraphics(lesson);
+    if (!pack.length || !entry || entry.softInviteGraphicsDismissed) return "";
+    let pIdx = learnView.softPhysioIdx || 0;
+    if (pIdx < 0) pIdx = 0;
+    if (pIdx >= pack.length) pIdx = pack.length - 1;
+    learnView.softPhysioIdx = pIdx;
+    const g = pack[pIdx];
+    const expanded = learnSoftPhysioExpanded(entry, step);
+    const hook = learnGraphicHook(g) || "Learn the Y before the pills.";
+    const title = (g && g.title) || "";
+    const LV = window.ANTICOAG_LEARN_VISUALS;
+    const count = pack.length > 1
+      ? `<p class="learn-soft-physio-count">${pIdx + 1} of ${pack.length}</p>`
+      : "";
+    const pager = pack.length > 1
+      ? `<button type="button" class="btn sm ghost" data-soft-physio="prev">Previous</button><button type="button" class="btn sm ghost" data-soft-physio="next">Next</button>`
+      : "";
+    if (expanded) {
+      const htmlG = g && LV && typeof LV.renderGraphic === "function" ? LV.renderGraphic(g) : (g && g.html) || "";
+      return `<section class="learn-soft-physio" data-soft-physio-state="open" aria-label="Optional physiology">
+        <p class="learn-soft-physio-eyebrow">Optional · Physiology</p>
+        <div class="learn-soft-physio-head">
+          <p class="learn-soft-physio-hook">${esc(hook)}</p>
+          <button type="button" class="btn sm ghost" data-soft-physio="hide">Hide</button>
+        </div>
+        ${count}
+        <div class="learn-soft-physio-mount">${htmlG}</div>
+        ${pager ? `<div class="learn-soft-physio-actions">${pager}</div>` : ""}
+      </section>`;
+    }
+    return `<section class="learn-soft-physio" data-soft-physio-state="closed" aria-label="Optional physiology">
+      <p class="learn-soft-physio-eyebrow">Optional · Physiology</p>
+      <p class="learn-soft-physio-hook">${esc(hook)}</p>
+      <p class="learn-soft-physio-title">${esc(title)}</p>
+      ${count}
+      <div class="learn-soft-physio-actions">
+        <button type="button" class="btn sm" data-soft-physio="show">Show cascade</button>
+        <button type="button" class="btn sm ghost" data-soft-physio="skip">Skip</button>
+        ${pager}
+      </div>
+    </section>`;
+  }
+  function persistSoftPhysio(lessonId, mutate) {
+    const state = loadLearnProgress();
+    const entry = learnLessonEntry(state, lessonId);
+    mutate(entry);
+    saveLearnProgress(state);
+    renderLearnBody();
   }
   function learnCoachSteps(lesson) {
     const steps = ["orient"];
@@ -5684,6 +5834,7 @@
         <p class="learn-orient-tip">${esc(tip)}</p>
         <p class="learn-coach-body">You’ll open a short teaching card first — one decision surface, not the whole site.</p>
         <p class="learn-why"><strong>Why this step:</strong> ${esc(why)}</p>`;
+        bodyHtml += renderSoftPhysioStrip(lesson, entry, "orient");
         primaryLabel = "Open teaching";
         primaryAction = () => openLearnTarget(lesson.primary, lesson, "primary");
       } else {
@@ -5698,6 +5849,7 @@
         <div class="learn-step-tag">Evidence</div>
         <h4 class="learn-lesson-title" style="font-size:1.05rem;margin-bottom:.35rem">Evidence at a glance</h4>
         <p class="learn-coach-body">A friendly teaching chart or table from cards already on this site — one picture at a time, not a paper screenshot.</p>
+        ${renderSoftPhysioStrip(lesson, entry, "evidence")}
         <p class="learn-graphic-progress">Visual ${gIdx + 1} of ${graphics.length || 1}</p>
         <div class="learn-evidence-mount">${htmlG}</div>`;
       showSkipVisual = true;
@@ -5827,6 +5979,42 @@
         const pairId = b.dataset.learnSoftCompare || "";
         const trialIds = (b.dataset.learnSoftTrials || "").split(",").map(s => s.trim()).filter(Boolean);
         openLearnTarget({ kind: "compare", pairId, trialIds }, lesson, "soft");
+      };
+    });
+
+    body.querySelectorAll("[data-soft-physio]").forEach(b => {
+      b.onclick = () => {
+        const act = b.dataset.softPhysio;
+        const pack = learnSoftInviteGraphics(lesson);
+        if (act === "show") {
+          learnView.softPhysioOpen = true;
+          learnView.softPhysioOpenStep = step;
+          persistSoftPhysio(lesson.id, e => { e.softInviteGraphicsOpen = true; });
+          const hideBtn = document.querySelector("#learn-body [data-soft-physio='hide']");
+          if (hideBtn) hideBtn.focus();
+          return;
+        }
+        if (act === "hide") {
+          learnView.softPhysioOpen = false;
+          learnView.softPhysioOpenStep = step;
+          persistSoftPhysio(lesson.id, e => { e.softInviteGraphicsOpen = false; });
+          const showBtn = document.querySelector("#learn-body [data-soft-physio='show']");
+          if (showBtn) showBtn.focus();
+          return;
+        }
+        if (act === "skip") {
+          learnView.softPhysioOpen = false;
+          learnView.softPhysioOpenStep = step;
+          persistSoftPhysio(lesson.id, e => { e.softInviteGraphicsDismissed = true; });
+          return;
+        }
+        if (act === "prev" || act === "next") {
+          const n = pack.length || 1;
+          let i = learnView.softPhysioIdx || 0;
+          i = act === "next" ? (i + 1) % n : (i - 1 + n) % n;
+          learnView.softPhysioIdx = i;
+          renderLearnBody();
+        }
       };
     });
 

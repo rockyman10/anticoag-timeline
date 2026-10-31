@@ -2,6 +2,18 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-28 — Cascade strip shows its hook once
+
+- When Show cascade is open, “Learn the Y before the pills.” stays in the Optional · Physiology header. The same line inside the figure caption is hidden in that strip, so it is not repeated. The figure itself is unchanged for direct lookup. Show, Hide, and Skip behave as before. Skip still hides the strip for this visit on this device until Reset for next learner. Open teaching stays the main button. Visual n of N still counts the nine AF DOAC charts.
+- A local check of lesson 1 still logs one error and two warnings that are already on the home page: the manifest asks for `/anticoag-timeline/icons/icon-192.png` (404 when the site is not served at that path), Chrome then warns that the manifest icon failed, and the apple-mobile-web-app-capable meta is deprecated. Those are left as they are.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
+## 2026-10-27 — Optional clotting cascade on Learn lesson 1
+
+- Learn lesson 1 (AF and choosing anticoagulation) now offers an optional physiology strip. Show cascade opens a classic Y clotting map with mechanism labels only. Hide closes it. Skip hides the strip for this visit on this device. Reset for next learner brings it back. Open teaching stays the main button.
+- The strip sits on Orient, after why this step, and again above the Evidence charts. On Evidence it starts collapsed when the map was already opened. Visual n of N still counts the nine AF DOAC charts. The cascade is its own mechanism pack.
+- Educational only. Wording stays DOAC. reviewedBy unchanged. No drug targets, doses, or trial rates on this figure.
+
 ## 2026-10-26 — POPular TAVI snapshot shows both cohorts
 
 - The POPular TAVI Trial snapshot now labels cohort A (no long-term oral-anticoagulation indication; Brouwer et al., doi:10.1056/NEJMoa2017815) and cohort B (already on oral anticoagulation; Nijenhuis et al., doi:10.1056/NEJMoa1915152). Cohort A bleeding and ischemic numbers stay. Cohort B headline results from that abstract are in the key takeaway, primary result, safety, and caveats. The rates are not pooled.

@@ -5697,7 +5697,7 @@ window.ANTICOAG_TRIALS = [
     "indication": "VTE",
     "status": "published",
     "title": "Aspirin for Preventing the Recurrence of Venous Thromboembolism",
-    "population": "402 patients with a first unprovoked VTE who had completed 6 to 18 months of oral anticoagulant treatment (aspirin 205, placebo 197).",
+    "population": "Patients with a first unprovoked VTE who had completed 6 to 18 months of oral anticoagulant treatment (aspirin 205, placebo 197).",
     "intervention": "Aspirin 100 mg daily for 2 years, with the option to extend, as given in the trial.",
     "comparator": "Placebo.",
     "primaryResult": "Recurrent VTE: 28 of 205 with aspirin vs 43 of 197 with placebo (6.6% vs 11.2% per year; HR 0.58; 95% CI 0.36–0.93; median study period 24.6 months). During treatment (median 23.9 months): 23 vs 39 recurrences (5.9% vs 11.0% per year; HR 0.55; 95% CI 0.33–0.92).",
@@ -5711,8 +5711,8 @@ window.ANTICOAG_TRIALS = [
     "background": "After a first unprovoked VTE, the risk of recurrence persists once anticoagulation stops. WARFASA tested whether aspirin lowers that risk compared with placebo.",
     "designNotes": "Multicenter, investigator-initiated, double-blind, placebo-controlled randomized trial. ClinicalTrials.gov NCT00222677. A 2012 correction (N Engl J Med. 2012;367:1573) fixed the Figure 2 numbers at risk and Kaplan–Meier curves; it did not change the reported results.",
     "strengths": "Double-blind and placebo-controlled. Results were reported both over the full study period and during treatment.",
-    "limitations": "402 patients, with 71 recurrences over the study period. The comparator was placebo, not an anticoagulant. Major bleeding was 1 event per group, too few to estimate a difference.",
-    "journalClub": "WARFASA set aspirin's place after a first unprovoked VTE. EINSTEIN-CHOICE then compared rivaroxaban with aspirin directly. Discuss what a placebo-controlled trial can show when the realistic alternative is extended anticoagulation.",
+    "limitations": "205 and 197 patients per group, with 28 and 43 recurrences over the study period. The comparator was placebo, not an anticoagulant. Major bleeding was 1 event per group, too few to estimate a difference.",
+    "journalClub": "WARFASA tested aspirin after a first unprovoked VTE. EINSTEIN-CHOICE then compared rivaroxaban with aspirin directly. Discuss what a placebo-controlled trial can show when the realistic alternative is extended anticoagulation.",
     "guidelines": [],
     "caveats": "Doses are shown only as the trial arms.",
     "practiceTakeaway": "In WARFASA, after 6 to 18 months of anticoagulation for a first unprovoked VTE, aspirin lowered recurrent VTE compared with placebo (6.6% vs 11.2% per year; HR 0.58; 95% CI 0.36–0.93), with 1 major bleed in each group.",
@@ -5852,7 +5852,7 @@ window.ANTICOAG_TRIALS = [
     ],
     "questionsOpen": [
       {
-        "text": "Whether oral anticoagulation prevents more major vascular events than it causes recurrent bleeding after ICH needs larger randomized trials, as the authors state. PRESTIGE-AF later tested a DOAC in this setting.",
+        "text": "Whether oral anticoagulation is superior for preventing symptomatic major vascular events after ICH needs adequately powered randomized trials, as the authors state. PRESTIGE-AF later tested a DOAC in this setting.",
         "source": "SoSTART",
         "addressedBy": "PRESTIGE-AF"
       }

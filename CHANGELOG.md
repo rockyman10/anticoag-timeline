@@ -2,6 +2,16 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-30 — Trial cards share one set of section names
+
+- Trial snapshot, More details, the print one-pager, and Compare now use the same bold section names. Primary / key efficacy and Bleeding / safety are the names in every view. Print calls the design section Design, and lists Strengths and Limitations as two sections. Compare’s Key takeaway row shows the same sentence as the card.
+- A Guidelines heading is omitted when that card has no guideline note. No guideline text was added.
+- Important caveats no longer open with “Randomized: yes.” when the design text already says the trial was randomized. Those design lines now read as sentences, using only words already on the card. PAUSE still says it was not randomized.
+- Card text that was missing a final period now ends with one. Counts, intervals, and results are unchanged.
+- OAC-ALONE spells out International Society on Thrombosis and Haemostasis on the first use of ISTH.
+- The timeline legend no longer says Tier badge.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-10-28 — Cascade strip shows its hook once
 
 - When Show cascade is open, “Learn the Y before the pills.” stays in the Optional · Physiology header. The same line inside the figure caption is hidden in that strip, so it is not repeated. The figure itself is unchanged for direct lookup. Show, Hide, and Skip behave as before. Skip still hides the strip for this visit on this device until Reset for next learner. Open teaching stays the main button. Visual n of N still counts the nine AF DOAC charts.

@@ -2,6 +2,14 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-31 — Five trial cards: TRAPS, PERIOP2, TIMING, SoSTART, and WARFASA
+
+- New cards from the published abstracts only: TRAPS (Blood 2018), PERIOP2 (BMJ 2021), TIMING (Circulation 2022), SoSTART (Lancet Neurology 2021), and WARFASA (NEJM 2012). Counts, intervals, and results are the abstract figures. The TIMING one-year follow-up is not used.
+- TIMING is Recent, with the other 2022–2024 cards. TRAPS, PERIOP2, SoSTART, and WARFASA are Published.
+- TRAPS is on the VTE lane. The site has no antiphospholipid syndrome indication, and the vascular lane is the coronary and peripheral-artery set. PERIOP2 is on the AF lane with BRIDGE and PAUSE. There is no perioperative indication. The population text names mechanical heart valves.
+- Open questions: TIMING points at ELAN, SoSTART at PRESTIGE-AF, and WARFASA at EINSTEIN-CHOICE. Only TRAPS has a guideline note (EULAR 2019). Cards with no guideline note still omit the Guidelines heading.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-10-30 — Trial cards share one set of section names
 
 - Trial snapshot, More details, the print one-pager, and Compare now use the same bold section names. Primary / key efficacy and Bleeding / safety are the names in every view. Print calls the design section Design, and lists Strengths and Limitations as two sections. Compare’s Key takeaway row shows the same sentence as the card.

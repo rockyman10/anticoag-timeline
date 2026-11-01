@@ -494,7 +494,7 @@
     table.cmp td.rl {
       font-size: .75rem; font-weight: 700; letter-spacing: .04em;
       text-transform: uppercase; color: var(--muted); background: var(--bg);
-      white-space: nowrap; width: 7rem;
+      white-space: normal; width: 9.5rem; min-width: 8.25rem;
     }
 
     .prog { display: flex; gap: 3px; margin-bottom: .65rem; }
@@ -2253,7 +2253,7 @@
       </div>`;
       document.getElementById("legend").innerHTML = LANES.map(l =>
         `<span><i style="background:${l.hex}"></i>${l.label}</span>`
-      ).join("") + `<span>Sub-lanes separate concurrent trials · Tier badge · Dashed = pending</span>`;
+      ).join("") + `<span>Sub-lanes separate concurrent trials · Dashed = pending</span>`;
       const resetBtn = document.getElementById("btn-reset-filters");
       if (resetBtn) resetBtn.onclick = resetFilters;
       return;
@@ -2312,7 +2312,7 @@
 
     document.getElementById("legend").innerHTML = LANES.map(l =>
       `<span><i style="background:${l.hex}"></i>${l.label}</span>`
-    ).join("") + `<span>Sub-lanes separate concurrent trials · Tier badge · Dashed = pending</span>`;
+    ).join("") + `<span>Sub-lanes separate concurrent trials · Dashed = pending</span>`;
 
     bindMarkers();
   }
@@ -2488,9 +2488,7 @@
   }
 
   function renderGuidelinesBlock(guidelines, compact) {
-    if (!guidelines || !guidelines.length) {
-      return compact ? "" : `<div class="jc-sec"><h3>Guidelines</h3><p>Not summarized here.</p></div>`;
-    }
+    if (!guidelines || !guidelines.length) return "";
     if (compact) {
       return `<div class="g-chips">${guidelines.map(g =>
         `<span class="g-chip" title="${esc(g.note || "")}">${esc(g.society)}${g.year ? " " + g.year : ""}</span>`
@@ -2594,6 +2592,8 @@
   }
   function renderSummaryAnswer(t, jc, doi) {
     const rec = predictRecord(t.id);
+    const g = renderGuidelinesBlock(jc.guidelines, true);
+    const gSec = g ? `<div class="fld" style="margin-top:.55rem"><div class="lab">Guidelines</div>${g}</div>` : "";
     return `
       <div class="fld" style="margin-bottom:.35rem"><div class="lab">Key takeaway</div></div>
       <div class="take">${esc(jc.practiceTakeaway || t.takeaway)}</div>
@@ -2607,7 +2607,7 @@
         <div class="fld span2"><div class="lab">Bleeding / safety</div><div class="val">${esc(t.safety)}</div></div>
         <div class="fld span2"><div class="lab">Important caveats</div><div class="val">${esc(jc.caveats)}</div></div>
       </div>
-      <div class="fld" style="margin-top:.55rem"><div class="lab">Guidelines</div>${renderGuidelinesBlock(jc.guidelines, true)}</div>
+      ${gSec}
       <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
   }
   function renderPredictGate() {
@@ -2729,10 +2729,10 @@
       <div class="jc-sec"><h3>Population</h3><p>${esc(t.population)}</p></div>
       <div class="jc-sec"><h3>Intervention vs comparator</h3>
         <p><strong>Intervention:</strong> ${esc(t.intervention)}<br/><strong>Comparator:</strong> ${esc(t.comparator)}</p>
-        <p style="margin-top:.35rem;color:var(--ink-2)">${esc(jc.designNotes)}</p>
       </div>
-      <div class="jc-sec"><h3>Key results</h3><p>${esc(t.primaryResult)}</p></div>
-      <div class="jc-sec"><h3>Safety / bleeding</h3><p>${esc(t.safety)}</p></div>
+      <div class="jc-sec"><h3>Design</h3><p>${esc(jc.designNotes)}</p></div>
+      <div class="jc-sec"><h3>Primary / key efficacy</h3><p>${esc(t.primaryResult)}</p></div>
+      <div class="jc-sec"><h3>Bleeding / safety</h3><p>${esc(t.safety)}</p></div>
       <div class="jc-sec"><h3>Important caveats</h3><p>${esc(jc.caveats)}</p></div>
       <div class="jc-sec"><h3>Strengths</h3><p>${esc(jc.strengths)}</p></div>
       <div class="jc-sec"><h3>Limitations</h3><p>${esc(jc.limitations)}</p></div>
@@ -2846,7 +2846,8 @@
     const gLines = (jc.guidelines || []).map(g => {
       const yr = g.year ? ` (${g.year})` : "";
       return `<p><strong>${esc(g.society)}</strong> — ${esc(g.document || "")}${yr}: ${esc(g.note || "")}</p>`;
-    }).join("") || "<p>Not summarized here.</p>";
+    }).join("");
+    const gSec = gLines ? `<div class="print-sec"><h2>Guidelines</h2>${gLines}</div>` : "";
     const doiPendPrint = isDoiPending(t) ? DOI_PENDING_BANNER_HTML : "";
     document.getElementById("print-root").innerHTML = `
       <div class="banner">Journal club one-pager</div>
@@ -2857,14 +2858,15 @@
       <div class="print-sec"><h2>Population</h2><p>${esc(t.population)}</p></div>
       <div class="print-sec"><h2>Intervention vs comparator</h2>
       <p><strong>Intervention:</strong> ${esc(t.intervention)}<br/><strong>Comparator:</strong> ${esc(t.comparator)}</p></div>
-      <div class="print-sec"><h2>Design notes</h2><p>${esc(jc.designNotes)}</p></div>
-      <div class="print-sec"><h2>Key results</h2><p>${esc(t.primaryResult)}</p></div>
-      <div class="print-sec"><h2>Safety / bleeding</h2><p>${esc(t.safety)}</p></div>
+      <div class="print-sec"><h2>Design</h2><p>${esc(jc.designNotes)}</p></div>
+      <div class="print-sec"><h2>Primary / key efficacy</h2><p>${esc(t.primaryResult)}</p></div>
+      <div class="print-sec"><h2>Bleeding / safety</h2><p>${esc(t.safety)}</p></div>
       <div class="print-sec"><h2>Important caveats</h2><p>${esc(jc.caveats)}</p></div>
-      <div class="print-sec"><h2>Strengths / limitations</h2><p><strong>Strengths:</strong> ${esc(jc.strengths)}<br/><strong>Limitations:</strong> ${esc(jc.limitations)}</p></div>
+      <div class="print-sec"><h2>Strengths</h2><p>${esc(jc.strengths)}</p></div>
+      <div class="print-sec"><h2>Limitations</h2><p>${esc(jc.limitations)}</p></div>
       ${renderTrialQuestions(t, true)}
       <div class="print-sec"><h2>Key takeaway</h2><div class="pearl">${esc(jc.practiceTakeaway)}</div></div>
-      <div class="print-sec"><h2>Guidelines</h2>${gLines}</div>
+      ${gSec}
       <div class="cite">${linkifyText(t.cite)}${t.url ? "<br/>" + linkifyText(t.url) : ""}</div>`;
   }
   function printTrial() {
@@ -2948,7 +2950,7 @@
       });
       h += `</div>`;
     }
-    h += `<p class="lcc-note" style="margin-top:.55rem;font-size:.75rem;color:var(--muted)">Coach chrome stays rate-free. Efficacy/Safety rows below come from live Reviewer-gated cards — optional peek after you name Q / P / C.</p>`;
+    h += `<p class="lcc-note" style="margin-top:.55rem;font-size:.75rem;color:var(--muted)">Coach chrome stays rate-free. Primary / key efficacy and Bleeding / safety rows below come from live Reviewer-gated cards — optional peek after you name Q / P / C.</p>`;
     h += `</div>`;
     return h;
   }
@@ -2978,9 +2980,9 @@
       ["Population", t => t.population],
       ["Intervention", t => t.intervention],
       ["Comparator", t => t.comparator],
-      ["Efficacy", t => t.primaryResult],
-      ["Safety", t => t.safety],
-      ["Takeaway", t => t.takeaway]
+      ["Primary / key efficacy", t => t.primaryResult],
+      ["Bleeding / safety", t => t.safety],
+      ["Key takeaway", t => t.practiceTakeaway || t.takeaway]
     ];
     let h = "";
     if (learnCoachMatchesCompare(learnCompareCoach)) {

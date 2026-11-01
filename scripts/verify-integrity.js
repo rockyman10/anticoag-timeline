@@ -9,7 +9,7 @@
  *   noac        "NOAC" in reader-visible text (citation, DOI, URL and reference fields exempt)
  *   reviewedBy  any non-empty reviewedBy
  *   evidence    any "Evidence quality" label (key or reader-visible label)
- *   rating      unsourced rating labels "Practice-changer", "Practice-defining", "Tier 1/2/3", "Landmark DOAC" in reader-visible text (owner decisions 2026-10-14);
+ *   rating      unsourced rating labels "Practice-changer", "Practice-defining", "Tier 1/2/3", "Tier badge", "Landmark DOAC" in reader-visible text (owner decisions 2026-10-14);
  *               "Landmark DOAC" is case-sensitive and, in data prose, only the bare label (not followed by a word, e.g. "Landmark DOAC trials") is ERROR; prose mentions are INFO
  *   garble      doubled "the the", empty parentheses, or "for of" in trial-card reader-visible prose
  *   imperative  imperative dosing language outside trial-attributed fields; sentences that name a trial,
@@ -135,7 +135,7 @@ for (const k of keyPaths) if (EQ.test(k.k)) add("ERROR", "evidence", k.p, `key "
 for (const x of visible) if (EQ.test(x.s)) add(x.p.includes(".changelog[") ? "INFO" : "ERROR", "evidence", `${x.file} ${x.p}`, `"${ctxOf(x.s, x.s.search(EQ))}"${x.p.includes(".changelog[") ? " (changelog history mention)" : ""}`);
 for (const { h, t } of htmlText) for (const m of t.matchAll(new RegExp(EQ.source, "gi"))) add("ERROR", "evidence", `${h}:${lineOf(t, m.index)}`, `"${ctxOf(t, m.index)}"`);
 // unsourced rating labels (same treatment as Evidence quality; changelog history mentions are INFO)
-const RATING = /\bPractice[\s-]*changer\b|\bPractice[\s-]*defining\b|\bTier\s*[123]\b/i;
+const RATING = /\bPractice[\s-]*changer\b|\bPractice[\s-]*defining\b|\bTier\s*[123]\b|\bTier\s+badge\b/i;
 for (const x of visible) if (RATING.test(x.s)) add(x.p.includes(".changelog[") ? "INFO" : "ERROR", "rating", `${x.file} ${x.p}`, `"${ctxOf(x.s, x.s.search(RATING))}"`);
 const LANDMARK = /\bLandmark DOAC\b/g, LANDMARK_LABEL = /\bLandmark DOAC\b(?!\s+\w)/;
 for (const x of visible) for (const m of x.s.matchAll(LANDMARK)) { const lbl = LANDMARK_LABEL.test(x.s.slice(m.index)) && !/^Landmark DOAC\s+\w/.test(x.s.slice(m.index));

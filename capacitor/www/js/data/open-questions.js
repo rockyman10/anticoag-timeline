@@ -168,6 +168,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
           0
         ],
         [
+          "warfasa",
+          0
+        ],
+        [
           "amplify",
           0
         ],
@@ -185,6 +189,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         ],
         [
           "einstein-choice",
+          0
+        ],
+        [
+          "traps",
           0
         ],
         [
@@ -438,6 +446,14 @@ window.ANTICOAG_OPEN_QUESTIONS = {
           0
         ],
         [
+          "sostart",
+          0
+        ],
+        [
+          "timing",
+          0
+        ],
+        [
           "elan",
           0
         ],
@@ -496,6 +512,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         [
           "bridge",
           1
+        ],
+        [
+          "periop2",
+          0
         ],
         [
           "mariner",
@@ -588,6 +608,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "CHAMPION-AF": "champion-af",
     "COMPASS": "compass",
     "EINSTEIN-CHOICE": "einstein-choice",
+    "ELAN": "elan",
     "ELDERCARE-AF": "eldercare-af",
     "ENTRUST-AF PCI": "entrust-af-pci",
     "ENVISAGE-TAVI AF": "envisage-tavi-af",
@@ -601,6 +622,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "OPTION": "option",
     "PAUSE": "pause",
     "PRAGUE-17": "prague-17",
+    "PRESTIGE-AF": "prestige-af",
     "PREVAIL": "prevail",
     "PROACT Xa": "proact-xa",
     "RE-ALIGN": "re-align",

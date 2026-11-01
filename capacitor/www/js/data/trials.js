@@ -5688,5 +5688,215 @@ window.ANTICOAG_TRIALS = [
         "addressedBy": "CRISTAL"
       }
     ]
+  },
+  {
+    "id": "warfasa",
+    "acronym": "WARFASA",
+    "year": 2012,
+    "yearLabel": "2012",
+    "indication": "VTE",
+    "status": "published",
+    "title": "Aspirin for Preventing the Recurrence of Venous Thromboembolism",
+    "population": "Patients with a first unprovoked VTE who had completed 6 to 18 months of oral anticoagulant treatment (aspirin 205, placebo 197).",
+    "intervention": "Aspirin 100 mg daily for 2 years, with the option to extend, as given in the trial.",
+    "comparator": "Placebo.",
+    "primaryResult": "Recurrent VTE: 28 of 205 with aspirin vs 43 of 197 with placebo (6.6% vs 11.2% per year; HR 0.58; 95% CI 0.36–0.93; median study period 24.6 months). During treatment (median 23.9 months): 23 vs 39 recurrences (5.9% vs 11.0% per year; HR 0.55; 95% CI 0.33–0.92).",
+    "safety": "Major bleeding: 1 patient in each group. Adverse events were similar in the two groups.",
+    "takeaway": "After 6 to 18 months of anticoagulation for a first unprovoked VTE, aspirin was compared with placebo. Recurrence was 6.6% vs 11.2% per year (HR 0.58; 95% CI 0.36–0.93), with 1 major bleed in each group.",
+    "cite": "Becattini C, et al. N Engl J Med. 2012;366(21):1959-1967.",
+    "doi": "10.1056/NEJMoa1114238",
+    "url": "https://doi.org/10.1056/NEJMoa1114238",
+    "pmid": "22621626",
+    "expectedResults": null,
+    "background": "After a first unprovoked VTE, the risk of recurrence persists once anticoagulation stops. WARFASA tested whether aspirin lowers that risk compared with placebo.",
+    "designNotes": "Multicenter, investigator-initiated, double-blind, placebo-controlled randomized trial. ClinicalTrials.gov NCT00222677. A 2012 correction (N Engl J Med. 2012;367:1573) fixed the Figure 2 numbers at risk and Kaplan–Meier curves; it did not change the reported results.",
+    "strengths": "Double-blind and placebo-controlled. Results were reported both over the full study period and during treatment.",
+    "limitations": "205 and 197 patients per group, with 28 and 43 recurrences over the study period. The comparator was placebo, not an anticoagulant. Major bleeding was 1 event per group, too few to estimate a difference.",
+    "journalClub": "WARFASA tested aspirin after a first unprovoked VTE. EINSTEIN-CHOICE then compared rivaroxaban with aspirin directly. Discuss what a placebo-controlled trial can show when the realistic alternative is extended anticoagulation.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms.",
+    "practiceTakeaway": "In WARFASA, after 6 to 18 months of anticoagulation for a first unprovoked VTE, aspirin lowered recurrent VTE compared with placebo (6.6% vs 11.2% per year; HR 0.58; 95% CI 0.36–0.93), with 1 major bleed in each group.",
+    "questionsAnswered": [
+      {
+        "text": "After a first unprovoked VTE and 6 to 18 months of anticoagulation, does aspirin lower recurrence compared with placebo? Yes. The rates were 6.6% vs 11.2% per year (HR 0.58; 95% CI 0.36–0.93).",
+        "source": "WARFASA"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "How aspirin compares with extended-duration anticoagulation is not answered by a placebo-controlled trial. EINSTEIN-CHOICE later compared rivaroxaban with aspirin.",
+        "source": "WARFASA",
+        "addressedBy": "EINSTEIN-CHOICE"
+      }
+    ]
+  },
+  {
+    "id": "traps",
+    "acronym": "TRAPS",
+    "year": 2018,
+    "yearLabel": "2018",
+    "indication": "VTE",
+    "status": "published",
+    "title": "Rivaroxaban vs Warfarin in High-Risk Patients with Antiphospholipid Syndrome",
+    "population": "120 high-risk patients with antiphospholipid syndrome who were triple positive for lupus anticoagulant, anti-cardiolipin, and anti-β2-glycoprotein I antibodies of the same isotype (59 rivaroxaban, 61 warfarin).",
+    "intervention": "Rivaroxaban 20 mg once daily, or 15 mg once daily based on kidney function, as given in the trial.",
+    "comparator": "Warfarin with an INR target of 2.5, as given in the trial.",
+    "primaryResult": "Composite of thromboembolic events, major bleeding, and vascular death: 11 events (19%) with rivaroxaban vs 2 (3%) with warfarin. Thromboembolic events: 7 patients (12%) with rivaroxaban (4 ischemic strokes and 3 MIs) vs none with warfarin. Mean follow-up 569 days. The abstract reports no hazard ratio, CI, or P value.",
+    "safety": "Major bleeding: 4 (7%) with rivaroxaban vs 2 (3%) with warfarin. No deaths were reported.",
+    "takeaway": "In high-risk, triple-positive antiphospholipid syndrome, rivaroxaban was compared with INR-targeted warfarin. The trial was stopped early after 120 patients because events were more frequent with rivaroxaban (19% vs 3%), and all 7 thromboembolic events occurred in the rivaroxaban group.",
+    "cite": "Pengo V, et al. Blood. 2018;132(13):1365-1371.",
+    "doi": "10.1182/blood-2018-04-848333",
+    "url": "https://doi.org/10.1182/blood-2018-04-848333",
+    "pmid": "30002145",
+    "expectedResults": null,
+    "background": "Antiphospholipid syndrome with positivity for all three antibody tests carries a high risk of recurrent thrombosis. TRAPS tested whether rivaroxaban could replace warfarin in this group.",
+    "designNotes": "Randomized, open-label, multicenter noninferiority trial with blinded end point adjudication. Only patients triple positive for lupus anticoagulant, anti-cardiolipin, and anti-β2-glycoprotein I antibodies of the same isotype were enrolled. Terminated early after 120 patients because of excess events with rivaroxaban. ClinicalTrials.gov NCT02157272.",
+    "strengths": "Randomized comparison against INR-targeted warfarin. Enrolled only the highest-risk antibody profile. Blinded end point adjudication.",
+    "limitations": "Small and stopped early, so the estimates are imprecise and the abstract gives no hazard ratio or CI. Open-label treatment. Only triple-positive patients were enrolled, so the result does not describe lower-risk antibody profiles. Rivaroxaban was the only DOAC tested.",
+    "journalClub": "The event split is one-directional: all 7 thromboembolic events (4 ischemic strokes and 3 MIs) were arterial and all occurred with rivaroxaban, while major bleeding was 7% vs 3%. Discuss how far a 120-patient trial that stopped early can be generalized, and what an all-arterial event pattern suggests.",
+    "guidelines": [
+      {
+        "society": "EULAR",
+        "document": "Recommendations for the management of antiphospholipid syndrome in adults (Ann Rheum Dis. 2019;78:1296-1304)",
+        "note": "States that rivaroxaban should not be used in patients with antiphospholipid syndrome with triple antibody positivity.",
+        "year": 2019
+      }
+    ],
+    "caveats": "Doses are shown only as the trial arms. The trial stopped early after 120 patients.",
+    "practiceTakeaway": "In TRAPS, in high-risk, triple-positive antiphospholipid syndrome, rivaroxaban had more events than INR-targeted warfarin (19% vs 3%), including thromboembolic events in 12% vs none, and the trial stopped early after 120 patients.",
+    "questionsAnswered": [
+      {
+        "text": "In triple-positive thrombotic antiphospholipid syndrome, did rivaroxaban perform as well as warfarin? No. Events were 19% vs 3%, and the trial stopped early for excess events with rivaroxaban.",
+        "source": "TRAPS"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "Whether the result extends to other DOACs, or to patients who are not triple positive, is not answered. TRAPS tested only rivaroxaban and enrolled only triple-positive patients.",
+        "source": "TRAPS"
+      }
+    ]
+  },
+  {
+    "id": "periop2",
+    "acronym": "PERIOP2",
+    "year": 2021,
+    "yearLabel": "2021",
+    "indication": "AF",
+    "status": "published",
+    "title": "Postoperative LMWH Bridging for Patients at High Risk of Arterial Thromboembolism",
+    "population": "1,471 adults with atrial fibrillation or mechanical heart valves who needed warfarin interrupted for a procedure, at 10 thrombosis research sites in Canada and India (2007–2016). Randomized after the procedure: dalteparin 821 (1 withdrew consent immediately), placebo 650.",
+    "intervention": "Postoperative dalteparin bridging, as given in the trial.",
+    "comparator": "Postoperative placebo.",
+    "primaryResult": "Major thromboembolism within 90 days (stroke, TIA, proximal DVT, PE, MI, peripheral embolism, or vascular death): 1.2% (8 of 650) with placebo vs 1.0% (8 of 820) with dalteparin (P=0.64; risk difference −0.3%; 95% CI −1.3 to 0.8).",
+    "safety": "Major bleeding (International Society on Thrombosis and Haemostasis criteria) within 90 days: 2.0% (13 of 650) with placebo vs 1.3% (11 of 820) with dalteparin (P=0.32; risk difference −0.7; 95% CI −2.0 to 0.7).",
+    "takeaway": "When warfarin was interrupted for a procedure in atrial fibrillation or mechanical heart valves, postoperative dalteparin was compared with placebo. Major thromboembolism within 90 days was 1.0% vs 1.2% (P=0.64), and major bleeding was 1.3% vs 2.0% (P=0.32). The results were consistent in the atrial fibrillation and mechanical valve groups.",
+    "cite": "Kovacs MJ, et al. BMJ. 2021;373:n1205.",
+    "doi": "10.1136/bmj.n1205",
+    "url": "https://doi.org/10.1136/bmj.n1205",
+    "pmid": "34108229",
+    "expectedResults": null,
+    "background": "BRIDGE tested bridging in atrial fibrillation but excluded mechanical heart valves. PERIOP2 tested postoperative LMWH bridging after warfarin interruption and included patients with mechanical valves.",
+    "designNotes": "Prospective, double-blind, placebo-controlled randomized trial. Patients were randomized after the procedure. Outcomes were assessed within 90 days. ClinicalTrials.gov NCT00432796.",
+    "strengths": "Double-blind and placebo-controlled. Included mechanical heart valves, which BRIDGE excluded. Reported atrial fibrillation and mechanical valve groups separately.",
+    "limitations": "Event rates were low, so the CIs are wide relative to the rates. Recruitment ran from 2007 to 2016. Only warfarin interruption was studied, not DOAC interruption. The abstract gives no separate numbers for the atrial fibrillation and mechanical valve groups.",
+    "journalClub": "PERIOP2 and BRIDGE ask related but different questions. BRIDGE tested whether to bridge at all in atrial fibrillation; PERIOP2 tested the postoperative part of bridging and included mechanical valves. Compare the two trials' event rates and discuss what a 1.0% vs 1.2% difference can and cannot show.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms.",
+    "practiceTakeaway": "In PERIOP2, after warfarin was interrupted for a procedure in atrial fibrillation or mechanical heart valves, postoperative dalteparin did not significantly lower major thromboembolism compared with placebo (1.0% vs 1.2%; P=0.64), and major bleeding was 1.3% vs 2.0% (P=0.32).",
+    "questionsAnswered": [
+      {
+        "text": "Did postoperative LMWH bridging lower major thromboembolism after warfarin interruption? Not significantly. The rates were 1.0% with dalteparin vs 1.2% with placebo (P=0.64).",
+        "source": "PERIOP2"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "The abstract does not give separate event counts for mechanical heart valves, so the size of any effect in that higher-risk group is not shown.",
+        "source": "PERIOP2"
+      }
+    ]
+  },
+  {
+    "id": "sostart",
+    "acronym": "SoSTART",
+    "year": 2021,
+    "yearLabel": "2021",
+    "indication": "AF",
+    "status": "published",
+    "title": "Oral Anticoagulation for Atrial Fibrillation after Spontaneous Intracranial Hemorrhage (Pilot Phase)",
+    "population": "203 adults with atrial fibrillation and a CHA2DS2-VASc score of 2 or more who survived at least 24 hours after symptomatic spontaneous ICH, at hospitals in the United Kingdom. Randomized at a median of 115 days after the hemorrhage (start 101, avoid 102).",
+    "intervention": "Start long-term (at least 1 year) full treatment-dose oral anticoagulation, either a DOAC or a VKA.",
+    "comparator": "Avoid oral anticoagulation: standard practice with an antiplatelet agent or no antithrombotic agent.",
+    "primaryResult": "Recurrent symptomatic spontaneous ICH: 8 of 101 (8%) start vs 4 of 102 (4%) avoid (adjusted HR 2.42; 95% CI 0.72–8.09; P=0.152). Starting was not shown to be noninferior (margin: adjusted HR 3.2).",
+    "safety": "Serious adverse events: 17 (17%) start vs 15 (15%) avoid. Deaths during the study: 22 (22%) start vs 11 (11%) avoid. Median follow-up 1.2 years.",
+    "takeaway": "In atrial fibrillation after spontaneous ICH, starting oral anticoagulation was compared with avoiding it. Recurrent ICH was 8% vs 4% (adjusted HR 2.42; 95% CI 0.72–8.09), so noninferiority was not shown. The authors called the pilot-phase result inconclusive.",
+    "cite": "SoSTART Collaboration. Lancet Neurol. 2021;20(10):842-853.",
+    "doi": "10.1016/S1474-4422(21)00264-7",
+    "url": "https://doi.org/10.1016/S1474-4422(21)00264-7",
+    "pmid": "34487722",
+    "expectedResults": null,
+    "background": "Whether to restart oral anticoagulation in atrial fibrillation after a brain hemorrhage is a common, unresolved decision. SoSTART was a pilot-phase randomized trial of starting vs avoiding oral anticoagulation in this setting.",
+    "designNotes": "Prospective, randomized, open-label, assessor-masked, parallel-group, pilot-phase noninferiority trial at 67 United Kingdom hospitals. Planned sample size 190. Noninferiority margin 12% (adjusted HR 3.2). Follow-up completeness 97.2%. ClinicalTrials.gov NCT03153150.",
+    "strengths": "Randomized, with assessor-masked outcomes and high follow-up completeness. Exceeded its planned sample size (203 vs 190).",
+    "limitations": "Pilot phase with 203 patients, so the CI is wide (0.72–8.09). Open-label. The start group mixed DOACs and VKAs. The authors note recurrence was lower than expected. The abstract gives no causes of death and no test for the difference in deaths.",
+    "journalClub": "SoSTART did not show that starting was noninferior, yet the hazard ratio's CI runs from 0.72 to 8.09. Discuss why a pilot trial is inconclusive rather than negative, how to read 22% vs 11% deaths with no causes reported, and how SoSTART fits with PRESTIGE-AF and ENRICH-AF.",
+    "guidelines": [],
+    "caveats": "The noninferiority margin is from the trial design, not a treatment threshold.",
+    "practiceTakeaway": "In SoSTART, in atrial fibrillation after spontaneous ICH, starting oral anticoagulation was not shown to be noninferior to avoiding it for recurrent ICH (8% vs 4%; adjusted HR 2.42; 95% CI 0.72–8.09), and the authors called the result inconclusive.",
+    "questionsAnswered": [
+      {
+        "text": "Was starting oral anticoagulation after spontaneous ICH in atrial fibrillation shown to be noninferior to avoiding it for recurrent ICH? No. Recurrence was 8% vs 4% (adjusted HR 2.42; 95% CI 0.72–8.09), and the result was inconclusive.",
+        "source": "SoSTART"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "Whether oral anticoagulation is superior for preventing symptomatic major vascular events after ICH needs adequately powered randomized trials, as the authors state. PRESTIGE-AF later tested a DOAC in this setting.",
+        "source": "SoSTART",
+        "addressedBy": "PRESTIGE-AF"
+      }
+    ]
+  },
+  {
+    "id": "timing",
+    "acronym": "TIMING",
+    "year": 2022,
+    "yearLabel": "2022",
+    "indication": "AF",
+    "status": "recent",
+    "title": "Early versus Delayed DOAC Initiation after Acute Ischemic Stroke in Atrial Fibrillation",
+    "population": "888 patients with acute ischemic stroke and atrial fibrillation at 34 stroke units in Sweden, randomized within 72 hours of stroke onset (early 450, delayed 438). Mean age 78.3 years; 46.2% women; 49.1% had previously known atrial fibrillation; 17.5% had a prior stroke.",
+    "intervention": "Early DOAC start (within 4 days of stroke onset). The investigator chose the DOAC.",
+    "comparator": "Delayed DOAC start (days 5 to 10).",
+    "primaryResult": "Recurrent ischemic stroke, symptomatic intracerebral hemorrhage, or all-cause death at 90 days: 31 (6.89%) early vs 38 (8.68%) delayed (absolute risk difference −1.79%; 95% CI −5.31% to 1.74%; P=0.004 for noninferiority, margin 3%).",
+    "safety": "No patient in either group had symptomatic intracerebral hemorrhage. Ischemic stroke 3.11% vs 4.57% (risk difference −1.46%; 95% CI −3.98% to 1.07%). All-cause death 4.67% vs 5.71% (risk difference −1.04%; 95% CI −3.96% to 1.88%).",
+    "takeaway": "After acute ischemic stroke with atrial fibrillation, starting a DOAC within 4 days was noninferior to starting on days 5 to 10 for the 90-day composite (6.89% vs 8.68%; P=0.004 for noninferiority). No symptomatic intracerebral hemorrhage occurred in either group.",
+    "cite": "Oldgren J, et al. Circulation. 2022;146(14):1056-1066.",
+    "doi": "10.1161/CIRCULATIONAHA.122.060666",
+    "url": "https://doi.org/10.1161/CIRCULATIONAHA.122.060666",
+    "pmid": "36065821",
+    "expectedResults": null,
+    "background": "When to start a DOAC after ischemic stroke with atrial fibrillation has been tested in three randomized trials on this site: TIMING (2022), ELAN (2023), and OPTIMAS (2024).",
+    "designNotes": "Registry-based, randomized, noninferiority, open-label, blinded end-point trial using the Swedish Stroke Register. Noninferiority margin 3%. No patient lost to 90-day follow-up. ClinicalTrials.gov NCT02961348. A 2022 correction (Circulation. 2022;146(19):e279) changed only the article's license; the data did not change.",
+    "strengths": "Randomized, with complete 90-day follow-up. The registry-based design enrolled patients from routine stroke care. Blinded end-point assessment.",
+    "limitations": "Open-label. Run in one country. The individual components (ischemic stroke and death) had CIs that crossed zero. The abstract does not report stroke severity, major bleeding, or which DOACs were used.",
+    "journalClub": "TIMING, ELAN, and OPTIMAS each define early differently: TIMING randomized within 72 hours to within 4 days vs days 5 to 10. Compare the three primary outcomes and noninferiority framings. Discuss what a 3% noninferiority margin means when the observed rates were 6.89% and 8.68%.",
+    "guidelines": [],
+    "caveats": "Outcomes are at 90 days.",
+    "practiceTakeaway": "In TIMING, after acute ischemic stroke with atrial fibrillation, starting a DOAC within 4 days was noninferior to starting on days 5 to 10 for recurrent ischemic stroke, symptomatic intracerebral hemorrhage, or death at 90 days (6.89% vs 8.68%; P=0.004 for noninferiority), with no symptomatic intracerebral hemorrhage in either group.",
+    "questionsAnswered": [
+      {
+        "text": "Is an early DOAC start (within 4 days) after ischemic stroke with atrial fibrillation noninferior to a delayed start (days 5 to 10)? Yes, for the 90-day composite (6.89% vs 8.68%; P=0.004 for noninferiority).",
+        "source": "TIMING"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "The abstract does not report stroke severity, so how early starts perform after larger strokes is not shown. ELAN set timing by stroke severity.",
+        "source": "TIMING",
+        "addressedBy": "ELAN"
+      }
+    ]
   }
 ]

@@ -450,6 +450,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
           0
         ],
         [
+          "apache-af",
+          0
+        ],
+        [
           "timing",
           0
         ],
@@ -522,7 +526,15 @@ window.ANTICOAG_OPEN_QUESTIONS = {
           0
         ],
         [
+          "magellan",
+          0
+        ],
+        [
           "epcat-ii",
+          0
+        ],
+        [
+          "cristal",
           0
         ]
       ]
@@ -533,6 +545,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
       "items": [
         [
           "pacific-stroke",
+          0
+        ],
+        [
+          "pacific-af",
           0
         ],
         [
@@ -607,6 +623,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "Caravaggio": "caravaggio",
     "CHAMPION-AF": "champion-af",
     "COMPASS": "compass",
+    "CRISTAL": "cristal",
     "EINSTEIN-CHOICE": "einstein-choice",
     "ELAN": "elan",
     "ELDERCARE-AF": "eldercare-af",
@@ -617,6 +634,8 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "HI-PEITHO": "hi-peitho",
     "Hokusai VTE Cancer": "hokusai-vte-cancer",
     "INVICTUS": "invictus",
+    "MARINER": "mariner",
+    "OCEANIC-AF": "oceanic-af",
     "OCEANIC-STROKE": "oceanic-stroke",
     "OPTIMAS": "optimas",
     "OPTION": "option",

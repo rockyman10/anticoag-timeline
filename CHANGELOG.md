@@ -2,6 +2,13 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-10-31 — Drug-target marks on the clotting cascade
+
+- Learn lesson 1 still opens the classic Y from Show cascade. Hide and Skip are unchanged. A new button, Show where drugs act, draws marks on that same map. Hide drug targets clears the marks and returns the classic map. The nine AF DOAC evidence charts are unchanged.
+- Squares and dashed outlines mark factors II, VII, IX, and X for warfarin (a vitamin K antagonist). A diamond marks factor Xa for apixaban, rivaroxaban, and edoxaban. A circle marks thrombin (IIa) for dabigatran. Factor VIIIa and factor Va are not marked. Proteins C and S are not on this map, so they are not marked. No doses and no trial rates.
+- Wording: those factor Xa inhibitors inhibit factor Xa, and dabigatran inhibits thrombin (factor IIa). The open strip line is “Marks show where these anticoagulants act.”
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-10-31 — Five trial cards: TRAPS, PERIOP2, TIMING, SoSTART, and WARFASA
 
 - New cards from the published abstracts only: TRAPS (Blood 2018), PERIOP2 (BMJ 2021), TIMING (Circulation 2022), SoSTART (Lancet Neurology 2021), and WARFASA (NEJM 2012). Counts, intervals, and results are the abstract figures. The TIMING one-year follow-up is not used.

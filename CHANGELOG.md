@@ -6,6 +6,7 @@ Newest first. Record site changes here. The site does not render this file.
 
 - Learn lesson 1 still opens the classic Y from Show cascade. Hide and Skip are unchanged. A new button, Show where drugs act, draws marks on that same map. Hide drug targets clears the marks and returns the classic map. The nine AF DOAC evidence charts are unchanged.
 - Squares and dashed outlines mark factors II, VII, IX, and X for warfarin (a vitamin K antagonist). A diamond marks factor Xa for apixaban, rivaroxaban, and edoxaban. A circle marks thrombin (IIa) for dabigatran. Factor VIIIa and factor Va are not marked. Proteins C and S are not on this map, so they are not marked. No doses and no trial rates.
+- Wording: those factor Xa inhibitors inhibit factor Xa, and dabigatran inhibits thrombin (factor IIa). The open strip line is “Marks show where these anticoagulants act.”
 - Educational only. Wording stays DOAC. reviewedBy unchanged.
 
 ## 2026-10-28 — Cascade strip shows its hook once

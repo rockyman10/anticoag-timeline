@@ -5118,7 +5118,7 @@
     if (!expanded) learnView.drugTargetsOn = false;
     const targetsOn = !!(expanded && learnView.drugTargetsOn && g && g.id === "g-cascade-y-full");
     const hook = targetsOn
-      ? "Same Y. Marks show where anticoagulants act."
+      ? "Same Y. Marks show where these anticoagulants act."
       : (learnGraphicHook(g) || "Learn the Y before the pills.");
     const title = (g && g.title) || "";
     const LV = window.ANTICOAG_LEARN_VISUALS;

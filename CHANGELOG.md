@@ -2,6 +2,13 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-02 — CRISTAL, MAGELLAN, and PACIFIC-AF join existing playlists
+
+- VTE prophylaxis (medical and surgical) now includes MAGELLAN (2013) and CRISTAL (2022). The order stays by year: MEDENOX, MAGELLAN, MARINER, EPCAT II, CRISTAL.
+- What's next (FXI / pending) now includes PACIFIC-AF (2022), after PACIFIC-STROKE and before OCEANIC-AF. The rest of that playlist is unchanged.
+- APACHE-AF is not on a playlist. The site has no stroke or intracerebral-hemorrhage playlist. No new playlist was added.
+- No trial card text or numbers changed. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-01 — Four trial cards: CRISTAL, MAGELLAN, PACIFIC-AF, and APACHE-AF
 
 - New cards from the published abstracts only: CRISTAL (JAMA 2022), MAGELLAN (NEJM 2013), PACIFIC-AF (Lancet 2022), and APACHE-AF (Lancet Neurology 2021). Counts, intervals, and results are the figures in the cleared abstract-level cells.

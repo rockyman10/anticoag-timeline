@@ -21,8 +21,8 @@ window.ANTICOAG_PATHWAYS = [
   {
     id: "vte-prophylaxis",
     title: "VTE prophylaxis (medical and surgical)",
-    description: "Thromboprophylaxis outside cancer: acutely ill medical inpatients (MEDENOX), medically ill patients after discharge (MARINER), and extended prophylaxis after hip or knee arthroplasty (EPCAT II).",
-    trialIds: ["medenox", "mariner", "epcat-ii"]
+    description: "Thromboprophylaxis outside cancer: acutely ill medical inpatients (MEDENOX and MAGELLAN), medically ill patients after discharge (MARINER), and prophylaxis after hip or knee arthroplasty (EPCAT II and CRISTAL).",
+    trialIds: ["medenox", "magellan", "mariner", "epcat-ii", "cristal"]
   },
   {
     id: "af-pci",
@@ -52,6 +52,6 @@ window.ANTICOAG_PATHWAYS = [
     id: "whats-next",
     title: "What's next (FXI / pending)",
     description: "Factor XI lessons to date and pending AF, stroke, and post-ICH programs.",
-    trialIds: ["pacific-stroke", "oceanic-af", "azalea-timi-71", "oceanic-stroke", "librexia-acs", "aster-magnolia", "librexia-af", "librexia-stroke", "aspire"]
+    trialIds: ["pacific-stroke", "pacific-af", "oceanic-af", "azalea-timi-71", "oceanic-stroke", "librexia-acs", "aster-magnolia", "librexia-af", "librexia-stroke", "aspire"]
   }
 ];

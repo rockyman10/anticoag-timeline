@@ -5898,5 +5898,168 @@ window.ANTICOAG_TRIALS = [
         "addressedBy": "ELAN"
       }
     ]
+  },
+  {
+    "id": "cristal",
+    "acronym": "CRISTAL",
+    "year": 2022,
+    "yearLabel": "2022",
+    "indication": "VTE",
+    "status": "recent",
+    "title": "Aspirin vs Enoxaparin for Symptomatic VTE Prophylaxis after Hip or Knee Arthroplasty",
+    "population": "9,711 adults having hip or knee arthroplasty at 31 Australian hospitals (aspirin 5,675, enoxaparin 4,036). Median age 68 years; 56.8% female. Patients already on anticoagulation before surgery, or with a contraindication to either drug, were excluded.",
+    "intervention": "Aspirin 100 mg daily for 35 days after hip arthroplasty and 14 days after knee arthroplasty, as given in the trial (hospital-level allocation).",
+    "comparator": "Enoxaparin 40 mg daily for the same durations, as given in the trial.",
+    "primaryResult": "Symptomatic VTE within 90 days, with below-knee DVT counted, occurred in 3.45% with aspirin vs 1.82% with enoxaparin (estimated difference 1.97%; 95% CI 0.54%–3.41%). Aspirin did not meet the 1% noninferiority margin, and enoxaparin was significantly superior (P=.007). Of the 256 patients with symptomatic VTE, the events included 79 PEs, 18 above-knee DVTs, and 174 below-knee DVTs.",
+    "safety": "Death and major bleeding within 90 days were among 6 secondary outcomes, and none of the 6 was significantly better with enoxaparin. The abstract gives no bleeding rates.",
+    "takeaway": "After hip or knee arthroplasty, aspirin was compared with enoxaparin across 31 Australian hospitals. Symptomatic VTE within 90 days was 3.45% vs 1.82%, so aspirin was not noninferior and enoxaparin was superior (P=.007).",
+    "cite": "CRISTAL Study Group; Sidhu VS, et al. JAMA. 2022;328(8):719-727.",
+    "doi": "10.1001/jama.2022.13416",
+    "url": "https://doi.org/10.1001/jama.2022.13416",
+    "pmid": "35997730",
+    "expectedResults": null,
+    "background": "Aspirin alone is widely used for prophylaxis after hip and knee arthroplasty, but randomized evidence for it against a heparin was limited. CRISTAL tested whether aspirin was noninferior to enoxaparin for symptomatic VTE.",
+    "designNotes": "Cluster-randomized, crossover, registry-nested noninferiority trial in 31 Australian hospitals that each performed more than 250 hip or knee arthroplasties a year. Hospitals, not patients, were randomized, and 16 of 31 crossed over before the trial stopped. Enrollment stopped when an interim analysis met the stopping rule, at 9,711 of a planned 15,562 patients (62%). Analyses were by randomization group. Registered as ACTRN12618001879257.",
+    "strengths": "Large, pragmatic, and embedded in a national joint registry. The outcome was symptomatic VTE rather than screening-detected clots.",
+    "limitations": "Hospital-level allocation with uneven group sizes (5,675 vs 4,036). Stopped early at 62% of planned enrollment. Below-knee DVT made up most of the events, so the difference rests largely on distal clots. The abstract gives no rate for major bleeding.",
+    "journalClub": "EPCAT II found aspirin noninferior to rivaroxaban after a 5-day rivaroxaban lead-in. CRISTAL gave aspirin from surgery onward and found it inferior to enoxaparin. Discuss how the lead-in, the comparator, and counting below-knee DVT could each explain the different answers.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms. Allocation was by hospital, not by patient.",
+    "practiceTakeaway": "In CRISTAL, after hip or knee arthroplasty, aspirin from surgery onward had more symptomatic VTE within 90 days than enoxaparin (3.45% vs 1.82%) and did not meet noninferiority.",
+    "questionsAnswered": [
+      {
+        "text": "After hip or knee arthroplasty, is aspirin alone noninferior to enoxaparin for symptomatic VTE? No. The 90-day rates were 3.45% vs 1.82% (estimated difference 1.97%; 95% CI 0.54%–3.41%), and enoxaparin was superior.",
+        "source": "CRISTAL"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "Whether the difference matters once below-knee DVT is set aside, and whether aspirin is cost-effective despite more events, is not settled by the abstract. The authors point to a cost-effectiveness analysis.",
+        "source": "CRISTAL"
+      }
+    ]
+  },
+  {
+    "id": "magellan",
+    "acronym": "MAGELLAN",
+    "year": 2013,
+    "yearLabel": "2013",
+    "indication": "VTE",
+    "status": "published",
+    "title": "Rivaroxaban for Thromboprophylaxis in Acutely Ill Medical Patients",
+    "population": "8,101 patients aged 40 or older hospitalized for an acute medical illness. The safety population was 3,997 with rivaroxaban and 4,001 with enoxaparin.",
+    "intervention": "Rivaroxaban 10 mg once daily by mouth for 35±4 days, with subcutaneous placebo for 10±4 days, as given in the trial.",
+    "comparator": "Enoxaparin 40 mg subcutaneously once daily for 10±4 days, then oral placebo, as given in the trial.",
+    "primaryResult": "The composite of asymptomatic proximal or symptomatic VTE at day 10 was 2.7% in both groups (78 of 2,938 vs 82 of 2,993; RR 0.97; 95% CI 0.71–1.31; P=0.003 for noninferiority). At day 35 it was 4.4% with extended rivaroxaban vs 5.7% with enoxaparin followed by placebo (131 of 2,967 vs 175 of 3,057; RR 0.77; 95% CI 0.62–0.96; P=0.02).",
+    "safety": "Major or CRNM bleeding was 2.8% with rivaroxaban vs 1.2% with enoxaparin at day 10 (111 vs 49 patients; P<0.001), and 4.1% vs 1.7% at day 35 (164 vs 67; P<0.001).",
+    "takeaway": "In acutely ill medical inpatients, 35 days of rivaroxaban was compared with 10 days of enoxaparin. Rivaroxaban was noninferior at day 10 (2.7% vs 2.7%) and lowered VTE at day 35 (4.4% vs 5.7%), but major or CRNM bleeding was higher at both time points (4.1% vs 1.7% at day 35).",
+    "cite": "Cohen AT, et al. N Engl J Med. 2013;368(6):513-523.",
+    "doi": "10.1056/NEJMoa1111096",
+    "url": "https://doi.org/10.1056/NEJMoa1111096",
+    "pmid": "23388003",
+    "expectedResults": null,
+    "background": "How long to continue prophylaxis in hospitalized medical patients was unknown. MAGELLAN tested whether a longer course of an oral factor Xa inhibitor beat a standard course of enoxaparin.",
+    "designNotes": "Multicenter, randomized, double-blind trial in which each group received a placebo matching the other drug, with two primary efficacy tests: noninferiority at day 10 and superiority at day 35. The principal safety outcome was major or CRNM bleeding. ClinicalTrials.gov NCT00571649.",
+    "strengths": "Large and double-blind. Separate prespecified tests for the standard and the extended period.",
+    "limitations": "The efficacy composite counted asymptomatic proximal DVT found on screening. Efficacy and safety were analyzed in different populations, so the denominators differ. The abstract reports major and CRNM bleeding together, not major bleeding alone.",
+    "journalClub": "Extended rivaroxaban lowered VTE at day 35, but major or CRNM bleeding was more than twice as frequent at both time points. MARINER later tested rivaroxaban after discharge in selected patients against placebo. Discuss how a benefit that leans on screening-detected clots should be weighed against clinically apparent bleeding.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms. The VTE composite includes asymptomatic proximal DVT found on screening.",
+    "practiceTakeaway": "In MAGELLAN, in acutely ill medical inpatients, 35 days of rivaroxaban lowered VTE at day 35 compared with 10 days of enoxaparin (4.4% vs 5.7%), with more major or CRNM bleeding (4.1% vs 1.7%).",
+    "questionsAnswered": [
+      {
+        "text": "Does extending prophylaxis with rivaroxaban to 35 days help acutely ill medical patients? It lowered VTE at day 35 (4.4% vs 5.7%; RR 0.77; 95% CI 0.62–0.96) and increased major or CRNM bleeding (4.1% vs 1.7%; P<0.001).",
+        "source": "MAGELLAN"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "Could a selected, lower-bleeding-risk group benefit from prophylaxis after discharge? MARINER later tested 45 days of rivaroxaban against placebo after discharge in patients selected by risk score or D-dimer, and the primary outcome was not significantly reduced.",
+        "source": "MAGELLAN",
+        "addressedBy": "MARINER"
+      }
+    ]
+  },
+  {
+    "id": "pacific-af",
+    "acronym": "PACIFIC-AF",
+    "year": 2022,
+    "yearLabel": "2022",
+    "indication": "FXI pipeline",
+    "status": "recent",
+    "title": "Asundexian vs Apixaban in Atrial Fibrillation: Phase 2 Dose-Finding Safety Trial",
+    "population": "753 treated patients aged 45 or older with AF, a CHA2DS2-VASc score of at least 2 (men) or 3 (women), and increased bleeding risk, at 93 sites in 14 countries (asundexian 20 mg 249, asundexian 50 mg 254, apixaban 250). Mean age 73.7 years; 41% women; 29% with chronic kidney disease.",
+    "intervention": "Asundexian, an oral FXIa inhibitor, 20 mg or 50 mg once daily, as given in the trial.",
+    "comparator": "Apixaban 5 mg twice daily, as given in the trial (double-dummy).",
+    "primaryResult": "Major or CRNM bleeding by International Society on Thrombosis and Haemostasis criteria was lower with asundexian than with apixaban (6 events). The ratio of incidence proportions was 0.50 (90% CI 0.14–1.68) for 20 mg (3 events), 0.16 (90% CI 0.01–0.99) for 50 mg (1 event), and 0.33 (90% CI 0.09–0.97) for both doses pooled (4 events). FXIa activity was inhibited by 81% at trough and 90% at peak with 20 mg, and by 92% and 94% with 50 mg.",
+    "safety": "Any adverse event occurred in 118 (47%) with asundexian 20 mg, 120 (47%) with 50 mg, and 122 (49%) with apixaban.",
+    "takeaway": "In older patients with AF and increased bleeding risk, asundexian 20 mg and 50 mg were compared with apixaban in a phase 2 dose-finding trial. Bleeding events were few (4 pooled vs 6), with a pooled ratio of 0.33 (90% CI 0.09–0.97), and the 50 mg dose gave near-complete FXIa inhibition. Stroke prevention was not tested.",
+    "cite": "Piccini JP, et al. Lancet. 2022;399(10333):1383-1390.",
+    "doi": "10.1016/S0140-6736(22)00456-1",
+    "url": "https://doi.org/10.1016/S0140-6736(22)00456-1",
+    "pmid": "35385695",
+    "expectedResults": null,
+    "background": "Bleeding limits DOAC use in AF. Inhibiting FXIa was expected to reduce thrombosis with little effect on hemostasis. PACIFIC-AF chose a dose of asundexian and compared its bleeding with apixaban.",
+    "designNotes": "Randomized (1:1:1), double-blind, double-dummy, phase 2 dose-finding trial at 93 sites in 14 countries, stratified by prior DOAC use. 862 enrolled, 755 randomized, 753 took study drug. The primary endpoint was a bleeding composite in all patients who took at least one dose. ClinicalTrials.gov NCT04218266.",
+    "strengths": "Double-blind and double-dummy against an active DOAC. Measured FXIa inhibition at trough and peak for both doses.",
+    "limitations": "Phase 2 with 10 primary events in total, so the intervals are wide and the 20 mg interval crosses 1. Results use 90% intervals, not 95%. Not designed or powered to test stroke prevention. Enrolled patients with increased bleeding risk, so the bleeding rates do not describe all AF.",
+    "journalClub": "PACIFIC-AF showed less bleeding with asundexian than apixaban in a small phase 2 sample. OCEANIC-AF then tested asundexian against apixaban for stroke prevention and stopped early for inferior efficacy. Discuss why a phase 2 bleeding advantage did not predict a phase 3 result.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms. Phase 2 safety trial. Not a reason to prescribe asundexian.",
+    "practiceTakeaway": "In PACIFIC-AF, a phase 2 trial in AF with increased bleeding risk, asundexian had fewer major or CRNM bleeding events than apixaban (pooled ratio 0.33; 90% CI 0.09–0.97; 4 vs 6 events), and it did not test stroke prevention.",
+    "questionsAnswered": [
+      {
+        "text": "Does asundexian cause less bleeding than apixaban in AF? In this phase 2 trial, major or CRNM bleeding was lower (pooled ratio 0.33; 90% CI 0.09–0.97), based on 4 vs 6 events.",
+        "source": "PACIFIC-AF"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "Does asundexian prevent stroke as well as apixaban? PACIFIC-AF did not test this. OCEANIC-AF later compared asundexian with apixaban and was stopped early for inferior efficacy.",
+        "source": "PACIFIC-AF",
+        "addressedBy": "OCEANIC-AF"
+      }
+    ]
+  },
+  {
+    "id": "apache-af",
+    "acronym": "APACHE-AF",
+    "year": 2021,
+    "yearLabel": "2021",
+    "indication": "AF",
+    "status": "published",
+    "title": "Apixaban vs No Anticoagulation after Anticoagulation-Associated Intracerebral Hemorrhage in AF",
+    "population": "101 patients with AF who survived an intracerebral hemorrhage while taking anticoagulation, enrolled 7 to 90 days after the bleed at 16 hospitals in the Netherlands (apixaban 50, avoid anticoagulation 51). CHA2DS2-VASc score of at least 2 and modified Rankin scale score of 4 or less. Median age 78 years.",
+    "intervention": "Apixaban 5 mg twice daily, or a reduced dose of 2.5 mg twice daily, as given in the trial.",
+    "comparator": "Avoiding anticoagulation. Antiplatelet therapy was allowed at the treating physician's discretion, and 26 of 51 (51%) started it.",
+    "primaryResult": "Over a median follow-up of 1.9 years, nonfatal stroke or vascular death occurred in 13 (26%) with apixaban vs 12 (24%) with no anticoagulation. Annual event rates were 12.6% (95% CI 6.7–21.5) vs 11.9% (95% CI 6.2–20.8), with an adjusted HR of 1.05 (95% CI 0.48–2.31; P=0.90).",
+    "safety": "Serious adverse events that were not outcome events occurred in 29 of 50 (58%) with apixaban and 29 of 51 (57%) with no anticoagulation. None were lost to follow-up.",
+    "takeaway": "After an intracerebral hemorrhage on anticoagulation in AF, apixaban was compared with avoiding anticoagulation in a 101-patient phase 2 trial. Nonfatal stroke or vascular death was high in both groups (12.6% vs 11.9% per year; adjusted HR 1.05; 95% CI 0.48–2.31).",
+    "cite": "Schreuder FHBM, et al. Lancet Neurol. 2021;20(11):907-916.",
+    "doi": "10.1016/S1474-4422(21)00298-2",
+    "url": "https://doi.org/10.1016/S1474-4422(21)00298-2",
+    "pmid": "34687635",
+    "expectedResults": null,
+    "background": "After an intracerebral hemorrhage on anticoagulation, patients with AF face both recurrent bleeding and ischemic stroke. APACHE-AF estimated event rates with apixaban and with avoiding anticoagulation, to design a larger trial.",
+    "designNotes": "Prospective, randomized (1:1), open-label, phase 2 trial with masked end point assessment at 16 Dutch hospitals, 2015–2020. Randomization was stratified by intention to give antiplatelet therapy in the avoid group and minimized for age and hemorrhage location. Intention-to-treat Cox analysis. ClinicalTrials.gov NCT02565693.",
+    "strengths": "Randomized with masked end point assessment and no loss to follow-up. Enrolled only hemorrhages that occurred on anticoagulation, the group facing the restart decision.",
+    "limitations": "Phase 2 with 101 patients and 13 vs 12 primary events, so the HR interval is wide (0.48–2.31). Open-label. About half the control group took antiplatelet therapy. Designed to estimate rates for a larger trial, not to show a difference. Almost all participants (99%) were White.",
+    "journalClub": "SoSTART enrolled survivors of spontaneous ICH, and APACHE-AF only patients whose hemorrhage occurred on anticoagulation, and neither was powered to settle the restart question. Discuss what event rates near 12% per year in both groups mean for the size of the trial needed, and how PRESTIGE-AF built on these pilots.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms. Phase 2 trial designed to estimate event rates.",
+    "practiceTakeaway": "In APACHE-AF, after an anticoagulation-associated intracerebral hemorrhage in AF, nonfatal stroke or vascular death was about 12% per year whether patients got apixaban or avoided anticoagulation (adjusted HR 1.05; 95% CI 0.48–2.31).",
+    "questionsAnswered": [
+      {
+        "text": "After an intracerebral hemorrhage on anticoagulation in AF, how often do stroke or vascular death occur with and without apixaban? About 12% per year in both groups (12.6% vs 11.9%; adjusted HR 1.05; 95% CI 0.48–2.31).",
+        "source": "APACHE-AF"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "Which patients gain from restarting anticoagulation needs trials large enough to find subgroups, as the authors state. PRESTIGE-AF later tested a DOAC against no anticoagulation after spontaneous intracerebral hemorrhage.",
+        "source": "APACHE-AF",
+        "addressedBy": "PRESTIGE-AF"
+      }
+    ]
   }
 ]

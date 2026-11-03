@@ -2,6 +2,39 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-03 — Wording follow-up, no new figures
+
+- ACASA-TAVI spells computed tomography in the primary result. No other CT abbreviation is on that card.
+- POPular TAVI no longer lists a cohort B pointer as an open question. The pointer stays in the background and in the takeaway. It is removed from the citation, the intervention, the comparator, and the other repeated fields. The limitations line about a DOAC-versus-vitamin-K-antagonist split is removed from cohort A. The cohort B card already says the abstract does not split those results.
+- AUGUSTUS, OPTION, RIVER, and CLOSURE-AF journal-club lines read as sentences. OCEANIC-AF’s takeaway says the trial was stopped early, and that stroke or systemic embolism was higher with asundexian. The figures are unchanged.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
+## 2026-11-03 — Clinical figures from the literature check
+
+- GALILEO stays 2019. The takeaway no longer calls the bleeding increase significant. The primary result now has the death or thromboembolism figures (9.8 vs 7.2 per 100 person-years; HR 1.35; 95% CI 1.01–1.81). Doses are the ones given in the trial. Citation: Dangas GD, et al. N Engl J Med. 2020;382(2):120-129.
+- CRISTAL says the 1.97% difference is the paper’s hospital-level estimate, and adds 187 of 5,416 vs 69 of 3,787. Major bleeding is 17 of 5,401 (0.31%) vs 15 of 3,779 (0.40%), and deaths are 4 of 5,675 vs 2 of 4,036. The line that the abstract gives no bleeding rate is gone.
+- RE-COVER says the 0.4 percentage-point risk difference comes from Kaplan–Meier estimates adjusted for presentation and active cancer. Population: 2,564 randomized; 2,539 who received study drug were analyzed (1,274 vs 1,265).
+- ACASA-TAVI keeps RR 0.55 (95% CI 0.37–0.82). The takeaway no longer says halved. The intervention is factor Xa inhibitor DOAC monotherapy, and the comparator is aspirin. Safety figures are the co-primary composite. Citation: Dodgson CS, et al. JAMA. Published online August 30, 2026. doi:10.1001/jama.2026.17036.
+- COMPASS now carries the abstract figures (4.1% vs 5.4%; major bleeding 3.1% vs 1.9%). The unsupported net-clinical-benefit line is removed. WAVE is unchanged.
+- ASTER/MAGNOLIA journal club uses BARC type 3c or 5 (intracranial, vision-threatening intraocular, or fatal) and does not open with a label. AZALEA–TIMI 71, OCEANIC-AF, and LIBREXIA ACS now have the counts and intervals from those abstracts. OCEANIC-AF’s takeaway no longer says Landmark. LIBREXIA ACS no longer says “Stopped for futility Nov 2025.”
+- ENTRUST-AF PCI: 147 of the 746 edoxaban patients who received at least one dose started at 30 mg.
+- CANVAS: 638 (95%) is the group that received at least one dose (330 and 308), and 353 (55%) of that group were women. It is not a count of people who finished follow-up.
+- TIMING and WARFASA are unchanged.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
+## 2026-11-03 — Non-clinical trial-card consistency
+
+- ATLANTIS is year 2022, matching its year label and citation, so the timeline marker sits in 2022. Its status is Recent.
+- GALILEO stays 2019. The site dates a trial by online publication, and GALILEO was online on 16 November 2019. Its citation text is unchanged here.
+- Recent now includes INVICTUS (2022), FRAIL-AF (2024), ANNEXA-I (2024), RENOVE (2025), and API-CAT (2025), matching the other cards from those years. What's new still lists recent cards, and non-pending cards from 2025 onward.
+- RE-COVER states that 2,564 patients were randomized and that the 2,539 who received study drug were analyzed (1,274 vs 1,265). CANVAS states that 638 (95%) received at least one dose, and that 353 women (55%) are in that group. ENTRUST-AF PCI states that 147 of the 746 edoxaban patients who received at least one dose started at 30 mg.
+- POPular TAVI keeps cohort A. Cohort B stays on the POPular TAVI OAC card, and the cohort A card points there. This reverses the 2026-10-26 snapshot that put both cohorts on the POPular TAVI card. Cohort A figures are unchanged. Cohort B figures on the OAC card are unchanged.
+- RE-DUAL PCI puts the bleeding primary in the primary result, using the figures that were in the safety field, and puts the efficacy composite in the safety field. The figures were not recalculated.
+- Journal-club lines that opened with a label and a colon now read as sentences. The home-page abbreviation list adds CHA₂DS₂-VASc, CHADS2, HAS-BLED, NIHSS, NYHA, PESI, ISTH, TIMI, and CYP3A4. Cards use CHA₂DS₂-VASc, the form already on the main page. IU is written as international units. DOAC-naive, 1,884, and elevated troponin replace the variant spellings. Open-question labels match the card acronyms. PERIOP2 lists dalteparin before placebo. EPCAT II says the 0.06 percentage-point difference is in favor of aspirin.
+- Citations name a first author for ACASA-TAVI (Dodgson), PRESTIGE-AF (Veltkamp), OPTIMA-AF (Sotomi), and HI-PRO (Piazza), taken from each card's own DOI on Crossref. ACASA-TAVI's source link is the doi.org URL for 10.1001/jama.2026.17036.
+- Nine non-pending cards still have no Questions section. None were added: EPIC-CAD, ADAPT AF-DES, OAC-ALONE, PAUSE, MEDENOX, RENAL-AF, AXADIA-AFNET 8, ENRICH-AF, and ASTER / MAGNOLIA.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-02 — CRISTAL, MAGELLAN, and PACIFIC-AF join existing playlists
 
 - VTE prophylaxis (medical and surgical) now includes MAGELLAN (2013) and CRISTAL (2022). The order stays by year: MEDENOX, MAGELLAN, MARINER, EPCAT II, CRISTAL.

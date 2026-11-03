@@ -615,7 +615,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "ARISTOTLE": "aristotle",
     "ARTESiA": "artesia",
     "ATLANTIS": "atlantis",
-    "ATLAS ACS 2": "atlas-acs2",
+    "ATLAS ACS 2–TIMI 51": "atlas-acs2",
     "ATTRACT": "attract",
     "AUGUSTUS": "augustus",
     "AVERROES": "averroes",

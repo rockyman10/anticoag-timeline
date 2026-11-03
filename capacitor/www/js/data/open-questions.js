@@ -342,10 +342,6 @@ window.ANTICOAG_OPEN_QUESTIONS = {
           0
         ],
         [
-          "popular-tavi",
-          1
-        ],
-        [
           "river",
           0
         ],
@@ -644,7 +640,6 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "OPTIMAS": "optimas",
     "OPTION": "option",
     "PAUSE": "pause",
-    "POPular TAVI OAC": "popular-tavi-oac",
     "PRAGUE-17": "prague-17",
     "PRESTIGE-AF": "prestige-af",
     "PREVAIL": "prevail",

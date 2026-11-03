@@ -1770,7 +1770,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "This was a 2×2 factorial randomized trial (N≈4,614), comparing apixaban vs VKA. It also compared aspirin vs placebo. On P2Y12 background after ACS and/or PCI.",
     "strengths": "Factorial design separately tested anticoagulant and aspirin questions. Apixaban superior for bleeding vs VKA.",
     "limitations": "Aspirin drop timing and ACS subtypes require nuanced application. Not a pure potent-P2Y12 study.",
-    "journalClub": "The two factorial questions stand apart. Apixaban vs VKA (major or CRNM bleeding 10.5% vs 14.7%) and aspirin vs placebo (16.1% vs 9.0%). The abstract calls ischemic events similar without printing absolute rates, so AUGUSTUS is stronger evidence about bleeding than about ischemic protection.",
+    "journalClub": "The two factorial questions stand apart. Apixaban had less major or CRNM bleeding than a VKA (10.5% vs 14.7%), and aspirin had more major or CRNM bleeding than placebo (16.1% vs 9.0%). The abstract calls ischemic events similar without printing absolute rates, so AUGUSTUS is stronger evidence about bleeding than about ischemic protection.",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -3153,7 +3153,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial of left atrial appendage closure versus oral anticoagulation after catheter ablation for atrial fibrillation (N=1,600 randomized). Primary safety was non-procedure-related major or CRNM bleeding (superiority). Primary efficacy was death, stroke, or systemic embolism at 36 months (noninferiority). The secondary endpoint was major bleeding, including procedure-related bleeding, through 36 months.",
     "strengths": "The two prespecified primary endpoints showed superiority for non-procedure-related major or CRNM bleeding (8.5% vs 18.1%) and noninferiority for death, stroke, or systemic embolism at 36 months (5.3% vs 5.8%).",
     "limitations": "Ablation population differs from general AF stroke-prevention cohorts. There was no arm that stopped anticoagulation after ablation alone.",
-    "journalClub": "OPTION has two primaries. Safety superiority for non-procedure-related major or CRNM bleeding (8.5% vs 18.1%) and efficacy noninferiority for death, stroke, or systemic embolism at 36 months (5.3% vs 5.8%). The secondary endpoint is major bleeding, including procedure-related bleeding, through 36 months (3.9% vs 5.0%).",
+    "journalClub": "OPTION has two primary endpoints. One showed superiority for non-procedure-related major or CRNM bleeding (8.5% vs 18.1%). The other showed noninferiority for death, stroke, or systemic embolism at 36 months (5.3% vs 5.8%). The secondary endpoint is major bleeding, including procedure-related bleeding, through 36 months (3.9% vs 5.0%).",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -3359,31 +3359,31 @@ window.ANTICOAG_TRIALS = [
     "indication": "valvular/TAVI",
     "status": "published",
     "title": "POPular TAVI cohort A, aspirin with or without clopidogrel",
-    "population": "Registry NCT02247128 names cohort A as patients without an indication for oral anticoagulation before TAVI. In cohort A, with no long-term oral-anticoagulation indication, the groups were aspirin alone 331 and aspirin plus clopidogrel 334. The Brouwer abstract does not print age or sex. During the trial, 44 patients (13.3%) assigned to aspirin alone and 32 (9.6%) assigned to aspirin plus clopidogrel received oral anticoagulation. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
-    "intervention": "In cohort A, the regimen was aspirin alone. The Brouwer abstract does not print the aspirin milligram dose. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
-    "comparator": "In cohort A, the regimen was aspirin plus clopidogrel for 3 months. The Brouwer abstract does not print the clopidogrel milligram dose. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
-    "primaryResult": "Cohort A, no long-term oral-anticoagulation indication (Brouwer et al.). Two primary bleeding outcomes over 12 months. All bleeding occurred in 50 of 331 (15.1%) with aspirin alone versus 89 of 334 (26.6%) with aspirin plus clopidogrel (risk ratio 0.57; 95% CI 0.42–0.77; P=0.001). Non-procedure-related bleeding occurred in 50 (15.1%) versus 83 (24.9%) (risk ratio 0.61; 95% CI 0.44–0.83; P=0.005). Most bleeding at the TAVI puncture site counted as non-procedure-related. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card. The rates are not pooled.",
-    "safety": "Cohort A secondary composite 1 (cardiovascular death, non-procedure-related bleeding, stroke, or myocardial infarction) occurred in 76 (23.0%) versus 104 (31.1%) (difference −8.2 percentage points; 95% CI for noninferiority −14.9 to −1.5; risk ratio 0.74; 95% CI for superiority 0.57–0.95; P=0.04). That composite includes bleeding. Cohort A secondary composite 2 (cardiovascular death, ischemic stroke, or myocardial infarction) occurred in 32 (9.7%) versus 33 (9.9%) (difference −0.2 percentage points; 95% CI for noninferiority −4.7 to 4.3; P=0.004 for noninferiority; risk ratio 0.98; 95% CI for superiority 0.62–1.55; P=0.93). The noninferiority margin for the secondary composites was 7.5 percentage points. Less bleeding is not fewer ischemic events. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
+    "population": "Registry NCT02247128 names cohort A as patients without an indication for oral anticoagulation before TAVI. In cohort A, with no long-term oral-anticoagulation indication, the groups were aspirin alone 331 and aspirin plus clopidogrel 334. The Brouwer abstract does not print age or sex. During the trial, 44 patients (13.3%) assigned to aspirin alone and 32 (9.6%) assigned to aspirin plus clopidogrel received oral anticoagulation.",
+    "intervention": "In cohort A, the regimen was aspirin alone. The Brouwer abstract does not print the aspirin milligram dose.",
+    "comparator": "In cohort A, the regimen was aspirin plus clopidogrel for 3 months. The Brouwer abstract does not print the clopidogrel milligram dose.",
+    "primaryResult": "Cohort A, no long-term oral-anticoagulation indication (Brouwer et al.). Two primary bleeding outcomes over 12 months. All bleeding occurred in 50 of 331 (15.1%) with aspirin alone versus 89 of 334 (26.6%) with aspirin plus clopidogrel (risk ratio 0.57; 95% CI 0.42–0.77; P=0.001). Non-procedure-related bleeding occurred in 50 (15.1%) versus 83 (24.9%) (risk ratio 0.61; 95% CI 0.44–0.83; P=0.005). Most bleeding at the TAVI puncture site counted as non-procedure-related. The rates are not pooled.",
+    "safety": "Cohort A secondary composite 1 (cardiovascular death, non-procedure-related bleeding, stroke, or myocardial infarction) occurred in 76 (23.0%) versus 104 (31.1%) (difference −8.2 percentage points; 95% CI for noninferiority −14.9 to −1.5; risk ratio 0.74; 95% CI for superiority 0.57–0.95; P=0.04). That composite includes bleeding. Cohort A secondary composite 2 (cardiovascular death, ischemic stroke, or myocardial infarction) occurred in 32 (9.7%) versus 33 (9.9%) (difference −0.2 percentage points; 95% CI for noninferiority −4.7 to 4.3; P=0.004 for noninferiority; risk ratio 0.98; 95% CI for superiority 0.62–1.55; P=0.93). The noninferiority margin for the secondary composites was 7.5 percentage points. Less bleeding is not fewer ischemic events.",
     "takeaway": "In cohort A, with no long-term oral-anticoagulation indication, aspirin alone had less 12-month bleeding than aspirin plus clopidogrel (15.1% vs 26.6%). Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
-    "cite": "Cohort A, no long-term oral-anticoagulation indication, is Brouwer J, et al. N Engl J Med. 2020;383:1447-1457. https://doi.org/10.1056/NEJMoa2017815. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
+    "cite": "Cohort A, no long-term oral-anticoagulation indication, is Brouwer J, et al. N Engl J Med. 2020;383:1447-1457. https://doi.org/10.1056/NEJMoa2017815.",
     "doi": "10.1056/NEJMoa2017815",
     "url": "https://doi.org/10.1056/NEJMoa2017815",
     "pmid": "32865376",
     "expectedResults": null,
     "background": "POPular TAVI randomized two cohorts and published them as two papers. Cohort A, no long-term oral-anticoagulation indication, is aspirin alone versus aspirin plus clopidogrel (Brouwer et al., doi:10.1056/NEJMoa2017815). Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card. GALILEO and ENVISAGE-TAVI AF ask different questions.",
-    "designNotes": "Randomized 1:1. Registry NCT02247128 names cohort A as patients without an indication for long-term oral anticoagulation. Cohort A has two bleeding primary outcomes and two secondary composites, tested for noninferiority with a 7.5 percentage-point margin and then for superiority. European Union Clinical Trials Register 2013-003125-28. ClinicalTrials.gov NCT02247128. The abstract calls the design randomized and does not print a masking statement or the aspirin or clopidogrel milligram doses. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
+    "designNotes": "Randomized 1:1. Registry NCT02247128 names cohort A as patients without an indication for long-term oral anticoagulation. Cohort A has two bleeding primary outcomes and two secondary composites, tested for noninferiority with a 7.5 percentage-point margin and then for superiority. European Union Clinical Trials Register 2013-003125-28. ClinicalTrials.gov NCT02247128. The abstract calls the design randomized and does not print a masking statement or the aspirin or clopidogrel milligram doses.",
     "strengths": "Cohort A is a randomized bleeding comparison, with the ischemic composite reported separately, so less bleeding is not taught as fewer strokes or myocardial infarctions.",
-    "limitations": "In cohort A, bleeding includes access-site events. Some patients started oral anticoagulation during follow-up (13.3% and 9.6%). The superiority interval for cardiovascular death, ischemic stroke, or myocardial infarction includes 1 (0.62–1.55). The abstract does not print a DOAC-versus-vitamin-K-antagonist split. The two cohorts are not pooled. Not ENVISAGE-TAVI AF. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
-    "journalClub": "Cohort A had less bleeding with aspirin alone, with risk ratios 0.57 and 0.61. The ischemic secondary composite was 9.7% versus 9.9% (superiority P=0.93). Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
+    "limitations": "In cohort A, bleeding includes access-site events. Some patients started oral anticoagulation during follow-up (13.3% and 9.6%). The superiority interval for cardiovascular death, ischemic stroke, or myocardial infarction includes 1 (0.62–1.55). The two cohorts are not pooled. Not ENVISAGE-TAVI AF.",
+    "journalClub": "Cohort A had less bleeding with aspirin alone, with risk ratios 0.57 and 0.61. The ischemic secondary composite was 9.7% versus 9.9% (superiority P=0.93).",
     "guidelines": [
       {
         "society": "ESC",
         "document": "TAVI antithrombotic therapy (teaching note)",
-        "note": "Aspirin alone versus aspirin plus clopidogrel for 3 months when there is no long-term oral-anticoagulation indication. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
+        "note": "Aspirin alone versus aspirin plus clopidogrel for 3 months when there is no long-term oral-anticoagulation indication.",
         "year": 2021
       }
     ],
-    "caveats": "Cohort A (no long-term oral-anticoagulation indication) is Brouwer et al., doi:10.1056/NEJMoa2017815. All bleeding 15.1% vs 26.6% (risk ratio 0.57; 95% CI 0.42–0.77). Ischemic composite 9.7% vs 9.9% (risk ratio 0.98; 95% CI 0.62–1.55). Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
+    "caveats": "Cohort A (no long-term oral-anticoagulation indication) is Brouwer et al., doi:10.1056/NEJMoa2017815. All bleeding 15.1% vs 26.6% (risk ratio 0.57; 95% CI 0.42–0.77). Ischemic composite 9.7% vs 9.9% (risk ratio 0.98; 95% CI 0.62–1.55).",
     "practiceTakeaway": "In POPular TAVI cohort A, patients had no long-term oral-anticoagulation indication. Aspirin alone versus aspirin plus clopidogrel for 3 months had 12-month all bleeding of 15.1% versus 26.6% (risk ratio 0.57; 95% CI 0.42–0.77) and an ischemic composite of 9.7% versus 9.9%. Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
     "questionsAnswered": [
       {
@@ -3399,11 +3399,6 @@ window.ANTICOAG_TRIALS = [
       {
         "text": "The trial was not built to detect small differences in individual ischemic events, so less bleeding does not establish fewer ischemic events.",
         "source": "POPular TAVI"
-      },
-      {
-        "text": "Cohort B, patients already on oral anticoagulation, is on the POPular TAVI OAC card.",
-        "source": "POPular TAVI OAC",
-        "addressedBy": "POPular TAVI OAC"
       }
     ]
   },
@@ -3533,7 +3528,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial of rivaroxaban vs warfarin in AF with bioprosthetic mitral valve.",
     "strengths": "Noninferior net clinical outcome. Expanded DOAC use in this valvular context.",
     "limitations": "Not applicable to rheumatic mitral stenosis (see INVICTUS).",
-    "journalClub": "In RIVER, bioprosthetic mitral disease with AF is not rheumatic mitral stenosis. Rivaroxaban can be appropriate here.",
+    "journalClub": "In RIVER, atrial fibrillation with a bioprosthetic mitral valve is a different population from rheumatic mitral stenosis, and rivaroxaban can be appropriate in that setting.",
     "guidelines": [
       {
         "society": "ACC/AHA",
@@ -3838,7 +3833,7 @@ window.ANTICOAG_TRIALS = [
     "population": "360 patients aged 65 to 80 years undergoing TAVI for severe aortic stenosis at 3 Norwegian centers, without a long-term OAC indication. Mean age 74.5 years; 134 women (37%). 336 completed the trial (168 per group).",
     "intervention": "Factor Xa inhibitor DOAC monotherapy for 12 months after TAVI.",
     "comparator": "Aspirin monotherapy for 12 months after TAVI.",
-    "primaryResult": "HALT on blinded core-laboratory cardiac CT at 12 months occurred in 27 patients (16.2%) with a DOAC vs 48 (28.6%) with aspirin (RR 0.55; 95% CI 0.37–0.82; P=.004).",
+    "primaryResult": "HALT on blinded core-laboratory cardiac computed tomography at 12 months occurred in 27 patients (16.2%) with a DOAC vs 48 (28.6%) with aspirin (RR 0.55; 95% CI 0.37–0.82; P=.004).",
     "safety": "The co-primary safety composite of adjudicated Valve Academic Research Consortium 3 bleeding, thromboembolic events, and all-cause death at 12 months occurred in 13 patients (7.5%) with a DOAC vs 19 (10.6%) with aspirin (risk difference −3.3%; 95% CI −9.5% to 2.8%; P<.001 for noninferiority).",
     "takeaway": "In 360 patients aged 65 to 80 years after TAVI without a long-term OAC indication, factor Xa inhibitor DOAC monotherapy was compared with aspirin monotherapy for 12 months. HALT at 12 months was lower with a DOAC (16.2% vs 28.6%; RR 0.55; 95% CI 0.37–0.82), and the bleeding, thromboembolism, and death composite was noninferior (7.5% vs 10.6%). HALT is an imaging end point, and the trial was open-label.",
     "cite": "Dodgson CS, et al. JAMA. Published online August 30, 2026. doi:10.1001/jama.2026.17036",
@@ -5068,7 +5063,7 @@ window.ANTICOAG_TRIALS = [
     "comparator": "Apixaban.",
     "primaryResult": "Stroke or systemic embolism occurred in 98 patients (1.3%) with asundexian vs 26 (0.4%) with apixaban (HR 3.79; 95% CI 2.46–5.83). The trial was stopped prematurely on the recommendation of the independent data monitoring committee.",
     "safety": "Major bleeding occurred in 17 patients (0.2%) who received asundexian vs 53 (0.7%) who received apixaban (HR 0.32; 95% CI 0.18–0.55).",
-    "takeaway": "In 14,810 high-risk patients with AF, the FXIa inhibitor asundexian was compared with apixaban. The trial was stopped early because stroke or systemic embolism was higher with asundexian (1.3% vs 0.4%; HR 3.79; 95% CI 2.46–5.83), although major bleeding was lower (0.2% vs 0.7%; HR 0.32; 95% CI 0.18–0.55).",
+    "takeaway": "In 14,810 high-risk patients with AF, the FXIa inhibitor asundexian was compared with apixaban. The trial was stopped early, and stroke or systemic embolism was higher with asundexian (1.3% vs 0.4%; HR 3.79; 95% CI 2.46–5.83), although major bleeding was lower (0.2% vs 0.7%; HR 0.32; 95% CI 0.18–0.55).",
     "cite": "Piccini JP, et al. N Engl J Med. 2025;392(1):23-32.",
     "doi": "10.1056/NEJMoa2407105",
     "url": "https://doi.org/10.1056/NEJMoa2407105",
@@ -5506,7 +5501,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Multicenter randomized trial in Germany. Time-to-event noninferiority analysis with a hazard-ratio margin of 1.3. Median follow-up 3 years (interquartile range 1.7 to 4.7). The comparator was physician-directed care rather than a single protocol drug.",
     "strengths": "Randomized. Enrolled the older, high-risk population often discussed for closure (mean age 77.9 years; mean CHA₂DS₂-VASc score 5.2; mean HAS-BLED score 3.0). Net composite that included bleeding and death.",
     "limitations": "Medical-therapy regimens varied, because the comparator was physician-directed best medical care (DOACs if eligible). Single-country trial. The composite mixes thromboembolic, bleeding, and death components.",
-    "journalClub": "The contrast with CHAMPION-AF is this. CHAMPION-AF enrolled anticoagulation-suitable patients and compared closure with a DOAC. CLOSURE-AF enrolled patients at high risk of stroke and bleeding and compared closure with physician-directed best medical care. The populations, comparators, and composites differ, and so did the results.",
+    "journalClub": "CLOSURE-AF contrasts with CHAMPION-AF. CHAMPION-AF enrolled anticoagulation-suitable patients and compared closure with a DOAC. CLOSURE-AF enrolled patients at high risk of stroke and bleeding and compared closure with physician-directed best medical care. The populations, comparators, and composites differ, and so did the results.",
     "guidelines": [],
     "caveats": "Noninferiority was not shown. The abstract reports the noninferiority test and does not describe a superiority result. Component outcomes are not shown here.",
     "practiceTakeaway": "In CLOSURE-AF, among older patients with AF at high risk of stroke and bleeding, left atrial appendage closure did not meet noninferiority versus physician-directed medical care for stroke, systemic embolism, major bleeding, or cardiovascular or unexplained death (16.8 vs 13.3 per 100 patient-years over a median 3 years).",

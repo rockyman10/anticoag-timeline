@@ -2,6 +2,20 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-03 — Non-clinical trial-card consistency
+
+- ATLANTIS is year 2022, matching its year label and citation, so the timeline marker sits in 2022. Its status is Recent.
+- GALILEO stays 2019. The site dates a trial by online publication, and GALILEO was online on 16 November 2019. Its citation text is unchanged here.
+- Recent now includes INVICTUS (2022), FRAIL-AF (2024), ANNEXA-I (2024), RENOVE (2025), and API-CAT (2025), matching the other cards from those years. What's new still lists recent cards, and non-pending cards from 2025 onward.
+- RE-COVER names 2,539 as the efficacy analysis and 2,564 as the number randomized (efficacy analysis 1,274 vs 1,265). CANVAS says the 55% is among the 638 who completed. Those counts are unchanged. ENTRUST-AF PCI still says 147 of 746, because the card does not say what 746 counts.
+- POPular TAVI keeps cohort A. Cohort B stays on the POPular TAVI OAC card, and the cohort A card points there. This reverses the 2026-10-26 snapshot that put both cohorts on the POPular TAVI card. Cohort A figures are unchanged. Cohort B figures on the OAC card are unchanged.
+- RE-DUAL PCI puts the bleeding primary in the primary result, using the figures that were in the safety field, and puts the efficacy composite in the safety field. The figures were not recalculated.
+- Journal-club lines that opened with a label and a colon now read as sentences. The home-page abbreviation list adds CHA₂DS₂-VASc, CHADS2, HAS-BLED, NIHSS, NYHA, PESI, ISTH, TIMI, and CYP3A4. Cards use CHA₂DS₂-VASc, the form already on the main page. IU is written as international units. DOAC-naive, 1,884, and elevated troponin replace the variant spellings. Open-question labels match the card acronyms. PERIOP2 lists dalteparin before placebo. EPCAT II says the 0.06 percentage-point difference is in favor of aspirin.
+- Citations name a first author for ACASA-TAVI (Dodgson), PRESTIGE-AF (Veltkamp), OPTIMA-AF (Sotomi), and HI-PRO (Piazza), taken from each card's own DOI on Crossref. ACASA-TAVI's source link is the doi.org URL for 10.1001/jama.2026.17036.
+- Nine non-pending cards still have no Questions section. None were added: EPIC-CAD, ADAPT AF-DES, OAC-ALONE, PAUSE, MEDENOX, RENAL-AF, AXADIA-AFNET 8, ENRICH-AF, and ASTER / MAGNOLIA.
+- Left for a later batch: GALILEO takeaway and citation text, the CRISTAL difference, the RE-COVER risk difference, ACASA-TAVI's risk ratio and "halved," WAVE's COMPASS figures, ASTER/MAGNOLIA's factor XI figures, TIMING, and WARFASA.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-02 — CRISTAL, MAGELLAN, and PACIFIC-AF join existing playlists
 
 - VTE prophylaxis (medical and surgical) now includes MAGELLAN (2013) and CRISTAL (2022). The order stays by year: MEDENOX, MAGELLAN, MARINER, EPCAT II, CRISTAL.

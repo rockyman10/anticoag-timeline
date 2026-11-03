@@ -342,6 +342,10 @@ window.ANTICOAG_OPEN_QUESTIONS = {
           0
         ],
         [
+          "popular-tavi",
+          1
+        ],
+        [
           "river",
           0
         ],
@@ -615,7 +619,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "ARISTOTLE": "aristotle",
     "ARTESiA": "artesia",
     "ATLANTIS": "atlantis",
-    "ATLAS ACS 2": "atlas-acs2",
+    "ATLAS ACS 2–TIMI 51": "atlas-acs2",
     "ATTRACT": "attract",
     "AUGUSTUS": "augustus",
     "AVERROES": "averroes",
@@ -640,6 +644,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "OPTIMAS": "optimas",
     "OPTION": "option",
     "PAUSE": "pause",
+    "POPular TAVI OAC": "popular-tavi-oac",
     "PRAGUE-17": "prague-17",
     "PRESTIGE-AF": "prestige-af",
     "PREVAIL": "prevail",

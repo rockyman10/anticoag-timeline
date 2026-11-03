@@ -2010,7 +2010,7 @@ window.ANTICOAG_TX_PATHWAYS = {
             "Pooled (Galli 2026, 6 RCTs, n=5924): major bleeding HR 0.46 (0.32–0.66) with OAC alone; MACE HR 0.85 (0.66–1.09 in the full text; the abstract prints 0.64–1.09), not significant; all-cause death not significant. Pooled GRADE: high certainty that OAC alone reduced any bleeding (the pooled primary safety endpoint); moderate certainty for no difference in MACE.",
             "Do not teach that OAC alone reduces mortality: AFIRE and AQUATIC each stopped early for excess death with combination therapy, but pooled cardiovascular-death findings are inconsistent and pooled all-cause death is not significant in any meta-analysis.",
             "About 85% of pooled patients were East Asian; most trials were open-label; AQUATIC is the only European trial.",
-            "No guideline yet incorporates AQUATIC (2025) or ADAPT AF-DES (2026)."
+            "No guideline yet incorporates EPIC-CAD, AQUATIC (2025), or ADAPT AF-DES (2026)."
           ],
           "links": [
             {

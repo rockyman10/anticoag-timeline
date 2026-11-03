@@ -24,16 +24,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "RE-LY launched the DOAC era for AF: 150 mg was superior for stroke/SE. 110 mg was noninferior with less major bleeding. Both doses were randomized.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF guidelines (anticoagulation)",
-        "note": "Foundational evidence underpinning Class I preference for DOACs over warfarin in eligible NVAF when anticoagulation is indicated.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.3.1 (Antithrombotic Therapy), Recommendations 1 and 2 (Class 1, Level of evidence A); Recommendation 3 (Class 2a, Level of evidence A); Section 6.3.1 reference 1. Foundational evidence underpinning Class I preference for DOACs over warfarin in eligible NVAF when anticoagulation is indicated.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines",
-        "note": "Pivotal dabigatran AF program informing guideline-preferred DOAC stroke prevention in eligible patients.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2, Recommendation Table 7 (Class I, Level A), page 3344; reference 25. Pivotal dabigatran AF program informing guideline-preferred DOAC stroke prevention in eligible patients.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Open-label design. GI bleeding higher with 150 mg. Dyspepsia and renal dosing considerations matter in practice. Labeled dose-adjustment criteria apply. The 110 mg and 150 mg doses were separate randomized arms, not a dose chosen by patient risk.",
@@ -86,16 +88,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "ROCKET-AF established once-daily rivaroxaban as a warfarin alternative in higher-risk AF, with ICH benefit but GI bleeding trade-off.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF guidelines (anticoagulation)",
-        "note": "Underpins guideline-preferred rivaroxaban use for NVAF stroke prevention in eligible patients.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.3.1 (Antithrombotic Therapy), Recommendations 1 and 2 (Class 1, Level of evidence A); Section 6.3.1 reference 2. Underpins guideline-preferred rivaroxaban use for NVAF stroke prevention in eligible patients.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines",
-        "note": "Pivotal once-daily FXa inhibitor evidence reflected in European Society of Cardiology DOAC preference for eligible AF.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2, Recommendation Table 7 (Class I, Level A), page 3344; reference 28. Pivotal once-daily FXa inhibitor evidence reflected in European Society of Cardiology DOAC preference for eligible AF.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Higher-risk AF cohort. Warfarin time in therapeutic range varied by region. More GI bleeding vs warfarin despite less ICH.",
@@ -147,16 +151,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "ARISTOTLE is the main apixaban AF trial. Better stroke prevention and less major bleeding than warfarin.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF guidelines (anticoagulation)",
-        "note": "Core evidence for apixaban as a preferred DOAC in eligible NVAF (efficacy and bleeding vs warfarin).",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.3.1 (Antithrombotic Therapy), Recommendations 1 and 2 (Class 1, Level of evidence A); Recommendation 3 (Class 2a, Level of evidence A); Section 6.8.4 supportive text; Section 6.3.1 reference 3; Section 6.8.4 reference 24. Core evidence for apixaban as a preferred DOAC in eligible NVAF (efficacy and bleeding vs warfarin).",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines",
-        "note": "Pivotal apixaban AF trial informing European Society of Cardiology DOAC-over-VKA preference.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2, Recommendation Table 7 (Class I, Level A), page 3344; reference 27. Pivotal apixaban AF trial informing European Society of Cardiology DOAC-over-VKA preference.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "The 2.5 mg dose follows the trial's age, weight, and creatinine criteria. Under-dosing without criteria is a common error.",
@@ -209,16 +215,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In patients unsuitable for warfarin, aspirin prevented fewer strokes than apixaban.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF guidelines",
-        "note": "Supports preferring anticoagulation over aspirin when OAC is indicated but VKA is unsuitable.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.4 (Chronic Kidney Disease/Kidney Failure) supportive text; Section 6.8.4 reference 23. Supports preferring anticoagulation over aspirin when OAC is indicated but VKA is unsuitable.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines",
-        "note": "Aligned with guidance against aspirin as AF stroke prevention when a DOAC can be used.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 6 (Class III, Level A), page 3342; reference 242. Aligned with guidance against aspirin as AF stroke prevention when a DOAC can be used.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Stopped early. Aspirin is a weak AF comparator. Does not justify aspirin when a DOAC is feasible.",
@@ -272,10 +280,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "More vascular events with clopidogrel plus aspirin than with oral anticoagulation. Randomized, stopped early for that superiority finding. And limited because bleeding is a subgroup interaction rather than one overall rate. ACTIVE-W is read beside BAFTA when the question is anticoagulation versus antiplatelet therapy in atrial fibrillation. This is not a DOAC trial.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF anticoagulation (teaching note)",
-        "note": "Historical randomized comparison of oral anticoagulation with clopidogrel plus aspirin.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.3.1, Recommendation 4 (Class 3, Harm, Level of evidence B-R); Section 6.3.1 reference 8. Historical randomized comparison of oral anticoagulation with clopidogrel plus aspirin.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       }
     ],
     "caveats": "Stopped early. The primary vascular-event difference (relative risk 1.44 for clopidogrel plus aspirin versus OAC; 1.18–1.76; P=0.0003) favored oral anticoagulation. The abstract does not give one overall major-bleeding percentage. Not evidence for or against a specific DOAC.",
@@ -318,14 +327,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Elderly primary-care population (mean age 81.5 years) and a primary result that includes intracranial haemorrhage, so the warfarin benefit is not an ischaemic-only finding.",
     "limitations": "Warfarin, not a DOAC. Aspirin 75 mg is a weak stroke-prevention comparator. Extracranial haemorrhage was similar, and that sentence is not a claim of no bleeding at all.",
     "journalClub": "Fewer primary events with warfarin than with aspirin in people 75 or older. Randomized, with a published relative risk. And limited because the comparator is aspirin and the design is not a DOAC trial. BAFTA is read beside ACTIVE-W, then beside the later DOAC-versus-warfarin trials when the question moves from “anticoagulate or not” to “which oral anticoagulant.”",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "AF anticoagulation in older adults (teaching note)",
-        "note": "Historical warfarin-versus-aspirin trial in people aged 75 or older.",
-        "year": 2023
-      }
-    ],
+    "guidelines": [],
     "caveats": "Primary yearly risk 1.8% versus 3.8% (relative risk 0.48; 95% CI 0.28–0.80). The primary count includes haemorrhagic strokes. Extracranial haemorrhage was 1.4% versus 1.6% per year. Not a DOAC trial.",
     "practiceTakeaway": "In BAFTA, warfarin (INR 2–3) lowered fatal or disabling stroke, intracranial hemorrhage, or significant arterial embolism versus aspirin 75 mg in people aged 75 or older with AF (yearly risk 1.8% vs 3.8%; relative risk 0.48; 95% CI 0.28–0.80). Extracranial bleeding was similar (1.4% vs 1.6% per year).",
     "questionsAnswered": [
@@ -371,16 +373,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "ENGAGE completed the AF DOAC pivotal set. Once-daily edoxaban with a familiar efficacy/bleeding profile vs warfarin.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF guidelines (anticoagulation)",
-        "note": "Pivotal edoxaban AF evidence supporting guideline-preferred DOAC options in eligible NVAF.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.3.1 (Antithrombotic Therapy), Recommendations 1 and 2 (Class 1, Level of evidence A); Section 6.3.1 reference 4. Pivotal edoxaban AF evidence supporting guideline-preferred DOAC options in eligible NVAF.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines",
-        "note": "Informs once-daily edoxaban as a DOAC choice with attention to dose-reduction rules.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2, Recommendation Table 7 (Class I, Level A), page 3344; reference 26. Informs once-daily edoxaban as a DOAC choice with attention to dose-reduction rules.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Dose reduction rules affect efficacy. High-dose increased GI bleeding. The trial halved the dose by CrCl, weight, or potent P-glycoprotein inhibitor use (see design notes). The U.S. label's AF dose reduction is by CrCl alone.",
@@ -434,15 +438,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "Antithrombotic therapy for VTE",
-        "note": "Early DOAC VTE evidence contributing to oral anticoagulation options after parenteral lead-in.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Guidance statement 15 (strong recommendation, moderate-certainty evidence), Table 8 and treatment-phase background text; reference 166. Early DOAC VTE evidence contributing to oral anticoagulation options after parenteral lead-in.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
         "society": "ASH",
-        "document": "VTE treatment guidelines",
-        "note": "Part of the evidence base for DOAC treatment pathways in acute VTE.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 3 and 4 evidence; reference 96. Part of the evidence base for DOAC treatment pathways in acute VTE.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "Requires initial parenteral anticoagulation. Dabigatran not a single-drug start like apixaban/rivaroxaban regimens.",
@@ -496,15 +502,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "VTE treatment guidelines",
-        "note": "Supports oral rivaroxaban single-drug therapy for acute DVT in eligible patients.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Guidance statement 15 (strong recommendation, moderate-certainty evidence), treatment-phase background text; reference 153. Supports oral rivaroxaban single-drug therapy for acute DVT in eligible patients.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
         "society": "ASH",
-        "document": "VTE treatment guidelines",
-        "note": "Underpins DOAC preference over VKA for most acute DVT treatment.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 3 and 4 evidence; also Recommendations 18, 19 and 25; reference 88. Underpins DOAC preference over VKA for most acute DVT treatment.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "Open-label. PE covered in companion trial. Cancer-associated VTE needs cancer-specific evidence.",
@@ -558,15 +566,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "Orthopedic VTE prophylaxis",
-        "note": "Supports low-dose apixaban for thromboprophylaxis after hip arthroplasty in eligible patients.",
-        "year": 2012
+        "document": "CHEST Guideline on VTE Prevention in Orthopedic Surgery (9th edition)",
+        "year": 2012,
+        "note": "2012 CHEST Guideline on VTE Prevention in Orthopedic Surgery (9th edition), Section 2.3.7 text and Table 21 (evidence profile); Recommendation 2.1.1 (Grade 1B, a strong recommendation based on moderate-quality evidence) carries no direct citation; reference 14. Supports low-dose apixaban for thromboprophylaxis after hip arthroplasty in eligible patients.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3278063/"
       },
       {
         "society": "ASH",
-        "document": "VTE prophylaxis in surgical patients",
-        "note": "Aligned with DOAC options for major orthopedic prophylaxis where labeled/approved.",
-        "year": 2019
+        "document": "ASH Guidelines on Prevention of VTE in Surgical Patients",
+        "year": 2019,
+        "note": "2019 ASH Guidelines on Prevention of VTE in Surgical Patients, Orthopedic Recommendation 10 (conditional recommendation, moderate certainty); reference 220. Aligned with DOAC options for major orthopedic prophylaxis where labeled/approved.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6963238/"
       }
     ],
     "caveats": "Orthopedic prophylaxis population. Not acute VTE treatment evidence.",
@@ -614,15 +624,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "VTE / PE treatment",
-        "note": "Supports rivaroxaban for acute PE treatment in hemodynamically stable eligible patients.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Guidance statement 15 (strong recommendation, moderate-certainty evidence), Table 9; reference 145. Supports rivaroxaban for acute PE treatment in hemodynamically stable eligible patients.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
-        "society": "ESC",
-        "document": "Acute PE guidelines",
-        "note": "Aligned with DOAC options for eligible PE without high-risk features requiring reperfusion.",
-        "year": 2019
+        "society": "ESC/ERS",
+        "document": "ESC/ERS Acute Pulmonary Embolism Guidelines",
+        "year": 2019,
+        "note": "2019 ESC/ERS Acute Pulmonary Embolism Guidelines, Section 6.7 recommendations (Class I, Level A), page 569; reference 261. Aligned with DOAC options for eligible PE without high-risk features requiring reperfusion.",
+        "url": "https://doi.org/10.1093/eurheartj/ehz405"
       }
     ],
     "caveats": "Not for high-risk PE needing thrombolysis/hemodynamic support. Open-label design.",
@@ -669,14 +681,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Pragmatic randomized comparison of two triage strategies. The primary 30-day composite and the first secondary outcome, the proportion actually treated at home, are both reported, and physician judgment stayed in the pathway.",
     "limitations": "Not a drug trial. Home treatment still required the physician’s agreement, so a negative rule did not automatically mean discharge. The home-treatment comparison (38.4% vs 36.6%; P=0.41) is the first secondary superiority test in the intention-to-treat population. HOME-PE did not compare DOACs or test thrombolysis, so these rates do not inform either choice.",
     "journalClub": "Noninferiority of the sole primary, the 30-day composite. Randomized, per-protocol, adjusted absolute difference 0.20% with a one-sided 95% upper limit of 1.43% against a 2.5% margin (P=0.004). Limited to normotensive patients with physician override. Home treatment (38.4% vs 36.6%; P=0.41) is the first secondary superiority test in the intention-to-treat population. HOME-PE is not PEITHO and not HI-PEITHO.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "Pulmonary embolism home treatment (teaching note)",
-        "note": "Compares Hestia with the simplified severity index for triage.",
-        "year": 2019
-      }
-    ],
+    "guidelines": [],
     "caveats": "The sole primary, the 30-day composite, was noninferior in the per-protocol population at 3.82% (34/891) vs 3.57% (32/896), adjusted absolute difference 0.20%, one-sided 95% upper limit 1.43%, P=0.004, margin 2.5%. Home treatment, 38.4% (378/984) vs 36.6% (361/986), P=0.41, is the first secondary outcome (superiority, intention-to-treat). The physician could override the rule.",
     "practiceTakeaway": "In HOME-PE, triage with the Hestia rule was noninferior to the simplified Pulmonary Embolism Severity Index in normotensive PE: the 30-day rate of recurrent VTE, major bleeding, or death was 3.82% versus 3.57% (per-protocol). A similar share of patients was treated at home (38.4% vs 36.6%; P=0.41).",
     "questionsAnswered": [
@@ -722,15 +727,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "VTE treatment guidelines",
-        "note": "Key evidence for apixaban single-drug acute VTE therapy with lower major bleeding vs conventional therapy.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Guidance statement 15 (strong recommendation, moderate-certainty evidence), Table 9; reference 144. Key evidence for apixaban single-drug acute VTE therapy with lower major bleeding vs conventional therapy.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
         "society": "ASH",
-        "document": "VTE treatment guidelines",
-        "note": "Supports apixaban among preferred DOACs for acute VTE in eligible patients.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 3 and 4 evidence; reference 86. Supports apixaban among preferred DOACs for acute VTE in eligible patients.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "Cancer VTE was not the primary AMPLIFY question. Cancer-specific trials and guidelines cover that question.",
@@ -784,15 +791,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "VTE treatment guidelines",
-        "note": "Supports edoxaban after heparin lead-in for acute VTE.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Guidance statement 15 (strong recommendation, moderate-certainty evidence), Table 9; reference 146. Supports edoxaban after heparin lead-in for acute VTE.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
         "society": "ASH",
-        "document": "VTE treatment guidelines",
-        "note": "Contributes to DOAC options for VTE after initial parenteral therapy.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 3 and 4 evidence; reference 90. Contributes to DOAC options for VTE after initial parenteral therapy.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "Not a single-drug start. Needs ≥5 days heparin lead-in in the pivotal design.",
@@ -842,9 +851,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Deep-vein thrombosis thrombolysis (teaching note)",
-        "note": "Iliofemoral catheter-directed thrombolysis trial with a positive but imprecise post-thrombotic-syndrome result. Not interchangeable with ATTRACT.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendation 5 evidence; reference 134. Iliofemoral catheter-directed thrombolysis trial with a positive but imprecise post-thrombotic-syndrome result. Not interchangeable with ATTRACT.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "Open-label, not blinded. The patency difference and the post-thrombotic-syndrome difference were both reported, and the syndrome result’s confidence interval nearly includes no difference. Three major bleeds were related to thrombolysis. Quoting ATTRACT’s 47% versus 48% as a CaVenT result is not supported.",
@@ -894,9 +904,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Deep-vein thrombosis thrombolysis (teaching note)",
-        "note": "Pharmacomechanical thrombolysis did not reduce the primary post-thrombotic-syndrome outcome in proximal deep-vein thrombosis.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendation 5 evidence; reference 146. Pharmacomechanical thrombolysis did not reduce the primary post-thrombotic-syndrome outcome in proximal deep-vein thrombosis.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "No significant primary difference (risk ratio 0.96; 95% CI 0.82–1.11; P=0.56) and more major bleeding within 10 days (1.7% vs 0.3%; P=0.049). The 18% vs 24% moderate-to-severe finding is not the primary endpoint.",
@@ -944,15 +955,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "VTE guidelines (extended therapy)",
-        "note": "Supports reduced-dose apixaban for extended secondary prevention after initial VTE treatment.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Duration of Anticoagulation section, Guidance statements 21–25 and Table 17 (pages e583–e585) with background text on page e588, and the Reduced-Dose versus Full-Dose section, Guidance statements 26–27 and Tables 18–19 (pages e589–e591); reference 167. Supports reduced-dose apixaban for extended secondary prevention after initial VTE treatment.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
         "society": "ASH",
-        "document": "VTE treatment guidelines",
-        "note": "Informs low-intensity extended anticoagulation decisions after unprovoked or ongoing-risk VTE.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 18, 19, 22 and 25 evidence; reference 306. Informs low-intensity extended anticoagulation decisions after unprovoked or ongoing-risk VTE.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "Placebo-controlled extension. Patient selection for who needs extension remains clinical.",
@@ -1006,15 +1019,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "Extended VTE therapy",
-        "note": "Supports low-dose rivaroxaban over aspirin for extended VTE prevention when anticoagulation is chosen.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Reduced-Dose versus Full-Dose section, Guidance statements 26–27 and Tables 18–19 (page e590), and the Aspirin for Extended Treatment section, Guidance statements 27–28 and Tables 20–21 (pages e591–e593); reference 213. Supports low-dose rivaroxaban over aspirin for extended VTE prevention when anticoagulation is chosen.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
         "society": "ASH",
-        "document": "VTE guidelines",
-        "note": "Aligned with preferring anticoagulation over aspirin for secondary VTE prevention when indicated.",
-        "year": 2020
+        "document": "ASH Guidelines on Treatment of DVT and PE",
+        "year": 2020,
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 20 and 22 evidence; reference 314. Aligned with preferring anticoagulation over aspirin for secondary VTE prevention when indicated.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
     "caveats": "Aspirin is a weak comparator. The trial enrolled patients in equipoise about extended anticoagulation.",
@@ -1064,20 +1079,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Clinically relevant dose question. High-risk extend population. Dual-drug (apixaban or rivaroxaban) pragmatic design. 5-year recurrent VTE was low in both arms. The major or CRNM bleeding point estimate was lower with reduced dose. Non-inferiority vs full dose was not shown.",
     "limitations": "Open-label. France multicentre generalizability. Non-inferiority was not met (upper CI crossed the HR 1.7 margin) and the key bleeding secondary was not formally tested. Not cancer-VTE primary. Clinician-chosen DOAC type.",
     "journalClub": "After extension is already indicated in high-risk non-cancer VTE, RENOVE did not show reduced-dose non-inferiority (5-year recurrent VTE 2.2% vs 1.8%; adjusted HR 1.32; non-inferiority p=0.23). Major or CRNM bleeding was 9.9% vs 15.2% (adjusted HR 0.61); this secondary result was not formally tested because noninferiority was not shown.",
-    "guidelines": [
-      {
-        "society": "CHEST",
-        "document": "Extended VTE therapy",
-        "note": "Too recent for current cycle. Guideline updates may come later. Incorporation language is not added here.",
-        "year": 2021
-      },
-      {
-        "society": "ASH",
-        "document": "VTE treatment guidelines",
-        "note": "Too recent for current cycle. Guideline updates may come later. Incorporation language is not added here.",
-        "year": 2020
-      }
-    ],
+    "guidelines": [],
     "caveats": "API-CAT is a different population (cancer-associated VTE). This is not acute VTE start evidence. Enrollment already assumes extension is indicated. Non-inferiority of reduced vs full dose was not shown. The bleeding HR is the published adjusted estimate. Hierarchical testing stopped before a formal superiority test of that secondary.",
     "practiceTakeaway": "In RENOVE, after 6–24 months of full-dose anticoagulation, reduced-dose apixaban or rivaroxaban did not meet noninferiority versus full dose for 5-year recurrent VTE (2.2% vs 1.8%; adjusted HR 1.32; 95% CI 0.67–2.60). Major or clinically relevant nonmajor bleeding was 9.9% with the reduced dose versus 15.2% with full dose (adjusted HR 0.61); this secondary result was not formally tested because noninferiority was not shown.",
     "questionsAnswered": [
@@ -1124,9 +1126,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "VTE extended treatment (teaching note)",
-        "note": "Active-control extended-treatment comparison of dabigatran with warfarin. RE-SONATE covers the placebo comparison.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update) lists the combined RE-MEDY and RE-SONATE report as reference 201, but its text discusses only the placebo-controlled RE-SONATE comparison, so only the reference is given. Active-control extended-treatment comparison of dabigatran with warfarin. RE-SONATE covers the placebo comparison.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       }
     ],
     "caveats": "Double-blind. Recurrent VTE 1.8% vs 1.3% (hazard ratio 1.44; 95% CI 0.78–2.64; P=0.01 for noninferiority) and less major or clinically relevant bleeding (hazard ratio 0.54). Acute coronary syndromes were more frequent with dabigatran (0.9% vs 0.2%). These rates stay separate from RE-SONATE.",
@@ -1175,9 +1178,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "CHEST",
-        "document": "VTE extended treatment (teaching note)",
-        "note": "Placebo-controlled extended dabigatran trial. It stays separate from RE-MEDY.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Duration of Anticoagulation section, Guidance statements 21–25, Table 17 footnote (page e585) and background text (page e588); reference 201. Placebo-controlled extended dabigatran trial. It stays separate from RE-MEDY.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       }
     ],
     "caveats": "Double-blind. Recurrent VTE 0.4% vs 5.6% (hazard ratio 0.08; 95% CI 0.02–0.25) and more major or clinically relevant bleeding (hazard ratio 2.92; 95% CI 1.52–5.60). Not the warfarin comparison.",
@@ -1224,14 +1228,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Large double-blind randomized comparison with a prespecified ischemic primary endpoint and a TIMI major-bleeding safety endpoint. Useful contrast with the lower rivaroxaban doses in ATLAS ACS 2–TIMI 51.",
     "limitations": "Stopped early, so the estimates are read with that in mind. The abstract does not count intracranial or fatal bleeds separately. This is not evidence about low-dose rivaroxaban plus aspirin in stable vascular disease.",
     "journalClub": "Randomized and double-blind, and the ischemic primary result and the bleeding increase point the same direction. APPRAISE-2 is read beside ATLAS ACS 2–TIMI 51: full-dose apixaban after ACS failed where the ATLAS primary endpoint was met, at a bleeding cost in both programs.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "Post-ACS antithrombotic therapy (teaching note)",
-        "note": "It sits next to ATLAS ACS 2–TIMI 51. Full-dose apixaban added to antiplatelets is a different experiment from low-dose rivaroxaban.",
-        "year": 2014
-      }
-    ],
+    "guidelines": [],
     "caveats": "Double-blind. A large placebo-controlled randomized trial whose ischemic primary endpoint was not met (HR 0.95; P=0.51) while TIMI major bleeding was higher, and the trial stopped early for that pattern. Not interchangeable with ATLAS ACS 2–TIMI 51.",
     "practiceTakeaway": "In APPRAISE-2, adding apixaban 5 mg twice daily to antiplatelet therapy after recent ACS did not reduce cardiovascular death, myocardial infarction, or ischemic stroke (7.5% vs 7.9%; HR 0.95; 95% CI 0.80–1.11). It increased TIMI major bleeding (1.3% vs 0.5%; HR 2.59), and the trial stopped early.",
     "questionsAnswered": [
@@ -1277,16 +1274,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "ATLAS ACS 2–TIMI 51 is the ACS dual-pathway root. Efficacy with clear bleed/ICH cost. Later COMPASS/VOYAGER moved the concept into stable vascular disease at 2.5 mg twice daily + aspirin.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Post-ACS secondary prevention",
-        "note": "Historical dual-pathway ACS evidence. Clinical uptake limited by bleeding and regional approvals.",
-        "year": 2014
-      },
-      {
         "society": "ESC",
-        "document": "ACS guidelines (historical context)",
-        "note": "Informed low-dose rivaroxaban concepts later applied in COMPASS/VOYAGER vascular settings.",
-        "year": 2017
+        "document": "ESC ST-Elevation Myocardial Infarction Guidelines",
+        "year": 2017,
+        "note": "2017 ESC ST-Elevation Myocardial Infarction Guidelines, Section 7.2 (maintenance antithrombotic strategy after ST-elevation myocardial infarction), rivaroxaban recommendation (Class IIb, Level B); reference 338. Informed low-dose rivaroxaban concepts later applied in COMPASS/VOYAGER vascular settings.",
+        "url": "https://doi.org/10.1093/eurheartj/ehx393"
       }
     ],
     "caveats": "Increased major bleeding/ICH vs placebo. Not AF stroke-prevention evidence. Practice varies by labeling.",
@@ -1338,16 +1330,32 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "COMPASS established low-dose rivaroxaban plus aspirin for selected stable CAD/PAD.",
     "guidelines": [
       {
+        "society": "AHA/ACC",
+        "document": "AHA/ACC Chronic Coronary Disease Guideline",
+        "year": 2023,
+        "note": "2023 AHA/ACC Chronic Coronary Disease Guideline lists this trial as reference 32 in the Section 4.3.1 (Antiplatelet Therapy and Oral Anticoagulants) reference list; the recommendation text that uses it could not be read, so only the reference is given.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001168"
+      },
+      {
         "society": "ACC/AHA",
-        "document": "Chronic coronary disease / PAD",
-        "note": "Supports low-dose rivaroxaban + aspirin in selected stable atherosclerotic patients at acceptable bleed risk.",
-        "year": 2023
+        "document": "ACC/AHA Lower Extremity Peripheral Artery Disease Guideline",
+        "year": 2024,
+        "note": "2024 ACC/AHA Lower Extremity Peripheral Artery Disease Guideline, Section 5.1, Recommendation 4 (Class 1, Level of evidence A); reference 5.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12782132/"
       },
       {
         "society": "ESC",
-        "document": "Chronic coronary syndromes / PAD",
-        "note": "Aligned with dual-pathway vascular protection in selected high-risk patients.",
-        "year": 2024
+        "document": "ESC Chronic Coronary Syndromes Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Chronic Coronary Syndromes Guidelines, Recommendation Table 17 (Class IIa, Level A), page 3465; text Sections 4.3 and 4.3.1.2; reference 594.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae177"
+      },
+      {
+        "society": "ESC",
+        "document": "ESC Peripheral Arterial and Aortic Diseases Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Peripheral Arterial and Aortic Diseases Guidelines, Sections 8.1.1.1–8.1.1.2 text, page 3574 and page 3582; reference 430.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae179"
       }
     ],
     "caveats": "Major bleeding increased. Exclude high bleed-risk patients. Not an AF stroke-prevention regimen.",
@@ -1396,15 +1404,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ACC/AHA",
-        "document": "PAD after revascularization",
-        "note": "Supports low-dose rivaroxaban + aspirin after lower-extremity revascularization.",
-        "year": 2024
+        "document": "ACC/AHA Lower Extremity Peripheral Artery Disease Guideline",
+        "year": 2024,
+        "note": "2024 ACC/AHA Lower Extremity Peripheral Artery Disease Guideline, Section 5.1, Recommendation 6 (Class 1, Level of evidence A); also Recommendation 5, Section 9.1 Recommendation 1 and Section 12 Recommendation 4; reference 7. Supports low-dose rivaroxaban + aspirin after lower-extremity revascularization.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12782132/"
       },
       {
         "society": "ESC",
-        "document": "PAD guidelines",
-        "note": "Aligned with dual-pathway therapy post-revascularization in eligible patients.",
-        "year": 2024
+        "document": "ESC Peripheral Arterial and Aortic Diseases Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Peripheral Arterial and Aortic Diseases Guidelines, Section 8.1.1.2, Recommendation Table 14 (Class IIa, Level B), page 3583; reference 505. Aligned with dual-pathway therapy post-revascularization in eligible patients.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae179"
       }
     ],
     "caveats": "ISTH major bleeding increased. Bleeding-risk limits apply to this result.",
@@ -1451,16 +1461,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In COMMANDER HF, low-dose rivaroxaban did not reduce death, MI, or stroke in heart failure with sinus rhythm. The neutral principal safety result is the lead finding. The ISTH major-bleeding increase is secondary.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Heart failure with reduced ejection fraction / antithrombotic therapy",
-        "note": "Negative trial. It does not support adding low-dose rivaroxaban for heart failure in sinus rhythm.",
-        "year": 2022
+        "society": "AHA/ACC/HFSA",
+        "document": "AHA/ACC/HFSA Heart Failure Guideline",
+        "year": 2022,
+        "note": "2022 AHA/ACC/HFSA Heart Failure Guideline lists this trial as reference 9 in one of its section reference lists; the section and recommendation that use it could not be read, so only the reference is given. Negative trial. It does not support adding low-dose rivaroxaban for heart failure in sinus rhythm.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001063"
       },
       {
         "society": "ESC",
-        "document": "Heart failure guidelines",
-        "note": "Aligned with avoiding routine anticoagulation in heart failure without AF/other indication.",
-        "year": 2021
+        "document": "ESC Heart Failure Guidelines",
+        "year": 2021,
+        "note": "2021 ESC Heart Failure Guidelines, Section 12.2.1 text (page 3661) and Section 12.5 text (page 3666); no recommendation row; reference 579. Aligned with avoiding routine anticoagulation in heart failure without AF/other indication.",
+        "url": "https://doi.org/10.1093/eurheartj/ehab368"
       }
     ],
     "caveats": "Sinus-rhythm heart failure population. Does not apply to AF needing anticoagulation.",
@@ -1506,13 +1518,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Double-blind randomized design with harm signals in the primary ischemic composite, all-cause death, and major bleeding, all in the same direction.",
     "limitations": "Stopped early, so the size of the harm estimates needs that context. The primary composite includes coronary revascularization, not only cardiovascular death, myocardial infarction, and stroke. The abstract describes long-term oral anticoagulation without limiting the cohort to one indication for it.",
     "journalClub": "Randomized, double-blind, and consistently unfavorable for added aspirin across ischemic events, death, and bleeding. Early stopping is the main reason not to over-read the exact hazard ratios. This is not an acute PCI dual-therapy trial.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "Chronic coronary syndrome (teaching note)",
-        "note": "2025 result. Too recent to treat as already folded into older chronic coronary syndrome documents."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Double-blind. Placebo-controlled randomized trial stopped early for excess death, with higher rates of the primary ischemic composite and of major bleeding on aspirin. Pooled Grading of Recommendations, Assessment, Development and Evaluation across 6 randomized trials including AQUATIC (Galli 2026) found high certainty that OAC alone reduced any bleeding (the pooled primary safety endpoint). Moderate certainty for no difference in major adverse cardiovascular events. This is not a grade for AQUATIC alone. The primary endpoint includes revascularization. Not a rule for the first months after stent placement.",
     "practiceTakeaway": "In AQUATIC, adding aspirin 100 mg to long-term oral anticoagulation worsened outcomes in chronic coronary syndrome with a stent placed more than 6 months earlier. Cardiovascular death, myocardial infarction, stroke, systemic embolism, coronary revascularization, or acute limb ischemia rose (16.9% vs 12.1% with placebo; adjusted HR 1.53; 95% CI 1.07–2.18), major bleeding rose (10.2% vs 3.4%), and the trial stopped early for excess all-cause death with aspirin.",
     "questionsAnswered": [
@@ -1553,16 +1559,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "WOEST planted the dual-pathway idea. Drop aspirin to cut bleeding on OAC after PCI.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF + CAD/PCI antithrombotic consensus",
-        "note": "Early signal that dropping aspirin reduces bleeding on OAC after PCI. Concept later refined by DOAC AF–PCI trials.",
-        "year": 2019
+        "society": "AHA/ACC/HRS",
+        "document": "AHA/ACC/HRS Atrial Fibrillation Focused Update",
+        "year": 2019,
+        "note": "2019 AHA/ACC/HRS Atrial Fibrillation Focused Update, Section 7.4 (AF Complicating ACS), Recommendation 1 (Class I, Level of evidence B-R) and Recommendation 5 (Class IIa, Level of evidence B-R); reference S7.4-3. Early signal that dropping aspirin reduces bleeding on OAC after PCI. Concept later refined by DOAC AF–PCI trials.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000665"
       },
       {
         "society": "ESC",
-        "document": "AF / chronic coronary syndrome or ACS with OAC",
-        "note": "Historically informed shorter triple therapy / dual-pathway strategies.",
-        "year": 2020
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2020,
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, chronic coronary syndrome row (Class I, Level A), page 434; reference 1078. Historically informed shorter triple therapy / dual-pathway strategies.",
+        "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
     "caveats": "Small open-label VKA-era trial. Underpowered for ischemic events. Not DOAC-specific.",
@@ -1607,16 +1615,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "PIONEER AF-PCI opened the DOAC AF–PCI era with less bleeding than VKA triple therapy. Its efficacy composite has Kaplan–Meier rates only, with no hazard ratio in the abstract, and the authors note that the broad confidence intervals diminish the surety of any conclusions about efficacy, so the ischemic results are imprecise rather than proof of equivalence.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF patients undergoing PCI",
-        "note": "Supports DOAC-based dual therapy strategies over VKA triple therapy to reduce bleeding.",
-        "year": 2019
+        "society": "AHA/ACC/HRS",
+        "document": "AHA/ACC/HRS Atrial Fibrillation Focused Update",
+        "year": 2019,
+        "note": "2019 AHA/ACC/HRS Atrial Fibrillation Focused Update, Section 7.4, Recommendation 1 (Class I, Level of evidence B-R) and Recommendation 6 (Class IIa, Level of evidence B-R); reference S7.4-2. Supports DOAC-based dual therapy strategies over VKA triple therapy to reduce bleeding.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000665"
       },
       {
         "society": "ESC",
-        "document": "AF and ACS/PCI",
-        "note": "Informs DOAC + P2Y12 regimens with limited aspirin duration.",
-        "year": 2020
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2020,
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, rivaroxaban 15 mg row (Class IIa, Level B), page 434; reference 1080. Informs DOAC + P2Y12 regimens with limited aspirin duration.",
+        "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
     "caveats": "Powered for bleeding, not ischemic superiority. Open-label rivaroxaban strategies.",
@@ -1664,16 +1674,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "RE-DUAL reinforced dual pathway with dabigatran after PCI in AF.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF + PCI antithrombotic therapy",
-        "note": "Supports dabigatran dual therapy to reduce bleeding vs VKA triple therapy.",
-        "year": 2019
+        "society": "AHA/ACC/HRS",
+        "document": "AHA/ACC/HRS Atrial Fibrillation Focused Update",
+        "year": 2019,
+        "note": "2019 AHA/ACC/HRS Atrial Fibrillation Focused Update, Section 7.4, Recommendation 1 (Class I, Level of evidence B-R) and Recommendation 7 (Class IIa, Level of evidence B-R); reference S7.4-1. Supports dabigatran dual therapy to reduce bleeding vs VKA triple therapy.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000665"
       },
       {
         "society": "ESC",
-        "document": "AF with PCI/ACS",
-        "note": "Aligned with dual-pathway DOAC strategies after stenting.",
-        "year": 2020
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2020,
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, DOAC-over-VKA row (Class I, Level A) and dabigatran 110 mg row (Class IIa, Level B), page 434; reference 1079. Aligned with dual-pathway DOAC strategies after stenting.",
+        "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
     "caveats": "Open-label. Two dabigatran doses complicate teaching. Aspirin timing differs from AUGUSTUS factorial.",
@@ -1727,9 +1739,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ESC",
-        "document": "AF with PCI (teaching note)",
-        "note": "Edoxaban plus a P2Y12 inhibitor versus vitamin K antagonist triple therapy after successful stenting. The aspirin-versus-placebo comparison is AUGUSTUS.",
-        "year": 2020
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2020,
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 narrative text only; reference 1082. Edoxaban plus a P2Y12 inhibitor versus vitamin K antagonist triple therapy after successful stenting. The aspirin-versus-placebo comparison is AUGUSTUS.",
+        "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
     "caveats": "Open-label, adjudicator-masked. Noninferior major or clinically relevant nonmajor bleeding (17% vs 20%; HR 0.83; 95% CI 0.65–1.05; noninferiority P=0.0010). Superiority was not shown (P=0.1154). Main ischemic composite HR 1.06 (95% CI 0.71–1.69).",
@@ -1773,16 +1786,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "The two factorial questions stand apart. Apixaban had less major or CRNM bleeding than a VKA (10.5% vs 14.7%), and aspirin had more major or CRNM bleeding than placebo (16.1% vs 9.0%). The abstract calls ischemic events similar without printing absolute rates, so AUGUSTUS is stronger evidence about bleeding than about ischemic protection.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Expert consensus / AF with ACS or PCI",
-        "note": "Foundational for preferring apixaban and dropping aspirin early on a P2Y12 background.",
-        "year": 2019
-      },
-      {
         "society": "ESC",
-        "document": "AF with ACS/PCI recommendations",
-        "note": "Major evidence base for dual pathway with apixaban and limited aspirin.",
-        "year": 2020
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2020,
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, DOAC-over-VKA row (Class I, Level A), page 434; reference 1081. Major evidence base for dual pathway with apixaban and limited aspirin.",
+        "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
     "caveats": "Aspirin drop still requires clinical judgment early after stenting/ACS. Not a potent-P2Y12 comparison.",
@@ -1835,15 +1843,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ESC",
-        "document": "AF with stable CAD",
-        "note": "Supports DOAC monotherapy over long-term combination therapy in stable AF + CAD remote from PCI.",
-        "year": 2020
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2020,
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 narrative text; reference 1072. Supports DOAC monotherapy over long-term combination therapy in stable AF + CAD remote from PCI.",
+        "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       },
       {
-        "society": "ACC/AHA",
-        "document": "Chronic coronary disease + AF",
-        "note": "Aligned with dropping antiplatelet therapy when AF anticoagulation is indicated in stable disease.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.2 (Chronic Coronary Disease), Recommendation 1 (Class 1, Level of evidence B-R), synopsis and supportive text; Section 6.8.2 reference 1.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       }
     ],
     "caveats": "Japanese cohort. Stopped early for increased mortality on combination therapy. The population is stable coronary disease, not the months immediately after PCI or coronary artery bypass graft and not an early dual-therapy step-down.",
@@ -1894,14 +1904,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Randomized comparison with masked adjudication, a large bleeding difference, and an explicit statement that ischemic events appeared similar rather than an invented ischemic hazard ratio.",
     "limitations": "Open-label. South Korean sites. The primary win is driven by bleeding inside the composite. Ischemic event rates are not printed in the abstract. Not evidence for dropping an antiplatelet in the early months after PCI. AFIRE is the rivaroxaban trial, not this one.",
     "journalClub": "Lower primary composite with edoxaban monotherapy in a randomized, adjudicator-masked trial. And the composite includes bleeding (hazard ratio 0.34 for major or clinically relevant nonmajor bleeding). The text does not present an ischemic benefit the abstract does not quantify. EPIC-CAD sits beside AFIRE, apart from AUGUSTUS-era early PCI trials.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "AF with stable coronary disease (teaching note)",
-        "note": "Edoxaban monotherapy versus edoxaban plus one antiplatelet in stable disease.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Open-label, adjudicator-masked. Primary composite 6.8% vs 16.2% (hazard ratio 0.44; 95% CI 0.30–0.65). Less bleeding (hazard ratio 0.34). Pooled Grading of Recommendations, Assessment, Development and Evaluation (Galli 2026 meta-analysis of 6 randomized trials, which includes this trial) found high certainty that OAC alone reduced any bleeding (the pooled primary safety endpoint). Moderate certainty for no difference in major adverse cardiovascular events. The abstract does not print major-ischemic-event rates. Not the early post-stent window.",
     "practiceTakeaway": "In EPIC-CAD, edoxaban alone lowered a 12-month composite that includes bleeding versus edoxaban plus one antiplatelet in AF with stable coronary disease (6.8% vs 16.2%; HR 0.44; 95% CI 0.30–0.65). Major or clinically relevant nonmajor bleeding was 4.7% versus 14.2% (HR 0.34; 95% CI 0.22–0.53)."
   },
@@ -1926,23 +1929,10 @@ window.ANTICOAG_TRIALS = [
     "expectedResults": null,
     "background": "After the early dual-therapy window, many people with atrial fibrillation and an older stent stay on an anticoagulant plus an antiplatelet by habit. AFIRE and EPIC-CAD tested monotherapy in stable coronary disease. ADAPT AF-DES tested it specifically in patients with a drug-eluting stent at least 1 year old.",
     "designNotes": "Randomized. Multicenter, open-label noninferiority randomized trial in South Korea (ClinicalTrials.gov NCT04250116). DOAC monotherapy versus DOAC plus clopidogrel. The abstract does not name a single DOAC agent or print milligram doses. Noninferiority margin 3.0 percentage points. The primary end point is a net composite that includes bleeding, so it is not a pure ischemic end point. 12-month follow-up.",
-    "strengths": "Randomized comparison in the exact population of the guideline question (stent at least 1 year old), with a prespecified net-clinical-benefit end point and a large bleeding difference.",
+    "strengths": "Randomized comparison in patients with a stent at least 1 year old, with a prespecified net-clinical-benefit end point and a large bleeding difference.",
     "limitations": "Open-label. South Korean sites only. 12-month horizon. Clopidogrel was the only antiplatelet tested. The bleeding difference drives the net composite. A 2026 meta-analysis (Galli) notes lower than anticipated event rates. Ischemic components and death are not quantified in the abstract.",
     "journalClub": "Randomized, but open-label and in one country. The text does not present an ischemic or survival benefit the abstract does not quantify. It is read beside AFIRE, EPIC-CAD, and AQUATIC, and away from the early post-PCI trials (AUGUSTUS era).",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "AF guideline (chronic coronary disease)",
-        "note": "2023 American College of Cardiology, American Heart Association, American College of Chest Physicians, and Heart Rhythm Society: Class 1, level of evidence B-R for oral anticoagulation monotherapy over OAC plus a single antiplatelet in AF with chronic coronary disease beyond 1 year after revascularization, without a history of stent thrombosis. The guideline predates this 2026 trial.",
-        "year": 2023
-      },
-      {
-        "society": "ESC",
-        "document": "AF guidelines (chronic coronary or vascular disease)",
-        "note": "2024 European Society of Cardiology AF: Class III, level of evidence B against antiplatelet therapy beyond 12 months in stable chronic coronary or vascular disease treated with oral anticoagulation. Predates this trial. No class assigned to it here.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Open-label. Net composite 9.6% vs 17.2% (hazard ratio 0.54). Less bleeding (hazard ratio 0.38). Pooled Grading of Recommendations, Assessment, Development and Evaluation (Galli 2026 meta-analysis of 6 randomized trials, which includes this trial) found high certainty that OAC alone reduced any bleeding (the pooled primary safety endpoint). Moderate certainty for no difference in major adverse cardiovascular events. Ischemic components and death are not printed in the abstract. Stent at least 1 year old. Not the early post-PCI window. No guideline yet incorporates it.",
     "practiceTakeaway": "In ADAPT AF-DES, among patients with AF and a drug-eluting stent placed at least 1 year earlier, DOAC monotherapy lowered 12-month net adverse clinical events (death, myocardial infarction, stent thrombosis, stroke, systemic embolism, or major or clinically relevant nonmajor bleeding) versus a DOAC plus clopidogrel (9.6% vs 17.2%; HR 0.54; 95.2% CI 0.37–0.77). That bleeding alone was also lower (5.2% vs 13.2%; HR 0.38)."
   },
@@ -1972,10 +1962,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "Underpowered, open-label, and mostly warfarin. Its point estimates numerically favored combination therapy (hazard ratio 1.16; myocardial infarction 8 vs 4) with confidence intervals that include 1. It is read as the inconclusive outlier, not as contrary evidence, beside AFIRE, EPIC-CAD, ADAPT AF-DES, and AQUATIC.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "AF guideline (chronic coronary disease, teaching note)",
-        "note": "The 2023 Class 1, level of evidence B-R recommendation favors OAC monotherapy beyond 1 year after revascularization without prior stent thrombosis.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.2, Recommendation 1 (Class 1, Level of evidence B-R); Section 6.8.2 reference 2. The 2023 Class 1, level of evidence B-R recommendation favors OAC monotherapy beyond 1 year after revascularization without prior stent thrombosis.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       }
     ],
     "caveats": "Open-label. Noninferiority not established (P=0.20), enrollment stopped at 696 of 2000 planned, mostly warfarin. Major bleeding was numerically lower with OAC alone (7.8% vs 10.4%) without a printed hazard ratio. Inconclusive, not contrary. Pooled Grading of Recommendations, Assessment, Development and Evaluation (Galli 2026 meta-analysis of 6 randomized trials, which includes this trial) found high certainty that OAC alone reduced any bleeding (the pooled primary safety endpoint). Moderate certainty for no difference in major adverse cardiovascular events.",
@@ -2008,9 +1999,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Cancer-associated VTE (teaching note)",
-        "note": "Historical LMWH-versus-coumarin trial. It is read before Hokusai VTE Cancer, SELECT-D, Caravaggio, and ADAM-VTE.",
-        "year": 2021
+        "document": "ASH Guidelines on VTE in Patients With Cancer",
+        "year": 2021,
+        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 23–25 evidence; reference 317. Historical LMWH-versus-coumarin trial. It is read before Hokusai VTE Cancer, SELECT-D, Caravaggio, and ADAM-VTE.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7903232/"
       }
     ],
     "caveats": "Open-label, not blinded. The lower rate of recurrent VTE with dalteparin than with a coumarin comes with two limits that belong in the same sentence: the design was open-label, and six-month mortality was 39% vs 41%. Major bleeding was 6% vs 4%, without a detected difference.",
@@ -2060,9 +2052,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Cancer-associated VTE (teaching note)",
-        "note": "Historical tinzaparin-versus-warfarin trial. The primary recurrent-VTE comparison was not significant.",
-        "year": 2021
+        "document": "ASH Guidelines on VTE in Patients With Cancer",
+        "year": 2021,
+        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 23–25 evidence; reference 316. Historical tinzaparin-versus-warfarin trial. The primary recurrent-VTE comparison was not significant.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7903232/"
       }
     ],
     "caveats": "Open-label, blinded adjudication. The primary composite was not reduced (7.2% vs 10.5%; HR 0.65; 95% CI 0.41–1.03; P=0.07). Major bleeding HR 0.89 (P=0.77). Mortality HR 1.08 (P=0.54). Clinically relevant nonmajor bleeding HR 0.58 (P=0.004) is not the primary result.",
@@ -2111,20 +2104,24 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Cancer-associated thrombosis",
-        "note": "Supports edoxaban as a DOAC option vs dalteparin with attention to GI bleed risk.",
-        "year": 2021
+        "document": "ASH Guidelines on VTE in Patients With Cancer",
+        "year": 2021,
+        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 20–25 evidence; reference 333. Supports edoxaban as a DOAC option vs dalteparin with attention to GI bleed risk.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7903232/"
       },
       {
         "society": "CHEST",
-        "document": "Cancer VTE treatment",
-        "note": "Aligned with DOAC options for many cancer-associated VTE patients.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Cancer-associated thrombosis section, Guidance statement 16 (strong recommendation, moderate-certainty evidence), page e570, with evidence in Tables 10–11 (pages e571–e572); reference 164. Aligned with DOAC options for many cancer-associated VTE patients.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
         "society": "ESC",
-        "document": "Cancer and thrombosis guidance",
-        "note": "Informs oral therapy alternatives to long-term LMWH in selected patients."
+        "document": "ESC Cardio-Oncology Guidelines",
+        "year": 2022,
+        "note": "2022 ESC Cardio-Oncology Guidelines, Section 6.6.4.1, Recommendation Table 34 (Class I, Level A), page 4306, with text in Section 6.7.1, page 4307; reference 578. Informs oral therapy alternatives to long-term LMWH in selected patients.",
+        "url": "https://doi.org/10.1093/eurheartj/ehac244"
       }
     ],
     "caveats": "Major bleeding 6.9% vs 4.0% (HR 1.77; P=0.04). Gastrointestinal cancer is read as the subgroup and upper GI as the bleed site.",
@@ -2173,15 +2170,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Cancer-associated VTE",
-        "note": "Supports rivaroxaban as an oral option, with the published clinically relevant nonmajor bleeding increase (13% vs 4%; HR 3.76) and the esophageal or gastroesophageal major-bleeding caution (4/11 vs 1/19).",
-        "year": 2021
+        "document": "ASH Guidelines on VTE in Patients With Cancer",
+        "year": 2021,
+        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 20–25 evidence; reference 300. Supports rivaroxaban as an oral option, with the published clinically relevant nonmajor bleeding increase (13% vs 4%; HR 3.76) and the esophageal or gastroesophageal major-bleeding caution (4/11 vs 1/19).",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7903232/"
       },
       {
         "society": "CHEST",
-        "document": "Cancer VTE",
-        "note": "Pilot-level evidence contributing to oral DOAC cancer VTE pathways.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Cancer-associated thrombosis section, Guidance statement 16 (strong recommendation, moderate-certainty evidence), page e570, with evidence in Tables 10–11 (pages e571–e572); reference 169. Pilot-level evidence contributing to oral DOAC cancer VTE pathways.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       }
     ],
     "caveats": "Pilot randomized trial. Clinically relevant nonmajor bleeding 13% vs 4% (HR 3.76). Esophageal or gastroesophageal major bleeding 4 of 11 vs 1 of 19, with later exclusion of those cancers as a precaution after a nonsignificant interim difference.",
@@ -2230,15 +2229,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Cancer-associated VTE",
-        "note": "Supportive apixaban vs dalteparin evidence alongside Caravaggio (note ADAM-VTE primary was major bleeding).",
-        "year": 2021
+        "document": "ASH Guidelines on VTE in Patients With Cancer",
+        "year": 2021,
+        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 20–25 evidence; reference 301. Supportive apixaban vs dalteparin evidence alongside Caravaggio (note ADAM-VTE primary was major bleeding).",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7903232/"
       },
       {
         "society": "CHEST",
-        "document": "Cancer VTE",
-        "note": "Contributes to apixaban as a preferred oral option in cancer VTE.",
-        "year": 2021
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Cancer-associated thrombosis section, Guidance statement 16 (strong recommendation, moderate-certainty evidence), page e570, with evidence in Tables 10–11 (pages e571–e572); reference 171. Contributes to apixaban as a preferred oral option in cancer VTE.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       }
     ],
     "caveats": "Primary endpoint was major bleeding, not recurrent VTE. Smaller than Caravaggio. VTE rates here are secondary alongside larger cancer VTE DOAC randomized trials.",
@@ -2283,20 +2284,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Cancer-associated VTE guidelines",
-        "note": "Major evidence for apixaban vs dalteparin without excess major bleeding. Guideline oral option.",
-        "year": 2021
+        "document": "ASH Guidelines on VTE in Patients With Cancer",
+        "year": 2021,
+        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 20–25 evidence; reference 302. Major evidence for apixaban vs dalteparin without excess major bleeding. Guideline oral option.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7903232/"
       },
       {
         "society": "CHEST",
-        "document": "Cancer VTE treatment",
-        "note": "Underpins DOAC (apixaban) as an alternative to LMWH for many patients.",
-        "year": 2021
-      },
-      {
-        "society": "AC Forum",
-        "document": "Cancer-associated thrombosis resources",
-        "note": "Frequently cited oral cancer VTE trial."
+        "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
+        "year": 2021,
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Cancer-associated thrombosis section, Guidance statement 16 (strong recommendation, moderate-certainty evidence), page e570, with evidence in Tables 10–11 (pages e571–e572); reference 170. Underpins DOAC (apixaban) as an alternative to LMWH for many patients.",
+        "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       }
     ],
     "caveats": "Still individualize for GI cancer bleeding risk and drug–drug interactions with cancer therapy.",
@@ -2343,14 +2341,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Pragmatic randomized comparison across real U.S. oncology practices, with a prespecified noninferiority margin and a separate major-bleeding result.",
     "limitations": "Unblinded. Drug and dose were chosen by clinicians, so this is not evidence for one named DOAC or one named dose. Major-bleeding noninferiority was not met. The primary percentages are among people who received at least one dose.",
     "journalClub": "Noninferior recurrent VTE. Randomized, unblinded, margin met (upper 1-sided bound 0.7%, under 3%). And the major-bleeding noninferiority miss belongs in the same sentence. CANVAS is read beside Hokusai VTE Cancer, SELECT-D, and Caravaggio, which name a single DOAC and dalteparin.",
-    "guidelines": [
-      {
-        "society": "ASH",
-        "document": "Cancer-associated VTE (teaching note)",
-        "note": "Pragmatic DOAC-versus-injectable comparison.",
-        "year": 2021
-      }
-    ],
+    "guidelines": [],
     "caveats": "Unblinded. The recurrent-VTE noninferiority criterion was met (6.1% vs 8.8%; 1-sided upper bound 0.7%). Major bleeding did not meet its 2.5% noninferiority margin (1-sided upper bound 2.5%). Not a named-drug trial.",
     "practiceTakeaway": "In CANVAS, a physician-selected DOAC was noninferior to LMWH for 6-month recurrent VTE in cancer (6.1% vs 8.8%; difference −2.7%). Major-bleeding noninferiority was not met (5.2% vs 5.6%).",
     "questionsAnswered": [
@@ -2393,19 +2384,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Noninferior recurrence with less clinically relevant bleeding at reduced dose. Immediately actionable.",
     "limitations": "Applies to patients who completed initial therapy. Individual cancer/bleeding risk still matters.",
     "journalClub": "API-CAT assigned apixaban 2.5 mg twice daily or 5 mg twice daily for 12 months after at least 6 months of anticoagulation. Reduced dose was noninferior for recurrent VTE, with less clinically relevant bleeding.",
-    "guidelines": [
-      {
-        "society": "ASH",
-        "document": "Cancer-associated VTE (extended therapy)",
-        "note": "Too recent for older American Society of Hematology documents. Expected to influence extended-dose guidance updates.",
-        "year": 2021
-      },
-      {
-        "society": "CHEST",
-        "document": "Extended cancer VTE therapy",
-        "note": "Likely to shape next updates favoring reduced-dose apixaban after ≥6 months."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Applies after ≥6 months completed therapy. The paper does not address how cancer activity or bleeding risk bear on duration. Cross-reference with RENOVE (Couturaud F, et al. Lancet 2025), a separate reduced-dose versus full-dose trial. In API-CAT (active cancer, after at least 6 months of anticoagulation, apixaban only, 12 months of treatment), recurrent VTE was 2.1% versus 2.8% (adjusted subhazard ratio 0.76; 95% CI 0.41–1.41; P=0.001 for noninferiority) and clinically relevant bleeding was 12.1% versus 15.6% (adjusted subhazard ratio 0.75; 95% CI 0.58–0.97; P=0.03). In RENOVE (high recurrence risk with extended treatment already indicated, after 6–24 months of full-dose anticoagulation, apixaban or rivaroxaban), 5-year recurrent VTE was 2.2% versus 1.8% (adjusted HR 1.32; 95% CI 0.67–2.60; P=0.23 for noninferiority), so noninferiority was not shown, and the bleeding comparison was therefore not formally tested under the trial's hierarchical analysis. Major or clinically relevant nonmajor bleeding was 9.9% versus 15.2% (adjusted HR 0.61; 95% CI 0.48–0.79). The trials differ in population, drugs, follow-up, and noninferiority margin (upper bound 2.00 for the subhazard ratio in API-CAT; HR 1.7 in RENOVE), so they are read side by side, not pooled.",
     "practiceTakeaway": "In API-CAT, after at least 6 months of anticoagulation for cancer-associated VTE, apixaban 2.5 mg twice daily for 12 months was noninferior to 5 mg twice daily for recurrent VTE (2.1% vs 2.8%) and had less clinically relevant bleeding (12.1% vs 15.6%).",
     "questionsAnswered": [
@@ -2452,8 +2431,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASCO",
-        "document": "Ambulatory cancer thromboprophylaxis (teaching note)",
-        "note": "It stands beside CASSINI. Both enrolled Khorana score ≥2 ambulatory cancer. Only AVERT’s primary VTE comparison was statistically positive."
+        "document": "ASCO VTE and Cancer Guideline Update",
+        "year": 2019,
+        "note": "2019 ASCO VTE and Cancer Guideline Update, Recommendation 2.2 (intermediate to high certainty of the evidence, strength of recommendation moderate), page 501, with literature review on pages 501–503; reference 36. It stands beside CASSINI. Both enrolled Khorana score ≥2 ambulatory cancer. Only AVERT’s primary VTE comparison was statistically positive.",
+        "url": "https://doi.org/10.1200/JCO.19.01461"
       }
     ],
     "caveats": "Double-blind. A lower VTE rate than placebo, and the modified intention-to-treat major bleeding rate was also higher (3.5% vs 1.8%; P=0.046). On-treatment major bleeding was 2.1% vs 1.1% and was not a precise estimate. Not a treatment trial for acute cancer VTE. It is read beside CASSINI.",
@@ -2502,8 +2483,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASCO",
-        "document": "Ambulatory cancer thromboprophylaxis (teaching note)",
-        "note": "It stands beside AVERT. CASSINI’s primary 180-day comparison was not statistically significant."
+        "document": "ASCO VTE and Cancer Guideline Update",
+        "year": 2019,
+        "note": "2019 ASCO VTE and Cancer Guideline Update, Recommendation 2.2 (intermediate to high certainty of the evidence, strength of recommendation moderate), page 501, with literature review on pages 501–503; reference 44. It stands beside AVERT. CASSINI’s primary 180-day comparison was not statistically significant.",
+        "url": "https://doi.org/10.1200/JCO.19.01461"
       }
     ],
     "caveats": "Double-blind. The primary endpoint was not met (HR 0.66; 95% CI 0.40–1.09; P=0.10). The more favorable intervention-period analysis (HR 0.40) is supportive, not a substitute primary result. It is read beside AVERT before treating cancer prophylaxis as settled.",
@@ -2556,9 +2539,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ESC",
-        "document": "AF cardioversion (teaching note)",
-        "note": "Edoxaban versus enoxaparin–warfarin around electrical cardioversion of nonvalvular atrial fibrillation.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 7.2.1, Recommendation Table 15 (Class I, Level A), page 3355; reference 320. Edoxaban versus enoxaparin–warfarin around electrical cardioversion of nonvalvular atrial fibrillation.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Open-label, blinded endpoint. Events were rare (5 vs 11 efficacy events; 16 of 1,067 vs 11 of 1,082 bleeding events). Intervals are wide.",
@@ -2602,16 +2586,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In BRIDGE, routine LMWH bridging was compared with no bridging for warfarin interruption in typical AF. Arterial thromboembolism 0.4% without bridging vs 0.3% with bridging (risk difference 0.1 percentage points; P=0.01 for noninferiority). Major bleeding 1.3% vs 3.2% (relative risk 0.41; P=0.005 for superiority).",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Periprocedural anticoagulation",
-        "note": "Underpins guidance against routine LMWH bridging for warfarin interruption in typical AF.",
-        "year": 2017
+        "society": "ACC",
+        "document": "ACC Expert Consensus Decision Pathway on Periprocedural Anticoagulation in Nonvalvular AF",
+        "year": 2017,
+        "note": "2017 ACC Expert Consensus Decision Pathway on Periprocedural Anticoagulation in Nonvalvular AF, Section 5.8 (page 883), Sections 5.9–5.10 (pages 885–886) and Figure 4; reference 42. Underpins guidance against routine LMWH bridging for warfarin interruption in typical AF.",
+        "url": "https://doi.org/10.1016/j.jacc.2016.11.024"
       },
       {
         "society": "CHEST",
-        "document": "Perioperative management",
-        "note": "Aligned with no routine bridging for moderate-risk AF procedural interruptions.",
-        "year": 2022
+        "document": "CHEST Guideline on Perioperative Management of Antithrombotic Therapy",
+        "year": 2022,
+        "note": "2022 CHEST Guideline on Perioperative Management of Antithrombotic Therapy, Bridging Anticoagulation During Interruption of VKA Therapy section, Guideline Statement 6 against heparin bridging in atrial fibrillation (strong recommendation, moderate certainty of evidence), and the Perioperative Use of LMWH as Bridging Anticoagulation section supporting Guideline Statements 19–21 (conditional recommendations, very low certainty); reference 76. Aligned with no routine bridging for moderate-risk AF procedural interruptions.",
+        "url": "https://doi.org/10.1016/j.chest.2022.07.025"
       }
     ],
     "caveats": "Typical AF surgical risk. Very high thrombotic-risk subgroups may still need individualized plans. The abstract gives a risk difference for arterial thromboembolism and a relative risk for major bleeding.",
@@ -2693,9 +2679,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ASH",
-        "document": "Medical-patient VTE prophylaxis (teaching note)",
-        "note": "Post-discharge rivaroxaban versus placebo for 45 days. The primary composite was not reduced.",
-        "year": 2018
+        "document": "ASH Guidelines on VTE Prophylaxis in Medical Patients",
+        "year": 2018,
+        "note": "2018 ASH Guidelines on VTE Prophylaxis in Medical Patients, Recommendation 13 evidence; reference 146. Post-discharge rivaroxaban versus placebo for 45 days. The primary composite was not reduced.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6258910/"
       }
     ],
     "caveats": "Double-blind. The primary endpoint was not met (0.83% vs 1.10%; HR 0.76; 95% CI 0.52–1.09; P=0.14). Major bleeding 0.28% vs 0.15% (HR 1.88; 95% CI 0.84–4.23). The nonfatal VTE secondary result is not a substitute primary.",
@@ -2772,15 +2759,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "AHA/ASA",
-        "document": "Stroke secondary prevention / ESUS",
-        "note": "Supports not using empiric DOAC for unselected ESUS vs aspirin.",
-        "year": 2021
+        "document": "AHA/ASA Secondary Stroke Prevention Guideline",
+        "year": 2021,
+        "note": "2021 AHA/ASA Secondary Stroke Prevention Guideline, Section 5.18 (Embolic Stroke of Undetermined Source), Recommendation 1 (Class 3, No Benefit, Level of evidence B-R), page e426, with supportive text on page e427; reference 779. Supports not using empiric DOAC for unselected ESUS vs aspirin.",
+        "url": "https://doi.org/10.1161/STR.0000000000000375"
       },
       {
         "society": "ESC",
-        "document": "ESUS / cryptogenic stroke",
-        "note": "Aligned with antiplatelet therapy unless AF or another OAC indication is found.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 9.7, Recommendation Table 27 (Class III, Level A), page 3369; reference 876. Aligned with antiplatelet therapy unless AF or another OAC indication is found.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "ESUS is heterogeneous. AF monitoring remains essential.",
@@ -2835,9 +2824,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "AHA/ASA",
-        "document": "Secondary stroke prevention (teaching note)",
-        "note": "Dabigatran versus aspirin 100 mg after embolic stroke of undetermined source. Documented atrial fibrillation is a different population.",
-        "year": 2021
+        "document": "AHA/ASA Secondary Stroke Prevention Guideline",
+        "year": 2021,
+        "note": "2021 AHA/ASA Secondary Stroke Prevention Guideline, Section 5.18 (Embolic Stroke of Undetermined Source), Recommendation 1 (Class 3, No Benefit, Level of evidence B-R), page e426, with supportive text on page e427; reference 780. Dabigatran versus aspirin 100 mg after embolic stroke of undetermined source. Documented atrial fibrillation is a different population.",
+        "url": "https://doi.org/10.1161/STR.0000000000000375"
       }
     ],
     "caveats": "Double-blind. Recurrent stroke 4.1% versus 4.8% per year (HR 0.85; 95% CI 0.69–1.03; P=0.10). Major bleeding HR 1.19 (95% CI 0.85–1.66). Clinically relevant nonmajor bleeding was 1.6% versus 0.9% per year. Not a DOAC indication created by the ESUS label.",
@@ -2884,14 +2874,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Double-blind randomized test of the atrial-cardiopathy hypothesis, stopped on a prespecified futility look, with stroke rates that were the same (4.4% per year each).",
     "limitations": "Stopped early for futility, so a small true difference is not excluded (95% CI 0.64–1.55). Not a trial of documented atrial fibrillation. Not NAVIGATE ESUS or RE-SPECT ESUS, which enrolled broader embolic-stroke populations.",
     "journalClub": "No stroke reduction in this population. Double-blind, futility stop, hazard ratio 1.00. The intracranial-hemorrhage count was 0 versus 7 and is a safety result, not evidence that apixaban prevents hemorrhage. ARCADIA is read beside NAVIGATE ESUS and RE-SPECT ESUS: a DOAC is not supported for cryptogenic stroke without atrial fibrillation, including when atrial cardiopathy markers are present.",
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "Cryptogenic stroke antithrombotic therapy (teaching note)",
-        "note": "Apixaban versus aspirin when atrial cardiopathy is present and atrial fibrillation is not.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Double-blind. Stopped for futility. Recurrent stroke 4.4% vs 4.4% per year (hazard ratio 1.00; 95% CI 0.64–1.55). Symptomatic intracranial hemorrhage was 0 vs 7. Not a DOAC indication for cryptogenic stroke.",
     "practiceTakeaway": "In ARCADIA, apixaban did not reduce recurrent stroke versus aspirin 81 mg in cryptogenic stroke with atrial cardiopathy and no AF (annualized 4.4% in each group; HR 1.00; 95% CI 0.64–1.55). The trial stopped for futility.",
     "questionsAnswered": [
@@ -2932,16 +2915,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "PROTECT-AF started modern percutaneous LAAO evidence. It is read with PREVAIL and newer trials.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "LAAO / AF stroke prevention devices",
-        "note": "Foundational Watchman evidence informing device pathways for selected AF patients.",
-        "year": 2019
+        "society": "AHA/ACC/HRS",
+        "document": "AHA/ACC/HRS Atrial Fibrillation Focused Update",
+        "year": 2019,
+        "note": "2019 AHA/ACC/HRS Atrial Fibrillation Focused Update, Section 4.4.1 (Percutaneous Approaches to Occlude the Left Atrial Appendage), Recommendation 1 (Class IIb, Level of evidence B-NR), supportive text citing the long-term follow-up report; reference S4.4.1-1. Foundational Watchman evidence informing device pathways for selected AF patients.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000665"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines (LAA occlusion)",
-        "note": "Early percutaneous LAAO evidence base later expanded by PREVAIL and DOAC-era trials.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.5 text, page 3347, citing the 5-year pooled PROTECT AF and PREVAIL follow-up; reference 364. Early percutaneous LAAO evidence base later expanded by PREVAIL and DOAC-era trials.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Early procedural complication rates higher than later device generations. Warfarin-era comparator.",
@@ -2994,16 +2979,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "PREVAIL + PROTECT-AF together underpinned Watchman approval versus long-term warfarin.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "LAA closure",
-        "note": "With PROTECT-AF, supported regulatory approval and guideline consideration of Watchman in selected patients.",
-        "year": 2019
+        "society": "AHA/ACC/HRS",
+        "document": "AHA/ACC/HRS Atrial Fibrillation Focused Update",
+        "year": 2019,
+        "note": "2019 AHA/ACC/HRS Atrial Fibrillation Focused Update, Section 4.4.1, Recommendation 1 (Class IIb, Level of evidence B-NR), supportive text; reference S4.4.1-2. With PROTECT-AF, supported regulatory approval and guideline consideration of Watchman in selected patients.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000665"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines",
-        "note": "Contributes to LAAO as an option when long-term OAC is problematic or per shared decision.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.5 text, page 3347, citing the 5-year pooled PROTECT AF and PREVAIL follow-up; reference 364. Contributes to LAAO as an option when long-term OAC is problematic or per shared decision.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Mixed primary endpoints. It is read with PROTECT-AF and the pooled context, not alone.",
@@ -3048,14 +3035,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ESC",
-        "document": "AF guidelines (LAAO)",
-        "note": "Early randomized LAAO vs DOAC signal informing device-vs-OAC discussions.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.5 text, page 3347; reference 366. Early randomized LAAO vs DOAC signal informing device-vs-OAC discussions.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       },
       {
-        "society": "ACC/AHA",
-        "document": "LAAO vs anticoagulation",
-        "note": "Supports considering LAAO in high-risk AF with attention to bleeding and procedural risk."
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.5.1 (Percutaneous Approaches to Occlude the Left Atrial Appendage) synopsis; Section 6.5.1 reference 4. Supports considering LAAO in high-risk AF with attention to bleeding and procedural risk.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       }
     ],
     "caveats": "Smaller than CHAMPION-AF. Device generation/technique evolve.",
@@ -3099,16 +3089,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In LAAOS III, the appendage was occluded during heart surgery when AF was present, and anticoagulation was still continued.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Surgical AF management / cardiac surgery",
-        "note": "Supports concomitant surgical LAA occlusion during cardiac surgery with continued anticoagulation.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.5.2, Recommendation 1 (Class 1, Level of evidence A), Recommendations 2 (Class 1, A) and 3 (Class 2b, A); Section 6.5.2 reference 1. Supports concomitant surgical LAA occlusion during cardiac surgery with continued anticoagulation.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "AF guidelines",
-        "note": "Aligned with surgical LAA occlusion as additive stroke prevention. Not OAC replacement.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 10 (Class I, Level B), page 3348; reference 401. Aligned with surgical LAA occlusion as additive stroke prevention. Not OAC replacement.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Surgical candidates only. OAC continued after occlusion in the trial. Occlusion is additive.",
@@ -3154,19 +3146,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "The two prespecified primary endpoints showed superiority for non-procedure-related major or CRNM bleeding (8.5% vs 18.1%) and noninferiority for death, stroke, or systemic embolism at 36 months (5.3% vs 5.8%).",
     "limitations": "Ablation population differs from general AF stroke-prevention cohorts. There was no arm that stopped anticoagulation after ablation alone.",
     "journalClub": "OPTION has two primary endpoints. One showed superiority for non-procedure-related major or CRNM bleeding (8.5% vs 18.1%). The other showed noninferiority for death, stroke, or systemic embolism at 36 months (5.3% vs 5.8%). The secondary endpoint is major bleeding, including procedure-related bleeding, through 36 months (3.9% vs 5.0%).",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "AF ablation + LAAO",
-        "note": "Too new for full older-guideline incorporation. May influence post-ablation antithrombotic strategies."
-      },
-      {
-        "society": "ESC",
-        "document": "AF guidelines / ablation",
-        "note": "Likely to inform shared decisions on LAAO vs continued OAC after ablation.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Ablation population is not general AF stroke-prevention cohorts.",
     "practiceTakeaway": "In OPTION, after catheter ablation for AF, left atrial appendage closure had less non-procedure-related major or clinically relevant nonmajor bleeding than continued oral anticoagulation (8.5% vs 18.1%) and was noninferior for death, stroke, or systemic embolism at 36 months (5.3% vs 5.8%).",
     "questionsAnswered": [
@@ -3210,20 +3190,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Noninferior efficacy composite. Superior nonprocedural bleeding. Contemporary device.",
     "limitations": "Ischemic stroke numerically higher with device. Procedural risk. Longer stroke follow-up ongoing.",
     "journalClub": "CHAMPION-AF moves LAAO toward a shared-decision alternative even for anticoagulation-eligible patients.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "LAAO vs DOAC",
-        "note": "Too new for full guideline incorporation as of mid-2026 briefings. Likely to influence next LAAO updates.",
-        "year": 2026
-      },
-      {
-        "society": "ESC",
-        "document": "AF guidelines",
-        "note": "May shift LAAO from intolerance niche toward broader shared-decision use in eligible patients.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Ischemic stroke numerically higher with device. Procedural risk. Longer follow-up ongoing.",
     "practiceTakeaway": "In CHAMPION-AF, Watchman FLX was noninferior to a physician-chosen DOAC for cardiovascular death, stroke, or systemic embolism at 3 years in anticoagulation-eligible AF (5.7% vs 4.8%). Non-procedure-related bleeding was lower with the device (10.9% vs 19.0%; HR 0.55), and ischemic stroke was numerically higher.",
     "questionsAnswered": [
@@ -3267,14 +3234,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Randomized device comparison with separate safety, ischemic, and occlusion end points, so a closure difference is not taught as a stroke difference.",
     "limitations": "Noninferiority margins are not printed in the abstract. Procedure-related complications were higher with Amulet. The 18-month ischemic end point was identical (2.8% vs 2.8%), which supports noninferiority rather than a stroke benefit. Not evidence about DOAC therapy.",
     "journalClub": "Device-versus-device noninferiority on the stated safety and effectiveness end points, and more complete 45-day occlusion with Amulet. The extra procedure-related complications belong in the same account. AMULET IDE is not closure versus anticoagulation.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "Left atrial appendage occlusion devices (teaching note)",
-        "note": "Amulet versus Watchman. Comparisons of either device with a DOAC are separate trials.",
-        "year": 2023
-      }
-    ],
+    "guidelines": [],
     "caveats": "Noninferior 12-month safety (14.5% vs 14.7%) and 18-month ischemic effectiveness (2.8% vs 2.8%), and superior 45-day occlusion (98.9% vs 96.8%; P=0.003). Procedure-related complications were 4.5% vs 2.5%. Not a DOAC trial.",
     "practiceTakeaway": "In AMULET IDE, Amulet was noninferior to Watchman for the 12-month safety composite (14.5% vs 14.7%) and 18-month ischemic stroke or systemic embolism (2.8% vs 2.8%), and superior for appendage occlusion at 45 days (98.9% vs 96.8%). Procedure-related complications were higher with Amulet (4.5% vs 2.5%).",
     "questionsAnswered": [
@@ -3320,15 +3280,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ACC/AHA",
-        "document": "TAVR antithrombotic therapy",
-        "note": "Underpins guidance against routine DOAC after TAVR without another OAC indication.",
-        "year": 2020
+        "document": "ACC/AHA Valvular Heart Disease Guideline",
+        "year": 2020,
+        "note": "2020 ACC/AHA Valvular Heart Disease Guideline, Section 11.2, Recommendation 12 (Class 3, Harm, Level of evidence B-R), page e142, with supportive text on page e145, and Section 2.4.3 supportive text for Recommendation 3 (Class 2a, Level of evidence B-NR), page e84; Section 11.2 reference 30; Section 2.4.3 reference 23. Underpins guidance against routine DOAC after TAVR without another OAC indication.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000923"
       },
       {
-        "society": "ESC",
-        "document": "Valvular / TAVI antithrombotic therapy",
-        "note": "Aligned with antiplatelet strategies rather than routine OAC post-TAVI without indication.",
-        "year": 2021
+        "society": "ESC/EACTS",
+        "document": "ESC/EACTS Valvular Heart Disease Guidelines",
+        "year": 2021,
+        "note": "2021 ESC/EACTS Valvular Heart Disease Guidelines, Section 11.3 recommendation table (Class III, Level B), page 603; text pages 602 and 604; reference 497. Aligned with antiplatelet strategies rather than routine OAC post-TAVI without indication.",
+        "url": "https://doi.org/10.1093/eurheartj/ehab395"
       }
     ],
     "caveats": "Stopped early. Primary efficacy harm was significant. Primary safety bleeding was not (HR 1.50; 95% CI 0.95–2.37; P=0.08). Patients with a separate indication for oral anticoagulation were not this trial.",
@@ -3377,10 +3339,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "Cohort A had less bleeding with aspirin alone, with risk ratios 0.57 and 0.61. The ischemic secondary composite was 9.7% versus 9.9% (superiority P=0.93).",
     "guidelines": [
       {
-        "society": "ESC",
-        "document": "TAVI antithrombotic therapy (teaching note)",
-        "note": "Aspirin alone versus aspirin plus clopidogrel for 3 months when there is no long-term oral-anticoagulation indication.",
-        "year": 2021
+        "society": "ESC/EACTS",
+        "document": "ESC/EACTS Valvular Heart Disease Guidelines",
+        "year": 2021,
+        "note": "2021 ESC/EACTS Valvular Heart Disease Guidelines, Section 11.3 recommendation table (Class I, Level A for cohort A; Class I, Level B for cohort B), page 603; references 496 and 501. Cohort A: aspirin alone versus aspirin plus clopidogrel for 3 months when there is no long-term oral-anticoagulation indication. Cohort B: oral anticoagulation alone versus oral anticoagulation plus clopidogrel for 3 months when an anticoagulation indication already exists. The dedicated cohort B card is POPular TAVI OAC.",
+        "url": "https://doi.org/10.1093/eurheartj/ehab395"
       }
     ],
     "caveats": "Cohort A (no long-term oral-anticoagulation indication) is Brouwer et al., doi:10.1056/NEJMoa2017815. All bleeding 15.1% vs 26.6% (risk ratio 0.57; 95% CI 0.42–0.77). Ischemic composite 9.7% vs 9.9% (risk ratio 0.98; 95% CI 0.62–1.55).",
@@ -3428,10 +3391,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "Less bleeding with oral anticoagulation alone. Randomized, two primary bleeding outcomes, risk ratios 0.63 and 0.64. The ischemic secondary composite was 13.4% vs 17.3% and its superiority interval includes 1. The name is “POPular TAVI OAC” so this paper is not merged with Brouwer et al., the aspirin cohort.",
     "guidelines": [
       {
-        "society": "ESC",
-        "document": "TAVI antithrombotic therapy (teaching note)",
-        "note": "Oral anticoagulation with or without clopidogrel when an anticoagulation indication already exists. The aspirin cohort is the other POPular TAVI trial.",
-        "year": 2021
+        "society": "ESC/EACTS",
+        "document": "ESC/EACTS Valvular Heart Disease Guidelines",
+        "year": 2021,
+        "note": "2021 ESC/EACTS Valvular Heart Disease Guidelines, Section 11.3 recommendation table (Class I, Level B), page 603; reference 501. Oral anticoagulation with or without clopidogrel when an anticoagulation indication already exists. The aspirin cohort is the other POPular TAVI trial.",
+        "url": "https://doi.org/10.1093/eurheartj/ehab395"
       }
     ],
     "caveats": "The bleeding primaries were 21.7% vs 34.6% for all bleeding (risk ratio 0.63; 95% CI 0.43–0.90). Most bleeding was minor access-site bleeding. The rates here are from the oral anticoagulation cohort, not the aspirin cohort. This trial is distinct from ENVISAGE-TAVI AF.",
@@ -3478,14 +3442,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Randomized noninferiority trial with masked adjudication, a prespecified margin, and a major-bleeding result that is reported separately from the composite so a ‘net’ win is not mistaken for a bleeding win.",
     "limitations": "Open-label treatment assignment. Major-bleeding noninferiority was not met (upper confidence bound 1.91, above 1.38), driven mainly by gastrointestinal bleeding. The composite folds bleeding into the efficacy outcome. Not evidence about antiplatelet therapy after TAVI without an anticoagulation indication (see POPular TAVI, GALILEO, and ATLANTIS).",
     "journalClub": "Randomized, with prespecified noninferiority margins. Limited by the open-label design. The composite was noninferior. Major bleeding was not. The name is given in full so it is not confused with POPular TAVI.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "TAVI antithrombotic therapy (teaching note)",
-        "note": "Anticoagulation comparison when atrial fibrillation is the indication for oral anticoagulation. Distinct from the POPular TAVI antiplatelet cohorts.",
-        "year": 2021
-      }
-    ],
+    "guidelines": [],
     "caveats": "Open-label, with masked endpoint adjudication, not double-blind. The composite was noninferior (HR 1.05; upper CI 1.31, under the 1.38 margin). Major bleeding missed noninferiority (HR 1.40; 95% CI 1.03–1.91). Aspirin versus clopidogrel after TAVI is the POPular TAVI antiplatelet cohort.",
     "practiceTakeaway": "In ENVISAGE-TAVI AF, edoxaban was noninferior to a VKA for a composite that includes major bleeding after TAVI in AF (17.3 vs 16.5 per 100 person-years; HR 1.05; 95% CI 0.85–1.31). Major bleeding did not meet noninferiority (9.7 vs 7.0 per 100 person-years; HR 1.40; 95% CI 1.03–1.91).",
     "questionsAnswered": [
@@ -3531,16 +3488,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In RIVER, atrial fibrillation with a bioprosthetic mitral valve is a different population from rheumatic mitral stenosis, and rivaroxaban can be appropriate in that setting.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Valvular AF / bioprosthetic valves",
-        "note": "Supports rivaroxaban in AF with bioprosthetic mitral valve (distinct from rheumatic mitral stenosis).",
-        "year": 2020
-      },
-      {
-        "society": "ESC",
-        "document": "Valvular heart disease / AF",
-        "note": "Aligned with DOAC use in bioprosthetic valve AF outside rheumatic mitral stenosis.",
-        "year": 2021
+        "society": "ESC/EACTS",
+        "document": "ESC/EACTS Valvular Heart Disease Guidelines",
+        "year": 2021,
+        "note": "2021 ESC/EACTS Valvular Heart Disease Guidelines, Section 11.3 recommendation table (Class IIa, Level B; Class IIb, Level C), page 603; reference 499. Aligned with DOAC use in bioprosthetic valve AF outside rheumatic mitral stenosis.",
+        "url": "https://doi.org/10.1093/eurheartj/ehab395"
       }
     ],
     "caveats": "Not for rheumatic mitral stenosis/moderate–severe mitral stenosis. See INVICTUS.",
@@ -3586,20 +3538,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Shows no overall net clinical gain for routine apixaban strategy.",
     "limitations": "Strata differ. Without OAC indication, concerning signals vs antiplatelet care.",
     "journalClub": "ATLANTIS reinforces avoiding routine DOAC after TAVI without a separate indication.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "TAVI antithrombotic therapy",
-        "note": "Reinforces avoiding routine apixaban after TAVI without OAC indication.",
-        "year": 2021
-      },
-      {
-        "society": "ACC/AHA",
-        "document": "Post-TAVR antithrombotics",
-        "note": "Aligned with not routinely anticoagulating TAVR patients lacking another indication.",
-        "year": 2020
-      }
-    ],
+    "guidelines": [],
     "caveats": "Strata by OAC indication matter. Concerning signals in the no-indication stratum vs antiplatelet care.",
     "practiceTakeaway": "In ATLANTIS, apixaban after TAVI did not improve the primary net clinical outcome versus standard care. In the stratum without an anticoagulation indication, apixaban showed no advantage versus antiplatelet care.",
     "questionsAnswered": [
@@ -3644,16 +3583,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In INVICTUS, replacing a VKA with rivaroxaban in rheumatic AF was not supported.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Rheumatic AF / mitral stenosis",
-        "note": "The finding supports VKA over rivaroxaban in rheumatic heart disease–associated AF.",
-        "year": 2023
+        "society": "ACC/AHA/ACCP/HRS",
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.5 (AF in Valvular Heart Disease), Recommendation 1 (Class 1, Level of evidence B-R); Section 6.8.5 reference 1. The finding supports VKA over rivaroxaban in rheumatic heart disease–associated AF.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "Valvular AF",
-        "note": "Aligned with VKA for moderate–severe mitral stenosis / rheumatic AF.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 7; reference 294. Aligned with VKA for moderate–severe mitral stenosis / rheumatic AF.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Rheumatic population. The result does not extend to bioprosthetic NVAF (RIVER).",
@@ -3702,9 +3643,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ACC/AHA",
-        "document": "Mechanical valve anticoagulation (teaching note)",
-        "note": "Dabigatran versus warfarin was stopped early for harm.",
-        "year": 2020
+        "document": "ACC/AHA Valvular Heart Disease Guideline",
+        "year": 2020,
+        "note": "2020 ACC/AHA Valvular Heart Disease Guideline, Section 2.4.3, Recommendation 4 (Class 3, Harm, Level of evidence B-R), page e83, with text on pages e84–e85, and Section 11.2, Recommendation 13 (Class 3, Harm, Level of evidence B-R), page e142, with text on page e146; Section 2.4.3 reference 7; Section 11.2 references 4–5. Dabigatran versus warfarin was stopped early for harm.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000923"
       }
     ],
     "caveats": "Stopped early. The primary end point was a trough level. Ischemic or unspecified stroke was 9 (5%) versus 0 and major bleeding was 7 (4%) versus 2 (2%), all major bleeds pericardial. The text does not cast these doses as a regimen. PROACT Xa is the On-X apixaban trial.",
@@ -3750,9 +3692,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ACC/AHA",
-        "document": "On-X aortic valve anticoagulation (teaching note)",
-        "note": "Lower-intensity warfarin was studied against standard warfarin. Dual antiplatelet therapy was not an acceptable substitute in the low-risk arm.",
-        "year": 2020
+        "document": "ACC/AHA Valvular Heart Disease Guideline",
+        "year": 2020,
+        "note": "2020 ACC/AHA Valvular Heart Disease Guideline, Section 11.2, Recommendation 9 (Class 2b, Level of evidence B-R), page e142, with supportive text on page e145; Section 11.2 references 27–28. Lower-intensity warfarin was studied against standard warfarin. Dual antiplatelet therapy was not an acceptable substitute in the low-risk arm.",
+        "url": "https://doi.org/10.1161/CIR.0000000000000923"
       }
     ],
     "caveats": "Excess cerebral thromboembolism with dual antiplatelet therapy in the low-risk arm, and less bleeding with INR 1.5–2.0 than with INR 2.0–3.0 in the high-risk arm. The 2014 interim rates are a different report. Apixaban in On-X aortic valves is PROACT Xa.",
@@ -3799,14 +3742,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Randomized stop with a primary efficacy difference in the direction of harm (difference 2.9 events per 100 patient-years; 95% CI 0.8 to 5.0) and a separate major-bleeding rate that was not higher with apixaban.",
     "limitations": "Stopped early. One valve model and the aortic position only. Noninferiority margin not printed. Not a test of dabigatran (RE-ALIGN) and not the lower-INR warfarin strategy (PROACT). Aspirin use was 94%, so this is not apixaban without antiplatelet therapy.",
     "journalClub": "Lack of efficacy of apixaban versus warfarin on the valve end point. Randomized, stopped early, noninferiority not met. Major bleeding was 3.6% versus 4.5% per patient-year and does not offset the efficacy failure. The name stays PROACT Xa so it is not confused with PROACT.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "Mechanical aortic valve anticoagulation (teaching note)",
-        "note": "Apixaban versus warfarin in On-X aortic valves was stopped for excess valve thrombosis or thromboembolism.",
-        "year": 2020
-      }
-    ],
+    "guidelines": [],
     "caveats": "Stopped early. More primary efficacy events with apixaban (4.2% vs 1.3% per patient-year; difference 2.9; 95% CI 0.8 to 5.0). Major bleeding was 3.6% vs 4.5% per patient-year. Not PROACT’s lower-INR result.",
     "practiceTakeaway": "In PROACT Xa, apixaban 5 mg twice daily had more valve thrombosis or valve-related thromboembolism than warfarin in On-X aortic valves (4.2% vs 1.3% per patient-year). The trial stopped after 863 participants.",
     "questionsAnswered": [
@@ -3844,21 +3780,8 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Randomized trial in Norway (ages 65–80) of DOAC monotherapy vs aspirin after TAVI.",
     "strengths": "HALT reduced (RR 0.55). Safety composite noninferior in this cohort.",
     "limitations": "Imaging primary endpoint. Clinical outcomes underpowered. Not a mandate for routine post-TAVI OAC.",
-    "journalClub": "ACASA-TAVI is hypothesis-generating for HALT. NOTION-4 and guidelines that discourage routine OAC without an indication are the comparison.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "TAVI antithrombotic therapy",
-        "note": "Too new for full incorporation. Imaging endpoint. Does not overturn ‘no routine OAC’ guidance alone.",
-        "year": 2026
-      },
-      {
-        "society": "ESC",
-        "document": "TAVI antithrombotics",
-        "note": "Hypothesis-generating vs current advice against routine OAC without indication.",
-        "year": 2021
-      }
-    ],
+    "journalClub": "ACASA-TAVI is hypothesis-generating for HALT. NOTION-4 and GALILEO are the comparison.",
+    "guidelines": [],
     "caveats": "HALT imaging primary. Clinical outcomes underpowered. NOTION-4 and GALILEO are the comparison.",
     "practiceTakeaway": "In ACASA-TAVI, a DOAC after TAVI lowered hypoattenuated leaflet thickening versus aspirin in patients aged 65–80 without a long-term anticoagulation indication (16.2% vs 28.6%; RR 0.55). The bleed, thromboembolism, or death composite was 7.5% versus 10.6%.",
     "questionsAnswered": [
@@ -3902,20 +3825,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "The primary 12-month HALT comparison was not met (28.3% vs 32.2%; P=0.54). The 3-month HALT difference (12.1% vs 31.8%) occurred while DOAC was still being taken and is not the primary endpoint.",
     "limitations": "Imaging-heavy endpoint. Clinical events limited in number.",
     "journalClub": "The primary result was 12-month HALT 28.3% vs 32.2%, P=0.54, not met. The 3-month HALT rates and the clinical composite (risk difference 5.9%, 95% CI 1.2% to 10.6%) are not substitutes for that primary.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "TAVR antithrombotic therapy",
-        "note": "Supports current guidance against routine short-course DOAC after TAVR for HALT alone.",
-        "year": 2026
-      },
-      {
-        "society": "ESC",
-        "document": "TAVI antithrombotics",
-        "note": "Aligned with avoiding routine OAC without another indication despite transient HALT reduction.",
-        "year": 2021
-      }
-    ],
+    "guidelines": [],
     "caveats": "Primary 12-month HALT was not met (P=0.54). The clinical composite risk difference was 5.9% (95% CI 1.2% to 10.6%), with the higher rate on the DOAC strategy (8.2% vs 2.3%).",
     "practiceTakeaway": "In NOTION-4, after TAVR without an anticoagulation indication, 3 months of a DOAC before single antiplatelet therapy did not significantly reduce HALT at 12 months versus single antiplatelet therapy alone (28.3% vs 32.2%; P=0.54). It increased death, stroke, or major or life-threatening bleeding at 12 months (8.2% vs 2.3%; risk difference 5.9%; 95% CI 1.2% to 10.6%).",
     "questionsAnswered": [
@@ -3958,20 +3868,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Stroke/SE reduced vs placebo. Addresses extreme-age under-treatment.",
     "limitations": "Regional population/labeling. Major bleeding numerically higher. Not a comparison to standard-dose DOAC.",
     "journalClub": "ELDERCARE-AF supports very-low-dose edoxaban in carefully selected frail elderly unsuitable for standard dosing.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "AF in the elderly / frail",
-        "note": "Supports very-low-dose edoxaban in selected ≥80-year-olds unsuitable for standard OAC (regional practice/labeling).",
-        "year": 2020
-      },
-      {
-        "society": "ACC/AHA",
-        "document": "AF anticoagulation in frail elderly",
-        "note": "Informs individualized low-dose strategies when standard DOAC is unsuitable. Not a universal dose.",
-        "year": 2023
-      }
-    ],
+    "guidelines": [],
     "caveats": "Japan-led. Placebo comparator. Major bleeding numerically higher. Not standard-dose DOAC comparison.",
     "practiceTakeaway": "In ELDERCARE-AF, edoxaban 15 mg daily lowered stroke or systemic embolism versus placebo in Japanese patients aged 80 or older with AF who were unsuitable for standard anticoagulation (2.3% per year vs 6.7% per year). Major bleeding was 3.3% versus 1.8% per year.",
     "questionsAnswered": [
@@ -4017,20 +3914,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ESC",
-        "document": "AF in frail older adults",
-        "note": "Challenges automatic VKA then DOAC switches in frail patients stable on VKA.",
-        "year": 2024
-      },
-      {
-        "society": "ACC/AHA",
-        "document": "AF anticoagulation",
-        "note": "Aligned with individualized switching. Stability on VKA matters in frailty.",
-        "year": 2023
-      },
-      {
-        "society": "AC Forum",
-        "document": "Geriatric anticoagulation guidance",
-        "note": "Frequently cited ‘do not auto-switch’ teaching trial."
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 7 (Class IIb, Level B), page 3344; Section 6.2.2 text, page 3345; reference 309. Challenges automatic VKA then DOAC switches in frail patients stable on VKA.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Stopped early for futility after 163 primary events. The population was already treated with a VKA. This does not argue against starting a DOAC in a DOAC-naive frail patient when that is otherwise appropriate.",
@@ -4079,15 +3966,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ACC/AHA/ACCP/HRS",
-        "document": "2023 AF guideline §6.8.4",
-        "note": "End-stage chronic kidney disease (CrCl <15 mL/min) or dialysis: warfarin or an evidence-based dose of apixaban \"might be reasonable\" to reduce stroke risk (Class 2b, level of evidence B-NR). The text cites RENAL-AF as one of two small hemodialysis trials that could not show differences in safety or efficacy but found significantly more bleeding than stroke events, and encourages shared decision-making pending randomized trials.",
-        "year": 2023
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.4 supportive text; Section 6.8.4 reference 30. End-stage chronic kidney disease (CrCl <15 mL/min) or dialysis: warfarin or an evidence-based dose of apixaban \"might be reasonable\" to reduce stroke risk (Class 2b, level of evidence B-NR). The text cites RENAL-AF as one of two small hemodialysis trials that could not show differences in safety or efficacy but found significantly more bleeding than stroke events, and encourages shared decision-making pending randomized trials.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "2024 AF guideline §6.2.1 (narrative)",
-        "note": "No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap. Its sentence describes both trials as testing apixaban 2.5 mg twice daily [correction: the RENAL-AF protocol used 5 mg twice daily, with 2.5 mg only for age ≥80 years and/or weight ≤60 kg].",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2.1 text; reference 329. No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap. Its sentence describes both trials as testing apixaban 2.5 mg twice daily [correction: the RENAL-AF protocol used 5 mg twice daily, with 2.5 mg only for age ≥80 years and/or weight ≤60 kg].",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "The trial was terminated early for slow enrollment (154 of about 760 planned), so it was underpowered, and absence of a significant difference is not evidence of equivalence. Warfarin time in therapeutic range was low (44%). Open-label. The bleeding figures are 1-year Kaplan–Meier rates and the stroke figures are 1-year rates. The death figures are counts of patients. Those counts are not mixed with the rates. The RENAL-AF protocol dose was 5 mg twice daily with 2.5 mg only for selected patients, so its results are not interchangeable with the AXADIA-AFNET 8 protocol's 2.5 mg arm.",
@@ -4120,15 +4009,17 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ACC/AHA/ACCP/HRS",
-        "document": "2023 AF guideline §6.8.4",
-        "note": "End-stage chronic kidney disease (CrCl <15 mL/min) or dialysis: warfarin or an evidence-based dose of apixaban \"might be reasonable\" to reduce stroke risk (Class 2b, level of evidence B-NR). The text cites AXADIA-AFNET 8 as one of two small hemodialysis trials that could not show differences in safety or efficacy but found significantly more bleeding than stroke events, and encourages shared decision-making pending randomized trials.",
-        "year": 2023
+        "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
+        "year": 2023,
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.4 supportive text; Section 6.8.4 reference 29. End-stage chronic kidney disease (CrCl <15 mL/min) or dialysis: warfarin or an evidence-based dose of apixaban \"might be reasonable\" to reduce stroke risk (Class 2b, level of evidence B-NR). The text cites AXADIA-AFNET 8 as one of two small hemodialysis trials that could not show differences in safety or efficacy but found significantly more bleeding than stroke events, and encourages shared decision-making pending randomized trials.",
+        "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
-        "document": "2024 AF guideline §6.2.1 (narrative)",
-        "note": "No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2.1 text; reference 328. No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "The trial was underpowered, with 97 randomized against a revised target of 108 and an original target of 222, with fewer events than planned. Absence of a significant difference is not evidence of equivalence. The primary safety endpoint includes death from any cause, so it is not a bleeding-only endpoint and is not lined up against RENAL-AF's bleeding-only primary. One apixaban protocol dose (2.5 mg twice daily) was tested against phenprocoumon, which is not warfarin. Open-label. Published in the 2023 issue (Epub 2022).",
@@ -4158,14 +4049,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Randomized timing comparison with severity-based windows and a symptomatic-intracranial-hemorrhage count that was the same in both groups at 30 days (2 vs 2).",
     "limitations": "Open-label treatment. The primary confidence interval includes both fewer and slightly more events with early treatment. No noninferiority margin is printed. Not the OPTIMAS comparison of within 4 days versus 7–14 days.",
     "journalClub": "Randomized, assessor-masked, and imprecise. The risk difference and confidence interval are the cited figures. The paper does not call the primary result superior or noninferior. ELAN’s severity-based clock stays separate from OPTIMAS.",
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "Timing of anticoagulation after ischemic stroke (teaching note)",
-        "note": "Severity-based early versus later DOAC initiation. OPTIMAS is a separate trial.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Open-label, with assessors unaware of assignment. The 30-day primary risk difference was −1.18 percentage points (95% CI −2.84 to 0.47). Symptomatic intracranial hemorrhage was 0.2% in both groups. Not OPTIMAS.",
     "practiceTakeaway": "In ELAN, starting a DOAC early after ischemic stroke with AF (timing based on stroke severity) had a 30-day rate of recurrent ischemic stroke, systemic embolism, major extracranial bleeding, symptomatic intracranial hemorrhage, or vascular death of 2.9%, versus 4.1% with later starts (risk difference −1.18 percentage points; 95% CI −2.84 to 0.47). Symptomatic intracranial hemorrhage was 0.2% in each group.",
     "questionsAnswered": [
@@ -4205,19 +4089,12 @@ window.ANTICOAG_TRIALS = [
     "url": "https://doi.org/10.1016/S0140-6736(24)02197-4",
     "pmid": "39491870",
     "expectedResults": null,
-    "background": "Guidelines and habit often delay a DOAC for one to two weeks after ischaemic stroke in atrial fibrillation. OPTIMAS compared that delay with a start within 4 days. ELAN used severity-based windows and a 30-day composite that includes bleeding.",
+    "background": "Habit often delays a DOAC for one to two weeks after ischaemic stroke in atrial fibrillation. OPTIMAS compared that delay with a start within 4 days. ELAN used severity-based windows and a 30-day composite that includes bleeding.",
     "designNotes": "Randomized, open-label, blinded-endpoint, phase 4. Stratified by stroke severity. Gatekeeper testing used a noninferiority margin of 2 percentage points, then superiority. Modified intention-to-treat. ISRCTN17896007 and ClinicalTrials.gov NCT03759938. A 2025 erratum (Lancet 2025;405:32; doi:10.1016/S0140-6736(24)02802-2) corrected the summary spelling to “acute ischaemic stroke” and a figure’s day-0 number at risk in the delayed group to 1,807. That 1,807 count is already the modified intention-to-treat number in the abstract. The erratum does not change the event rates.",
     "strengths": "Large randomized noninferiority test with masked adjudication and a symptomatic-intracranial-haemorrhage result reported separately from the composite.",
     "limitations": "Open-label treatment. Superiority was not shown. Eligible physicians were uncertain about timing, so the trial is not a sample of patients in whom the clinician was already sure a delay was required. Not ELAN’s severity-based schedule.",
     "journalClub": "Noninferiority of early versus delayed DOAC initiation on the 90-day composite. Randomized, blinded endpoint, margin met. And the result is “not worse within the margin,” not “better.” The within-4-days versus 7–14-days contrast stays separate from ELAN.",
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "Timing of anticoagulation after ischaemic stroke (teaching note)",
-        "note": "Early versus delayed DOAC initiation when the clinician is uncertain. ELAN is a separate trial.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Open-label, blinded endpoint. Noninferiority (adjusted risk difference 0.000; 95% CI −0.011 to 0.012; margin 2 percentage points; P=0.0003). Superiority was not shown (P=0.96). Symptomatic intracranial haemorrhage was 0.6% vs 0.7%.",
     "practiceTakeaway": "In OPTIMAS, starting a DOAC within 4 days of ischemic stroke with AF was noninferior to starting at 7–14 days for the 90-day composite (3.3% in each group). Early starts were not superior, and symptomatic intracranial hemorrhage was 0.6% versus 0.7%.",
     "questionsAnswered": [
@@ -4260,20 +4137,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "First ischemic stroke was lower with a DOAC (HR 0.05; 95% CI 0.01–0.36).",
     "limitations": "Noninferiority for first recurrent intracerebral hemorrhage was not met (HR 10.89; 90% CI 1.95–60.72).",
     "journalClub": "PRESTIGE-AF is spontaneous intracerebral hemorrhage, not intracranial hemorrhage in general. First ischemic stroke fell, and noninferiority for first recurrent intracerebral hemorrhage was not met.",
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "AF after ICH",
-        "note": "Highlights the ischemic-stroke reduction against recurrent intracerebral hemorrhage. Full incorporation is still evolving.",
-        "year": 2025
-      },
-      {
-        "society": "ESC",
-        "document": "AF and prior ICH",
-        "note": "Informs cautious decisions about restarting anticoagulation after spontaneous intracerebral hemorrhage.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Noninferiority for first recurrent intracerebral hemorrhage was not met (HR 10.89; 90% CI 1.95–60.72) despite fewer first ischemic strokes.",
     "practiceTakeaway": "In PRESTIGE-AF, after spontaneous intracerebral hemorrhage with AF, a DOAC lowered first ischemic stroke versus no anticoagulation (HR 0.05; 95% CI 0.01–0.36). Recurrent intracerebral hemorrhage was higher with a DOAC and did not meet noninferiority (HR 10.89; 90% CI 1.95–60.72).",
     "questionsAnswered": [
@@ -4317,19 +4181,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Addresses a critical evidence gap with multicenter data.",
     "limitations": "Rates are press-release figures, not a published journal result. No significant reduction in stroke or systemic embolism, and more ISTH major bleeding in the press release. Lobar intraparenchymal hemorrhage enrollment had previously been stopped for safety.",
     "journalClub": "ENRICH-AF does not support routinely restarting edoxaban in unselected post-ICH AF. Complementary data were still outstanding.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "AF after intracranial hemorrhage",
-        "note": "Too new for full older-guideline incorporation. Argues against routine edoxaban restart in unselected post-ICH AF.",
-        "year": 2026
-      },
-      {
-        "society": "AHA/ASA",
-        "document": "Secondary prevention after ICH",
-        "note": "Likely to influence next updates toward individualized. Not routine. Re-anticoagulation."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Prospective, randomized, open-label, blinded-endpoint. The 11.8% vs 12.8% and 11.6% vs 5.2% figures are European Society of Cardiology Hot Line press-release results from 29 August 2026, not as a journal publication. NCT03950076.",
     "practiceTakeaway": "In ENRICH-AF, edoxaban did not reduce stroke or systemic embolism versus no anticoagulation in high-risk AF with prior ICH (11.8% vs 12.8%; HR 0.88; 95% CI 0.61–1.26) and increased major bleeding (11.6% vs 5.2%; HR 2.23; 95% CI 1.39–3.59). These figures are from the 29 August 2026 congress press release."
   },
@@ -4356,20 +4208,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Composite benefit without major bleeding excess. Fills an evidence gap.",
     "limitations": "Regional cohort. Absolute event rates low. Precision and generalizability are limited.",
     "journalClub": "SINGLE-AF provides randomized trial support for treating intermediate-risk AF with DOACs.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "AF stroke-risk thresholds",
-        "note": "Too new for full incorporation. May upgrade intermediate CHA₂DS₂-VASc treatment recommendations.",
-        "year": 2026
-      },
-      {
-        "society": "ACC/AHA",
-        "document": "AF anticoagulation thresholds",
-        "note": "Likely to influence Class IIa intermediate-risk discussions and reimbursement debates.",
-        "year": 2023
-      }
-    ],
+    "guidelines": [],
     "caveats": "South Korean cohort. Low absolute event rates. Generalizability and precision warrant caution.",
     "practiceTakeaway": "In SINGLE-AF, apixaban 5 mg twice daily or rivaroxaban 20 mg daily lowered the 24-month composite of stroke, systemic embolism, major bleeding, or cardiovascular death versus no anticoagulation in AF with CHA₂DS₂-VASc 1 in men or 2 in women (0.5% vs 1.5%; HR 0.31). Major bleeding was 0.3% versus 0.5%.",
     "questionsAnswered": [
@@ -4411,16 +4250,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "Randomized, double-blind, and positive for stroke or systemic embolism, with a clear major-bleeding trade-off. ARTESiA is read in the same sitting as NOAH-AFNET 6 so device-detected atrial episodes are not treated as one settled result.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "Device-detected atrial fibrillation (teaching note)",
-        "note": "It stands beside NOAH-AFNET 6. ARTESiA’s journal year is 2024.",
-        "year": 2023
-      },
-      {
         "society": "ESC",
-        "document": "AF guidelines (teaching note)",
-        "note": "It is read with NOAH-AFNET 6. A single rule for device-detected episodes does not follow.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 6 (Class IIb, Level B), page 3342; reference 282. It is read with NOAH-AFNET 6. A single rule for device-detected episodes does not follow.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Double-blind, double-dummy. Lower stroke or systemic-embolism rate than aspirin (HR 0.63; P=0.007) and a higher on-treatment major-bleeding rate (HR 1.80; P=0.001). PubMed and the trial registry use the spelling ARTESIA. Not a substitute for reading NOAH-AFNET 6.",
@@ -4473,9 +4307,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "ESC",
-        "document": "Device-detected atrial high-rate episode (teaching note)",
-        "note": "It stands beside ARTESiA. NOAH-AFNET 6 did not establish a primary-endpoint benefit of edoxaban over placebo.",
-        "year": 2024
+        "document": "ESC Atrial Fibrillation Guidelines",
+        "year": 2024,
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 6 (Class IIb, Level B), page 3342; reference 281. It stands beside ARTESiA. NOAH-AFNET 6 did not establish a primary-endpoint benefit of edoxaban over placebo.",
+        "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
     "caveats": "Double-blind, double-dummy. Sound blinding, but the primary composite was not reduced (HR 0.81; 95% CI 0.60–1.08; P=0.15), the trial stopped early, and stroke was about 1% per patient-year in both groups. Quoting a standalone major-bleeding percentage is not supported. The published safety contrast is death or major bleeding (HR 1.31).",
@@ -4523,21 +4358,18 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "RE-VERSE AD established idarucizumab as specific dabigatran reversal for emergencies.",
     "guidelines": [
       {
-        "society": "ACC/AHA",
-        "document": "DOAC-associated bleeding",
-        "note": "Supports idarucizumab for emergency dabigatran reversal.",
-        "year": 2020
-      },
-      {
-        "society": "AC Forum",
-        "document": "Reversal guidance / stewardship resources",
-        "note": "Standard specific reversal agent teaching for dabigatran emergencies."
+        "society": "ACC",
+        "document": "ACC Expert Consensus Decision Pathway on Bleeding With Oral Anticoagulants",
+        "year": 2020,
+        "note": "2020 ACC Expert Consensus Decision Pathway on Bleeding With Oral Anticoagulants, Section 5.6.2 (Factor IIa Inhibitors), page 606, and Table 5 (idarucizumab row); reference 60. Supports idarucizumab for emergency dabigatran reversal.",
+        "url": "https://www.jacc.org/doi/10.1016/j.jacc.2020.04.053"
       },
       {
         "society": "ASH",
-        "document": "Anticoagulant reversal",
-        "note": "Aligned with specific reversal when available for life-threatening dabigatran bleeding.",
-        "year": 2018
+        "document": "ASH Guidelines on Optimal Management of Anticoagulation Therapy",
+        "year": 2018,
+        "note": "2018 ASH Guidelines on Optimal Management of Anticoagulation Therapy, Recommendation 19 (conditional recommendation, very low certainty); reference 197. Aligned with specific reversal when available for life-threatening dabigatran bleeding.",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6258922/"
       }
     ],
     "caveats": "Cohort design (not randomized trial vs usual care). Thrombotic events can follow reversal in acute illness.",
@@ -4578,20 +4410,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Showed rapid anti-FXa reduction and high rates of effective hemostasis in a selected major-bleed cohort.",
     "limitations": "No randomized usual-care control. Thrombotic events after treatment. Superseded as a U.S. practice directive by Dec 2025 withdrawal.",
     "journalClub": "ANNEXA-4 explains why andexanet entered practice. It is read as historical evidence. The later context is U.S. Dec 2025 withdrawal and institutional 4F-PCC pathways. The FDA safety communication is the source for current U.S. status.",
-    "guidelines": [
-      {
-        "society": "FDA",
-        "document": "Andexxa safety communication / U.S. market status",
-        "year": 2025,
-        "note": "Andexxa not available in U.S. after Dec 22, 2025 (voluntary biologics license application withdrawal; risks outweighed benefits — TE events). https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication",
-        "url": "https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication"
-      },
-      {
-        "society": "AC Forum / institutional",
-        "document": "FXa-inhibitor major bleed pathways",
-        "note": "U.S. teaching: supportive care + 4F-PCC per local protocol. Andexanet is not assumed to be on formulary. Non-U.S.: Ondexxya availability is a local question."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Single-cohort design. TE after reversal. U.S. Andexxa withdrawn Dec 22, 2025. Geographic availability differs (United Kingdom/European Union/Japan statements late 2025).",
     "practiceTakeaway": "In ANNEXA-4, andexanet produced effective hemostasis in a high proportion of patients with acute major bleeding on a factor Xa inhibitor and rapidly reduced anti-factor Xa activity. Andexxa left the U.S. market on Dec 22, 2025.",
     "regulatoryNote": "U.S. withdrawn Dec 2025",
@@ -4636,21 +4455,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Randomized ICH context. Clarified hemostasis vs thrombosis trade-off that shaped regulatory reassessment.",
     "limitations": "Excess TE (FDA advisory committee Day-30 figures above). No clear early functional/mortality advantage. U.S. product no longer available after Dec 2025.",
     "journalClub": "ANNEXA-I is the safety story behind U.S. Andexxa withdrawal. The sequence runs from the hemostasis benefit, then TE/deaths signal (FDA advisory committee: 14.6% vs 6.9% thrombosis; 2.5% vs 0.9% TE deaths at Day 30) then U.S. unavailable after Dec 22, 2025 then current U.S. ICH teaching = institutional pathway (typically 4F-PCC), not andexanet.",
-    "guidelines": [
-      {
-        "society": "FDA",
-        "document": "Andexxa safety communication / U.S. withdrawal",
-        "year": 2025,
-        "note": "U.S. Andexxa withdrawn effective Dec 22, 2025 after TE risk–benefit reassessment. https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication",
-        "url": "https://www.fda.gov/safety/medical-product-safety-information/update-safety-andexxa-astrazeneca-fda-safety-communication"
-      },
-      {
-        "society": "AHA/ASA / institutional ICH bundles",
-        "document": "Anticoagulant-associated ICH",
-        "year": 2024,
-        "note": "ANNEXA-I is a historical result. U.S. protocols reflect current formulary (andexanet unavailable) and local 4F-PCC pathways."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Thrombotic events were higher with andexanet. Published New England Journal of Medicine TE rates (~10.3% vs 5.6%) differ from FDA advisory committee Day-30 figures above. The U.S. withdrawal discussion uses the FDA advisory committee Day-30 figures. U.S. Andexxa unavailable after Dec 22, 2025 (AstraZeneca voluntary biologics license application withdrawal). Non-U.S. availability may differ.",
     "practiceTakeaway": "In ANNEXA-I, andexanet achieved effective hemostasis more often than usual care in acute ICH on a factor Xa inhibitor (67.0% vs 53.1%). In the FDA advisory committee analysis, thrombosis by day 30 was 14.6% versus 6.9%, and Andexxa left the U.S. market on Dec 22, 2025.",
     "regulatoryNote": "U.S. withdrawn Dec 2025",
@@ -4694,20 +4499,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Large relative reduction in recurrent VTE (HR 0.13). Major bleeding rare.",
     "limitations": "Selection of 'enduring risk' matters. Not all provoked VTE.",
     "journalClub": "HI-PRO extends low-intensity secondary prevention beyond unprovoked-only dogma in selected patients.",
-    "guidelines": [
-      {
-        "society": "CHEST",
-        "document": "Extended VTE after provoked events",
-        "note": "Too new for older documents. Challenges ‘unprovoked-only’ extended therapy dogma in enduring-risk provoked VTE.",
-        "year": 2021
-      },
-      {
-        "society": "ASH",
-        "document": "VTE secondary prevention",
-        "note": "Likely to influence extended prophylaxis decisions after provoked VTE with ongoing risk factors.",
-        "year": 2020
-      }
-    ],
+    "guidelines": [],
     "caveats": "‘Enduring risk’ definition matters. Not all provoked VTE.",
     "practiceTakeaway": "In HI-PRO, apixaban 2.5 mg twice daily lowered recurrent VTE versus placebo in provoked VTE with enduring risk factors (1.3% vs 10.0%; HR 0.13). Major bleeding was rare in both arms.",
     "questionsAnswered": [
@@ -4750,24 +4542,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Primary bleeding endpoint was lower with apixaban (RR 0.46; 95% CI 0.33–0.65). Recurrent symptomatic VTE was 15/1345 (1.1%) vs 14/1355 (1.0%).",
     "limitations": "3-month horizon. Not powered for recurrent VTE. Active cancer was an exclusion, not a reported subgroup. The secondary-outcome interval was not adjusted for multiplicity.",
     "journalClub": "COBRRA reported less clinically relevant bleeding with apixaban than with rivaroxaban (3.3% vs 7.1%; RR 0.46). Recurrent symptomatic VTE was 1.1% vs 1.0% (RR 1.08; 95% CI 0.52–2.23).",
-    "guidelines": [
-      {
-        "society": "ASH",
-        "document": "VTE treatment DOAC choice",
-        "note": "Too new for full incorporation. The trial reported less clinically relevant bleeding with apixaban than with rivaroxaban.",
-        "year": 2026
-      },
-      {
-        "society": "CHEST",
-        "document": "VTE treatment",
-        "note": "Likely to influence next updates comparing DOACs head-to-head for bleeding."
-      },
-      {
-        "society": "AC Forum",
-        "document": "VTE stewardship teaching",
-        "note": "High-impact head-to-head bleeding randomized trial for day-to-day DOAC choice."
-      }
-    ],
+    "guidelines": [],
     "caveats": "3-month primary horizon. Practical formulary/switch decisions still need clinical context.",
     "practiceTakeaway": "In COBRRA, apixaban 10 mg twice daily for 7 days, then 5 mg twice daily, had less clinically relevant bleeding than rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily, over 3 months in acute PE or proximal DVT (3.3% vs 7.1%; RR 0.46; 95% CI 0.33–0.65). Recurrent symptomatic VTE was 1.1% versus 1.0%.",
     "questionsAnswered": [
@@ -4813,10 +4588,11 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "Randomized and double-blind. The primary composite was lower with tenecteplase. Death was not, and bleeding and stroke were higher. PEITHO and HI-PEITHO are different trials every time they come up together.",
     "guidelines": [
       {
-        "society": "ESC",
-        "document": "Acute PE reperfusion (teaching note)",
-        "note": "Systemic fibrinolysis data for intermediate-risk PE. HI-PEITHO is a later catheter-directed trial and does not replace these numbers.",
-        "year": 2019
+        "society": "ESC/ERS",
+        "document": "ESC/ERS Acute Pulmonary Embolism Guidelines",
+        "year": 2019,
+        "note": "2019 ESC/ERS Acute Pulmonary Embolism Guidelines, Section 6.7 recommendations (Class III, Level B), page 569; Section 5.7 (Class I, Level B), page 564; text Sections 6.3.1 (page 566) and 7.2.2 (page 572); reference 179. Systemic fibrinolysis data for intermediate-risk PE. HI-PEITHO is a later catheter-directed trial and does not replace these numbers.",
+        "url": "https://doi.org/10.1093/eurheartj/ehz405"
       }
     ],
     "caveats": "Double-blind. A reduction in 7-day death or hemodynamic decompensation (2.6% vs 5.6%) without a mortality difference (day-7 death 1.2% vs 1.8%; P=0.42) and with more extracranial bleeding and stroke. Distinct from HI-PEITHO.",
@@ -4862,19 +4638,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Hard clinical primary endpoint improved (RR 0.39). No ICH reported in primary reports.",
     "limitations": "Enriched population. Not all intermediate-risk PE. Procedural expertise/PERT context required.",
     "journalClub": "HI-PEITHO supports PERT-guided ultrasound-facilitated catheter-directed fibrinolysis in carefully selected intermediate-risk PE, not blanket use.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "Acute PE / reperfusion",
-        "note": "Too new for full older-document incorporation. Likely to refine PERT pathways for enriched intermediate-risk PE.",
-        "year": 2019
-      },
-      {
-        "society": "CHEST",
-        "document": "PE treatment",
-        "note": "May influence future updates on catheter-directed therapy selection. Not blanket intermediate-risk PE."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Enriched intermediate-risk phenotype (distress markers). Not all intermediate-risk PE.",
     "practiceTakeaway": "In HI-PEITHO, ultrasound-facilitated catheter-directed alteplase plus anticoagulation lowered the 7-day composite of PE death, decompensation, or recurrent PE versus anticoagulation alone in enriched intermediate-risk PE (4.0% vs 10.3%; RR 0.39). Major bleeding was not significantly higher, and neither arm had intracranial hemorrhage.",
     "questionsAnswered": [
@@ -4917,19 +4681,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Less bleeding with very short dual therapy. Noninferiority efficacy framework met as reported.",
     "limitations": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. Caution extrapolating to MI or other regions.",
     "journalClub": "OPTIMA-AF supports very short dual therapy in selected cohorts. The result does not extend generally to ACS.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "AF + PCI antithrombotic therapy",
-        "note": "Too new for full incorporation in older documents. May influence shorter dual-therapy durations in selected patients.",
-        "year": 2024
-      },
-      {
-        "society": "ACC/AHA",
-        "document": "AF with PCI",
-        "note": "Likely to inform next updates on very short dual therapy after imaging-guided PCI in selected cohorts."
-      }
-    ],
+    "guidelines": [],
     "caveats": "East Asian cohort with PCI for chronic coronary syndrome or unstable angina. The result does not extend indiscriminately to MI or other regions. Lower-than-anticipated events.",
     "practiceTakeaway": "In OPTIMA-AF, among Japanese patients with NVAF having PCI for chronic coronary syndrome or unstable angina, 1 month of a DOAC plus a P2Y12 inhibitor followed by DOAC alone was noninferior to 12 months of dual therapy for death or thromboembolism (5.4% vs 4.3%; HR 1.25) and caused less major or clinically relevant nonmajor bleeding (4.5% vs 8.8%; HR 0.50).",
     "questionsAnswered": [
@@ -4973,20 +4725,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Prespecified primary analyses are the two win-ratios, neither of which showed superiority. A secondary BARC ≥3 analysis was higher with the potent P2Y12 strategy.",
     "limitations": "Stopped early. Smaller than planned sample.",
     "journalClub": "In EPIDAURUS, the primary efficacy win-ratio was 1.19 (P=0.610) and the primary safety win-ratio was 0.66 (superiority of the control group P=0.115; noninferiority P=0.713). The BARC ≥3 hazard ratio is a secondary finding. The trial stopped early.",
-    "guidelines": [
-      {
-        "society": "ESC",
-        "document": "AF with ACS",
-        "note": "Reinforces avoiding potent P2Y12 + DOAC early after MI. Consistent with dual-pathway safety priorities.",
-        "year": 2024
-      },
-      {
-        "society": "ACC/AHA",
-        "document": "AF + ACS antithrombotic therapy",
-        "note": "Aligned with preferring clopidogrel over potent P2Y12 when combined with OAC.",
-        "year": 2019
-      }
-    ],
+    "guidelines": [],
     "caveats": "Stopped early at 602 of 1,474. The primary win-ratios come first (efficacy 1.19, P=0.610; safety 0.66, superiority of the control group P=0.115, noninferiority P=0.713). BARC ≥3 HR 3.54 (P=0.027) is secondary.",
     "practiceTakeaway": "In EPIDAURUS, among patients with AF after MI and PCI, 1 month of a DOAC plus prasugrel or ticagrelor showed no significant difference from a DOAC plus clopidogrel on either primary outcome (efficacy win ratio 1.19; 95% CI 0.61–2.32; safety win ratio 0.66; 95% CI 0.39–1.11). The trial stopped early at 602 of 1,474 planned patients.",
     "questionsAnswered": [
@@ -5026,14 +4765,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Double-blind dose-finding design with a prespecified primary composite that was not reduced, and with the post-hoc stroke-or-TIA analysis labeled as post hoc in the paper.",
     "limitations": "Phase 2b and not powered as a practice trial. Primary result is null. The 50 mg stroke-or-TIA hazard ratio of 0.64 is post hoc. The pooled bleeding hazard ratio of 1.57 has a 90% interval that crosses 1. Serial magnetic resonance imaging was missing for 380 of 1,808 (21%). Mean NIHSS was low. Women were 34% of participants. Not a DOAC trial and not OCEANIC-STROKE.",
     "journalClub": "A phase 2 dose-finding trial. Randomized and double-blind, and the primary composite was not reduced (P=0.80 for dose–response). The text does not present the post-hoc 50 mg stroke-or-TIA result (HR 0.64; 90% CI 0.41–0.98) as if it were the primary endpoint. PACIFIC-STROKE comes before OCEANIC-STROKE, and apart from OCEANIC-AF.",
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "Secondary stroke prevention (teaching note)",
-        "note": "Phase 2b asundexian dose-finding on antiplatelet therapy after non-cardioembolic ischemic stroke. The primary composite was not reduced.",
-        "year": 2021
-      }
-    ],
+    "guidelines": [],
     "caveats": "Double-blind. Phase 2b. A null primary composite (19% placebo vs 19%, 22%, and 20%; dose–response P=0.80). Pooled major or clinically relevant nonmajor bleeding HR 1.57 (90% CI 0.91–2.71). The 50 mg stroke-or-TIA finding is post hoc. Not a reason to prescribe asundexian.",
     "practiceTakeaway": "In PACIFIC-STROKE, adding asundexian 10 mg, 20 mg, or 50 mg to antiplatelet therapy after non-cardioembolic ischemic stroke did not reduce covert brain infarct or recurrent ischemic stroke at 26 weeks (19% to 22% across doses vs 19% with placebo). On-treatment major or clinically relevant nonmajor bleeding was 3% to 4% with asundexian versus 2% with placebo.",
     "questionsAnswered": [
@@ -5073,20 +4805,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Clear negative efficacy result prevents premature DOAC replacement. Bleeding was lower with asundexian.",
     "limitations": "Does not speak to other FXIa drugs/doses/indications (see OCEANIC-STROKE).",
     "journalClub": "In OCEANIC-AF, less major bleeding with asundexian (HR 0.32) came with more stroke or systemic embolism than apixaban (1.3% vs 0.4%; HR 3.79).",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "AF anticoagulation pipeline",
-        "note": "Negative AF FXIa vs apixaban result. Supports retaining DOACs as standard pending other programs.",
-        "year": 2023
-      },
-      {
-        "society": "ESC",
-        "document": "AF guidelines / future therapies",
-        "note": "Warns against premature DOAC replacement with FXIa for AF stroke prevention.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Stopped early for inferior efficacy. Bleeding was lower. Efficacy failure is the headline.",
     "practiceTakeaway": "In OCEANIC-AF, asundexian had more stroke or systemic embolism than apixaban in AF (1.3% vs 0.4%; HR 3.79) and less major bleeding (HR 0.32). The trial stopped early for inferior stroke prevention.",
     "questionsAnswered": [
@@ -5129,20 +4848,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Marked reduction in major/CRNM bleeding vs rivaroxaban.",
     "limitations": "Stroke-prevention efficacy unproven. The text does not cast abelacimab as a DOAC replacement.",
     "journalClub": "In AZALEA, FXI blockade can slash bleeding. Efficacy for AF stroke prevention remains the missing piece.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "AF anticoagulation pipeline",
-        "note": "Bleeding reduction without proven stroke-prevention efficacy. Does not change DOAC standards yet.",
-        "year": 2025
-      },
-      {
-        "society": "ESC",
-        "document": "Future anticoagulants",
-        "note": "Hypothesis-generating for FXI blockade safety. Not a basis for routine AF stroke prevention.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Stopped early for a greater-than-anticipated bleeding reduction. Bleeding hazard ratios were 0.38 (150 mg) and 0.31 (90 mg). Stroke-prevention efficacy is not established. This trial does not support abelacimab as a replacement for a DOAC.",
     "practiceTakeaway": "In AZALEA–TIMI 71, abelacimab had less major or clinically relevant nonmajor bleeding than rivaroxaban in AF (HR 0.38 at 150 mg and HR 0.31 at 90 mg). The trial stopped early for that bleeding reduction, and stroke-prevention efficacy was not established in this design.",
     "questionsAnswered": [
@@ -5181,20 +4887,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "First positive phase 3 FXIa hard-outcome win (ischemic stroke HR 0.74) without major bleeding increase.",
     "limitations": "Not an AF trial. Regulatory adoption separate. Early hierarchical secondary nuance noted in reports.",
     "journalClub": "OCEANIC-STROKE shows FXIa can work. But indication matters (stroke add-on is not AF replacement).",
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "Secondary prevention after noncardioembolic stroke",
-        "note": "Too new for full incorporation. First positive phase 3 FXIa outcome signal as antiplatelet add-on.",
-        "year": 2026
-      },
-      {
-        "society": "ESC",
-        "document": "Secondary stroke prevention",
-        "note": "Likely to influence next updates if regulatory adoption follows. Distinct from AF indication.",
-        "year": 2024
-      }
-    ],
+    "guidelines": [],
     "caveats": "Not an AF trial. Regulatory status separate. Early hierarchical secondary nuance in reports.",
     "practiceTakeaway": "In OCEANIC-STROKE, asundexian 50 mg daily added to antiplatelet therapy lowered ischemic stroke versus placebo after noncardioembolic ischemic stroke or high-risk TIA without AF (6.2% vs 8.4%; HR 0.74; 95% CI 0.65–0.84). ISTH major bleeding was 1.9% versus 1.7%.",
     "questionsAnswered": [
@@ -5238,20 +4931,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Adequately sized negative trial. No excess ICH/fatal bleeding reported at this dose.",
     "limitations": "Does not determine milvexian effects in AF or stroke programs still pending.",
     "journalClub": "In LIBREXIA ACS, FXIa add-on failed post-ACS. Another reminder that indication drives FXIa success or failure.",
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "ACS secondary prevention",
-        "note": "Negative FXIa add-on post-ACS. Does not alter dual antiplatelet / ACS pathways.",
-        "year": 2026
-      },
-      {
-        "society": "ESC",
-        "document": "ACS guidelines",
-        "note": "Too new. Reinforces that FXIa success is indication-specific.",
-        "year": 2023
-      }
-    ],
+    "guidelines": [],
     "caveats": "Futile for major adverse cardiovascular events at tested dose. AF/stroke milvexian programs still pending.",
     "practiceTakeaway": "In LIBREXIA ACS, milvexian 25 mg twice daily added to antiplatelet therapy did not reduce cardiovascular death, myocardial infarction, or ischemic stroke versus placebo after ACS (5.4% vs 5.1%; HR 1.05). Intracranial or fatal bleeding was 0.3% in both arms, and the trial stopped for futility.",
     "questionsAnswered": [
@@ -5290,13 +4970,7 @@ window.ANTICOAG_TRIALS = [
     "strengths": "Comparators, populations, and termination status come from the two ClinicalTrials.gov study pages.",
     "limitations": "No posted results, no results digital object identifier, and no PubMed results paper (checked 2026-10-01). Why the sponsor stopped the studies, and any effect on VTE recurrence or bleeding, are not known from public trial results.",
     "journalClub": "ASTER compares abelacimab with apixaban, and MAGNOLIA compares abelacimab with dalteparin. Both are terminated with no public outcome data. Factor XI results from other published trials give context, but none of those trials enrolled cancer-associated VTE, so none is an ASTER or MAGNOLIA result. In AZALEA–TIMI 71 (1,287 patients with AF), major or clinically relevant nonmajor bleeding was 3.2 and 2.6 events per 100 person-years with the two abelacimab doses vs 8.4 with rivaroxaban (HR 0.38; 95% CI 0.24–0.60 and HR 0.31; 95% CI 0.19–0.51), and the trial was stopped early for a greater-than-anticipated bleeding reduction. It was not designed to test stroke prevention. In OCEANIC-AF (14,810 patients with AF), asundexian was stopped prematurely: stroke or systemic embolism was 1.3% vs 0.4% with apixaban (HR 3.79; 95% CI 2.46–5.83), with less major bleeding (0.2% vs 0.7%; HR 0.32; 95% CI 0.18–0.55). In LIBREXIA ACS (14,194 patients after ACS), milvexian added to antiplatelet therapy was stopped for futility: cardiovascular death, MI, or ischemic stroke was 5.4% vs 5.1% with placebo (HR 1.05; 95% CI 0.91–1.21), and BARC type 3c or 5 bleeding (intracranial, vision-threatening intraocular, or fatal) was 0.3% in both groups.",
-    "guidelines": [
-      {
-        "society": "ASH",
-        "document": "Cancer-associated VTE (teaching note)",
-        "note": "These terminated programs have no posted results. They do not change approved DOAC or LMWH cancer-VTE pathways."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Termination on the registry is not an efficacy or safety result. VTE recurrence and bleeding effects are unknown until results are posted.",
     "practiceTakeaway": "ASTER compared abelacimab with apixaban, and MAGNOLIA compared abelacimab with dalteparin, for cancer-associated VTE. Both trials were terminated, and no efficacy or safety results are posted."
   },
@@ -5318,13 +4992,7 @@ window.ANTICOAG_TRIALS = [
     "url": "https://clinicaltrials.gov/study/NCT05757869",
     "expectedResults": "Public data expected later in 2026 (per mid-2026 briefings; timing may shift).",
     "doi": null,
-    "guidelines": [
-      {
-        "society": "ACC/AHA",
-        "document": "AF pipeline",
-        "note": "Pending. May inform future FXIa vs DOAC AF guidance when reported."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Results not public as of mid-Sep 2026 briefings.",
     "practiceTakeaway": "LIBREXIA-AF is comparing milvexian with apixaban for stroke prevention in AF. Primary efficacy and safety results are not yet publicly reported."
   },
@@ -5346,13 +5014,7 @@ window.ANTICOAG_TRIALS = [
     "url": "https://clinicaltrials.gov/study/NCT05702034",
     "expectedResults": "Public data expected later in 2026 (per mid-2026 briefings; timing may shift).",
     "doi": null,
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "Secondary stroke prevention pipeline",
-        "note": "Pending FXIa stroke program. The comparison point is OCEANIC-STROKE."
-      }
-    ],
+    "guidelines": [],
     "caveats": "No public primary results yet in the mid-2026 briefing window.",
     "practiceTakeaway": "LIBREXIA-STROKE is comparing milvexian plus standard care with placebo plus standard care after ischemic stroke or TIA. Results were not publicly reported as of mid-September 2026."
   },
@@ -5375,18 +5037,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "This quadruple-blind randomized trial (NCT03907046) tested apixaban 5 mg twice daily, or 2.5 mg twice daily if at least two of age ≥80 years, weight ≤60 kg, or serum creatinine 1.5–2.4 mg/dL are present, or if the patient is taking a strong CYP3A4/P-glycoprotein inhibitor, versus aspirin 81 mg once daily. Masking covers participant, care provider, investigator, and outcomes assessor. Primary aim is stroke of any type or death. Results are not published.",
     "expectedResults": "Expected in coming years, including conference late-breakers.",
     "doi": null,
-    "guidelines": [
-      {
-        "society": "AHA/ASA",
-        "document": "AF after ICH",
-        "note": "Pending. Expected to refine post-ICH anticoagulation decisions with ENRICH/PRESTIGE."
-      },
-      {
-        "society": "ESC",
-        "document": "AF after ICH",
-        "note": "Routine re-anticoagulation algorithms wait on this trial."
-      }
-    ],
+    "guidelines": [],
     "caveats": "Recruiting and quadruple-blind (participant, care provider, investigator, and outcomes assessor). The arms are apixaban versus aspirin 81 mg. No results to quote.",
     "practiceTakeaway": "ASPIRE is comparing apixaban 5 mg twice daily, or 2.5 mg twice daily when the dose-reduction criteria are met, with aspirin 81 mg daily after intracerebral hemorrhage in AF. Results are not published."
   },
@@ -5753,9 +5404,10 @@ window.ANTICOAG_TRIALS = [
     "guidelines": [
       {
         "society": "EULAR",
-        "document": "Recommendations for the management of antiphospholipid syndrome in adults (Ann Rheum Dis. 2019;78:1296-1304)",
-        "note": "States that rivaroxaban should not be used in patients with antiphospholipid syndrome with triple antibody positivity.",
-        "year": 2019
+        "document": "EULAR Recommendations for Antiphospholipid Syndrome in Adults",
+        "year": 2019,
+        "note": "2019 EULAR Recommendations for Antiphospholipid Syndrome in Adults, Recommendation 4B and Recommendation 6C (Level of evidence 1b, Grade of recommendation B); reference 7. States that rivaroxaban should not be used in patients with antiphospholipid syndrome with triple antibody positivity.",
+        "url": "https://doi.org/10.1136/annrheumdis-2019-215213"
       }
     ],
     "caveats": "Doses are shown only as the trial arms. The trial stopped early after 120 patients.",

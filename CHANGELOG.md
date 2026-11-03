@@ -2,6 +2,14 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-03 — Guideline citations on trial cards
+
+- A guideline stays on a trial card only when that document cites the trial. Seventy-three entries come off the cards: they predate the trial, do not cite it, or name no guideline. Ninety-nine entries remain. Each note opens with the section, recommendation, table or page, and reference where the guideline uses the trial.
+- Cards with an empty guideline list still hide the Guidelines heading.
+- The home-page abbreviation list adds the societies and grading terms used in those notes. ST-elevation myocardial infarction and the CHEST 1B grade are written out in the notes that use them.
+- A check reports an error when a guideline year is earlier than the card’s trial year.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-03 — Wording follow-up, no new figures
 
 - ACASA-TAVI spells computed tomography in the primary result. No other CT abbreviation is on that card.

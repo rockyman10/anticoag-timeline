@@ -14,6 +14,7 @@
  *   garble      doubled "the the", empty parentheses, or "for of" in trial-card reader-visible prose
  *   imperative  imperative dosing language outside trial-attributed fields; sentences that name a trial,
  *               guideline, label or protocol are listed as INFO (attributed), the rest are ERROR
+ *   guideline-year  a guideline year earlier than that card's trial year (same year is allowed)
  *   mirror      capacitor/www/js and README equal the root copies (index.html allowed to differ only in the font links)
  * The site changelog is CHANGELOG.md and is not loaded or scanned. A leftover .changelog array, if present, is history text (INFO or skipped), not visitor copy.
  * It never edits files. Findings in clinical text are for human/literature review, not auto-fix.
@@ -59,6 +60,12 @@ else {
     if (t.status && !STATUSES.includes(t.status)) add("ERROR", "schema", w, `unknown status "${t.status}"`);
     if ("impact" in t) add("ERROR", "rating", w, `"impact" rating key present (unsourced Tier label; removed 2026-10-14)`);
     if (typeof t.year !== "number") add("ERROR", "schema", w, "year must be a number");
+    (t.guidelines || []).forEach((g, j) => {
+      if (!g || g.year === "" || g.year == null) return;
+      const gy = typeof g.year === "number" ? g.year : Number(g.year);
+      if (!Number.isFinite(gy)) return;
+      if (typeof t.year === "number" && gy < t.year) add("ERROR", "guideline-year", w, `guidelines[${j}] year ${gy} is earlier than trial year ${t.year}`);
+    });
     if (seen.has(t.id)) add("ERROR", "schema", w, "duplicate id"); seen.add(t.id);
     for (const k of ["questionsAnswered", "questionsOpen"]) if (t[k] !== undefined) {
       if (!Array.isArray(t[k])) add("ERROR", "schema", w, `${k} must be an array`);

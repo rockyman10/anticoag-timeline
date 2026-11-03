@@ -472,6 +472,14 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         [
           "prestige-af",
           0
+        ],
+        [
+          "atis-nvaf",
+          0
+        ],
+        [
+          "atis-nvaf",
+          1
         ]
       ]
     },

@@ -2,6 +2,15 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-03 — ATIS-NVAF trial card
+
+- New card: ATIS-NVAF (Okazaki S, et al. JAMA Neurol. 2025). Japanese patients with ischemic stroke or TIA, nonvalvular atrial fibrillation, and atherosclerotic disease. An oral anticoagulant plus one antiplatelet did not significantly reduce the 2-year composite of ischemic cardiovascular events or major bleeding versus the anticoagulant alone (17.8% vs 19.6%; HR 0.91; 95% CI 0.53–1.55). Major or clinically relevant nonmajor bleeding was higher with combination therapy (19.5% vs 8.6%; HR 2.42). All-cause death is with the efficacy results. The trial stopped early for futility.
+- Year 2025, status Recent, indication AF. The card sits after EPIC-CAD (2024) and before ADAPT AF-DES (2026), with the other monotherapy-versus-combination cards.
+- Guidelines is empty. No guideline that cites the trial is verified, so the Guidelines heading stays hidden.
+- Not on a playlist. There is no stroke playlist, and the AF + PCI playlist is a PCI population.
+- Both open questions are on the stroke theme of the Open questions index, in `js/data/open-questions.js` and the Capacitor copy. That index is maintained by hand. The off-repo generator is not in this repository, so a regeneration would drop the entries unless the bundle is updated separately. The question wording is read from the trial card.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-03 — Guideline citations on trial cards
 
 - A guideline stays on a trial card only when that document cites the trial. Seventy-three entries come off the cards: they predate the trial, do not cite it, or name no guideline. Ninety-nine entries remain. Each note opens with the section, recommendation, table or page, and reference where the guideline uses the trial.

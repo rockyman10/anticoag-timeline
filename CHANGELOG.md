@@ -2,6 +2,19 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-03 — Clinical figures from the literature check
+
+- GALILEO stays 2019. The takeaway no longer calls the bleeding increase significant. The primary result now has the death or thromboembolism figures (9.8 vs 7.2 per 100 person-years; HR 1.35; 95% CI 1.01–1.81). Doses are the ones given in the trial. Citation: Dangas GD, et al. N Engl J Med. 2020;382(2):120-129.
+- CRISTAL says the 1.97% difference is the paper’s hospital-level estimate, and adds 187 of 5,416 vs 69 of 3,787. Major bleeding is 17 of 5,401 (0.31%) vs 15 of 3,779 (0.40%), and deaths are 4 of 5,675 vs 2 of 4,036. The line that the abstract gives no bleeding rate is gone.
+- RE-COVER says the 0.4 percentage-point risk difference comes from Kaplan–Meier estimates adjusted for presentation and active cancer. Population: 2,564 randomized; 2,539 who received study drug were analyzed (1,274 vs 1,265).
+- ACASA-TAVI keeps RR 0.55 (95% CI 0.37–0.82). The takeaway no longer says halved. The intervention is factor Xa inhibitor DOAC monotherapy, and the comparator is aspirin. Safety figures are the co-primary composite. Citation: Dodgson CS, et al. JAMA. Published online August 30, 2026. doi:10.1001/jama.2026.17036.
+- COMPASS now carries the abstract figures (4.1% vs 5.4%; major bleeding 3.1% vs 1.9%). The unsupported net-clinical-benefit line is removed. WAVE is unchanged.
+- ASTER/MAGNOLIA journal club uses BARC type 3c or 5 (intracranial, vision-threatening intraocular, or fatal) and does not open with a label. AZALEA–TIMI 71, OCEANIC-AF, and LIBREXIA ACS now have the counts and intervals from those abstracts. OCEANIC-AF’s takeaway no longer says Landmark. LIBREXIA ACS no longer says “Stopped for futility Nov 2025.”
+- ENTRUST-AF PCI: 147 of the 746 edoxaban patients who received at least one dose started at 30 mg.
+- CANVAS: 638 (95%) is the group that received at least one dose (330 and 308), and 353 (55%) of that group were women. It is not a count of people who finished follow-up.
+- TIMING and WARFASA are unchanged.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-03 — Non-clinical trial-card consistency
 
 - ATLANTIS is year 2022, matching its year label and citation, so the timeline marker sits in 2022. Its status is Recent.

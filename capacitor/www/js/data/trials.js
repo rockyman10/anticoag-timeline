@@ -1909,6 +1909,50 @@ window.ANTICOAG_TRIALS = [
     "practiceTakeaway": "In EPIC-CAD, edoxaban alone lowered a 12-month composite that includes bleeding versus edoxaban plus one antiplatelet in AF with stable coronary disease (6.8% vs 16.2%; HR 0.44; 95% CI 0.30–0.65). Major or clinically relevant nonmajor bleeding was 4.7% versus 14.2% (HR 0.34; 95% CI 0.22–0.53)."
   },
   {
+    "id": "atis-nvaf",
+    "acronym": "ATIS-NVAF",
+    "year": 2025,
+    "yearLabel": "2025",
+    "indication": "AF",
+    "status": "recent",
+    "title": "Optimal Antithrombotics for Ischemic Stroke and Concurrent Atrial Fibrillation and Atherosclerosis",
+    "population": "316 patients at 41 sites in Japan with ischemic stroke or TIA within 8 to 360 days of onset, nonvalvular atrial fibrillation, and at least 1 manifestation of atherosclerotic cardiovascular disease (carotid or intracranial artery stenosis, noncardioembolic stroke, ischemic heart disease, or peripheral artery disease). Combination therapy 159. OAC monotherapy 157. Mean age 77.2 years. 28.5% women. Warfarin was used in 6% of each group, and the other 94% received a DOAC (apixaban 42% overall).",
+    "intervention": "An oral anticoagulant plus one antiplatelet agent. The physician chose the drugs from a predefined list, at the doses approved in Japan. In this group, aspirin was used in 52%, clopidogrel in 31%, and cilostazol in 17%.",
+    "comparator": "Oral anticoagulant monotherapy, with the drug chosen by the physician from the same predefined list, at the doses approved in Japan.",
+    "primaryResult": "The 2-year composite of ischemic cardiovascular events or major bleeding occurred in 25 patients (cumulative incidence 17.8%) with combination therapy vs 28 (19.6%) with OAC monotherapy (HR 0.91; 95% CI 0.53–1.55; P = .64). Ischemic cardiovascular events were 11.1% vs 14.2% (HR 0.76; 95% CI 0.39–1.48; P = .41). Ischemic stroke was 9.2% vs 13.0% (HR 0.67; 95% CI 0.32–1.39; P = .28). All-cause death occurred in 8 patients (5.6%) vs 10 (7.3%) (HR 0.81; 95% CI 0.32–2.04; P = .65).",
+    "safety": "In the safety analysis (159 vs 156 patients), ISTH major or clinically relevant nonmajor bleeding occurred in 28 patients (cumulative incidence 19.5%) with combination therapy vs 12 (8.6%) with OAC monotherapy (HR 2.42; 95% CI 1.23–4.76; P = .008). ISTH major bleeding occurred in 13 (9.4%) vs 8 (5.6%) (HR 1.63; 95% CI 0.68–3.94; P = .27). Intracranial hemorrhage occurred in 7 (5.2%) vs 5 (3.8%) (HR 1.39; 95% CI 0.44–4.39; P = .57).",
+    "takeaway": "In Japanese patients with ischemic stroke or TIA, nonvalvular atrial fibrillation, and atherosclerotic disease, adding an antiplatelet to an oral anticoagulant did not significantly reduce the 2-year composite of ischemic cardiovascular events or major bleeding (17.8% vs 19.6%; HR 0.91; 95% CI 0.53–1.55). Major or clinically relevant nonmajor bleeding was higher with combination therapy (19.5% vs 8.6%; HR 2.42). The trial stopped early for futility.",
+    "cite": "Okazaki S, et al. JAMA Neurol. 2025;82(12):1227-1234.",
+    "doi": "10.1001/jamaneurol.2025.3662",
+    "url": "https://doi.org/10.1001/jamaneurol.2025.3662",
+    "pmid": "41051787",
+    "expectedResults": null,
+    "background": "For people with atrial fibrillation who have had an ischemic stroke and also have atherosclerotic disease, adding an antiplatelet to anticoagulation is often considered to lower ischemic risk. AFIRE and EPIC-CAD tested dropping the antiplatelet in stable coronary disease. ATIS-NVAF asked the same question in a stroke population.",
+    "designNotes": "Investigator-initiated, multicenter, open-label randomized trial in Japan (ClinicalTrials.gov NCT03062319). Patients were randomized 1:1 by minimization, adjusting for sex, history of ischemic heart disease, and history of acute ischemic stroke. No placebo was used. A blinded independent committee adjudicated events. Treatment started within 3 days of randomization and was planned for 2 years. Enrollment ran from April 2017 to April 2022. The plan was a maximum of 400 patients, with an interim analysis for efficacy and futility at half of the required events. The trial was terminated for futility at that interim analysis on July 18, 2023. Median follow-up was 707 days.",
+    "strengths": "Randomized test of a common practice in a stroke population, with blinded adjudication of events and a primary composite that counted bleeding as well as ischemic events.",
+    "limitations": "Open-label. Japanese sites only. Stopped early for futility at the planned interim analysis, with 316 patients randomized against a planned maximum of 400, so it had limited power for single outcomes such as ischemic stroke. Physicians chose the anticoagulant, the antiplatelet, and the doses, so treatment was varied. Ischemic events were numerically lower with combination therapy, but the confidence intervals were wide.",
+    "journalClub": "A neutral net composite hides opposite trends: ischemic events numerically lower with combination therapy (11.1% vs 14.2%) and major or clinically relevant nonmajor bleeding significantly higher (19.5% vs 8.6%). Read it beside AFIRE and EPIC-CAD, which tested the same question in stable coronary disease rather than after a stroke.",
+    "guidelines": [],
+    "caveats": "Stopped early for futility with 316 patients. Ischemic event confidence intervals were wide. Nearly all patients received a DOAC chosen by the physician. Not a test of a short course of combination therapy after a recent stent.",
+    "practiceTakeaway": "In ATIS-NVAF, among Japanese patients with ischemic stroke or TIA, nonvalvular atrial fibrillation, and atherosclerotic disease, an oral anticoagulant plus an antiplatelet did not significantly reduce the 2-year composite of ischemic cardiovascular events or major bleeding versus the anticoagulant alone (17.8% vs 19.6%; HR 0.91; 95% CI 0.53–1.55). Major or clinically relevant nonmajor bleeding was higher with the combination (19.5% vs 8.6%; HR 2.42; 95% CI 1.23–4.76).",
+    "questionsAnswered": [
+      {
+        "text": "After an ischemic stroke or TIA in nonvalvular atrial fibrillation with atherosclerotic disease, did adding an antiplatelet to an oral anticoagulant improve the net 2-year outcome? No: 17.8% vs 19.6% (HR 0.91), with more major or clinically relevant nonmajor bleeding (19.5% vs 8.6%).",
+        "source": "ATIS-NVAF"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "Is there a real ischemic benefit from combination therapy that this trial was too small to show? Ischemic stroke was 9.2% vs 13.0% (HR 0.67; 95% CI 0.32–1.39), and the trial stopped early for futility.",
+        "source": "ATIS-NVAF"
+      },
+      {
+        "text": "Do the results apply outside Japan and to specific antiplatelets? Physicians chose the antiplatelet from a predefined list (aspirin 52%, clopidogrel 31%, cilostazol 17%), and all sites were in Japan.",
+        "source": "ATIS-NVAF"
+      }
+    ]
+  },
+  {
     "id": "adapt-af-des",
     "acronym": "ADAPT AF-DES",
     "year": 2026,

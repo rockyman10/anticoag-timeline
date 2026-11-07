@@ -2,6 +2,16 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-07 — Unofficial CACP full practice exam
+
+- CACP prep opens on a start screen. Study practice keeps the current flow: domain filters, one item at a time, shuffle on, explanation after submit or reveal, and Missed only. Full practice exam builds a new random sitting each time.
+- Quotas live in `js/data/cacp.js` (`meta.exam`): I 40, II 56, III 16, IV 40, V 8 (160). The draw takes items without replacement inside each domain. A short domain contributes every item once and does not repeat items or borrow from another domain. The start screen and the exam header show the real sitting size. With the current bank that sitting is under 160, and Domains I, II, and IV are short. A later item pack can fill the quotas without a change to the draw.
+- When an item has `objectiveIds`, the domain draw prefers items that cover objectives not yet covered, then fills the rest at random. Absent `objectiveIds` are ignored.
+- The sitting is shuffled across domains. Answer choices still shuffle for display, and scoring still uses `choice.id` against `correctId`. Explanations, teaching points, and correctness stay hidden until submit or until the clock ends. The 2 hour 30 minute clock starts when the learner confirms they are ready. They can move back, change an answer, bookmark an item, and submit early. At zero the recorded answers are submitted.
+- Results show the practice score for the sitting (correct / answered, and correct out of every item in the sitting), a per-domain table, and the handbook reference: 150 scored of 160, 10 unidentified pilots, 80% of scored items. The screen does not assign a certification result. Missed items, including unanswered ones, can be reviewed with explanations. Missed only still restudies them.
+- The disclaimer and handbook note cite the 2026 AC Forum CACP Candidate Handbook and state that AC Forum does not endorse this or any preparatory materials. These are not real exam questions. The home-page abbreviation for CACP is Certified Antithrombotic Care Provider.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-03 — ATIS-NVAF trial card
 
 - New card: ATIS-NVAF (Okazaki S, et al. JAMA Neurol. 2025). Japanese patients with ischemic stroke or TIA, nonvalvular atrial fibrillation, and atherosclerotic disease. An oral anticoagulant plus one antiplatelet did not significantly reduce the 2-year composite of ischemic cardiovascular events or major bleeding versus the anticoagulant alone (17.8% vs 19.6%; HR 0.91; 95% CI 0.53–1.55). Major or clinically relevant nonmajor bleeding was higher with combination therapy (19.5% vs 8.6%; HR 2.42). All-cause death is with the efficacy results. The trial stopped early for futility.

@@ -23,7 +23,7 @@ python3 -m http.server 8080
 | **What's new** | Compact strip under the header (recent + pending) |
 | **Print / Save PDF** | On a Trial snapshot or More details → browser print dialog |
 | **Trial playlists** | Top bar **Trial playlists** → highlight & step trials on the timeline (`#/pathway/cancer-vte`) |
-| **CACP prep (unofficial)** | Teach → **CACP prep** → practice questions by NCBAP domain (`#/cacp`) — not endorsed by NCBAP; not real exam items |
+| **CACP prep (unofficial)** | Teach → **CACP prep** → study practice or a full practice exam (`#/cacp`). Domain weights follow the 2026 AC Forum Candidate Handbook. AC Forum does not endorse this site. These are not real exam items. |
 | **Treatment pathways** | Teach → **Treatment pathways** → interactive algorithms (`#/pathway-tx/af-stroke`) |
 | **Frameworks** | Teach → **Frameworks** → e.g. `#/framework/acute-vte-doac` (Applies to / Does not apply) |
 | **Cases** | Teach → **Cases** → e.g. `#/case/af-pci-week2` |
@@ -58,7 +58,7 @@ Drafts under `drafts/` are box/working notes only — not part of the published 
 - `js/data/` — clinical data modules only (no UI code). Layout/UI changes must not edit these files; `node scripts/verify-integrity.js` checks schema and wording rules. Hash routes plus deep links `?card=<trial id>`, `?pathway=<treatment pathway id>`, `?playlist=<playlist id>`
 - `js/data/trials.js` — trials (+ journal-club / guideline fields)
 - `js/data/pathways.js` — curated trial playlists (timeline tours)
-- `js/data/cacp.js` — unofficial CACP exam-prep questions (NCBAP domain weights; educational only)
+- `js/data/cacp.js` — unofficial CACP exam-prep questions and practice-exam quotas (2026 AC Forum Candidate Handbook; educational only)
 - `js/data/treatment-pathways.js` — interactive treatment algorithms (`#/pathway-tx/…`)
 - `js/data/frameworks.js` — clinical question frameworks
 - `js/data/cases.js` — case vignettes

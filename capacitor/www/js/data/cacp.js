@@ -1,10 +1,24 @@
-/* Unofficial CACP (NCBAP) exam-prep practice module — educational only */
+/* Unofficial CACP exam-prep practice module — educational only. Not an AC Forum exam. */
 window.ANTICOAG_CACP = {
   "meta": {
     "title": "CACP exam prep (unofficial)",
-    "disclaimer": "Unofficial educational practice only. The National Certification Board for Anticoagulation Providers (NCBAP) does not endorse this or any preparatory materials. These are not real CACP examination questions. Verify all clinical decisions with current guidelines, product labeling, and institutional protocols.",
-    "handbookNote": "Domain weights follow the NCBAP CACP Candidate Handbook: I Applied Pathophysiology 25%, II Patient Assessment and Management 35%, III Patient Education 10%, IV Applied Pharmacology 25%, V Operational/Administrative 5%. Handbook PDF: https://ncbap.org/web/documents/CACP_Candidate_Handbook.pdf — NCBAP states it does not endorse prep courses or study guides (https://ncbap.org/web/exam-prep.php).",
-    "version": "2026-10-01",
+    "disclaimer": "Unofficial educational practice only. The Anticoagulation Forum (AC Forum) does not endorse this or any preparatory materials. These are not real CACP examination questions. The 2026 AC Forum Candidate Handbook names the credential Certified Antithrombotic Care Provider (CACP). Verify all clinical decisions with current guidelines, product labeling, and institutional protocols.",
+    "handbookNote": "Practice logistics follow the 2026 AC Forum CACP Candidate Handbook (https://acforum.org/web/resource_files/1793672914-37806.pdf). That handbook describes 160 multiple-choice questions — 150 scored and 10 unidentified unscored pilots — with 2 hours 30 minutes allowed, and a pass line of 80% of the 150 scored items. Domain weights: I Applied Pathophysiology of Thromboembolic Disease 25%, II Patient Assessment and Management 35%, III Patient Education 10%, IV Applied Pharmacology of Antithrombotic Agents 25%, V Operational (Administrative) Procedures 5%. A 160-question practice sitting uses quotas I 40, II 56, III 16, IV 40, V 8. AC Forum does not endorse this or any preparatory materials. These are not real exam questions.",
+    "version": "2026-11-07",
+    "exam": {
+      "questionCount": 160,
+      "scoredCount": 150,
+      "pilotCount": 10,
+      "durationMinutes": 150,
+      "passPercentOfScored": 80,
+      "quotas": {
+        "I": 40,
+        "II": 56,
+        "III": 16,
+        "IV": 40,
+        "V": 8
+      }
+    },
     "domains": [
       {
         "id": "I",

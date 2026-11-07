@@ -2,6 +2,14 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-07 — CACP practice bank fills a 160-question sitting
+
+- 79 reviewed unofficial practice items are appended (I 21, II 25, III 6, IV 21, V 6). v-25 was held (handbook objective 82): the handbook names patient agreements, and that draft’s policy claims were not added. The bank is 219 questions (I 48, II 68, III 30, IV 48, V 25).
+- Editorial and clinical wording patches are applied on existing items. `correctId` and choice ids are unchanged. Each original item now carries handbook `objectiveIds`. New items already include them.
+- A full practice exam now draws 160 items from the live bank and the quotas. The start screen and the exam header read that count from the bank. They do not keep the earlier shortfall number.
+- Answer choices still shuffle on screen in study practice and in the full exam. Scoring still compares `choice.id` with `correctId`.
+- Educational only. AC Forum does not endorse this material. These are not real exam questions. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-07 — Unofficial CACP full practice exam
 
 - CACP prep opens on a start screen. Study practice keeps the current flow: domain filters, one item at a time, shuffle on, explanation after submit or reveal, and Missed only. Full practice exam builds a new random sitting each time.

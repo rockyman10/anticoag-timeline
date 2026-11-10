@@ -9118,7 +9118,7 @@ window.ANTICOAG_CACP = {
       "id": "iv-44",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "A learner sees milvexian and other FXI-pathway agents on the site's future-trials page. Which description is appropriate for these investigational programs?",
+      "stem": "A learner sees milvexian and other FXI-pathway agents that are not yet approved on the site's future-trials page. Which description is appropriate for these investigational programs?",
       "choices": [
         {
           "id": "a",

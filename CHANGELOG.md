@@ -2,6 +2,14 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-10 — OCEANIC-STROKE notes the FDA approval of asundexian
+
+- OCEANIC-STROKE caveats now say the FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on Nov 9, 2026, for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS ≤15) or high-risk TIA, and that it is not approved for AF. The card names the FDA press release. No DailyMed label is posted yet, so the card does not add label wording or bleeding-subgroup wording.
+- The limitations line now says the FDA approval (Nov 9, 2026) covers stroke-risk reduction after a recent non-cardioembolic ischemic stroke or high-risk TIA, not AF.
+- CACP item iv-44 asks about milvexian and other FXI-pathway agents that are not yet approved. The choices and the explanation are unchanged.
+- The safety line is unchanged. The same strings are in the Capacitor copies. The card does not use a regulatoryNote field.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-07 — CACP practice bank fills a 160-question sitting
 
 - 79 reviewed unofficial practice items are appended (I 21, II 25, III 6, IV 21, V 6). v-25 was held (handbook objective 82): the handbook names patient agreements, and that draft’s policy claims were not added. The bank is 219 questions (I 48, II 68, III 30, IV 48, V 25).

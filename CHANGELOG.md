@@ -2,6 +2,14 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-10 — OCEANIC-STROKE notes the FDA approval of asundexian
+
+- OCEANIC-STROKE caveats now say the FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on Nov 9, 2026, for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS ≤15) or high-risk TIA, and that it is not approved for AF. The card names the FDA press release. No DailyMed label is posted yet, so the card does not add label wording or bleeding-subgroup wording.
+- The limitations line now says the FDA approval (Nov 9, 2026) covers stroke-risk reduction after a recent non-cardioembolic ischemic stroke or high-risk TIA, not AF.
+- CACP item iv-44 asks about milvexian and other FXI-pathway agents that are not yet approved. The choices and the explanation are unchanged.
+- The safety line is unchanged. The same strings are in the Capacitor copies. The card does not use a regulatoryNote field.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-09 — COMPASS, GALILEO, and LIBREXIA ACS Learn and takeaway text match the cards
 
 - COMPASS Learn visuals quote the figures already on the card. The VOYAGER hook says COMPASS prints 4.1% vs 5.4%. The COMPASS table prints 4.1% vs 5.4% (HR 0.76; 95% CI 0.66–0.86) and major bleeding 3.1% vs 1.9% (HR 1.70; 95% CI 1.40–2.05). The table caption is "What each card prints." The trial still reads as stopped early for superiority.

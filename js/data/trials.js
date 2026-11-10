@@ -4977,7 +4977,7 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In LIBREXIA ACS, FXIa add-on failed post-ACS. Another reminder that indication drives FXIa success or failure.",
     "guidelines": [],
     "caveats": "Futile for major adverse cardiovascular events at tested dose. AF/stroke milvexian programs still pending.",
-    "practiceTakeaway": "In LIBREXIA ACS, milvexian 25 mg twice daily added to antiplatelet therapy did not reduce cardiovascular death, myocardial infarction, or ischemic stroke versus placebo after ACS (5.4% vs 5.1%; HR 1.05). Intracranial or fatal bleeding was 0.3% in both arms, and the trial stopped for futility.",
+    "practiceTakeaway": "In LIBREXIA ACS, milvexian 25 mg twice daily added to antiplatelet therapy did not reduce cardiovascular death, myocardial infarction, or ischemic stroke versus placebo after ACS (5.4% vs 5.1%; HR 1.05). BARC type 3c or 5 bleeding (intracranial, vision-threatening intraocular, or fatal) was 0.3% in both arms, and the trial stopped for futility.",
     "questionsAnswered": [
       {
         "text": "After ACS, did the factor XIa inhibitor milvexian added to antiplatelet therapy reduce cardiovascular death, myocardial infarction or ischemic stroke compared with placebo? No. The trial was stopped for futility.",

@@ -10,6 +10,13 @@ Newest first. Record site changes here. The site does not render this file.
 - The safety line is unchanged. The same strings are in the Capacitor copies. The card does not use a regulatoryNote field.
 - Educational only. Wording stays DOAC. reviewedBy unchanged.
 
+## 2026-11-09 — COMPASS, GALILEO, and LIBREXIA ACS Learn and takeaway text match the cards
+
+- COMPASS Learn visuals quote the figures already on the card. The VOYAGER hook says COMPASS prints 4.1% vs 5.4%. The COMPASS table prints 4.1% vs 5.4% (HR 0.76; 95% CI 0.66–0.86) and major bleeding 3.1% vs 1.9% (HR 1.70; 95% CI 1.40–2.05). The table caption is "What each card prints." The trial still reads as stopped early for superiority.
+- The GALILEO Learn visual quotes death or a first thromboembolic event at 9.8 versus 7.2 per 100 person-years (HR 1.35; 95% CI 1.01–1.81; P 0.04). The hook says the trial stopped early because of safety concerns. Primary safety bleeding stays 4.3 vs 2.8 per 100 person-years (HR 1.50; 95% CI 0.95–2.37; P=0.08), the card’s non-significant reading.
+- The LIBREXIA ACS practice takeaway uses the card’s BARC type 3c or 5 wording (intracranial, vision-threatening intraocular, or fatal). The rate stays 0.3% in both arms.
+- The same wording is in the site files and the Capacitor copies. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-07 — CACP practice bank fills a 160-question sitting
 
 - 79 reviewed unofficial practice items are appended (I 21, II 25, III 6, IV 21, V 6). v-25 was held (handbook objective 82): the handbook names patient agreements, and that draft’s policy claims were not added. The bank is 219 questions (I 48, II 68, III 30, IV 48, V 25).

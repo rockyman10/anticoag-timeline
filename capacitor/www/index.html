@@ -341,6 +341,91 @@
     }
     .x:hover { background: var(--muted-bg); }
     .x:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .m-head-tools {
+      display: flex; align-items: center; gap: .35rem; flex-shrink: 0;
+    }
+    .m-head:has(.m-head-tools) > div:first-child { min-width: 0; flex: 1 1 auto; }
+    .m-head-tools .x { width: 44px; height: 44px; }
+    .fs-toggle {
+      appearance: none; display: inline-flex; align-items: center; justify-content: center;
+      gap: .35rem; min-height: 44px; padding: .35rem .7rem; white-space: nowrap;
+      border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent);
+      border-radius: 3px; cursor: pointer; font: inherit; font-size: .8125rem;
+      font-weight: 700; line-height: 1.2; flex-shrink: 0;
+    }
+    .fs-toggle:hover { background: var(--paper); }
+    .fs-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .fs-toggle[aria-pressed="true"] { background: var(--accent); color: #fff; }
+    .fs-toggle .fs-ico { width: 1rem; height: 1rem; display: block; flex-shrink: 0; }
+    .fs-toggle .fs-ico-exit { display: none; }
+    .fs-toggle[aria-pressed="true"] .fs-ico-enter { display: none; }
+    .fs-toggle[aria-pressed="true"] .fs-ico-exit { display: block; }
+
+    /* Full-viewport mode (Teach, Learn, treatment pathways, CACP).
+       CSS fills the screen; the Fullscreen API is requested when the browser allows it. */
+    body.has-fs-modal { overflow: hidden; }
+    .bd.is-fullscreen {
+      padding: 0;
+      background: var(--paper);
+    }
+    .bd.is-fullscreen .modal.is-fullscreen {
+      position: fixed; inset: 0; z-index: 1;
+      width: auto; max-width: none; height: auto; max-height: none;
+      margin: 0; border: 0; border-radius: 0; box-shadow: none;
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-head,
+    .bd.is-fullscreen .modal.is-fullscreen > .m-foot,
+    .bd.is-fullscreen .modal.is-fullscreen > #learn-progress {
+      flex: 0 0 auto; position: relative; top: auto; bottom: auto;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-head {
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-foot {
+      padding-bottom: max(.95rem, env(safe-area-inset-bottom));
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-body {
+      flex: 1 1 auto; align-self: center; min-height: 0; min-width: 0;
+      overflow: auto; width: min(100%, 72rem); max-width: 100%;
+      margin-inline: auto; box-sizing: border-box;
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1.15rem, env(safe-area-inset-right));
+    }
+    .modal.teach.is-fullscreen .teach-lead,
+    .modal.teach.is-fullscreen .jc-sec p,
+    .modal.teach.is-fullscreen .fw-deck,
+    .modal.teach.is-fullscreen .fw-check-help,
+    .modal.teach.is-fullscreen .fw-section-body,
+    .modal.teach.is-fullscreen .fw-teachback,
+    .modal.teach.is-fullscreen .case-stem,
+    .modal.teach.is-fullscreen .ddi-legend,
+    .modal.learn.is-fullscreen .learn-hero p,
+    .modal.learn.is-fullscreen .learn-goals,
+    .modal.learn.is-fullscreen .learn-why,
+    .modal.learn.is-fullscreen .learn-orient-tip,
+    .modal.txpath.is-fullscreen .txp-body,
+    .modal.cacp.is-fullscreen .cacp-stem,
+    .modal.cacp.is-fullscreen .cacp-explain,
+    .modal.cacp.is-fullscreen .cacp-banner,
+    .modal.cacp.is-fullscreen .cacp-ref,
+    .modal.cacp.is-fullscreen .cacp-tips,
+    .modal.cacp.is-fullscreen .cacp-home-card,
+    .modal.cacp.is-fullscreen .cacp-choices {
+      max-width: 68ch;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-chart {
+      max-width: none; padding: 1rem 1.1rem 1.15rem;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-title { font-size: 1.35rem; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-hook { font-size: 1.15rem; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-svg { width: 100%; height: auto; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-table,
+    .bd.is-fullscreen .modal.is-fullscreen .pk-table { font-size: 1rem; }
 
     .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .35rem; }
     .tag {
@@ -1259,8 +1344,31 @@
       body:not(.print-sheet) .tip,
       body:not(.print-sheet) .toast,
       body:not(.print-sheet) .x,
+      body:not(.print-sheet) .fs-toggle,
       body:not(.print-sheet) [data-close],
       body:not(.print-sheet) .m-foot { display: none !important; }
+      body.has-fs-modal { overflow: visible !important; }
+      body:not(.print-sheet) .bd.is-fullscreen {
+        display: block !important; position: static !important; height: auto !important;
+        background: none !important; padding: 0 !important; overflow: visible !important;
+      }
+      body:not(.print-sheet) .modal.is-fullscreen {
+        position: static !important; inset: auto !important; display: block !important;
+        height: auto !important; min-height: 0 !important; max-height: none !important;
+        width: auto !important; max-width: none !important; overflow: visible !important;
+        flex: none !important;
+      }
+      body:not(.print-sheet) .modal.is-fullscreen .m-body,
+      body:not(.print-sheet) .modal.is-fullscreen .teach-lead,
+      body:not(.print-sheet) .modal.is-fullscreen .jc-sec p,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-stem,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-choices,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-explain,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-banner,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-home-card,
+      body:not(.print-sheet) .modal.is-fullscreen .lv-chart {
+        max-width: none !important; width: auto !important; overflow: visible !important;
+      }
       body:not(.print-sheet) [style*="sticky"],
       body:not(.print-sheet) .m-head,
       body:not(.print-sheet) .axis { position: static !important; }
@@ -1845,7 +1953,14 @@
           <div class="yrline" id="learn-sub">First anticoagulation clinic week</div>
           <div class="learn-disclaimer" id="learn-disclaimer"></div>
         </div>
-        <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="learn" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
+        </div>
       </div>
       <div id="learn-progress" aria-live="polite">
         <div class="learn-progress-label" id="learn-progress-label">0 of 10 · no rush</div>
@@ -1883,7 +1998,14 @@
           <h2 id="teach-title">Teaching</h2>
           <div class="yrline" id="teach-sub"></div>
         </div>
-        <button type="button" class="x" data-close="teach" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="teach" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="teach" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="teach-body"></div>
       <div class="m-foot">
@@ -1901,7 +2023,14 @@
           <h2 id="txp-title">Treatment pathways</h2>
           <div class="yrline" id="txp-sub">Interactive algorithms · educational only</div>
         </div>
-        <button type="button" class="x" data-close="txpath" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="txpath" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="txpath" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="txp-body"></div>
       <div class="m-foot">
@@ -1921,7 +2050,14 @@
           <h2 id="cacp-title">CACP exam prep</h2>
           <div class="yrline" id="cacp-sub">Unofficial practice · educational only</div>
         </div>
-        <button type="button" class="x" data-close="cacp" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="cacp" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="cacp" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="cacp-body"></div>
       <div class="m-foot">
@@ -3056,6 +3192,116 @@
     return [...el.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')]
       .filter(n => n.offsetParent !== null || n === el);
   }
+
+  const FS_MODALS = ["teach", "learn", "txpath", "cacp"];
+  let fsEscGuardUntil = 0;
+  function docFullscreenEl() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+  function modalFullscreenEls(name) {
+    const bd = document.getElementById("bd-" + name);
+    if (!bd) return null;
+    return { bd: bd, modal: bd.querySelector(".modal"), btn: bd.querySelector(".fs-toggle") };
+  }
+  function modalIsFullscreen(name) {
+    const els = modalFullscreenEls(name);
+    return !!(els && els.modal && els.modal.classList.contains("is-fullscreen"));
+  }
+  function syncFsButton(btn, on) {
+    if (!btn) return;
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.setAttribute("aria-label", on ? "Exit full screen" : "Enter full screen");
+    const label = btn.querySelector(".fs-label");
+    if (label) label.textContent = on ? "Exit full screen" : "Full screen";
+  }
+  function syncFsBodyClass() {
+    document.body.classList.toggle("has-fs-modal", !!document.querySelector(".bd.is-fullscreen"));
+  }
+  function applyModalFullscreen(name, on) {
+    const els = modalFullscreenEls(name);
+    if (!els || !els.modal) return;
+    const body = els.modal.querySelector(".m-body");
+    const from = on ? els.modal : body;
+    const saved = from ? from.scrollTop : 0;
+    els.bd.classList.toggle("is-fullscreen", !!on);
+    els.modal.classList.toggle("is-fullscreen", !!on);
+    syncFsButton(els.btn, !!on);
+    syncFsBodyClass();
+    const to = on ? body : els.modal;
+    if (to) to.scrollTop = saved || 0;
+  }
+  function enterModalFullscreen(name) {
+    applyModalFullscreen(name, true);
+    const els = modalFullscreenEls(name);
+    const el = els && els.modal;
+    if (!el) return;
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (!req) return;
+    try {
+      const ret = req.call(el);
+      if (ret && typeof ret.catch === "function") ret.catch(function () {});
+    } catch (err) { /* CSS viewport mode stays on where the API is unavailable. */ }
+  }
+  function exitModalFullscreen(name, focusToggle) {
+    if (!modalIsFullscreen(name)) return;
+    const els = modalFullscreenEls(name);
+    const modal = els && els.modal;
+    const fsEl = docFullscreenEl();
+    const apiOwns = !!(fsEl && modal && (fsEl === modal || modal.contains(fsEl)));
+    applyModalFullscreen(name, false);
+    if (apiOwns) {
+      const exit = document.exitFullscreen || document.webkitExitFullscreen;
+      if (exit) {
+        try {
+          const ret = exit.call(document);
+          if (ret && typeof ret.catch === "function") ret.catch(function () {});
+        } catch (err) {}
+      }
+    }
+    if (focusToggle && els && els.btn) els.btn.focus();
+  }
+  function toggleModalFullscreen(name) {
+    if (modalIsFullscreen(name)) exitModalFullscreen(name, true);
+    else enterModalFullscreen(name);
+  }
+  function resetModalScroll(modal) {
+    if (!modal) return;
+    modal.scrollTop = 0;
+    const body = modal.querySelector(".m-body");
+    if (body) body.scrollTop = 0;
+  }
+  function onFullscreenChange() {
+    const fsEl = docFullscreenEl();
+    let browserLeft = false;
+    FS_MODALS.forEach(name => {
+      if (modalIsFullscreen(name) && !fsEl) {
+        browserLeft = true;
+        applyModalFullscreen(name, false);
+      }
+    });
+    if (browserLeft) fsEscGuardUntil = Date.now() + 500;
+  }
+  document.addEventListener("fullscreenchange", onFullscreenChange);
+  document.addEventListener("webkitfullscreenchange", onFullscreenChange);
+  window.addEventListener("beforeprint", () => {
+    const fsEl = docFullscreenEl();
+    FS_MODALS.forEach(name => { if (modalIsFullscreen(name)) applyModalFullscreen(name, false); });
+    const exit = document.exitFullscreen || document.webkitExitFullscreen;
+    if (exit && fsEl) {
+      try {
+        const ret = exit.call(document);
+        if (ret && typeof ret.catch === "function") ret.catch(function () {});
+      } catch (err) {}
+    }
+  });
+  document.querySelectorAll(".fs-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const name = btn.getAttribute("data-fullscreen");
+      if (name) toggleModalFullscreen(name);
+    });
+  });
+
   function openModal(name) {
     const bd = document.getElementById("bd-" + name);
     const modal = bd.querySelector(".modal");
@@ -3077,6 +3323,7 @@
   function closeModal(name) {
     const bd = document.getElementById("bd-" + name);
     if (!bd || bd.hidden) return;
+    exitModalFullscreen(name);
     bd.classList.remove("open"); bd.hidden = true;
     if (bd._trap) bd.removeEventListener("keydown", bd._trap);
     const i = stack.lastIndexOf(name); if (i >= 0) stack.splice(i, 1);
@@ -3333,6 +3580,17 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       if (closeChromeMenus(true)) return;
+      const top = stack[stack.length - 1];
+      if (top && modalIsFullscreen(top)) {
+        e.preventDefault();
+        exitModalFullscreen(top, true);
+        return;
+      }
+      if (Date.now() < fsEscGuardUntil) {
+        e.preventDefault();
+        fsEscGuardUntil = 0;
+        return;
+      }
       hideTip(); closeTop();
     }
   });
@@ -3898,7 +4156,7 @@
     }
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else resetModalScroll(document.querySelector("#bd-teach .modal"));
   }
 
   function slugifyDdi(s) {
@@ -4264,7 +4522,7 @@
     wireTeachBody(body);
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else resetModalScroll(document.querySelector("#bd-teach .modal"));
   }
 
   function teachRelatedLinksHtml(links) {
@@ -4489,6 +4747,7 @@
         // Close teach UI without wiping return route
         const bd = document.getElementById("bd-teach");
         if (bd && !bd.hidden) {
+          exitModalFullscreen("teach");
           bd.classList.remove("open"); bd.hidden = true;
           if (bd._trap) bd.removeEventListener("keydown", bd._trap);
           const i = stack.lastIndexOf("teach"); if (i >= 0) stack.splice(i, 1);
@@ -5348,7 +5607,7 @@
     if (paintKey !== cacpPaintKey) {
       cacpPaintKey = paintKey;
       const modal = document.querySelector('#bd-cacp .modal');
-      if (modal) modal.scrollTop = 0;
+      resetModalScroll(modal);
     }
   }
   function wireCacpBody(body) {
@@ -6380,6 +6639,7 @@
   function yieldLearnShell() {
     const bd = document.getElementById("bd-learn");
     if (!bd || bd.hidden) return;
+    exitModalFullscreen("learn");
     bd.classList.remove("open");
     bd.hidden = true;
     if (bd._trap) bd.removeEventListener("keydown", bd._trap);
@@ -6877,7 +7137,7 @@
     if (bd && bd.hidden) openModal("learn");
     else if (bd) {
       const modal = bd.querySelector(".modal");
-      if (modal) modal.scrollTop = 0;
+      resetModalScroll(modal);
     }
   }
 

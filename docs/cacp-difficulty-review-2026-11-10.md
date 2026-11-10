@@ -16,7 +16,7 @@ This file lists every reworked unofficial practice item so a clinician can check
 - Correct-answer letters are balanced within each domain (overall A 56, B 55, C 54, D 54). The exam still shuffles display order.
 - Stems are cases: age, weight, serum creatinine, interacting drugs, INR trend, procedure bleed risk, or a clinic failure are in the story, including details that do not decide the question.
 - Each explanation says why the keyed choice is right and why each other choice is wrong, and names the label, guideline, or trial.
-- Choice length was rebalanced in a second pass. The old keyed choice was uniquely the longest in 207 of 219 items (mean gap about 60 characters; 146 items were more than 40 characters longer than the next choice). After the case rewrite and this pass, the keyed choice is uniquely longest in 42 of 219 items (19 percent), the mean gap versus the next-longest choice is about -5 characters, and no keyed choice is more than 25 characters longer than the next choice.
+- Choice length was rebalanced in a second pass. The old keyed choice was uniquely the longest in 207 of 219 items (mean gap about 60 characters; 146 items were more than 40 characters longer than the next choice). After the case rewrite and this pass, the keyed choice is uniquely longest in 43 of 219 items (20 percent), the mean gap versus the next-longest choice is about -5 characters, and no keyed choice is more than 25 characters longer than the next choice. Clinical and literature review then applied 33 wording fixes on 23 items. No answer key changed.
 
 ## Counts
 
@@ -33,24 +33,32 @@ This file lists every reworked unofficial practice item so a clinician can check
 
 These are the confidence limits. The item was written only with the fact stated. A reviewer should confirm the source before the bank is treated as final.
 
-1. **ii-35** — U.S. XARELTO AF cut point used here is creatinine clearance 15–50 mL/min for 15 mg with the evening meal, and above 50 mL/min for 20 mg. This site prints the ROCKET-AF 15 mg subgroup as 30–49 mL/min. Confirm the current label.
+1. **ii-35** — The explanation now follows the label cut point: 15 mg with the evening meal when clearance is 50 mL/min or less, and the label note that ROCKET AF gave 15 mg at clearance 30 to 50 mL/min.
 2. **ii-49, v-14** — Nonbleeding INR 4.5–10: 2012 CHEST suggestion against routine vitamin K. A replacement document was not re-opened.
 3. **i-10, ii-03** — High-risk PE means shock or sustained hypotension (2019 ESC hemodynamic split, consistent with this site). A later full ESC revision was not re-opened. Reperfusion modality is not chosen.
 4. **i-14, ii-02** — Mechanical mitral INR target 3.0 (range 2.5–3.5) and low-risk bileaflet aortic target 2.5 (range 2.0–3.0) are from the 2020 ACC/AHA valvular guideline. A later focused update was not re-opened. The On-X aortic 1.5–2.0 strategy is cited only as the wrong transfer.
-5. **ii-22** — Minor dental procedures continuing a vitamin K antagonist with local hemostasis follows CHEST perioperative teaching. The paragraph number was not re-opened.
+5. **ii-22** — The explanation now cites the 2022 ACCP (CHEST) perioperative guideline, which suggests continuing a vitamin K antagonist with a prohemostatic agent for minor dental procedures.
 6. **iv-25** — Enoxaparin treatment dose 1 mg/kg once daily when creatinine clearance is below 30 mL/min is the U.S. Lovenox label. It is not a dosing table on this site.
-7. **iv-28** — Adult oral apixaban tablets cited as 2.5 mg and 5 mg. A 2026 package insert was not re-opened.
-8. **iv-33, ii-20, iv-41** — Dabigatran below 30 mL/min: no 75 mg or 110 mg dose is keyed, because regional labels differ and were not re-verified. Lactation items stay at the class distinction (warfarin and low-molecular-weight heparin versus a DOAC). Milk concentrations were not re-checked.
-9. **iv-44** — Asundexian (Sunharbo) wording is the site OCEANIC-STROKE caveat (FDA press release, 9 November 2026, 50 mg with antiplatelet therapy, NIHSS 15 or lower or high-risk TIA, not AF). The site says no DailyMed label was posted yet, so none is added.
-10. **ii-41** — Medically managed AUGUSTUS hazard ratios were already in the previous item and were not re-abstracted from the journal.
+7. **iv-28** — The explanation now distinguishes adult 2.5 mg and 5 mg tablets from the pediatric 0.5 mg tablet for oral suspension and the 0.15 mg sprinkle capsule.
+8. **iv-33, ii-20, iv-41** — Dabigatran below 30 mL/min: no 75 mg or 110 mg dose is keyed. The iv-41 explanation now names the product-label breastfeeding statements and the 2018 ASH pregnancy guideline recommendation against DOACs while breastfeeding.
+9. **iv-44** — The explanation now cites the FDA press release of 9 November 2026, which states that SUNHARBO is not approved for stroke prevention in patients with atrial fibrillation.
+10. **ii-41** — The medically managed subgroup figures are now sourced to the AUGUSTUS prespecified subgroups in Windecker et al., Circulation 2019;140(23):1921–1932.
 11. **ii-15** — Avoiding rivaroxaban in esophageal cancer is drawn from SELECT-D counts on this site (4 of 11 versus 1 of 19). No ASH recommendation number is quoted.
-12. **i-26** — No ISTH obesity cutoff is used as the key.
-13. **ii-21, ii-48, iv-29** — No pediatric dose is stated. Pediatric labeling was not re-verified.
+12. **i-26** — The explanation now cites the 2021 ISTH SSC guidance that a standard labeled dose, not a doubled dose, is the obesity teaching point.
+13. **ii-21, ii-48, iv-29** — No pediatric milligram dose is the answer. The ii-21 and iv-29 explanations now name the U.S. pediatric formulations (apixaban sprinkle capsule and tablet for oral suspension, rivaroxaban oral suspension, dabigatran pellets).
 14. **ii-24** — Chromogenic factor X is the concept when a lupus anticoagulant invalidates the INR. No activity target is stated.
 15. **ii-27** — Platelets 28 × 10⁹/L block an automatic full-dose refill. No universal ASH platelet cutoff is asserted.
 16. **iv-42, iv-43** — Levonorgestrel intrauterine device versus copper or estrogen methods. CDC category numbers are not printed.
 17. **i-02, i-07, i-19, iv-30** — Factor half-lives (factor VII about 6 hours, protein C about 8 hours, prothrombin about 60 hours) are textbook approximations, not a label table.
 18. **ii-08** — ENRICH-AF figures are the 29 August 2026 congress press release, as the site already labels them, not a journal paper.
+
+## Clinical and literature review fixes applied
+
+Clinical and literature review of the bank at commit f29fb50 returned 196 pass, 23 fix, and 0 hold. All 33 ready-to-apply pairs were applied character for character. No `correctId` changed.
+
+Items: i-03, i-06, i-19, i-23, i-26, i-31, ii-01, ii-14, ii-21, ii-22, ii-35, ii-36, ii-41, ii-60, iii-01, iii-08, iii-29, iv-24, iv-28, iv-29, iv-34, iv-41, iv-44.
+
+Keyed choice text changed only where that choice itself was in the fix list: iii-29 choice A and iv-24 choice D. ii-36 choice C changed and is not the keyed answer. Length was recomputed after the edits: the keyed choice is uniquely longest in 43 of 219 items, the mean gap is about -5 characters, and no keyed choice is more than 25 characters longer than the next choice.
 
 ## Every reworked item
 
@@ -784,7 +792,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-24 (domain IV, objectives 28, 29)
 
 - Old correct (b): Routine prothrombin time/INR/activated partial thromboplastin time are imperfect; specialized assays may help but decisions often proceed based on last dose timing, renal function, and clinical bleed severity
-- New correct (d): A normal INR does not clear dabigatran, and a level must not delay reversal of major bleeding
+- New correct (d): A normal INR does not clear dabigatran, and waiting for a level should not delay urgent reversal
 - Source: Dabigatran laboratory teaching: the INR is insensitive, the thrombin time is very sensitive, and the activated partial thromboplastin time is not a quantitative dose. RE-VERSE AD: idarucizumab 5 g intravenous when reversal is indicated.
 - Why this is harder: A normal INR is being asked to clear a thrombin inhibitor.
 - Confidence note: No numeric thrombin-time cutoff is stated.
@@ -1446,7 +1454,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-29 (domain III, objectives 60)
 
 - Old correct (c): A case-based session contrasting VKA monitoring with DOAC assessment, followed by a competency check and updated materials
-- New correct (a): Retrain on a normal INR misread as 'no apixaban on board,' then check the words staff use
+- New correct (a): Retrain with a case showing the INR is not a DOAC dose target, then audit what staff say
 - Source: DOAC laboratory teaching: the INR is not a dose target. A normal INR does not exclude apixaban effect. Staff education should correct that specific sentence.
 - Why this is harder: A familiar warfarin sentence is being pasted onto the wrong drug.
 

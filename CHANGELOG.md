@@ -9,6 +9,7 @@ Newest first. Record site changes here. The site does not render this file.
 - Each explanation states why the keyed choice is right and why the other three are wrong, and names a label, guideline, or trial already used on this site. Wording stays DOAC. No dosing order is issued.
 - A clinician review of every item, with the old and new keyed text, the source, and confidence notes, is in `docs/cacp-difficulty-review-2026-11-10.md`.
 - Items that name a fact a 2026 label or guideline was not re-opened for are listed in that review. They were not filled in with a guessed number.
+- Clinical and literature review fixes were applied after that pass: 23 items, 33 exact wording pairs, no answer-key changes. Keyed-choice length was recomputed afterward: uniquely longest in 43 of 219 items, mean gap about -5 characters, and no keyed choice more than 25 characters longer than the next choice.
 - The same bank is in the Capacitor copy. Educational only. AC Forum does not endorse this material. These are not real exam questions. reviewedBy unchanged.
 
 ## 2026-11-10 — OCEANIC-STROKE notes the FDA approval of asundexian

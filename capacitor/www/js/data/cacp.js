@@ -168,7 +168,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "c",
-      "explanation": "Choice C matches the 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: an annual risk in the range of CHA₂DS₂-VASc of 2 or more in men or 3 or more in women supports anticoagulation, and a bleeding score is used to address modifiable risks rather than to withhold indicated OAC. This woman's stroke history, hypertension, diabetes, age, and sex put her well above that threshold. Choice A uses HAS-BLED as a stop rule. Choice B uses a bleeding score to choose a molecule. Choice D misapplies the scores to a mechanical valve, which is outside this NVAF discussion.",
+      "explanation": "Choice C matches the 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: an estimated annual stroke risk of at least 2%, corresponding to a CHA₂DS₂-VASc score of 2 or more in men or 3 or more in women, supports anticoagulation, and a bleeding score is used to address modifiable risks rather than to withhold indicated OAC. This woman's stroke history, hypertension, diabetes, age, and sex put her well above that threshold. Choice A uses HAS-BLED as a stop rule. Choice B uses a bleeding score to choose a molecule. Choice D misapplies the scores to a mechanical valve, which is outside this NVAF discussion.",
       "teachingPoints": [
         "HAS-BLED flags blood pressure, anti-inflammatory drugs, alcohol, and labile INR.",
         "A high bleeding score does not erase an indication for OAC."
@@ -324,7 +324,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Choice B is the anatomic source: AF promotes stasis in the left atrial appendage, and the study shows thrombus there. Choice A describes typical atherosclerotic coronary thrombosis, and the ventriculogram is normal. Choice C describes venous thromboembolism, not this echo. Choice D contradicts the finding of appendage stasis. Source: AF cardioembolic pathophysiology used on this site's stroke-prevention framework.",
+      "explanation": "Choice B is the anatomic source: AF promotes stasis in the left atrial appendage, and the study shows thrombus there. Choice A describes typical atherosclerotic coronary thrombosis, and last year's angiogram showed only mild plaque. Choice C describes venous thromboembolism, not this echo. Choice D contradicts the finding of appendage stasis. Source: AF cardioembolic pathophysiology used on this site's stroke-prevention framework.",
       "teachingPoints": [
         "Appendage stasis is why OAC, not aspirin alone, is the stroke strategy when OAC is indicated.",
         "Absence of palpitations does not clear appendage thrombus."
@@ -633,7 +633,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "Choice A matches the 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: when moderate-to-severe rheumatic mitral stenosis and a mechanical valve are absent, a DOAC is preferred over warfarin for eligible patients, and this man's score (age 65 to 74, hypertension, diabetes) is in the range treated with anticoagulation. Choice B reverses AVERROES, in which apixaban was superior to aspirin. Choice C uses a vascular dose that does not replace AF treatment. Choice D drops indicated OAC. Cockcroft-Gault clearance with the stated weight is about 114 mL/min and is not the decision.",
+      "explanation": "Choice A matches the 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: when moderate-to-severe rheumatic mitral stenosis and a mechanical valve are absent, a DOAC is preferred over warfarin for eligible patients, and this man's score (age 65 to 74, hypertension, diabetes) is in the range treated with anticoagulation. Choice B reverses AVERROES, in which apixaban was superior to aspirin. Choice C uses a vascular dose that does not replace AF treatment. Choice D drops indicated OAC. Cockcroft-Gault clearance with the stated weight is about 91 mL/min and is not the decision.",
       "teachingPoints": [
         "DOACs are preferred over warfarin in eligible NVAF.",
         "Aspirin is not the substitute when OAC is indicated."
@@ -1344,7 +1344,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Choice B is Hokusai-VTE, as described on this site: parenteral heparin for at least 5 days, then edoxaban 60 mg daily, or 30 mg daily if reduction criteria are met. This patient's weight and clearance do not meet a reduction criterion that the item needs to invoke. Choice A copies the rivaroxaban or apixaban oral-only start. Choice C halves the dose without a criterion. Choice D uses a vascular regimen. Source: Hokusai-VTE regimen on this site.",
+      "explanation": "Choice B is Hokusai-VTE, as described on this site: parenteral heparin for at least 5 days, then edoxaban 60 mg daily, or 30 mg daily if reduction criteria are met. At 74 kg, a clearance of 68 mL/min, and no P-glycoprotein inhibitor, she meets no edoxaban dose-reduction criterion. Choice A copies the rivaroxaban or apixaban oral-only start. Choice C halves the dose without a criterion. Choice D uses a vascular regimen. Source: Hokusai-VTE regimen on this site.",
       "teachingPoints": [
         "Edoxaban for acute VTE is not an oral-only start.",
         "Parenteral lead-in of at least 5 days is the sequence the trial used."
@@ -1592,7 +1592,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "Choice A matches the XARELTO label as already stated on this site: 15 mg and 20 mg tablets are taken with food, and the AF dose is taken with the evening meal. The label reports that food raises 20 mg exposure (AUC up 39%). The 2.5 mg tablet, used with aspirin in COMPASS, is taken with or without food and is not this man's AF dose. Choice B reverses the food effect. Choice C equates strengths. Choice D doubles the dose. Source: XARELTO food effect as printed on this site.",
+      "explanation": "Choice A matches the XARELTO label as already stated on this site: 15 mg and 20 mg tablets are taken with food, and the AF dose is taken with the evening meal. The label reports that food raises 20 mg exposure (area under the curve up 39%). The 2.5 mg tablet, used with aspirin in COMPASS, is taken with or without food and is not this man's AF dose. Choice B reverses the food effect. Choice C equates strengths. Choice D doubles the dose. Source: XARELTO food effect as printed on this site.",
       "teachingPoints": [
         "Food raises, rather than lowers, 20 mg exposure.",
         "A neighbor's 2.5 mg tablet is not the AF prescription."
@@ -2712,7 +2712,7 @@ window.ANTICOAG_CACP = {
       "id": "i-19",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "On day 3 of warfarin for acute PE, a patient's INR is 2.3. No parenteral anticoagulant has been given. He feels well, hemoglobin is stable, and a learner says overlap can stop because the INR is in range. Which explanation is the accurate one?",
+      "stem": "On day 3 of warfarin for acute PE, started together with enoxaparin, a patient's INR is 2.3. He feels well, hemoglobin is stable, and a learner says the enoxaparin can stop because the INR is in range. Which explanation is the accurate one?",
       "choices": [
         {
           "id": "a",
@@ -2910,7 +2910,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "c",
-      "explanation": "Choice C is the embolic link: lower-extremity DVT is the usual source of PE. Choice A calls pleuritic symptoms coronary plaque rupture despite a clear X-ray and an acute leg clot. Choice B reverses arterial and venous directions. Choice D denies lower-extremity embolization. Source: venous thromboembolism as one disease in which DVT embolizes to the lung.",
+      "explanation": "Choice C is the embolic link: lower-extremity DVT is the usual source of PE. Choice A invents in-situ pulmonary arterial plaque rupture and ignores the acute leg clot. Choice B reverses arterial and venous directions. Choice D denies lower-extremity embolization. Source: venous thromboembolism as one disease in which DVT embolizes to the lung.",
       "teachingPoints": [
         "Most PE events arise from lower-extremity venous thrombus.",
         "A normal blood pressure does not mean the embolus is absent."
@@ -3046,7 +3046,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Choice B matches cautious obesity teaching: very high body weight is a pharmacokinetics concern and a specialty check, and it is not an instruction to invent an unlisted double dose. This site's DOAC pathway treats extremes of weight as a stewardship review, not as automatic failure and not as a homemade dose. Choice A sets a 100 kg ban that the item does not support. Choice C invents a doubling rule. Choice D forces warfarin without a VKA niche. No off-label milligram amount is endorsed here.",
+      "explanation": "Choice B matches cautious obesity teaching: very high body weight is a pharmacokinetics concern and a specialty check, and it is not an instruction to invent an unlisted double dose. The 2021 ISTH SSC guidance on DOACs in obesity suggests that standard doses of rivaroxaban or apixaban are among appropriate options for VTE treatment regardless of high body mass index and weight, with fewer supporting data for apixaban; a standard dose is the labeled dose, not a doubled one. Choice A sets a 100 kg ban that the item does not support. Choice C invents a doubling rule. Choice D forces warfarin without a VKA niche. No off-label milligram amount is endorsed here.",
       "teachingPoints": [
         "Do not invent a double dose that the label does not list.",
         "Very high weight still deserves a deliberate agent review."
@@ -3158,7 +3158,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "Choice A keeps the decision in pediatric dosing references and an appropriate formulation, coordinated with a pediatric clinician. Adult AF criteria are not a child's VTE rule. Choice B transplants the apixaban 2-of-3 AF rule. Choice C invents a double dose. Choice D substitutes aspirin. No milligram amount is stated, because product-specific pediatric labeling was not re-verified for this item.",
+      "explanation": "Choice A keeps the decision in pediatric dosing references and an appropriate formulation, coordinated with a pediatric clinician. Adult AF criteria are not a child's VTE rule. Choice B transplants the apixaban 2-of-3 AF rule. Choice C invents a double dose. Choice D substitutes aspirin. U.S. labeling now has pediatric VTE dosing by weight (by age and weight for dabigatran pellets) with child-appropriate formulations for apixaban (tablets for oral suspension and sprinkle capsules), rivaroxaban (oral suspension, studied in EINSTEIN Junior), and dabigatran (oral pellets, studied in DIVERSITY); none uses a split adult AF tablet. No milligram amount is stated.",
       "teachingPoints": [
         "Adult AF doses are not a pediatric VTE schedule.",
         "Formulation and a pediatric reference come before any tablet is split."
@@ -3192,7 +3192,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Choice B matches dental teaching in the CHEST perioperative guidance: minor dental procedures can proceed on a VKA with local hemostasis, and a heparin bridge is not routine. BRIDGE, in a broader elective-procedure AF population, likewise does not support routine bridging. Choice A misreads BRIDGE. Choice C aims for a normal INR with vitamin K for a minor extraction. Choice D invents a one-visit DOAC. Confirm the dentist's hemostasis plan; this stem says they can provide it.",
+      "explanation": "Choice B matches the 2022 ACCP (CHEST) perioperative guideline, which suggests continuing a VKA with a prohemostatic agent for minor dental procedures, and a heparin bridge is not routine. BRIDGE, in a broader elective-procedure AF population, likewise does not support routine bridging. Choice A misreads BRIDGE. Choice C aims for a normal INR with vitamin K for a minor extraction. Choice D invents a one-visit DOAC. The stem states that the dentist can provide local hemostasis.",
       "teachingPoints": [
         "Ask whether interruption is required at all.",
         "A molar extraction with local hemostasis is not an automatic bridge."
@@ -3819,7 +3819,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "c",
-      "explanation": "Choice C is the label consequence. Creatinine clearance = (140−78)×64×0.85/(72×1.2) = 39 mL/min. The U.S. XARELTO AF regimen is 20 mg daily with the evening meal when clearance is above 50 mL/min and 15 mg daily with the evening meal when clearance is 15 to 50 mL/min. Choice A freezes last year's dose. Choice B applies apixaban's serum creatinine criterion to a different drug; one laboratory value is not two apixaban criteria anyway. Choice D substitutes a vascular dose for AF. Source: U.S. XARELTO prescribing information, atrial fibrillation dosage. ROCKET-AF reduced at clearance 30 to 49 mL/min; the label cut point used here is 50 mL/min.",
+      "explanation": "Choice C is the label consequence. Creatinine clearance = (140−78)×64×0.85/(72×1.2) = 39 mL/min. The U.S. XARELTO AF regimen is 20 mg daily with the evening meal when clearance is above 50 mL/min and 15 mg daily with the evening meal when clearance is 50 mL/min or less. Choice A freezes last year's dose. Choice B applies apixaban's serum creatinine criterion to a different drug; one laboratory value is not two apixaban criteria anyway. Choice D substitutes a vascular dose for AF. Source: U.S. XARELTO prescribing information, atrial fibrillation dosage. The label notes that ROCKET AF gave 15 mg at clearance 30 to 50 mL/min; the label cut point is 50 mL/min.",
       "teachingPoints": [
         "Recompute clearance when creatinine moves. Do not reuse last year's 20 mg by habit.",
         "The evening meal requirement still applies to the 15 mg AF dose."
@@ -3844,7 +3844,7 @@ window.ANTICOAG_CACP = {
       "id": "ii-36",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "A discharge list uses rivaroxaban 2.5 mg twice daily plus aspirin for three different labels: 'stable CAD,' 'AF stroke prevention,' and 'acute DVT day 2.' Which of those indications cannot be covered by the COMPASS regimen?",
+      "stem": "A discharge list uses rivaroxaban 2.5 mg twice daily plus aspirin for three different labels: 'stable CAD,' 'AF stroke prevention,' and 'acute DVT day 2.' Which indication cannot be covered by the COMPASS regimen?",
       "choices": [
         {
           "id": "a",
@@ -3856,7 +3856,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Aspirin monotherapy in someone who declines the rivaroxaban add-on after a risks discussion"
+          "text": "Stable CAD together with PAD, with no AF and no VTE, also inside COMPASS enrollment"
         },
         {
           "id": "d",
@@ -3864,7 +3864,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "d",
-      "explanation": "Choice D names the mismatch. COMPASS studied rivaroxaban 2.5 mg twice daily plus aspirin in stable atherosclerotic disease and excluded patients who needed full-dose anticoagulation. AF treatment doses and acute VTE lead-in doses are different regimens on this site. Choices A and B are the populations the vascular dose is for. Choice C is a preference about aspirin, not an indication the 2.5 mg regimen secretly treats. Source: COMPASS and this site's vascular-dose framework.",
+      "explanation": "Choice D names the mismatch. COMPASS studied rivaroxaban 2.5 mg twice daily plus aspirin in stable atherosclerotic disease and excluded patients who needed full-dose anticoagulation. AF treatment doses and acute VTE lead-in doses are different regimens on this site. Choices A, B, and C describe stable CAD, PAD, or both without an indication for full anticoagulation, the populations COMPASS enrolled. Source: COMPASS and this site's vascular-dose framework.",
       "teachingPoints": [
         "Write the indication before copying 2.5 mg.",
         "AF and acute VTE are full-dose problems."
@@ -3982,7 +3982,7 @@ window.ANTICOAG_CACP = {
       "id": "iii-08",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "A woman on warfarin asks whether she must drop all salads because her INR was 3.2 once after a week of holiday eating that was much larger than usual. Her usual diet is one small salad most days, and the INR is otherwise stable. Which explanation is accurate?",
+      "stem": "A woman on warfarin asks whether she must drop all salads because her INR was 1.6 once after a holiday week of eating far more leafy greens than usual. Her usual diet is one small salad most days, and the INR is otherwise stable. Which explanation is accurate?",
       "choices": [
         {
           "id": "a",
@@ -4002,7 +4002,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "d",
-      "explanation": "Choice D separates a consistent vitamin K intake, which her stable INRs reflect, from a holiday jump in intake, which can lower the INR. Choice A bans the pattern that was working. Choice B prescribes a binge. Choice C denies the interaction. An INR of 3.2 without bleeding is not a reversal problem. Source: warfarin diet counseling.",
+      "explanation": "Choice D separates a consistent vitamin K intake, which her stable INRs reflect, from a holiday jump in intake, which can lower the INR. Choice A bans the pattern that was working. Choice B prescribes a binge. Choice C denies the interaction. One low INR after a high-intake week is explained by the change, not by the usual small salad. Source: warfarin diet counseling.",
       "teachingPoints": [
         "Teach consistency, not a permanent ban.",
         "One high-intake week is not a reason to eliminate the usual pattern."
@@ -4574,11 +4574,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "A normal INR does not clear dabigatran, and a level must not delay reversal of major bleeding"
+          "text": "A normal INR does not clear dabigatran, and waiting for a level should not delay urgent reversal"
         }
       ],
       "correctId": "d",
-      "explanation": "Choice D is the emergency reading. Dabigatran is not dosed by the INR. A thrombin time is highly sensitive to dabigatran and a normal thrombin time argues against an important on-board effect, but waiting for that tube does not delay care of life-threatening bleeding, where idarucizumab is the specific agent. A prolonged activated partial thromboplastin time suggests an effect and is not a quantitative level. Choice A clears the drug with the INR. Choice B gives vitamin K. Choice C treats a clotting time as a concentration. Source: dabigatran laboratory interpretation and RE-VERSE AD.",
+      "explanation": "Choice D is the emergency reading. Dabigatran is not dosed by the INR. A thrombin time is highly sensitive to dabigatran and a normal thrombin time argues against an important on-board effect, but waiting for that tube does not delay reversal before emergency surgery, where idarucizumab is the specific agent. A prolonged activated partial thromboplastin time suggests an effect and is not a quantitative level. Choice A clears the drug with the INR. Choice B gives vitamin K. Choice C treats a clotting time as a concentration. Source: dabigatran laboratory interpretation and RE-VERSE AD.",
       "teachingPoints": [
         "The INR is the wrong clearance test.",
         "Do not wait on a send-out level while a life-threatening bleed continues."
@@ -6109,7 +6109,7 @@ window.ANTICOAG_CACP = {
       "id": "ii-41",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "A 70-year-old woman with AF is on day 4 of a medically managed NSTEMI. She did not go to the catheterization laboratory. She is prescribed a P2Y12 inhibitor. A slide says AUGUSTUS proved that OAC alone is enough and that aspirin clearly increased bleeding in the 1097-patient medically managed subgroup. Which reading respects what that subgroup can support?",
+      "stem": "A 70-year-old woman with AF is on day 4 of a medically managed non-ST-elevation myocardial infarction. She did not go to the catheterization laboratory. She is prescribed a P2Y12 inhibitor. A slide says AUGUSTUS proved that OAC alone is enough and that aspirin clearly increased bleeding in the 1097-patient medically managed subgroup. Which reading respects what that subgroup can support?",
       "choices": [
         {
           "id": "a",
@@ -6129,7 +6129,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "Choice A keeps the limits already recorded for this bank. Every AUGUSTUS patient was on a P2Y12 inhibitor, so there was no OAC-alone arm. In the medically managed subgroup, major or clinically relevant nonmajor bleeding was lower with apixaban than with a VKA (HR 0.44; 95% CI 0.28–0.68). Aspirin versus placebo showed a nonsignificant trend toward more bleeding (HR 1.49; 95% CI 0.98–2.26). Choice B claims a comparison the trial did not randomize. Choice C claims an ischemic offset the subgroup was not powered to prove. Choice D bans antiplatelet therapy. Source: the AUGUSTUS medically managed figures already used on this item's prior version and the trial's factorial design.",
+      "explanation": "Choice A states what the subgroup can support. Every AUGUSTUS patient was on a P2Y12 inhibitor, so there was no OAC-alone arm. In the medically managed subgroup, major or clinically relevant nonmajor bleeding was lower with apixaban than with a VKA (HR 0.44; 95% CI 0.28–0.68). Aspirin versus placebo showed a nonsignificant trend toward more bleeding (HR 1.49; 95% CI 0.98–2.26). Choice B claims a comparison the trial did not randomize. Choice C claims an ischemic offset the subgroup was not powered to prove. Choice D bans antiplatelet therapy. Source: AUGUSTUS prespecified subgroups (ACS treated medically, ACS treated with PCI, and elective PCI; Windecker et al., Circulation 2019;140(23):1921–1932, doi 10.1161/CIRCULATIONAHA.119.043308) and the trial's factorial design.",
       "teachingPoints": [
         "No OAC-alone arm means no OAC-alone conclusion.",
         "A confidence interval that crosses 1 is not a clear aspirin-bleeding win in that subgroup."
@@ -6439,7 +6439,7 @@ window.ANTICOAG_CACP = {
       "id": "i-31",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "A 74-year-old man is admitted with pneumonia. He has active lymphoma and has been in bed for two days. He had an appendectomy 20 years ago. There is no bleeding. The team wants a prophylaxis assessment rather than anticoagulation for every admission. Which tool use is appropriate?",
+      "stem": "A 74-year-old man is admitted with pneumonia. He has active lymphoma on chemotherapy and has been in bed for two days. He had an appendectomy 20 years ago. There is no bleeding. The team wants a prophylaxis assessment rather than anticoagulation for every admission. Which tool use is appropriate?",
       "choices": [
         {
           "id": "a",
@@ -6459,7 +6459,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "c",
-      "explanation": "Choice C fits a medical inpatient: the Padua score assigns 3 points to active cancer and 3 to reduced mobility, and a total of 4 or more marks high VTE risk for a prophylaxis decision, not a treatment dose for an undiagnosed clot. His cancer plus immobility already reach 6. Choice A uses a surgical score. Choice B jumps to treatment intensity without a VTE diagnosis. Choice D uses an AF stroke score. Source: Padua prediction score for medical inpatients.",
+      "explanation": "Choice C fits a medical inpatient: the Padua score assigns 3 points to active cancer and 3 to reduced mobility, and a total of 4 or more marks high VTE risk for a prophylaxis decision, not a treatment dose for an undiagnosed clot. Active cancer (3), age 70 or older (1), and acute infection (1) already total 5; Padua's 3 points for reduced mobility require bed rest of at least 3 days. Choice A uses a surgical score. Choice B jumps to treatment intensity without a VTE diagnosis. Choice D uses an AF stroke score. Source: Padua prediction score for medical inpatients.",
       "teachingPoints": [
         "Padua gives 3 points to active cancer and 3 to reduced mobility.",
         "A high prophylaxis score is not a diagnosis of DVT or PE."
@@ -7842,7 +7842,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "d",
-      "explanation": "Choice D follows the order of operations on this site and in PAUSE. First ask whether the low-risk procedure requires a hold. If it does, PAUSE omitted apixaban, dabigatran, or rivaroxaban for 1 day before a low-bleeding-risk procedure and for 2 days before a high-bleeding-risk procedure, without heparin bridging and without preoperative coagulation testing. Choice A adds a bridge PAUSE did not use. Choice B imposes a 5-day hold. Choice C invents a required anti-Xa. Edoxaban was not in PAUSE. Source: PAUSE, as summarized on this site.",
+      "explanation": "Choice D follows the order of operations on this site and in PAUSE. First ask whether the low-risk procedure requires a hold. If it does, PAUSE omitted apixaban, dabigatran, or rivaroxaban for 1 day before a low-bleeding-risk procedure and for 2 days before a high-bleeding-risk procedure (2 and 4 days for dabigatran with a creatinine clearance below 50 mL/min), without heparin bridging and without preoperative coagulation testing. Choice A adds a bridge PAUSE did not use. Choice B imposes a 5-day hold. Choice C invents a required anti-Xa. Edoxaban was not in PAUSE. Source: PAUSE, as summarized on this site.",
       "teachingPoints": [
         "Many low-risk procedures never needed a hold.",
         "PAUSE's low-risk omission was 1 day, without a heparin bridge."
@@ -8378,7 +8378,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Retrain on a normal INR misread as 'no apixaban on board,' then check the words staff use"
+          "text": "Retrain with a case showing the INR is not a DOAC dose target, then audit what staff say"
         },
         {
           "id": "b",
@@ -8394,7 +8394,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "Choice A uses a concrete error, the normal INR that does not clear apixaban, and then checks what staff actually say. Choice B codifies the mistake. Choice C invents an activated partial thromboplastin time target for DOACs. Choice D damages warfarin teaching to hide a DOAC error. Source: staff education on what the INR does not do.",
+      "explanation": "Choice A uses a concrete error, an INR target written for a DOAC that is not dosed to the INR, and then checks what staff actually say. Choice B codifies the mistake. Choice C invents an activated partial thromboplastin time target for DOACs. Choice D damages warfarin teaching to hide a DOAC error. Source: staff education on what the INR does not do.",
       "teachingPoints": [
         "Teach the misread INR as the case.",
         "A warfarin target pasted onto a DOAC is the sentence to retire."
@@ -8481,7 +8481,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "d",
-      "explanation": "Choice D collapses the duplicate. Eliquis is the brand of apixaban. Taking both lines would double the dose. The familiar U.S. adult oral tablets are 2.5 mg and 5 mg; a 10 mg dose in acute VTE is two 5 mg tablets, not a second drug. Choice A gives both. Choice B renames the brand. Choice C adds warfarin monitoring. Source: apixaban identity and usual adult tablet strengths.",
+      "explanation": "Choice D collapses the duplicate. Eliquis is the brand of apixaban. Taking both lines would double the dose. U.S. adult tablets are 2.5 mg and 5 mg, and a 10 mg dose in acute VTE is two 5 mg tablets, not a second drug; the 0.5 mg tablet for oral suspension and the 0.15 mg sprinkle capsule are pediatric presentations. Choice A gives both. Choice B renames the brand. Choice C adds warfarin monitoring. Source: apixaban identity and usual adult tablet strengths.",
       "teachingPoints": [
         "A brand and a generic on the same list are one medicine.",
         "Two lines of 5 mg would be 10 mg twice daily."
@@ -8522,7 +8522,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "Choice A is the dispensing safety point. Pediatric apixaban products and adult tablets do not share one administration instruction, and an adult AF dose is not a child's VTE dose. Choice B crushes whatever is on the shelf. Choice C applies the older-adult reduction rule. Choice D uses vitamin K. No concentration or pediatric milligram dose is stated. Source: product-specific administration. Pediatric labeling was not re-verified for a concentration.",
+      "explanation": "Choice A is the dispensing safety point. Pediatric apixaban products and adult tablets do not share one administration instruction, and an adult AF dose is not a child's VTE dose. Choice B crushes whatever is on the shelf. Choice C applies the older-adult reduction rule. Choice D uses vitamin K. U.S. ELIQUIS labeling lists pediatric presentations (a 0.15 mg sprinkle capsule and a 0.5 mg tablet for oral suspension) with weight-tiered dosing, and describes crushing adult 2.5 mg or 5 mg tablets only for patients weighing at least 35 kg. No pediatric milligram dose is stated. Source: ELIQUIS prescribing information, dosage and administration.",
       "teachingPoints": [
         "Read the preparation named on the order.",
         "Do not convert an adult tablet into a pediatric dose at the counter."
@@ -8729,7 +8729,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "b",
-      "explanation": "Choice B matches the labels as this site states them for rivaroxaban and the with-or-without-food administration for apixaban and edoxaban. The site notes that food raises rivaroxaban 20 mg AUC by 39 percent. Choice A extends the food mandate. Choice C swaps it. Choice D confines food to warfarin. Source: administration sections cited on this site's practical pages.",
+      "explanation": "Choice B matches the labels as this site states them for rivaroxaban and the with-or-without-food administration for apixaban and edoxaban. The site notes that food raises rivaroxaban 20 mg exposure (area under the curve) by 39 percent. Choice A extends the food mandate. Choice C swaps it. Choice D confines food to warfarin. Source: administration sections cited on this site's practical pages.",
       "teachingPoints": [
         "Copy the food rule from the drug in front of you, not from rivaroxaban's 20 mg tablet.",
         "A full meal is not a class law."
@@ -9030,7 +9030,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "a",
-      "explanation": "Choice A separates the two exposures. Warfarin's fetal toxicity does not equal a lactation ban; warfarin and LMWH are the agents with established breastfeeding use. DOACs are not recommended during breastfeeding on product labeling. Choice B equates milk with the placenta. Choice C equates the evidence. Choice D stops treatment because of feeding. Source: labeling distinction between pregnancy and lactation.",
+      "explanation": "Choice A separates the two exposures. Warfarin's fetal toxicity does not equal a lactation ban; warfarin and LMWH are the agents with established breastfeeding use. Apixaban, dabigatran, and edoxaban labeling say breastfeeding is not recommended, rivaroxaban labeling cites insufficient data, and the 2018 ASH pregnancy guideline recommends against DOACs in breastfeeding women. Choice B equates milk with the placenta. Choice C equates the evidence. Choice D stops treatment because of feeding. Source: labeling distinction between pregnancy and lactation.",
       "teachingPoints": [
         "Ask where the drug would go: placenta or milk.",
         "The sister's DOAC is an AF story, not a lactation study."
@@ -9139,7 +9139,7 @@ window.ANTICOAG_CACP = {
         }
       ],
       "correctId": "d",
-      "explanation": "Choice D matches the OCEANIC-STROKE caveat on this site. The FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on 9 November 2026 for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS 15 or lower) or high-risk TIA. It is not approved for AF. OCEANIC-AF was stopped early because stroke or systemic embolism was higher with asundexian than with apixaban (1.3% versus 0.4%; HR 3.79). Milvexian is not that approval; LIBREXIA ACS was stopped for futility. Choice A reverses OCEANIC-AF. Choice B invents an AF approval for milvexian. Choice C treats one approval as a class license. The site notes that no DailyMed label was posted yet, so this item does not add label wording beyond that caveat.",
+      "explanation": "Choice D matches the OCEANIC-STROKE caveat on this site. The FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on 9 November 2026 for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS 15 or lower) or high-risk TIA. It is not approved for AF. OCEANIC-AF was stopped early because stroke or systemic embolism was higher with asundexian than with apixaban (1.3% versus 0.4%; HR 3.79). Milvexian is not that approval; LIBREXIA ACS was stopped for futility. Choice A reverses OCEANIC-AF. Choice B invents an AF approval for milvexian. Choice C treats one approval as a class license. Source: FDA press release of 9 November 2026, which states that SUNHARBO is not approved for stroke prevention in patients with AF.",
       "teachingPoints": [
         "Read the indication. Stroke add-on is not AF replacement.",
         "One approval is not a class approval."

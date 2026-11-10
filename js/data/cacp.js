@@ -84,7 +84,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "A thrombus with the same platelet and fibrin mix in arteries and veins, so one intensity fits both"
+          "text": "A thrombus with the same platelet and fibrin mix in arteries and veins, so one intensity fits both in clinic"
         }
       ],
       "correctId": "a",
@@ -112,7 +112,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Warfarin raises protein C first, so the early INR rise is a bleeding signal rather than a clotting one"
+          "text": "Warfarin raises protein C first, so the early INR rise is a bleeding signal rather than a clotting one today"
         },
         {
           "id": "b",
@@ -202,7 +202,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A score in the high range is itself a prescription for systemic thrombolysis"
+          "text": "A high Wells score is itself a prescription for systemic thrombolysis"
         },
         {
           "id": "b",
@@ -210,11 +210,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "The score chooses apixaban versus rivaroxaban after imaging has already confirmed PE"
+          "text": "The score chooses apixaban versus rivaroxaban after imaging has already confirmed the PE now"
         },
         {
           "id": "d",
-          "text": "The score is high enough that imaging, not a D-dimer rule-out, is the appropriate next diagnostic step"
+          "text": "The score is high enough that imaging, not a D-dimer rule-out, is the next diagnostic step"
         }
       ],
       "correctId": "d",
@@ -393,7 +393,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Only the port matters, because cancer itself does not change coagulation"
+          "text": "Only the port matters, because cancer itself does not change coagulation at all"
         },
         {
           "id": "b",
@@ -401,11 +401,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Only a single inherited mutation matters, and the cancer history is incidental"
+          "text": "Only a single inherited mutation matters, and the cancer history is incidental here"
         },
         {
           "id": "d",
-          "text": "Several hits coexist: tumor procoagulant activity, the catheter, chemotherapy, and immobility"
+          "text": "Tumor activity, the catheter, chemotherapy, and immobility all coexist"
         }
       ],
       "correctId": "d",
@@ -482,11 +482,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Only patient A is high-risk PE; patient B is intermediate-risk and is not automatic systemic thrombolysis"
+          "text": "Only patient A is high-risk PE; patient B is intermediate-risk, not automatic thrombolysis"
         },
         {
           "id": "c",
-          "text": "Only patient B needs reperfusion, because a normal blood pressure rules out a large clot burden"
+          "text": "Only patient B needs reperfusion, because a normal blood pressure rules out a large clot"
         },
         {
           "id": "d",
@@ -542,7 +542,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Rivaroxaban replaces warfarin here because INVICTUS showed rivaroxaban was superior to a VKA"
+          "text": "Rivaroxaban replaces warfarin here because INVICTUS showed rivaroxaban was superior to a VKA in clinic"
         },
         {
           "id": "c",
@@ -583,7 +583,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Contact activation by factor XII on glass, which is the dominant starter in a wound"
+          "text": "Contact activation by factor XII on glass, which is the dominant starter in a wound in clinic"
         },
         {
           "id": "b",
@@ -617,11 +617,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A treatment-dose DOAC, which the 2023 AF guideline prefers over warfarin when no VKA-only condition is present"
+          "text": "A treatment-dose DOAC, which the 2023 AF guideline prefers when no VKA-only condition is present"
         },
         {
           "id": "b",
-          "text": "Aspirin alone, because AVERROES showed aspirin prevents as many strokes as apixaban"
+          "text": "Aspirin alone, because AVERROES showed aspirin prevents as many strokes as apixaban does"
         },
         {
           "id": "c",
@@ -629,7 +629,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "No antithrombotic drug, because diabetes and hypertension cancel the AF indication"
+          "text": "No antithrombotic drug, because diabetes and hypertension cancel the AF indication entirely"
         }
       ],
       "correctId": "a",
@@ -679,7 +679,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Rivaroxaban 20 mg daily, because RE-ALIGN established dabigatran's target as safe for all mechanical valves"
+          "text": "Rivaroxaban 20 mg daily, because RE-ALIGN established dabigatran's target as safe for all mechanical valves now"
         }
       ],
       "correctId": "b",
@@ -799,7 +799,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "COBRRA showed rivaroxaban prevents more recurrent VTE, so bleeding differences are irrelevant"
+          "text": "COBRRA showed rivaroxaban prevents more recurrent VTE, so bleeding differences are irrelevant here"
         },
         {
           "id": "b",
@@ -807,11 +807,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "COBRRA found more recurrent VTE with apixaban, with identical bleeding, so rivaroxaban is required"
+          "text": "COBRRA found more recurrent VTE with apixaban and identical bleeding, so rivaroxaban is required"
         },
         {
           "id": "d",
-          "text": "Clinically relevant bleeding was lower with apixaban (3.3% versus 7.1%), while recurrent VTE was about 1% in each arm"
+          "text": "Clinically relevant bleeding was lower with apixaban, while recurrent VTE was about 1% in each arm"
         }
       ],
       "correctId": "d",
@@ -907,7 +907,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Switch to aspirin 100 mg forever, because EINSTEIN CHOICE showed aspirin beats a DOAC after provoked VTE"
+          "text": "Switch to aspirin 100 mg forever, because EINSTEIN CHOICE showed aspirin beats a DOAC after provoked VTE today"
         },
         {
           "id": "d",
@@ -944,7 +944,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Continue aspirin, clopidogrel, and apixaban together for a full year as the default"
+          "text": "Continue aspirin, clopidogrel, and apixaban together for a full year as the default in clinic"
         },
         {
           "id": "b",
@@ -1017,7 +1017,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Do not treat edoxaban as routine in unselected AF after intracranial hemorrhage"
+          "text": "Do not restart edoxaban routinely after unselected intracranial hemorrhage"
         }
       ],
       "correctId": "d",
@@ -1066,7 +1066,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Supportive care and the institutional 4F-PCC pathway for life-threatening factor Xa bleeding, not andexanet"
+          "text": "Supportive care plus institutional 4F-PCC for life-threatening factor Xa bleeding, not andexanet"
         },
         {
           "id": "b",
@@ -1074,11 +1074,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Andexanet alfa, because ANNEXA-I still makes it the current United States order"
+          "text": "Andexanet alfa, because ANNEXA-I still makes it the current United States order for this bleed now"
         },
         {
           "id": "d",
-          "text": "Vitamin K alone, because a normal INR would mean apixaban has already cleared"
+          "text": "Vitamin K alone, because a normal INR would mean the recent apixaban dose has already cleared"
         }
       ],
       "correctId": "a",
@@ -1127,19 +1127,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "BRIDGE showed bridging lowers bleeding, so enoxaparin is routine for this AF interruption"
+          "text": "BRIDGE showed bridging lowers bleeding, so enoxaparin is routine for this AF warfarin interruption"
         },
         {
           "id": "b",
-          "text": "BRIDGE does not support routine LMWH bridging: arterial thromboembolism was similar and major bleeding was higher with bridging"
+          "text": "BRIDGE does not support routine bridging: thromboembolism was similar and major bleeding was higher"
         },
         {
           "id": "c",
-          "text": "BRIDGE enrolled mechanical mitral valves, so its no-bridge finding is the mitral default"
+          "text": "BRIDGE enrolled mechanical mitral valves, so its no-bridge finding is the mitral-valve default"
         },
         {
           "id": "d",
-          "text": "BRIDGE requires preoperative anti-Xa testing before any warfarin hold"
+          "text": "BRIDGE requires preoperative anti-Xa testing before any warfarin hold for colonoscopy"
         }
       ],
       "correctId": "b",
@@ -1280,11 +1280,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Cockcroft-Gault creatinine clearance, which here is about 129 mL/min and crosses the edoxaban AF ceiling"
+          "text": "Cockcroft-Gault clearance, which here is about 129 mL/min and crosses the edoxaban AF ceiling"
         },
         {
           "id": "b",
-          "text": "A baseline INR target, because edoxaban is titrated until the INR sits between 2 and 3"
+          "text": "A baseline INR target, because edoxaban is titrated until the INR sits between 2 and 3 in clinic"
         },
         {
           "id": "c",
@@ -1332,7 +1332,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "At least 5 days of a parenteral anticoagulant, then edoxaban 60 mg daily if no reduction criterion is met"
+          "text": "At least 5 days of a parenteral anticoagulant, then edoxaban 60 mg daily"
         },
         {
           "id": "c",
@@ -1373,7 +1373,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Rivaroxaban is required, because SELECT-D showed less major bleeding in esophageal cancer than with dalteparin"
+          "text": "Rivaroxaban is required, because SELECT-D showed less major bleeding in esophageal cancer than dalteparin"
         },
         {
           "id": "b",
@@ -1381,7 +1381,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Prefer an apixaban or LMWH plan over rivaroxaban here, given SELECT-D's esophageal and gastroesophageal bleeding experience"
+          "text": "An apixaban or LMWH plan is the cautious choice here, given SELECT-D's esophageal bleeding experience"
         },
         {
           "id": "d",
@@ -1424,11 +1424,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Aspirin prevented more recurrent VTE than rivaroxaban 10 mg, with less major bleeding"
+          "text": "Aspirin prevented more recurrent VTE than rivaroxaban 10 mg, and with less major bleeding"
         },
         {
           "id": "b",
-          "text": "Extension is impossible once 6 months have passed, so neither drug is evidence-based"
+          "text": "Extension is impossible once 6 months have passed, so neither drug is evidence-based after that in clinic"
         },
         {
           "id": "c",
@@ -1436,7 +1436,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Rivaroxaban 10 mg or 20 mg daily prevented more recurrent VTE than aspirin 100 mg, with low and similar major bleeding"
+          "text": "Rivaroxaban 10 mg or 20 mg daily prevented more recurrent VTE than aspirin, with similar major bleeding"
         }
       ],
       "correctId": "d",
@@ -1580,7 +1580,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "The 20 mg tablet must be taken fasting, because food cuts rivaroxaban exposure by about half"
+          "text": "The 20 mg tablet must be taken fasting, because food cuts rivaroxaban exposure by about half today"
         },
         {
           "id": "c",
@@ -1629,11 +1629,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "A written brochure handed over, with no check that he can use it"
+          "text": "A written brochure handed over, with no check that he can actually use it at home"
         },
         {
           "id": "d",
-          "text": "A family member's signature, which substitutes for the patient's own explanation"
+          "text": "A family member's signature, which substitutes for the patient's own explanation of the plan now"
         }
       ],
       "correctId": "b",
@@ -1730,7 +1730,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Missed-dose teaching has to name the drug and the regimen, because a double dose tonight is wrong for both of these schedules"
+          "text": "Missed-dose teaching must name the drug, because doubling tonight is wrong for both schedules"
         },
         {
           "id": "b",
@@ -1742,7 +1742,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Rivaroxaban 20 mg is caught up by taking 40 mg the next evening, which is the AF food rule"
+          "text": "Rivaroxaban 20 mg is caught up by taking 40 mg the next evening, which is also the AF food rule"
         }
       ],
       "correctId": "a",
@@ -1771,19 +1771,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Dabigatran directly inhibits thrombin, unlike oral factor Xa inhibitors, warfarin, and P2Y12 inhibitors"
+          "text": "Dabigatran directly inhibits thrombin, unlike factor Xa inhibitors, warfarin, and P2Y12 blockers"
         },
         {
           "id": "b",
-          "text": "Dabigatran blocks vitamin K epoxide reductase, the same target as warfarin"
+          "text": "Dabigatran blocks vitamin K epoxide reductase, the same enzyme target as warfarin"
         },
         {
           "id": "c",
-          "text": "Dabigatran blocks glycoprotein IIb/IIIa, the same target as therapeutic-dose aspirin"
+          "text": "Dabigatran blocks glycoprotein IIb/IIIa, the same platelet target as therapeutic-dose aspirin today"
         },
         {
           "id": "d",
-          "text": "Dabigatran inhibits factor Xa, so andexanet is its specific antibody"
+          "text": "Dabigatran inhibits factor Xa, so andexanet is its specific reversal antibody"
         }
       ],
       "correctId": "a",
@@ -1825,7 +1825,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "The platelet P2Y12 receptor, the same primary target as clopidogrel"
+          "text": "The platelet P2Y12 receptor, the same primary target as clopidogrel now"
         },
         {
           "id": "d",
@@ -1877,11 +1877,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Rifampin has no transporter or enzyme effect, so any clot is unrelated"
+          "text": "Rifampin has no transporter or enzyme effect, so any new clot is unrelated to it"
         },
         {
           "id": "c",
-          "text": "Rifampin induces CYP3A4 and P-glycoprotein and lowers apixaban exposure, which is why the label avoids the combination"
+          "text": "Rifampin induces CYP3A4 and P-glycoprotein, so the label avoids the pair"
         },
         {
           "id": "d",
@@ -1918,11 +1918,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The INR is the activated partial thromboplastin time, so the seconds should have matched"
+          "text": "The INR is the activated partial thromboplastin time, so the raw seconds should have matched"
         },
         {
           "id": "b",
-          "text": "The INR removes reagent differences by ignoring the International Sensitivity Index"
+          "text": "The INR removes reagent differences by ignoring the International Sensitivity Index entirely"
         },
         {
           "id": "c",
@@ -1930,7 +1930,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "The INR uses the International Sensitivity Index so different reagents can yield a comparable warfarin result"
+          "text": "The INR uses the International Sensitivity Index so different reagents can match"
         }
       ],
       "correctId": "d",
@@ -2023,19 +2023,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Vitamin K only, because factor replacement adds nothing once the INR is known"
+          "text": "Vitamin K only, because factor replacement adds nothing once this bleed's INR is known in clinic"
         },
         {
           "id": "b",
-          "text": "Idarucizumab plus vitamin K, because every high INR is a dabigatran problem"
+          "text": "Idarucizumab plus vitamin K, because every high INR is a dabigatran reversal problem"
         },
         {
           "id": "c",
-          "text": "4F-PCC for the immediate factor replacement plus vitamin K so new functional factors can be made"
+          "text": "4F-PCC for immediate factor replacement plus vitamin K so new functional factors can be made"
         },
         {
           "id": "d",
-          "text": "Protamine, because warfarin and heparin share that antidote"
+          "text": "Protamine, because warfarin and unfractionated heparin share that same antidote"
         }
       ],
       "correctId": "c",
@@ -2082,7 +2082,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "One criterion, any criterion, is enough, and her creatinine alone forces 2.5 mg"
+          "text": "One criterion, any criterion, is enough, and her creatinine of 1.1 alone forces 2.5 mg"
         },
         {
           "id": "c",
@@ -2090,7 +2090,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Age and weight are already two labeled criteria, so the AF dose is 2.5 mg twice daily even though creatinine is 1.1"
+          "text": "Age and weight are two criteria, so the AF dose is 2.5 mg twice daily"
         }
       ],
       "correctId": "d",
@@ -2123,19 +2123,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "More gastrointestinal bleeding from a platelet and mucosal effect, without a requirement for higher rivaroxaban exposure"
+          "text": "More gastrointestinal bleeding from a platelet and mucosal effect, without a higher drug level"
         },
         {
           "id": "b",
-          "text": "Loss of rivaroxaban efficacy, because ibuprofen induces CYP3A4"
+          "text": "Loss of rivaroxaban efficacy, because scheduled ibuprofen induces CYP3A4 and drops the level now"
         },
         {
           "id": "c",
-          "text": "A higher INR target, because ibuprofen is monitored like warfarin"
+          "text": "A higher INR target, because ibuprofen is monitored and dose-adjusted exactly like warfarin"
         },
         {
           "id": "d",
-          "text": "Protection from bleeding, because nonsteroidal drugs reverse factor Xa"
+          "text": "Protection from bleeding, because nonsteroidal drugs reverse factor Xa inhibition"
         }
       ],
       "correctId": "a",
@@ -2254,19 +2254,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Ritonavir induces rivaroxaban clearance, so the dose should be raised to 40 mg"
+          "text": "Ritonavir induces rivaroxaban clearance, so the AF dose should be raised to 40 mg daily in clinic"
         },
         {
           "id": "b",
-          "text": "Ritonavir has no P-glycoprotein or CYP3A4 effect"
+          "text": "Ritonavir has no P-glycoprotein or CYP3A4 effect on rivaroxaban exposure at all"
         },
         {
           "id": "c",
-          "text": "The 15 mg renal dose fully corrects a strong combined inhibitor interaction"
+          "text": "The 15 mg renal tablet fully corrects a strong combined inhibitor such as ritonavir"
         },
         {
           "id": "d",
-          "text": "Ritonavir is a strong combined P-glycoprotein and CYP3A4 inhibitor, and the rivaroxaban label avoids that combination rather than using the renal dose as a fix"
+          "text": "The label avoids ritonavir, a strong combined inhibitor, rather than using the 15 mg renal dose"
         }
       ],
       "correctId": "d",
@@ -2288,19 +2288,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Enoxaparin potentiates antithrombin and indirectly inhibits factor Xa, whereas apixaban directly inhibits factor Xa"
+          "text": "Enoxaparin inhibits factor Xa via antithrombin; apixaban inhibits factor Xa directly"
         },
         {
           "id": "b",
-          "text": "Enoxaparin directly blocks thrombin's active site, the same site as dabigatran"
+          "text": "Enoxaparin directly blocks thrombin's active site, the same site dabigatran blocks now"
         },
         {
           "id": "c",
-          "text": "Enoxaparin blocks vitamin K epoxide reductase"
+          "text": "Enoxaparin blocks vitamin K epoxide reductase, the same enzyme warfarin inhibits"
         },
         {
           "id": "d",
-          "text": "Enoxaparin is an antiplatelet drug and has no antithrombin effect"
+          "text": "Enoxaparin is an antiplatelet drug and has no antithrombin-dependent effect at all"
         }
       ],
       "correctId": "a",
@@ -2322,11 +2322,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "It is the proportion of time a warfarin patient's INR is in range, useful for finding unstable patients, and it is not a DOAC metric or a mandated national percentage"
+          "text": "The share of time a warfarin INR is in range; it is not a DOAC metric or a national percentage"
         },
         {
           "id": "b",
-          "text": "It is the percentage of DOAC doses taken with food, and a national target of one number applies to every drug"
+          "text": "It is the percentage of DOAC doses taken with food, and one national target percentage applies to every drug"
         },
         {
           "id": "c",
@@ -2334,7 +2334,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "It measures anti-Xa levels for enoxaparin and is improved by giving every patient vitamin K"
+          "text": "It measures enoxaparin anti-Xa levels and is improved by giving every warfarin patient vitamin K"
         }
       ],
       "correctId": "a",
@@ -2356,19 +2356,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Meters alone, because a waived test has no quality duties once it is purchased"
+          "text": "Meters alone, because a waived test has no quality duties once the devices are purchased"
         },
         {
           "id": "b",
-          "text": "Training, quality control, storage rules, and a written response when control fails or a result disagrees with the laboratory"
+          "text": "Training, controls, storage rules, and a written response when a control fails"
         },
         {
           "id": "c",
-          "text": "A policy that fingerstick results always override same-day venous INRs"
+          "text": "A policy that fingerstick results always override a same-day venous INR, even when they conflict"
         },
         {
           "id": "d",
-          "text": "Removal of venous INR capability so the meter cannot be checked"
+          "text": "Removal of venous INR capability so the new meter can never be checked against the laboratory"
         }
       ],
       "correctId": "b",
@@ -2390,15 +2390,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Maximize the number of anticoagulant starts, regardless of indication or bleed risk"
+          "text": "Maximize the number of anticoagulant starts, regardless of indication or bleeding risk"
         },
         {
           "id": "b",
-          "text": "Remove INR monitoring so that no result can be late"
+          "text": "Remove INR monitoring so that no warfarin result can ever arrive late"
         },
         {
           "id": "c",
-          "text": "Match indication, dose, and duration; catch unindicated combinations; and keep monitoring and peri-procedure ownership clear"
+          "text": "Match indication, dose, and duration, and keep monitoring ownership clear"
         },
         {
           "id": "d",
@@ -2445,7 +2445,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Chronic heaviness can be post-thrombotic syndrome, but today's abrupt change needs evaluation for recurrent DVT"
+          "text": "Chronic heaviness can be post-thrombotic syndrome, but today's change needs a recurrence check"
         },
         {
           "id": "b",
@@ -2489,15 +2489,15 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "The mechanical mitral prosthesis is the higher-risk valve position and is managed as a VKA case, not like a tissue aortic valve in sinus rhythm"
+          "text": "The mechanical mitral prosthesis is the higher-risk position and is a VKA case, not a tissue aortic valve in sinus rhythm"
         },
         {
           "id": "c",
-          "text": "Both valves have identical risk, so a DOAC is appropriate for the mechanical mitral valve"
+          "text": "Both valves have identical long-term clot risk, so a DOAC is appropriate for the mechanical mitral valve"
         },
         {
           "id": "d",
-          "text": "Valve position does not matter once three months have passed, and both patients stop anticoagulation"
+          "text": "Valve position does not matter once three months have passed, and both patients stop anticoagulation then"
         }
       ],
       "correctId": "b",
@@ -2648,7 +2648,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Chronic thrombocytopenia for two years, unchanged, on no anticoagulant, and no new symptoms"
+          "text": "Chronic thrombocytopenia for two years, unchanged, on no anticoagulant, and no new symptoms now"
         }
       ],
       "correctId": "a",
@@ -2678,7 +2678,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "The COMPASS 2.5 mg rivaroxaban regimen replaces antiplatelet therapy in acute coronary thrombosis"
+          "text": "The COMPASS 2.5 mg rivaroxaban regimen replaces antiplatelet therapy in acute coronary thrombosis today"
         },
         {
           "id": "d",
@@ -2716,15 +2716,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The INR fully reports antithrombin activity, so a value above 2 means every factor is suppressed"
+          "text": "The INR fully reports antithrombin activity, so a value above 2 means every factor is already suppressed"
         },
         {
           "id": "b",
-          "text": "Factor II is the first factor to disappear, so an early INR of 2.3 proves prothrombin is gone"
+          "text": "Factor II is the first factor to disappear, so an early INR of 2.3 proves prothrombin is already gone"
         },
         {
           "id": "c",
-          "text": "Much of this early INR is factor VII loss, and prothrombin may not yet be suppressed, so overlap is still the CHEST pattern"
+          "text": "Much of this early INR is factor VII loss, and prothrombin may not yet be suppressed, so overlap continues"
         },
         {
           "id": "d",
@@ -2761,15 +2761,15 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Both patients equally, because the initial clot site, not the provoking factor, sets duration"
+          "text": "Both patients equally, because the initial clot site, not the provoking factor, sets the duration"
         },
         {
           "id": "c",
-          "text": "Neither patient, because feeling well at three months means recurrence risk has ended"
+          "text": "Neither patient, because feeling well at three months means the recurrence risk has ended"
         },
         {
           "id": "d",
-          "text": "Patient B, because an unprovoked proximal event is the pattern for which extended therapy is considered when bleeding risk is not high"
+          "text": "Patient B, because an unprovoked proximal event is the pattern for which extended therapy is considered"
         }
       ],
       "correctId": "d",
@@ -2950,7 +2950,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The two histories are the same phenotype, so both stay on a standard VTE DOAC plan indefinitely"
+          "text": "The two histories are the same phenotype, so both stay on a standard VTE DOAC plan indefinitely today"
         },
         {
           "id": "b",
@@ -3065,19 +3065,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Owning a meter, even if he cannot obtain a sample or report a result"
+          "text": "Owning a meter, even if he cannot obtain a sample or report an unexpected result"
         },
         {
           "id": "b",
-          "text": "A normal hemoglobin, which by itself certifies self-testing competence"
+          "text": "A normal hemoglobin, which by itself certifies home self-testing competence"
         },
         {
           "id": "c",
-          "text": "Demonstrated technique plus a reliable way to report results to a clinician who still manages out-of-range values"
+          "text": "Demonstrated technique plus a report path to a clinician who manages out-of-range values"
         },
         {
           "id": "d",
-          "text": "A one-time class, after which he changes the weekly dose whenever the meter beeps"
+          "text": "A one-time class, after which he changes the weekly dose whenever the meter beeps in clinic"
         }
       ],
       "correctId": "c",
@@ -3112,7 +3112,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Warfarin and LMWH have established lactation roles, while DOACs are not the default during breastfeeding"
+          "text": "Warfarin and LMWH have established lactation roles, while a DOAC is not the breastfeeding default"
         }
       ],
       "correctId": "d",
@@ -3142,19 +3142,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Use a pediatric reference and a formulation the child can take, not an adult AF schedule copied from a relative"
+          "text": "Use a pediatric reference and a formulation the child can take, not a relative's AF dose"
         },
         {
           "id": "b",
-          "text": "Adult NVAF dose-reduction criteria (age, weight, serum creatinine) are the pediatric VTE rule"
+          "text": "Adult NVAF dose-reduction criteria, age, weight, and serum creatinine, are the pediatric VTE rule"
         },
         {
           "id": "c",
-          "text": "Doubling the adult dose is appropriate because children clear drugs faster in every case"
+          "text": "Doubling the adult dose is appropriate because children clear every anticoagulant faster"
         },
         {
           "id": "d",
-          "text": "Aspirin replaces anticoagulation for pediatric VTE because injections are inconvenient"
+          "text": "Aspirin replaces anticoagulation for pediatric VTE because injections are inconvenient for a child"
         }
       ],
       "correctId": "a",
@@ -3176,11 +3176,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "BRIDGE requires a heparin bridge for every dental extraction in AF"
+          "text": "BRIDGE requires a heparin bridge for every dental extraction in a patient with AF"
         },
         {
           "id": "b",
-          "text": "Many minor dental procedures proceed without stopping warfarin when local hemostasis is available, and routine bridging is not the plan"
+          "text": "Minor dental work can stay on warfarin with local hemostasis, without routine bridging"
         },
         {
           "id": "c",
@@ -3188,7 +3188,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Warfarin is stopped for 7 days and a DOAC is substituted for the dental visit only"
+          "text": "Warfarin is stopped for 7 days and a DOAC is substituted for that one dental visit only"
         }
       ],
       "correctId": "b",
@@ -3216,19 +3216,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Only the procedure's convenience, because thrombotic risk is the same for both patients"
+          "text": "Only the procedure's convenience, because thrombotic risk is the same for both of these patients"
         },
         {
           "id": "b",
-          "text": "Only the patient's preference for injections, because bleed risk of the bridge can be ignored"
+          "text": "Only the patient's preference for injections, because the bleed risk of the bridge itself can be ignored"
         },
         {
           "id": "c",
-          "text": "Thrombotic risk of the hold, bleed risk of the procedure, and bleed risk of the bridge itself, which differ for these two patients"
+          "text": "Thrombotic risk of the hold, bleed risk of the procedure, and bleed risk of the bridge"
         },
         {
           "id": "d",
-          "text": "A normal hemoglobin, which permits bridging for every warfarin interruption"
+          "text": "A normal hemoglobin, which permits a heparin bridge for every warfarin interruption"
         }
       ],
       "correctId": "c",
@@ -3266,11 +3266,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Whenever a DOAC dose is being chosen, because chromogenic factor X sets apixaban milligrams"
+          "text": "Whenever a DOAC dose is being chosen, because chromogenic factor X sets the apixaban milligrams"
         },
         {
           "id": "b",
-          "text": "Only during heparin therapy, because the assay is an anti-Xa test for enoxaparin"
+          "text": "Only during heparin therapy, because the assay is an anti-Xa test calibrated for enoxaparin"
         },
         {
           "id": "c",
@@ -3278,7 +3278,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "When the INR is unreliable because of a lupus anticoagulant, so factor X activity can reflect the warfarin effect"
+          "text": "When a lupus anticoagulant makes the INR unreliable, factor X activity can reflect warfarin"
         }
       ],
       "correctId": "d",
@@ -3312,19 +3312,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Do not base today's warfarin change on the unchecked fingerstick; the venous result that fits the trend is the one to use"
+          "text": "Do not dose from the unchecked fingerstick; use the venous INR that fits the recent trend"
         },
         {
           "id": "b",
-          "text": "The higher fingerstick is always right, because capillary blood is more sensitive than plasma"
+          "text": "The higher fingerstick is always right, because capillary blood is more sensitive than venous plasma"
         },
         {
           "id": "c",
-          "text": "Average the two INRs and give vitamin K for an INR of about 3.7"
+          "text": "Average the two INRs and give vitamin K for a blended INR of about 3.7 with no bleeding"
         },
         {
           "id": "d",
-          "text": "A skipped quality control makes the venous laboratory INR invalid as well"
+          "text": "A skipped quality control makes the same-day venous laboratory INR invalid as well"
         }
       ],
       "correctId": "a",
@@ -3459,19 +3459,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The pharmacy phone number alone, without the drug, the indication, or the clearance"
+          "text": "The pharmacy phone number alone, without the drug, the indication, or the creatinine clearance"
         },
         {
           "id": "b",
-          "text": "A statement that all anticoagulants are held on arrival at every nursing facility"
+          "text": "A statement that all anticoagulants are held on arrival at every skilled-nursing facility"
         },
         {
           "id": "c",
-          "text": "The patient's preferred tablet color, which replaces the dose and the indication"
+          "text": "The patient's preferred tablet color, which replaces both the dose and the indication"
         },
         {
           "id": "d",
-          "text": "Drug, indication, start date, last doses, clearance, the hemoglobin concern, and who owns the next decision"
+          "text": "Drug, indication, last doses, clearance, the hemoglobin concern, and who decides next"
         }
       ],
       "correctId": "d",
@@ -3667,19 +3667,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "COBRRA proved rivaroxaban prevents more recurrent VTE, so the bleed history is set aside"
+          "text": "COBRRA proved rivaroxaban prevents more recurrent VTE, so the old bleed history is set aside now"
         },
         {
           "id": "b",
-          "text": "COBRRA used placebo, so it cannot say anything about two active DOACs"
+          "text": "COBRRA used a placebo comparator, so it cannot say anything about two active DOACs"
         },
         {
           "id": "c",
-          "text": "COBRRA requires the 2.5 mg rivaroxaban dose for acute PE"
+          "text": "COBRRA requires the COMPASS 2.5 mg rivaroxaban dose for every acute PE"
         },
         {
           "id": "d",
-          "text": "Lower clinically relevant bleeding with apixaban, and similar recurrent VTE, can favor apixaban when both regimens fit"
+          "text": "Less clinically relevant bleeding with apixaban, and similar recurrent VTE, can favor apixaban"
         }
       ],
       "correctId": "d",
@@ -3712,19 +3712,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Do not copy the AF no-bridge default onto a mechanical mitral valve; plan the hold with the valve team and a bridge protocol"
+          "text": "Do not copy the AF no-bridge default onto a mechanical mitral valve; plan the hold with the valve team"
         },
         {
           "id": "b",
-          "text": "BRIDGE enrolled this valve, so skipping heparin is the proven mitral strategy"
+          "text": "BRIDGE enrolled this mechanical valve, so skipping heparin is the proven mitral strategy"
         },
         {
           "id": "c",
-          "text": "Stop warfarin permanently and start apixaban the morning of surgery"
+          "text": "Stop warfarin permanently and start apixaban on the morning of the hernia repair"
         },
         {
           "id": "d",
-          "text": "Continue warfarin through open hernia repair because no mechanical valve is ever interrupted"
+          "text": "Continue warfarin straight through open hernia repair because no mechanical valve is ever interrupted now"
         }
       ],
       "correctId": "a",
@@ -3766,15 +3766,15 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Whether the event was truly unprovoked, current bleeding risk, adherence, and kidney function, before an extension is chosen"
+          "text": "Confirm it was unprovoked, and review bleeding risk, adherence, and kidney function before extending"
         },
         {
           "id": "c",
-          "text": "A mandatory inferior vena cava filter, which replaces the extension decision"
+          "text": "A mandatory inferior vena cava filter, which replaces the whole extension decision"
         },
         {
           "id": "d",
-          "text": "Restarting the acute 7-day apixaban lead-in as the definition of extension"
+          "text": "Restarting the acute 7-day apixaban lead-in, which is what extension means"
         }
       ],
       "correctId": "b",
@@ -3811,11 +3811,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Cockcroft-Gault clearance is now about 39 mL/min, and the AF label uses 15 mg daily with the evening meal in that range"
+          "text": "Clearance is now about 39 mL/min, and the AF label uses 15 mg daily with the evening meal in that range"
         },
         {
           "id": "d",
-          "text": "Clearance above 30 mL/min means the COMPASS 2.5 mg dose replaces AF treatment"
+          "text": "Clearance above 30 mL/min means the COMPASS 2.5 mg dose replaces full AF treatment"
         }
       ],
       "correctId": "c",
@@ -3848,7 +3848,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Stable CAD with no AF and no VTE, which is the population COMPASS studied"
+          "text": "Stable CAD with no AF and no VTE, which is the population the COMPASS regimen studied"
         },
         {
           "id": "b",
@@ -3856,11 +3856,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Aspirin monotherapy in someone who declines the rivaroxaban add-on after a risks talk"
+          "text": "Aspirin monotherapy in someone who declines the rivaroxaban add-on after a risks discussion"
         },
         {
           "id": "d",
-          "text": "AF stroke prevention and acute DVT treatment, both of which need full anticoagulation rather than 2.5 mg"
+          "text": "AF stroke prevention and acute DVT treatment, which need full anticoagulation, not 2.5 mg"
         }
       ],
       "correctId": "d",
@@ -3909,19 +3909,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Tell him twice daily is 'basically once daily' so he can take both tablets at breakfast"
+          "text": "Tell him twice daily is 'basically once daily' so he can take both tablets together at breakfast"
         },
         {
           "id": "b",
-          "text": "Tie the two doses to two daily events he already never skips, and check with teach-back which events he chose"
+          "text": "Tie each dose to a daily event he never skips, and use teach-back to check which two events he named"
         },
         {
           "id": "c",
-          "text": "Switch the prescription to every other day so the bottle lasts longer and adherence improves"
+          "text": "Switch the prescription to every other day so the bottle lasts longer and adherence looks better"
         },
         {
           "id": "d",
-          "text": "Rely on a single sentence in the visit, with no reminder and no check that he can state both times"
+          "text": "Rely on one sentence in the visit, with no reminder and no check that he can state both dose times now"
         }
       ],
       "correctId": "b",
@@ -3950,19 +3950,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Speak faster and add a second jargon sheet so more information is delivered"
+          "text": "Speak faster and add a second jargon sheet so more information is delivered in the same visit"
         },
         {
           "id": "b",
-          "text": "Ask 'do you understand?' and accept a nod as proof"
+          "text": "Ask 'do you understand?' and accept a nod as proof that the warfarin plan is clear"
         },
         {
           "id": "c",
-          "text": "Use short words, a specific tablet plan, and teach-back of what to do if he misses a dose or sees blood"
+          "text": "Short words, a tablet plan, and teach-back of a missed dose and of bleeding that needs a call"
         },
         {
           "id": "d",
-          "text": "Have him sign the long summary, which documents understanding even if he cannot explain it"
+          "text": "Have him sign the long summary, which documents understanding even if he cannot explain the plan"
         }
       ],
       "correctId": "c",
@@ -4025,7 +4025,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "A paper cut is urgent, while black stools can wait because they are expected on a DOAC"
+          "text": "A paper cut is the urgent finding, while black stools can wait because they are expected on a DOAC"
         },
         {
           "id": "c",
@@ -4033,7 +4033,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "No bleeding symptom is urgent unless the INR is known to be above 4"
+          "text": "No bleeding symptom is urgent unless an INR is already known to be above 4"
         }
       ],
       "correctId": "a",
@@ -4072,7 +4072,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The single word 'agreeable,' because shared decision-making is a mood, not a note"
+          "text": "The single word 'agreeable,' because shared decision-making is a mood, not a clinical note"
         },
         {
           "id": "b",
@@ -4080,11 +4080,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "The drug name only, because the conversation cannot be documented without a recording"
+          "text": "The drug name only, because the conversation cannot be documented without an audio recording"
         },
         {
           "id": "d",
-          "text": "A statement that aspirin was selected, which does not match the visit"
+          "text": "A statement that aspirin was selected, which does not match the apixaban choice from the visit"
         }
       ],
       "correctId": "b",
@@ -4198,19 +4198,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Ketoconazole induces apixaban clearance, so the dose is doubled"
+          "text": "Ketoconazole induces apixaban clearance, so the 5 mg dose is doubled while the azole is on board"
         },
         {
           "id": "b",
-          "text": "Azole antifungals have no effect on P-glycoprotein or CYP3A4"
+          "text": "Azole antifungals have no effect on P-glycoprotein or on CYP3A4, so the dose is unchanged"
         },
         {
           "id": "c",
-          "text": "Ketoconazole is a strong combined inhibitor, and the label reduces a 5 mg apixaban dose by half or avoids the drug if the dose is already 2.5 mg"
+          "text": "Ketoconazole is a strong combined inhibitor; the label halves 5 mg and avoids an existing 2.5 mg dose"
         },
         {
           "id": "d",
-          "text": "The fix is to add rivaroxaban 20 mg, because two factor Xa inhibitors cancel an azole"
+          "text": "The fix is to add rivaroxaban 20 mg, because two factor Xa inhibitors cancel an azole interaction"
         }
       ],
       "correctId": "c",
@@ -4252,15 +4252,15 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Warfarin raises vitamin K recycling, which is why the INR falls after the first dose"
+          "text": "Warfarin raises vitamin K recycling, which is why the INR falls after the very first dose"
         },
         {
           "id": "c",
-          "text": "Warfarin blocks platelet P2Y12 and has no effect on clotting-factor synthesis"
+          "text": "Warfarin blocks the platelet P2Y12 receptor and has no effect on clotting-factor synthesis now"
         },
         {
           "id": "d",
-          "text": "Warfarin inhibits vitamin K epoxide reductase, so new functional factors II, VII, IX, and X cannot be made"
+          "text": "Warfarin blocks vitamin K epoxide reductase, so new factors II, VII, IX, and X are not made"
         }
       ],
       "correctId": "d",
@@ -4282,15 +4282,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Unfractionated heparin's effect is variable and short-lived, so a protocolized clotting time is used to adjust the infusion"
+          "text": "Heparin's effect is variable and short, so a protocolized clotting time adjusts the infusion"
         },
         {
           "id": "b",
-          "text": "Apixaban's effect is adjusted to the same clotting time every 6 hours"
+          "text": "Apixaban is adjusted to that same clotting time every 6 hours, just like the heparin infusion"
         },
         {
           "id": "c",
-          "text": "Heparin has a 3-day half-life, so monitoring is done once a month like warfarin"
+          "text": "Heparin has a 3-day half-life, so the infusion is monitored once a month, the way warfarin is"
         },
         {
           "id": "d",
@@ -4317,19 +4317,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Fondaparinux is an oral direct thrombin inhibitor"
+          "text": "Fondaparinux is an oral direct thrombin inhibitor, in the same class as dabigatran"
         },
         {
           "id": "b",
-          "text": "Fondaparinux is a parenteral pentasaccharide that inhibits factor Xa through antithrombin, not a direct oral inhibitor, and it has no specific antidote"
+          "text": "A parenteral pentasaccharide: it inhibits factor Xa through antithrombin and has no specific antidote"
         },
         {
           "id": "c",
-          "text": "Fondaparinux is reversed completely by protamine, like a full heparin neutralization"
+          "text": "Fondaparinux is reversed completely by protamine, in the same way a full heparin dose is neutralized"
         },
         {
           "id": "d",
-          "text": "Fondaparinux blocks platelets and is monitored with the INR"
+          "text": "Fondaparinux blocks platelets and is monitored and dose-adjusted with the INR"
         }
       ],
       "correctId": "b",
@@ -4351,19 +4351,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The capsule contains active dabigatran, and opening it does not change absorption"
+          "text": "The capsule already contains active dabigatran, and opening it does not change absorption"
         },
         {
           "id": "b",
-          "text": "The drug is activated by CYP3A4, so ketoconazole is required for any effect"
+          "text": "The drug is activated by CYP3A4, so systemic ketoconazole is required before any effect appears"
         },
         {
           "id": "c",
-          "text": "The etexilate is a prodrug that becomes active dabigatran after absorption, and routine opening of the capsule is not the labeled administration"
+          "text": "Etexilate is a prodrug that becomes dabigatran after absorption; capsules stay closed"
         },
         {
           "id": "d",
-          "text": "The prodrug blocks platelets directly and never becomes a thrombin inhibitor"
+          "text": "The prodrug blocks platelets directly and never becomes a thrombin inhibitor at all"
         }
       ],
       "correctId": "c",
@@ -4391,19 +4391,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Both drugs require a 7-day 10 mg twice-daily lead-in"
+          "text": "Both drugs require the same 7-day lead-in of 10 mg twice daily before any maintenance dose"
         },
         {
           "id": "b",
-          "text": "Edoxaban is oral-only from the first hour, and rivaroxaban requires 5 days of heparin"
+          "text": "Edoxaban is oral-only from the first hour, and rivaroxaban is the one that requires 5 days of heparin"
         },
         {
           "id": "c",
-          "text": "Both require an INR of 2 before the first tablet"
+          "text": "Both require an INR of at least 2 before the first tablet of either drug is given"
         },
         {
           "id": "d",
-          "text": "Edoxaban in Hokusai-VTE followed at least 5 days of parenteral anticoagulation; rivaroxaban in EINSTEIN did not"
+          "text": "Edoxaban in Hokusai-VTE followed at least 5 days of heparin; rivaroxaban in EINSTEIN did not"
         }
       ],
       "correctId": "d",
@@ -4431,19 +4431,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Ibuprofen is a pharmacodynamic bleeding risk; ketoconazole is a pharmacokinetic exposure increase"
+          "text": "Ibuprofen is a pharmacodynamic bleeding risk; ketoconazole is a pharmacokinetic rise in exposure"
         },
         {
           "id": "b",
-          "text": "Both drugs raise apixaban AUC by the same strong-inhibitor mechanism"
+          "text": "Both drugs raise apixaban exposure by the same strong CYP3A4 and P-glycoprotein mechanism"
         },
         {
           "id": "c",
-          "text": "Ketoconazole is only a platelet problem, and ibuprofen is the strong CYP3A4 inhibitor"
+          "text": "Ketoconazole is only a platelet problem, and ibuprofen is the strong CYP3A4 inhibitor of the pair"
         },
         {
           "id": "d",
-          "text": "Neither drug matters unless the INR exceeds 3"
+          "text": "Neither added drug matters unless the INR on apixaban has already exceeded 3"
         }
       ],
       "correctId": "a",
@@ -4477,19 +4477,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Protamine fully reverses all three, including apixaban"
+          "text": "Protamine fully reverses all three drugs, including the apixaban bleed"
         },
         {
           "id": "b",
-          "text": "Protamine neutralizes heparin, only partly reverses LMWH anti-Xa activity, and does not reverse a DOAC"
+          "text": "Protamine neutralizes heparin, only partly reverses LMWH, and does not reverse a DOAC"
         },
         {
           "id": "c",
-          "text": "Protamine reverses apixaban only, and has no effect on heparin"
+          "text": "Protamine reverses apixaban only, and it has no neutralizing effect on heparin in clinic"
         },
         {
           "id": "d",
-          "text": "Protamine is vitamin K and therefore reverses warfarin, not heparin"
+          "text": "Protamine is vitamin K and therefore reverses warfarin rather than heparin"
         }
       ],
       "correctId": "b",
@@ -4517,15 +4517,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Any single criterion, including age alone, selects 2.5 mg"
+          "text": "Any single labeled criterion, including age alone, is enough to select 2.5 mg twice daily"
         },
         {
           "id": "b",
-          "text": "Creatinine clearance below 50 mL/min is itself the apixaban reduction rule"
+          "text": "Creatinine clearance below 50 mL/min is itself the apixaban AF reduction rule"
         },
         {
           "id": "c",
-          "text": "She has only one of the three criteria, so the AF dose stays 5 mg twice daily; 2.5 mg is not an empiric 'elderly' dose"
+          "text": "Only one of three criteria is met, so the AF dose stays 5 mg, not empiric 2.5 mg"
         },
         {
           "id": "d",
@@ -4562,7 +4562,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A normal INR clears dabigatran, so surgery proceeds as if no anticoagulant was taken"
+          "text": "A normal INR clears dabigatran, so surgery proceeds as if no anticoagulant dose was taken"
         },
         {
           "id": "b",
@@ -4570,11 +4570,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "A prolonged activated partial thromboplastin time gives a precise dabigatran concentration in ng/mL"
+          "text": "A prolonged activated partial thromboplastin time is a precise dabigatran concentration in ng/mL"
         },
         {
           "id": "d",
-          "text": "A normal INR does not clear dabigatran; the thrombin time is very sensitive, and a level must not delay resuscitation or reversal if bleeding is life-threatening"
+          "text": "A normal INR does not clear dabigatran, and a level must not delay reversal of major bleeding"
         }
       ],
       "correctId": "d",
@@ -4613,19 +4613,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Clearance is now about 29 mL/min, so the labeled treatment adjustment is 1 mg/kg once daily rather than every 12 hours"
+          "text": "Clearance is about 29 mL/min, so the labeled treatment dose is 1 mg/kg once daily"
         },
         {
           "id": "b",
-          "text": "Enoxaparin is entirely hepatic, so the old twice-daily order is continued at any creatinine"
+          "text": "Enoxaparin is cleared entirely by the liver, so the old twice-daily order continues at any creatinine"
         },
         {
           "id": "c",
-          "text": "Clearance below 30 mL/min means the dose is doubled to overcome uremia"
+          "text": "Clearance below 30 mL/min means the milligram dose is doubled to overcome uremia"
         },
         {
           "id": "d",
-          "text": "The adjustment is an INR target of 2 to 3, not a change in the injection interval"
+          "text": "The renal adjustment is an INR target of 2 to 3, not a change in the injection interval"
         }
       ],
       "correctId": "a",
@@ -4649,19 +4649,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "It inhibits CYP3A4 and is managed exactly like a ketoconazole dose reduction"
+          "text": "It inhibits CYP3A4 and is managed with the same dose cut used for ketoconazole"
         },
         {
           "id": "b",
-          "text": "It induces CYP3A4 and P-glycoprotein, and the apixaban label groups it with inducers to avoid"
+          "text": "It induces CYP3A4 and P-glycoprotein, and the apixaban label says to avoid that inducer"
         },
         {
           "id": "c",
-          "text": "It affects only warfarin, so a DOAC chart needs no herb section"
+          "text": "It affects only warfarin, so a DOAC medication list needs no herbal section"
         },
         {
           "id": "d",
-          "text": "It replaces anticoagulation, so apixaban is stopped in favor of the herb"
+          "text": "It replaces anticoagulation, so apixaban is stopped in favor of the herbal product in clinic"
         }
       ],
       "correctId": "b",
@@ -4689,19 +4689,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Choose the highest-paying code available, even if it describes a different disease"
+          "text": "Choose the highest-paying code available, even when it names a different disease than the one treated"
         },
         {
           "id": "b",
-          "text": "Leave the diagnosis blank so coding cannot affect the clinical record"
+          "text": "Leave the diagnosis blank so that coding cannot affect the clinical anticoagulation record"
         },
         {
           "id": "c",
-          "text": "Code the anticoagulant name as the disease and omit the indication"
+          "text": "Code the anticoagulant's name as the disease and omit the indication that was actually treated"
         },
         {
           "id": "d",
-          "text": "Code the condition that was actually assessed and treated, so the record, the indication, and the bill describe the same event"
+          "text": "Code the condition that was treated, so the record and the bill describe the same event"
         }
       ],
       "correctId": "d",
@@ -4723,11 +4723,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Time in therapeutic range, follow-up of extreme INRs, time to act on a critical result, and a bleeding-event review"
+          "text": "Time in range, extreme-INR follow-up, time to act on a critical result, and bleeding review"
         },
         {
           "id": "b",
-          "text": "Only the number of tablets dispensed, with no INR data"
+          "text": "Only the number of warfarin tablets dispensed, with no INR data on the dashboard at all today"
         },
         {
           "id": "c",
@@ -4735,7 +4735,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "The count of patients switched off warfarin, used as the sole safety metric"
+          "text": "The count of patients switched off warfarin, used as the clinic's only safety metric"
         }
       ],
       "correctId": "a",
@@ -4792,19 +4792,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Skip two days, then take 40 mg, because time zones require a loading dose"
+          "text": "Skip two doses, then take 40 mg, because a time-zone change requires an AF loading dose"
         },
         {
           "id": "b",
-          "text": "Switch the 20 mg tablet to an empty stomach on travel days"
+          "text": "Switch the 20 mg tablet to an empty stomach for every travel day"
         },
         {
           "id": "c",
-          "text": "Replace the AF dose with 2.5 mg twice daily during the flight"
+          "text": "Replace the AF dose with rivaroxaban 2.5 mg twice daily for the duration of the flight"
         },
         {
           "id": "d",
-          "text": "Keep roughly a 24-hour interval, take the 20 mg dose with an evening meal on local time, and do not double"
+          "text": "Keep about a 24-hour interval, take 20 mg with an evening meal on local time, and do not double"
         }
       ],
       "correctId": "d",
@@ -4836,15 +4836,15 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Take 10 mg at the new breakfast and skip the next two doses"
+          "text": "Take 10 mg at the new breakfast and then skip the next two scheduled doses"
         },
         {
           "id": "c",
-          "text": "Stop apixaban for the travel week because time zones inactivate factor Xa inhibitors"
+          "text": "Stop apixaban for the whole travel week because time zones inactivate factor Xa inhibitors"
         },
         {
           "id": "d",
-          "text": "Switch to a morning INR check to time the travel doses"
+          "text": "Switch to a morning INR check to decide the timing of the travel doses"
         }
       ],
       "correctId": "a",
@@ -4872,19 +4872,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Leave the warfarin at home so vacation bleeding risk is zero"
+          "text": "Leave the warfarin at home so that vacation bleeding risk falls to zero"
         },
         {
           "id": "b",
-          "text": "Pack enough tablets, know where an INR can be drawn, and know where to go for bleeding"
+          "text": "Pack enough tablets, know where an INR can be drawn, and know where to go if bleeding starts"
         },
         {
           "id": "c",
-          "text": "Double the dose the day of departure so the trip needs no monitoring"
+          "text": "Double the dose on the day of departure so the two-week trip needs no INR monitoring in clinic"
         },
         {
           "id": "d",
-          "text": "Stop all plans if the destination is more than one time zone away"
+          "text": "Cancel the trip if the destination is more than one time zone from home"
         }
       ],
       "correctId": "b",
@@ -4906,19 +4906,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A binge is protective, because alcohol always lowers the INR into a safer range"
+          "text": "A binge is protective, because alcohol always lowers a warfarin INR into a safer range"
         },
         {
           "id": "b",
-          "text": "He should skip warfarin that night and double it the next day to compensate for the alcohol"
+          "text": "Skip warfarin that night and double it the next day to compensate for the wedding alcohol"
         },
         {
           "id": "c",
-          "text": "A binge can increase bleeding and destabilize the INR, so this is not a safe plan on an in-range historical INR"
+          "text": "A binge can increase bleeding and move the INR, so last month's in-range value does not make it safe"
         },
         {
           "id": "d",
-          "text": "Alcohol interacts only with DOACs, so warfarin patients can binge without extra bleeding risk"
+          "text": "Alcohol interacts only with DOACs, so a warfarin patient can binge without added bleeding risk"
         }
       ],
       "correctId": "c",
@@ -4941,19 +4941,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Counsel the nurse for delaying discharge, and leave the after-visit summary unchanged"
+          "text": "Counsel the nurse for delaying discharge, and leave the after-visit summary exactly as it was"
         },
         {
           "id": "b",
-          "text": "Add a warning only to the 2.5 mg product, because food matters solely for the COMPASS dose"
+          "text": "Add the food warning only to the 2.5 mg product, because food matters solely for the COMPASS dose"
         },
         {
           "id": "c",
-          "text": "Put the food rule into the discharge order set and the teach-back script for 15 mg and 20 mg tablets, and review whether the near-miss repeats"
+          "text": "Put the 15 mg and 20 mg food rule in the discharge set and the teach-back, then watch for repeat misses"
         },
         {
           "id": "d",
-          "text": "Remove food counseling, because a caught near-miss means the system already works"
+          "text": "Remove food counseling, because one caught near-miss means the discharge process already works"
         }
       ],
       "correctId": "c",
@@ -4976,19 +4976,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Leave the Andexxa order set active so prescribers can see historical options"
+          "text": "Leave the Andexxa order set active so prescribers can still see the historical option"
         },
         {
           "id": "b",
-          "text": "Approve a DOAC dose set that omits kidney function because the committee prefers short forms"
+          "text": "Approve a DOAC order set that omits kidney function because the committee prefers shorter forms"
         },
         {
           "id": "c",
-          "text": "Adopt a single dose for mechanical valves and pregnancy to shorten the monograph"
+          "text": "Adopt one dose for mechanical valves and for pregnancy in order to shorten the monograph"
         },
         {
           "id": "d",
-          "text": "Retire the withdrawn-product order, and require indication, dose, and a reversal path that matches current United States teaching"
+          "text": "Retire the withdrawn order, and require an indication, a dose, and a current reversal path"
         }
       ],
       "correctId": "d",
@@ -5017,19 +5017,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Documented training and a direct observation of the INR test and the critical-result action before independent practice"
+          "text": "Training plus direct observation of the test and the critical-result action before independent practice"
         },
         {
           "id": "b",
-          "text": "A self-attestation email, with no observation, accepted as full competence"
+          "text": "A self-attestation email, with no one watching the task, accepted as full competence"
         },
         {
           "id": "c",
-          "text": "Competence assumed from a nursing license, with no anticoagulation-specific check"
+          "text": "Competence assumed from a general nursing license, with no anticoagulation-specific check"
         },
         {
           "id": "d",
-          "text": "Observation only after the first dosing error, used as the training program"
+          "text": "Observation scheduled only after the first dosing error, and that error is the training program in clinic"
         }
       ],
       "correctId": "a",
@@ -5051,19 +5051,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Add a tooltip that says the drug is preferred, so the old order looks current"
+          "text": "Add a tooltip that says Andexxa is preferred, so the old order looks current"
         },
         {
           "id": "b",
-          "text": "Remove or hard-stop the order, point prescribers to the institutional 4F-PCC pathway, and audit for any remaining use"
+          "text": "Hard-stop the order, point to the institutional 4F-PCC pathway, and audit any remaining use"
         },
         {
           "id": "c",
-          "text": "Keep the order for clinicians who trained before 2025, as a grandfather exception"
+          "text": "Keep the order for clinicians who trained before 2025, as a standing grandfather exception now"
         },
         {
           "id": "d",
-          "text": "Replace the order with idarucizumab for every factor Xa bleed"
+          "text": "Replace the Andexxa order with idarucizumab for every factor Xa inhibitor bleed"
         }
       ],
       "correctId": "b",
@@ -5111,11 +5111,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Patient 2 may take a DOAC, and patient 1 needs the GALILEO rivaroxaban strategy for routine leaflet protection"
+          "text": "The mechanical-valve patient may take a DOAC, and the TAVI patient needs the GALILEO rivaroxaban strategy"
         },
         {
           "id": "c",
-          "text": "A mechanical mitral valve remains a VKA case, and routine DOAC use after TAVI without an OAC indication is not supported by GALILEO"
+          "text": "A mechanical mitral valve stays a VKA case, and GALILEO did not support a routine post-TAVI DOAC"
         },
         {
           "id": "d",
@@ -5158,19 +5158,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "GALILEO stopped a rivaroxaban-based strategy early for harm versus antiplatelet therapy in this no-OAC-indication population"
+          "text": "GALILEO stopped rivaroxaban early for harm versus antiplatelets when no other OAC indication existed"
         },
         {
           "id": "b",
-          "text": "GALILEO established rivaroxaban plus aspirin as the default after every TAVI, including mechanical mitral valves"
+          "text": "GALILEO made rivaroxaban plus aspirin the default after every TAVI, including mechanical mitral valves"
         },
         {
           "id": "c",
-          "text": "GALILEO enrolled only mechanical valves, so a tissue valve should use dabigatran"
+          "text": "GALILEO enrolled only mechanical valves, so a tissue valve in sinus rhythm should use dabigatran"
         },
         {
           "id": "d",
-          "text": "Leaflet concern means the acute VTE lead-in (15 mg twice daily for 21 days) is started after every implant"
+          "text": "Leaflet concern means the acute VTE lead-in, 15 mg twice daily for 21 days, starts after every implant"
         }
       ],
       "correctId": "a",
@@ -5219,19 +5219,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "As required, because BRIDGE showed bridging cuts major bleeding in half"
+          "text": "As required, because BRIDGE showed that bridging cuts major bleeding roughly in half in clinic"
         },
         {
           "id": "b",
-          "text": "As unsupported for this phenotype: thromboembolism was similar and major bleeding was higher with bridging"
+          "text": "As unsupported here: thromboembolism was similar and major bleeding was higher with bridging"
         },
         {
           "id": "c",
-          "text": "As mandatory only because colonoscopy was an exclusion from BRIDGE"
+          "text": "As mandatory, because colonoscopy of any kind was an exclusion from the BRIDGE trial"
         },
         {
           "id": "d",
-          "text": "As a reason to switch her to a DOAC the night before the procedure"
+          "text": "As a reason to switch her to a DOAC for the single night before the procedure"
         }
       ],
       "correctId": "b",
@@ -5321,19 +5321,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Agree, because BRIDGE showed shots prevent bleeding"
+          "text": "Agree with him, because BRIDGE showed that heparin shots prevent bleeding during a hold"
         },
         {
           "id": "b",
-          "text": "Tell him shots are required only if the colonoscopy is diagnostic and not if a polyp is removed"
+          "text": "Tell him shots are required only for a diagnostic colonoscopy and not if a polyp might be removed"
         },
         {
           "id": "c",
-          "text": "Promise that heparin removes all stroke risk during the hold, with no bleeding cost"
+          "text": "Promise that heparin removes all stroke risk during the hold and adds no bleeding of its own"
         },
         {
           "id": "d",
-          "text": "Explain that in BRIDGE, forgoing a heparin bridge did not increase arterial thromboembolism and caused less major bleeding"
+          "text": "In BRIDGE, skipping a heparin bridge did not raise arterial events and caused less major bleeding"
         }
       ],
       "correctId": "d",
@@ -5371,15 +5371,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Her neighbor's AF indication is not her indication, and GALILEO did not support a rivaroxaban strategy after TAVI when no OAC indication exists"
+          "text": "The neighbor's AF dose is not hers, and GALILEO did not support that post-TAVI plan"
         },
         {
           "id": "b",
-          "text": "Any valve procedure means a lifelong DOAC, so the neighbor's dose is copied"
+          "text": "Any valve procedure means a lifelong DOAC, so the neighbor's AF dose is copied onto this TAVI"
         },
         {
           "id": "c",
-          "text": "TAVI in sinus rhythm is treated as a mechanical mitral valve with an INR target above 3.5"
+          "text": "TAVI in sinus rhythm is managed as a mechanical mitral valve, with an INR target above 3.5"
         },
         {
           "id": "d",
@@ -5421,19 +5421,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Apixaban's offset is as slow as warfarin's, so 5 days and a bridge are the pharmacokinetic minimum"
+          "text": "Apixaban's offset is as slow as warfarin's, so 5 days plus a heparin bridge is the pharmacokinetic minimum"
         },
         {
           "id": "b",
-          "text": "A DOAC hold always requires heparin because the oral drug has no offset until vitamin K is given"
+          "text": "A DOAC hold always needs heparin because the oral drug has no offset until vitamin K is given"
         },
         {
           "id": "c",
-          "text": "Apixaban's offset is on the order of hours to a short interruption, and PAUSE did not use heparin bridging for that hold"
+          "text": "Apixaban's offset is short, and PAUSE did not use a heparin bridge for this low-bleeding-risk hold"
         },
         {
           "id": "d",
-          "text": "Low-bleeding-risk procedures require a longer hold than high-bleeding-risk procedures"
+          "text": "Low-bleeding-risk procedures require a longer hold than high-bleeding-risk procedures do"
         }
       ],
       "correctId": "c",
@@ -5462,19 +5462,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The phrase 'hold blood thinners,' with no drug, no date, and no restart owner"
+          "text": "The phrase 'hold blood thinners,' with no drug name, no dates, and no restart owner in clinic"
         },
         {
           "id": "b",
-          "text": "A heparin-bridge order copied from a mechanical-valve protocol, unsigned"
+          "text": "A heparin-bridge order copied from a mechanical-valve protocol and left unsigned"
         },
         {
           "id": "c",
-          "text": "A note that names the drug, whether a hold is required, the stop and restart timing, and which clinician owns the restart"
+          "text": "Name the drug, whether a hold is required, the timing, and which clinician owns the restart"
         },
         {
           "id": "d",
-          "text": "A patient reminder to decide alone on the morning of the procedure"
+          "text": "A reminder that the patient should decide alone on the morning of the colonoscopy"
         }
       ],
       "correctId": "c",
@@ -5508,19 +5508,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The organizer is preferred, because dabigatran is more stable in a weekly box than in its bottle"
+          "text": "The weekly organizer is preferred, because dabigatran is more stable in a box than in its bottle"
         },
         {
           "id": "b",
-          "text": "Keep the capsules in the original bottle, protected from moisture, and do not decant them into an organizer"
+          "text": "Keep the capsules in the original bottle, and do not pour them into a weekly organizer"
         },
         {
           "id": "c",
-          "text": "Open each capsule and sprinkle it on food every morning to improve adherence"
+          "text": "Open each capsule and sprinkle the pellets on food every morning so the doses are easier to remember"
         },
         {
           "id": "d",
-          "text": "The moisture warning applies only to warfarin tablets, not to dabigatran"
+          "text": "The moisture warning applies only to warfarin tablets and not to dabigatran capsules"
         }
       ],
       "correctId": "b",
@@ -5589,19 +5589,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Agree, because a twice-daily drug is caught up by a double dose and a skipped next day"
+          "text": "Agree, because a twice-daily drug is caught up by taking 10 mg now and skipping tomorrow morning"
         },
         {
           "id": "b",
-          "text": "Tell him to take 10 mg now and 10 mg tomorrow night as a new schedule"
+          "text": "Tell him to take 10 mg now and another 10 mg tomorrow night as the new permanent schedule"
         },
         {
           "id": "c",
-          "text": "Stop apixaban until the next INR is below 1.0"
+          "text": "Stop apixaban until a measured INR is below 1.0, then restart the usual dose"
         },
         {
           "id": "d",
-          "text": "Take the usual 5 mg this evening, do not take 10 mg, and take tomorrow morning's dose as scheduled"
+          "text": "Take the usual 5 mg this evening, do not take 10 mg, and take tomorrow morning's dose on schedule"
         }
       ],
       "correctId": "d",
@@ -5629,15 +5629,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Do not double tonight; contact the clinic, and do not try to replace a warfarin miss with an extra tablet"
+          "text": "Do not double tonight; ask the clinic, and do not replace a missed warfarin tablet with an extra one"
         },
         {
           "id": "b",
-          "text": "Take two tonight and skip the next two nights, which keeps the weekly dose identical"
+          "text": "Take two tonight and skip the next two nights, which keeps the weekly milligram total identical in clinic"
         },
         {
           "id": "c",
-          "text": "Take vitamin K tonight so the missed tablet cannot cause a clot"
+          "text": "Take vitamin K tonight so the single missed tablet cannot cause a clot by morning"
         },
         {
           "id": "d",
@@ -5669,19 +5669,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The nod and the words 'blood thinner' document adequate understanding"
+          "text": "The nod plus the words 'blood thinner' are enough to document that he understands the plan"
         },
         {
           "id": "b",
-          "text": "Understanding is not yet adequate, and counseling continues until he can state the schedule, the food rule, and a bleeding trigger"
+          "text": "Not adequate until he can state the schedule, the food rule, and a bleeding trigger"
         },
         {
           "id": "c",
-          "text": "Inability to restate the plan means the drug is stopped and aspirin is substituted"
+          "text": "Failure to restate the plan means rivaroxaban is stopped and aspirin is substituted the same day"
         },
         {
           "id": "d",
-          "text": "Teach-back is only for warfarin, so a DOAC nod is enough"
+          "text": "Teach-back is only for warfarin, so a nod is enough documentation for any DOAC start"
         }
       ],
       "correctId": "b",
@@ -5711,19 +5711,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Praise the every-other-day plan, because a lower average dose is always safer and still protective"
+          "text": "Praise the every-other-day plan, because a lower average dose is always safer and still fully protective"
         },
         {
           "id": "b",
-          "text": "Tell them to take two days' tablets every Sunday to save the same number of tablets"
+          "text": "Tell them to take two days of tablets every Sunday so the same number of tablets is saved"
         },
         {
           "id": "c",
-          "text": "Explain that every-other-day use is not the regimen, and work on cost or assistance without changing the schedule on their own"
+          "text": "Every-other-day use is not the regimen; address the cost without the patient changing the schedule alone"
         },
         {
           "id": "d",
-          "text": "Switch them to aspirin on the off days, which AVERROES supports as an equivalent plan"
+          "text": "Switch the off days to aspirin, which AVERROES supports as an equivalent stroke-prevention plan"
         }
       ],
       "correctId": "c",
@@ -5757,19 +5757,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Publish the tile, because every anticoagulant has an INR range of 2 to 3"
+          "text": "Publish the tile, because every anticoagulant, including each DOAC, has an INR range of 2 to 3"
         },
         {
           "id": "b",
-          "text": "Set the national target at whatever percentage the vendor's default uses"
+          "text": "Set the national target at whatever percentage the dashboard vendor uses as its default"
         },
         {
           "id": "c",
-          "text": "Apply the tile to edoxaban only, because of the clearance ceiling above 95 mL/min"
+          "text": "Apply the tile only to edoxaban, because of the AF clearance ceiling above 95 mL/min"
         },
         {
           "id": "d",
-          "text": "Reject the tile: time in therapeutic range is a warfarin INR metric, and this service does not adopt an invented national DOAC percentage"
+          "text": "Reject it: time in therapeutic range is a warfarin metric, not a national DOAC percentage"
         }
       ],
       "correctId": "d",
@@ -5853,19 +5853,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A policy that Friday results are reviewed the following Tuesday"
+          "text": "A policy that Friday afternoon results are not reviewed until the following Tuesday"
         },
         {
           "id": "b",
-          "text": "A covered path that sees a critical INR the day it posts, with a clinician able to change the plan before the weekend"
+          "text": "A covered path so a critical INR is seen the day it posts, including before the weekend"
         },
         {
           "id": "c",
-          "text": "Automatic vitamin K for every Friday result above 2, sent by the laboratory without a clinician"
+          "text": "Automatic vitamin K for every Friday result above 2, released by the laboratory with no clinician"
         },
         {
           "id": "d",
-          "text": "Deletion of after-hours results so the inbox is empty on Monday"
+          "text": "Deletion of after-hours results so Monday's inbox does not contain a Friday INR"
         }
       ],
       "correctId": "b",
@@ -5893,19 +5893,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Dose from 5.1, because fingerstick results outrank plasma when they are higher"
+          "text": "Dose from the fingerstick of 5.1, because a higher meter result outranks venous plasma now"
         },
         {
           "id": "b",
-          "text": "Average the values and give vitamin K for an INR near 3.8"
+          "text": "Average 5.1 and 2.5 and give vitamin K for a blended INR near 3.8"
         },
         {
           "id": "c",
-          "text": "Do not use the meter result, document the failed control, and dose from the venous INR after confirming identity"
+          "text": "Do not use the unchecked meter; document the missed control and dose from the venous INR"
         },
         {
           "id": "d",
-          "text": "Report both numbers to the patient and ask the patient to pick a dose"
+          "text": "Report both INRs to the patient and ask the patient to choose today's warfarin dose"
         }
       ],
       "correctId": "c",
@@ -5928,19 +5928,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Leave both patterns, because any rivaroxaban strength treats any indication"
+          "text": "Leave both patterns, because any rivaroxaban strength treats AF and stable CAD equally well"
         },
         {
           "id": "b",
-          "text": "Move every patient to 20 mg, including those with stable CAD and no AF"
+          "text": "Move every patient to 20 mg daily, including those with stable CAD, no AF, and aspirin already on board"
         },
         {
           "id": "c",
-          "text": "Move every patient to 2.5 mg, including those with AF and a prior stroke"
+          "text": "Move every patient to 2.5 mg twice daily, including those with AF and a prior stroke"
         },
         {
           "id": "d",
-          "text": "Correct each pattern to the regimen that matches its real indication, and add an order-set check so the mismatch cannot recur quietly"
+          "text": "Correct each chart to the regimen for its indication, and block the swap in the order set"
         }
       ],
       "correctId": "d",
@@ -5979,19 +5979,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Training, a competency check, a result-reporting path, quality control, and a clinician who acts on the result"
+          "text": "Training, competency, a reporting path, quality control, and a clinician for each result before go-live"
         },
         {
           "id": "b",
-          "text": "Meter shipment alone, because the device manual is the program"
+          "text": "Meter shipment alone, because the device manual is the entire home-testing program"
         },
         {
           "id": "c",
-          "text": "A public announcement, which substitutes for competency and coverage"
+          "text": "A public announcement of the service, which substitutes for competency checks and for after-hours coverage"
         },
         {
           "id": "d",
-          "text": "Permission for patients to change doses freely once the meter arrives"
+          "text": "Permission for patients to change their own doses as soon as the meter arrives at the house"
         }
       ],
       "correctId": "a",
@@ -6020,19 +6020,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Only the brand name, with no indication and no dose"
+          "text": "Only the brand name, with no indication, no dose, and no review date"
         },
         {
           "id": "b",
-          "text": "The indication, the regimen, a renal or interaction check when relevant, and the next monitoring or review date"
+          "text": "Indication, regimen, a relevant renal or interaction check, and the next review date"
         },
         {
           "id": "c",
-          "text": "A statement that all DOACs are interchangeable without a reason"
+          "text": "A statement that all DOACs are interchangeable, with no reason recorded for the one in use"
         },
         {
           "id": "d",
-          "text": "The auditor's preferred drug, copied into every note"
+          "text": "The auditor's preferred drug, copied into every note regardless of the indication"
         }
       ],
       "correctId": "b",
@@ -6062,19 +6062,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Add clopidogrel, because a 3-year-old stent returns the patient to triple therapy"
+          "text": "Add clopidogrel now, because a stent placed 3 years ago returns the patient to triple therapy"
         },
         {
           "id": "b",
-          "text": "Stop the DOAC and continue aspirin, because stable CAD outranks AF"
+          "text": "Stop the DOAC and continue aspirin, because stable coronary disease outranks AF"
         },
         {
           "id": "c",
-          "text": "Increase to the acute VTE lead-in, because a remote stent is treated as new PE"
+          "text": "Increase to the acute VTE lead-in, because a remote stent is managed as a new PE"
         },
         {
           "id": "d",
-          "text": "Continue the OAC and stop the aspirin, which is the stable-disease direction of AFIRE and AQUATIC"
+          "text": "Continue the anticoagulant and stop aspirin, the stable-disease direction of AFIRE and AQUATIC"
         }
       ],
       "correctId": "d",
@@ -6113,19 +6113,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "On a P2Y12 background, apixaban bled less than a VKA; aspirin's bleeding increase in that subgroup was a nonsignificant trend; OAC alone was not tested"
+          "text": "Apixaban bled less than a VKA; aspirin's bleeding trend was not significant; OAC alone was not tested"
         },
         {
           "id": "b",
-          "text": "The subgroup proved dual therapy superior to OAC alone after medically managed ACS"
+          "text": "The medically managed subgroup proved that dual therapy is superior to anticoagulation alone after ACS"
         },
         {
           "id": "c",
-          "text": "Aspirin reduced ischemic events enough to offset bleeding in that subgroup"
+          "text": "Aspirin reduced ischemic events in that subgroup enough to offset the extra bleeding it caused"
         },
         {
           "id": "d",
-          "text": "Medically managed ACS forbids any antiplatelet drug alongside an OAC"
+          "text": "Medically managed ACS forbids any antiplatelet drug alongside an oral anticoagulant"
         }
       ],
       "correctId": "a",
@@ -6158,19 +6158,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Aspirin reduced the primary ischemic composite and reduced major bleeding"
+          "text": "Aspirin reduced the primary ischemic composite and also reduced major bleeding"
         },
         {
           "id": "b",
-          "text": "Adding aspirin raised the primary ischemic composite, major bleeding, and all-cause death, and the trial stopped early"
+          "text": "Adding aspirin raised ischemic events, bleeding, and death, and the trial stopped early"
         },
         {
           "id": "c",
-          "text": "AQUATIC tested acute PCI triple therapy in the first week after a stent"
+          "text": "AQUATIC was a trial of triple therapy in the first week after stent placement"
         },
         {
           "id": "d",
-          "text": "AQUATIC showed aspirin was identical to placebo on every endpoint"
+          "text": "AQUATIC showed aspirin and placebo were identical on every endpoint that was counted today"
         }
       ],
       "correctId": "b",
@@ -6198,19 +6198,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "OAC-ALONE met noninferiority and is the mortality proof, while AFIRE and AQUATIC were neutral"
+          "text": "OAC-ALONE met noninferiority and is the mortality proof, while AFIRE and AQUATIC were neutral trials"
         },
         {
           "id": "b",
-          "text": "All three trials were stopped because OAC alone increased death"
+          "text": "All three trials were stopped because oral anticoagulation alone increased death"
         },
         {
           "id": "c",
-          "text": "AFIRE and AQUATIC signal harm from added antiplatelet therapy, but OAC-ALONE was underpowered and did not prove a mortality reduction"
+          "text": "AFIRE and AQUATIC signal harm from an added antiplatelet; OAC-ALONE did not prove a mortality cut"
         },
         {
           "id": "d",
-          "text": "The three trials forbid any antiplatelet drug in the first month after PCI"
+          "text": "The three trials forbid any antiplatelet drug during the first month after PCI"
         }
       ],
       "correctId": "c",
@@ -6248,19 +6248,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Stop it this minute, with no note, because every aspirin tablet with a DOAC is an error"
+          "text": "Stop the aspirin this minute, with no note, because every aspirin tablet taken with a DOAC is an error now"
         },
         {
           "id": "b",
-          "text": "Continue aspirin for life, because a DOAC prescription is incomplete without an antiplatelet"
+          "text": "Continue aspirin for life, because a DOAC prescription is incomplete without an antiplatelet drug"
         },
         {
           "id": "c",
-          "text": "Double the DOAC on the day aspirin is stopped to replace the platelet effect"
+          "text": "Double the DOAC on the day aspirin is stopped, to replace the lost platelet effect"
         },
         {
           "id": "d",
-          "text": "The aspirin may be a legacy drug, but the stop is a reconciled decision, not an unsupervised change during the phone call"
+          "text": "Aspirin may be leftover, but stopping it is a reconciled decision, not an unsupervised phone-call change"
         }
       ],
       "correctId": "d",
@@ -6294,19 +6294,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Stop every antiplatelet in the health system, including the first week after a new stent"
+          "text": "Stop every antiplatelet in the health system, including during the first week after a new stent"
         },
         {
           "id": "b",
-          "text": "Ignore the combination, because aspirin does not affect bleeding on a DOAC"
+          "text": "Ignore DOAC-plus-aspirin combinations, because aspirin does not add bleeding on a DOAC"
         },
         {
           "id": "c",
-          "text": "A scheduled review that confirms there is no current aspirin indication, then a reconciled stop, tracked as a stewardship measure"
+          "text": "Review whether any aspirin indication remains, then a reconciled stop, tracked as stewardship"
         },
         {
           "id": "d",
-          "text": "Double the DOAC dose whenever aspirin is continued, as the safety compensation"
+          "text": "Double the DOAC whenever aspirin is continued, as the safety compensation for the combination"
         }
       ],
       "correctId": "c",
@@ -6379,7 +6379,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "Heparin-induced thrombocytopenia, because confusion plus a low platelet count defines that syndrome"
+          "text": "Heparin-induced thrombocytopenia, because confusion plus a low platelet count defines that syndrome in clinic"
         },
         {
           "id": "c",
@@ -6409,19 +6409,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Both conditions are clotting disorders, so a new DVT is expected in this petechial illness"
+          "text": "Both illnesses are clotting disorders, so a new DVT is expected with this petechial picture"
         },
         {
           "id": "b",
-          "text": "This pattern fits a bleeding platelet disorder, whereas heparin-induced thrombocytopenia is a clotting illness after heparin"
+          "text": "A bleeding platelet disorder, unlike heparin-induced thrombocytopenia after heparin"
         },
         {
           "id": "c",
-          "text": "Both begin 5 to 10 days after heparin, so the absent heparin history can be ignored"
+          "text": "Both conditions begin 5 to 10 days after heparin, so a missing heparin history can be ignored"
         },
         {
           "id": "d",
-          "text": "Both are treated by adding unfractionated heparin to raise the platelet count"
+          "text": "Both are treated by adding unfractionated heparin in order to raise the platelet count"
         }
       ],
       "correctId": "b",
@@ -6523,19 +6523,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "This is suspected lower-extremity DVT, so pretest probability then ultrasound or D-dimer is the diagnostic path"
+          "text": "Suspected leg DVT: pretest probability, then ultrasound or D-dimer, is the diagnostic path"
         },
         {
           "id": "b",
-          "text": "This is high-risk PE, so systemic thrombolysis comes before any leg imaging"
+          "text": "This is high-risk PE, so systemic thrombolysis comes before any imaging of the leg"
         },
         {
           "id": "c",
-          "text": "Travel plus a swollen calf is arterial acute limb ischemia and needs an emergency embolectomy"
+          "text": "Travel plus a swollen calf is acute arterial limb ischemia and needs an emergency embolectomy"
         },
         {
           "id": "d",
-          "text": "A normal oxygen saturation excludes DVT, so no diagnostic test is useful"
+          "text": "A normal oxygen saturation excludes DVT, so no further diagnostic test is useful"
         }
       ],
       "correctId": "a",
@@ -6604,15 +6604,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Reproducible calf pain on walking that resolves with rest, which is the definition of this emergency"
+          "text": "Reproducible calf pain on walking that resolves with rest, which is the definition of this pulseless foot"
         },
         {
           "id": "b",
-          "text": "Chronic PAD that is treated with the COMPASS regimen and does not need an urgent vascular assessment"
+          "text": "Chronic PAD treated with the COMPASS regimen, with no need for an urgent vascular assessment"
         },
         {
           "id": "c",
-          "text": "Acute limb ischemia from a cardioembolic occlusion, which is a vascular emergency rather than stable claudication"
+          "text": "Acute limb ischemia from cardioembolism, a vascular emergency rather than stable walking claudication"
         },
         {
           "id": "d",
@@ -6678,19 +6678,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Heart-failure illness, poor intake, and an interacting antibiotic can move the INR off the prior stable pattern"
+          "text": "Illness, poor intake, and the new antibiotic can move the INR off the old stable pattern"
         },
         {
           "id": "b",
-          "text": "Heart failure eliminates vitamin K stores permanently, so warfarin is stopped for good"
+          "text": "Heart failure permanently eliminates vitamin K stores, so warfarin is stopped for good"
         },
         {
           "id": "c",
-          "text": "An exacerbation converts AF to a mechanical-valve target and the INR goal becomes 4 to 5"
+          "text": "An exacerbation converts AF into a mechanical-valve indication and the INR goal becomes 4 to 5"
         },
         {
           "id": "d",
-          "text": "Poor intake lowers the INR by increasing dietary vitamin K, so the dose is automatically doubled"
+          "text": "Poor intake lowers the INR by increasing dietary vitamin K, so tonight's dose is doubled"
         }
       ],
       "correctId": "a",
@@ -6764,19 +6764,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Reproducible walking calf pain, so this is chronic claudication and can wait for a routine visit"
+          "text": "Reproducible walking calf pain, so this is chronic claudication and can wait for a routine clinic visit"
         },
         {
           "id": "b",
-          "text": "Pleuritic pain with calf swelling only, so the call is treated as low-risk DVT without chest concern"
+          "text": "Pleuritic pain with calf swelling only, so the call is low-risk DVT and the chest symptoms are ignored"
         },
         {
           "id": "c",
-          "text": "Rest ischemic symptoms in known CAD, which are assessed as possible ACS rather than as stable exertional disease"
+          "text": "Rest chest pressure with sweating in known CAD is assessed as possible ACS, not as stable exertional disease"
         },
         {
           "id": "d",
-          "text": "A completed stroke, because sweating and breathlessness are focal neurologic signs"
+          "text": "A completed stroke, because sweating and new breathlessness are focal neurologic signs"
         }
       ],
       "correctId": "c",
@@ -6799,19 +6799,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Homozygous and heterozygous states carry the same clot risk, so zygosity can be left off the counseling note"
+          "text": "Homozygous and heterozygous states carry the same clot risk, so zygosity can be left out of counseling"
         },
         {
           "id": "b",
-          "text": "Heterozygous factor V Leiden is the higher-risk genotype of the two"
+          "text": "Heterozygous factor V Leiden is the higher-risk genotype of the two results"
         },
         {
           "id": "c",
-          "text": "Either result means anticoagulation is started today despite no personal clot and no other indication"
+          "text": "Either genotype means anticoagulation starts today, despite no personal clot and no other indication"
         },
         {
           "id": "d",
-          "text": "Homozygosity confers a higher thrombotic risk than heterozygosity, but a result alone is not a personal VTE diagnosis"
+          "text": "Homozygosity carries higher risk than heterozygosity, but the genotype alone is not a VTE diagnosis"
         }
       ],
       "correctId": "d",
@@ -6869,19 +6869,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Both are vitamin K-dependent protein deficiencies, so warfarin raises the prothrombin variant's activity"
+          "text": "Both are vitamin K-dependent protein deficiencies, so warfarin raises activity of the prothrombin variant"
         },
         {
           "id": "b",
-          "text": "G20210A is a gain-of-function prothrombin mutation, whereas protein C deficiency is loss of a natural anticoagulant"
+          "text": "G20210A is a gain-of-function prothrombin mutation; protein C deficiency is loss of a natural anticoagulant"
         },
         {
           "id": "c",
-          "text": "Both block platelet glycoprotein IIb/IIIa, so the difference is only the tablet color"
+          "text": "Both block platelet glycoprotein IIb/IIIa, so the only difference between them is tablet color"
         },
         {
           "id": "d",
-          "text": "G20210A lowers factor II, and protein C deficiency raises factor II"
+          "text": "G20210A lowers factor II, and protein C deficiency raises factor II production"
         }
       ],
       "correctId": "b",
@@ -6903,7 +6903,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Apixaban blocks glycoprotein IIb/IIIa, so the factor Xa label on the diagram is decorative"
+          "text": "Apixaban blocks glycoprotein IIb/IIIa, so the factor Xa label on the diagram is decorative in clinic"
         },
         {
           "id": "b",
@@ -6944,19 +6944,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The entire story is recurrent DVT, because any symptom after a clot is a new event"
+          "text": "The entire months-long story is one recurrent DVT, because any symptom after a clot is a new event"
         },
         {
           "id": "b",
-          "text": "The entire story is post-thrombotic syndrome, so the new asymmetry can be ignored"
+          "text": "The entire story is post-thrombotic syndrome, so today's new calf asymmetry can be ignored"
         },
         {
           "id": "c",
-          "text": "The new pain is arterial ischemia, because venous disease does not cause asymmetric swelling"
+          "text": "The new thigh pain is arterial ischemia, because venous disease does not cause asymmetric swelling"
         },
         {
           "id": "d",
-          "text": "Stable dependent aching can be post-thrombotic syndrome, while today's abrupt asymmetry needs a recurrence evaluation"
+          "text": "Stable aching can be post-thrombotic syndrome; today's abrupt asymmetry needs a recurrence check"
         }
       ],
       "correctId": "d",
@@ -6988,15 +6988,15 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "b",
-          "text": "A week without palpitations resets CHA₂DS₂-VASc to zero"
+          "text": "A week without palpitations resets his CHA₂DS₂-VASc score to zero"
         },
         {
           "id": "c",
-          "text": "Stroke risk in AF is present only during an hour when the patient can feel the rhythm"
+          "text": "Stroke risk in AF exists only during an hour when the patient can feel the irregular rhythm"
         },
         {
           "id": "d",
-          "text": "Feeling well converts the indication to aspirin alone, which replaces OAC after AVERROES"
+          "text": "Feeling well converts the indication to aspirin alone, which AVERROES showed can replace an OAC"
         }
       ],
       "correctId": "a",
@@ -7024,19 +7024,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Resolved weakness is always a seizure, so vascular imaging and stroke pathways are irrelevant"
+          "text": "Resolved arm weakness is always a seizure, so vascular imaging and stroke pathways are irrelevant in clinic"
         },
         {
           "id": "b",
-          "text": "A transient ischemic attack is a warning ischemic event, and anticoagulant use does not make it benign"
+          "text": "A transient ischemic attack is a warning ischemic event, and being on apixaban does not make it benign"
         },
         {
           "id": "c",
-          "text": "Resolution proves the cause was intracranial hemorrhage that has already reabsorbed"
+          "text": "Resolution proves the cause was an intracranial hemorrhage that has already reabsorbed"
         },
         {
           "id": "d",
-          "text": "A deficit under one hour is musculoskeletal, so no vascular cause remains possible"
+          "text": "A deficit lasting under one hour is musculoskeletal, so no vascular cause is still possible"
         }
       ],
       "correctId": "b",
@@ -7058,19 +7058,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Every outpatient prescription for any cancer drug includes a treatment-dose DOAC"
+          "text": "Every outpatient prescription for any cancer drug includes a treatment-dose DOAC from day 1"
         },
         {
           "id": "b",
-          "text": "No outpatient with cancer is ever considered for prophylaxis, regardless of cancer site or risk"
+          "text": "No outpatient with cancer is ever considered for prophylaxis, regardless of cancer site or other risk"
         },
         {
           "id": "c",
-          "text": "Risk varies by cancer type, treatment, and patient factors, so prophylaxis is not automatic for every ambulatory patient"
+          "text": "Risk varies by cancer, treatment, and mobility, so prophylaxis is not automatic for every outpatient"
         },
         {
           "id": "d",
-          "text": "Prophylaxis is identical to treating an acute DVT, so the lead-in doses are started without a clot"
+          "text": "Cancer prophylaxis is the same as treating an acute DVT, so lead-in doses start without a diagnosed clot"
         }
       ],
       "correctId": "c",
@@ -7121,7 +7121,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "A mechanical prosthesis and a tissue valve are different niches"
+          "text": "A mechanical prosthesis and a tissue valve are different niches, and RIVER did not treat the tissue valve as mechanical"
         }
       ],
       "correctId": "d",
@@ -7159,19 +7159,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Tablet color and pharmacy brand, without indication, dose, or kidney function"
+          "text": "Tablet color and pharmacy brand, with no indication, no dose, and no kidney function in clinic"
         },
         {
           "id": "b",
-          "text": "A signed brochure, which replaces the indication and the interaction check"
+          "text": "A signed brochure, which replaces both the indication and the interaction check"
         },
         {
           "id": "c",
-          "text": "The time of day the patient prefers phone calls, as the sole clinical field"
+          "text": "The time of day the patient prefers phone calls, recorded as the only clinical field"
         },
         {
           "id": "d",
-          "text": "Indication, dose and schedule, latest kidney function, bleed history, interacting drugs, and the monitoring plan"
+          "text": "Indication, dose, kidney function, bleed history, interacting drugs, and the monitoring plan"
         }
       ],
       "correctId": "d",
@@ -7205,15 +7205,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Reassess hepatic eligibility, because decompensated liver disease with new coagulopathy is not an automatic DOAC renewal"
+          "text": "New coagulopathy with decompensated liver disease is not an automatic DOAC renewal"
         },
         {
           "id": "b",
-          "text": "Double the apixaban dose, because ascites dilutes every oral anticoagulant"
+          "text": "Double the apixaban dose, because ascites dilutes every oral anticoagulant equally"
         },
         {
           "id": "c",
-          "text": "Ignore the liver and titrate apixaban until the INR returns to 1.0"
+          "text": "Ignore the liver disease and titrate apixaban until the INR returns to 1.0"
         },
         {
           "id": "d",
@@ -7247,19 +7247,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Discharge, because missed visits mean he does not want anticoagulation"
+          "text": "Discharge him, because three missed visits mean he does not want anticoagulation"
         },
         {
           "id": "b",
-          "text": "Restore access, such as a closer draw site or a qualified home-INR path, and keep the monitoring responsibility"
+          "text": "Restore a way to get INRs, and keep a clinician responsible for the result"
         },
         {
           "id": "c",
-          "text": "Stop warfarin permanently without a replacement plan, because transportation is a contraindication"
+          "text": "Stop warfarin permanently and name no replacement, because lack of a bus route is a contraindication"
         },
         {
           "id": "d",
-          "text": "Double the dose at home so he no longer needs INR checks"
+          "text": "Double the home dose so he no longer needs INR checks at the clinic"
         }
       ],
       "correctId": "b",
@@ -7287,19 +7287,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Continue both, because carbamazepine only affects warfarin and not DOACs"
+          "text": "Continue both, because carbamazepine changes warfarin exposure and does not affect any DOAC"
         },
         {
           "id": "b",
-          "text": "Stop the antiseizure drug today without neurology input so the DOAC can start"
+          "text": "Stop the antiseizure drug today, with no neurology input, so the DOAC can be started"
         },
         {
           "id": "c",
-          "text": "Do not pair apixaban with this strong inducer; choose an anticoagulant plan the label still supports and involve neurology before any seizure-drug change"
+          "text": "Do not pair apixaban with this inducer; follow the label, and ask neurology before changing the seizure drug"
         },
         {
           "id": "d",
-          "text": "Use rivaroxaban 2.5 mg twice daily plus aspirin, which avoids inducer restrictions"
+          "text": "Use rivaroxaban 2.5 mg twice daily plus aspirin, which avoids the inducer restriction and still treats AF"
         }
       ],
       "correctId": "c",
@@ -7328,19 +7328,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Opening dabigatran capsules is always acceptable, and the adult AF dose is used unchanged"
+          "text": "Opening dabigatran capsules into food is always acceptable, and the adult AF dose is used unchanged in clinic"
         },
         {
           "id": "b",
-          "text": "Aspirin is substituted until the child is old enough to swallow"
+          "text": "Aspirin is substituted for anticoagulation until the child is old enough to swallow tablets"
         },
         {
           "id": "c",
-          "text": "The adult 2-of-3 apixaban rule is applied using the child's age in years"
+          "text": "The adult 2-of-3 apixaban rule is applied using the child's age in years as one of the criteria"
         },
         {
           "id": "d",
-          "text": "Confirm a formulation and a pediatric reference the child can actually take, instead of an opened adult capsule at an AF dose"
+          "text": "Use a formulation and a pediatric reference the child can take, not an opened adult capsule at an AF dose"
         }
       ],
       "correctId": "d",
@@ -7368,19 +7368,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The antibiotic and poor intake explain a higher INR, and this no-bleed value is not a 4F-PCC reversal case"
+          "text": "The antibiotic and poor intake explain the INR of 6.8, and this nonbleeding value is not a 4F-PCC case"
         },
         {
           "id": "b",
-          "text": "An INR of 6.8 with no bleeding is major bleeding and is treated with idarucizumab"
+          "text": "An INR of 6.8 with no bleeding is major hemorrhage and is treated with idarucizumab"
         },
         {
           "id": "c",
-          "text": "Poor intake always lowers the INR, so the dose is doubled tonight"
+          "text": "Poor intake always lowers the INR, so tonight's warfarin dose is doubled"
         },
         {
           "id": "d",
-          "text": "Trimethoprim-sulfamethoxazole induces warfarin metabolism, so the INR rise must be a lab error"
+          "text": "Trimethoprim-sulfamethoxazole induces warfarin metabolism, so the INR rise must be a laboratory error"
         }
       ],
       "correctId": "a",
@@ -7409,19 +7409,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The fingerstick of 5.2 is the new baseline, and vitamin K is given for a value inside the recent trend"
+          "text": "The fingerstick of 5.2 is the new baseline, and vitamin K is given even though it sits outside the recent trend"
         },
         {
           "id": "b",
-          "text": "The venous result fits the trend and the fingerstick is the outlier, so the dose is not changed from the meter alone"
+          "text": "The venous INR fits the trend and the fingerstick is the outlier, so today's dose is not taken from the meter"
         },
         {
           "id": "c",
-          "text": "Average 5.2 and 2.4 and aim the next dose at an INR of 3.8"
+          "text": "Average 5.2 and 2.4 and aim the next warfarin dose at a blended INR of 3.8"
         },
         {
           "id": "d",
-          "text": "Any disagreement means warfarin is stopped permanently"
+          "text": "Any disagreement between meter and laboratory means warfarin is stopped permanently"
         }
       ],
       "correctId": "b",
@@ -7526,19 +7526,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Warfarin-associated skin necrosis, a serious nonbleeding complication, not a bruise to observe at home"
+          "text": "Warfarin-associated skin necrosis, a serious nonbleeding complication, not a bruise to watch at home"
         },
         {
           "id": "b",
-          "text": "Expected bruising from heparin, which is ignored if the INR is in range"
+          "text": "Expected heparin bruising, which is ignored because the INR is already in the target range"
         },
         {
           "id": "c",
-          "text": "A local allergic rash that is treated by increasing the warfarin dose"
+          "text": "A minor local allergic rash, treated by increasing the daily warfarin dose"
         },
         {
           "id": "d",
-          "text": "Heparin-induced thrombocytopenia, which is diagnosed from skin color without a platelet fall"
+          "text": "Heparin-induced thrombocytopenia, diagnosed from skin color alone without any fall in the platelet count"
         }
       ],
       "correctId": "a",
@@ -7578,7 +7578,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Aspirin 325 mg, because gastrointestinal bleeding is a reason to choose an antiplatelet"
+          "text": "Aspirin 325 mg, because gastrointestinal bleeding is a reason to choose an antiplatelet in clinic"
         }
       ],
       "correctId": "b",
@@ -7647,19 +7647,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Whichever advice the patient remembers last becomes the plan, with no owner"
+          "text": "Whichever instruction the patient remembers last becomes the plan, and no clinician owns it in clinic"
         },
         {
           "id": "b",
-          "text": "The emergency note always overrides, and the clinic closes the chart"
+          "text": "The emergency note always overrides, and the anticoagulation clinic then closes the chart"
         },
         {
           "id": "c",
-          "text": "The clinic always overrides, and the emergency visit is not recorded"
+          "text": "The clinic note always overrides, and the emergency visit is left out of the record"
         },
         {
           "id": "d",
-          "text": "One reconciled plan, with a named owner, that includes the bleed, the INR timing, and when therapy resumes"
+          "text": "One reconciled plan with a named owner, covering the bleed, the next INR, and when therapy resumes"
         }
       ],
       "correctId": "d",
@@ -7688,19 +7688,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Do not stop on the surgical calendar; active cancer reopens duration and is managed as cancer-associated VTE"
+          "text": "Do not stop on the old surgical date; active cancer reopens duration and is managed as cancer-associated VTE"
         },
         {
           "id": "b",
-          "text": "Stop today, because the original provocation was surgery and a new cancer does not count"
+          "text": "Stop today, because the original provocation was surgery and a new cancer diagnosis does not count"
         },
         {
           "id": "c",
-          "text": "Insert an inferior vena cava filter and stop anticoagulation because cancer forbids drugs"
+          "text": "Place an inferior vena cava filter and stop anticoagulation, because cancer forbids anticoagulant drugs"
         },
         {
           "id": "d",
-          "text": "Restart an acute lead-in dose every 3 months for the rest of her life without a duration review"
+          "text": "Restart an acute lead-in dose every 3 months for life, with no further duration review"
         }
       ],
       "correctId": "a",
@@ -7734,19 +7734,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Adherence only, because diet and herbal products cannot move the INR if doses were taken"
+          "text": "Adherence only, because diet and herbal products cannot move the INR when every dose was taken"
         },
         {
           "id": "b",
-          "text": "Both the fall in dietary vitamin K and the inducing herbal product, which can pull the INR in opposite directions"
+          "text": "Both the drop in dietary vitamin K and the inducing herb, which can pull the INR in opposite directions"
         },
         {
           "id": "c",
-          "text": "St John's wort alone, with the assumption that it always raises the INR the way an antibiotic does"
+          "text": "St John's wort alone, on the assumption that it always raises the INR the way an antibiotic does"
         },
         {
           "id": "d",
-          "text": "A permanent INR target change to 3.5 to 4.5, because supplements make AF a mechanical-valve problem"
+          "text": "A permanent INR target of 3.5 to 4.5, because any supplement turns AF into a mechanical-valve problem now"
         }
       ],
       "correctId": "b",
@@ -7775,7 +7775,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Andexanet alfa, as the current United States factor Xa antidote"
+          "text": "Andexanet alfa, ordered as the current United States antidote for this factor Xa bleed"
         },
         {
           "id": "b",
@@ -7783,11 +7783,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Supportive resuscitation and the institutional 4F-PCC pathway for life-threatening factor Xa bleeding"
+          "text": "Supportive resuscitation plus the institutional 4F-PCC pathway for this life-threatening factor Xa bleed"
         },
         {
           "id": "d",
-          "text": "A clinic visit in 48 hours with no reversal discussion, because melena is always minor"
+          "text": "A clinic visit in 48 hours and no reversal talk, because melena with hypotension is always minor in clinic"
         }
       ],
       "correctId": "c",
@@ -7826,19 +7826,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Give heparin for 5 days, because every eye procedure was bridged in PAUSE"
+          "text": "Give heparin for 5 days, because PAUSE bridged every cataract extraction in patients with AF"
         },
         {
           "id": "b",
-          "text": "Stop apixaban for 5 days even if the operator does not require a hold"
+          "text": "Stop apixaban for 5 days even though the ophthalmologist does not require a hold for this extraction"
         },
         {
           "id": "c",
-          "text": "Order anti-Xa testing the morning of surgery, because PAUSE required it"
+          "text": "Order an anti-Xa level the morning of surgery, because the PAUSE protocol required a drug level"
         },
         {
           "id": "d",
-          "text": "Confirm whether any interruption is needed; if it is, PAUSE omitted the DOAC for 1 day before low-bleeding-risk procedures and did not use heparin bridging"
+          "text": "If a hold is needed, PAUSE omitted the DOAC for 1 day before this low-risk procedure, with no bridge"
         }
       ],
       "correctId": "d",
@@ -7948,19 +7948,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Run the patient sample now, because a waiting patient outranks storage rules"
+          "text": "Run the patient now, because a person waiting in the chair outranks the storage rules"
         },
         {
           "id": "b",
-          "text": "Use the strips if the first number looks close to last month's INR"
+          "text": "Use the hot-car strips if the first number looks close to last month's INR"
         },
         {
           "id": "c",
-          "text": "Quarantine the strips, do not report a result from them, and obtain a venous INR if a dose decision is needed today"
+          "text": "Quarantine the strips, release no result from them, and get a venous INR if a dose is due"
         },
         {
           "id": "d",
-          "text": "Average a result from the hot-car strips with last month's INR"
+          "text": "Average a result from the overheated strips with last month's venous INR and dose from that"
         }
       ],
       "correctId": "c",
@@ -7988,11 +7988,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Wait for the scheduled INR, because drowsiness after a head strike is expected and benign"
+          "text": "Wait for tomorrow's scheduled INR, because drowsiness after a head strike is expected and benign"
         },
         {
           "id": "b",
-          "text": "Tell him to take an extra warfarin dose tonight in case the fall was embolic"
+          "text": "Have him take an extra warfarin dose tonight in case the fall was an embolic event"
         },
         {
           "id": "c",
@@ -8000,7 +8000,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Send him for emergency assessment now, because anticoagulant use plus a head strike and worsening alertness is a possible intracranial bleed"
+          "text": "Emergency assessment now: head impact plus worsening alertness on an anticoagulant can be intracranial bleeding"
         }
       ],
       "correctId": "d",
@@ -8033,19 +8033,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Check adherence, whether the dose still matches his kidney function and weight rules, and whether a new provoking condition is present"
+          "text": "Check missed doses and whether the dose still fits before calling the drug a failure"
         },
         {
           "id": "b",
-          "text": "Label failure immediately and add aspirin plus a second DOAC"
+          "text": "Label the drug a failure immediately and add aspirin plus a second full-dose DOAC"
         },
         {
           "id": "c",
-          "text": "Insert an inferior vena cava filter and stop anticoagulation because one new symptom proves drug failure"
+          "text": "Place an inferior vena cava filter and stop anticoagulation, because one new swollen leg proves drug failure"
         },
         {
           "id": "d",
-          "text": "Ignore the leg, because symptoms on a DOAC cannot be new VTE"
+          "text": "Ignore the leg, because symptoms that appear while a DOAC is prescribed cannot be new VTE"
         }
       ],
       "correctId": "a",
@@ -8124,19 +8124,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "They are the same procedure, so the words do not change bleeding risk or consent"
+          "text": "They are the same procedure, so the two names do not change bleeding risk or the consent"
         },
         {
           "id": "b",
-          "text": "Either catheter therapy is mandatory for every normotensive PE with any biomarker rise"
+          "text": "Either catheter treatment is mandatory for every normotensive PE that has any biomarker rise"
         },
         {
           "id": "c",
-          "text": "Mechanical thrombectomy and catheter-directed thrombolysis are different interventions, and the patient's risk class has to be named before one is chosen"
+          "text": "Device removal and catheter thrombolysis differ, and risk class comes before either is chosen"
         },
         {
           "id": "d",
-          "text": "Catheter therapy replaces anticoagulation, so the heparin or DOAC is stopped when the device is mentioned"
+          "text": "Catheter therapy replaces anticoagulation, so the heparin or DOAC stops as soon as a device is mentioned"
         }
       ],
       "correctId": "c",
@@ -8214,19 +8214,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Keep the patient in the decision and involve the family member, with supervised support rather than an all-or-none choice"
+          "text": "Keep him in the decision and use the family member who already handles medicines, with support"
         },
         {
           "id": "b",
-          "text": "Exclude the patient from the conversation because memory loss voids consent"
+          "text": "Exclude him from the conversation, because declining memory voids any consent about warfarin"
         },
         {
           "id": "c",
-          "text": "Let him continue fully independent dosing because he can say the word 'warfarin'"
+          "text": "Let him keep dosing independently, because he can still say the word 'warfarin'"
         },
         {
           "id": "d",
-          "text": "Stop anticoagulation so that nobody has to manage a schedule"
+          "text": "Stop anticoagulation so that nobody has to manage a dose or an INR schedule"
         }
       ],
       "correctId": "a",
@@ -8296,19 +8296,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Discharge him from the clinic until he can pay for both transportation and groceries"
+          "text": "Discharge him until he can pay for both the bus fare and the groceries"
         },
         {
           "id": "b",
-          "text": "Double the warfarin dose so fewer visits are required"
+          "text": "Double the warfarin dose so that fewer INR visits are required"
         },
         {
           "id": "c",
-          "text": "Connect transportation and food support, and keep INR monitoring in place while that is arranged"
+          "text": "Arrange transport and food support, and keep INR checks while that is set up"
         },
         {
           "id": "d",
-          "text": "Tell him vitamin K intake does not matter, so the food problem can be ignored"
+          "text": "Tell him vitamin K intake does not affect warfarin, so the food problem can be ignored"
         }
       ],
       "correctId": "c",
@@ -8337,19 +8337,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The patient will appreciate the importance of anticoagulation"
+          "text": "The patient will appreciate the importance of anticoagulation in general terms"
         },
         {
           "id": "b",
-          "text": "The patient will understand quality"
+          "text": "The patient will understand quality well enough to feel confident about the meter in clinic"
         },
         {
           "id": "c",
-          "text": "The patient will know about INR"
+          "text": "The patient will know about the INR as a concept mentioned during the class"
         },
         {
           "id": "d",
-          "text": "The patient will obtain an adequate sample and state whom to call for an unexpected result"
+          "text": "The patient obtains an adequate sample and states whom to call for an unexpected result"
         }
       ],
       "correctId": "d",
@@ -8378,11 +8378,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Retrain with a case in which a normal INR on apixaban is misread as 'no drug on board,' and check the new counseling language"
+          "text": "Retrain on a normal INR misread as 'no apixaban on board,' then check the words staff use"
         },
         {
           "id": "b",
-          "text": "Add the INR target to the DOAC after-visit summary so the old script is official"
+          "text": "Add an INR target of 2 to 3 to the DOAC after-visit summary so the old script becomes official"
         },
         {
           "id": "c",
@@ -8390,7 +8390,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Remove INR education from the warfarin clinic so one phrase serves both drug classes"
+          "text": "Remove INR teaching from the warfarin clinic so one sentence can cover both drug classes"
         }
       ],
       "correctId": "a",
@@ -8423,19 +8423,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Assume understanding because the interpreter was present in the room"
+          "text": "Assume he understood, because an interpreter was present in the room for the explanation"
         },
         {
           "id": "b",
-          "text": "Ask him, through the interpreter, to restate the dose times and the bleeding plan, and provide a format he can see or hear"
+          "text": "Through the interpreter, have him restate the dose times and the bleeding plan"
         },
         {
           "id": "c",
-          "text": "Hand him a small-print English leaflet and end the visit"
+          "text": "Hand him a small-print English leaflet and end the visit without a restatement"
         },
         {
           "id": "d",
-          "text": "Skip education, because an interpreter makes teach-back invalid"
+          "text": "Skip the check, because using an interpreter makes teach-back invalid"
         }
       ],
       "correctId": "b",
@@ -8465,19 +8465,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Give both, because a brand and a generic are different molecules"
+          "text": "Give both lines, because a brand name and a generic name are two different molecules"
         },
         {
           "id": "b",
-          "text": "Eliquis is rivaroxaban, so the list is an intended dual factor Xa regimen"
+          "text": "Eliquis is rivaroxaban, so the list is an intended pair of factor Xa inhibitors"
         },
         {
           "id": "c",
-          "text": "Eliquis is warfarin, so an INR target is added to the apixaban"
+          "text": "Eliquis is warfarin, so an INR target is added beside the apixaban line"
         },
         {
           "id": "d",
-          "text": "Eliquis and apixaban are the same drug, and the usual adult oral tablets are 2.5 mg and 5 mg, not two concurrent prescriptions"
+          "text": "Eliquis is apixaban; adult tablets are 2.5 mg and 5 mg, not two drugs taken together"
         }
       ],
       "correctId": "d",
@@ -8506,11 +8506,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Sprinkle preparations, suspension, and adult tablets are not interchangeable by guess, and a pediatric order is not an adult AF dose"
+          "text": "Those apixaban products are not interchangeable, and a child's order is not an adult AF dose"
         },
         {
           "id": "b",
-          "text": "Any apixaban tablet can be crushed into the suspension volume without changing the dose"
+          "text": "Any adult apixaban tablet can be crushed into the suspension volume without changing the delivered dose"
         },
         {
           "id": "c",
@@ -8518,7 +8518,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "Suspension is reversed by vitamin K, so the product check is an INR check"
+          "text": "The suspension is reversed with vitamin K, so the product check is really an INR check"
         }
       ],
       "correctId": "a",
@@ -8547,15 +8547,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Both act by inhibiting vitamin K epoxide reductase, so day 2 is full effect for each"
+          "text": "Both drugs inhibit vitamin K epoxide reductase, so day 2 is full effect for warfarin and for apixaban"
         },
         {
           "id": "b",
-          "text": "The early INR mostly reflects factor VII loss, whereas apixaban directly inhibits factor Xa within hours of a dose"
+          "text": "The early INR is mostly factor VII loss, whereas apixaban directly inhibits factor Xa within hours of a dose"
         },
         {
           "id": "c",
-          "text": "Apixaban's full effect waits for an INR of 2, just as warfarin's does"
+          "text": "Apixaban's full effect waits for an INR of 2, just as warfarin's full effect does"
         },
         {
           "id": "d",
@@ -8627,19 +8627,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "They are duplicate names for one enzyme, so only one line is real"
+          "text": "They are two names for one enzyme, so only one of the lines on the report is real"
         },
         {
           "id": "b",
-          "text": "VKORC1 clears S-warfarin, and CYP2C9 is the receptor on platelets"
+          "text": "VKORC1 clears S-warfarin, and CYP2C9 is a receptor on the platelet surface"
         },
         {
           "id": "c",
-          "text": "Both results mean the patient cannot take warfarin and must start a DOAC today"
+          "text": "Either variant means warfarin cannot be used and a DOAC must be started the same day"
         },
         {
           "id": "d",
-          "text": "CYP2C9 is about clearance of S-warfarin; VKORC1 is about sensitivity of the vitamin K epoxide reductase target"
+          "text": "CYP2C9 clears S-warfarin; VKORC1 is the sensitivity of warfarin's target enzyme"
         }
       ],
       "correctId": "d",
@@ -8667,19 +8667,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Clearance is about 17 mL/min, and dabigatran is predominantly renally cleared, so 150 mg is no longer an unexamined plan"
+          "text": "Clearance is about 17 mL/min and dabigatran is mostly renal, so 150 mg is no longer automatic"
         },
         {
           "id": "b",
-          "text": "Dabigatran is cleared by CYP3A4, so creatinine does not change exposure"
+          "text": "Dabigatran is cleared by CYP3A4, so the serum creatinine does not change exposure"
         },
         {
           "id": "c",
-          "text": "A creatinine of 2.0 mg/dL is a reason to add ketoconazole to boost absorption"
+          "text": "A creatinine of 2.0 mg/dL is a reason to add ketoconazole in order to boost absorption in clinic"
         },
         {
           "id": "d",
-          "text": "Idarucizumab is started as a daily oral anticoagulant when clearance falls"
+          "text": "Idarucizumab is started as a daily oral anticoagulant once clearance falls this low"
         }
       ],
       "correctId": "a",
@@ -8713,7 +8713,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Apixaban and edoxaban also require a large meal, and fasting doses are subtherapeutic"
+          "text": "Apixaban and edoxaban also require a large meal, and a fasting dose of either is subtherapeutic"
         },
         {
           "id": "b",
@@ -8721,11 +8721,11 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Only edoxaban requires food, and rivaroxaban is taken fasting"
+          "text": "Only edoxaban requires food, and rivaroxaban 20 mg is taken on an empty stomach"
         },
         {
           "id": "d",
-          "text": "Food rules apply only to warfarin and never to factor Xa inhibitors"
+          "text": "Food rules apply only to warfarin and never to any oral factor Xa inhibitor"
         }
       ],
       "correctId": "b",
@@ -8759,19 +8759,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "They have identical half-lives and both are titrated to a daily INR"
+          "text": "They have identical half-lives and both infusions or injections are titrated to a daily INR"
         },
         {
           "id": "b",
-          "text": "Enoxaparin is a direct thrombin inhibitor and heparin is a factor Xa DOAC"
+          "text": "Enoxaparin is a direct thrombin inhibitor and unfractionated heparin is an oral factor Xa inhibitor"
         },
         {
           "id": "c",
-          "text": "Unfractionated heparin is commonly protocol-monitored because its effect is variable and short"
+          "text": "Unfractionated heparin is protocol-monitored because its effect is variable and short; routine LMWH is not"
         },
         {
           "id": "d",
-          "text": "Neither drug involves antithrombin, so anti-Xa levels have no meaning for either"
+          "text": "Neither heparin involves antithrombin, so an anti-Xa level has no meaning for either drug"
         }
       ],
       "correctId": "c",
@@ -8800,7 +8800,7 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Protamine completely neutralizes fondaparinux anti-Xa activity within 10 minutes"
+          "text": "Protamine completely neutralizes fondaparinux anti-Xa activity within about 10 minutes in clinic"
         },
         {
           "id": "b",
@@ -8808,7 +8808,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "c",
-          "text": "Fondaparinux is dabigatran, so idarucizumab is the same decision as protamine"
+          "text": "Fondaparinux is dabigatran, so idarucizumab and protamine are the same decision"
         },
         {
           "id": "d",
@@ -8886,19 +8886,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Both start with 60 mg of edoxaban on day 1 and neither uses heparin"
+          "text": "Both drugs start with edoxaban 60 mg on day 1, and neither acute regimen uses heparin"
         },
         {
           "id": "b",
-          "text": "Rivaroxaban begins orally at 15 mg twice daily; edoxaban in Hokusai-VTE began after at least 5 days of parenteral anticoagulation"
+          "text": "Rivaroxaban starts at 15 mg twice daily; edoxaban in Hokusai-VTE started after at least 5 days of heparin"
         },
         {
           "id": "c",
-          "text": "Both require a parenteral lead-in of 21 days"
+          "text": "Both acute regimens require a parenteral lead-in lasting 21 days before any tablet"
         },
         {
           "id": "d",
-          "text": "Edoxaban uses the 15 mg twice-daily lead-in and rivaroxaban uses a heparin lead-in"
+          "text": "Edoxaban uses the 15 mg twice-daily lead-in, and rivaroxaban is the drug that needs a heparin lead-in today"
         }
       ],
       "correctId": "b",
@@ -8932,19 +8932,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Ibuprofen induced warfarin clearance, which always raises the INR before any bleed"
+          "text": "Ibuprofen induces warfarin clearance, which always raises the INR before any gastrointestinal bleed"
         },
         {
           "id": "b",
-          "text": "Ibuprofen inhibits vitamin K epoxide reductase and must move the INR"
+          "text": "Ibuprofen inhibits vitamin K epoxide reductase, so it must move the INR before melena appears"
         },
         {
           "id": "c",
-          "text": "Ibuprofen can cause gastrointestinal bleeding through a platelet and mucosal effect even when the INR is unchanged"
+          "text": "Ibuprofen can cause gastrointestinal bleeding by a platelet and mucosal effect even if the INR is unchanged"
         },
         {
           "id": "d",
-          "text": "An unchanged INR proves the blood is not gastrointestinal"
+          "text": "An unchanged INR of 2.4 proves the black stool is not gastrointestinal blood"
         }
       ],
       "correctId": "c",
@@ -9014,19 +9014,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Pregnancy and lactation are different exposures: warfarin and LMWH have established lactation roles, and a DOAC is not the default while breastfeeding"
+          "text": "Lactation differs from pregnancy: warfarin and LMWH have lactation roles; a DOAC is not the default"
         },
         {
           "id": "b",
-          "text": "Warfarin is contraindicated in milk for the same weeks it is a fetal teratogen, with no lactation exception"
+          "text": "Warfarin is forbidden in milk for the same weeks it is a fetal teratogen, with no lactation exception"
         },
         {
           "id": "c",
-          "text": "Every DOAC has the same human-milk evidence as warfarin"
+          "text": "Every DOAC has the same published human-milk evidence as warfarin does"
         },
         {
           "id": "d",
-          "text": "Breastfeeding ends the VTE indication, so all anticoagulants stop"
+          "text": "Breastfeeding ends the VTE indication, so every anticoagulant stops on that day"
         }
       ],
       "correctId": "a",
@@ -9055,19 +9055,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A copper intrauterine device, chosen because it reliably lightens menstrual flow"
+          "text": "A copper intrauterine device, chosen because it reliably lightens menstrual blood loss"
         },
         {
           "id": "b",
-          "text": "A levonorgestrel-releasing intrauterine device, which can provide contraception and reduce menstrual bleeding"
+          "text": "A levonorgestrel intrauterine device, which can contracept and reduce menstrual bleeding"
         },
         {
           "id": "c",
-          "text": "Stopping anticoagulation for the five heaviest days of each cycle"
+          "text": "Stopping anticoagulation for the five heaviest days of every menstrual cycle"
         },
         {
           "id": "d",
-          "text": "Combined oral estrogen as the only contraceptive that is safe on an anticoagulant"
+          "text": "A combined estrogen pill, as the only contraceptive that is safe once an anticoagulant is prescribed"
         }
       ],
       "correctId": "b",
@@ -9123,19 +9123,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Asundexian replaces apixaban for AF because OCEANIC-AF showed fewer strokes than apixaban"
+          "text": "Asundexian replaces apixaban for AF because OCEANIC-AF showed fewer strokes with asundexian than with apixaban"
         },
         {
           "id": "b",
-          "text": "Milvexian is FDA-approved for AF, so either factor XI drug can be substituted today"
+          "text": "Milvexian is FDA-approved for AF, so either factor XI drug can be substituted for apixaban today"
         },
         {
           "id": "c",
-          "text": "Approval for one factor XI drug means every factor XI program, including milvexian, is approved for every indication"
+          "text": "Approval of one factor XI drug means every factor XI program, including milvexian, is approved for every indication now"
         },
         {
           "id": "d",
-          "text": "Asundexian 50 mg with antiplatelet therapy is approved after a recent mild-to-moderate non-cardioembolic ischemic stroke or high-risk TIA, not for AF; other factor XI agents are not approved"
+          "text": "Asundexian 50 mg with an antiplatelet is approved after recent non-cardioembolic stroke or high-risk TIA, not for AF"
         }
       ],
       "correctId": "d",
@@ -9174,19 +9174,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "PCC replaces factors immediately, and vitamin K is required for the liver to make new functional factors while warfarin is still present"
+          "text": "PCC replaces factors now; vitamin K lets the liver make new factors while warfarin remains"
         },
         {
           "id": "b",
-          "text": "Vitamin K works in minutes and PCC works only after several days, so the order is usually reversed"
+          "text": "Vitamin K works in minutes and PCC works only after several days, so the usual order is reversed"
         },
         {
           "id": "c",
-          "text": "PCC permanently deletes the thrombotic indication, so vitamin K is an antibiotic"
+          "text": "PCC permanently removes the thrombotic indication, and vitamin K in this pathway is an antibiotic"
         },
         {
           "id": "d",
-          "text": "Vitamin K is the specific antibody for dabigatran, and PCC is protamine"
+          "text": "Vitamin K is the specific antibody for dabigatran, and PCC is another name for protamine"
         }
       ],
       "correctId": "a",
@@ -9214,19 +9214,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Protamine has no cardiovascular effects and can be pushed as fast as possible"
+          "text": "Protamine has no cardiovascular effects and can be injected as fast as the syringe allows"
         },
         {
           "id": "b",
-          "text": "Protamine can cause hypotension and reactions that resemble anaphylaxis, so it is given slowly with resuscitation available"
+          "text": "Protamine can cause hypotension and anaphylaxis-like reactions, so it is given slowly"
         },
         {
           "id": "c",
-          "text": "Protamine is harmless only when the dose exceeds 50 mg in 10 minutes"
+          "text": "Protamine is harmless only when the dose exceeds 50 mg inside a 10-minute period"
         },
         {
           "id": "d",
-          "text": "Protamine fully reverses DOACs, which is why the rate of infusion does not matter"
+          "text": "Protamine fully reverses DOACs, which is why the infusion rate does not matter"
         }
       ],
       "correctId": "b",
@@ -9255,15 +9255,15 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The INR will stay exactly where it was, because induction ends the hour the inducer is stopped"
+          "text": "The INR stays exactly where it was, because enzyme induction ends the hour rifampin is stopped in clinic"
         },
         {
           "id": "b",
-          "text": "The INR will fall further, because stopping an inducer is the same as adding a second inducer"
+          "text": "The INR falls further, because stopping an inducer is the same as adding a second inducer"
         },
         {
           "id": "c",
-          "text": "The INR may rise over days as enzyme induction wears off, so the inflated warfarin dose needs closer follow-up"
+          "text": "The INR may rise over days as induction wears off, so the higher warfarin dose needs closer follow-up"
         },
         {
           "id": "d",
@@ -9296,19 +9296,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Vomiting raises apixaban exposure by inhibiting CYP3A4, so the dose is halved"
+          "text": "Vomiting raises apixaban exposure by inhibiting CYP3A4, so the dose is cut in half"
         },
         {
           "id": "b",
-          "text": "A vomited tablet still counts as a full absorbed dose"
+          "text": "A tablet that is vomited immediately still counts as a fully absorbed dose"
         },
         {
           "id": "c",
-          "text": "The oral route is irrelevant because apixaban is effective as a skin patch"
+          "text": "The oral route does not matter, because apixaban is effective when worn as a skin patch"
         },
         {
           "id": "d",
-          "text": "Oral absorption is unreliable while vomiting continues, so the AF indication may need a non-oral plan rather than a charted dose that never stayed down"
+          "text": "Vomited doses are not absorbed reliably, so the AF plan may need a non-oral route"
         }
       ],
       "correctId": "d",
@@ -9342,19 +9342,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "People on no anticoagulant, enrolled so the panel looks large"
+          "text": "People who take no anticoagulant, enrolled so the new panel looks larger"
         },
         {
           "id": "b",
-          "text": "Every adult with a bruise, regardless of medication"
+          "text": "Every adult who reports a bruise, whether or not an anticoagulant is on the list"
         },
         {
           "id": "c",
-          "text": "Patients whose only need is a one-time dietary question and who have no follow-up"
+          "text": "Patients whose only need is one dietary question and who need no follow-up visit"
         },
         {
           "id": "d",
-          "text": "Patients on warfarin, patients with complex DOAC regimens or interacting drugs, and patients with procedure holds that need an owner"
+          "text": "Warfarin patients, complex DOAC regimens, and procedure holds that need an owner"
         }
       ],
       "correctId": "d",
@@ -9388,11 +9388,11 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A written, reachable owner for critical results at every hour the laboratory reports them, with a backup when that person is off"
+          "text": "A named owner for critical INRs whenever the lab releases them, plus a backup"
         },
         {
           "id": "b",
-          "text": "A shared inbox that nobody is assigned to open"
+          "text": "A shared inbox that no person is assigned to open on any shift"
         },
         {
           "id": "c",
@@ -9400,7 +9400,7 @@ window.ANTICOAG_CACP = {
         },
         {
           "id": "d",
-          "text": "A decision to stop measuring INRs so the ownership question disappears"
+          "text": "A decision to stop measuring INRs so the question of who owns the result disappears"
         }
       ],
       "correctId": "a",
@@ -9429,19 +9429,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "A brand-name formulary list with no procedures"
+          "text": "A brand-name formulary list and no procedures for how the service actually works"
         },
         {
           "id": "b",
-          "text": "Procedures for dosing, critical results, point-of-care failures, peri-procedure communication, and staff competency"
+          "text": "Procedures for dosing, critical results, meter failures, handoffs, and competency"
         },
         {
           "id": "c",
-          "text": "A set of published trial PDFs with no local workflow"
+          "text": "A folder of published trial PDFs and no local workflow for nights or weekends"
         },
         {
           "id": "d",
-          "text": "A statement that each clinician will improvise, filed as the policy"
+          "text": "A statement that each clinician will improvise, filed as the service's only policy"
         }
       ],
       "correctId": "b",
@@ -9470,19 +9470,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The time-in-range figure alone, reported as proof that access does not matter"
+          "text": "The time-in-range figure alone, reported as proof that telephone access does not matter"
         },
         {
           "id": "b",
-          "text": "A count of calls that were abandoned, with no change in staffing"
+          "text": "A count of abandoned calls, collected and then left unchanged with no staffing response"
         },
         {
           "id": "c",
-          "text": "Time-in-range plus access measures, such as time to a answered clinical call and whether bleeding calls reach a person"
+          "text": "Time in range plus whether a bleeding call actually reaches a person"
         },
         {
           "id": "d",
-          "text": "Removal of the phone line, because INR control makes advice unnecessary"
+          "text": "Removal of the phone line, because an acceptable INR distribution makes advice unnecessary"
         }
       ],
       "correctId": "c",
@@ -9511,19 +9511,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "Assume unreceived results are normal and continue the dose indefinitely"
+          "text": "Treat a result that never arrives as a normal INR and continue the same dose indefinitely"
         },
         {
           "id": "b",
-          "text": "Ask the patient to guess the INR from how they feel"
+          "text": "Ask the patient to guess the INR from symptoms and then dose from that guess"
         },
         {
           "id": "c",
-          "text": "Stop tracking expected draws, because outside laboratories are responsible for the clinic's inbox"
+          "text": "Stop tracking expected outside draws, because the outside laboratory owns the clinic inbox in clinic"
         },
         {
           "id": "d",
-          "text": "A expected-result list that flags a missing INR the day it was due, and a person who obtains the result or a repeat sample"
+          "text": "An expected-result list flags a missing INR the day it is due, and someone obtains it or a repeat"
         }
       ],
       "correctId": "d",
@@ -9552,19 +9552,19 @@ window.ANTICOAG_CACP = {
       "choices": [
         {
           "id": "a",
-          "text": "The facility supports authorized testing logistics, and the treating clinicians keep dose changes, training decisions, and follow-up"
+          "text": "The facility handles testing logistics; clinicians keep dosing, eligibility, and follow-up"
         },
         {
           "id": "b",
-          "text": "The facility's shipment replaces the clinician's order and the dose decision"
+          "text": "A meter shipment from the facility replaces the clinician's order and the dose decision"
         },
         {
           "id": "c",
-          "text": "Every transmitted number authorizes the patient to change the dose without a clinic"
+          "text": "Every number the facility transmits authorizes the patient to change the dose with no clinic"
         },
         {
           "id": "d",
-          "text": "Enrollment cancels the clinic's duty to notice a missing result"
+          "text": "Enrollment with the facility cancels the clinic's duty to notice that a result never arrived"
         }
       ],
       "correctId": "a",

@@ -16,7 +16,7 @@ This file lists every reworked unofficial practice item so a clinician can check
 - Correct-answer letters are balanced within each domain (overall A 56, B 55, C 54, D 54). The exam still shuffles display order.
 - Stems are cases: age, weight, serum creatinine, interacting drugs, INR trend, procedure bleed risk, or a clinic failure are in the story, including details that do not decide the question.
 - Each explanation says why the keyed choice is right and why each other choice is wrong, and names the label, guideline, or trial.
-- Choice length is closer than the old bank. The old keyed choice was uniquely longest in 207 of 219 items (mean gap about 60 characters; 146 items were more than 40 characters longer than the next choice). After this rewrite those figures are 177 of 219, a mean gap of about 19 characters, and 39 items still more than 40 characters longer. Length is a weaker cue. It is not gone.
+- Choice length was rebalanced in a second pass. The old keyed choice was uniquely the longest in 207 of 219 items (mean gap about 60 characters; 146 items were more than 40 characters longer than the next choice). After the case rewrite and this pass, the keyed choice is uniquely longest in 42 of 219 items (19 percent), the mean gap versus the next-longest choice is about -5 characters, and no keyed choice is more than 25 characters longer than the next choice.
 
 ## Counts
 
@@ -80,7 +80,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-04 (domain I, objectives 11)
 
 - Old correct (b): Estimate pretest probability to guide D-dimer / imaging pathways
-- New correct (d): The score is high enough that imaging, not a D-dimer rule-out, is the appropriate next diagnostic step
+- New correct (d): The score is high enough that imaging, not a D-dimer rule-out, is the next diagnostic step
 - Source: Wells criteria for PE as a pretest-probability tool (high score proceeds to imaging; D-dimer is used to exclude lower-probability disease).
 - Why this is harder: The stem supplies the points and a red-herring hemoglobin so the learner must add the score and refuse both lysis and a D-dimer discharge.
 - Confidence note: Point values are the published Wells PE weights. The item does not cite a specific guideline edition's imaging algorithm beyond that pretest-probability use.
@@ -110,7 +110,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-08 (domain I, objectives 7, 18)
 
 - Old correct (b): Tumor biology, surgery, immobility, catheters, and some systemic therapies all contribute — agent choice still individualizes bleed and DDI risk
-- New correct (d): Several hits coexist: tumor procoagulant activity, the catheter, chemotherapy, and immobility
+- New correct (d): Tumor activity, the catheter, chemotherapy, and immobility all coexist
 - Source: Cancer-associated thrombosis pathophysiology: tumor procoagulants (including tissue factor), stasis, chemotherapy, and central catheters.
 - Why this is harder: The case stacks four real risks so a single-cause answer is the error.
 
@@ -124,7 +124,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-10 (domain I, objectives 11)
 
 - Old correct (b): Shock / high-risk PE needs reperfusion pathways, whereas most intermediate-risk PE still defaults to anticoagulation — CDT only in enriched phenotypes
-- New correct (b): Only patient A is high-risk PE; patient B is intermediate-risk and is not automatic systemic thrombolysis
+- New correct (b): Only patient A is high-risk PE; patient B is intermediate-risk, not automatic thrombolysis
 - Source: 2019 ESC PE guideline hemodynamic classification, consistent with this site's intermediate-PE teaching: high-risk means shock or hypotension; intermediate-risk is normotensive with right-ventricular injury.
 - Why this is harder: Two PE cases differ only in blood pressure and right-ventricular findings, so the learner cannot treat every large clot as lysis.
 - Confidence note: The 2019 ESC hemodynamic split is the source. A later ESC full-text revision was not re-opened for this pass.
@@ -146,7 +146,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-01 (domain II, objectives 20)
 
 - Old correct (b): A labeled DOAC over warfarin when the patient is DOAC-eligible
-- New correct (a): A treatment-dose DOAC, which the 2023 AF guideline prefers over warfarin when no VKA-only condition is present
+- New correct (a): A treatment-dose DOAC, which the 2023 AF guideline prefers when no VKA-only condition is present
 - Source: 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: DOAC preferred over warfarin in the absence of moderate-to-severe rheumatic mitral stenosis or a mechanical valve. AVERROES: apixaban superior to aspirin.
 - Why this is harder: A relative on aspirin and a normal creatinine are distractors beside a clear NVAF indication.
 
@@ -169,7 +169,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-04 (domain II, objectives 24)
 
 - Old correct (b): Clinically relevant bleeding was lower with apixaban than rivaroxaban when both fit — see site number needed to treat teaching from published absolute rates
-- New correct (d): Clinically relevant bleeding was lower with apixaban (3.3% versus 7.1%), while recurrent VTE was about 1% in each arm
+- New correct (d): Clinically relevant bleeding was lower with apixaban, while recurrent VTE was about 1% in each arm
 - Source: COBRRA on this site: clinically relevant bleeding 3.3% versus 7.1% (RR 0.46); recurrent symptomatic VTE 1.1% versus 1.0%.
 - Why this is harder: A prior bleed makes a one-sided efficacy claim tempting. The trial's actual split is bleeding, with similar recurrence.
 
@@ -198,7 +198,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-08 (domain II, objectives 24, 38)
 
 - Old correct (b): Do not assume net benefit from routine restart; individualize by ICH location/timing and cardioembolic risk (ASPIRE pending)
-- New correct (d): Do not treat edoxaban as routine in unselected AF after intracranial hemorrhage
+- New correct (d): Do not restart edoxaban routinely after unselected intracranial hemorrhage
 - Source: ENRICH-AF press release on this site (29 August 2026): stroke or systemic embolism 11.8% versus 12.8% (HR 0.88); ISTH major bleeding 11.6% versus 5.2% (HR 2.23). Lobar enrollment had been stopped for safety.
 - Why this is harder: A high score pushes toward reflex restart. The trial result does not support that reflex.
 - Confidence note: Figures are congress press-release figures, as the site already labels them, not a journal publication.
@@ -206,14 +206,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-09 (domain II, objectives 33, 41)
 
 - Old correct (b): Supportive care + institutional 4F-PCC pathways; do not write Andexxa in U.S. order sets
-- New correct (a): Supportive care and the institutional 4F-PCC pathway for life-threatening factor Xa bleeding, not andexanet
+- New correct (a): Supportive care plus institutional 4F-PCC for life-threatening factor Xa bleeding, not andexanet
 - Source: FDA Andexxa withdrawal effective 22 December 2025, as stated on this site. Idarucizumab is specific to dabigatran (RE-VERSE AD, 5 g intravenous).
 - Why this is harder: Headache, timing, and a United States hospital are all needed. The antibody and the withdrawn drug are the traps.
 
 ### ii-10 (domain II, objectives 43)
 
 - Old correct (b): Routine bridging increased bleeding without thromboembolic benefit — avoid reflexive bridging in this population
-- New correct (b): BRIDGE does not support routine LMWH bridging: arterial thromboembolism was similar and major bleeding was higher with bridging
+- New correct (b): BRIDGE does not support routine bridging: thromboembolism was similar and major bleeding was higher
 - Source: BRIDGE on this site: arterial thromboembolism 0.4% versus 0.3%; major bleeding 1.3% versus 3.2% (relative risk 0.41; 95% CI 0.20 to 0.78). Mechanical valves were excluded.
 - Why this is harder: The phrase 'never uncovered' is the reflex the trial challenged.
 
@@ -235,7 +235,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-13 (domain II, objectives 22, 24, 30, 40)
 
 - Old correct (b): Stroke indication, bleed risk mitigation, renal function for labeled dosing, and clinically important DDIs
-- New correct (a): Cockcroft-Gault creatinine clearance, which here is about 129 mL/min and crosses the edoxaban AF ceiling
+- New correct (a): Cockcroft-Gault clearance, which here is about 129 mL/min and crosses the edoxaban AF ceiling
 - Source: U.S. SAVAYSA boxed warning as quoted on this site: do not use for NVAF when CrCl is above 95 mL/min. ENGAGE subgroup on the site: ischemic stroke 0.9% versus 0.4% per year (HR 2.16) above that cutoff.
 - Why this is harder: The reassuring creatinine and a normal INR are the traps. The learner has to compute clearance.
 - Confidence note: The arithmetic uses Cockcroft-Gault with the stated actual body weight. The site quotes the label warning; the item does not add a new efficacy figure.
@@ -243,7 +243,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-14 (domain II, objectives 36)
 
 - Old correct (b): Parenteral heparin lead-in (≥5 days in the program) before edoxaban
-- New correct (b): At least 5 days of a parenteral anticoagulant, then edoxaban 60 mg daily if no reduction criterion is met
+- New correct (b): At least 5 days of a parenteral anticoagulant, then edoxaban 60 mg daily
 - Source: Hokusai-VTE on this site: parenteral heparin for at least 5 days, then edoxaban 60 mg daily (30 mg daily if reduction criteria are met).
 - Why this is harder: Familiarity with apixaban's oral lead-in is the error.
 - Confidence note: The item does not list every edoxaban VTE reduction criterion. Weight 74 kg and clearance 68 mL/min are outside the usual reduction triggers.
@@ -251,7 +251,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-15 (domain II, objectives 22, 24)
 
 - Old correct (b): An individualized cancer-associated VTE plan, often involving LMWH or specialist-directed alternatives, with intensity or temporary interruption determined by platelet status, bleeding, and clot acuity
-- New correct (c): Prefer an apixaban or LMWH plan over rivaroxaban here, given SELECT-D's esophageal and gastroesophageal bleeding experience
+- New correct (c): An apixaban or LMWH plan is the cautious choice here, given SELECT-D's esophageal bleeding experience
 - Source: SELECT-D on this site: major bleeding in esophageal or gastroesophageal cancer, 4 of 11 on rivaroxaban versus 1 of 19 on dalteparin. Caravaggio studied apixaban versus dalteparin in cancer-associated VTE.
 - Why this is harder: The no-lead-in convenience is the real-world error.
 - Confidence note: The item does not quote an ASH recommendation number. Preference for avoiding rivaroxaban in this esophageal case is drawn from the SELECT-D counts on this site.
@@ -259,7 +259,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-16 (domain II, objectives 38)
 
 - Old correct (b): Inferior to low-dose DOAC for recurrent VTE prevention (EINSTEIN-CHOICE teaching)
-- New correct (d): Rivaroxaban 10 mg or 20 mg daily prevented more recurrent VTE than aspirin 100 mg, with low and similar major bleeding
+- New correct (d): Rivaroxaban 10 mg or 20 mg daily prevented more recurrent VTE than aspirin, with similar major bleeding
 - Source: EINSTEIN CHOICE on this site: rivaroxaban 20 mg or 10 mg daily superior to aspirin 100 mg after 6–12 months; major bleeding low and similar. 2021 CHEST VTE guideline supports low-dose rivaroxaban over aspirin when anticoagulation is continued.
 - Why this is harder: A friend's aspirin is a plausible step-down that the trial does not support.
 
@@ -308,7 +308,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-05 (domain III, objectives 52, 57)
 
 - Old correct (b): Follow the specific product’s missed-dose instructions; when unsure, call the clinic rather than improvising a double dose
-- New correct (a): Missed-dose teaching has to name the drug and the regimen, because a double dose tonight is wrong for both of these schedules
+- New correct (a): Missed-dose teaching must name the drug, because doubling tonight is wrong for both schedules
 - Source: XARELTO labeling: once-daily doses are not doubled the next day; the 15 mg twice-daily lead-in has a separate same-day catch-up. ELIQUIS labeling: take a missed dose the same day and do not double the dose to make up.
 - Why this is harder: One wallet card is efficient and wrong for two different regimens.
 - Confidence note: The item does not restate every clock-time exception. It rejects a double dose for these two maintenance regimens.
@@ -316,7 +316,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-01 (domain IV, objectives 3, 63)
 
 - Old correct (b): Direct thrombin (factor IIa) inhibition
-- New correct (a): Dabigatran directly inhibits thrombin, unlike oral factor Xa inhibitors, warfarin, and P2Y12 inhibitors
+- New correct (a): Dabigatran directly inhibits thrombin, unlike factor Xa inhibitors, warfarin, and P2Y12 blockers
 - Source: PRADAXA prescribing information: dabigatran is a direct thrombin inhibitor. Idarucizumab is the specific reversal antibody studied in RE-VERSE AD.
 - Why this is harder: One reversal drawer is being used for four different targets.
 
@@ -330,14 +330,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-03 (domain IV, objectives 69)
 
 - Old correct (b): Reduced DOAC exposure and loss of efficacy / thrombosis risk — often avoid combinations
-- New correct (c): Rifampin induces CYP3A4 and P-glycoprotein and lowers apixaban exposure, which is why the label avoids the combination
+- New correct (c): Rifampin induces CYP3A4 and P-glycoprotein, so the label avoids the pair
 - Source: ELIQUIS prescribing information: avoid strong combined CYP3A4 and P-glycoprotein inducers, including rifampin.
 - Why this is harder: The team expected a 'stronger blood thinner' interaction and looked the wrong direction.
 
 ### iv-04 (domain IV, objectives 27, 28)
 
 - Old correct (b): INR standardizes prothrombin time across thromboplastin reagents using the International Sensitivity Index
-- New correct (d): The INR uses the International Sensitivity Index so different reagents can yield a comparable warfarin result
+- New correct (d): The INR uses the International Sensitivity Index so different reagents can match
 - Source: INR definition: the prothrombin-time ratio adjusted by the thromboplastin's International Sensitivity Index, used for vitamin K antagonist monitoring.
 - Why this is harder: Two different second-values look like a lab error until the index is remembered.
 
@@ -359,21 +359,21 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-07 (domain IV, objectives 70)
 
 - Old correct (b): 4F-PCC plus intravenous vitamin K per institutional protocol
-- New correct (c): 4F-PCC for the immediate factor replacement plus vitamin K so new functional factors can be made
+- New correct (c): 4F-PCC for immediate factor replacement plus vitamin K so new functional factors can be made
 - Source: 2020 ACC expert consensus pathway, as cited on this site: 4-factor PCC plus vitamin K for warfarin-associated major bleeding.
 - Why this is harder: A falling INR after PCC looks like the job is finished. Warfarin is still on board.
 
 ### iv-08 (domain IV, objectives 65)
 
 - Old correct (b): Use agent-specific labeled dose-reduction criteria (and Cockcroft–Gault where labels expect it); do not under-dose without meeting criteria
-- New correct (d): Age and weight are already two labeled criteria, so the AF dose is 2.5 mg twice daily even though creatinine is 1.1
+- New correct (d): Age and weight are two criteria, so the AF dose is 2.5 mg twice daily
 - Source: This site, from the AF label: apixaban 2.5 mg twice daily only if at least two of age ≥80 years, weight ≤60 kg, and serum creatinine ≥1.5 mg/dL.
 - Why this is harder: A creatinine under 1.5 feels like a ban on reduction. She already has the other two criteria.
 
 ### iv-09 (domain IV, objectives 67, 69)
 
 - Old correct (b): Bleeding risk without necessarily changing DOAC plasma levels
-- New correct (a): More gastrointestinal bleeding from a platelet and mucosal effect, without a requirement for higher rivaroxaban exposure
+- New correct (a): More gastrointestinal bleeding from a platelet and mucosal effect, without a higher drug level
 - Source: Pharmacodynamic interaction: nonsteroidal anti-inflammatory drugs increase bleeding with rivaroxaban without needing a strong metabolic inhibition. XARELTO labeling warns about these drugs.
 - Why this is harder: People hunt for a level. The mucosa and the platelet are the mechanism.
 
@@ -394,7 +394,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-12 (domain IV, objectives 69)
 
 - Old correct (b): Increased DOAC exposure and bleeding risk — avoid or adjust per label/DDI guidance
-- New correct (d): Ritonavir is a strong combined P-glycoprotein and CYP3A4 inhibitor, and the rivaroxaban label avoids that combination rather than using the renal dose as a fix
+- New correct (d): The label avoids ritonavir, a strong combined inhibitor, rather than using the 15 mg renal dose
 - Source: XARELTO prescribing information: avoid combined P-glycoprotein and strong CYP3A4 inhibitors such as ritonavir-boosted regimens and ketoconazole. The 15 mg AF dose is the renal regimen.
 - Why this is harder: 15 mg is a real tablet, so it looks like a thoughtful compromise. It answers a different question.
 - Confidence note: The item does not quote an AUC ratio for ritonavir. The action is avoidance, which is the label instruction.
@@ -402,14 +402,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-13 (domain IV, objectives 63)
 
 - Old correct (b): Antithrombin-dependent inhibition, with relatively greater anti-Xa than anti-IIa activity vs unfractionated heparin
-- New correct (a): Enoxaparin potentiates antithrombin and indirectly inhibits factor Xa, whereas apixaban directly inhibits factor Xa
+- New correct (a): Enoxaparin inhibits factor Xa via antithrombin; apixaban inhibits factor Xa directly
 - Source: LMWH pharmacology: antithrombin-dependent, anti-Xa greater than anti-IIa. Apixaban: direct factor Xa inhibitor, antithrombin-independent.
 - Why this is harder: The shared letter Xa hides the indirect versus direct difference.
 
 ### v-01 (domain V, objectives 76)
 
 - Old correct (b): A quality measure of how often INR values stay within the target range — stewardship for VKA programs
-- New correct (a): It is the proportion of time a warfarin patient's INR is in range, useful for finding unstable patients, and it is not a DOAC metric or a mandated national percentage
+- New correct (a): The share of time a warfarin INR is in range; it is not a DOAC metric or a national percentage
 - Source: Warfarin quality measurement: time in therapeutic range describes INR control. This site does not set a single national percentage target and does not apply the metric to DOACs.
 - Why this is harder: A clean percentage is being asked to govern drugs that have no INR target.
 - Confidence note: No numeric time-in-range cutoff is stated, consistent with this site's refusal to invent one.
@@ -417,7 +417,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-02 (domain V, objectives 74)
 
 - Old correct (b): A quality system consistent with applicable Clinical Laboratory Improvement Amendments/waived-test rules, training, and correlation policies with the lab
-- New correct (b): Training, quality control, storage rules, and a written response when control fails or a result disagrees with the laboratory
+- New correct (b): Training, controls, storage rules, and a written response when a control fails
 - Source: Point-of-care operations: training, quality control, storage, and a rule for failed or discordant results. No CLIA section number is cited.
 - Why this is harder: The go-live date is the pressure to skip the control plan.
 - Confidence note: No Clinical Laboratory Improvement Amendments citation is attached.
@@ -425,21 +425,21 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-03 (domain V, objectives 84)
 
 - Old correct (b): Improve evidence-aligned agent selection, dosing, peri-procedural plans, and bleed/reversal readiness across the institution
-- New correct (c): Match indication, dose, and duration; catch unindicated combinations; and keep monitoring and peri-procedure ownership clear
+- New correct (c): Match indication, dose, and duration, and keep monitoring ownership clear
 - Source: Stewardship practice on this site: correct indication and dose, appropriate duration, deprescribing of unindicated combinations, and clear monitoring and peri-procedure responsibility.
 - Why this is harder: A switch campaign is easy to count and is not the aim.
 
 ### i-13 (domain I, objectives 12)
 
 - Old correct (b): A chronic sequela of venous obstruction/reflux causing pain, edema, and skin changes that prevention of recurrent DVT and early care may help reduce
-- New correct (a): Chronic heaviness can be post-thrombotic syndrome, but today's abrupt change needs evaluation for recurrent DVT
+- New correct (a): Chronic heaviness can be post-thrombotic syndrome, but today's change needs a recurrence check
 - Source: Clinical distinction between post-thrombotic syndrome and suspected recurrent DVT. No anticoagulant-intensity number is asserted for chronic symptoms alone.
 - Why this is harder: Stable chronic symptoms and an acute change are both in the stem, so one label cannot cover both.
 
 ### i-14 (domain I, objectives 15)
 
 - Old correct (b): Mechanical valves generally carry higher thrombosis risk than bioprostheses, and mitral (and right-sided) positions are often higher risk than aortic among mechanical valves — informing INR intensity and bridging judgments
-- New correct (b): The mechanical mitral prosthesis is the higher-risk valve position and is managed as a VKA case, not like a tissue aortic valve in sinus rhythm
+- New correct (b): The mechanical mitral prosthesis is the higher-risk position and is a VKA case, not a tissue aortic valve in sinus rhythm
 - Source: 2020 ACC/AHA guideline for valvular heart disease: mechanical mitral INR target 3.0 (range 2.5–3.5); bileaflet or current-generation tilting-disc aortic valve without AF, prior thromboembolism, left-ventricular dysfunction, or a hypercoagulable state, INR target 2.5 (range 2.0–3.0). RE-ALIGN: dabigatran on mechanical valves was stopped for harm.
 - Why this is harder: Two valves in sinus rhythm look similar until position and prosthesis type are used.
 - Confidence note: INR ranges are from the 2020 ACC/AHA valvular guideline. A later focused update was not re-opened.
@@ -475,7 +475,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-19 (domain I, objectives 2, 34)
 
 - Old correct (b): Warfarin reduces vitamin K-dependent natural anticoagulant proteins; early protein C depletion can precede full reduction of longer-lived procoagulant factors, especially prothrombin
-- New correct (c): Much of this early INR is factor VII loss, and prothrombin may not yet be suppressed, so overlap is still the CHEST pattern
+- New correct (c): Much of this early INR is factor VII loss, and prothrombin may not yet be suppressed, so overlap continues
 - Source: CHEST VTE guideline parenteral-warfarin overlap; textbook half-lives (factor VII about 6 hours, prothrombin about 60 hours).
 - Why this is harder: A reassuring INR and a well patient push the learner to stop overlap early.
 - Confidence note: Half-lives are textbook approximations. Overlap wording is the CHEST VTE guideline.
@@ -483,7 +483,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-20 (domain I, objectives 7, 38)
 
 - Old correct (b): The event was unprovoked, or provoked by persistent/recurrent risk (e.g., active cancer, ongoing estrogen if continued, strong thrombophilia in context) — balancing bleed risk
-- New correct (d): Patient B, because an unprovoked proximal event is the pattern for which extended therapy is considered when bleeding risk is not high
+- New correct (d): Patient B, because an unprovoked proximal event is the pattern for which extended therapy is considered
 - Source: 2021 CHEST guideline on antithrombotic therapy for VTE: finite treatment, typically 3 months, after a major transient provoking factor; extended-phase consideration after unprovoked proximal VTE when bleeding risk is not high.
 - Why this is harder: Both patients feel well, so symptoms cannot be the discriminator.
 - Confidence note: Duration framing follows the 2021 CHEST VTE guideline. Individual bleeding tradeoffs are not given a numeric score in this item.
@@ -534,7 +534,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-19 (domain II, objectives 44, 45)
 
 - Old correct (b): Selected patients who can demonstrate device competence, adhere to reporting/quality plans, and have clinic oversight policies in place
-- New correct (c): Demonstrated technique plus a reliable way to report results to a clinician who still manages out-of-range values
+- New correct (c): Demonstrated technique plus a report path to a clinician who manages out-of-range values
 - Source: Clinic operations principle on this site: home INR testing requires training, a reporting pathway, and clinician management of the result. No regulatory section number is cited.
 - Why this is harder: Motivation and a willing daughter do not replace a failed skills check.
 - Confidence note: No CLIA or coverage citation is attached. The item is an operations judgment, not a billing rule.
@@ -542,7 +542,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-20 (domain II, objectives 25, 26, 68)
 
 - Old correct (b): Agents with established lactation safety profiles such as warfarin or LMWH in usual counseling — avoid DOACs unless specialist guidance says otherwise
-- New correct (d): Warfarin and LMWH have established lactation roles, while DOACs are not the default during breastfeeding
+- New correct (d): Warfarin and LMWH have established lactation roles, while a DOAC is not the breastfeeding default
 - Source: Product labeling: DOACs are not recommended in breastfeeding. Warfarin and LMWH have established lactation use. This site treats breastfeeding, like pregnancy, as outside usual DOAC practice and inside an LMWH or warfarin discussion.
 - Why this is harder: The end of pregnancy tempts a full stop or a casual DOAC start.
 - Confidence note: Agent-by-agent milk concentrations were not re-checked against a 2026 DailyMed file. The item stays with the class distinction.
@@ -550,7 +550,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-21 (domain II, objectives 26)
 
 - Old correct (b): Weight-based regimens, age-specific physiology, and pediatric hematology protocols dominate — do not extrapolate adult AF DOAC schedules casually
-- New correct (a): Use a pediatric reference and a formulation the child can take, not an adult AF schedule copied from a relative
+- New correct (a): Use a pediatric reference and a formulation the child can take, not a relative's AF dose
 - Source: Pediatric anticoagulation principle: do not copy an adult AF regimen. No pediatric dose is printed in this item.
 - Why this is harder: A grandparent's tablet is a concrete, and wrong, shortcut.
 - Confidence note: No pediatric dose or suspension concentration is stated. Product labeling for children was not re-verified in this pass.
@@ -558,7 +558,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-22 (domain II, objectives 43)
 
 - Old correct (b): Most low-bleed-risk dental procedures can proceed without interrupting therapeutic anticoagulation, using local hemostatic measures; higher-risk oral surgery needs individualized plans
-- New correct (b): Many minor dental procedures proceed without stopping warfarin when local hemostasis is available, and routine bridging is not the plan
+- New correct (b): Minor dental work can stay on warfarin with local hemostasis, without routine bridging
 - Source: CHEST perioperative guidance on minor dental procedures continuing VKA with local hemostasis. BRIDGE: routine LMWH bridging is not supported for typical AF.
 - Why this is harder: The patient's expectation of injections is the habit being tested.
 - Confidence note: The dental continuation statement follows widely used CHEST perioperative teaching. The edition's paragraph number was not re-opened.
@@ -566,14 +566,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-23 (domain II, objectives 43)
 
 - Old correct (b): Thrombotic risk of holding anticoagulation (valve type/position, recent VTE/stroke, stroke-risk-score-based risk) versus bleed risk of the procedure and of bridging itself
-- New correct (c): Thrombotic risk of the hold, bleed risk of the procedure, and bleed risk of the bridge itself, which differ for these two patients
+- New correct (c): Thrombotic risk of the hold, bleed risk of the procedure, and bleed risk of the bridge
 - Source: BRIDGE on this site (arterial thromboembolism 0.4% versus 0.3%; major bleeding 1.3% versus 3.2%). Mechanical valves were excluded and are planned with a valve protocol, not with the AF default.
 - Why this is harder: Two warfarin holds look administratively identical until prosthesis and procedure risk are named.
 
 ### ii-24 (domain II, objectives 28, 29)
 
 - Old correct (b): INR may be unreliable (e.g., certain lupus anticoagulant / baseline prothrombin time effects) and a complementary VKA-effect measure is needed per lab protocols
-- New correct (d): When the INR is unreliable because of a lupus anticoagulant, so factor X activity can reflect the warfarin effect
+- New correct (d): When a lupus anticoagulant makes the INR unreliable, factor X activity can reflect warfarin
 - Source: Laboratory principle: chromogenic factor X activity can monitor warfarin when a lupus anticoagulant invalidates the INR. No therapeutic activity range is printed, because institutional cut points differ.
 - Why this is harder: The assay name sounds like a factor Xa inhibitor level, which is the trap.
 - Confidence note: No numeric chromogenic factor X target is stated. Institutional ranges differ and were not re-verified.
@@ -581,7 +581,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-25 (domain II, objectives 27, 29)
 
 - Old correct (b): Point-of-care and lab INR can disagree — clinics need correlation policies, especially at extremes of INR or when clinical decisions are high-stakes
-- New correct (a): Do not base today's warfarin change on the unchecked fingerstick; the venous result that fits the trend is the one to use
+- New correct (a): Do not dose from the unchecked fingerstick; use the venous INR that fits the recent trend
 - Source: Point-of-care INR operations: a result obtained without required quality control is not used to change warfarin when it conflicts with a venous INR.
 - Why this is harder: The higher number looks more 'careful' and tempts vitamin K.
 - Confidence note: No vitamin K threshold is applied to the averaged number. The venous INR of 2.6 needs no reversal.
@@ -605,7 +605,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-28 (domain II, objectives 37, 48)
 
 - Old correct (b): Clear documentation of agent, dose, indication, target INR if VKA, hold/restart plans, labs due, and who follows the patient
-- New correct (d): Drug, indication, start date, last doses, clearance, the hemoglobin concern, and who owns the next decision
+- New correct (d): Drug, indication, last doses, clearance, the hemoglobin concern, and who decides next
 - Source: Transitions-of-care practice for anticoagulation: indication, agent, timing, renal function, bleeding issues, and a responsible clinician.
 - Why this is harder: 'Blood thinner' is the empty handoff the item rejects.
 
@@ -634,14 +634,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-32 (domain II, objectives 24)
 
 - Old correct (b): Apixaban versus rivaroxaban differences in clinically relevant bleeding can inform shared choice when both are otherwise appropriate
-- New correct (d): Lower clinically relevant bleeding with apixaban, and similar recurrent VTE, can favor apixaban when both regimens fit
+- New correct (d): Less clinically relevant bleeding with apixaban, and similar recurrent VTE, can favor apixaban
 - Source: COBRRA on this site: clinically relevant bleeding 3.3% versus 7.1% (RR 0.46); recurrent symptomatic VTE 1.1% versus 1.0%.
 - Why this is harder: A remote bleed can be used either to ban a drug class or to ignore the head-to-head data. The item asks for the narrower reading.
 
 ### ii-33 (domain II, objectives 43)
 
 - Old correct (b): A coordinated interruption and restart plan that evaluates whether bridging is warranted from valve type, position, patient thrombotic risk, procedure bleeding risk, and the applicable guideline or institutional pathway
-- New correct (a): Do not copy the AF no-bridge default onto a mechanical mitral valve; plan the hold with the valve team and a bridge protocol
+- New correct (a): Do not copy the AF no-bridge default onto a mechanical mitral valve; plan the hold with the valve team
 - Source: BRIDGE on this site excluded mechanical valves. This site's valve pathway: do not extrapolate the AF no-bridge finding to a mechanical mitral valve.
 - Why this is harder: A true trial name is being applied to the wrong patient.
 - Confidence note: No bridge drug, dose, or stop-day count is stated. Those belong to an institutional valve protocol.
@@ -649,14 +649,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-34 (domain II, objectives 38, 42)
 
 - Old correct (b): Reassess for persistent risks (active cancer, ongoing hormonal therapy, inflammatory disease, prior unprovoked events) and bleed risks that change the stop-vs-extend calculus
-- New correct (b): Whether the event was truly unprovoked, current bleeding risk, adherence, and kidney function, before an extension is chosen
+- New correct (b): Confirm it was unprovoked, and review bleeding risk, adherence, and kidney function before extending
 - Source: 2021 CHEST VTE guideline: extended anticoagulation is considered after unprovoked proximal VTE when bleeding risk is acceptable, after the clinical context is actually known.
 - Why this is harder: A single word in the chart is not a duration plan.
 
 ### ii-35 (domain II, objectives 30)
 
 - Old correct (b): Each DOAC has product- and indication-specific renal eligibility and dosing rules; the renal estimation method must match the labeling rather than treating CrCl and estimated glomerular filtration rate as interchangeable
-- New correct (c): Cockcroft-Gault clearance is now about 39 mL/min, and the AF label uses 15 mg daily with the evening meal in that range
+- New correct (c): Clearance is now about 39 mL/min, and the AF label uses 15 mg daily with the evening meal in that range
 - Source: U.S. XARELTO prescribing information: AF dose 20 mg daily with the evening meal if CrCl is above 50 mL/min, and 15 mg daily with the evening meal if CrCl is 15 to 50 mL/min. This site prints the ROCKET-AF 15 mg subgroup as CrCl 30–49 mL/min.
 - Why this is harder: A modest creatinine rise is easy to shrug off. The clearance math is the item.
 - Confidence note: The label cut point of CrCl ≤50 mL/min for rivaroxaban 15 mg in AF is wider than the ROCKET-AF 30–49 mL/min subgroup printed on this site. Confirm against the current XARELTO label.
@@ -664,21 +664,21 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-36 (domain II, objectives 20, 65)
 
 - Old correct (b): Full-dose anticoagulation for NVAF stroke prevention or acute VTE treatment
-- New correct (d): AF stroke prevention and acute DVT treatment, both of which need full anticoagulation rather than 2.5 mg
+- New correct (d): AF stroke prevention and acute DVT treatment, which need full anticoagulation, not 2.5 mg
 - Source: COMPASS on this site: rivaroxaban 2.5 mg twice daily plus aspirin for stable CAD or PAD, not a substitute for AF or acute VTE anticoagulation.
 - Why this is harder: One tablet strength is being asked to do three jobs.
 
 ### iii-06 (domain III, objectives 52, 57)
 
 - Old correct (b): Practical routines (pillbox, linked habits), what to do if a dose is missed per that drug’s guidance, and teach-back of red-flag bleed symptoms
-- New correct (b): Tie the two doses to two daily events he already never skips, and check with teach-back which events he chose
+- New correct (b): Tie each dose to a daily event he never skips, and use teach-back to check which two events he named
 - Source: Adherence practice for twice-daily DOACs: link each dose to a stable daily event and verify the plan by teach-back. Every-other-day use is not an adherence strategy.
 - Why this is harder: He already misses a once-daily vitamin, so a harder schedule needs a concrete cue.
 
 ### iii-07 (domain III, objectives 51, 54, 55)
 
 - Old correct (b): Plain-language explanation of why INR is checked, what foods/consistency means, which over-the-counter drugs to ask about, and when to seek care for bleeding
-- New correct (c): Use short words, a specific tablet plan, and teach-back of what to do if he misses a dose or sees blood
+- New correct (c): Short words, a tablet plan, and teach-back of a missed dose and of bleeding that needs a call
 - Source: Health-literacy practice: short wording, a concrete action, and teach-back. A nod or a signature does not show understanding.
 - Why this is harder: The long summary looks complete and is the barrier.
 
@@ -720,7 +720,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-15 (domain IV, objectives 69)
 
 - Old correct (b): Inhibit P-glycoprotein/CYP3A4 to varying degrees, increasing DOAC exposure/bleed risk — avoid or dose-adjust per labeling and DDI resources
-- New correct (c): Ketoconazole is a strong combined inhibitor, and the label reduces a 5 mg apixaban dose by half or avoids the drug if the dose is already 2.5 mg
+- New correct (c): Ketoconazole is a strong combined inhibitor; the label halves 5 mg and avoids an existing 2.5 mg dose
 - Source: ELIQUIS prescribing information: with combined strong CYP3A4 and P-glycoprotein inhibitors, reduce a 5 mg or 10 mg twice-daily dose by half; avoid the combination if the patient is already on 2.5 mg twice daily.
 - Why this is harder: A normal clearance makes the team forget the metabolic interaction.
 - Confidence note: Rivaroxaban's instruction with ketoconazole is avoidance, not the apixaban half-dose rule. This item is the apixaban rule.
@@ -728,63 +728,63 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-16 (domain IV, objectives 63)
 
 - Old correct (b): Inhibition of vitamin K epoxide reductase, reducing the vitamin K recycling needed to produce functional factors II, VII, IX, X and the anticoagulant proteins C and S
-- New correct (d): Warfarin inhibits vitamin K epoxide reductase, so new functional factors II, VII, IX, and X cannot be made
+- New correct (d): Warfarin blocks vitamin K epoxide reductase, so new factors II, VII, IX, and X are not made
 - Source: Warfarin pharmacology: inhibition of vitamin K epoxide reductase reduces gamma-carboxylation of factors II, VII, IX, and X and proteins C and S.
 - Why this is harder: The learner is applying DOAC offset timing to a synthesis inhibitor.
 
 ### iv-17 (domain IV, objectives 28, 65)
 
 - Old correct (b): Unfractionated heparin anticoagulant response is variable; activated partial thromboplastin time/anti-Xa protocols guide titration in venous/arterial indications
-- New correct (a): Unfractionated heparin's effect is variable and short-lived, so a protocolized clotting time is used to adjust the infusion
+- New correct (a): Heparin's effect is variable and short, so a protocolized clotting time adjusts the infusion
 - Source: Unfractionated heparin pharmacology: short half-life and variable protein binding, monitored with a protocolized activated partial thromboplastin time or anti-Xa assay.
 - Why this is harder: Both drugs are anticoagulants, so one monitoring habit is being copied.
 
 ### iv-18 (domain IV, objectives 63)
 
 - Old correct (b): Indirect, antithrombin-mediated selective factor Xa inhibition (synthetic pentasaccharide)
-- New correct (b): Fondaparinux is a parenteral pentasaccharide that inhibits factor Xa through antithrombin, not a direct oral inhibitor, and it has no specific antidote
+- New correct (b): A parenteral pentasaccharide: it inhibits factor Xa through antithrombin and has no specific antidote
 - Source: This site, from Arixtra overdosage: there is no known antidote. Fondaparinux is a parenteral antithrombin-dependent factor Xa inhibitor.
 - Why this is harder: The phrase 'factor Xa' pulled the learner toward apixaban's class and the wrong antibody.
 
 ### iv-19 (domain IV, objectives 64)
 
 - Old correct (b): It is converted to active dabigatran that directly inhibits thrombin (factor IIa); P-glycoprotein affects absorption/exposure
-- New correct (c): The etexilate is a prodrug that becomes active dabigatran after absorption, and routine opening of the capsule is not the labeled administration
+- New correct (c): Etexilate is a prodrug that becomes dabigatran after absorption; capsules stay closed
 - Source: PRADAXA pharmacology: dabigatran etexilate is a prodrug converted to dabigatran, a direct thrombin inhibitor and a P-glycoprotein substrate. Capsules are swallowed whole in standard administration.
 - Why this is harder: Opening the capsule looks like a small adherence favor and breaks the administration.
 
 ### iv-20 (domain IV, objectives 65)
 
 - Old correct (b): Parenteral anticoagulation preceded edoxaban maintenance in the pivotal VTE program
-- New correct (d): Edoxaban in Hokusai-VTE followed at least 5 days of parenteral anticoagulation; rivaroxaban in EINSTEIN did not
+- New correct (d): Edoxaban in Hokusai-VTE followed at least 5 days of heparin; rivaroxaban in EINSTEIN did not
 - Source: Hokusai-VTE on this site: parenteral heparin for at least 5 days, then edoxaban. EINSTEIN: rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily, without that lead-in.
 - Why this is harder: Both are factor Xa inhibitors, so the first-week orders were copied.
 
 ### iv-21 (domain IV, objectives 67, 69)
 
 - Old correct (b): Additive bleeding tendency from combining anticoagulants with antiplatelets, nonsteroidal anti-inflammatory drugs, or selective serotonin reuptake inhibitors — even without a major pharmacokinetic area under the concentration-time curve change
-- New correct (a): Ibuprofen is a pharmacodynamic bleeding risk; ketoconazole is a pharmacokinetic exposure increase
+- New correct (a): Ibuprofen is a pharmacodynamic bleeding risk; ketoconazole is a pharmacokinetic rise in exposure
 - Source: ELIQUIS labeling: ketoconazole is a combined strong CYP3A4 and P-glycoprotein inhibitor that changes the dose. Nonsteroidal anti-inflammatory drugs are a bleeding warning without that exposure rule.
 - Why this is harder: Two 'do not add this' warnings look identical on a slide.
 
 ### iv-22 (domain IV, objectives 70)
 
 - Old correct (b): Fully reverses unfractionated heparin and only partially reverses LMWH; not a DOAC antidote
-- New correct (b): Protamine neutralizes heparin, only partly reverses LMWH anti-Xa activity, and does not reverse a DOAC
+- New correct (b): Protamine neutralizes heparin, only partly reverses LMWH, and does not reverse a DOAC
 - Source: This site: heparin label, about 1 mg protamine per 100 units, no more than 50 mg in 10 minutes; Lovenox, anti-Xa neutralization never complete (maximum about 60%). Protamine is not a DOAC antidote.
 - Why this is harder: One antidote name is being applied to every parenteral-looking order.
 
 ### iv-23 (domain IV, objectives 65)
 
 - Old correct (b): Twice-daily dosing with label-based dose reductions when specific age/weight/creatinine criteria are met — verify current labeling rather than memorizing contested cutoffs from unofficial banks
-- New correct (c): She has only one of the three criteria, so the AF dose stays 5 mg twice daily; 2.5 mg is not an empiric 'elderly' dose
+- New correct (c): Only one of three criteria is met, so the AF dose stays 5 mg, not empiric 2.5 mg
 - Source: This site: apixaban 2.5 mg twice daily for AF only if at least two of age ≥80 years, weight ≤60 kg, and serum creatinine ≥1.5 mg/dL. AMPLIFY's 10 mg lead-in is the VTE regimen.
 - Why this is harder: Age plus a modest clearance is the pattern that produces inappropriate 2.5 mg dosing.
 
 ### iv-24 (domain IV, objectives 28, 29)
 
 - Old correct (b): Routine prothrombin time/INR/activated partial thromboplastin time are imperfect; specialized assays may help but decisions often proceed based on last dose timing, renal function, and clinical bleed severity
-- New correct (d): A normal INR does not clear dabigatran; the thrombin time is very sensitive, and a level must not delay resuscitation or reversal if bleeding is life-threatening
+- New correct (d): A normal INR does not clear dabigatran, and a level must not delay reversal of major bleeding
 - Source: Dabigatran laboratory teaching: the INR is insensitive, the thrombin time is very sensitive, and the activated partial thromboplastin time is not a quantitative dose. RE-VERSE AD: idarucizumab 5 g intravenous when reversal is indicated.
 - Why this is harder: A normal INR is being asked to clear a thrombin inhibitor.
 - Confidence note: No numeric thrombin-time cutoff is stated.
@@ -792,7 +792,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-25 (domain IV, objectives 64, 65, 67)
 
 - Old correct (b): Adjust or avoid per labeling in significant renal impairment and consider anti-Xa monitoring in selected patients per protocols
-- New correct (a): Clearance is now about 29 mL/min, so the labeled treatment adjustment is 1 mg/kg once daily rather than every 12 hours
+- New correct (a): Clearance is about 29 mL/min, so the labeled treatment dose is 1 mg/kg once daily
 - Source: U.S. Lovenox prescribing information: treatment-dose enoxaparin 1 mg/kg every 12 hours, adjusted to 1 mg/kg once daily when creatinine clearance is below 30 mL/min.
 - Why this is harder: The old order is specific and recent-looking. The creatinine is what expired it.
 - Confidence note: The 1 mg/kg once-daily adjustment is the U.S. Lovenox label. It is not printed as a dosing table on this site.
@@ -800,14 +800,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-26 (domain IV, objectives 69)
 
 - Old correct (b): Induce enzymes/transporters and reduce DOAC exposure — generally avoid
-- New correct (b): It induces CYP3A4 and P-glycoprotein, and the apixaban label groups it with inducers to avoid
+- New correct (b): It induces CYP3A4 and P-glycoprotein, and the apixaban label says to avoid that inducer
 - Source: ELIQUIS prescribing information: avoid St John's wort as a strong combined CYP3A4 and P-glycoprotein inducer.
 - Why this is harder: A sleep remedy is the detail most likely to be left off the medication list.
 
 ### v-04 (domain V, objectives 75)
 
 - Old correct (b): Accurate indication coding, visit/procedure coding for INR management and education, and audit-ready documentation aligned to the service performed
-- New correct (d): Code the condition that was actually assessed and treated, so the record, the indication, and the bill describe the same event
+- New correct (d): Code the condition that was treated, so the record and the bill describe the same event
 - Source: Documentation practice: code the condition assessed and treated. No billing-code number is stated, and no revenue target is endorsed.
 - Why this is harder: Two vague labels look billable and erase the clinical reason for the anticoagulant.
 - Confidence note: No CPT or ICD code number is stated.
@@ -815,7 +815,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-05 (domain V, objectives 76)
 
 - Old correct (b): Time in therapeutic range, extreme INR rates, time-to-follow-up after out-of-range values, and adverse event reviews
-- New correct (a): Time in therapeutic range, follow-up of extreme INRs, time to act on a critical result, and a bleeding-event review
+- New correct (a): Time in range, extreme-INR follow-up, time to act on a critical result, and bleeding review
 - Source: Warfarin quality dashboard: time in therapeutic range, extreme-INR follow-up, critical-result turnaround, and bleeding review. FRAIL-AF on this site does not support routine switching as a safety program.
 - Why this is harder: A star rating is visible and does not show an INR of 8 sitting unseen.
 
@@ -829,7 +829,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-12 (domain III, objectives 52)
 
 - Old correct (c): The labeled regimen is once daily, with food for the 15 or 20 mg tablet; a written clinic plan explains the transition day
-- New correct (d): Keep roughly a 24-hour interval, take the 20 mg dose with an evening meal on local time, and do not double
+- New correct (d): Keep about a 24-hour interval, take 20 mg with an evening meal on local time, and do not double
 - Source: XARELTO labeling: 20 mg once daily with the evening meal; a missed once-daily dose is not made up by doubling the next dose.
 - Why this is harder: Jet lag invites a homemade loading plan.
 
@@ -844,14 +844,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-14 (domain III, objectives 52)
 
 - Old correct (c): Carry enough medication in hand luggage for the trip plus a buffer, keep a current med list, and know how to reach the clinic if doses are lost
-- New correct (b): Pack enough tablets, know where an INR can be drawn, and know where to go for bleeding
+- New correct (b): Pack enough tablets, know where an INR can be drawn, and know where to go if bleeding starts
 - Source: Warfarin travel counseling: continue the regimen, arrange the INR, and identify urgent care for bleeding.
 - Why this is harder: Packing is concrete. The missing INR plan is the piece patients skip.
 
 ### iii-15 (domain III, objectives 39, 52)
 
 - Old correct (b): Binge drinking can destabilize INR and increase bleed risk—advise ahead with the clinic rather than guessing holds or double doses after the party
-- New correct (c): A binge can increase bleeding and destabilize the INR, so this is not a safe plan on an in-range historical INR
+- New correct (c): A binge can increase bleeding and move the INR, so last month's in-range value does not make it safe
 - Source: Warfarin counseling and HAS-BLED: alcohol excess is a bleeding risk and can destabilize the INR. No specific drink threshold is stated.
 - Why this is harder: A recent therapeutic INR feels like permission.
 - Confidence note: No quantitative alcohol limit is given. Guidance on a specific number of drinks was not re-verified.
@@ -859,49 +859,49 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-07 (domain V, objectives 76, 84)
 
 - Old correct (b): Report/document the near-miss through the clinic’s safety channel so counseling workflows can be improved
-- New correct (c): Put the food rule into the discharge order set and the teach-back script for 15 mg and 20 mg tablets, and review whether the near-miss repeats
+- New correct (c): Put the 15 mg and 20 mg food rule in the discharge set and the teach-back, then watch for repeat misses
 - Source: This site: rivaroxaban 15 mg and 20 mg are taken with food; the AF dose is taken with the evening meal. A near-miss response changes the order set and the teach-back, then checks for recurrence.
 - Why this is harder: A heroic catch is being mistaken for a reliable process.
 
 ### v-08 (domain V, objectives 74, 84)
 
 - Old correct (b): Aligns formulary choices, order sets, and reversal pathways with reviewed protocols and updates them when labeling or availability changes (e.g., U.S. Andexxa status)
-- New correct (d): Retire the withdrawn-product order, and require indication, dose, and a reversal path that matches current United States teaching
+- New correct (d): Retire the withdrawn order, and require an indication, a dose, and a current reversal path
 - Source: This site after 22 December 2025: Andexxa is not a United States order. Governance removes it and aligns reversal sets with idarucizumab for dabigatran and institutional 4F-PCC for factor Xa bleeding.
 - Why this is harder: Keeping the old order 'for education' is how the wrong drug gets selected at 2 a.m.
 
 ### v-09 (domain V, objectives 77)
 
 - Old correct (b): Documented initial training plus periodic competency checks on dosing counseling, bleed triage escalation, and point-of-care INR workflows when used
-- New correct (a): Documented training and a direct observation of the INR test and the critical-result action before independent practice
+- New correct (a): Training plus direct observation of the test and the critical-result action before independent practice
 - Source: Competence process: training and direct observation of point-of-care testing and critical-result handling, documented before independent practice.
 - Why this is harder: Staffing pressure is the reason to skip the observation.
 
 ### v-10 (domain V, objectives 74, 84)
 
 - Old correct (b): Update order sets, policies, and staff education to U.S. supportive care + institutional/off-label 4F-PCC per protocol, and retire Andexxa as a U.S. orderable option
-- New correct (b): Remove or hard-stop the order, point prescribers to the institutional 4F-PCC pathway, and audit for any remaining use
+- New correct (b): Hard-stop the order, point to the institutional 4F-PCC pathway, and audit any remaining use
 - Source: This site: Andexxa is not available in the United States after 22 December 2025. The operational response is to remove the order and use the institutional 4F-PCC pathway for factor Xa bleeding.
 - Why this is harder: The order remains because nobody's job description includes deleting it.
 
 ### i-27 (domain I, objectives 15, 20)
 
 - Old correct (b): Mechanical valves are a VKA niche with DOAC contraindication teaching, whereas post-TAVI antithrombotic choice forks on whether a separate OAC indication (e.g., AF) exists — routine DOAC ‘for the valve’ without that indication is not the default
-- New correct (c): A mechanical mitral valve remains a VKA case, and routine DOAC use after TAVI without an OAC indication is not supported by GALILEO
+- New correct (c): A mechanical mitral valve stays a VKA case, and GALILEO did not support a routine post-TAVI DOAC
 - Source: GALILEO on this site: rivaroxaban-based strategy after TAVI without another OAC indication, stopped early, death or thromboembolism 9.8 versus 7.2 per 100 person-years (HR 1.35). RE-ALIGN: dabigatran in mechanical valves stopped for harm.
 - Why this is harder: A neighbor's one-rule advice is applied to two different valves.
 
 ### ii-37 (domain II, objectives 20, 24)
 
 - Old correct (b): Without another OAC indication, an antiplatelet-based pathway, usually single antiplatelet therapy when dual therapy is not otherwise indicated, fits the evidence better than routine DOAC prophylaxis for leaflet thrombosis; imaging findings alone do not establish a clinical mandate
-- New correct (a): GALILEO stopped a rivaroxaban-based strategy early for harm versus antiplatelet therapy in this no-OAC-indication population
+- New correct (a): GALILEO stopped rivaroxaban early for harm versus antiplatelets when no other OAC indication existed
 - Source: GALILEO on this site: rivaroxaban 10 mg daily with aspirin for 3 months versus antiplatelet therapy after TAVI without another OAC indication; stopped early; death or thromboembolism 9.8 versus 7.2 per 100 person-years (HR 1.35).
 - Why this is harder: Leaflet fear plus a familiar DOAC produces the regimen the trial did not support.
 
 ### ii-38 (domain II, objectives 43)
 
 - Old correct (b): Not routine — BRIDGE found forgoing bridging noninferior for arterial thromboembolism and major bleeding higher with bridging; plan interruption/restart without reflexive LMWH in this phenotype
-- New correct (b): As unsupported for this phenotype: thromboembolism was similar and major bleeding was higher with bridging
+- New correct (b): As unsupported here: thromboembolism was similar and major bleeding was higher with bridging
 - Source: BRIDGE on this site: arterial thromboembolism 0.4% versus 0.3%; major bleeding 1.3% versus 3.2% (relative risk 0.41). Mechanical valves excluded.
 - Why this is harder: A standing order for shots is the behavior the trial argued against.
 
@@ -915,21 +915,21 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-16 (domain III, objectives 52)
 
 - Old correct (b): Explain that for many people with typical AF, routine bridging shots add bleeding risk without improving stroke prevention during a planned hold — the team will make a personalized hold/restart plan and only use bridging when thrombotic risk is unusually high (for example some valve situations)
-- New correct (d): Explain that in BRIDGE, forgoing a heparin bridge did not increase arterial thromboembolism and caused less major bleeding
+- New correct (d): In BRIDGE, skipping a heparin bridge did not raise arterial events and caused less major bleeding
 - Source: BRIDGE on this site: arterial thromboembolism 0.4% versus 0.3%; major bleeding 1.3% versus 3.2%.
 - Why this is harder: A memorable slogan ('never uncovered') is what the counseling has to unpack.
 
 ### iii-17 (domain III, objectives 52)
 
 - Old correct (b): Explain that the neighbor’s AF is a different reason for anticoagulation; after TAVI without AF or another OAC indication, care is usually antiplatelet-based, and routine DOAC just for the valve is not the standard teaching — decisions are individualized with the implant team
-- New correct (a): Her neighbor's AF indication is not her indication, and GALILEO did not support a rivaroxaban strategy after TAVI when no OAC indication exists
+- New correct (a): The neighbor's AF dose is not hers, and GALILEO did not support that post-TAVI plan
 - Source: GALILEO on this site: rivaroxaban-based strategy after TAVI without another OAC indication, stopped early, death or thromboembolism HR 1.35.
 - Why this is harder: The shared word 'valve' is the counseling error.
 
 ### iv-27 (domain IV, objectives 64, 65)
 
 - Old correct (b): DOACs have relatively rapid onset/offset versus warfarin; typical AF interruptions usually use timed holds and restarts per renal function, bleed risk, and labeling — not a reflexive heparin bridge while the DOAC is stopped
-- New correct (c): Apixaban's offset is on the order of hours to a short interruption, and PAUSE did not use heparin bridging for that hold
+- New correct (c): Apixaban's offset is short, and PAUSE did not use a heparin bridge for this low-bleeding-risk hold
 - Source: PAUSE on this site: omit the DOAC 1 day before low-bleeding-risk procedures and 2 days before high-bleeding-risk procedures, without heparin bridging. Edoxaban was not studied.
 - Why this is harder: Five days plus shots is a familiar warfarin sentence.
 - Confidence note: No hour-by-hour half-life is stated. The timing used is the PAUSE schedule already on this site.
@@ -937,14 +937,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-11 (domain V, objectives 79, 80)
 
 - Old correct (b): Named indication and thrombotic-risk class, whether interruption is needed, whether bridging is or is not planned (with rationale), agent-specific hold/restart plan, proceduralist contact, and a named owner for post-procedure restart
-- New correct (c): A note that names the drug, whether a hold is required, the stop and restart timing, and which clinician owns the restart
+- New correct (c): Name the drug, whether a hold is required, the timing, and which clinician owns the restart
 - Source: This site's peri-procedural framework: document whether to interrupt, the agent, the timing, and who restarts. BRIDGE does not support routine bridging for typical NVAF.
 - Why this is harder: Three partial notes feel like a plan. None of them can be followed.
 
 ### iii-18 (domain III, objectives 52, 57)
 
 - Old correct (b): Keep the capsules in the original bottle, tightly closed. They are moisture-sensitive. Use a reminder that does not empty the bottle, and teach-back the twice-daily schedule
-- New correct (b): Keep the capsules in the original bottle, protected from moisture, and do not decant them into an organizer
+- New correct (b): Keep the capsules in the original bottle, and do not pour them into a weekly organizer
 - Source: This site: dabigatran is kept in the original bottle because it is moisture-sensitive. PRADAXA labeling: do not place capsules in pill organizers.
 - Why this is harder: The adherence motive is good. The container is the error.
 - Confidence note: The 4-month discard-after-opening rule is on the U.S. label and is not required to answer this item. It was not re-checked against a 2026 bottle insert.
@@ -959,7 +959,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-20 (domain III, objectives 52)
 
 - Old correct (b): Do not stack the morning and evening doses into one 10 mg sitting or skip the next morning by guesswork. Keep doses about 12 hours apart and follow apixaban’s missed-dose instructions or call the clinic
-- New correct (d): Take the usual 5 mg this evening, do not take 10 mg, and take tomorrow morning's dose as scheduled
+- New correct (d): Take the usual 5 mg this evening, do not take 10 mg, and take tomorrow morning's dose on schedule
 - Source: ELIQUIS labeling: take a missed dose the same day and do not double the dose to make up.
 - Why this is harder: Ten milligrams feels like exact arithmetic and breaks the label instruction.
 - Confidence note: The item rejects a combined 10 mg catch-up plus a skipped next dose. It does not adjudicate every earlier same-day clock time.
@@ -967,28 +967,28 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-21 (domain III, objectives 52)
 
 - Old correct (b): Do not double warfarin on your own. Call the clinic so the dose and the next INR follow-up can be planned. A missed VKA tablet is not a DOAC catch-up, and aspirin does not replace it
-- New correct (a): Do not double tonight; contact the clinic, and do not try to replace a warfarin miss with an extra tablet
+- New correct (a): Do not double tonight; ask the clinic, and do not replace a missed warfarin tablet with an extra one
 - Source: Warfarin counseling: do not double a missed dose. The clinic directs any make-up because the INR response is delayed.
 - Why this is harder: Fear of an immediate 'level drop' drives the extra tablet.
 
 ### iii-22 (domain III, objectives 51, 54, 55)
 
 - Old correct (b): Do not close the encounter. Use plain language and a simple once-daily-with-food schedule (a picture card if reading is hard), an interpreter when needed, and repeat teach-back until schedule, food, bleed warnings, and the contact plan are clear
-- New correct (b): Understanding is not yet adequate, and counseling continues until he can state the schedule, the food rule, and a bleeding trigger
+- New correct (b): Not adequate until he can state the schedule, the food rule, and a bleeding trigger
 - Source: Teach-back standard: the patient states dose frequency, the rivaroxaban food rule, and a bleeding action. A nod is not that statement.
 - Why this is harder: He is pleasant and uses a correct category word. The operational details are missing.
 
 ### iii-23 (domain III, objectives 23, 57)
 
 - Old correct (b): Do not endorse skipped days. Name the barrier (cost, routine, side effects, or understanding), connect them with the clinic or pharmacy for access help, and rebuild the labeled twice-daily schedule with teach-back
-- New correct (c): Explain that every-other-day use is not the regimen, and work on cost or assistance without changing the schedule on their own
+- New correct (c): Every-other-day use is not the regimen; address the cost without the patient changing the schedule alone
 - Source: Adherence counseling: every-other-day apixaban is not the labeled schedule. AVERROES: aspirin was inferior to apixaban for stroke prevention.
 - Why this is harder: Feeling well on a stretched bottle is the dangerous feedback.
 
 ### v-12 (domain V, objectives 76)
 
 - Old correct (b): Decline both. Time in therapeutic range is a warfarin/VKA INR-control lens (Rosendaal linear interpolation is a method name only). DOACs have no INR target, so they have no time in therapeutic range, and this program does not adopt a memorized clinic or national target percent
-- New correct (d): Reject the tile: time in therapeutic range is a warfarin INR metric, and this service does not adopt an invented national DOAC percentage
+- New correct (d): Reject it: time in therapeutic range is a warfarin metric, not a national DOAC percentage
 - Source: This site: time in therapeutic range is a warfarin quality concept. No national percentage target is used, and the metric is not applied to DOACs.
 - Why this is harder: A public tile creates pressure to manage a number that is not a dose.
 
@@ -1002,7 +1002,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-14 (domain V, objectives 81)
 
 - Old correct (b): A named recall owner contacts the patient, documents the plan, and does not leave the result in an unowned queue over the weekend
-- New correct (b): A covered path that sees a critical INR the day it posts, with a clinician able to change the plan before the weekend
+- New correct (b): A covered path so a critical INR is seen the day it posts, including before the weekend
 - Source: Critical-result operations: a same-day clinician response, including end-of-week results. 2012 CHEST suggestion: against routine vitamin K for a nonbleeding INR of 4.5 to 10, which is a clinician decision rather than a laboratory auto-order.
 - Why this is harder: A closed Friday is an operations choice. It is not a property of the INR.
 - Confidence note: The vitamin K threshold cited is the 2012 CHEST suggestion and was not re-checked against a 2026 replacement.
@@ -1010,42 +1010,42 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-15 (domain V, objectives 74, 81)
 
 - Old correct (b): The clinic follows its confirmation policy and resolves quality concerns before relying on the device result; a verified alternative testing route supports timely clinical decisions
-- New correct (c): Do not use the meter result, document the failed control, and dose from the venous INR after confirming identity
+- New correct (c): Do not use the unchecked meter; document the missed control and dose from the venous INR
 - Source: Point-of-care operations: do not dose from a result obtained without required quality control. Use the venous INR when identity is confirmed.
 - Why this is harder: The higher INR looks like the cautious choice and is the uncontrolled one.
 
 ### v-16 (domain V, objectives 76, 84)
 
 - Old correct (b): Treat the mix-up as a tracked defect. COMPASS/vascular dosing is rivaroxaban 2.5 mg twice daily plus aspirin — not an AF or therapeutic VTE regimen — and it is not stacked on full-dose anticoagulation. Reconcile indication, regimen, and the note
-- New correct (d): Correct each pattern to the regimen that matches its real indication, and add an order-set check so the mismatch cannot recur quietly
+- New correct (d): Correct each chart to the regimen for its indication, and block the swap in the order set
 - Source: COMPASS on this site: rivaroxaban 2.5 mg twice daily plus aspirin for stable atherosclerotic disease, not an AF or VTE substitute. AF rivaroxaban doses are the 15 mg and 20 mg regimens.
 - Why this is harder: The audit shows the two regimens have been swapped. A memo without an order-set change will not hold.
 
 ### v-17 (domain V, objectives 74, 79)
 
 - Old correct (b): Documented training and competency, a result-reporting pathway, device quality-control expectations, and clinic oversight — self-testing is not an unsupervised gadget
-- New correct (a): Training, a competency check, a result-reporting path, quality control, and a clinician who acts on the result
+- New correct (a): Training, competency, a reporting path, quality control, and a clinician for each result before go-live
 - Source: Home INR operations on this site: training, competency, reporting, quality control, and clinician management before go-live.
 - Why this is harder: A delivery date is being treated as a clinical protocol.
 
 ### v-18 (domain V, objectives 79, 80, 84)
 
 - Old correct (b): Indication, planned duration, and dose-family rationale (AF stroke prevention vs acute/therapeutic VTE vs extended prevention vs COMPASS vascular dosing), plus when and by whom it was reviewed
-- New correct (b): The indication, the regimen, a renal or interaction check when relevant, and the next monitoring or review date
+- New correct (b): Indication, regimen, a relevant renal or interaction check, and the next review date
 - Source: Stewardship documentation: indication, regimen, relevant renal or interaction check, and a review date.
 - Why this is harder: Brand-name-only notes pass a casual reading and fail an audit.
 
 ### ii-40 (domain II, objectives 20, 38)
 
 - Old correct (b): OAC alone is favored over OAC plus a single antiplatelet; raise stopping the aspirin with the prescriber, keeping the anticoagulant
-- New correct (d): Continue the OAC and stop the aspirin, which is the stable-disease direction of AFIRE and AQUATIC
+- New correct (d): Continue the anticoagulant and stop aspirin, the stable-disease direction of AFIRE and AQUATIC
 - Source: AFIRE on this site: rivaroxaban monotherapy noninferior for efficacy and less major bleeding than rivaroxaban plus one antiplatelet in stable CAD; stopped early for higher mortality on combination therapy. AQUATIC: aspirin added to OAC increased the primary ischemic composite, major bleeding, and all-cause death.
 - Why this is harder: Three quiet years make both 'add more' and 'stop everything' sound reasonable.
 
 ### ii-41 (domain II, objectives 24)
 
 - Old correct (d): On a P2Y12 background, apixaban was associated with less bleeding than VKA, adding aspirin showed a non-significant trend toward more bleeding (CI crossed 1), and OAC alone was not tested
-- New correct (a): On a P2Y12 background, apixaban bled less than a VKA; aspirin's bleeding increase in that subgroup was a nonsignificant trend; OAC alone was not tested
+- New correct (a): Apixaban bled less than a VKA; aspirin's bleeding trend was not significant; OAC alone was not tested
 - Source: AUGUSTUS medically managed subgroup figures already in this bank: bleeding HR 0.44 (95% CI 0.28–0.68) for apixaban versus VKA; aspirin versus placebo HR 1.49 (95% CI 0.98–2.26). All patients received a P2Y12 inhibitor.
 - Why this is harder: The slide smooths a factorial trial into a stronger claim than the subgroup interval allows.
 - Confidence note: These hazard ratios were already printed in the prior version of this item. They were not re-abstracted from the journal in this pass.
@@ -1053,28 +1053,28 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-42 (domain II, objectives 24)
 
 - Old correct (c): Aspirin was associated with more ischemic events, more deaths, and more major bleeding; the trial stopped early for excess death
-- New correct (b): Adding aspirin raised the primary ischemic composite, major bleeding, and all-cause death, and the trial stopped early
+- New correct (b): Adding aspirin raised ischemic events, bleeding, and death, and the trial stopped early
 - Source: AQUATIC on this site: primary composite 16.9% versus 12.1% (adjusted HR 1.53); major bleeding 10.2% versus 3.4%; all-cause death 13.4% versus 8.4%; stopped early.
 - Why this is harder: The slogan 'more antiplatelet is more protection' is the error AQUATIC challenges.
 
 ### ii-43 (domain II, objectives 24)
 
 - Old correct (a): Overstated — two early-stopped trials (AFIRE, AQUATIC) showed excess death with combination therapy, but pooled all-cause death is not significant and pooled cardiovascular-death findings are inconsistent
-- New correct (c): AFIRE and AQUATIC signal harm from added antiplatelet therapy, but OAC-ALONE was underpowered and did not prove a mortality reduction
+- New correct (c): AFIRE and AQUATIC signal harm from an added antiplatelet; OAC-ALONE did not prove a mortality cut
 - Source: AFIRE and AQUATIC cards on this site: mortality harm with combination therapy or added aspirin. OAC-ALONE: noninferiority not met (HR 1.16; 95% CI 0.79–1.72); underpowered and inconclusive.
 - Why this is harder: A clean slide sentence is more certain than the three trials allow.
 
 ### iii-24 (domain III, objectives 52, 60)
 
 - Old correct (c): “Keep taking your anticoagulant. The aspirin may be adding bleeding risk without a clear benefit, so I'll raise stopping it with your prescriber — please don't change it until we hear back.”
-- New correct (d): The aspirin may be a legacy drug, but the stop is a reconciled decision, not an unsupervised change during the phone call
+- New correct (d): Aspirin may be leftover, but stopping it is a reconciled decision, not an unsupervised phone-call change
 - Source: This site's deprescribing pathway: unindicated aspirin added to a DOAC is a bleeding problem. Stopping still requires a reconciled indication check. AQUATIC and AFIRE address stable coronary disease, which this history does not show.
 - Why this is harder: The patient wants a yes-or-no on the phone. The missing chart search is the work.
 
 ### v-19 (domain V, objectives 79, 84)
 
 - Old correct (c): At each DOAC review, document the indication and planned stop point for every antithrombotic and route unexplained antiplatelet use to the prescriber for a decision
-- New correct (c): A scheduled review that confirms there is no current aspirin indication, then a reconciled stop, tracked as a stewardship measure
+- New correct (c): Review whether any aspirin indication remains, then a reconciled stop, tracked as stewardship
 - Source: AFIRE and AQUATIC on this site support OAC without a long-term antiplatelet in stable coronary disease. This site's deprescribing pathway is a reconciled stop, not a blanket order.
 - Why this is harder: A population metric is useful only if the early-stent patients are not swept into it.
 
@@ -1096,7 +1096,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-30 (domain I, objectives 5)
 
 - Old correct (c): Immune thrombocytopenia often presents with mucocutaneous bleeding, whereas heparin-induced thrombocytopenia has a characteristic exposure-related prothrombotic pattern
-- New correct (b): This pattern fits a bleeding platelet disorder, whereas heparin-induced thrombocytopenia is a clotting illness after heparin
+- New correct (b): A bleeding platelet disorder, unlike heparin-induced thrombocytopenia after heparin
 - Source: Clinical distinction: immune thrombocytopenia is a bleeding phenotype; heparin-induced thrombocytopenia is a prothrombotic platelet-factor-4 antibody disease.
 - Why this is harder: The shared low platelet count is the trap.
 
@@ -1118,7 +1118,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-33 (domain I, objectives 9, 11)
 
 - Old correct (b): DVT is possible; symptoms inform pretest probability but require a structured diagnostic pathway
-- New correct (a): This is suspected lower-extremity DVT, so pretest probability then ultrasound or D-dimer is the diagnostic path
+- New correct (a): Suspected leg DVT: pretest probability, then ultrasound or D-dimer, is the diagnostic path
 - Source: Suspected DVT pathway: pretest probability followed by D-dimer or ultrasound. Not PE reperfusion and not acute limb ischemia.
 - Why this is harder: The contraceptive and the long ride are risk context, not a reason to skip diagnosis.
 
@@ -1132,7 +1132,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-35 (domain I, objectives 10)
 
 - Old correct (d): Acute limb ischemia from arterial occlusion is a limb-threatening emergency
-- New correct (c): Acute limb ischemia from a cardioembolic occlusion, which is a vascular emergency rather than stable claudication
+- New correct (c): Acute limb ischemia from cardioembolism, a vascular emergency rather than stable walking claudication
 - Source: Clinical distinction between acute limb ischemia (sudden pain, pallor, pulselessness, sensory change) and chronic stable claudication.
 - Why this is harder: A history of being able to walk is included so the case can be misread as ordinary PAD.
 
@@ -1146,7 +1146,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-37 (domain I, objectives 16, 39)
 
 - Old correct (b): Acute illness, congestion, diet changes, and new medicines can destabilize warfarin response
-- New correct (a): Heart-failure illness, poor intake, and an interacting antibiotic can move the INR off the prior stable pattern
+- New correct (a): Illness, poor intake, and the new antibiotic can move the INR off the old stable pattern
 - Source: Warfarin clinical pharmacology: reduced vitamin K intake, heart-failure exacerbation, and trimethoprim-sulfamethoxazole can raise the INR. No new weekly dose is stated.
 - Why this is harder: The stem stacks two real INR movers so a single 'continue the old dose' answer fails.
 - Confidence note: The antibiotic interaction is standard warfarin teaching. The item does not state a percent INR change.
@@ -1161,14 +1161,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-39 (domain I, objectives 17, 47)
 
 - Old correct (d): Possible ACS requiring emergency assessment even if symptoms are not described as severe pain
-- New correct (c): Rest ischemic symptoms in known CAD, which are assessed as possible ACS rather than as stable exertional disease
+- New correct (c): Rest chest pressure with sweating in known CAD is assessed as possible ACS, not as stable exertional disease
 - Source: ACS clinical pattern: rest ischemic chest symptoms in a patient with CAD. No reperfusion drug or dose is stated.
 - Why this is harder: Breathlessness can be misfiled as PE or stroke; the chest-pressure story is coronary.
 
 ### i-40 (domain I, objectives 18, 19)
 
 - Old correct (a): Two affected gene copies differ from one, but event history and other risks still guide treatment decisions
-- New correct (d): Homozygosity confers a higher thrombotic risk than heterozygosity, but a result alone is not a personal VTE diagnosis
+- New correct (d): Homozygosity carries higher risk than heterozygosity, but the genotype alone is not a VTE diagnosis
 - Source: Established thrombophilia teaching: homozygous factor V Leiden carries higher VTE risk than heterozygosity. No treatment is started from an asymptomatic genotype alone. Exact risk multiples are omitted.
 - Why this is harder: Two relatives with the same variant name tempt an identical-risk answer.
 - Confidence note: Exact lifetime-risk percentages are not stated, to avoid inventing a figure.
@@ -1183,7 +1183,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-42 (domain I, objectives 18)
 
 - Old correct (c): The prothrombin variant can increase a procoagulant protein, while protein C deficiency impairs natural anticoagulant activity
-- New correct (b): G20210A is a gain-of-function prothrombin mutation, whereas protein C deficiency is loss of a natural anticoagulant
+- New correct (b): G20210A is a gain-of-function prothrombin mutation; protein C deficiency is loss of a natural anticoagulant
 - Source: Thrombophilia mechanisms: prothrombin G20210A is a regulatory gain-of-function variant; protein C is a vitamin K-dependent natural anticoagulant.
 - Why this is harder: Both are called thrombophilias, so the item requires the direction of the defect.
 
@@ -1197,7 +1197,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-44 (domain I, objectives 12)
 
 - Old correct (a): Chronic post-thrombotic symptoms can coexist with recurrent DVT, so new change still requires assessment
-- New correct (d): Stable dependent aching can be post-thrombotic syndrome, while today's abrupt asymmetry needs a recurrence evaluation
+- New correct (d): Stable aching can be post-thrombotic syndrome; today's abrupt asymmetry needs a recurrence check
 - Source: Clinical distinction between post-thrombotic syndrome and suspected recurrent DVT.
 - Why this is harder: One leg carries both a chronic pattern and an acute change.
 
@@ -1211,14 +1211,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-46 (domain I, objectives 14)
 
 - Old correct (c): A TIA or other acute neurologic process remains possible, and clinical assessment with imaging is needed
-- New correct (b): A transient ischemic attack is a warning ischemic event, and anticoagulant use does not make it benign
+- New correct (b): A transient ischemic attack is a warning ischemic event, and being on apixaban does not make it benign
 - Source: Clinical definition and urgency of TIA: a transient focal neurologic deficit requires urgent evaluation because early stroke risk is elevated.
 - Why this is harder: The patient feels back to baseline, which is the usual reason these events are minimized.
 
 ### i-47 (domain I, objectives 7, 8)
 
 - Old correct (d): Prophylaxis is selective and depends on thrombotic risk, bleeding risk, treatment context, and interactions
-- New correct (c): Risk varies by cancer type, treatment, and patient factors, so prophylaxis is not automatic for every ambulatory patient
+- New correct (c): Risk varies by cancer, treatment, and mobility, so prophylaxis is not automatic for every outpatient
 - Source: AVERT and CASSINI on this site: ambulatory cancer prophylaxis in selected higher-risk patients, not a universal outpatient mandate and not acute treatment dosing.
 - Why this is harder: The patient is mobile and between cycles, so a blanket rule in either direction is wrong.
 - Confidence note: Trial doses are named only as the doses those trials used. The item does not apply either dose to this lower-risk sketch.
@@ -1226,7 +1226,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### i-48 (domain I, objectives 15)
 
 - Old correct (a): Prosthesis type, position, timing, and the separate AF indication determine which evidence applies
-- New correct (d): A mechanical prosthesis and a tissue valve are different niches
+- New correct (d): A mechanical prosthesis and a tissue valve are different niches, and RIVER did not treat the tissue valve as mechanical
 - Source: RIVER on this site: AF with a bioprosthetic mitral valve, rivaroxaban versus warfarin, not a mechanical-valve population. RE-ALIGN remains the mechanical-valve harm signal for dabigatran.
 - Why this is harder: The shared word 'valve' is the trap.
 - Confidence note: The item does not restate RIVER's primary numeric result. It uses the population distinction the site already draws.
@@ -1234,14 +1234,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-44 (domain II, objectives 21, 37)
 
 - Old correct (b): Indication, treatment phase, relevant history, current regimen, organ function, interactions, monitoring plan, and responsible clinician
-- New correct (d): Indication, dose and schedule, latest kidney function, bleed history, interacting drugs, and the monitoring plan
+- New correct (d): Indication, dose, kidney function, bleed history, interacting drugs, and the monitoring plan
 - Source: Anticoagulation intake practice: indication, regimen, renal function, bleeding history, interactions, and a monitoring owner.
 - Why this is harder: A medication name looks complete until a later clinician has to make a hold or a dose decision.
 
 ### ii-45 (domain II, objectives 22, 24, 30)
 
 - Old correct (c): Reassess hepatic severity, bleeding, renal function, interacting medicines, and agent-specific labeling with specialist input
-- New correct (a): Reassess hepatic eligibility, because decompensated liver disease with new coagulopathy is not an automatic DOAC renewal
+- New correct (a): New coagulopathy with decompensated liver disease is not an automatic DOAC renewal
 - Source: Factor Xa inhibitor labeling: severe hepatic impairment is a caution or exclusion, and new coagulopathy is a reason to reassess rather than refill.
 - Why this is harder: A due refill and a familiar drug are the operational pressure.
 - Confidence note: Child-Pugh cut points differ by agent and were not used as the answer. The item keys off decompensated disease with new coagulopathy.
@@ -1249,14 +1249,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-46 (domain II, objectives 23)
 
 - Old correct (d): Coordinate feasible testing access, transportation or home-testing assessment, and a documented reporting plan
-- New correct (b): Restore access, such as a closer draw site or a qualified home-INR path, and keep the monitoring responsibility
+- New correct (b): Restore a way to get INRs, and keep a clinician responsible for the result
 - Source: Warfarin-clinic access practice: a transportation failure is solved with an alternative testing path, not with discharge or unsupervised dose changes.
 - Why this is harder: Three missed visits look like refusal until the bus route is in the history.
 
 ### ii-47 (domain II, objectives 26, 40)
 
 - Old correct (a): Coordinate neurology and anticoagulation review because enzyme and transporter induction can reduce DOAC exposure
-- New correct (c): Do not pair apixaban with this strong inducer; choose an anticoagulant plan the label still supports and involve neurology before any seizure-drug change
+- New correct (c): Do not pair apixaban with this inducer; follow the label, and ask neurology before changing the seizure drug
 - Source: ELIQUIS prescribing information: avoid combined strong CYP3A4 and P-glycoprotein inducers (the label names rifampin, carbamazepine, phenytoin, and St John's wort).
 - Why this is harder: The AF math is otherwise clean, so the interaction is the piece that changes the plan.
 - Confidence note: Edoxaban and dabigatran interaction wording with carbamazepine is not the answer key. The item uses the apixaban inducer avoidance that the label states.
@@ -1264,7 +1264,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-48 (domain II, objectives 26)
 
 - Old correct (b): Pediatric indication, age and weight eligibility, formulation, feeding feasibility, and specialist follow-up
-- New correct (d): Confirm a formulation and a pediatric reference the child can actually take, instead of an opened adult capsule at an AF dose
+- New correct (d): Use a formulation and a pediatric reference the child can take, not an opened adult capsule at an AF dose
 - Source: Dabigatran product handling: capsules are swallowed whole in standard use. Pediatric VTE dosing is not an adult AF schedule. No pediatric dose is printed.
 - Why this is harder: Applesauce is a practical idea and the wrong pharmacologic one.
 - Confidence note: Pediatric product strengths were not re-verified. The item does not name a pediatric dose.
@@ -1272,7 +1272,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-49 (domain II, objectives 26, 32)
 
 - Old correct (c): Assess the trend, adherence, illness, interactions, and bleeding before an individualized protocol-based adjustment
-- New correct (a): The antibiotic and poor intake explain a higher INR, and this no-bleed value is not a 4F-PCC reversal case
+- New correct (a): The antibiotic and poor intake explain the INR of 6.8, and this nonbleeding value is not a 4F-PCC case
 - Source: 2012 CHEST suggestion: against routine vitamin K for INR 4.5 to 10 without bleeding. Trimethoprim-sulfamethoxazole potentiates warfarin.
 - Why this is harder: A single high number looks like an emergency reversal. The absence of bleeding changes the action.
 - Confidence note: The 4.5-to-10 vitamin K suggestion is the 2012 CHEST statement. A newer document that replaces it was not re-opened.
@@ -1280,7 +1280,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-50 (domain II, objectives 27, 29)
 
 - Old correct (d): Method and sample factors require review under the clinic's confirmation policy before major decisions
-- New correct (b): The venous result fits the trend and the fingerstick is the outlier, so the dose is not changed from the meter alone
+- New correct (b): The venous INR fits the trend and the fingerstick is the outlier, so today's dose is not taken from the meter
 - Source: Point-of-care practice: a fingerstick that disagrees with a same-day venous INR and with the trend is not the dosing INR.
 - Why this is harder: The higher result feels safer to 'treat.' It is the one that does not fit.
 
@@ -1302,7 +1302,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-53 (domain II, objectives 34)
 
 - Old correct (c): Possible warfarin-associated skin necrosis requiring urgent assessment and regimen review
-- New correct (a): Warfarin-associated skin necrosis, a serious nonbleeding complication, not a bruise to observe at home
+- New correct (a): Warfarin-associated skin necrosis, a serious nonbleeding complication, not a bruise to watch at home
 - Source: Warfarin-induced skin necrosis: early painful skin necrosis related to the protein C drop during initiation. Management is urgent and is not a dose increase.
 - Why this is harder: The absence of external bleeding is why this can be missed.
 - Confidence note: No protein C activity cutoff is stated. The diagnosis in the item is clinical recognition, not a laboratory number.
@@ -1325,35 +1325,35 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-56 (domain II, objectives 37, 48)
 
 - Old correct (b): A reconciled shared plan naming the current regimen, pending tests, restart decision, and follow-up owner
-- New correct (d): One reconciled plan, with a named owner, that includes the bleed, the INR timing, and when therapy resumes
+- New correct (d): One reconciled plan with a named owner, covering the bleed, the next INR, and when therapy resumes
 - Source: Transitions practice after anticoagulant bleeding: reconcile emergency and clinic instructions into one plan with a named owner.
 - Why this is harder: Both instructions are plausible in isolation. The item is about the conflict, not about a single INR.
 
 ### ii-57 (domain II, objectives 38, 42)
 
 - Old correct (c): Revisit recurrence risk, bleeding, cancer therapy, and patient preference before confirming discontinuation
-- New correct (a): Do not stop on the surgical calendar; active cancer reopens duration and is managed as cancer-associated VTE
+- New correct (a): Do not stop on the old surgical date; active cancer reopens duration and is managed as cancer-associated VTE
 - Source: Cancer-associated VTE practice and the 2021 CHEST duration framework: a persistent risk factor such as active cancer is not treated as a completed transient provocation.
 - Why this is harder: The visit was booked as a stop visit. The new diagnosis is why the agenda changes.
 
 ### ii-58 (domain II, objectives 39, 40)
 
 - Old correct (d): Changes in vitamin K intake, supplement ingredients, adherence, illness, and other medicines
-- New correct (b): Both the fall in dietary vitamin K and the inducing herbal product, which can pull the INR in opposite directions
+- New correct (b): Both the drop in dietary vitamin K and the inducing herb, which can pull the INR in opposite directions
 - Source: Warfarin clinical pharmacology: reduced vitamin K intake potentiates the INR; St John's wort induces clearance and can lower the INR.
 - Why this is harder: The dramatic swing looks like nonadherence. He says the doses were taken, and two real exposures are sitting in the history.
 
 ### ii-59 (domain II, objectives 41, 33)
 
 - Old correct (a): Resuscitation and source control with institutional off-label 4F-PCC assessment for life-threatening FXa bleeding
-- New correct (c): Supportive resuscitation and the institutional 4F-PCC pathway for life-threatening factor Xa bleeding
+- New correct (c): Supportive resuscitation plus the institutional 4F-PCC pathway for this life-threatening factor Xa bleed
 - Source: This site, after the 22 December 2025 Andexxa withdrawal: supportive care plus institutional 4F-PCC for life-threatening factor Xa inhibitor bleeding.
 - Why this is harder: A famous antidote name is the distractor. Availability and drug class decide the pathway.
 
 ### ii-60 (domain II, objectives 43)
 
 - Old correct (b): Clarify the procedure and whether interruption is needed, then use agent-, renal-, and risk-specific planning
-- New correct (d): Confirm whether any interruption is needed; if it is, PAUSE omitted the DOAC for 1 day before low-bleeding-risk procedures and did not use heparin bridging
+- New correct (d): If a hold is needed, PAUSE omitted the DOAC for 1 day before this low-risk procedure, with no bridge
 - Source: PAUSE on this site: DOAC omitted 1 day before a low-bleeding-risk procedure and 2 days before a high-bleeding-risk procedure; no heparin bridging; no preoperative coagulation testing. Edoxaban was not studied.
 - Why this is harder: A generic 'stop everything and bridge' order ignores both the procedure and the trial.
 - Confidence note: Dabigatran with reduced kidney function had longer intervals in PAUSE. This patient's clearance is 70 mL/min and the drug is apixaban, so that extension is not invoked. Exact hours are the protocol's, as the site already states.
@@ -1375,21 +1375,21 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-63 (domain II, objectives 46)
 
 - Old correct (a): Follow the device instructions and quality policy before releasing results, using an alternative verified testing route if needed
-- New correct (c): Quarantine the strips, do not report a result from them, and obtain a venous INR if a dose decision is needed today
+- New correct (c): Quarantine the strips, release no result from them, and get a venous INR if a dose is due
 - Source: Point-of-care practice: strips stored outside manufacturer conditions are not used. A venous INR is the alternative when a dose is due.
 - Why this is harder: The patient is waiting, which is the pressure to skip the quarantine.
 
 ### ii-64 (domain II, objectives 47)
 
 - Old correct (b): Emergency evaluation for possible intracranial injury rather than routine telephone dose adjustment
-- New correct (d): Send him for emergency assessment now, because anticoagulant use plus a head strike and worsening alertness is a possible intracranial bleed
+- New correct (d): Emergency assessment now: head impact plus worsening alertness on an anticoagulant can be intracranial bleeding
 - Source: Emergency triage principle: possible intracranial bleeding on an anticoagulant is assessed immediately. No reversal product is chosen before imaging.
 - Why this is harder: The family prefers to wait. The symptoms do not allow that preference to lead.
 
 ### ii-65 (domain II, objectives 49)
 
 - Old correct (c): Urgent objective assessment plus review of adherence, indication-specific regimen, interactions, absorption, and comparison with prior imaging
-- New correct (a): Check adherence, whether the dose still matches his kidney function and weight rules, and whether a new provoking condition is present
+- New correct (a): Check missed doses and whether the dose still fits before calling the drug a failure
 - Source: Suspected treatment-failure assessment: adherence, correct dose for current kidney function and indication, and a search for cancer or antiphospholipid syndrome before the regimen is declared a failure.
 - Why this is harder: A swollen leg is real. Calling it failure without the missed-dose history is the shortcut.
 
@@ -1403,7 +1403,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### ii-67 (domain II, objectives 50)
 
 - Old correct (a): Mechanical clot removal differs from lytic delivery, and patient severity, bleeding contraindications, anatomy, and center expertise matter
-- New correct (c): Mechanical thrombectomy and catheter-directed thrombolysis are different interventions, and the patient's risk class has to be named before one is chosen
+- New correct (c): Device removal and catheter thrombolysis differ, and risk class comes before either is chosen
 - Source: Procedural distinction: catheter-directed thrombolysis uses a fibrinolytic infusion; mechanical thrombectomy is device clot removal. Intermediate-risk (normotensive with right-ventricular strain) is not high-risk shock.
 - Why this is harder: Shared catheter language hides a lytic exposure the patient may not have agreed to.
 - Confidence note: No outcome numbers for a specific device are stated. Device trials differ and were not cited as a class win.
@@ -1418,7 +1418,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-25 (domain III, objectives 53, 54)
 
 - Old correct (c): Assess the patient's abilities and preferences, then involve agreed supports with consent and verify understanding together
-- New correct (a): Keep the patient in the decision and involve the family member, with supervised support rather than an all-or-none choice
+- New correct (a): Keep him in the decision and use the family member who already handles medicines, with support
 - Source: Education practice when cognition declines: include the patient and a consented supporter. Do not equate a stated indication with independent dosing skill.
 - Why this is harder: The family is already doing the work. The error is either shutting him out or pretending he needs no help.
 
@@ -1432,35 +1432,35 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iii-27 (domain III, objectives 58, 23)
 
 - Old correct (a): Connect the patient with social work, transport and food resources, and the clinic's feasible testing options, then confirm the referrals worked
-- New correct (c): Connect transportation and food support, and keep INR monitoring in place while that is arranged
+- New correct (c): Arrange transport and food support, and keep INR checks while that is set up
 - Source: Warfarin safety: food access affects vitamin K intake, and transportation access affects INR monitoring. Both belong in the care plan.
 - Why this is harder: Cost looks administrative. It is changing the INR.
 
 ### iii-28 (domain III, objectives 59, 55)
 
 - Old correct (b): The patient demonstrates sample collection and testing, reports the result, and explains the response to an error or unexpected reading
-- New correct (d): The patient will obtain an adequate sample and state whom to call for an unexpected result
+- New correct (d): The patient obtains an adequate sample and states whom to call for an unexpected result
 - Source: Education-objective practice: verify a psychomotor and reporting skill with an observable action, not with an attitude verb.
 - Why this is harder: The softer objectives sound educational and cannot be passed or failed.
 
 ### iii-29 (domain III, objectives 60)
 
 - Old correct (c): A case-based session contrasting VKA monitoring with DOAC assessment, followed by a competency check and updated materials
-- New correct (a): Retrain with a case in which a normal INR on apixaban is misread as 'no drug on board,' and check the new counseling language
+- New correct (a): Retrain on a normal INR misread as 'no apixaban on board,' then check the words staff use
 - Source: DOAC laboratory teaching: the INR is not a dose target. A normal INR does not exclude apixaban effect. Staff education should correct that specific sentence.
 - Why this is harder: A familiar warfarin sentence is being pasted onto the wrong drug.
 
 ### iii-30 (domain III, objectives 51, 54, 55)
 
 - Old correct (d): Accessible materials and professional interpretation followed by the patient's explanation and demonstration of the agreed plan
-- New correct (b): Ask him, through the interpreter, to restate the dose times and the bleeding plan, and provide a format he can see or hear
+- New correct (b): Through the interpreter, have him restate the dose times and the bleeding plan
 - Source: Education assessment: teach-back through an interpreter, plus a format the patient can use, is the check that a verbal explanation was enough.
 - Why this is harder: A completed speech feels like a completed education session.
 
 ### iv-28 (domain IV, objectives 61, 62)
 
 - Old correct (a): Eliquis is apixaban; the adult oral tablets are available as 2.5 mg and 5 mg strengths
-- New correct (d): Eliquis and apixaban are the same drug, and the usual adult oral tablets are 2.5 mg and 5 mg, not two concurrent prescriptions
+- New correct (d): Eliquis is apixaban; adult tablets are 2.5 mg and 5 mg, not two drugs taken together
 - Source: Apixaban identity: Eliquis is apixaban. Common U.S. adult oral tablet strengths are 2.5 mg and 5 mg.
 - Why this is harder: Medication reconciliation that sorts by name rather than by ingredient creates a double dose.
 - Confidence note: Tablet strengths are the familiar U.S. list. A 2026 package insert was not re-opened, and no pediatric suspension strength is stated.
@@ -1468,7 +1468,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-29 (domain IV, objectives 62, 26)
 
 - Old correct (b): Pediatric formulations and preparation steps differ from adult film-coated tablets and are not interchangeable by appearance
-- New correct (a): Sprinkle preparations, suspension, and adult tablets are not interchangeable by guess, and a pediatric order is not an adult AF dose
+- New correct (a): Those apixaban products are not interchangeable, and a child's order is not an adult AF dose
 - Source: Product-handling principle: apixaban preparations are not freely substituted. No pediatric concentration is stated in this item.
 - Why this is harder: The same generic name on two containers is the trap.
 - Confidence note: No pediatric dose or suspension concentration is stated. That labeling was not re-verified.
@@ -1476,7 +1476,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-30 (domain IV, objectives 64)
 
 - Old correct (c): Warfarin depends on turnover of functional clotting factors, whereas DOACs act directly on circulating target enzymes after absorption
-- New correct (b): The early INR mostly reflects factor VII loss, whereas apixaban directly inhibits factor Xa within hours of a dose
+- New correct (b): The early INR is mostly factor VII loss, whereas apixaban directly inhibits factor Xa within hours of a dose
 - Source: Warfarin onset: early INR change is largely factor VII (half-life about 6 hours), while prothrombin's half-life is about 60 hours. Apixaban directly inhibits factor Xa.
 - Why this is harder: Two chart numbers are being treated as the same pharmacology.
 - Confidence note: Factor half-lives are approximate textbook values.
@@ -1492,14 +1492,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-32 (domain IV, objectives 64)
 
 - Old correct (a): It concerns the drug's vitamin K recycling target, whereas cytochrome P450 2C9 concerns metabolism
-- New correct (d): CYP2C9 is about clearance of S-warfarin; VKORC1 is about sensitivity of the vitamin K epoxide reductase target
+- New correct (d): CYP2C9 clears S-warfarin; VKORC1 is the sensitivity of warfarin's target enzyme
 - Source: Warfarin pharmacogenetics: CYP2C9 metabolizes S-warfarin; VKORC1 encodes the vitamin K epoxide reductase target. No algorithm dose is calculated in this item.
 - Why this is harder: Two variant lines look like one fact printed twice.
 
 ### iv-33 (domain IV, objectives 64, 67)
 
 - Old correct (b): Reduced clearance may increase exposure and bleeding risk, with management dependent on labeling and clinical context
-- New correct (a): Clearance is about 17 mL/min, and dabigatran is predominantly renally cleared, so 150 mg is no longer an unexamined plan
+- New correct (a): Clearance is about 17 mL/min and dabigatran is mostly renal, so 150 mg is no longer automatic
 - Source: Dabigatran clinical pharmacology: about 80 percent renal excretion. This site says to recheck the label below usual clearance thresholds rather than assume one reduced dose.
 - Why this is harder: She is not bleeding, so the old dose looks optional to revisit. The clearance says otherwise.
 - Confidence note: No 75 mg or 110 mg dose is selected. Those regional labels were not re-verified for this pass.
@@ -1514,7 +1514,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-35 (domain IV, objectives 63, 64)
 
 - Old correct (d): Both act through antithrombin, but their chain-length profiles, clearance, and response variability differ
-- New correct (c): Unfractionated heparin is commonly protocol-monitored because its effect is variable and short
+- New correct (c): Unfractionated heparin is protocol-monitored because its effect is variable and short; routine LMWH is not
 - Source: Heparin pharmacology: unfractionated heparin is variably bound and short-acting; LMWH is antithrombin-dependent, relatively anti-Xa selective, and renally cleared.
 - Why this is harder: The shared word heparin suggests one monitoring panel.
 
@@ -1535,14 +1535,14 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-38 (domain IV, objectives 65, 64)
 
 - Old correct (c): Hokusai-VTE used a parenteral lead-in before edoxaban, unlike the initial oral rivaroxaban regimen in EINSTEIN
-- New correct (b): Rivaroxaban begins orally at 15 mg twice daily; edoxaban in Hokusai-VTE began after at least 5 days of parenteral anticoagulation
+- New correct (b): Rivaroxaban starts at 15 mg twice daily; edoxaban in Hokusai-VTE started after at least 5 days of heparin
 - Source: Hokusai-VTE on this site: heparin for at least 5 days, then edoxaban. EINSTEIN: rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily.
 - Why this is harder: Two factor Xa inhibitors were given one order set.
 
 ### iv-39 (domain IV, objectives 66, 67)
 
 - Old correct (d): Platelet and mucosal effects can add pharmacodynamic bleeding risk
-- New correct (c): Ibuprofen can cause gastrointestinal bleeding through a platelet and mucosal effect even when the INR is unchanged
+- New correct (c): Ibuprofen can cause gastrointestinal bleeding by a platelet and mucosal effect even if the INR is unchanged
 - Source: Pharmacodynamic interaction: nonsteroidal anti-inflammatory drugs increase gastrointestinal bleeding risk on warfarin even without an INR change.
 - Why this is harder: The team used the INR as the only safety test.
 
@@ -1557,7 +1557,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-41 (domain IV, objectives 68, 25)
 
 - Old correct (b): Warfarin and heparins have established lactation roles even though warfarin has important fetal risks during pregnancy
-- New correct (a): Pregnancy and lactation are different exposures: warfarin and LMWH have established lactation roles, and a DOAC is not the default while breastfeeding
+- New correct (a): Lactation differs from pregnancy: warfarin and LMWH have lactation roles; a DOAC is not the default
 - Source: Product labeling: DOACs are not recommended while breastfeeding. Warfarin and LMWH have established lactation use. Fetal risk and milk exposure are different questions.
 - Why this is harder: One drug's pregnancy warning is being reused for a different biological compartment.
 - Confidence note: Milk-concentration numbers were not re-verified. The item stays at the class distinction.
@@ -1565,7 +1565,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-42 (domain IV, objectives 71)
 
 - Old correct (c): A levonorgestrel-releasing intrauterine device, which can provide contraception and reduce bleeding
-- New correct (b): A levonorgestrel-releasing intrauterine device, which can provide contraception and reduce menstrual bleeding
+- New correct (b): A levonorgestrel intrauterine device, which can contracept and reduce menstrual bleeding
 - Source: Contraceptive and bleeding teaching: a levonorgestrel-releasing intrauterine device can reduce heavy menstrual bleeding. A copper device can worsen it. Estrogen methods are not interchangeable with that device.
 - Why this is harder: Any intrauterine device is being treated as one product.
 - Confidence note: CDC Medical Eligibility Criteria category numbers were not re-opened and are not printed.
@@ -1581,7 +1581,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-44 (domain IV, objectives 61, 63)
 
 - Old correct (a): They are being studied for indication-specific efficacy and safety and are not approved substitutes merely because they appear in phase 3 trials
-- New correct (d): Asundexian 50 mg with antiplatelet therapy is approved after a recent mild-to-moderate non-cardioembolic ischemic stroke or high-risk TIA, not for AF; other factor XI agents are not approved
+- New correct (d): Asundexian 50 mg with an antiplatelet is approved after recent non-cardioembolic stroke or high-risk TIA, not for AF
 - Source: OCEANIC-STROKE caveat on this site: FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on 9 November 2026 after recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS ≤15) or high-risk TIA; not approved for AF. OCEANIC-AF: stroke or systemic embolism 1.3% versus 0.4% (HR 3.79).
 - Why this is harder: A new approval plus the word stroke is being offered to the wrong patient.
 - Confidence note: The approval wording is the site's FDA press-release caveat. The site states that no DailyMed label was posted yet, so no additional label section is cited.
@@ -1589,21 +1589,21 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-45 (domain IV, objectives 70)
 
 - Old correct (b): Factor replacement supports rapid correction while vitamin K supports sustained production of functional factors
-- New correct (a): PCC replaces factors immediately, and vitamin K is required for the liver to make new functional factors while warfarin is still present
+- New correct (a): PCC replaces factors now; vitamin K lets the liver make new factors while warfarin remains
 - Source: 2020 ACC expert consensus pathway on this site: 4-factor PCC plus vitamin K for warfarin major bleeding. Warfarin continues to inhibit vitamin K epoxide reductase until vitamin K is repleted and the drug effect wanes.
 - Why this is harder: A beautiful post-PCC INR is the reason vitamin K gets skipped.
 
 ### iv-46 (domain IV, objectives 70, 66)
 
 - Old correct (c): Protamine can cause serious hypotension and hypersensitivity-type reactions and requires protocol-directed administration
-- New correct (b): Protamine can cause hypotension and reactions that resemble anaphylaxis, so it is given slowly with resuscitation available
+- New correct (b): Protamine can cause hypotension and anaphylaxis-like reactions, so it is given slowly
 - Source: This site, from heparin labeling: no more than 50 mg of protamine in any 10-minute period, given very slowly; fatal reactions resembling anaphylaxis are described.
 - Why this is harder: The word antidote was treated as a safety guarantee.
 
 ### iv-47 (domain IV, objectives 64, 69)
 
 - Old correct (d): Enzyme induction can wane after discontinuation, so warfarin response may change and INR follow-up remains important
-- New correct (c): The INR may rise over days as enzyme induction wears off, so the inflated warfarin dose needs closer follow-up
+- New correct (c): The INR may rise over days as induction wears off, so the higher warfarin dose needs closer follow-up
 - Source: Warfarin interaction time course: rifampin induces metabolism. After the inducer stops, clearance falls back and the INR can rise on the dose that was increased during coadministration.
 - Why this is harder: Stopping a drug feels like removing a danger. Here the danger is the dose that was built around the inducer.
 - Confidence note: No day-by-day INR curve is invented. The direction and the need for follow-up are the claim.
@@ -1611,7 +1611,7 @@ These are the confidence limits. The item was written only with the fact stated.
 ### iv-48 (domain IV, objectives 67, 64)
 
 - Old correct (a): Unreliable oral delivery or absorption can reduce effective exposure despite an apparently correct prescription
-- New correct (d): Oral absorption is unreliable while vomiting continues, so the AF indication may need a non-oral plan rather than a charted dose that never stayed down
+- New correct (d): Vomited doses are not absorbed reliably, so the AF plan may need a non-oral route
 - Source: Oral anticoagulant pharmacology: apixaban requires gastrointestinal absorption. Ongoing vomiting makes the charted oral dose an unreliable record of exposure.
 - Why this is harder: The medication administration record shows two doses. The emesis basin shows otherwise.
 - Confidence note: No alternative parenteral dose is stated.
@@ -1619,41 +1619,41 @@ These are the confidence limits. The item was written only with the fact stated.
 ### v-20 (domain V, objectives 72, 74)
 
 - Old correct (b): Patients with complex regimens, unstable control, high-risk transitions, or practical barriers to safe follow-up
-- New correct (d): Patients on warfarin, patients with complex DOAC regimens or interacting drugs, and patients with procedure holds that need an owner
+- New correct (d): Warfarin patients, complex DOAC regimens, and procedure holds that need an owner
 - Source: Service design: prioritize warfarin monitoring, complex DOAC management, and peri-procedural coordination.
 - Why this is harder: A large roster of low-need enrollments would look busy and miss the INR on Friday.
 
 ### v-21 (domain V, objectives 73, 80)
 
 - Old correct (c): Defined roles for result review, patient contact, treatment authority, escalation, and communication to the primary clinician
-- New correct (a): A written, reachable owner for critical results at every hour the laboratory reports them, with a backup when that person is off
+- New correct (a): A named owner for critical INRs whenever the lab releases them, plus a backup
 - Source: Critical-result design: a written primary owner and a backup for every hour results are released.
 - Why this is harder: The overnight delays are the symptom of an unassigned duty.
 
 ### v-22 (domain V, objectives 74, 77)
 
 - Old correct (d): Eligibility and referral rules, roles, monitoring and escalation workflows, transitions, quality systems, and staff training requirements
-- New correct (b): Procedures for dosing, critical results, point-of-care failures, peri-procedure communication, and staff competency
+- New correct (b): Procedures for dosing, critical results, meter failures, handoffs, and competency
 - Source: Operations manual content: dosing workflow, critical-result response, point-of-care failures, peri-procedure communication, and competency. No regulation section is numbered.
 - Why this is harder: Trial PDFs are evidence. They are not the night-shift procedure.
 
 ### v-23 (domain V, objectives 78, 76)
 
 - Old correct (a): A structured survey of access, communication, understanding, and care burden, with an improvement and reassessment plan
-- New correct (c): Time-in-range plus access measures, such as time to a answered clinical call and whether bleeding calls reach a person
+- New correct (c): Time in range plus whether a bleeding call actually reaches a person
 - Source: Quality evaluation: pair time in therapeutic range with access measures such as answered clinical calls. No percentage cutoff is applied.
 - Why this is harder: The dashboard is green. The phone line is the actual complaint.
 
 ### v-24 (domain V, objectives 81, 79)
 
 - Old correct (b): An order-to-result tracking system with expected dates, missing-result reconciliation, critical escalation, and documented review
-- New correct (d): A expected-result list that flags a missing INR the day it was due, and a person who obtains the result or a repeat sample
+- New correct (d): An expected-result list flags a missing INR the day it is due, and someone obtains it or a repeat
 - Source: Monitoring workflow: track expected external results and chase or repeat a missing INR rather than continuing the dose on silence.
 - Why this is harder: The patient is following instructions. The missing message is the clinic's failure mode.
 
 ### v-26 (domain V, objectives 83, 45)
 
 - Old correct (d): The facility supports authorized testing services and equipment or reporting workflows while the treating team retains clinical management responsibility
-- New correct (a): The facility supports authorized testing logistics, and the treating clinicians keep dose changes, training decisions, and follow-up
+- New correct (a): The facility handles testing logistics; clinicians keep dosing, eligibility, and follow-up
 - Source: Home INR partnership: the testing facility supplies authorized logistics; the treating team retains eligibility, dosing, and follow-up. No coverage-policy number is cited.
 - Why this is harder: A turnkey vendor pitch is being mistaken for a transfer of the medical decision.

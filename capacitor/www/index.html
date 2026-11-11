@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="description" content="Interactive teaching timeline of high-impact anticoagulation RCTs from the DOAC era through 2026. Rapid Recap popups, journal-club deep dives, pathways, and compare." />
+  <meta name="description" content="Interactive teaching timeline. Anticoagulation trials, 1999–2026. Trial snapshot popups, journal-club deep dives, pathways, and compare." />
   <meta name="author" content="Anticoagulation Trials Timeline" />
   <meta property="og:title" content="Anticoagulation Trials Timeline" />
-  <meta property="og:description" content="Teaching timeline of anticoagulation clinical trials (DOAC era → 2026). Click a trial for Rapid Recap and journal-club detail." />
+  <meta property="og:description" content="Teaching timeline. Anticoagulation trials, 1999–2026. Click a trial for a Trial snapshot and journal-club detail." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Anticoagulation Trials Timeline" />
@@ -250,13 +250,6 @@
       background: var(--accent-soft); border-color: var(--accent); color: var(--accent);
     }
     .mk.in-compare button::before { background: var(--accent); }
-    .mk .tier {
-      font-size: .625rem; font-weight: 700; color: var(--muted);
-      border: 1px solid var(--line); border-radius: 2px; padding: 0 .2rem;
-    }
-    .mk button:hover .tier, .mk button:focus-visible .tier {
-      color: #fff; border-color: rgba(255,255,255,.45);
-    }
     .mk.dim { opacity: .28; }
     .mk.on-path button {
       box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--accent);
@@ -282,10 +275,11 @@
       color: var(--ink);
     }
     .jc-sec p, .jc-sec .val { font-size: 1rem; color: var(--ink-2); line-height: 1.5; }
-    .jc-banner {
+    .jc-banner, .capsule-kicker {
       font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
       color: var(--accent); margin-bottom: .5rem;
     }
+    .capsule-kicker { margin-bottom: .2rem; }
     .modal.detail.jc-wide { max-width: 720px; }
 
     /* Tooltip */
@@ -347,6 +341,91 @@
     }
     .x:hover { background: var(--muted-bg); }
     .x:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .m-head-tools {
+      display: flex; align-items: center; gap: .35rem; flex-shrink: 0;
+    }
+    .m-head:has(.m-head-tools) > div:first-child { min-width: 0; flex: 1 1 auto; }
+    .m-head-tools .x { width: 44px; height: 44px; }
+    .fs-toggle {
+      appearance: none; display: inline-flex; align-items: center; justify-content: center;
+      gap: .35rem; min-height: 44px; padding: .35rem .7rem; white-space: nowrap;
+      border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent);
+      border-radius: 3px; cursor: pointer; font: inherit; font-size: .8125rem;
+      font-weight: 700; line-height: 1.2; flex-shrink: 0;
+    }
+    .fs-toggle:hover { background: var(--paper); }
+    .fs-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .fs-toggle[aria-pressed="true"] { background: var(--accent); color: #fff; }
+    .fs-toggle .fs-ico { width: 1rem; height: 1rem; display: block; flex-shrink: 0; }
+    .fs-toggle .fs-ico-exit { display: none; }
+    .fs-toggle[aria-pressed="true"] .fs-ico-enter { display: none; }
+    .fs-toggle[aria-pressed="true"] .fs-ico-exit { display: block; }
+
+    /* Full-viewport mode (Teach, Learn, treatment pathways, CACP).
+       CSS fills the screen; the Fullscreen API is requested when the browser allows it. */
+    body.has-fs-modal { overflow: hidden; }
+    .bd.is-fullscreen {
+      padding: 0;
+      background: var(--paper);
+    }
+    .bd.is-fullscreen .modal.is-fullscreen {
+      position: fixed; inset: 0; z-index: 1;
+      width: auto; max-width: none; height: auto; max-height: none;
+      margin: 0; border: 0; border-radius: 0; box-shadow: none;
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-head,
+    .bd.is-fullscreen .modal.is-fullscreen > .m-foot,
+    .bd.is-fullscreen .modal.is-fullscreen > #learn-progress {
+      flex: 0 0 auto; position: relative; top: auto; bottom: auto;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-head {
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-foot {
+      padding-bottom: max(.95rem, env(safe-area-inset-bottom));
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-body {
+      flex: 1 1 auto; align-self: center; min-height: 0; min-width: 0;
+      overflow: auto; width: min(100%, 72rem); max-width: 100%;
+      margin-inline: auto; box-sizing: border-box;
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1.15rem, env(safe-area-inset-right));
+    }
+    .modal.teach.is-fullscreen .teach-lead,
+    .modal.teach.is-fullscreen .jc-sec p,
+    .modal.teach.is-fullscreen .fw-deck,
+    .modal.teach.is-fullscreen .fw-check-help,
+    .modal.teach.is-fullscreen .fw-section-body,
+    .modal.teach.is-fullscreen .fw-teachback,
+    .modal.teach.is-fullscreen .case-stem,
+    .modal.teach.is-fullscreen .ddi-legend,
+    .modal.learn.is-fullscreen .learn-hero p,
+    .modal.learn.is-fullscreen .learn-goals,
+    .modal.learn.is-fullscreen .learn-why,
+    .modal.learn.is-fullscreen .learn-orient-tip,
+    .modal.txpath.is-fullscreen .txp-body,
+    .modal.cacp.is-fullscreen .cacp-stem,
+    .modal.cacp.is-fullscreen .cacp-explain,
+    .modal.cacp.is-fullscreen .cacp-banner,
+    .modal.cacp.is-fullscreen .cacp-ref,
+    .modal.cacp.is-fullscreen .cacp-tips,
+    .modal.cacp.is-fullscreen .cacp-home-card,
+    .modal.cacp.is-fullscreen .cacp-choices {
+      max-width: 68ch;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-chart {
+      max-width: none; padding: 1rem 1.1rem 1.15rem;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-title { font-size: 1.35rem; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-hook { font-size: 1.15rem; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-svg { width: 100%; height: auto; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-table,
+    .bd.is-fullscreen .modal.is-fullscreen .pk-table { font-size: 1rem; }
 
     .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .35rem; }
     .tag {
@@ -372,13 +451,12 @@
     .fw-check-lock {
       font-size: .9375rem; color: var(--ink); margin: 0 0 .65rem; line-height: 1.45;
     }
-    .fw-check-list { list-style: none; margin: 0; padding: 0; }
+    .fw-check-list { margin: 0; padding-left: 1.15rem; }
     .fw-check-item {
       margin: 0 0 .55rem; font-size: .9375rem; color: var(--ink); line-height: 1.4;
     }
-    .fw-box { margin-right: .35rem; }
     .fw-check-help {
-      margin: .2rem 0 0 1.35rem; font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
+      margin: .2rem 0 0; font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
     }
     .fw-section-body {
       margin: 0 0 .55rem; font-size: .9rem; color: var(--ink-2); line-height: 1.45;
@@ -403,6 +481,35 @@
       padding: .65rem .75rem; margin-bottom: .85rem;
       background: var(--accent-soft); border-left: 3px solid var(--accent);
     }
+    .predict-gate, .predict-again {
+      border: 1px solid var(--line); border-radius: 3px; background: var(--bg);
+      padding: .75rem .8rem; margin: 0 0 .85rem;
+    }
+    .predict-prompt, .predict-help, .predict-again p, .predict-feedback p {
+      margin: 0 0 .55rem; color: var(--ink-2); font-size: .9375rem; line-height: 1.45;
+    }
+    .predict-gate label.predict-note-lab { display: block; font-weight: 600; font-size: .875rem; margin-bottom: .3rem; }
+    .predict-gate textarea {
+      width: 100%; min-height: 5.5rem; box-sizing: border-box; font: inherit; font-size: 1rem;
+      color: var(--ink); background: var(--paper); border: 1px solid var(--line-2); border-radius: 3px;
+      padding: .5rem .6rem; line-height: 1.4;
+    }
+    .predict-conf { border: 0; margin: .7rem 0 0; padding: 0; }
+    .predict-conf legend { font-weight: 600; font-size: .875rem; margin-bottom: .35rem; padding: 0; }
+    .predict-conf-row { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .predict-conf-row label {
+      display: inline-flex; align-items: center; gap: .35rem; min-height: 44px;
+      padding: .35rem .7rem; border: 1px solid var(--line-2); border-radius: 3px; background: var(--paper);
+      font-size: .9375rem;
+    }
+    .predict-actions { display: flex; flex-direction: column; gap: .45rem; margin-top: .75rem; }
+    .predict-actions .btn, .predict-again .btn { width: 100%; min-height: 44px; }
+    .predict-feedback {
+      margin: -.35rem 0 .85rem; padding: .55rem .7rem;
+      background: var(--bg); border-left: 3px solid var(--line-2); border-radius: 0 3px 3px 0;
+    }
+    .predict-wrote { margin: 0 0 .4rem; color: var(--ink); font-size: .9375rem; line-height: 1.45; white-space: pre-wrap; }
+    .predict-rest.is-concealed { display: none; }
     .fields {
       display: grid; gap: .65rem .9rem;
       grid-template-columns: 1fr;
@@ -470,7 +577,7 @@
     table.cmp td.rl {
       font-size: .75rem; font-weight: 700; letter-spacing: .04em;
       text-transform: uppercase; color: var(--muted); background: var(--bg);
-      white-space: nowrap; width: 7rem;
+      white-space: normal; width: 9.5rem; min-width: 8.25rem;
     }
 
     .prog { display: flex; gap: 3px; margin-bottom: .65rem; }
@@ -533,6 +640,26 @@
     }
     .whats-new .wn-tag.pending { border-style: dashed; color: var(--accent); border-color: var(--accent); }
 
+    /* Abbreviation key — collapsed, footer-adjacent */
+    .abbr-key {
+      background: var(--paper); border: 1px solid var(--line); border-radius: 3px;
+      padding: .45rem .7rem; margin-top: .75rem;
+    }
+    .abbr-key summary {
+      cursor: pointer; font-size: .8125rem; font-weight: 700; color: var(--ink-2);
+      list-style: none; display: flex; align-items: center; gap: .45rem;
+    }
+    .abbr-key summary::-webkit-details-marker { display: none; }
+    .abbr-key summary::before { content: "▸"; color: var(--accent); font-size: .75rem; }
+    .abbr-key[open] summary::before { content: "▾"; }
+    .abbr-key dl {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      gap: .28rem .9rem; margin: .5rem 0 .15rem;
+    }
+    .abbr-key dl div { display: flex; gap: .45rem; align-items: baseline; min-width: 0; }
+    .abbr-key dt { font-weight: 700; font-size: .75rem; color: var(--ink); flex: 0 0 4.6rem; }
+    .abbr-key dd { margin: 0; font-size: .75rem; color: var(--muted); line-height: 1.35; }
+
     /* Pathway tray */
     .pathway-tray {
       display: none; flex-wrap: wrap; align-items: center; gap: .4rem .55rem;
@@ -565,6 +692,9 @@
       border: 1px solid var(--line); background: var(--paper);
     }
     .cacp-choices .btn:hover { border-color: var(--line-2); background: var(--muted-bg); }
+    .cacp-choices .btn.selected {
+      border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent);
+    }
     .cacp-choices .btn.correct {
       border-color: #276749; background: #edf7f1; color: #1a4731; font-weight: 600;
     }
@@ -581,6 +711,8 @@
       color: var(--muted); margin-bottom: .35rem;
     }
     .cacp-explain p { font-size: .9rem; color: var(--ink-2); line-height: 1.45; margin-bottom: .45rem; }
+    .cacp-unscored { font-size: .8125rem; color: var(--muted); margin: 0 0 .45rem; }
+    #cacp-next, #cacp-reveal { min-height: 44px; }
     .cacp-explain ul { margin: 0; padding-left: 1.1rem; font-size: .85rem; color: var(--ink-2); line-height: 1.4; }
     .cacp-links { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; }
     .cacp-links .btn { font-size: .75rem; padding: .22rem .45rem; }
@@ -596,6 +728,51 @@
     }
     .cacp-tips summary { cursor: pointer; font-weight: 600; font-size: .875rem; }
     .cacp-tips ul { margin: .4rem 0 0; padding-left: 1.1rem; font-size: .8125rem; color: var(--ink-2); }
+    .cacp-h {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.2rem; margin: .2rem 0 .35rem;
+    }
+    .cacp-ref { font-size: .8125rem; color: var(--muted); line-height: 1.45; margin: .35rem 0 .65rem; }
+    .cacp-ref a { color: var(--accent); }
+    .cacp-actions { margin: .35rem 0 .85rem; }
+    .cacp-home-card {
+      display: block; width: 100%; text-align: left; cursor: pointer;
+      font: inherit; color: var(--ink);
+      border: 1px solid var(--line-2); background: var(--paper);
+      border-radius: 3px; padding: .8rem .9rem; min-height: 44px;
+    }
+    .cacp-home-card + .cacp-home-card { margin-top: .55rem; }
+    .cacp-home-card:hover { background: var(--muted-bg); }
+    .cacp-home-card:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .cacp-home-card strong { display: block; font-size: 1rem; margin-bottom: .25rem; }
+    .cacp-home-card span { display: block; font-size: .8125rem; font-weight: 500; color: var(--ink-2); line-height: 1.45; }
+    .cacp-home-card:disabled { opacity: .55; cursor: not-allowed; }
+    .cacp-table-wrap { overflow-x: auto; margin: .35rem 0 .75rem; }
+    .cacp-quota { width: 100%; border-collapse: collapse; font-size: .8125rem; }
+    .cacp-quota th, .cacp-quota td { border: 1px solid var(--line); padding: .35rem .45rem; text-align: left; }
+    .cacp-quota th { background: var(--muted-bg); font-weight: 600; }
+    .cacp-clock { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink); }
+    .cacp-clock.warn { color: var(--c-pe); }
+    .cacp-qnav { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .5rem; }
+    .cacp-qnav button {
+      font: inherit; font-size: .75rem; font-weight: 600; color: var(--ink);
+      min-width: 44px; min-height: 44px; padding: 0 .25rem;
+      border: 1px solid var(--line); background: var(--paper); border-radius: 3px; cursor: pointer;
+    }
+    .cacp-qnav button.answered { background: var(--muted-bg); }
+    .cacp-qnav button.current { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+    .cacp-qnav button.bookmarked { text-decoration: underline; text-underline-offset: 2px; }
+    .cacp-bar {
+      position: relative; height: 14px; background: var(--muted-bg);
+      border: 1px solid var(--line); border-radius: 2px; margin: .45rem 0 .25rem;
+    }
+    .cacp-bar-fill { display: block; height: 100%; background: var(--c-af); max-width: 100%; }
+    .cacp-bar-mark {
+      position: absolute; top: -3px; bottom: -3px; width: 2px;
+      background: var(--ink); transform: translateX(-1px);
+    }
+    .cacp-begin { min-height: 44px; margin-top: .35rem; }
+    #cacp-next, #cacp-reveal, #cacp-finish, #cacp-prev, #cacp-bookmark { min-height: 44px; }
 
 
     /* Learn path (Core Clinic Path) */
@@ -618,6 +795,7 @@
       border: 1px solid transparent; min-width: 0;
     }
     .learn-seg.done { background: var(--accent); }
+    .learn-seg.mastered { box-shadow: inset 0 0 0 1px var(--ink); }
     .learn-seg.in_progress {
       background: var(--accent-soft); border-color: var(--accent);
     }
@@ -778,6 +956,122 @@
       color: var(--muted);
       margin: 0 0 .5rem;
     }
+
+    .learn-soft-physio {
+      margin: .75rem 0 .35rem;
+      padding: .7rem .75rem .8rem;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--muted-bg);
+    }
+    .learn-soft-physio-eyebrow {
+      margin: 0 0 .35rem;
+      font-size: .6875rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .learn-soft-physio-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .65rem;
+    }
+    .learn-soft-physio-hook {
+      margin: .15rem 0 .2rem;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+    .learn-soft-physio-head .learn-soft-physio-hook { margin: 0; flex: 1 1 auto; }
+    .learn-soft-physio-title {
+      margin: 0 0 .55rem;
+      font-size: .875rem;
+      color: var(--ink-2);
+      line-height: 1.4;
+    }
+    .learn-soft-physio-count {
+      margin: 0 0 .45rem;
+      font-size: .8125rem;
+      color: var(--muted);
+    }
+    .learn-soft-physio-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem .5rem;
+      align-items: center;
+    }
+    .learn-soft-physio-actions .btn,
+    .learn-soft-physio-head .btn { min-height: 44px; }
+    .learn-soft-physio-head .btn { flex: 0 0 auto; }
+    .learn-soft-physio-mount {
+      margin-top: .55rem;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .learn-soft-physio-mount .lv-chart { margin-bottom: 0; }
+    /* The strip header already says the hook. Hide the figure caption in this mount only. */
+    .learn-soft-physio-mount .lv-hook { display: none; }
+    .lv-target-key {
+      list-style: none;
+      margin: .55rem 0 .35rem;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .45rem;
+    }
+    .lv-target-key li {
+      display: flex;
+      gap: .55rem;
+      align-items: flex-start;
+      margin: 0;
+      padding: .45rem .55rem;
+      background: var(--muted-bg);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      font-size: .8125rem;
+      line-height: 1.45;
+      color: var(--ink);
+    }
+    .lv-mark {
+      flex: 0 0 auto;
+      width: 14px;
+      height: 14px;
+      margin-top: .2rem;
+      box-sizing: border-box;
+    }
+    .lv-mark-square {
+      border: 2px solid #975a16;
+      background: transparent;
+    }
+    .lv-mark-diamond {
+      width: 12px;
+      height: 12px;
+      margin-left: 1px;
+      margin-right: 1px;
+      background: #0f766e;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    }
+    .lv-mark-circle {
+      border-radius: 50%;
+      background: #b83a1f;
+    }
+    @media (max-width: 640px) {
+      .learn-soft-physio-mount { max-height: 55vh; overflow: auto; }
+      .learn-soft-physio.is-drug-targets .learn-soft-physio-mount { max-height: none; }
+      .learn-soft-physio-actions .btn,
+      .learn-soft-physio-head .btn { min-height: 44px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .learn-soft-physio,
+      .learn-soft-physio-mount {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
     /* Evidence visuals */
     .lv-chart {
       margin: 0 0 .75rem;
@@ -786,6 +1080,7 @@
       border: 1px solid var(--line);
       border-radius: 4px;
       max-width: 680px;
+      overflow-x: auto;
     }
     .lv-hook {
       font-family: "Source Serif 4", Georgia, serif;
@@ -802,6 +1097,11 @@
       color: var(--ink);
     }
     .lv-svg { width: 100%; height: auto; display: block; background: var(--paper); }
+    .lv-svg[hidden],
+    h4.lv-title[hidden],
+    .lv-target-key[hidden],
+    .lv-disclaimer[hidden],
+    .lv-sr-only[hidden] { display: none !important; }
     .lv-val { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: var(--ink); }
     .lv-xlabel, .lv-ytick, .lv-leg, .lv-ylabel { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 11px; fill: var(--muted); }
     .lv-inset-title { font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: var(--ink); }
@@ -814,6 +1114,15 @@
       border: 1px solid var(--line);
       border-radius: 3px;
       color: var(--ink-2);
+    }
+    a.lv-chip {
+      color: inherit;
+      text-decoration: none;
+    }
+    a.lv-chip:hover,
+    a.lv-chip:focus-visible {
+      border-color: var(--accent);
+      color: var(--accent);
     }
     .lv-takeaway {
       margin: .55rem 0 .4rem;
@@ -840,6 +1149,12 @@
       border-radius: 3px;
     }
     .lv-footnote { font-size: .75rem; color: var(--muted); margin: .35rem 0 0; line-height: 1.35; }
+    .lv-legend-note {
+      font-size: .75rem;
+      color: var(--muted);
+      margin: .4rem 0 .25rem;
+      line-height: 1.35;
+    }
     .lv-table {
       width: 100%;
       border-collapse: collapse;
@@ -956,18 +1271,14 @@
     /* Embed chrome */
     body.embed .topbar .deck,
     body.embed .whats-new,
+    body.embed .abbr-key,
     body.embed #learn-welcome,
     body.embed #btn-learn-chip,
+    body.embed #btn-review,
     body.embed .sec-nav,
     body.embed .teach-wrap,
     body.embed #btn-teach,
     body.embed #btn-more,
-    /* Hotfix: hide unfinished Guided overview / Self-check (empty STORY_BEATS / QUIZ_QUESTIONS) */
-    #btn-story,
-    #btn-quiz { display: none !important; }
-
-    body.embed #btn-story,
-    body.embed #btn-quiz,
     body.embed #btn-embed,
     body.embed #btn-pathways,
     body.embed #btn-txpath,
@@ -986,9 +1297,9 @@
     /* Print sheet (screen-hidden) */
     #print-root { display: none; }
     @media print {
-      body * { visibility: hidden !important; }
-      #print-root, #print-root * { visibility: visible !important; }
-      #print-root {
+      body.print-sheet * { visibility: hidden !important; }
+      body.print-sheet #print-root, body.print-sheet #print-root * { visibility: visible !important; }
+      body.print-sheet #print-root {
         display: block !important; position: absolute; left: 0; top: 0; width: 100%;
         padding: 0; color: #111 !important; background: #fff !important;
         font-family: "IBM Plex Sans", Helvetica, Arial, sans-serif; font-size: 11pt; line-height: 1.4;
@@ -1017,6 +1328,63 @@
       #print-root .cite { font-size: 9pt; color: #555 !important; margin-top: 8pt; }
       #print-root .banner { font-size: 8pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #b83a1f !important; margin-bottom: 4pt; }
       @page { margin: 0.5in; size: letter; }
+    }
+
+    /* Browser print (Ctrl/Cmd+P) of the page or an open dialog/handout (tech-prep) */
+    @media print {
+      body:not(.print-sheet) .topbar,
+      body:not(.print-sheet) .teach-wrap,
+      body:not(.print-sheet) .filters,
+      body:not(.print-sheet) .ddi-filters,
+      body:not(.print-sheet) .pathway-tray,
+      body:not(.print-sheet) .learn-welcome,
+      body:not(.print-sheet) .whats-new,
+      body:not(.print-sheet) .abbr-key,
+      body:not(.print-sheet) .tip,
+      body:not(.print-sheet) .toast,
+      body:not(.print-sheet) .x,
+      body:not(.print-sheet) .fs-toggle,
+      body:not(.print-sheet) [data-close],
+      body:not(.print-sheet) .m-foot { display: none !important; }
+      body.has-fs-modal { overflow: visible !important; }
+      body:not(.print-sheet) .bd.is-fullscreen {
+        display: block !important; position: static !important; height: auto !important;
+        background: none !important; padding: 0 !important; overflow: visible !important;
+      }
+      body:not(.print-sheet) .modal.is-fullscreen {
+        position: static !important; inset: auto !important; display: block !important;
+        height: auto !important; min-height: 0 !important; max-height: none !important;
+        width: auto !important; max-width: none !important; overflow: visible !important;
+        flex: none !important;
+      }
+      body:not(.print-sheet) .modal.is-fullscreen .m-body,
+      body:not(.print-sheet) .modal.is-fullscreen .teach-lead,
+      body:not(.print-sheet) .modal.is-fullscreen .jc-sec p,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-stem,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-choices,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-explain,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-banner,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-home-card,
+      body:not(.print-sheet) .modal.is-fullscreen .lv-chart {
+        max-width: none !important; width: auto !important; overflow: visible !important;
+      }
+      body:not(.print-sheet) [style*="sticky"],
+      body:not(.print-sheet) .m-head,
+      body:not(.print-sheet) .axis { position: static !important; }
+      body:not(.print-sheet):has(.bd.open) .app { display: none !important; }
+      body:not(.print-sheet) .bd.open {
+        display: block !important; position: static !important; overflow: visible !important;
+        inset: auto; padding: 0; background: none !important;
+      }
+      body:not(.print-sheet) .bd.open .modal {
+        position: static !important; overflow: visible !important; max-height: none !important;
+        max-width: none !important; width: auto !important; box-shadow: none !important; border: 0 !important;
+      }
+      body:not(.print-sheet) .bd.open .m-body { overflow: visible !important; }
+      body:not(.print-sheet) .bd.open h2,
+      body:not(.print-sheet) .bd.open h3 { break-after: avoid; page-break-after: avoid; }
+      .predict-gate, .predict-again, .predict-feedback, .predict-context { display: none !important; }
+      .predict-rest.is-concealed { display: block !important; }
     }
 
     .path-list { display: flex; flex-direction: column; gap: .45rem; }
@@ -1058,8 +1426,32 @@
       color: #fff;
       border-color: var(--accent);
     }
+    #btn-review {
+      font-size: .8125rem;
+      font-weight: 600;
+      min-height: 44px;
+    }
+    .recall-q { margin: 0 0 .85rem; }
+    .recall-q > p { margin: 0 0 .4rem; font-weight: 650; color: var(--ink); line-height: 1.35; }
+    .recall-opt {
+      display: block; width: 100%; text-align: left; white-space: normal;
+      height: auto; min-height: 44px; line-height: 1.35; margin: 0 0 .35rem;
+    }
+    .recall-opt.is-on { border-color: var(--accent); background: var(--accent-soft); }
+    .recall-fb { margin: .35rem 0 0; font-size: .875rem; color: var(--ink-2); line-height: 1.45; }
+    .recall-why { margin: .35rem 0 .5rem; }
+    .recall-why label { display: block; font-weight: 650; margin: 0 0 .35rem; line-height: 1.35; }
+    .recall-why textarea {
+      display: block; width: 100%; min-height: 88px; font: inherit; color: var(--ink);
+      background: var(--paper); border: 1px solid var(--line-2); border-radius: 3px; padding: .45rem .55rem;
+    }
+    .recall-note { margin: .35rem 0 0; color: var(--muted); font-size: .8125rem; line-height: 1.4; }
+    .review-queue { display: flex; flex-direction: column; gap: .4rem; }
+    .review-queue .path-item { min-height: 44px; }
+    .review-empty { color: var(--ink-2); line-height: 1.45; margin: 0; }
     @media (max-width: 640px) {
       #btn-learn-chip { min-height: 44px; }
+      #btn-review { min-height: 44px; }
     }
     .teach-wrap #btn-teach {
       font-size: .8125rem; font-weight: 600;
@@ -1118,7 +1510,8 @@
     body.embed .sec-nav,
     body.embed .teach-wrap,
     body.embed #btn-teach,
-    body.embed #btn-learn-chip { display: none !important; }
+    body.embed #btn-learn-chip,
+    body.embed #btn-review { display: none !important; }
 
     /* Mobile ≤640: More overflow + Teach bottom sheet (after base so cascade wins) */
     @media (max-width: 640px) {
@@ -1232,6 +1625,15 @@
     .prac-box .row { font-size: .8125rem; color: var(--ink-2); margin-bottom: .2rem; line-height: 1.35; }
     .prac-box .row strong { color: var(--ink); font-weight: 600; }
     .prac-box .disc { font-size: .75rem; color: var(--muted); margin-top: .35rem; font-style: italic; }
+    .teach-not-rx {
+      font-size: .8125rem; font-weight: 650; color: var(--ink);
+      background: var(--muted-bg); border: 1px solid var(--line); border-radius: 3px;
+      padding: .4rem .55rem; margin: 0 0 .65rem; line-height: 1.4;
+    }
+    .teach-dose-label {
+      font-size: .75rem; font-weight: 700; letter-spacing: .02em; color: var(--accent);
+      margin: 0 0 .35rem;
+    }
     .rev-block { margin-bottom: .85rem; padding-bottom: .75rem; border-bottom: 1px solid var(--line); }
     .rev-block:last-child { border-bottom: none; }
     .site-meta {
@@ -1289,6 +1691,14 @@
     .txp-caveat { font-size: .8125rem; color: var(--ink-2); padding-left: 1rem; margin: 0 0 .25rem; }
     .txp-progress { height: 4px; background: var(--muted-bg); border-radius: 2px; margin: .35rem 0 .75rem; overflow: hidden; }
     .txp-progress > i { display: block; height: 100%; background: var(--accent); width: 0%; }
+    .ddi-legend {
+      font-size: .8125rem; color: var(--ink-2); line-height: 1.45;
+      border: 1px solid var(--line); background: var(--bg);
+      border-radius: 3px; padding: .55rem .7rem; margin: 0 0 .75rem;
+    }
+    .ddi-legend p { margin: 0; }
+    .ddi-legend ul { margin: .4rem 0 0; padding-left: 1.1rem; }
+    .ddi-legend li { margin-bottom: .28rem; }
     .ddi-filters { display: flex; flex-wrap: wrap; gap: .4rem .5rem; align-items: center; margin-bottom: .65rem; }
     .ddi-filters select, .ddi-filters input {
       font: inherit; font-size: .875rem; padding: .35rem .5rem; border: 1px solid var(--line);
@@ -1398,13 +1808,13 @@
         padding: .45rem .7rem;
         font-size: .875rem;
       }
-      .filt-more, .whats-new summary, .learn-path-details > summary, .cacp-tips summary {
+      .filt-more, .whats-new summary, .abbr-key summary, .learn-path-details > summary, .cacp-tips summary {
         min-height: 44px;
         font-size: .9375rem;
         display: inline-flex;
         align-items: center;
       }
-      .whats-new summary { width: 100%; }
+      .whats-new summary, .abbr-key summary { width: 100%; }
       .count { font-size: .875rem; margin-left: 0; }
 
       .board { max-width: 100%; }
@@ -1475,7 +1885,7 @@
         padding-right: 1rem;
       }
       .m-head { gap: .5rem; }
-      .m-head > div { min-width: 0; flex: 1; }
+      .m-head > div:first-child { min-width: 0; flex: 1; }
       .m-head h2 { font-size: 1.35rem; overflow-wrap: break-word; }
       .x {
         width: 44px;
@@ -1591,6 +2001,16 @@
         overflow-wrap: anywhere;
       }
       .lv-badge { white-space: normal; }
+
+      /* Full-screen mode still fills the viewport; the sheet rules above do not apply. */
+      .bd.is-fullscreen { align-items: stretch; padding: 0; }
+      .bd.is-fullscreen .modal.is-fullscreen {
+        width: auto;
+        max-width: none;
+        max-height: none;
+        height: auto;
+        border-radius: 0;
+      }
     }
   </style>
 </head>
@@ -1599,7 +2019,7 @@
     <header class="topbar">
       <div class="brand">
         <h1>Anticoagulation Trials Timeline</h1>
-        <p class="deck">DOAC era through 2026 · Overview first — click a marker for the teaching capsule</p>
+        <p class="deck">Anticoagulation trials, 1999–2026 · Overview first — click a marker for the teaching capsule</p>
       </div>
       <div class="actions">
         <button type="button" class="btn sm" id="btn-pathways">Trial playlists</button>
@@ -1607,8 +2027,6 @@
         <div class="more-wrap" id="more-wrap">
           <button type="button" class="btn sm ghost more-trigger" id="btn-more" aria-expanded="false" aria-controls="more-menu" aria-haspopup="menu" aria-label="More actions">More</button>
           <div class="more-panel" id="more-menu" role="menu" aria-label="More actions" hidden>
-            <button type="button" class="btn sm ghost" role="menuitem" id="btn-story" hidden aria-hidden="true" tabindex="-1">Guided overview</button>
-            <button type="button" class="btn sm ghost" role="menuitem" id="btn-quiz" hidden aria-hidden="true" tabindex="-1">Self-check</button>
             <button type="button" class="btn sm ghost" role="menuitem" id="btn-embed">Embed</button>
             <button type="button" class="btn sm ghost" role="menuitem" id="btn-theme" aria-label="Toggle theme">Theme</button>
           </div>
@@ -1621,6 +2039,7 @@
         Teach <span class="teach-chev" aria-hidden="true">▾</span>
       </button>
       <button type="button" class="btn sm" id="btn-learn-chip" aria-label="Start here — open Learn path">Start here</button>
+      <button type="button" class="btn sm" id="btn-review" aria-label="Review, 0 due">Review (0 due)</button>
       <div class="teach-menu" id="teach-menu" role="menu" aria-label="Teaching tools" hidden>
         <div class="teach-menu-label" aria-hidden="true">Practice</div>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-txpath">Treatment pathways</button>
@@ -1632,8 +2051,7 @@
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cases">Cases</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-nuance">Nuance</button>
         <button type="button" class="btn sm ghost" role="menuitem" id="btn-cacp">CACP prep</button>
-        <div class="teach-menu-label" aria-hidden="true">Site</div>
-        <button type="button" class="btn sm ghost" role="menuitem" id="btn-changelog">Changelog</button>
+        <button type="button" class="btn sm ghost" role="menuitem" id="btn-open-questions">Open questions</button>
       </div>
     </div>
 
@@ -1664,8 +2082,7 @@
       <input class="search" id="search" type="search" placeholder="Search acronym…" autocomplete="off" />
       <div id="status-filters" style="display:flex;flex-wrap:wrap;gap:.3rem;" role="group" aria-label="Status">
         <button type="button" class="chip active" data-status="all">All</button>
-        <button type="button" class="chip" data-status="landmark">Landmark</button>
-        <button type="button" class="chip" data-status="practice">Practice</button>
+        <button type="button" class="chip" data-status="published">Published</button>
         <button type="button" class="chip" data-status="recent">Recent</button>
         <button type="button" class="chip" data-status="pending">Pending</button>
       </div>
@@ -1703,6 +2120,11 @@
       </div>
       <div class="legend" id="legend"></div>
     </section>
+
+    <details class="abbr-key" id="abbr-key">
+      <summary>Abbreviations</summary>
+      <dl id="abbr-list"></dl>
+    </details>
 
     <footer class="note" id="site-disclaimer">Educational resource — not medical advice. Verify dosing, hold times, and reversal with institutional protocols and primary literature.</footer>
     <div class="site-meta" id="site-meta"></div>
@@ -1755,7 +2177,7 @@
   </div>
 
 
-  <!-- Teach pages (frameworks / cases / nuance / reversal / changelog) -->
+  <!-- Teach pages (frameworks / cases / nuance / reversal) -->
 
   <div class="bd" id="bd-learn" hidden>
     <div class="modal learn" role="dialog" aria-modal="true" aria-labelledby="learn-title" tabindex="-1">
@@ -1765,7 +2187,14 @@
           <div class="yrline" id="learn-sub">First anticoagulation clinic week</div>
           <div class="learn-disclaimer" id="learn-disclaimer"></div>
         </div>
-        <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="learn" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
+        </div>
       </div>
       <div id="learn-progress" aria-live="polite">
         <div class="learn-progress-label" id="learn-progress-label">0 of 10 · no rush</div>
@@ -1780,6 +2209,22 @@
     </div>
   </div>
 
+  <div class="bd" id="bd-review" hidden>
+    <div class="modal learn" role="dialog" aria-modal="true" aria-labelledby="review-title" tabindex="-1">
+      <div class="m-head">
+        <div>
+          <h2 id="review-title">Review</h2>
+          <div class="yrline">Learn lessons and revealed trial snapshots</div>
+        </div>
+        <button type="button" class="x" data-close="review" aria-label="Close">×</button>
+      </div>
+      <div class="m-body" id="review-body"></div>
+      <div class="m-foot">
+        <button type="button" class="btn ghost" id="review-close" data-close="review">Close</button>
+      </div>
+    </div>
+  </div>
+
   <div class="bd" id="bd-teach" hidden>
     <div class="modal teach" role="dialog" aria-modal="true" aria-labelledby="teach-title" tabindex="-1">
       <div class="m-head">
@@ -1787,7 +2232,14 @@
           <h2 id="teach-title">Teaching</h2>
           <div class="yrline" id="teach-sub"></div>
         </div>
-        <button type="button" class="x" data-close="teach" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="teach" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="teach" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="teach-body"></div>
       <div class="m-foot">
@@ -1805,7 +2257,14 @@
           <h2 id="txp-title">Treatment pathways</h2>
           <div class="yrline" id="txp-sub">Interactive algorithms · educational only</div>
         </div>
-        <button type="button" class="x" data-close="txpath" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="txpath" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="txpath" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="txp-body"></div>
       <div class="m-foot">
@@ -1825,14 +2284,25 @@
           <h2 id="cacp-title">CACP exam prep</h2>
           <div class="yrline" id="cacp-sub">Unofficial practice · educational only</div>
         </div>
-        <button type="button" class="x" data-close="cacp" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="cacp" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="cacp" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="cacp-body"></div>
       <div class="m-foot">
+        <button type="button" class="btn sm" id="cacp-prev" hidden>Previous</button>
+        <button type="button" class="btn sm" id="cacp-bookmark" hidden>Bookmark</button>
+        <button type="button" class="btn" id="cacp-finish" hidden>Submit exam</button>
         <button type="button" class="btn sm" id="cacp-copy">Copy link</button>
         <button type="button" class="btn sm" id="cacp-shuffle">Shuffle</button>
         <button type="button" class="btn sm" id="cacp-missed" hidden>Missed only</button>
-        <button type="button" class="btn primary" id="cacp-next">Next</button>
+        <button type="button" class="btn" id="cacp-reveal">Reveal explanation</button>
+        <button type="button" class="btn primary" id="cacp-next">Submit answer</button>
         <button type="button" class="btn ghost" data-close="cacp">Close</button>
       </div>
     </div>
@@ -1845,6 +2315,7 @@
     <div class="modal detail" role="dialog" aria-modal="true" aria-labelledby="d-title" tabindex="-1">
       <div class="m-head">
         <div>
+          <div class="capsule-kicker" id="d-view">Trial snapshot</div>
           <div class="tags" id="d-tags"></div>
           <h2 id="d-title"></h2>
           <div class="yrline" id="d-year"></div>
@@ -1933,21 +2404,22 @@
     </div>
   </div>
 
-  <script src="js/trials.js"></script>
-  <script src="js/pathways.js"></script>
-  <script src="js/treatment-pathways.js"></script>
+  <script src="js/data/trials.js"></script>
+  <script src="js/data/pathways.js"></script>
+  <script src="js/data/treatment-pathways.js"></script>
   <script src="js/site-meta.js"></script>
-  <script src="js/frameworks.js"></script>
-  <script src="js/nuances.js"></script>
-  <script src="js/cases.js"></script>
-  <script src="js/practical.js"></script>
+  <script src="js/data/open-questions.js"></script>
+  <script src="js/data/frameworks.js"></script>
+  <script src="js/data/nuances.js"></script>
+  <script src="js/data/cases.js"></script>
+  <script src="js/data/practical.js"></script>
   <script src="js/learn-path.js"></script>
   <script src="js/learn-compare-pairs.js"></script>
   <script src="js/learn-visuals.js"></script>
-  <script src="js/cacp.js"></script>
+  <script src="js/data/cacp.js"></script>
   <script>
 (function () {
-  const Y0 = 2003, Y1 = 2028;
+  const Y0 = 1999, Y1 = 2028;
   const LANES = [
     { key: "AF", label: "AF", color: "var(--c-af)", hex: "#2c5282" },
     { key: "VTE", label: "VTE", color: "var(--c-vte)", hex: "#276749" },
@@ -1961,8 +2433,7 @@
     { key: "reversal", label: "Reversal", color: "var(--c-rev)", hex: "#4a5568" },
     { key: "FXI pipeline", label: "FXI / pipeline", color: "var(--c-fxi)", hex: "#702459" }
   ];
-  const STATUS = { landmark: "Landmark DOAC", practice: "Practice-changer", recent: "Recent", pending: "Pending" };
-  const TIER = { 1: "Tier 1", 2: "Tier 2", 3: "Tier 3" };
+  const STATUS = { published: "Published", recent: "Recent", pending: "Pending" };
   const HEX = Object.fromEntries(LANES.map(l => [l.key, l.hex]));
 
   const trials = (window.ANTICOAG_TRIALS || []).slice().sort((a, b) => a.year - b.year || a.acronym.localeCompare(b.acronym));
@@ -1994,7 +2465,7 @@
     if (window.__ddiLoadPromise) return window.__ddiLoadPromise;
     window.__ddiLoadPromise = new Promise((resolve, reject) => {
       const s = document.createElement("script");
-      s.src = "js/ddi.js";
+      s.src = "js/data/ddi.js";
       s.async = true;
       s.onload = () => {
         if (window.ANTICOAG_DDI) {
@@ -2007,7 +2478,7 @@
       };
       s.onerror = () => {
         window.__ddiLoadPromise = null;
-        reject(new Error("Failed to load js/ddi.js"));
+        reject(new Error("Failed to load js/data/ddi.js"));
       };
       document.head.appendChild(s);
     });
@@ -2127,7 +2598,7 @@
   }
 
   function estimateLabelWidth(t) {
-    // Approximate rendered width for full acronym + tier chip + optional DOI-pending chip + dot + padding
+    // Approximate rendered width for full acronym + optional DOI-pending chip + dot + padding (22px slack kept from the removed rating chip)
     const label = t.acronym + (zoom >= 1.15 ? " '" + String(t.yearLabel).slice(-2) : "");
     const doiPad = isDoiPending(t) ? 118 : 0;
     const per = isMoreMobile() ? 8.4 : 7.6;
@@ -2202,7 +2673,7 @@
       </div>`;
       document.getElementById("legend").innerHTML = LANES.map(l =>
         `<span><i style="background:${l.hex}"></i>${l.label}</span>`
-      ).join("") + `<span>Sub-lanes separate concurrent trials · Tier badge · Dashed = pending</span>`;
+      ).join("") + `<span>Sub-lanes separate concurrent trials · Dashed = pending</span>`;
       const resetBtn = document.getElementById("btn-reset-filters");
       if (resetBtn) resetBtn.onclick = resetFilters;
       return;
@@ -2250,7 +2721,7 @@
         const showYear = zoom >= 1.15;
         const text = showYear ? `${t.acronym} · ${t.yearLabel}` : t.acronym;
         const doiChip = isDoiPending(t) ? `<span class="doi-pend" title="Press-level — DOI pending">Press-level — DOI pending</span>` : "";
-        mk.innerHTML = `<button type="button" data-id="${t.id}" title="${t.acronym} (${t.yearLabel})${isDoiPending(t) ? " · Press-level — DOI pending" : ""}" aria-label="${t.acronym}, ${t.yearLabel}, ${lane.label}${isDoiPending(t) ? ", DOI pending" : ""}">${text}<span class="tier">${t.impact}</span>${doiChip}</button>`;
+        mk.innerHTML = `<button type="button" data-id="${t.id}" title="${t.acronym} (${t.yearLabel})${isDoiPending(t) ? " · Press-level — DOI pending" : ""}" aria-label="${t.acronym}, ${t.yearLabel}, ${lane.label}${isDoiPending(t) ? ", DOI pending" : ""}">${text}${doiChip}</button>`;
         subEl.appendChild(mk);
         order.push(t.id);
       });
@@ -2262,14 +2733,15 @@
 
     document.getElementById("legend").innerHTML = LANES.map(l =>
       `<span><i style="background:${l.hex}"></i>${l.label}</span>`
-    ).join("") + `<span>Sub-lanes separate concurrent trials · Tier badge · Dashed = pending</span>`;
+    ).join("") + `<span>Sub-lanes separate concurrent trials · Dashed = pending</span>`;
 
     bindMarkers();
   }
 
   const tip = document.getElementById("tip");
   function showTip(t, r) {
-    tip.innerHTML = `<strong>${t.acronym}</strong><div class="meta">${t.yearLabel} · ${t.indication} · ${STATUS[t.status] || t.status}</div><div class="one">${t.takeaway}</div>`;
+    const revealedTip = (predictRecord(t.id) || {}).revealed;
+    tip.innerHTML = `<strong>${t.acronym}</strong><div class="meta">${t.yearLabel} · ${t.indication} · ${STATUS[t.status] || t.status}</div>${revealedTip ? `<div class="one">${t.takeaway}</div>` : ""}`;
     tip.classList.add("on");
     const tw = 280;
     let left = Math.min(Math.max(8, r.left + r.width / 2 - tw / 2), window.innerWidth - tw - 8);
@@ -2406,14 +2878,12 @@
   function renderPracticalStrip(t) {
     const d = (practical.dosingByTrial || {})[t.id];
     if (!d) return "";
-    const disc = practical.disclaimer || "Verify with local protocol / product labeling.";
     return `<div class="prac-box">
       <div class="lab">Practical — dosing / logistics</div>
-      ${d.regimen ? `<div class="row"><strong>Regimen:</strong> ${esc(d.regimen)}</div>` : ""}
+      ${d.regimen ? `<div class="row"><strong>Regimen the evidence used:</strong> ${esc(d.regimen)}</div>` : ""}
       ${d.food ? `<div class="row"><strong>Food:</strong> ${esc(d.food)}</div>` : ""}
       ${d.renal ? `<div class="row"><strong>Renal:</strong> ${esc(d.renal)}</div>` : ""}
       ${d.holdHint ? `<div class="row"><strong>Periprocedural hold (heuristic):</strong> ${esc(d.holdHint)}</div>` : ""}
-      <div class="disc">${esc(disc)}</div>
       <div class="trial-links" style="margin-top:.35rem"><button type="button" class="linkish" data-open-ddi="1">Open DDI library</button></div>
     </div>`;
   }
@@ -2426,7 +2896,7 @@
 
   function composeJournal(t) {
     const background = t.background ||
-      `This ${STATUS[t.status] || t.status} trial (${t.yearLabel}) addressed ${t.indication} care. Narrative context beyond curated fields is limited—see primary paper for full background.`;
+      `This trial (${t.yearLabel}) addressed ${t.indication} care. Narrative context beyond curated fields is limited—see primary paper for full background.`;
     const designNotes = t.designNotes ||
       `Design details beyond the curated summary are incomplete here. Population: ${t.population}. Intervention: ${t.intervention}. Comparator: ${t.comparator}.`;
     const strengths = t.strengths || "Not summarized here beyond the primary efficacy and safety fields.";
@@ -2439,9 +2909,7 @@
   }
 
   function renderGuidelinesBlock(guidelines, compact) {
-    if (!guidelines || !guidelines.length) {
-      return compact ? "" : `<div class="jc-sec"><h3>Guidelines</h3><p>Not summarized here.</p></div>`;
-    }
+    if (!guidelines || !guidelines.length) return "";
     if (compact) {
       return `<div class="g-chips">${guidelines.map(g =>
         `<span class="g-chip" title="${esc(g.note || "")}">${esc(g.society)}${g.year ? " " + g.year : ""}</span>`
@@ -2464,18 +2932,93 @@
     if (t.doi) return false;
     return !!(t.doiPending || isPresentedCite(t));
   }
-  const DOI_PENDING_BANNER_HTML = `<div class="lead-alert doi-pending-banner" style="margin-bottom:.55rem"><strong>Presented / simultaneous report — peer-reviewed DOI not linked yet.</strong> Figures reflect congress or simultaneous press reporting and may change when the full paper posts. Verify against the published article before journal club or protocol decisions. Educational only — not medical advice.</div>`;
+  const DOI_PENDING_BANNER_HTML = `<div class="lead-alert doi-pending-banner" style="margin-bottom:.55rem"><strong>Presented / simultaneous report — peer-reviewed DOI not linked yet.</strong> Figures reflect congress or simultaneous press reporting and may change when the full paper posts. Verify against the published article before journal club or protocol decisions.</div>`;
 
-  function renderSummaryBody(t) {
-    const jc = composeJournal(t);
-    const doi = t.doi ? ` · DOI <a href="https://doi.org/${t.doi}" target="_blank" rel="noopener">${t.doi}</a>` : "";
-    const reg = t.regulatoryNote ? `<div class="lead-alert" style="margin-bottom:.55rem"><strong>Regulatory:</strong> ${esc(t.regulatoryNote)}. ${t.id === "annexa-4" || t.id === "annexa-i" ? "Andexxa (andexanet) is not available in the U.S. after Dec 22, 2025 — see Bleed &amp; reversal and FDA safety communication." : ""}</div>` : "";
-    const doiPend = isDoiPending(t) ? DOI_PENDING_BANNER_HTML : "";
+  const PREDICT_STORAGE_KEY = "anticoag-predict-v1";
+
+  function loadPredictStore() {
+    try {
+      const raw = localStorage.getItem(PREDICT_STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      if (!parsed || typeof parsed !== "object") return { schema: 1, trials: {} };
+      if (!parsed.trials || typeof parsed.trials !== "object") parsed.trials = {};
+      parsed.schema = 1;
+      return parsed;
+    } catch (e) {
+      return { schema: 1, trials: {} };
+    }
+  }
+  function savePredictStore(store) {
+    try {
+      store.schema = 1;
+      store.updatedAt = new Date().toISOString();
+      localStorage.setItem(PREDICT_STORAGE_KEY, JSON.stringify(store));
+    } catch (e) { /* ignore quota */ }
+  }
+  function predictRecord(id) {
+    const rec = loadPredictStore().trials[id];
+    return rec && typeof rec === "object" ? rec : null;
+  }
+  function predictConfLabel(v) {
+    return v === "low" ? "Low" : v === "medium" ? "Medium" : v === "high" ? "High" : "";
+  }
+  function savePredictDraft(id, note, confidence) {
+    const store = loadPredictStore();
+    const prev = store.trials[id] || {};
+    if (prev.revealed) return;
+    store.trials[id] = {
+      revealed: false,
+      skipped: false,
+      confidence: confidence || null,
+      note: String(note || "").slice(0, 500),
+      revealedAt: ""
+    };
+    savePredictStore(store);
+  }
+  function markPredictRevealed(id, opts) {
+    const store = loadPredictStore();
+    store.trials[id] = {
+      revealed: true,
+      skipped: !!opts.skipped,
+      confidence: opts.skipped ? null : (opts.confidence || null),
+      note: String(opts.note || "").slice(0, 500),
+      revealedAt: new Date().toISOString()
+    };
+    savePredictStore(store);
+    try { reviewOnPredictRevealed(id); } catch (e) {}
+  }
+  function practicePredictAgain(id) {
+    const store = loadPredictStore();
+    const prev = store.trials[id] || {};
+    store.trials[id] = {
+      revealed: false,
+      skipped: false,
+      confidence: null,
+      note: prev.note || "",
+      revealedAt: prev.revealedAt || ""
+    };
+    savePredictStore(store);
+  }
+  function renderPredictFeedback(t, rec) {
+    if (!rec || !rec.revealed) return "";
+    const conf = predictConfLabel(rec.confidence);
+    const wrote = rec.note ? `<p class="predict-wrote">You wrote: ${esc(rec.note)}</p>` : "";
+    let lead;
+    if (rec.skipped && rec.note) lead = "You chose Just show me. Your note is saved only in this browser.";
+    else if (rec.skipped) lead = "You chose Just show me.";
+    else if (conf && rec.note) lead = "You marked " + conf + " confidence. Your prediction is saved only in this browser.";
+    else if (conf) lead = "You marked " + conf + " confidence and left the prediction blank.";
+    else lead = "This card is revealed in this browser.";
+    return `<div class="predict-feedback">${wrote}<p>${lead} The key takeaway above is the result already on this card for ${esc(t.acronym)} (${esc(t.indication)}): the intervention compared with the comparator.</p></div>`;
+  }
+  function renderSummaryAnswer(t, jc, doi) {
+    const rec = predictRecord(t.id);
+    const g = renderGuidelinesBlock(jc.guidelines, true);
+    const gSec = g ? `<div class="fld" style="margin-top:.55rem"><div class="lab">Guidelines</div>${g}</div>` : "";
     return `
-      <div class="ftitle">${esc(t.title)}</div>
-      ${reg}
-      ${doiPend}
+      <div class="fld" style="margin-bottom:.35rem"><div class="lab">Key takeaway</div></div>
       <div class="take">${esc(jc.practiceTakeaway || t.takeaway)}</div>
+      ${renderPredictFeedback(t, rec)}
       ${t.expectedResults ? `<div class="expected"><strong>Expected results:</strong> ${esc(t.expectedResults)}</div>` : ""}
       <div class="fields">
         <div class="fld span2"><div class="lab">Population</div><div class="val">${esc(t.population)}</div></div>
@@ -2485,8 +3028,111 @@
         <div class="fld span2"><div class="lab">Bleeding / safety</div><div class="val">${esc(t.safety)}</div></div>
         <div class="fld span2"><div class="lab">Important caveats</div><div class="val">${esc(jc.caveats)}</div></div>
       </div>
-      <div class="fld" style="margin-top:.55rem"><div class="lab">Guidelines</div>${renderGuidelinesBlock(jc.guidelines, true)}</div>
+      ${gSec}
       <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
+  }
+  function renderPredictGate() {
+    return `<div class="predict-gate" role="group" aria-labelledby="predict-prompt">
+      <p class="predict-prompt" id="predict-prompt">Predict the main result in your own words. Use the population, intervention, and comparator above. This is a self-check. The site does not score what you write.</p>
+      <label class="predict-note-lab" for="predict-note">Your prediction</label>
+      <textarea id="predict-note" maxlength="500"></textarea>
+      <fieldset class="predict-conf">
+        <legend>How sure are you?</legend>
+        <div class="predict-conf-row">
+          <label><input type="radio" name="predict-conf" value="low"> Low</label>
+          <label><input type="radio" name="predict-conf" value="medium"> Medium</label>
+          <label><input type="radio" name="predict-conf" value="high"> High</label>
+        </div>
+      </fieldset>
+      <p class="predict-help">Pick Low, Medium, or High, then Reveal.</p>
+      <div class="predict-actions">
+        <button type="button" class="btn primary" id="predict-reveal" disabled>Reveal</button>
+        <button type="button" class="btn ghost" id="predict-skip">Just show me</button>
+      </div>
+    </div>`;
+  }
+
+  function renderSummaryBody(t) {
+    const jc = composeJournal(t);
+    const doi = t.doi ? ` · DOI <a href="https://doi.org/${t.doi}" target="_blank" rel="noopener">${t.doi}</a>` : "";
+    const reg = t.regulatoryNote ? `<div class="lead-alert" style="margin-bottom:.55rem"><strong>Regulatory:</strong> ${esc(t.regulatoryNote)}. ${t.id === "annexa-4" || t.id === "annexa-i" ? "Andexxa (andexanet) is not available in the U.S. after Dec 22, 2025 — see Bleed &amp; reversal and FDA safety communication." : ""}</div>` : "";
+    const doiPend = isDoiPending(t) ? DOI_PENDING_BANNER_HTML : "";
+    const head = `
+      <div class="ftitle">${esc(t.title)}</div>
+      ${reg}
+      ${doiPend}`;
+    const answer = renderSummaryAnswer(t, jc, doi);
+    const rec = predictRecord(t.id);
+    if (rec && rec.revealed) {
+      return `${head}
+      <div class="predict-again"><p>Revealed in this browser.</p>
+        <button type="button" class="btn ghost" id="predict-again">Practice again</button>
+      </div>
+      ${answer}`;
+    }
+    return `${head}
+      <div class="predict-context">
+        <div class="fields">
+          <div class="fld span2"><div class="lab">Population</div><div class="val">${esc(t.population)}</div></div>
+          <div class="fld"><div class="lab">Intervention</div><div class="val">${esc(t.intervention)}</div></div>
+          <div class="fld"><div class="lab">Comparator</div><div class="val">${esc(t.comparator)}</div></div>
+        </div>
+      </div>
+      ${renderPredictGate()}
+      <div class="predict-rest is-concealed" hidden aria-hidden="true">${answer}</div>`;
+  }
+  function wirePredict(t) {
+    const noteEl = document.getElementById("predict-note");
+    const revealBtn = document.getElementById("predict-reveal");
+    const skipBtn = document.getElementById("predict-skip");
+    const againBtn = document.getElementById("predict-again");
+    const radios = [...document.querySelectorAll('input[name="predict-conf"]')];
+    const syncReveal = () => {
+      if (!revealBtn) return;
+      revealBtn.disabled = !radios.some(r => r.checked);
+    };
+    const draft = () => {
+      const confidence = (radios.find(r => r.checked) || {}).value || null;
+      savePredictDraft(t.id, noteEl ? noteEl.value : "", confidence);
+      syncReveal();
+    };
+    if (noteEl) {
+      const rec = predictRecord(t.id);
+      if (rec && rec.note) noteEl.value = rec.note;
+      noteEl.addEventListener("input", draft);
+    }
+    radios.forEach(r => r.addEventListener("change", draft));
+    syncReveal();
+    if (revealBtn) revealBtn.onclick = () => {
+      const confidence = (radios.find(r => r.checked) || {}).value;
+      if (!confidence) return;
+      markPredictRevealed(t.id, { note: noteEl ? noteEl.value.trim() : "", confidence, skipped: false });
+      openDetail(t.id, "summary", { skipRoute: true });
+      const take = document.querySelector("#d-body .take");
+      if (take) take.scrollIntoView({ block: "nearest" });
+    };
+    if (skipBtn) skipBtn.onclick = () => {
+      markPredictRevealed(t.id, { note: noteEl ? noteEl.value.trim() : "", confidence: null, skipped: true });
+      openDetail(t.id, "summary", { skipRoute: true });
+    };
+    if (againBtn) againBtn.onclick = () => {
+      practicePredictAgain(t.id);
+      openDetail(t.id, "summary", { skipRoute: true });
+      const box = document.getElementById("predict-note");
+      if (box) box.focus();
+    };
+  }
+
+  function renderTrialQuestions(t, print) {
+    const A = Array.isArray(t.questionsAnswered) ? t.questionsAnswered : [];
+    const O = Array.isArray(t.questionsOpen) ? t.questionsOpen : [];
+    if (!A.length && !O.length) return "";
+    const li = q => { const S = [q.source, q.addressedBy].filter((x, i, a) => x && a.indexOf(x) === i);
+      return `<li>${esc(q.text)}${S.length ? ` <span style="color:var(--muted);font-size:.85em">(Source: ${esc(S.join("; "))})</span>` : ""}</li>`; };
+    const sec = (h, L) => !L.length ? "" : print
+      ? `<div class="print-sec"><h2>${h}</h2><ul>${L.map(li).join("")}</ul></div>`
+      : `<div class="jc-sec"><h3>${h}</h3><ul style="margin:0;padding-left:1.1rem">${L.map(li).join("")}</ul></div>`;
+    return sec("What it answered", A) + sec("Questions still open", O);
   }
 
   function renderJournalBody(t) {
@@ -2504,14 +3150,15 @@
       <div class="jc-sec"><h3>Population</h3><p>${esc(t.population)}</p></div>
       <div class="jc-sec"><h3>Intervention vs comparator</h3>
         <p><strong>Intervention:</strong> ${esc(t.intervention)}<br/><strong>Comparator:</strong> ${esc(t.comparator)}</p>
-        <p style="margin-top:.35rem;color:var(--ink-2)">${esc(jc.designNotes)}</p>
       </div>
-      <div class="jc-sec"><h3>Key results</h3><p>${esc(t.primaryResult)}</p></div>
-      <div class="jc-sec"><h3>Safety / bleeding</h3><p>${esc(t.safety)}</p></div>
+      <div class="jc-sec"><h3>Design</h3><p>${esc(jc.designNotes)}</p></div>
+      <div class="jc-sec"><h3>Primary / key efficacy</h3><p>${esc(t.primaryResult)}</p></div>
+      <div class="jc-sec"><h3>Bleeding / safety</h3><p>${esc(t.safety)}</p></div>
       <div class="jc-sec"><h3>Important caveats</h3><p>${esc(jc.caveats)}</p></div>
       <div class="jc-sec"><h3>Strengths</h3><p>${esc(jc.strengths)}</p></div>
       <div class="jc-sec"><h3>Limitations</h3><p>${esc(jc.limitations)}</p></div>
-      <div class="jc-sec"><h3>Practice takeaway</h3><div class="take" style="margin:0">${esc(jc.practiceTakeaway)}</div></div>
+      ${renderTrialQuestions(t, false)}
+      <div class="jc-sec"><h3>Key takeaway</h3><div class="take" style="margin:0">${esc(jc.practiceTakeaway)}</div></div>
       ${renderPracticalStrip(t)}
       ${renderGuidelinesBlock(jc.guidelines, false)}
       <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
@@ -2532,6 +3179,8 @@
       else if (full) { cb.textContent = "Compare full (max 3)"; cb.disabled = true; }
       else { cb.textContent = "Add to compare"; cb.disabled = false; }
     });
+    const view = document.getElementById("d-view");
+    if (view) view.textContent = detailMode === "journal" ? "More details" : "Trial snapshot";
     document.getElementById("d-foot-summary").hidden = detailMode !== "summary";
     document.getElementById("d-foot-jc").hidden = detailMode !== "journal";
     document.querySelector("#bd-detail .modal").classList.toggle("jc-wide", detailMode === "journal");
@@ -2545,11 +3194,25 @@
     document.title = t ? `${t.acronym} (${t.yearLabel}) · ${BASE_TITLE}` : BASE_TITLE;
   }
 
+  /* Deep links (tech-prep): ?card=<trial id>, ?pathway=<treatment pathway id>, ?playlist=<trial playlist id>.
+     Hash routes stay canonical and win when both are present; the query mirrors the open card or pathway so a
+     copied address bar reopens it. Other params (e.g. embed) are kept. */
+  function deepLinkSearch(kind, slug) {
+    const params = new URLSearchParams(location.search);
+    ["card", "pathway", "playlist", "trial"].forEach(k => params.delete(k));
+    const s = slug ? String(slug) : "";
+    if (kind === "trial" && s) params.set("card", s);
+    else if (kind === "pathway-tx" && s) params.set("pathway", s);
+    else if (kind === "pathway" && s) params.set("playlist", s);
+    const q = params.toString();
+    return q ? "?" + q : "";
+  }
+
   function setRoute(kind, slug, replace) {
     let hash = "#/";
     if (kind && slug) hash = "#/" + kind + "/" + slug;
     else if (kind) hash = "#/" + kind;
-    const url = location.pathname + (location.search || "") + hash;
+    const url = location.pathname + deepLinkSearch(kind, slug) + hash;
     if (replace) history.replaceState(null, "", url);
     else {
       if (location.pathname + (location.search || "") + location.hash === url) return;
@@ -2567,11 +3230,11 @@
     document.getElementById("d-tags").innerHTML =
       `<span class="tag ind" style="background:${color}">${t.indication}</span>` +
       `<span class="tag">${STATUS[t.status] || t.status}</span>` +
-      `<span class="tag">${TIER[t.impact]}</span>` +
       (t.regulatoryNote ? `<span class="reg-note">${esc(t.regulatoryNote)}</span>` : "");
     document.getElementById("d-title").textContent = t.acronym;
     document.getElementById("d-year").textContent = t.yearLabel + (t.status === "pending" ? " · expected" : "");
     document.getElementById("d-body").innerHTML = detailMode === "journal" ? renderJournalBody(t) : renderSummaryBody(t);
+    if (detailMode !== "journal") wirePredict(t);
     syncDetailChrome(t);
     setDocTitle(t);
     if (!opts.skipRoute) setRoute("trial", trialSlug(t), opts.replaceRoute);
@@ -2604,7 +3267,8 @@
     const gLines = (jc.guidelines || []).map(g => {
       const yr = g.year ? ` (${g.year})` : "";
       return `<p><strong>${esc(g.society)}</strong> — ${esc(g.document || "")}${yr}: ${esc(g.note || "")}</p>`;
-    }).join("") || "<p>Not summarized here.</p>";
+    }).join("");
+    const gSec = gLines ? `<div class="print-sec"><h2>Guidelines</h2>${gLines}</div>` : "";
     const doiPendPrint = isDoiPending(t) ? DOI_PENDING_BANNER_HTML : "";
     document.getElementById("print-root").innerHTML = `
       <div class="banner">Journal club one-pager</div>
@@ -2615,22 +3279,26 @@
       <div class="print-sec"><h2>Population</h2><p>${esc(t.population)}</p></div>
       <div class="print-sec"><h2>Intervention vs comparator</h2>
       <p><strong>Intervention:</strong> ${esc(t.intervention)}<br/><strong>Comparator:</strong> ${esc(t.comparator)}</p></div>
-      <div class="print-sec"><h2>Design notes</h2><p>${esc(jc.designNotes)}</p></div>
-      <div class="print-sec"><h2>Key results</h2><p>${esc(t.primaryResult)}</p></div>
-      <div class="print-sec"><h2>Safety / bleeding</h2><p>${esc(t.safety)}</p></div>
+      <div class="print-sec"><h2>Design</h2><p>${esc(jc.designNotes)}</p></div>
+      <div class="print-sec"><h2>Primary / key efficacy</h2><p>${esc(t.primaryResult)}</p></div>
+      <div class="print-sec"><h2>Bleeding / safety</h2><p>${esc(t.safety)}</p></div>
       <div class="print-sec"><h2>Important caveats</h2><p>${esc(jc.caveats)}</p></div>
-      <div class="print-sec"><h2>Strengths / limitations</h2><p><strong>Strengths:</strong> ${esc(jc.strengths)}<br/><strong>Limitations:</strong> ${esc(jc.limitations)}</p></div>
-      <div class="print-sec"><h2>Practice takeaway</h2><div class="pearl">${esc(jc.practiceTakeaway)}</div></div>
-      <div class="print-sec"><h2>Guidelines</h2>${gLines}</div>
+      <div class="print-sec"><h2>Strengths</h2><p>${esc(jc.strengths)}</p></div>
+      <div class="print-sec"><h2>Limitations</h2><p>${esc(jc.limitations)}</p></div>
+      ${renderTrialQuestions(t, true)}
+      <div class="print-sec"><h2>Key takeaway</h2><div class="pearl">${esc(jc.practiceTakeaway)}</div></div>
+      ${gSec}
       <div class="cite">${linkifyText(t.cite)}${t.url ? "<br/>" + linkifyText(t.url) : ""}</div>`;
   }
   function printTrial() {
     if (!openId) return;
     fillPrintRoot(byId[openId]);
+    document.body.classList.add("print-sheet");
     window.print();
   }
   document.getElementById("d-print").onclick = printTrial;
   document.getElementById("d-print-2").onclick = printTrial;
+  window.addEventListener("afterprint", () => document.body.classList.remove("print-sheet"));
 
   function toast(msg) {
     const el = document.getElementById("toast");
@@ -2703,7 +3371,7 @@
       });
       h += `</div>`;
     }
-    h += `<p class="lcc-note" style="margin-top:.55rem;font-size:.75rem;color:var(--muted)">Coach chrome stays rate-free. Efficacy/Safety rows below come from live Reviewer-gated cards — optional peek after you name Q / P / C.</p>`;
+    h += `<p class="lcc-note" style="margin-top:.55rem;font-size:.75rem;color:var(--muted)">Coach chrome stays rate-free. Primary / key efficacy and Bleeding / safety rows below come from live Reviewer-gated cards — optional peek after you name Q / P / C.</p>`;
     h += `</div>`;
     return h;
   }
@@ -2733,9 +3401,9 @@
       ["Population", t => t.population],
       ["Intervention", t => t.intervention],
       ["Comparator", t => t.comparator],
-      ["Efficacy", t => t.primaryResult],
-      ["Safety", t => t.safety],
-      ["Takeaway", t => t.takeaway]
+      ["Primary / key efficacy", t => t.primaryResult],
+      ["Bleeding / safety", t => t.safety],
+      ["Key takeaway", t => t.practiceTakeaway || t.takeaway]
     ];
     let h = "";
     if (learnCoachMatchesCompare(learnCompareCoach)) {
@@ -2763,6 +3431,116 @@
     return [...el.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')]
       .filter(n => n.offsetParent !== null || n === el);
   }
+
+  const FS_MODALS = ["teach", "learn", "txpath", "cacp"];
+  let fsEscGuardUntil = 0;
+  function docFullscreenEl() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+  function modalFullscreenEls(name) {
+    const bd = document.getElementById("bd-" + name);
+    if (!bd) return null;
+    return { bd: bd, modal: bd.querySelector(".modal"), btn: bd.querySelector(".fs-toggle") };
+  }
+  function modalIsFullscreen(name) {
+    const els = modalFullscreenEls(name);
+    return !!(els && els.modal && els.modal.classList.contains("is-fullscreen"));
+  }
+  function syncFsButton(btn, on) {
+    if (!btn) return;
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.setAttribute("aria-label", on ? "Exit full screen" : "Enter full screen");
+    const label = btn.querySelector(".fs-label");
+    if (label) label.textContent = on ? "Exit full screen" : "Full screen";
+  }
+  function syncFsBodyClass() {
+    document.body.classList.toggle("has-fs-modal", !!document.querySelector(".bd.is-fullscreen"));
+  }
+  function applyModalFullscreen(name, on) {
+    const els = modalFullscreenEls(name);
+    if (!els || !els.modal) return;
+    const body = els.modal.querySelector(".m-body");
+    const from = on ? els.modal : body;
+    const saved = from ? from.scrollTop : 0;
+    els.bd.classList.toggle("is-fullscreen", !!on);
+    els.modal.classList.toggle("is-fullscreen", !!on);
+    syncFsButton(els.btn, !!on);
+    syncFsBodyClass();
+    const to = on ? body : els.modal;
+    if (to) to.scrollTop = saved || 0;
+  }
+  function enterModalFullscreen(name) {
+    applyModalFullscreen(name, true);
+    const els = modalFullscreenEls(name);
+    const el = els && els.modal;
+    if (!el) return;
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (!req) return;
+    try {
+      const ret = req.call(el);
+      if (ret && typeof ret.catch === "function") ret.catch(function () {});
+    } catch (err) { /* CSS viewport mode stays on where the API is unavailable. */ }
+  }
+  function exitModalFullscreen(name, focusToggle) {
+    if (!modalIsFullscreen(name)) return;
+    const els = modalFullscreenEls(name);
+    const modal = els && els.modal;
+    const fsEl = docFullscreenEl();
+    const apiOwns = !!(fsEl && modal && (fsEl === modal || modal.contains(fsEl)));
+    applyModalFullscreen(name, false);
+    if (apiOwns) {
+      const exit = document.exitFullscreen || document.webkitExitFullscreen;
+      if (exit) {
+        try {
+          const ret = exit.call(document);
+          if (ret && typeof ret.catch === "function") ret.catch(function () {});
+        } catch (err) {}
+      }
+    }
+    if (focusToggle && els && els.btn) els.btn.focus();
+  }
+  function toggleModalFullscreen(name) {
+    if (modalIsFullscreen(name)) exitModalFullscreen(name, true);
+    else enterModalFullscreen(name);
+  }
+  function resetModalScroll(modal) {
+    if (!modal) return;
+    modal.scrollTop = 0;
+    const body = modal.querySelector(".m-body");
+    if (body) body.scrollTop = 0;
+  }
+  function onFullscreenChange() {
+    const fsEl = docFullscreenEl();
+    let browserLeft = false;
+    FS_MODALS.forEach(name => {
+      if (modalIsFullscreen(name) && !fsEl) {
+        browserLeft = true;
+        applyModalFullscreen(name, false);
+      }
+    });
+    if (browserLeft) fsEscGuardUntil = Date.now() + 500;
+  }
+  document.addEventListener("fullscreenchange", onFullscreenChange);
+  document.addEventListener("webkitfullscreenchange", onFullscreenChange);
+  window.addEventListener("beforeprint", () => {
+    const fsEl = docFullscreenEl();
+    FS_MODALS.forEach(name => { if (modalIsFullscreen(name)) applyModalFullscreen(name, false); });
+    const exit = document.exitFullscreen || document.webkitExitFullscreen;
+    if (exit && fsEl) {
+      try {
+        const ret = exit.call(document);
+        if (ret && typeof ret.catch === "function") ret.catch(function () {});
+      } catch (err) {}
+    }
+  });
+  document.querySelectorAll(".fs-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const name = btn.getAttribute("data-fullscreen");
+      if (name) toggleModalFullscreen(name);
+    });
+  });
+
   function openModal(name) {
     const bd = document.getElementById("bd-" + name);
     const modal = bd.querySelector(".modal");
@@ -2784,6 +3562,7 @@
   function closeModal(name) {
     const bd = document.getElementById("bd-" + name);
     if (!bd || bd.hidden) return;
+    exitModalFullscreen(name);
     bd.classList.remove("open"); bd.hidden = true;
     if (bd._trap) bd.removeEventListener("keydown", bd._trap);
     const i = stack.lastIndexOf(name); if (i >= 0) stack.splice(i, 1);
@@ -2799,7 +3578,7 @@
         else if (k === "case" && id) setRoute("case", id, true);
         else if (k === "nuance" && id) setRoute("nuance", id, true);
         else if (k === "reversal") setRoute("reversal", null, true);
-        else if (k === "changelog") setRoute("changelog", null, true);
+        else if (k === "open-questions") setRoute("open-questions", null, true);
         else if (k === "ddi") setRoute("ddi", null, true);
         else if (k === "frameworks") setRoute("frameworks", null, true);
         else if (k === "cases") setRoute("cases", null, true);
@@ -2818,6 +3597,7 @@
     }
     if (name === "cacp") {
       teachRoute = null;
+      enterCacpHome();
       setRoute(null, null, true);
     }
     if (name === "learn") {
@@ -2846,9 +3626,28 @@
   document.querySelectorAll("[data-close]").forEach(b => {
     b.onclick = () => closeModal(b.dataset.close);
   });
+  let outsideCloseGuardUntil = 0;
+  function armOutsideCloseGuard(ms) {
+    outsideCloseGuardUntil = Date.now() + (ms || 450);
+  }
+  function outsideCloseGuarded() {
+    return Date.now() < outsideCloseGuardUntil;
+  }
+  function swallowGhostEvent(e) {
+    if (!outsideCloseGuarded()) return;
+    e.preventDefault();
+    e.stopPropagation();
+  }
+  document.addEventListener("pointerdown", swallowGhostEvent, true);
+  document.addEventListener("mousedown", swallowGhostEvent, true);
+  document.addEventListener("mouseup", swallowGhostEvent, true);
+  document.addEventListener("click", swallowGhostEvent, true);
   document.querySelectorAll(".bd").forEach(bd => {
     bd.addEventListener("mousedown", (e) => {
-      if (e.target === bd) closeModal(bd.id.replace("bd-", ""));
+      if (e.target === bd) {
+        if (outsideCloseGuarded()) return;
+        closeModal(bd.id.replace("bd-", ""));
+      }
     });
   });
   /* —— Chrome menus (Teach + mobile More) —— */
@@ -2973,6 +3772,8 @@
       teachMenu.addEventListener("click", (e) => {
         const item = e.target.closest('[role="menuitem"]');
         if (item && teachMenu.contains(item)) {
+          // Learn path closes the sheet itself and must keep #/learn.
+          if (item.id === "btn-learn") return;
           // Existing onclick runs first; close after
           setTimeout(() => closeTeachMenu(true), 0);
         }
@@ -3018,6 +3819,17 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       if (closeChromeMenus(true)) return;
+      const top = stack[stack.length - 1];
+      if (top && modalIsFullscreen(top)) {
+        e.preventDefault();
+        exitModalFullscreen(top, true);
+        return;
+      }
+      if (Date.now() < fsEscGuardUntil) {
+        e.preventDefault();
+        fsEscGuardUntil = 0;
+        return;
+      }
       hideTip(); closeTop();
     }
   });
@@ -3083,7 +3895,8 @@
       if (b) b.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
     }
   }
-  document.getElementById("btn-story").onclick = () => { if (storyBeats.length) openStory(0); };
+  const storyBtn = document.getElementById("btn-story");
+  if (storyBtn) storyBtn.onclick = () => { if (storyBeats.length) openStory(0); };
   document.getElementById("s-prev").onclick = () => { if (storyI > 0) openStory(storyI - 1); };
   document.getElementById("s-next").onclick = () => {
     if (storyI < storyBeats.length - 1) openStory(storyI + 1);
@@ -3122,7 +3935,8 @@
       };
     });
   }
-  document.getElementById("btn-quiz").onclick = () => { if (quizQs.length) showQuiz(); };
+  const quizBtn = document.getElementById("btn-quiz");
+  if (quizBtn) quizBtn.onclick = () => { if (quizQs.length) showQuiz(); };
   document.getElementById("q-next").onclick = () => {
     if (quizDone) { showQuiz(); return; }
     if (!quizAns) quizAns = true;
@@ -3342,7 +4156,7 @@
     const disc = (txPathLib.meta && txPathLib.meta.disclaimer) || "Educational — not a protocol.";
     const host = document.getElementById("txp-body");
     host.innerHTML = `<div class="lead-alert">${esc(disc)}</div>
-      <p class="teach-lead">Walk an indication step-by-step. Each node shows what to do, why, published effect sizes when clean, and study caveats. Deep link: <code>#/pathway-tx/af-stroke</code>. Distinct from <strong>Trial playlists</strong> (timeline tours).</p>
+      <p class="teach-lead">Walk an indication as reasoning steps. Each node shows why the branch exists, published effect sizes when clean, and study caveats. Deep link: <code>#/pathway-tx/af-stroke</code>. Distinct from <strong>Trial playlists</strong> (timeline tours).</p>
       <div class="txp-gallery">${txPathways().map(p =>
         `<button type="button" class="txp-card" data-txp="${esc(p.id)}">
           <strong>${esc(p.title)}</strong>
@@ -3363,8 +4177,7 @@
       const hn = txNode(p, hid);
       return hn ? esc(hn.title) : "";
     }).filter(Boolean);
-    const typeLab = ({ start: "Start", question: "Decision", recommendation: "Recommendation", caution: "Caution", end: "Complete" })[n.type] || n.type;
-
+    const typeLab = ({ start: "Start", question: "Decision", recommendation: "Reasoning step", caution: "Caution", end: "Complete" })[n.type] || n.type;
     let evHtml = (n.evidence || []).map(e => {
       const t = byId[e.trial];
       const nnt = e.nnt ? `<div class="nnt">NNT/effect: ${esc(String(e.nnt))}${e.arr ? " · ARR " + esc(String(e.arr)) : ""}</div>` : `<div class="nnt" style="color:var(--muted);font-weight:600">NNT: not reported here</div>`;
@@ -3389,6 +4202,10 @@
     const choices = (n.choices || []).map(c =>
       `<button type="button" class="btn ${n.type === "recommendation" || n.type === "end" ? "primary" : ""}" data-tx-next="${esc(c.nextNodeId)}">${esc(c.label)}</button>`
     ).join("");
+    const lv = window.ANTICOAG_LEARN_VISUALS;
+    const graphicHtml = (n.graphicId && lv && lv.byId[n.graphicId])
+      ? `<div class="learn-evidence-mount">${lv.renderGraphic(lv.byId[n.graphicId])}</div>`
+      : "";
 
     const endExtra = n.type === "end"
       ? `<button type="button" class="btn" data-tx-gallery="1">All treatment pathways</button>`
@@ -3402,6 +4219,7 @@
           <div class="txp-type">${typeLab}</div>
           <h3>${esc(n.title)}</h3>
           <div class="txp-body">${esc(n.body || "")}</div>
+          ${graphicHtml}
           <div class="txp-choices">${choices}${endExtra}</div>
         </div>
         <div class="txp-side">
@@ -3485,11 +4303,12 @@
     document.getElementById("print-root").innerHTML = `
       <div class="banner">Treatment pathway summary</div>
       <h1>${esc(p.title)}</h1>
-      <div class="p-meta">${esc(p.indication)} · Educational — not a protocol</div>
+      <div class="p-meta">${esc(p.indication)}</div>
       ${steps.map((n,i)=>`<h2>${i+1}. ${esc(n.title)}</h2><p>${esc(n.body||"")}</p>
         ${(n.evidence||[]).map(e=>`<p><strong>${esc(e.trial)}:</strong> ${esc(e.effect||"")}${e.nnt?" · "+esc(String(e.nnt)):""}</p>`).join("")}
       `).join("")}
       <div class="cite">${esc((txPathLib.meta&&txPathLib.meta.disclaimer)||"")}</div>`;
+    document.body.classList.add("print-sheet");
     window.print();
   };
 
@@ -3576,16 +4395,31 @@
     }
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else resetModalScroll(document.querySelector("#bd-teach .modal"));
   }
 
   function slugifyDdi(s) {
     return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
 
+  function renderDdiLegend() {
+    return `<div class="ddi-legend">
+      <p><strong>Effect</strong> is what the card says happens. <strong>Evidence grade</strong> is the kind of source. They are different columns. Other grades you will see — PK-volunteer, Clinical-cohort, Case-report — are grades, not effects.</p>
+      <ul>
+        <li><strong>HV</strong> — healthy volunteer. A PK figure from healthy volunteers is not automatically the effect in patients.</li>
+        <li><strong>PK-patient</strong> (PK-PATIENT) — evidence grade: pharmacokinetic measurements in patients.</li>
+        <li><strong>Label/extrapolation</strong> (LABEL/EXTRAPOLATION) — evidence grade: product labeling, or an extension from a related study. Not a dedicated PK trial of this pair.</li>
+        <li><strong>RCT-subgroup</strong> (RCT-SUBGROUP) — evidence grade: a randomized-trial subgroup or secondary look, not a dedicated interaction study.</li>
+        <li><strong>↑ exposure (context-dependent)</strong> — an effect direction. Exposure may increase, and the size depends on the setting named on the card. Not an evidence grade.</li>
+        <li><strong>No quantitative PK curated</strong> — this card has no AUC or Cmax number. That is a gap in the library, not proof of no interaction.</li>
+      </ul>
+    </div>`;
+  }
+
   function renderDdiShell() {
     const meta = ddiLib.meta || {};
     let h = `<div class="lead-alert"><strong>Educational — not CDS.</strong> ${esc(meta.banner || "Verify labels and local protocols. Evidence graded; gaps labeled.")}</div>`;
+    h += renderDdiLegend();
     h += renderDdiFilters();
     if (ddiState.view === "detail") {
       const e = ddiEntries().find(x => x.id === ddiState.detailId) || findDdi(ddiState.detailId.split("-")[0], ddiState.detailId.split("-").slice(1).join("-"));
@@ -3723,7 +4557,7 @@
     }
 
     h += `<div class="trial-links" style="margin-top:.5rem">
-      <button type="button" class="linkish" data-ddi-compare="${esc(e.interactor)}">Compare ${esc(e.interactor)} across DOACs</button>
+      <button type="button" class="linkish" data-ddi-compare="${esc(e.interactor)}">Compare ${esc(e.interactor)} across anticoagulants</button>
       <button type="button" class="linkish" data-copy-ddi="${esc(e.anticoagulant.toLowerCase())}/${esc(e.interactorSlug)}">Copy deep link</button>
     </div>`;
     return h;
@@ -3827,8 +4661,27 @@
     const el = document.getElementById("site-meta");
     if (!el) return;
     const sweep = siteMeta.lastLiteratureSweep || "—";
-    const rev = siteMeta.reviewedBy || "Clinical review pending — add your name";
-    el.innerHTML = `<strong>Last literature sweep:</strong> ${esc(sweep)} · <strong>Reviewed by:</strong> ${esc(rev)} · <a href="#/changelog">Changelog</a>`;
+    const rev = namedReviewer(siteMeta.reviewedBy);
+    const revHtml = rev ? ` · <strong>Reviewed by:</strong> ${esc(rev)}` : "";
+    el.innerHTML = `<strong>Last literature sweep:</strong> ${esc(sweep)}${revHtml}`;
+    fillAbbreviations();
+  }
+
+  function fillAbbreviations() {
+    const host = document.getElementById("abbr-list");
+    const box = document.getElementById("abbr-key");
+    const list = Array.isArray(siteMeta.abbreviations) ? siteMeta.abbreviations : [];
+    if (!host || !box) return;
+    if (!list.length) { box.hidden = true; return; }
+    host.innerHTML = list.map(([short, expansion]) =>
+      `<div><dt>${esc(short)}</dt><dd>${esc(expansion)}</dd></div>`).join("");
+  }
+
+  function namedReviewer(value) {
+    const s = String(value || "").trim();
+    if (!s) return "";
+    if (/pending|add your name/i.test(s)) return "";
+    return s;
   }
 
   /* —— Teach pages —— */
@@ -3894,12 +4747,12 @@
       htmlOut = renderReversalPage();
       setTeachDocTitle("Bleed & reversal");
       if (!opts.skipRoute) setRoute("reversal", null, opts.replaceRoute);
-    } else if (kind === "changelog") {
-      title = "Changelog";
-      sub = "Major site updates";
-      htmlOut = renderChangelog();
-      setTeachDocTitle("Changelog");
-      if (!opts.skipRoute) setRoute("changelog", null, opts.replaceRoute);
+    } else if (kind === "open-questions") {
+      title = "Open questions in anticoagulation";
+      sub = "Questions still open, grouped by theme · #/open-questions";
+      htmlOut = renderOpenQuestions();
+      setTeachDocTitle("Open questions");
+      if (!opts.skipRoute) setRoute("open-questions", null, opts.replaceRoute);
     }
 
     titleEl.textContent = title;
@@ -3908,7 +4761,7 @@
     wireTeachBody(body);
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else resetModalScroll(document.querySelector("#bd-teach .modal"));
   }
 
   function teachRelatedLinksHtml(links) {
@@ -3925,7 +4778,7 @@
     const main = list.filter(l => l.kind !== "cacp" && l.kind !== "cacp-domain");
     const cacp = list.filter(l => l.kind === "cacp" || l.kind === "cacp-domain");
     const note = cacp.length
-      ? `<p class="teach-lead fw-cacp-note">Unofficial educational practice only. NCBAP does not endorse this site or any preparatory materials.</p>`
+      ? `<p class="teach-lead fw-cacp-note">Unofficial educational practice only. AC Forum does not endorse this or any preparatory materials.</p>`
       : "";
     return `<div class="jc-sec"><h3>Related</h3><div class="cacp-links">${main.map(btn).join("")}${note}${cacp.map(btn).join("")}</div></div>`;
   }
@@ -3945,7 +4798,7 @@
     ).join("");
     const lines = items.map(item => {
       const help = item.help ? `<p class="fw-check-help">${esc(item.help)}</p>` : "";
-      return `<li class="fw-check-item"><span class="fw-box" aria-hidden="true">☐</span>${esc(item.label || "")}${help}</li>`;
+      return `<li class="fw-check-item">${esc(item.label || "")}${help}</li>`;
     }).join("");
     const doc = fw.docTemplate || "Indication:     ________________________________\nPlanned duration: _____________________________\nDose rationale: _______________________________\n(Reviewed when / by: __________________________)";
     return `<div class="jc-sec fw-checklist">
@@ -3989,7 +4842,7 @@
       <div class="jc-sec"><h3>Practice pearl</h3><div class="take" style="margin:0">${esc(fw.pearl)}</div></div>
       ${teachBack}
       ${teachRelatedLinksHtml(fw.links)}
-      <p class="teach-lead" style="margin-top:.75rem;">Educational framing only — confirm with guidelines and local protocols.</p>`;
+`;
   }
 
   function renderCaseList() {
@@ -4051,7 +4904,7 @@
     (rev.classes || []).forEach(cl => {
       h += `<div class="rev-block">
         <h3 style="font-family:'Source Serif 4',Georgia,serif;font-size:1.1rem;margin-bottom:.35rem;">${esc(cl.agentClass)}</h3>
-        <p style="font-size:.9375rem;margin-bottom:.35rem;"><strong>Specific / preferred teaching path:</strong> ${esc(cl.specific)}</p>
+        <p style="font-size:.9375rem;margin-bottom:.35rem;"><strong>What the teaching map describes:</strong> ${esc(cl.specific)}</p>
         <p style="font-size:.875rem;color:var(--ink-2);margin-bottom:.35rem;">${esc(cl.notes)}</p>
         ${trialLinkButtons(cl.trialIds)}
       </div>`;
@@ -4070,7 +4923,7 @@
     agents.forEach(a => {
       h += `<div class="prac-box" style="margin-bottom:.45rem;">
         <div class="lab">${esc(a.name)}</div>
-        <div class="row"><strong>Load / maintain:</strong> ${esc(a.loadMaintain)}</div>
+          <div class="row"><strong>Load / maintain the trials used:</strong> ${esc(a.loadMaintain)}</div>
         <div class="row"><strong>Food:</strong> ${esc(a.food)}</div>
         <div class="row"><strong>Renal:</strong> ${esc(a.renal)}</div>
         <div class="row"><strong>Pearl:</strong> ${esc(a.pearls)}</div>
@@ -4089,16 +4942,25 @@
     return h;
   }
 
-  function renderChangelog() {
-    const items = siteMeta.changelog || [];
-    return `<p class="teach-lead">${esc(siteMeta.disclaimer || "")}</p>
-      <p class="teach-lead"><strong>Last literature sweep:</strong> ${esc(siteMeta.lastLiteratureSweep || "—")} · <strong>Reviewed by:</strong> ${esc(siteMeta.reviewedBy || "—")} (edit <code>js/site-meta.js</code> or <code>REVIEWER.md</code>)</p>
-      ${items.map(ch => `<div class="change-item">
-        <div class="cd">${esc(ch.date)} — ${esc(ch.title)}</div>
-        <ul>${(ch.items||[]).map(i => `<li>${esc(i)}</li>`).join("")}</ul>
-      </div>`).join("")}`;
+  function renderOpenQuestions() {
+    const OQ = window.ANTICOAG_OPEN_QUESTIONS;
+    if (!OQ || !Array.isArray(OQ.themes)) return `<p class="teach-lead">Open questions are not available.</p>`;
+    const chip = (bg, fg, s) => `<span style="display:inline-block;font-size:.75rem;font-weight:600;padding:.05rem .45rem;border-radius:999px;background:${bg};color:${fg}">${s}</span>`;
+    const trialBtn = id => byId[id] ? `<button type="button" class="linkish" data-open-trial="${esc(id)}">${esc(byId[id].acronym)}</button>` : "";
+    const item = ([cid, i]) => {
+      const t = byId[cid]; const q = t && Array.isArray(t.questionsOpen) ? t.questionsOpen[i] : null;
+      if (!q) return "";
+      const lid = q.addressedBy ? (OQ.later || {})[q.addressedBy] : null;
+      const status = q.addressedBy
+        ? chip("var(--accent-soft, #e6f7f1)", "var(--ink-2, #1f2a44)", "Taken up by " + (lid && byId[lid] ? trialBtn(lid) : esc(q.addressedBy)))
+        : chip("var(--line, #e5e7eb)", "var(--ink-2, #1f2a44)", "Still open");
+      return `<li style="margin:.45rem 0"><div>${esc(q.text)}</div><div style="font-size:.8rem;color:var(--muted);margin-top:.15rem">Trial: ${trialBtn(cid)} · ${status}</div></li>`;
+    };
+    return `<p class="teach-lead">${esc(OQ.intro || "")}</p>` + OQ.themes.map(th => {
+      const L = th.items.map(item).filter(Boolean);
+      return !L.length ? "" : `<section class="oq-theme" id="oq-${esc(th.id)}"><h3 style="margin:1rem 0 .25rem">${esc(th.heading)}</h3><ul style="padding-left:1.1rem;font-size:.875rem;color:var(--ink-2)">${L.join("")}</ul></section>`;
+    }).join("");
   }
-
   function wireTeachBody(root) {
     root.querySelectorAll("[data-fw]").forEach(b => {
       b.onclick = () => openTeach("framework", b.dataset.fw);
@@ -4124,6 +4986,7 @@
         // Close teach UI without wiping return route
         const bd = document.getElementById("bd-teach");
         if (bd && !bd.hidden) {
+          exitModalFullscreen("teach");
           bd.classList.remove("open"); bd.hidden = true;
           if (bd._trap) bd.removeEventListener("keydown", bd._trap);
           const i = stack.lastIndexOf("teach"); if (i >= 0) stack.splice(i, 1);
@@ -4143,7 +5006,7 @@
   document.getElementById("btn-cases").onclick = () => openTeach("cases");
   document.getElementById("btn-nuance").onclick = () => openTeach("nuances");
   document.getElementById("btn-reversal").onclick = () => openTeach("reversal");
-  document.getElementById("btn-changelog").onclick = () => openTeach("changelog");
+  document.getElementById("btn-open-questions").onclick = () => openTeach("open-questions");
 
   document.getElementById("teach-copy").onclick = () => {
     const kind = teachRoute && teachRoute.kind;
@@ -4164,7 +5027,7 @@
     else if (kind === "nuance" && id) hash = "#/nuance/" + id;
     else if (kind === "nuances") hash = "#/nuances";
     else if (kind === "reversal") hash = "#/reversal";
-    else if (kind === "changelog") hash = "#/changelog";
+    else if (kind === "open-questions") hash = "#/open-questions";
     const url = `${location.origin}${location.pathname}${location.search}${hash}`;
     navigator.clipboard.writeText(url).then(() => toast("Link copied"), () => prompt("Copy link:", url));
   };
@@ -4178,16 +5041,32 @@
     queue: [],
     idx: 0,
     answered: false,
+    revealed: false,
+    pickedId: null,
+    revealedCount: 0,
     score: 0,
     answeredCount: 0,
     missedIds: [],
+    unansweredIds: [],
     byDomain: {},
     shuffle: true,
-    mode: 'quiz', // quiz | results
+    mode: 'home', // home | exam-ready | quiz | exam | review | results
+    session: null, // study | exam
     focusQId: null,
     choiceOrderQId: null,
-    choiceOrderIds: null
+    choiceOrderIds: null,
+    choiceOrders: {},
+    answers: {},
+    bookmarks: {},
+    shortDomains: [],
+    examTarget: 0,
+    examDeadline: null,
+    examSubmitted: false,
+    examTimedOut: false,
+    reviewQueue: []
   };
+  let cacpTimerId = null;
+  let cacpPaintKey = '';
 
   function cacpAllQs() { return cacpLib.questions || []; }
   function cacpQById(id) { return cacpAllQs().find(q => q.id === id); }
@@ -4207,25 +5086,248 @@
     cacpState.choiceOrderQId = null;
     cacpState.choiceOrderIds = null;
   }
-  /** Display order only — stable choice.id vs correctId for scoring; shuffle once per question view. */
+  /** Display order only — stable choice.id vs correctId for scoring. */
   function cacpChoicesForDisplay(q) {
     if (!q) return [];
     const bank = q.choices || [];
-    if (cacpState.choiceOrderQId === q.id && Array.isArray(cacpState.choiceOrderIds) && cacpState.choiceOrderIds.length) {
+    const persistent = cacpState.mode === 'exam' || cacpState.mode === 'review';
+    const stored = persistent
+      ? (cacpState.choiceOrders && cacpState.choiceOrders[q.id])
+      : (cacpState.choiceOrderQId === q.id ? cacpState.choiceOrderIds : null);
+    if (Array.isArray(stored) && stored.length) {
       const byId = {};
       bank.forEach(c => { byId[c.id] = c; });
-      const ordered = cacpState.choiceOrderIds.map(id => byId[id]).filter(Boolean);
+      const ordered = stored.map(id => byId[id]).filter(Boolean);
       if (ordered.length === bank.length) return ordered;
     }
     const copy = bank.slice();
     shuffleInPlace(copy);
-    cacpState.choiceOrderQId = q.id;
-    cacpState.choiceOrderIds = copy.map(c => c.id);
+    const ids = copy.map(c => c.id);
+    if (persistent) {
+      if (!cacpState.choiceOrders) cacpState.choiceOrders = {};
+      cacpState.choiceOrders[q.id] = ids;
+    } else {
+      cacpState.choiceOrderQId = q.id;
+      cacpState.choiceOrderIds = ids;
+    }
     return copy;
   }
   function resetDomainScores() {
     cacpState.byDomain = {};
     (cacpLib.meta.domains || []).forEach(d => { cacpState.byDomain[d.id] = { correct: 0, total: 0 }; });
+  }
+
+  /* cacp-exam-pure:start */
+  function cacpExamMeta() {
+    const exam = (cacpLib.meta && cacpLib.meta.exam) || {};
+    const quotas = (exam.quotas && typeof exam.quotas === 'object') ? exam.quotas : {};
+    return {
+      questionCount: Number(exam.questionCount) || 0,
+      scoredCount: Number(exam.scoredCount) || 0,
+      pilotCount: Number(exam.pilotCount) || 0,
+      durationMinutes: Number(exam.durationMinutes) || 0,
+      passPercentOfScored: Number(exam.passPercentOfScored) || 0,
+      quotas: quotas
+    };
+  }
+  function cacpQuestionsByDomain() {
+    const byDom = {};
+    const seen = new Set();
+    cacpAllQs().forEach(q => {
+      if (!q || !q.id || seen.has(q.id)) return;
+      seen.add(q.id);
+      const bucket = byDom[q.domainId] || (byDom[q.domainId] = []);
+      bucket.push(q);
+    });
+    return byDom;
+  }
+  function cacpExamPlanPreview() {
+    const meta = cacpExamMeta();
+    const domains = (cacpLib.meta && cacpLib.meta.domains) || [];
+    const byDom = cacpQuestionsByDomain();
+    const lines = [];
+    const short = [];
+    let drawn = 0;
+    let quotaSum = 0;
+    domains.forEach(d => {
+      if (!Object.prototype.hasOwnProperty.call(meta.quotas, d.id)) return;
+      const quota = Number(meta.quotas[d.id]);
+      if (!Number.isFinite(quota) || quota < 0) return;
+      const have = (byDom[d.id] || []).length;
+      const take = Math.min(have, quota);
+      drawn += take;
+      quotaSum += quota;
+      if (have < quota) short.push(d);
+      lines.push({ domain: d, have: have, quota: quota, take: take });
+    });
+    return {
+      lines: lines,
+      short: short,
+      drawn: drawn,
+      target: meta.questionCount || quotaSum,
+      meta: meta
+    };
+  }
+  function drawCacpDomain(pool, quota) {
+    const n = Math.min(pool.length, Math.max(0, Number(quota) || 0));
+    const items = pool.slice();
+    const useCoverage = items.some(q => q && Array.isArray(q.objectiveIds) && q.objectiveIds.length);
+    if (!useCoverage) {
+      shuffleInPlace(items);
+      return items.slice(0, n);
+    }
+    const chosen = [];
+    const covered = new Set();
+    while (chosen.length < n && items.length) {
+      const fresh = items.filter(q => {
+        const ids = q && Array.isArray(q.objectiveIds) ? q.objectiveIds : [];
+        return ids.some(id => !covered.has(id));
+      });
+      const bag = fresh.length ? fresh : items;
+      const pick = bag[Math.floor(Math.random() * bag.length)];
+      chosen.push(pick);
+      const ids = pick && Array.isArray(pick.objectiveIds) ? pick.objectiveIds : [];
+      ids.forEach(id => covered.add(id));
+      items.splice(items.indexOf(pick), 1);
+    }
+    return chosen;
+  }
+  function sampleCacpExam() {
+    const preview = cacpExamPlanPreview();
+    const byDom = cacpQuestionsByDomain();
+    const queue = [];
+    preview.lines.forEach(line => {
+      const pool = (byDom[line.domain.id] || []).slice();
+      queue.push.apply(queue, drawCacpDomain(pool, line.quota));
+    });
+    shuffleInPlace(queue);
+    return {
+      queue: queue,
+      short: preview.short,
+      target: preview.target,
+      drawn: queue.length,
+      lines: preview.lines
+    };
+  }
+  function cacpDomainPhrase(domains) {
+    const ids = (domains || []).map(d => (d && d.id) ? d.id : d).filter(Boolean);
+    if (!ids.length) return '';
+    if (ids.length === 1) return 'Domain ' + ids[0];
+    if (ids.length === 2) return 'Domains ' + ids[0] + ' and ' + ids[1];
+    return 'Domains ' + ids.slice(0, -1).join(', ') + ', and ' + ids[ids.length - 1];
+  }
+  function cacpSittingLabel(drawn, target, shortDomains) {
+    const nDrawn = Number(drawn) || 0;
+    const nTarget = Number(target) || 0;
+    if (!nTarget || nDrawn >= nTarget) return 'Practice exam · ' + nDrawn;
+    const phrase = cacpDomainPhrase(shortDomains);
+    const tail = phrase ? ' — more items coming for ' + phrase : '';
+    return 'Practice exam · ' + nDrawn + ' of ' + nTarget + tail;
+  }
+  /* cacp-exam-pure:end */
+
+  function cacpDurationPhrase(mins) {
+    const m = Number(mins) || 0;
+    if (!m) return '';
+    const h = Math.floor(m / 60);
+    const rem = m % 60;
+    if (h && rem) return h + (h === 1 ? ' hour ' : ' hours ') + rem + ' minutes';
+    if (h) return h + (h === 1 ? ' hour' : ' hours');
+    return rem + ' minutes';
+  }
+  function cacpOfficialScoreNote() {
+    const meta = cacpExamMeta();
+    const scored = meta.scoredCount;
+    const pilots = meta.pilotCount;
+    const total = meta.questionCount || (scored + pilots);
+    const pct = meta.passPercentOfScored;
+    const need = (scored && pct) ? Math.round((scored * pct) / 100) : 0;
+    return 'The real exam scores ' + scored + ' of ' + total + ' items (' + pilots + ' unidentified pilots) and requires ' + pct + '% of scored items (' + need + '/' + scored + '). This unofficial practice sitting scores every item. It is not a certification result.';
+  }
+  function cacpSittingNeed(total) {
+    const pct = cacpExamMeta().passPercentOfScored;
+    if (!total || !pct) return null;
+    return { pct: pct, need: Math.ceil((total * pct) / 100) };
+  }
+  function cacpReferenceLine(total) {
+    const need = cacpSittingNeed(total);
+    if (!need) return '';
+    return 'An ' + need.pct + '% reference line on this sitting is ' + need.need + ' of ' + total + '. That line is a practice comparison only.';
+  }
+  function formatCacpClock(ms) {
+    const total = Math.max(0, Math.ceil(Number(ms) / 1000));
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    const pad = n => (n < 10 ? '0' : '') + n;
+    return h + ':' + pad(m) + ':' + pad(s);
+  }
+  function cacpExamMsLeft() {
+    if (!cacpState.examDeadline) return 0;
+    return Math.max(0, cacpState.examDeadline - Date.now());
+  }
+  function stopCacpTimer() {
+    if (cacpTimerId) {
+      clearInterval(cacpTimerId);
+      cacpTimerId = null;
+    }
+  }
+  function cacpTimerTick() {
+    if (cacpState.mode !== 'exam') { stopCacpTimer(); return; }
+    const left = cacpExamMsLeft();
+    const el = document.getElementById('cacp-timer');
+    if (el) {
+      el.textContent = formatCacpClock(left);
+      el.classList.toggle('warn', left > 0 && left <= 5 * 60 * 1000);
+    }
+    if (left <= 0) submitCacpExam({ timedOut: true });
+  }
+  function startCacpTimer() {
+    stopCacpTimer();
+    cacpTimerId = setInterval(cacpTimerTick, 250);
+  }
+  function cacpSetSub(text, withTimer) {
+    const sub = document.getElementById('cacp-sub');
+    if (!sub) return;
+    if (!withTimer) {
+      sub.textContent = text;
+      return;
+    }
+    const left = cacpExamMsLeft();
+    const warn = left > 0 && left <= 5 * 60 * 1000 ? ' warn' : '';
+    sub.innerHTML = esc(text) + ' · Time left <span id="cacp-timer" class="cacp-clock' + warn + '">' + esc(formatCacpClock(left)) + '</span>';
+  }
+  function cacpBannerHtml() {
+    const text = (cacpLib.meta && cacpLib.meta.disclaimer) || '';
+    return '<div class="cacp-banner"><strong>Disclaimer:</strong> ' + linkifyText(text) + '</div>';
+  }
+  function cacpShortBannerHtml() {
+    return '<div class="cacp-banner"><strong>Unofficial practice.</strong> AC Forum does not endorse this or any preparatory materials. These are not real exam questions.</div>';
+  }
+  function cacpHandbookHtml() {
+    const text = (cacpLib.meta && cacpLib.meta.handbookNote) || '';
+    return '<p class="cacp-ref">' + linkifyText(text) + '</p>';
+  }
+  function cacpTipsHtml(includeNote) {
+    const tips = (cacpLib.studyTips || []).map(t => '<li>' + esc(t) + '</li>').join('');
+    const note = includeNote ? cacpHandbookHtml() : '';
+    const summary = includeNote ? 'Study tips and handbook note' : 'Study tips';
+    return '<div class="cacp-tips"><details><summary>' + summary + '</summary><ul>' + tips + '</ul>' + note + '</details></div>';
+  }
+  function cacpQuotaTableHtml(preview) {
+    const rows = (preview.lines || []).map(line => {
+      const d = line.domain;
+      const short = line.have < line.quota ? ' · short' : '';
+      return '<tr><td>Domain ' + esc(d.id) + '</td><td>' + esc(d.name) + '</td><td>' + esc(String(d.weightPct)) + '%</td><td>' + line.quota + '</td><td>' + line.have + '</td><td>' + line.take + short + '</td></tr>';
+    }).join('');
+    return '<div class="cacp-table-wrap"><table class="cacp-quota"><thead><tr><th>Domain</th><th>Name</th><th>Weight</th><th>Quota</th><th>In bank</th><th>This sitting</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+  }
+  function cacpDomainRowsHtml() {
+    return (cacpLib.meta.domains || []).map(d => {
+      const s = cacpState.byDomain[d.id] || { correct: 0, total: 0 };
+      const pct = s.total ? Math.round(100 * s.correct / s.total) + '%' : '—';
+      return '<tr><td>Domain ' + esc(d.id) + ' · ' + esc(d.name) + '</td><td>' + s.correct + '/' + s.total + '</td><td>' + pct + '</td></tr>';
+    }).join('');
   }
 
   function buildCacpQueue(opts) {
@@ -4243,12 +5345,139 @@
     cacpState.queue = list;
     cacpState.idx = 0;
     cacpState.answered = false;
+    cacpState.revealed = false;
+    cacpState.pickedId = null;
+    cacpState.revealedCount = 0;
     clearCacpChoiceOrder();
+    cacpState.choiceOrders = {};
     cacpState.score = 0;
     cacpState.answeredCount = 0;
     if (!opts.keepMissed) cacpState.missedIds = [];
+    cacpState.unansweredIds = [];
     resetDomainScores();
     cacpState.mode = 'quiz';
+  }
+
+  function enterCacpHome() {
+    stopCacpTimer();
+    cacpState.mode = 'home';
+    cacpState.focusQId = null;
+    cacpState.idx = 0;
+    cacpState.answered = false;
+    cacpState.revealed = false;
+    cacpState.pickedId = null;
+    cacpState.examDeadline = null;
+  }
+  function startCacpStudy(opts) {
+    opts = opts || {};
+    stopCacpTimer();
+    cacpState.session = 'study';
+    cacpState.examDeadline = null;
+    cacpState.examSubmitted = false;
+    cacpState.examTimedOut = false;
+    cacpState.answers = {};
+    cacpState.bookmarks = {};
+    cacpState.shortDomains = [];
+    cacpState.reviewQueue = [];
+    if (opts.fromHome) {
+      cacpState.shuffle = true;
+      cacpState.domainId = 'all';
+      cacpState.focusQId = null;
+    }
+    buildCacpQueue(opts);
+  }
+  function showCacpExamReady() {
+    stopCacpTimer();
+    cacpState.mode = 'exam-ready';
+    cacpState.focusQId = null;
+    cacpState.idx = 0;
+    cacpState.examDeadline = null;
+    cacpState.examSubmitted = false;
+  }
+  function beginCacpExam() {
+    const sampled = sampleCacpExam();
+    if (!sampled.queue.length) return;
+    stopCacpTimer();
+    cacpState.session = 'exam';
+    cacpState.mode = 'exam';
+    cacpState.focusQId = null;
+    cacpState.queue = sampled.queue;
+    cacpState.shortDomains = sampled.short;
+    cacpState.examTarget = sampled.target;
+    cacpState.idx = 0;
+    cacpState.answers = {};
+    cacpState.bookmarks = {};
+    cacpState.choiceOrders = {};
+    cacpState.missedIds = [];
+    cacpState.unansweredIds = [];
+    cacpState.score = 0;
+    cacpState.answeredCount = 0;
+    cacpState.revealedCount = 0;
+    cacpState.answered = false;
+    cacpState.revealed = false;
+    cacpState.pickedId = null;
+    cacpState.examSubmitted = false;
+    cacpState.examTimedOut = false;
+    cacpState.reviewQueue = [];
+    clearCacpChoiceOrder();
+    resetDomainScores();
+    const mins = cacpExamMeta().durationMinutes;
+    cacpState.examDeadline = mins > 0 ? Date.now() + mins * 60 * 1000 : null;
+    if (cacpState.examDeadline) startCacpTimer();
+  }
+  function scoreCacpExam() {
+    resetDomainScores();
+    cacpState.score = 0;
+    cacpState.answeredCount = 0;
+    cacpState.missedIds = [];
+    cacpState.unansweredIds = [];
+    cacpState.queue.forEach(q => {
+      const pick = cacpState.answers[q.id];
+      const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
+      dstat.total++;
+      if (!pick) {
+        cacpState.unansweredIds.push(q.id);
+        cacpState.missedIds.push(q.id);
+        return;
+      }
+      cacpState.answeredCount++;
+      if (pick === q.correctId) {
+        cacpState.score++;
+        dstat.correct++;
+      } else {
+        cacpState.missedIds.push(q.id);
+      }
+    });
+  }
+  function submitCacpExam(opts) {
+    opts = opts || {};
+    if (cacpState.mode !== 'exam' || cacpState.examSubmitted) return;
+    cacpState.examSubmitted = true;
+    cacpState.examTimedOut = !!opts.timedOut;
+    stopCacpTimer();
+    scoreCacpExam();
+    cacpState.mode = 'results';
+    cacpState.session = 'exam';
+    renderCacp();
+  }
+  function requestCacpExamSubmit() {
+    if (cacpState.mode !== 'exam' || cacpState.examSubmitted) return;
+    const unanswered = cacpState.queue.filter(q => !cacpState.answers[q.id]).length;
+    if (unanswered) {
+      const noun = unanswered === 1 ? '1 item has' : (unanswered + ' items have');
+      const ok = window.confirm('Submit the practice exam now? ' + noun + ' no answer yet. Unanswered items are not correct.');
+      if (!ok) return;
+    }
+    submitCacpExam({ timedOut: false });
+  }
+  function beginCacpReview() {
+    stopCacpTimer();
+    const ids = new Set(cacpState.missedIds);
+    let list = (cacpState.queue || []).filter(q => q && ids.has(q.id));
+    if (!list.length) list = cacpState.missedIds.map(cacpQById).filter(Boolean);
+    cacpState.reviewQueue = list;
+    cacpState.idx = 0;
+    cacpState.mode = 'review';
   }
 
   function openCacp(opts) {
@@ -4256,19 +5485,18 @@
     if (opts.questionId) {
       cacpState.focusQId = opts.questionId;
       cacpState.domainId = 'all';
-      buildCacpQueue({ focusQId: opts.questionId });
+      startCacpStudy({ focusQId: opts.questionId });
     } else if (opts.domainId) {
       cacpState.focusQId = null;
       cacpState.domainId = opts.domainId;
-      buildCacpQueue({});
+      startCacpStudy({});
     } else if (opts.missedOnly) {
       cacpState.focusQId = null;
-      buildCacpQueue({ missedOnly: true, keepMissed: true });
-    } else if (opts.resume && cacpState.queue.length) {
-      // keep
+      startCacpStudy({ missedOnly: true, keepMissed: true });
+    } else if (opts.examReady) {
+      showCacpExamReady();
     } else {
-      cacpState.focusQId = null;
-      buildCacpQueue({});
+      enterCacpHome();
     }
     renderCacp();
     const bd = document.getElementById('bd-cacp');
@@ -4291,7 +5519,6 @@
     else if (l.kind === 'cacp') openCacp({ questionId: l.id });
     else if (l.kind === 'cacp-domain') openCacp({ domainId: l.id });
     else if (l.kind === 'pathway') {
-      // Playlist if the id is a trial pathway; otherwise treatment pathway (TX-only ids).
       const inPlaylist = (pathways || []).some(p => p.id === l.id);
       if (inPlaylist) startPathway(l.id, 0, false);
       else openTxPath({ pathwayId: l.id });
@@ -4302,96 +5529,330 @@
     }
   }
 
-  function renderCacp() {
-    const body = document.getElementById('cacp-body');
-    const title = document.getElementById('cacp-title');
-    const sub = document.getElementById('cacp-sub');
-    const nextBtn = document.getElementById('cacp-next');
-    const missedBtn = document.getElementById('cacp-missed');
-    title.textContent = (cacpLib.meta && cacpLib.meta.title) || 'CACP exam prep';
-    sub.textContent = 'Unofficial practice · not NCBAP-endorsed';
-
-    if (cacpState.mode === 'results') {
-      missedBtn.hidden = cacpState.missedIds.length === 0;
-      nextBtn.textContent = 'Restart';
-      const rows = (cacpLib.meta.domains || []).map(d => {
-        const s = cacpState.byDomain[d.id] || { correct: 0, total: 0 };
-        const pct = s.total ? Math.round(100 * s.correct / s.total) : '—';
-        return `<tr><td>Domain ${esc(d.id)} · ${esc(d.name)}</td><td>${s.correct}/${s.total}</td><td>${pct}${s.total?'%':''}</td></tr>`;
-      }).join('');
-      body.innerHTML = `
-        <div class="cacp-banner"><strong>Disclaimer:</strong> ${esc(cacpLib.meta.disclaimer || '')}</div>
-        <div class="cacp-results">
-          <h3 style="font-family:'Source Serif 4',Georgia,serif;font-size:1.2rem;margin-bottom:.35rem;">Session complete</h3>
-          <p class="cacp-meta">Score: <strong>${cacpState.score}</strong> / ${cacpState.answeredCount}
-            ${cacpState.missedIds.length ? ` · Missed: ${cacpState.missedIds.length}` : ''}</p>
-          <table><thead><tr><th>Domain</th><th>Correct</th><th>%</th></tr></thead><tbody>${rows}</tbody></table>
-          <p style="font-size:.8125rem;color:var(--muted);line-height:1.45">${esc(cacpLib.meta.handbookNote || '')}</p>
-        </div>`;
-      return;
+  function syncCacpFoot() {
+    const prev = document.getElementById('cacp-prev');
+    const bookmark = document.getElementById('cacp-bookmark');
+    const finish = document.getElementById('cacp-finish');
+    const copy = document.getElementById('cacp-copy');
+    const shuffle = document.getElementById('cacp-shuffle');
+    const missed = document.getElementById('cacp-missed');
+    const reveal = document.getElementById('cacp-reveal');
+    const next = document.getElementById('cacp-next');
+    const mode = cacpState.mode;
+    const show = (el, on) => { if (el) el.hidden = !on; };
+    show(prev, mode === 'exam' || mode === 'review');
+    show(bookmark, mode === 'exam');
+    show(finish, mode === 'exam');
+    show(copy, mode === 'home' || mode === 'quiz' || mode === 'results' || mode === 'exam-ready');
+    show(shuffle, mode === 'quiz');
+    show(missed, (mode === 'results' || mode === 'review' || mode === 'home' || mode === 'exam-ready') && cacpState.missedIds.length > 0);
+    show(reveal, false);
+    show(next, mode !== 'home');
+    if (shuffle) shuffle.setAttribute('aria-pressed', cacpState.shuffle ? 'true' : 'false');
+    if (mode === 'exam') {
+      const q = cacpState.queue[cacpState.idx];
+      if (prev) prev.disabled = cacpState.idx <= 0;
+      if (next) {
+        next.disabled = !cacpState.queue.length || cacpState.idx >= cacpState.queue.length - 1;
+        next.textContent = 'Next question';
+      }
+      if (bookmark) {
+        const on = !!(q && cacpState.bookmarks[q.id]);
+        bookmark.textContent = on ? 'Bookmarked' : 'Bookmark';
+        bookmark.setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
+      if (finish) finish.disabled = !cacpState.queue.length;
+    } else if (mode === 'review') {
+      const qn = (cacpState.reviewQueue || []).length;
+      if (prev) prev.disabled = cacpState.idx <= 0;
+      if (next) {
+        next.disabled = false;
+        next.textContent = cacpState.idx >= qn - 1 ? 'Back to results' : 'Next missed';
+      }
+    } else if (mode === 'results') {
+      if (next) { next.disabled = false; next.textContent = 'Back to start'; }
+    } else if (mode === 'exam-ready') {
+      if (next) { next.disabled = false; next.textContent = 'Back'; }
     }
+  }
 
-    missedBtn.hidden = true;
+  function renderCacpHome() {
+    const preview = cacpExamPlanPreview();
+    const bankCount = cacpAllQs().length;
+    const label = cacpSittingLabel(preview.drawn, preview.target, preview.short);
+    const examSpan = preview.drawn
+      ? (label + '. Newly randomized each time. Explanations stay hidden until you submit or the clock ends.')
+      : 'Exam quotas are not available for this bank yet.';
+    cacpSetSub('Unofficial practice · educational only', false);
+    return '<div data-cacp-screen="home">' +
+      cacpBannerHtml() +
+      '<div class="cacp-actions">' +
+        '<button type="button" class="cacp-home-card" data-cacp-action="study"><strong>Study practice</strong><span>All ' + bankCount + ' questions in the current bank. Domain filters stay available. Shuffle starts on. The explanation opens after you submit or reveal an item.</span></button>' +
+        '<button type="button" class="cacp-home-card" data-cacp-action="exam"' + (preview.drawn ? '' : ' disabled') + '><strong>Full practice exam</strong><span>' + esc(examSpan) + '</span></button>' +
+      '</div>' +
+      '<h3 class="cacp-h">Exam quotas</h3>' +
+      '<p class="cacp-ref">' + esc(label) + '. A domain with fewer items than its quota contributes each item once. Items are not repeated and are not borrowed from another domain.</p>' +
+      cacpQuotaTableHtml(preview) +
+      cacpHandbookHtml() +
+      cacpTipsHtml(false) +
+    '</div>';
+  }
+
+  function renderCacpExamReady() {
+    const preview = cacpExamPlanPreview();
+    const label = cacpSittingLabel(preview.drawn, preview.target, preview.short);
+    const duration = cacpDurationPhrase(preview.meta.durationMinutes);
+    const clockLine = duration
+      ? ('The clock is ' + duration + '. It starts when you confirm you are ready. ')
+      : '';
+    cacpSetSub('Full practice exam · clock starts when you are ready', false);
+    const startLabel = duration ? "I'm ready — start the clock" : 'Start the practice exam';
+    return '<div data-cacp-screen="exam-ready" data-drawn="' + preview.drawn + '" data-target="' + preview.target + '">' +
+      cacpShortBannerHtml() +
+      '<h3 class="cacp-h">' + esc(label) + '</h3>' +
+      '<p class="cacp-ref">' + esc(clockLine) + 'You can move back, change an answer, and bookmark an item. Explanations, teaching points, and correctness stay hidden until you submit or the clock ends. You can submit early. At zero, recorded answers are submitted.</p>' +
+      '<p class="cacp-ref">' + esc(cacpOfficialScoreNote()) + '</p>' +
+      cacpQuotaTableHtml(preview) +
+      '<button type="button" class="btn primary cacp-begin" data-cacp-action="begin-exam"' + (preview.drawn ? '' : ' disabled') + '>' + esc(startLabel) + '</button>' +
+    '</div>';
+  }
+
+  function renderCacpResults() {
+    const examSession = cacpState.session === 'exam';
+    const sittingPct = (examSession && cacpState.queue.length)
+      ? Math.round(100 * cacpState.score / cacpState.queue.length)
+      : (cacpState.answeredCount ? Math.round(100 * cacpState.score / cacpState.answeredCount) : 0);
+    const rows = cacpDomainRowsHtml();
+    cacpSetSub(examSession ? 'Practice exam · results' : 'Study practice · session complete', false);
+    let scoreLine;
+    let extra = '';
+    if (examSession) {
+      const need = cacpSittingNeed(cacpState.queue.length);
+      const markPct = need ? need.pct : 0;
+      scoreLine = 'Practice score: <strong>' + cacpState.score + '</strong> correct / ' + cacpState.answeredCount + ' answered · ' + cacpState.queue.length + ' in this sitting (' + sittingPct + '% of the sitting).';
+      if (cacpState.unansweredIds.length) {
+        extra += '<p class="cacp-meta">Unanswered: ' + cacpState.unansweredIds.length + '. Those items are not correct.</p>';
+      }
+      if (cacpState.examTimedOut) {
+        extra = '<p class="cacp-meta">Time ran out. The sitting was submitted with the answers recorded.</p>' + extra;
+      }
+      extra += '<div class="cacp-bar" role="img" aria-label="' + esc('Practice percentage ' + sittingPct + ' percent of this sitting. The mark is the ' + markPct + ' percent reference line.') + '">' +
+        '<span class="cacp-bar-fill" style="width:' + sittingPct + '%"></span>' +
+        (need ? '<span class="cacp-bar-mark" style="left:' + markPct + '%"></span>' : '') +
+        '</div>';
+      extra += '<p class="cacp-ref">' + esc(cacpReferenceLine(cacpState.queue.length)) + '</p>';
+      extra += '<p class="cacp-ref">' + esc(cacpOfficialScoreNote()) + '</p>';
+      extra += '<p class="cacp-ref">' + esc(cacpSittingLabel(cacpState.queue.length, cacpState.examTarget, cacpState.shortDomains)) + '.</p>';
+    } else {
+      scoreLine = 'Score: <strong>' + cacpState.score + '</strong> / ' + cacpState.answeredCount +
+        (cacpState.missedIds.length ? ' · Missed: ' + cacpState.missedIds.length : '');
+      if (cacpState.revealedCount) {
+        extra += '<p class="cacp-unscored">Revealed explanations: ' + cacpState.revealedCount + '. Those are not included in the score.</p>';
+      }
+    }
+    const actions = [];
+    if (cacpState.missedIds.length) {
+      actions.push('<button type="button" class="btn" data-cacp-action="review">Review missed with explanations</button>');
+    }
+    if (examSession) actions.push('<button type="button" class="btn" data-cacp-action="exam">New full exam</button>');
+    else actions.push('<button type="button" class="btn" data-cacp-action="study">Study again</button>');
+    const caption = examSession
+      ? 'Domain totals count every item drawn for that domain. Unanswered items are not correct.'
+      : 'Domain totals count submitted answers.';
+    return '<div data-cacp-screen="results" data-session="' + (examSession ? 'exam' : 'study') + '">' +
+      cacpBannerHtml() +
+      '<div class="cacp-results">' +
+        '<h3 class="cacp-h">' + (examSession ? 'Practice exam results' : 'Session complete') + '</h3>' +
+        '<p class="cacp-meta">' + scoreLine + '</p>' +
+        extra +
+        '<p class="cacp-ref">' + esc(caption) + '</p>' +
+        '<div class="cacp-table-wrap"><table><thead><tr><th>Domain</th><th>Correct</th><th>%</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+        cacpHandbookHtml() +
+        '<div class="cacp-actions">' + actions.join('') + '</div>' +
+      '</div></div>';
+  }
+
+  function renderCacpExam() {
+    const q = cacpState.queue[cacpState.idx];
+    const label = cacpSittingLabel(cacpState.queue.length, cacpState.examTarget, cacpState.shortDomains);
+    cacpSetSub(label, !!cacpState.examDeadline);
+    if (!q) {
+      return '<div data-cacp-screen="exam">' + cacpShortBannerHtml() + '<p>No questions in this sitting.</p></div>';
+    }
+    const dom = (cacpLib.meta.domains || []).find(d => d.id === q.domainId);
+    const pick = cacpState.answers[q.id] || '';
+    const answeredN = cacpState.queue.filter(item => cacpState.answers[item.id]).length;
+    const marked = cacpState.queue.filter(item => cacpState.bookmarks[item.id]).length;
+    const choices = cacpChoicesForDisplay(q).map(c => {
+      const on = c.id === pick;
+      return '<button type="button" class="btn' + (on ? ' selected' : '') + '" data-cacp-choice="' + esc(c.id) + '" aria-pressed="' + (on ? 'true' : 'false') + '">' + esc(c.text) + '</button>';
+    }).join('');
+    const nav = cacpState.queue.map((item, i) => {
+      const cls = [
+        i === cacpState.idx ? 'current' : '',
+        cacpState.answers[item.id] ? 'answered' : '',
+        cacpState.bookmarks[item.id] ? 'bookmarked' : ''
+      ].filter(Boolean).join(' ');
+      const name = 'Question ' + (i + 1) + (cacpState.answers[item.id] ? ', answered' : ', unanswered') + (cacpState.bookmarks[item.id] ? ', bookmarked' : '');
+      return '<button type="button" class="' + cls + '" data-cacp-jump="' + i + '" data-nav-id="' + esc(item.id) + '" aria-label="' + esc(name) + '"' + (i === cacpState.idx ? ' aria-current="true"' : '') + '>' + (i + 1) + '</button>';
+    }).join('');
+    return '<div data-cacp-screen="exam" data-qid="' + esc(q.id) + '" data-drawn="' + cacpState.queue.length + '" data-target="' + cacpState.examTarget + '">' +
+      cacpShortBannerHtml() +
+      '<div class="cacp-meta">Question ' + (cacpState.idx + 1) + ' of ' + cacpState.queue.length +
+        ' · Domain ' + esc(q.domainId) + (dom ? ' — ' + esc(dom.name) : '') +
+        ' · Answered ' + answeredN + ' · Bookmarked ' + marked + '</div>' +
+      '<div class="cacp-stem">' + esc(q.stem) + '</div>' +
+      '<div class="cacp-choices">' + choices + '</div>' +
+      '<div class="cacp-tips"><details><summary>Question list · ' + answeredN + ' answered · ' + marked + ' bookmarked</summary><div class="cacp-qnav">' + nav + '</div></details></div>' +
+    '</div>';
+  }
+
+  function renderCacpReview() {
+    const list = cacpState.reviewQueue || [];
+    const q = list[cacpState.idx];
+    cacpSetSub('Review missed items', false);
+    if (!q) {
+      return '<div data-cacp-screen="review"><p>No missed items to review.</p></div>';
+    }
+    const dom = (cacpLib.meta.domains || []).find(d => d.id === q.domainId);
+    const pick = cacpState.answers[q.id] || '';
+    const choices = cacpChoicesForDisplay(q).map(c => {
+      let cls = 'btn';
+      if (c.id === q.correctId) cls += ' correct';
+      else if (pick && c.id === pick) cls += ' wrong';
+      return '<button type="button" class="' + cls + '" disabled>' + esc(c.text) + '</button>';
+    }).join('');
+    const links = (q.links || []).map(l =>
+      '<button type="button" class="btn sm" data-cacp-link="' + esc(l.kind) + '|' + esc(l.id || '') + '">' + esc(l.label || l.id) + '</button>'
+    ).join('');
+    const tps = (q.teachingPoints || []).map(t => '<li>' + esc(t) + '</li>').join('');
+    const unanswered = !pick ? '<p class="cacp-unscored">No answer recorded.</p>' : '';
+    const marked = cacpState.bookmarks[q.id] ? '<p class="cacp-unscored">Bookmarked during the sitting.</p>' : '';
+    return '<div data-cacp-screen="review" data-qid="' + esc(q.id) + '">' +
+      cacpShortBannerHtml() +
+      '<div class="cacp-meta">Missed item ' + (cacpState.idx + 1) + ' of ' + list.length +
+        ' · Domain ' + esc(q.domainId) + (dom ? ' — ' + esc(dom.name) : '') + '</div>' +
+      marked +
+      '<div class="cacp-stem">' + esc(q.stem) + '</div>' +
+      '<div class="cacp-choices">' + choices + '</div>' +
+      '<div class="cacp-explain"><h4>Explanation</h4>' + unanswered +
+        '<p>' + esc(q.explanation || '') + '</p>' +
+        (tps ? '<h4>Teaching points</h4><ul>' + tps + '</ul>' : '') +
+        (links ? '<div class="cacp-links">' + links + '</div>' : '') +
+      '</div></div>';
+  }
+
+  function renderCacpQuiz() {
+    const missedBtn = document.getElementById('cacp-missed');
+    const revealBtn = document.getElementById('cacp-reveal');
+    const nextBtn = document.getElementById('cacp-next');
+    if (missedBtn) missedBtn.hidden = true;
+    cacpSetSub('Study practice · explanations after each item', false);
     const q = cacpState.queue[cacpState.idx];
     if (!q) {
-      body.innerHTML = `<div class="cacp-banner">${esc(cacpLib.meta.disclaimer || '')}</div>
-        <p>No questions in this filter.</p>`;
-      nextBtn.textContent = 'Close';
-      return;
+      if (revealBtn) revealBtn.hidden = true;
+      if (nextBtn) {
+        nextBtn.hidden = false;
+        nextBtn.disabled = false;
+        nextBtn.textContent = 'Close';
+      }
+      return '<div data-cacp-screen="quiz">' + cacpBannerHtml() + '<p>No questions in this filter.</p></div>';
     }
-
     const dom = (cacpLib.meta.domains || []).find(d => d.id === q.domainId);
-    const chips = [`<button type="button" class="chip ${cacpState.domainId==='all'?'active':''}" data-cacp-dom="all">All</button>`]
+    const chips = ['<button type="button" class="chip ' + (cacpState.domainId === 'all' ? 'active' : '') + '" data-cacp-dom="all">All</button>']
       .concat((cacpLib.meta.domains || []).map(d =>
-        `<button type="button" class="chip ${cacpState.domainId===d.id?'active':''}" data-cacp-dom="${esc(d.id)}">` +
-        `${esc(d.id)} · ${d.weightPct}%</button>`
+        '<button type="button" class="chip ' + (cacpState.domainId === d.id ? 'active' : '') + '" data-cacp-dom="' + esc(d.id) + '">' +
+        esc(d.id) + ' · ' + d.weightPct + '%</button>'
       )).join('');
-
-    const tips = (cacpLib.studyTips || []).map(t => `<li>${esc(t)}</li>`).join('');
+    const resolved = cacpState.answered || cacpState.revealed;
     let explain = '';
-    if (cacpState.answered) {
+    if (resolved) {
       const links = (q.links || []).map(l =>
-        `<button type="button" class="btn sm" data-cacp-link="${esc(l.kind)}|${esc(l.id || '')}">${esc(l.label || l.id)}</button>`
+        '<button type="button" class="btn sm" data-cacp-link="' + esc(l.kind) + '|' + esc(l.id || '') + '">' + esc(l.label || l.id) + '</button>'
       ).join('');
-      const tps = (q.teachingPoints || []).map(t => `<li>${esc(t)}</li>`).join('');
-      explain = `<div class="cacp-explain">
-        <h4>Explanation</h4>
-        <p>${esc(q.explanation || '')}</p>
-        ${tps ? `<h4>Teaching points</h4><ul>${tps}</ul>` : ''}
-        ${links ? `<div class="cacp-links">${links}</div>` : ''}
-      </div>`;
-      nextBtn.textContent = cacpState.idx >= cacpState.queue.length - 1 ? 'See results' : 'Next question';
+      const tps = (q.teachingPoints || []).map(t => '<li>' + esc(t) + '</li>').join('');
+      const unscored = cacpState.revealed && !cacpState.answered
+        ? '<p class="cacp-unscored">Not scored — you did not submit an answer.</p>'
+        : '';
+      explain = '<div class="cacp-explain"><h4>Explanation</h4>' + unscored +
+        '<p>' + esc(q.explanation || '') + '</p>' +
+        (tps ? '<h4>Teaching points</h4><ul>' + tps + '</ul>' : '') +
+        (links ? '<div class="cacp-links">' + links + '</div>' : '') +
+      '</div>';
+      if (revealBtn) revealBtn.hidden = true;
+      if (nextBtn) {
+        nextBtn.hidden = false;
+        nextBtn.disabled = false;
+        nextBtn.textContent = cacpState.idx >= cacpState.queue.length - 1 ? 'See results' : 'Next question';
+      }
     } else {
-      nextBtn.textContent = 'Skip / reveal';
+      if (revealBtn) {
+        revealBtn.hidden = false;
+        revealBtn.disabled = false;
+        revealBtn.textContent = 'Reveal explanation';
+      }
+      if (nextBtn) {
+        nextBtn.hidden = false;
+        nextBtn.disabled = !cacpState.pickedId;
+        nextBtn.textContent = 'Submit answer';
+      }
     }
-
     const choices = cacpChoicesForDisplay(q).map(c => {
       let cls = 'btn';
       if (cacpState.answered) {
         if (c.id === q.correctId) cls += ' correct';
-        else if (c._picked && c.id !== q.correctId) cls += ' wrong';
+        else if (c.id === cacpState.pickedId && c.id !== q.correctId) cls += ' wrong';
+      } else if (cacpState.revealed) {
+        if (c.id === q.correctId) cls += ' correct';
+      } else if (c.id === cacpState.pickedId) {
+        cls += ' selected';
       }
-      return `<button type="button" class="${cls}" data-cacp-choice="${esc(c.id)}" ${cacpState.answered?'disabled':''}>${esc(c.text)}</button>`;
+      return '<button type="button" class="' + cls + '" data-cacp-choice="' + esc(c.id) + '"' + (resolved ? ' disabled' : '') + '>' + esc(c.text) + '</button>';
     }).join('');
+    return '<div data-cacp-screen="quiz" data-qid="' + esc(q.id) + '">' +
+      cacpShortBannerHtml() +
+      cacpTipsHtml(true) +
+      '<div class="cacp-domains">' + chips + '</div>' +
+      '<div class="cacp-meta">Question ' + (cacpState.idx + 1) + ' of ' + cacpState.queue.length +
+        ' · Domain ' + esc(q.domainId) + (dom ? ' — ' + esc(dom.name) : '') +
+        ' · ' + esc(q.difficulty || 'core') +
+        ' · Score ' + cacpState.score + '/' + cacpState.answeredCount + '</div>' +
+      '<div class="cacp-stem">' + esc(q.stem) + '</div>' +
+      '<div class="cacp-choices">' + choices + '</div>' +
+      explain +
+    '</div>';
+  }
 
-    // mark picked for re-render: store on choice objects temporarily via state
-    body.innerHTML = `
-      <div class="cacp-banner"><strong>Unofficial practice.</strong> NCBAP does not endorse prep materials; these are not real exam questions. Educational use only.</div>
-      <div class="cacp-tips"><details><summary>Study tips & handbook note</summary>
-        <ul>${tips}</ul>
-        <p style="font-size:.75rem;color:var(--muted);margin-top:.45rem;line-height:1.4">${esc(cacpLib.meta.handbookNote || '')}</p>
-      </details></div>
-      <div class="cacp-domains">${chips}</div>
-      <div class="cacp-meta">Question ${cacpState.idx + 1} of ${cacpState.queue.length}
-        · Domain ${esc(q.domainId)}${dom ? ' — ' + esc(dom.name) : ''}
-        · ${esc(q.difficulty || 'core')}
-        · Score ${cacpState.score}/${cacpState.answeredCount}</div>
-      <div class="cacp-stem">${esc(q.stem)}</div>
-      <div class="cacp-choices">${choices}</div>
-      ${explain}`;
-
+  function renderCacp() {
+    const body = document.getElementById('cacp-body');
+    const title = document.getElementById('cacp-title');
+    if (!body || !title) return;
+    if (cacpState.mode === 'exam' && cacpState.examDeadline && cacpExamMsLeft() <= 0 && !cacpState.examSubmitted) {
+      submitCacpExam({ timedOut: true });
+      return;
+    }
+    title.textContent = (cacpLib.meta && cacpLib.meta.title) || 'CACP exam prep';
+    syncCacpFoot();
+    let html = '';
+    if (cacpState.mode === 'home') html = renderCacpHome();
+    else if (cacpState.mode === 'exam-ready') html = renderCacpExamReady();
+    else if (cacpState.mode === 'results') html = renderCacpResults();
+    else if (cacpState.mode === 'exam') html = renderCacpExam();
+    else if (cacpState.mode === 'review') html = renderCacpReview();
+    else html = renderCacpQuiz();
+    body.innerHTML = html;
+    wireCacpBody(body);
+    const paintKey = cacpState.mode + ':' + cacpState.idx + ':' + (cacpState.focusQId || '');
+    if (paintKey !== cacpPaintKey) {
+      cacpPaintKey = paintKey;
+      const modal = document.querySelector('#bd-cacp .modal');
+      resetModalScroll(modal);
+    }
+  }
+  function wireCacpBody(body) {
     body.querySelectorAll('[data-cacp-dom]').forEach(b => {
       b.onclick = () => {
+        if (cacpState.mode !== 'quiz') return;
         cacpState.domainId = b.dataset.cacpDom;
         cacpState.focusQId = null;
         buildCacpQueue({});
@@ -4401,26 +5862,52 @@
     });
     body.querySelectorAll('[data-cacp-choice]').forEach(b => {
       b.onclick = () => {
-        if (cacpState.answered) return;
-        const pick = b.dataset.cacpChoice;
-        cacpState.answered = true;
-        cacpState.answeredCount++;
-        const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
-        dstat.total++;
-        (q.choices || []).forEach(c => { c._picked = c.id === pick; });
-        if (pick === q.correctId) {
-          cacpState.score++;
-          dstat.correct++;
-        } else if (!cacpState.missedIds.includes(q.id)) {
-          cacpState.missedIds.push(q.id);
+        if (cacpState.mode === 'exam') {
+          const q = cacpState.queue[cacpState.idx];
+          if (!q) return;
+          cacpState.answers[q.id] = b.dataset.cacpChoice;
+          renderCacp();
+          return;
         }
+        if (cacpState.mode !== 'quiz') return;
+        if (cacpState.answered || cacpState.revealed) return;
+        cacpState.pickedId = b.dataset.cacpChoice;
         renderCacp();
       };
     });
     body.querySelectorAll('[data-cacp-link]').forEach(b => {
       b.onclick = () => {
-        const [kind, id] = b.dataset.cacpLink.split('|');
-        cacpLinkClick({ kind, id, label: b.textContent });
+        const parts = b.dataset.cacpLink.split('|');
+        cacpLinkClick({ kind: parts[0], id: parts[1], label: b.textContent });
+      };
+    });
+    body.querySelectorAll('[data-cacp-jump]').forEach(b => {
+      b.onclick = () => {
+        const i = Number(b.dataset.cacpJump);
+        if (!Number.isFinite(i)) return;
+        const list = cacpState.mode === 'review' ? cacpState.reviewQueue : cacpState.queue;
+        if (i < 0 || i >= list.length) return;
+        cacpState.idx = i;
+        renderCacp();
+      };
+    });
+    body.querySelectorAll('[data-cacp-action]').forEach(b => {
+      b.onclick = () => {
+        const action = b.dataset.cacpAction;
+        if (action === 'study') {
+          startCacpStudy({ fromHome: true });
+          if (!optsSkip()) setRoute('cacp', null, false);
+          renderCacp();
+        } else if (action === 'exam') {
+          showCacpExamReady();
+          renderCacp();
+        } else if (action === 'begin-exam') {
+          beginCacpExam();
+          renderCacp();
+        } else if (action === 'review') {
+          beginCacpReview();
+          renderCacp();
+        }
       };
     });
   }
@@ -4428,33 +5915,88 @@
 
   document.getElementById('btn-cacp').onclick = () => openCacp({});
   document.getElementById('cacp-shuffle').onclick = () => {
+    if (cacpState.mode !== 'quiz') return;
     cacpState.shuffle = !cacpState.shuffle;
+    cacpState.focusQId = null;
     buildCacpQueue({});
+    setRoute('cacp', null, false);
     renderCacp();
     toast(cacpState.shuffle ? 'Shuffle on' : 'Shuffle off (handbook order)');
   };
   document.getElementById('cacp-missed').onclick = () => openCacp({ missedOnly: true });
+  document.getElementById('cacp-prev').onclick = () => {
+    if (cacpState.mode !== 'exam' && cacpState.mode !== 'review') return;
+    if (cacpState.idx <= 0) return;
+    cacpState.idx--;
+    renderCacp();
+  };
+  document.getElementById('cacp-bookmark').onclick = () => {
+    if (cacpState.mode !== 'exam') return;
+    const q = cacpState.queue[cacpState.idx];
+    if (!q) return;
+    if (cacpState.bookmarks[q.id]) delete cacpState.bookmarks[q.id];
+    else cacpState.bookmarks[q.id] = true;
+    renderCacp();
+  };
+  document.getElementById('cacp-finish').onclick = () => requestCacpExamSubmit();
+  function submitCacpAnswer() {
+    if (cacpState.mode !== 'quiz') return;
+    if (cacpState.answered || cacpState.revealed) return;
+    const q = cacpState.queue[cacpState.idx];
+    if (!q || !cacpState.pickedId) return;
+    cacpState.answered = true;
+    cacpState.answeredCount++;
+    const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
+    dstat.total++;
+    if (cacpState.pickedId === q.correctId) {
+      cacpState.score++;
+      dstat.correct++;
+    } else if (!cacpState.missedIds.includes(q.id)) {
+      cacpState.missedIds.push(q.id);
+    }
+    renderCacp();
+  }
+  function revealCacpExplanation() {
+    if (cacpState.mode !== 'quiz') return;
+    if (cacpState.answered || cacpState.revealed) return;
+    if (!cacpState.queue[cacpState.idx]) return;
+    cacpState.revealed = true;
+    cacpState.revealedCount++;
+    renderCacp();
+  }
+  document.getElementById('cacp-reveal').onclick = () => revealCacpExplanation();
   document.getElementById('cacp-next').onclick = () => {
-    if (cacpState.mode === 'results') { openCacp({}); return; }
-    if (!cacpState.queue.length) { closeModal('cacp'); return; }
-    if (!cacpState.answered) {
-      // reveal without scoring as correct
-      cacpState.answered = true;
-      const q = cacpState.queue[cacpState.idx];
-      (q.choices || []).forEach(c => { c._picked = false; });
-      if (!cacpState.missedIds.includes(q.id)) cacpState.missedIds.push(q.id);
-      const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
-      dstat.total++;
-      cacpState.answeredCount++;
+    if (cacpState.mode === 'results' || cacpState.mode === 'exam-ready') {
+      enterCacpHome();
       renderCacp();
+      return;
+    }
+    if (cacpState.mode === 'review') {
+      const qn = (cacpState.reviewQueue || []).length;
+      if (cacpState.idx < qn - 1) cacpState.idx++;
+      else cacpState.mode = 'results';
+      renderCacp();
+      return;
+    }
+    if (cacpState.mode === 'exam') {
+      if (cacpState.idx < cacpState.queue.length - 1) {
+        cacpState.idx++;
+        renderCacp();
+      }
+      return;
+    }
+    if (!cacpState.queue.length) { closeModal('cacp'); return; }
+    if (!cacpState.answered && !cacpState.revealed) {
+      submitCacpAnswer();
       return;
     }
     if (cacpState.idx < cacpState.queue.length - 1) {
       cacpState.idx++;
       cacpState.answered = false;
+      cacpState.revealed = false;
+      cacpState.pickedId = null;
       clearCacpChoiceOrder();
       const q = cacpState.queue[cacpState.idx];
-      (q.choices || []).forEach(c => { delete c._picked; });
       if (cacpState.focusQId) setRoute('cacp/q', q.id, false);
       renderCacp();
     } else {
@@ -4468,8 +6010,6 @@
     const url = `${location.origin}${location.pathname}${location.search}${hash}`;
     navigator.clipboard.writeText(url).then(() => toast('Link copied'), () => prompt('Copy:', url));
   };
-
-
 
   /* —— Learn path (Core Clinic Path) —— */
   const LEARN_STORAGE_KEY = "anticoag-learn-v1";
@@ -4557,7 +6097,11 @@
     try {
       localStorage.setItem(LEARN_STORAGE_KEY, JSON.stringify(next));
     } catch (e) { /* ignore quota */ }
+    try { localStorage.removeItem(REVIEW_STORAGE_KEY); } catch (e2) { /* ignore */ }
+    learnRecallSession = null;
+    learnPreSession = null;
     clearLearnWelcomeSessionHide();
+    try { updateReviewChip(); } catch (e3) {}
   }
   function learnLessonEntry(state, id) {
     if (!state.lessons[id]) {
@@ -4569,6 +6113,8 @@
     if (!e.status) e.status = "not_started";
     if (!e.coachStep) e.coachStep = "orient";
     if (e.graphicIdx == null) e.graphicIdx = 0;
+    if (e.softInviteGraphicsOpen == null) e.softInviteGraphicsOpen = false;
+    if (e.softInviteGraphicsDismissed == null) e.softInviteGraphicsDismissed = false;
     return e;
   }
   function learnStatus(state, id) {
@@ -4676,7 +6222,7 @@
   const LEARN_WHY = {
     "af-doac-start": "Start with AF stroke-prevention teaching, then see how landmark DOAC trials sit on the timeline.",
     "acute-vte-doac": "Move from AF to acute VTE — open the DOAC-choice framework, then a concrete case.",
-    "peri-bridge": "Elective procedures are where reflexive bridging shows up — use the peri framework + BRIDGE-era case.",
+    "peri-bridge": "Elective procedures are where reflexive bridging shows up. Walk the peri-procedural OAC treatment pathway, then the BRIDGE-era case. A typical AF DOAC hold is not a heparin bridge.",
     "mech-valve": "Mechanical valves break the “just use a DOAC” habit — contrast with AF/VTE defaults.",
     "aps-vka": "APS (especially triple-positive) is another VKA-first niche — practice the DOAC-request case.",
     "compass-dose": "Vascular-dose rivaroxaban is not an AF/VTE dose — this lesson exists to prevent that mix-up.",
@@ -4688,7 +6234,7 @@
   const LEARN_ORIENT_TIP = {
     "af-doac-start": "Open the AF stroke-prevention framework first.",
     "acute-vte-doac": "Open the acute VTE DOAC framework first.",
-    "peri-bridge": "Open the peri-procedural OAC framework first.",
+    "peri-bridge": "Open the peri-procedural OAC treatment pathway first.",
     "mech-valve": "Open the mechanical-valve VKA framework first.",
     "aps-vka": "Open the APS triple-positive VKA framework first.",
     "compass-dose": "Open the COMPASS vascular-dose framework first.",
@@ -4716,10 +6262,102 @@
     if (!LV || !lesson) return [];
     return (typeof LV.graphicsForLesson === "function" ? LV.graphicsForLesson(lesson.id) : []) || [];
   }
+
+  function learnSoftInviteGraphics(lesson) {
+    const LV = window.ANTICOAG_LEARN_VISUALS;
+    if (!LV || !lesson) return [];
+    return (typeof LV.softInviteGraphicsForLesson === "function"
+      ? LV.softInviteGraphicsForLesson(lesson.id) : []) || [];
+  }
+  function learnGraphicHook(g) {
+    if (!g || typeof g.html !== "string") return "";
+    const m = g.html.match(/class="lv-hook">([^<]*)</);
+    return m ? m[1] : "";
+  }
+  function learnSoftPhysioExpanded(entry, step) {
+    if (!entry || entry.softInviteGraphicsDismissed) return false;
+    if (learnView.softPhysioOpenStep === step && typeof learnView.softPhysioOpen === "boolean") {
+      return learnView.softPhysioOpen;
+    }
+    // Evidence stays collapsed when the map was already opened on Orient.
+    if (step === "evidence") return false;
+    return !!entry.softInviteGraphicsOpen;
+  }
+  function syncCascadeDrugTargets(root) {
+    const on = !!learnView.drugTargetsOn;
+    if (!root) return;
+    root.querySelectorAll("[data-cascade-layer]").forEach(el => {
+      const layer = el.getAttribute("data-cascade-layer");
+      const hide = layer === "targets" ? !on : layer === "base" ? on : false;
+      if (hide) el.setAttribute("hidden", "");
+      else el.removeAttribute("hidden");
+      if (hide) el.setAttribute("aria-hidden", "true");
+      else el.removeAttribute("aria-hidden");
+    });
+  }
+  function renderSoftPhysioStrip(lesson, entry, step) {
+    const pack = learnSoftInviteGraphics(lesson);
+    if (!pack.length || !entry || entry.softInviteGraphicsDismissed) return "";
+    let pIdx = learnView.softPhysioIdx || 0;
+    if (pIdx < 0) pIdx = 0;
+    if (pIdx >= pack.length) pIdx = pack.length - 1;
+    learnView.softPhysioIdx = pIdx;
+    const g = pack[pIdx];
+    const expanded = learnSoftPhysioExpanded(entry, step);
+    if (!expanded) learnView.drugTargetsOn = false;
+    const targetsOn = !!(expanded && learnView.drugTargetsOn && g && g.id === "g-cascade-y-full");
+    const hook = targetsOn
+      ? "Same Y. Marks show where these anticoagulants act."
+      : (learnGraphicHook(g) || "Learn the Y before the pills.");
+    const title = (g && g.title) || "";
+    const LV = window.ANTICOAG_LEARN_VISUALS;
+    const count = pack.length > 1
+      ? `<p class="learn-soft-physio-count">${pIdx + 1} of ${pack.length}</p>`
+      : "";
+    const pager = pack.length > 1
+      ? `<button type="button" class="btn sm ghost" data-soft-physio="prev">Previous</button><button type="button" class="btn sm ghost" data-soft-physio="next">Next</button>`
+      : "";
+    const drugToggle = (expanded && g && g.id === "g-cascade-y-full")
+      ? `<button type="button" class="btn sm" data-soft-physio="targets" aria-pressed="${targetsOn ? "true" : "false"}" aria-controls="g-cascade-targets-svg">${targetsOn ? "Hide drug targets" : "Show where drugs act"}</button>`
+      : "";
+    const sectionClass = "learn-soft-physio" + (targetsOn ? " is-drug-targets" : "");
+    if (expanded) {
+      const htmlG = g && LV && typeof LV.renderGraphic === "function" ? LV.renderGraphic(g) : (g && g.html) || "";
+      return `<section class="${sectionClass}" data-soft-physio-state="open" aria-label="Optional physiology">
+        <p class="learn-soft-physio-eyebrow">Optional · Physiology</p>
+        <div class="learn-soft-physio-head">
+          <p class="learn-soft-physio-hook">${esc(hook)}</p>
+          <button type="button" class="btn sm ghost" data-soft-physio="hide">Hide</button>
+        </div>
+        ${drugToggle ? `<div class="learn-soft-physio-actions">${drugToggle}</div>` : ""}
+        ${count}
+        <div class="learn-soft-physio-mount">${htmlG}</div>
+        ${pager ? `<div class="learn-soft-physio-actions">${pager}</div>` : ""}
+      </section>`;
+    }
+    return `<section class="${sectionClass}" data-soft-physio-state="closed" aria-label="Optional physiology">
+      <p class="learn-soft-physio-eyebrow">Optional · Physiology</p>
+      <p class="learn-soft-physio-hook">${esc(hook)}</p>
+      <p class="learn-soft-physio-title">${esc(title)}</p>
+      ${count}
+      <div class="learn-soft-physio-actions">
+        <button type="button" class="btn sm" data-soft-physio="show">Show cascade</button>
+        <button type="button" class="btn sm ghost" data-soft-physio="skip">Skip</button>
+        ${pager}
+      </div>
+    </section>`;
+  }
+  function persistSoftPhysio(lessonId, mutate) {
+    const state = loadLearnProgress();
+    const entry = learnLessonEntry(state, lessonId);
+    mutate(entry);
+    saveLearnProgress(state);
+    renderLearnBody();
+  }
   function learnCoachSteps(lesson) {
     const steps = ["orient"];
     if (learnHasEvidence(lesson)) steps.push("evidence");
-    steps.push("practice", "wrap");
+    steps.push("practice", "recall", "wrap");
     return steps;
   }
   function learnNormalizeStep(lesson, step) {
@@ -4764,20 +6402,470 @@
     learnView.graphicIdx = 0;
   }
 
+  const REVIEW_STORAGE_KEY = "anticoag-review-v1";
+  const REVIEW_GAPS = [2, 7, 30];
+  let reviewClock = null;
+  let learnRecallSession = null;
+  let learnPreSession = null;
+
+  function reviewToday() {
+    if (reviewClock) return reviewClock;
+    const dt = new Date();
+    const z = v => String(v).padStart(2, "0");
+    return dt.getFullYear() + "-" + z(dt.getMonth() + 1) + "-" + z(dt.getDate());
+  }
+  function reviewAddDays(iso, n) {
+    const p = String(iso || "").split("-");
+    const dt = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+    if (Number.isNaN(dt.getTime())) return reviewToday();
+    dt.setDate(dt.getDate() + n);
+    const z = v => String(v).padStart(2, "0");
+    return dt.getFullYear() + "-" + z(dt.getMonth() + 1) + "-" + z(dt.getDate());
+  }
+  function loadReviewStore() {
+    try {
+      const raw = localStorage.getItem(REVIEW_STORAGE_KEY);
+      const parsed = raw ? JSON.parse(raw) : null;
+      if (!parsed || typeof parsed !== "object" || !parsed.items || typeof parsed.items !== "object") {
+        return { schema: 1, items: {} };
+      }
+      parsed.schema = 1;
+      return parsed;
+    } catch (e) {
+      return { schema: 1, items: {} };
+    }
+  }
+  function saveReviewStore(store) {
+    try {
+      store.schema = 1;
+      store.updatedAt = new Date().toISOString();
+      localStorage.setItem(REVIEW_STORAGE_KEY, JSON.stringify(store));
+    } catch (e) { /* ignore quota */ }
+    try { updateReviewChip(); } catch (e2) {}
+  }
+  function reviewAdvance(item, today) {
+    const anchor = item.anchor || today;
+    item.anchor = anchor;
+    let stage = item.stage || 0;
+    while (stage < REVIEW_GAPS.length && reviewAddDays(anchor, REVIEW_GAPS[stage]) <= today) stage += 1;
+    item.stage = stage;
+    item.nextDue = stage < REVIEW_GAPS.length ? reviewAddDays(anchor, REVIEW_GAPS[stage]) : null;
+  }
+  function reviewPassed(correct, total) {
+    if (!total) return false;
+    if (total < 2) return correct >= 1;
+    return correct >= 2;
+  }
+  function reviewTouchLearn(lessonId, correct, total, whyNote) {
+    const store = loadReviewStore();
+    const key = "learn:" + lessonId;
+    const today = reviewToday();
+    const passed = reviewPassed(correct, total);
+    let item = store.items[key];
+    if (!item || item.source !== "learn") {
+      item = {
+        source: "learn",
+        lessonId: lessonId,
+        stage: 0,
+        anchor: today,
+        nextDue: reviewAddDays(today, REVIEW_GAPS[0]),
+        successDays: [],
+        mastered: false,
+        whyNote: ""
+      };
+    } else if (passed && item.nextDue && item.nextDue <= today) {
+      reviewAdvance(item, today);
+    }
+    if (passed) {
+      const days = Array.isArray(item.successDays) ? item.successDays : [];
+      if (days.indexOf(today) < 0) days.push(today);
+      item.successDays = days;
+    }
+    item.mastered = Array.isArray(item.successDays) && item.successDays.length >= 2;
+    item.whyNote = String(whyNote || "").slice(0, 500);
+    item.lastCorrect = correct;
+    item.lastTotal = total;
+    store.items[key] = item;
+    saveReviewStore(store);
+    return item;
+  }
+  function reviewOnPredictRevealed(trialId) {
+    if (!trialId || typeof byId === "undefined" || !byId[trialId]) return;
+    const store = loadReviewStore();
+    const key = "predict:" + trialId;
+    const today = reviewToday();
+    let item = store.items[key];
+    if (!item || item.source !== "predict") {
+      item = {
+        source: "predict",
+        trialId: trialId,
+        stage: 0,
+        anchor: today,
+        nextDue: reviewAddDays(today, REVIEW_GAPS[0]),
+        successDays: [],
+        mastered: false
+      };
+    } else if (item.nextDue && item.nextDue <= today) {
+      reviewAdvance(item, today);
+    }
+    store.items[key] = item;
+    saveReviewStore(store);
+  }
+  function learnIsMastered(id) {
+    const item = loadReviewStore().items["learn:" + id];
+    return !!(item && item.mastered);
+  }
+  function learnListTag(state, lesson) {
+    if (learnIsMastered(lesson.id)) return "Mastered";
+    const st = learnStatus(state, lesson.id);
+    if (st === "done") return "Done";
+    if (st === "skipped") return "Skipped";
+    if (st === "in_progress") return "In progress";
+    return "Not started";
+  }
+  function reviewDueList() {
+    const store = loadReviewStore();
+    const today = reviewToday();
+    const out = [];
+    Object.keys(store.items).forEach(key => {
+      const item = store.items[key];
+      if (!item || !item.nextDue || item.nextDue > today) return;
+      if (item.source === "learn") {
+        if (!findLearnLesson(item.lessonId)) return;
+        out.push(item);
+      } else if (item.source === "predict" && typeof byId !== "undefined" && byId[item.trialId]) {
+        out.push(item);
+      }
+    });
+    out.sort((a, b) => {
+      if (a.source !== b.source) return a.source === "learn" ? -1 : 1;
+      if (a.source === "learn") {
+        const la = findLearnLesson(a.lessonId);
+        const lb = findLearnLesson(b.lessonId);
+        return ((la && la.order) || 0) - ((lb && lb.order) || 0);
+      }
+      const aa = (byId[a.trialId] && byId[a.trialId].acronym) || a.trialId;
+      const bb = (byId[b.trialId] && byId[b.trialId].acronym) || b.trialId;
+      return String(aa).localeCompare(String(bb));
+    });
+    return out;
+  }
+  function updateReviewChip() {
+    const btn = document.getElementById("btn-review");
+    if (!btn) return;
+    const n = reviewDueList().length;
+    btn.textContent = "Review (" + n + " due)";
+    btn.setAttribute("aria-label", "Review, " + n + " due");
+  }
+  function recallBlocked(text) {
+    const s = String(text || "");
+    if (/\d+(?:\.\d+)?\s*mg\b/i.test(s)) return true;
+    if (/\bholds?\b/i.test(s) || /\bholding\b/i.test(s)) return true;
+    return false;
+  }
+  function learnTxTitle(id) {
+    const pack = window.ANTICOAG_TX_PATHWAYS;
+    const list = pack && Array.isArray(pack.pathways) ? pack.pathways : [];
+    const hit = list.find(x => x && x.id === id);
+    return hit && hit.title ? String(hit.title) : "";
+  }
+  function recallLinesFor(lesson) {
+    const lines = [];
+    const add = (kind, text) => {
+      const t = String(text || "").replace(/\s+/g, " ").trim();
+      if (!t || recallBlocked(t)) return;
+      if (lines.some(x => x.text === t)) return;
+      lines.push({ kind: kind, text: t, lessonId: lesson.id });
+    };
+    add("title", lesson.title);
+    add("why", learnWhy(lesson));
+    add("orient", learnOrientTip(lesson));
+    (lesson.goals || []).forEach(g => add("goal", g));
+    if (lesson.primary && lesson.primary.kind === "pathway-tx") add("opens", learnTxTitle(lesson.primary.id));
+    return lines;
+  }
+  function recallPrompt(kind) {
+    if (kind === "title") return "Which title is this lesson?";
+    if (kind === "why") return "Which line says why this lesson is in the path?";
+    if (kind === "orient") return "Which line is this lesson's orient note?";
+    if (kind === "goal") return "Which goal is listed on this lesson?";
+    if (kind === "opens") return "Which card does this lesson open first?";
+    return "Which line is on this lesson?";
+  }
+  function reviewHash(str) {
+    let h = 2166136261;
+    const s = String(str);
+    for (let i = 0; i < s.length; i++) {
+      h ^= s.charCodeAt(i);
+      h = Math.imul(h, 16777619);
+    }
+    return h >>> 0;
+  }
+  function reviewShuffle(arr, seed) {
+    const a = arr.slice();
+    let h = reviewHash(seed) || 1;
+    for (let i = a.length - 1; i > 0; i--) {
+      h = (Math.imul(h, 1664525) + 1013904223) >>> 0;
+      const j = h % (i + 1);
+      const tmp = a[i];
+      a[i] = a[j];
+      a[j] = tmp;
+    }
+    return a;
+  }
+  function recallDistractors(line) {
+    const all = [];
+    learnLessons.forEach(l => recallLinesFor(l).forEach(row => all.push(row)));
+    const same = all.filter(x => x.text !== line.text && x.lessonId !== line.lessonId && x.kind === line.kind);
+    const other = all.filter(x => x.text !== line.text && x.lessonId !== line.lessonId && x.kind !== line.kind);
+    const picked = [];
+    const seen = new Set([line.text]);
+    [same, other].forEach(src => {
+      reviewShuffle(src, line.lessonId + "|" + line.kind + "|" + line.text).forEach(item => {
+        if (picked.length >= 2 || seen.has(item.text)) return;
+        seen.add(item.text);
+        picked.push(item.text);
+      });
+    });
+    return picked;
+  }
+  function recallMakeQuestion(line, salt) {
+    const options = reviewShuffle(
+      recallDistractors(line).concat([line.text]),
+      line.lessonId + "|" + salt + "|" + line.text
+    );
+    return {
+      prompt: recallPrompt(line.kind),
+      options: options,
+      answer: options.indexOf(line.text),
+      answerText: line.text
+    };
+  }
+  function buildPreQuestion(lesson) {
+    const lines = recallLinesFor(lesson);
+    const line = lines.find(l => l.kind === "orient") || lines.find(l => l.kind === "title") || lines[0];
+    return line ? recallMakeQuestion(line, "pre") : null;
+  }
+  function buildRecallQuestions(lesson) {
+    const lines = recallLinesFor(lesson);
+    let pool = lines.filter(l => l.kind !== "orient");
+    if (pool.length < 2) pool = lines;
+    const prefer = ["title", "why", "goal", "opens", "orient"];
+    const chosen = [];
+    prefer.forEach(kind => {
+      if (chosen.length >= 3) return;
+      const line = pool.find(l => l.kind === kind && chosen.indexOf(l) < 0);
+      if (line) chosen.push(line);
+    });
+    pool.forEach(line => {
+      if (chosen.length >= 3) return;
+      if (chosen.indexOf(line) < 0) chosen.push(line);
+    });
+    return chosen.slice(0, 3).map((line, i) => recallMakeQuestion(line, "q" + i));
+  }
+  function ensurePreSession(lesson) {
+    if (!learnPreSession || learnPreSession.lessonId !== lesson.id) {
+      learnPreSession = { lessonId: lesson.id, question: buildPreQuestion(lesson), pick: null };
+    }
+    return learnPreSession;
+  }
+  function ensureRecallSession(lesson) {
+    if (!learnRecallSession || learnRecallSession.lessonId !== lesson.id) {
+      const prev = loadReviewStore().items["learn:" + lesson.id];
+      learnRecallSession = {
+        lessonId: lesson.id,
+        questions: buildRecallQuestions(lesson),
+        picks: {},
+        checked: false,
+        whyNote: prev && prev.whyNote ? String(prev.whyNote) : ""
+      };
+    }
+    return learnRecallSession;
+  }
+  function renderRecallQuestions(questions, picks, checked) {
+    return questions.map((q, qi) => {
+      const opts = q.options.map((text, oi) => {
+        const on = picks[qi] === oi ? " is-on" : "";
+        return `<button type="button" class="btn recall-opt${on}" data-recall-q="${qi}" data-recall-i="${oi}">${esc(text)}</button>`;
+      }).join("");
+      let fb = "";
+      if (checked && picks[qi] != null) {
+        const ok = picks[qi] === q.answer;
+        const lead = ok ? "That matches the line on this lesson." : "That line is not the one saved on this lesson.";
+        fb = `<p class="recall-fb">${lead} Lesson line: ${esc(q.answerText)}</p>`;
+      }
+      return `<div class="recall-q"><p>${esc(q.prompt)}</p>${opts}${fb}</div>`;
+    }).join("");
+  }
+  function recallStatusLine(lessonId, correct, total) {
+    const item = loadReviewStore().items["learn:" + lessonId];
+    const days = item && Array.isArray(item.successDays) ? item.successDays : [];
+    const today = reviewToday();
+    const passed = reviewPassed(correct, total);
+    const head = correct + " of " + total + ". ";
+    if (!passed) return head + "Not passed. Change a pick and check again, or continue without counting today.";
+    const nextCount = days.indexOf(today) >= 0 ? days.length : days.length + 1;
+    if (nextCount >= 2) return head + "Passed. Continue saves a second day, so this lesson counts as mastered.";
+    return head + "Passed. Continue saves this day. A second day of passed recall marks the lesson mastered.";
+  }
+  function renderPreHtml(lesson) {
+    const pre = ensurePreSession(lesson);
+    if (!pre || !pre.question) return { html: "", blocking: false };
+    const picks = pre.pick == null ? {} : { 0: pre.pick };
+    const html = `<div class="learn-step-tag">Before the card</div>` + renderRecallQuestions([pre.question], picks, pre.pick != null);
+    return { html: html, blocking: pre.pick == null };
+  }
+  function renderRecallHtml(lesson) {
+    const session = ensureRecallSession(lesson);
+    let html = `<div class="learn-step-tag">Recall</div>`;
+    html += renderRecallQuestions(session.questions, session.picks, session.checked);
+    html += `<div class="recall-why"><label for="learn-why-note">Why this lesson? Write one sentence in your own words.</label>`;
+    html += `<textarea id="learn-why-note" maxlength="500"></textarea>`;
+    if (session.checked) {
+      const correct = session.questions.filter((q, i) => session.picks[i] === q.answer).length;
+      html += `<p class="recall-fb" id="learn-recall-status">${esc(recallStatusLine(lesson.id, correct, session.questions.length))}</p>`;
+      html += `<p class="recall-fb">Lesson line: ${esc(learnWhy(lesson))}</p>`;
+    } else {
+      html += `<p class="recall-note">The lesson's own line shows after you check. This box is not scored.</p>`;
+    }
+    html += `</div>`;
+    return html;
+  }
+  function checkRecallStep() {
+    const session = learnRecallSession;
+    if (!session) return;
+    const box = document.getElementById("learn-why-note");
+    if (box) session.whyNote = box.value.slice(0, 500);
+    if (session.questions.some((q, i) => session.picks[i] == null)) {
+      toast("Pick a line for each item, then check.");
+      return;
+    }
+    session.checked = true;
+    renderLearnBody();
+  }
+  function finishRecallStep(lesson) {
+    const session = learnRecallSession;
+    const box = document.getElementById("learn-why-note");
+    const whyNote = box ? box.value.slice(0, 500) : (session && session.whyNote) || "";
+    const correct = session ? session.questions.filter((q, i) => session.picks[i] === q.answer).length : 0;
+    const total = session ? session.questions.length : 0;
+    reviewTouchLearn(lesson.id, correct, total, whyNote);
+    learnRecallSession = null;
+    learnView.step = "wrap";
+    persistCoachStep(lesson.id, "wrap", 0);
+    renderLearnBody();
+  }
+  function wireRecallOptions(lesson) {
+    document.querySelectorAll("[data-recall-q]").forEach(btn => {
+      btn.onclick = () => {
+        const qi = Number(btn.dataset.recallQ);
+        const oi = Number(btn.dataset.recallI);
+        if (learnView.step === "orient") {
+          const pre = ensurePreSession(lesson);
+          pre.pick = oi;
+          renderLearnBody();
+          return;
+        }
+        if (learnView.step === "recall" && learnRecallSession) {
+          const box = document.getElementById("learn-why-note");
+          if (box) learnRecallSession.whyNote = box.value.slice(0, 500);
+          learnRecallSession.picks[qi] = oi;
+          learnRecallSession.checked = false;
+          renderLearnBody();
+        }
+      };
+    });
+    const whyBox = document.getElementById("learn-why-note");
+    if (whyBox && learnRecallSession && learnRecallSession.lessonId === lesson.id) {
+      whyBox.value = learnRecallSession.whyNote || "";
+      whyBox.addEventListener("input", () => {
+        if (learnRecallSession) learnRecallSession.whyNote = whyBox.value.slice(0, 500);
+      });
+    }
+  }
+  function renderReviewBody() {
+    const body = document.getElementById("review-body");
+    if (!body) return;
+    const due = reviewDueList();
+    updateReviewChip();
+    if (!due.length) {
+      body.innerHTML = `<p class="review-empty">Nothing is due today. A finished lesson, and a trial snapshot you have revealed, come back on day 2, day 7, and day 30.</p>`;
+      return;
+    }
+    body.innerHTML = `<h3 class="learn-lesson-title">Due now</h3><div class="review-queue">` + due.map(item => {
+      if (item.source === "learn") {
+        const lesson = findLearnLesson(item.lessonId);
+        const tag = item.mastered ? "Mastered · lesson recall" : "Lesson recall";
+        return `<button type="button" class="path-item" data-review-item="learn:${esc(item.lessonId)}"><strong>${esc(lesson.title)}</strong><span>${tag}</span></button>`;
+      }
+      const t = byId[item.trialId];
+      const name = t ? t.acronym : item.trialId;
+      return `<button type="button" class="path-item" data-review-item="predict:${esc(item.trialId)}"><strong>${esc(name)}</strong><span>Trial snapshot · practice again</span></button>`;
+    }).join("") + `</div>`;
+    body.querySelectorAll("[data-review-item]").forEach(btn => {
+      btn.onclick = () => {
+        const raw = btn.dataset.reviewItem || "";
+        const kind = raw.split(":")[0];
+        const id = raw.slice(kind.length + 1);
+        if (kind === "learn") openDueLearn(id);
+        else if (kind === "predict") openDuePredict(id);
+      };
+    });
+  }
+  function openReviewQueue() {
+    if (document.body.classList.contains("embed")) return;
+    renderReviewBody();
+    const bd = document.getElementById("bd-review");
+    if (bd && bd.hidden) openModal("review");
+  }
+  function openDueLearn(lessonId) {
+    const reviewBd = document.getElementById("bd-review");
+    if (reviewBd && !reviewBd.hidden) closeModal("review");
+    learnRecallSession = null;
+    openLearnPath({ lessonId: lessonId, step: "recall" });
+  }
+  function openDuePredict(trialId) {
+    const reviewBd = document.getElementById("bd-review");
+    if (reviewBd && !reviewBd.hidden) closeModal("review");
+    yieldLearnShell();
+    const rec = predictRecord(trialId);
+    if (rec && rec.revealed) practicePredictAgain(trialId);
+    if (byId[trialId]) openDetail(trialId, "summary");
+  }
+  window.ANTICOAG_REVIEW = {
+    key: REVIEW_STORAGE_KEY,
+    setToday: function (iso) {
+      reviewClock = /^\d{4}-\d{2}-\d{2}$/.test(String(iso || "")) ? String(iso) : null;
+      updateReviewChip();
+      const bd = document.getElementById("bd-review");
+      if (bd && !bd.hidden) renderReviewBody();
+    },
+    clearToday: function () {
+      reviewClock = null;
+      updateReviewChip();
+    },
+    today: function () { return reviewToday(); },
+    dueCount: function () { return reviewDueList().length; },
+    mastered: function (lessonId) { return learnIsMastered(lessonId); }
+  };
+
 
   function renderLearnProgress(state) {
     const done = countLearnDone(state);
     const total = learnLessons.length || 10;
+    const masteredN = learnLessons.filter(l => learnIsMastered(l.id)).length;
+    const masteredBit = masteredN ? " · " + masteredN + " mastered" : "";
     const label = document.getElementById("learn-progress-label");
     const bar = document.getElementById("learn-progress-bar");
-    if (label) label.textContent = done + " of " + total + " · no rush";
+    if (label) label.textContent = done + " of " + total + masteredBit + " · no rush";
     if (bar) {
       bar.setAttribute("aria-valuenow", String(done));
       bar.setAttribute("aria-valuemax", String(total));
-      bar.setAttribute("aria-label", done + " of " + total + " lessons complete · no rush");
+      bar.setAttribute("aria-label", done + " of " + total + " lessons complete" + masteredBit + " · no rush");
       bar.innerHTML = learnLessons.map(l => {
         const st = learnStatus(state, l.id);
-        const cls = st === "done" ? "done" : (st === "in_progress" ? "in_progress" : (st === "skipped" ? "skipped" : ""));
+        const mastered = learnIsMastered(l.id);
+        const cls = (st === "done" || mastered ? "done" : (st === "in_progress" ? "in_progress" : (st === "skipped" ? "skipped" : ""))) + (mastered ? " mastered" : "");
         return `<span class="learn-seg ${cls}" title="${esc(l.title)}"></span>`;
       }).join("");
     }
@@ -4790,6 +6878,7 @@
   function yieldLearnShell() {
     const bd = document.getElementById("bd-learn");
     if (!bd || bd.hidden) return;
+    exitModalFullscreen("learn");
     bd.classList.remove("open");
     bd.hidden = true;
     if (bd._trap) bd.removeEventListener("keydown", bd._trap);
@@ -4812,8 +6901,8 @@
     }
     if (which === "deepen") {
       entry.openedDeepen = true;
-      entry.coachStep = "wrap";
-      learnView.step = "wrap";
+      entry.coachStep = "recall";
+      learnView.step = "recall";
     }
     if (entry.status === "not_started" || entry.status === "skipped") entry.status = "in_progress";
     state.lastLessonId = lesson.id;
@@ -4914,8 +7003,7 @@
       const list = document.getElementById("learn-review-list");
       if (list) {
         list.innerHTML = learnLessons.map(l => {
-          const st = learnStatus(state, l.id);
-          const tag = st === "done" ? "Done" : (st === "skipped" ? "Skipped" : (st === "in_progress" ? "In progress" : "Not started"));
+          const tag = learnListTag(state, l);
           return `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">${esc(tag)}</span></button>`;
         }).join("");
         list.querySelectorAll("[data-review]").forEach(b => {
@@ -4950,7 +7038,7 @@
       const list = document.getElementById("learn-review-list");
       if (list) {
         list.innerHTML = learnLessons.map(l =>
-          `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">Done</span></button>`
+          `<button type="button" data-review="${esc(l.id)}">${esc(l.order + ". " + l.title)}<span class="st">${esc(learnListTag(state, l))}</span></button>`
         ).join("");
         list.querySelectorAll("[data-review]").forEach(b => {
           b.onclick = () => openLearnPath({ lessonId: b.dataset.review });
@@ -5001,13 +7089,21 @@
     let showSkipVisual = false;
 
     if (step === "orient") {
-      bodyHtml += `
+      const pre = renderPreHtml(lesson);
+      if (pre.html) bodyHtml += pre.html;
+      if (!pre.blocking) {
+        bodyHtml += `
         <div class="learn-step-tag">Orient</div>
         <p class="learn-orient-tip">${esc(tip)}</p>
         <p class="learn-coach-body">You’ll open a short teaching card first — one decision surface, not the whole site.</p>
         <p class="learn-why"><strong>Why this step:</strong> ${esc(why)}</p>`;
-      primaryLabel = "Open teaching";
-      primaryAction = () => openLearnTarget(lesson.primary, lesson, "primary");
+        bodyHtml += renderSoftPhysioStrip(lesson, entry, "orient");
+        primaryLabel = "Open teaching";
+        primaryAction = () => openLearnTarget(lesson.primary, lesson, "primary");
+      } else {
+        primaryLabel = "Open teaching";
+        primaryAction = () => toast("Pick a line first.");
+      }
     } else if (step === "evidence") {
       const g = graphics[gIdx];
       const LV = window.ANTICOAG_LEARN_VISUALS;
@@ -5015,7 +7111,8 @@
       bodyHtml += `
         <div class="learn-step-tag">Evidence</div>
         <h4 class="learn-lesson-title" style="font-size:1.05rem;margin-bottom:.35rem">Evidence at a glance</h4>
-        <p class="learn-coach-body">A friendly teaching chart/table from landmark trials — built for learning, not a paper screenshot.</p>
+        <p class="learn-coach-body">A friendly teaching chart or table from cards already on this site — one picture at a time, not a paper screenshot.</p>
+        ${renderSoftPhysioStrip(lesson, entry, "evidence")}
         <p class="learn-graphic-progress">Visual ${gIdx + 1} of ${graphics.length || 1}</p>
         <div class="learn-evidence-mount">${htmlG}</div>`;
       showSkipVisual = true;
@@ -5042,16 +7139,25 @@
       } else {
         primaryLabel = "Continue";
         primaryAction = () => {
-          learnView.step = "wrap";
-          persistCoachStep(lesson.id, "wrap", 0);
+          learnView.step = "recall";
+          persistCoachStep(lesson.id, "recall", 0);
           renderLearnBody();
         };
+      }
+    } else if (step === "recall") {
+      bodyHtml += renderRecallHtml(lesson);
+      if (learnRecallSession && learnRecallSession.checked) {
+        primaryLabel = "Continue";
+        primaryAction = () => finishRecallStep(lesson);
+      } else {
+        primaryLabel = "Check recall";
+        primaryAction = () => checkRecallStep();
       }
     } else {
       // wrap
       bodyHtml += `
         <div class="learn-step-tag">Wrap</div>
-        <div class="learn-callout"><strong>Lesson complete.</strong> Next when you’re ready.</div>`;
+        <div class="learn-callout"><strong>Lesson complete.</strong> Next when you’re ready. Review brings this lesson back on day 2, day 7, and day 30. Passed recall on two different days marks it mastered.</div>`;
       if (lesson.id === "doac-bleed-us") {
         bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost" id="learn-soft-reversal">Optional: Bleed &amp; reversal</button></div>`;
       }
@@ -5062,6 +7168,10 @@
         if (!s) return;
         if (s.kind === "framework" && s.id) {
           bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-fw" data-learn-soft-fw="${esc(s.id)}">${esc(s.label || "Open framework")}</button></div>`;
+          return;
+        }
+        if (s.kind === "pathway-tx" && s.id) {
+          bodyHtml += `<div class="learn-soft-strip"><button type="button" class="btn sm ghost learn-soft-tx" data-learn-soft-tx="${esc(s.id)}">${esc(s.label || "Open treatment pathway")}</button></div>`;
           return;
         }
         if (s.kind === "compare" && (s.pairId || (s.trialIds && s.trialIds.length))) {
@@ -5088,6 +7198,7 @@
     }
 
     body.innerHTML = bodyHtml;
+    syncCascadeDrugTargets(body);
 
     const softEx = document.getElementById("learn-soft-extra");
     if (softEx && lesson.softExtra) softEx.onclick = () => openLearnTarget(lesson.softExtra, lesson, "deepen");
@@ -5102,11 +7213,81 @@
     body.querySelectorAll("[data-learn-soft-fw]").forEach(b => {
       b.onclick = () => openLearnTarget({ kind: "framework", id: b.dataset.learnSoftFw }, lesson, "soft");
     });
+    body.querySelectorAll("[data-learn-soft-tx]").forEach(b => {
+      b.onclick = () => openLearnTarget({ kind: "pathway-tx", id: b.dataset.learnSoftTx }, lesson, "soft");
+    });
+    body.querySelectorAll(".learn-evidence-mount a.lv-chip[href]").forEach(a => {
+      a.addEventListener("click", (ev) => {
+        const parts = (a.getAttribute("href") || "").replace(/^#\/?/, "").split("/").filter(Boolean);
+        const k = parts[0];
+        const id = parts[1];
+        if (!k || !id) return;
+        if (k === "pathway-tx") {
+          ev.preventDefault();
+          openLearnTarget({ kind: "pathway-tx", id }, lesson, "soft");
+        } else if (k === "trial") {
+          ev.preventDefault();
+          yieldLearnShell();
+          if (byId[id]) openDetail(id, "summary");
+        } else if (k === "framework") {
+          ev.preventDefault();
+          openLearnTarget({ kind: "framework", id }, lesson, "soft");
+        } else if (k === "case") {
+          ev.preventDefault();
+          openLearnTarget({ kind: "case", id }, lesson, "soft");
+        }
+      });
+    });
     body.querySelectorAll("[data-learn-soft-compare]").forEach(b => {
       b.onclick = () => {
         const pairId = b.dataset.learnSoftCompare || "";
         const trialIds = (b.dataset.learnSoftTrials || "").split(",").map(s => s.trim()).filter(Boolean);
         openLearnTarget({ kind: "compare", pairId, trialIds }, lesson, "soft");
+      };
+    });
+
+    body.querySelectorAll("[data-soft-physio]").forEach(b => {
+      b.onclick = () => {
+        const act = b.dataset.softPhysio;
+        const pack = learnSoftInviteGraphics(lesson);
+        if (act === "targets") {
+          learnView.drugTargetsOn = !learnView.drugTargetsOn;
+          learnView.softPhysioOpen = true;
+          learnView.softPhysioOpenStep = step;
+          renderLearnBody();
+          const tBtn = document.querySelector("#learn-body [data-soft-physio='targets']");
+          if (tBtn) tBtn.focus();
+          return;
+        }
+        if (act === "show") {
+          learnView.softPhysioOpen = true;
+          learnView.softPhysioOpenStep = step;
+          persistSoftPhysio(lesson.id, e => { e.softInviteGraphicsOpen = true; });
+          const hideBtn = document.querySelector("#learn-body [data-soft-physio='hide']");
+          if (hideBtn) hideBtn.focus();
+          return;
+        }
+        if (act === "hide") {
+          learnView.softPhysioOpen = false;
+          learnView.softPhysioOpenStep = step;
+          persistSoftPhysio(lesson.id, e => { e.softInviteGraphicsOpen = false; });
+          const showBtn = document.querySelector("#learn-body [data-soft-physio='show']");
+          if (showBtn) showBtn.focus();
+          return;
+        }
+        if (act === "skip") {
+          learnView.softPhysioOpen = false;
+          learnView.softPhysioOpenStep = step;
+          persistSoftPhysio(lesson.id, e => { e.softInviteGraphicsDismissed = true; });
+          return;
+        }
+        if (act === "prev" || act === "next") {
+          const n = pack.length || 1;
+          let i = learnView.softPhysioIdx || 0;
+          i = act === "next" ? (i + 1) % n : (i - 1 + n) % n;
+          learnView.softPhysioIdx = i;
+          renderLearnBody();
+        }
       };
     });
 
@@ -5136,12 +7317,11 @@
     };
     const skipDeep = document.getElementById("learn-skip-deepen");
     if (skipDeep) skipDeep.onclick = () => {
-      learnView.step = "wrap";
-      persistCoachStep(lesson.id, "wrap", 0);
-      // Soft: mark done without requiring deepen (even if deepenRequired — soft path)
-      markLearnLessonDone(lesson.id);
+      learnView.step = "recall";
+      persistCoachStep(lesson.id, "recall", 0);
       renderLearnBody();
     };
+    wireRecallOptions(lesson);
     const skip = document.getElementById("learn-skip");
     if (skip) skip.onclick = () => {
       const st = skipLearnLesson(lesson.id);
@@ -5172,10 +7352,11 @@
       const e = learnLessonEntry(state, lessonId);
       if (e.status === "not_started") e.status = "in_progress";
       state.lastLessonId = lessonId;
-      saveLearnProgress(state);
       let step = opts.step || e.coachStep || "orient";
       if (e.status === "done" && !opts.step) step = "wrap";
       step = learnNormalizeStep(lesson, step);
+      if (opts.step) e.coachStep = step;
+      saveLearnProgress(state);
       const gIdx = opts.graphicIdx != null ? opts.graphicIdx : (e.graphicIdx || 0);
       learnView = { mode: "lesson", lessonId, step, graphicIdx: gIdx };
     } else if (allLearnDone(state)) {
@@ -5195,7 +7376,7 @@
     if (bd && bd.hidden) openModal("learn");
     else if (bd) {
       const modal = bd.querySelector(".modal");
-      if (modal) modal.scrollTop = 0;
+      resetModalScroll(modal);
     }
   }
 
@@ -5239,7 +7420,7 @@
     if (explore) explore.onclick = () => { closeModal("learn"); };
     const reset = document.getElementById("learn-reset");
     if (reset) reset.onclick = () => {
-      const ok = window.confirm("Reset for next learner? Clears Learn progress on this device and brings back the Start here tip for the next person. Teach tools stay available. Theme is unchanged.");
+      const ok = window.confirm("Reset for next learner? Clears Learn progress and review dates on this device. The Start here tip comes back. Teach tools stay available. Theme is unchanged.");
       if (!ok) return;
       resetLearnProgress();
       learnView = { mode: "hub", lessonId: null, step: null, graphicIdx: 0 };
@@ -5256,12 +7437,12 @@
     btn.addEventListener("click", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      // Close Teach sheet/menu first (no focus restore) so chrome-backdrop
-      // and menu close cannot race the Learn shell shut.
+      // Close the Teach sheet without restoring focus, then open Learn the
+      // same way Start here does. A short guard ignores the ghost click that
+      // can land on the new dialog backdrop after the sheet unmounts.
       closeTeachMenu(false);
-      const open = () => openLearnPath({});
-      if (typeof requestAnimationFrame === "function") requestAnimationFrame(() => setTimeout(open, 0));
-      else setTimeout(open, 0);
+      armOutsideCloseGuard(450);
+      openLearnPath({});
     });
   })();
 
@@ -5274,10 +7455,21 @@
     });
   })();
 
+  (function wireReviewChip() {
+    const btn = document.getElementById("btn-review");
+    if (!btn) return;
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openReviewQueue();
+    });
+    updateReviewChip();
+  })();
+
   // Multi-tab: refresh welcome after other tabs change anticoag-learn-v1 (no permanent dismiss to resurrect)
   window.addEventListener("storage", (ev) => {
-    if (ev.key === LEARN_STORAGE_KEY || ev.key === null) {
+    if (ev.key === LEARN_STORAGE_KEY || ev.key === REVIEW_STORAGE_KEY || ev.key === null) {
       try { updateLearnWelcome(); } catch (e) {}
+      try { updateReviewChip(); } catch (e2) {}
     }
   });
 
@@ -5314,7 +7506,7 @@
     if (k === "nuance" && id) return { kind: "nuance", id };
     if (k === "nuances") return { kind: "nuances" };
     if (k === "reversal") return { kind: "reversal" };
-    if (k === "changelog") return { kind: "changelog" };
+    if (k === "open-questions") return { kind: "open-questions" };
     if (k === "cacp") {
       if (id === "q" && parts[2]) return { kind: "cacp", questionId: parts[2] };
       return { kind: "cacp" };
@@ -5323,12 +7515,37 @@
       return { kind: "learn", lessonId: id || null };
     }
     if (qTrial && byId[qTrial]) return { kind: "trial", id: qTrial };
+    const qCard = params.get("card");
+    if (qCard && byId[qCard]) return { kind: "trial", id: qCard };
+    const qPath = params.get("pathway");
+    const txIds = ((window.ANTICOAG_TX_PATHWAYS && window.ANTICOAG_TX_PATHWAYS.pathways) || []).map(p => p.id);
+    const plIds = (window.ANTICOAG_PATHWAYS || []).map(p => p.id);
+    if (qPath && txIds.includes(qPath)) return { kind: "pathway-tx", id: qPath };
+    if (qPath && plIds.includes(qPath)) return { kind: "pathway", id: qPath };
+    const qPlay = params.get("playlist");
+    if (qPlay && plIds.includes(qPlay)) return { kind: "pathway", id: qPlay };
     return null;
   }
 
+  function syncDeepLinkQuery(r) {
+    const slug = (r.kind === "trial" || r.kind === "pathway" || r.kind === "pathway-tx") ? r.id : null;
+    if (!slug) return;
+    const url = location.pathname + deepLinkSearch(r.kind, slug) + location.hash;
+    if (url !== location.pathname + location.search + location.hash) history.replaceState(null, "", url);
+  }
+
   function applyRoute(fromPop) {
+    const legacy = (location.hash || "").replace(/^#/, "").split("/").filter(Boolean)[0];
+    if (legacy === "changelog") {
+      history.replaceState(null, "", location.pathname + location.search);
+      ["pathways", "embed", "learn", "teach", "txpath", "cacp", "detail", "compare", "story", "quiz"].forEach(name => {
+        const bd = document.getElementById("bd-" + name);
+        if (bd && !bd.hidden) closeModal(name);
+      });
+    }
     const r = parseRoute();
     if (!r) return;
+    syncDeepLinkQuery(r);
     if (r.kind === "trial") {
       openDetail(r.id, "summary", { skipRoute: true, replaceRoute: true });
     } else if (r.kind === "pathway") {
@@ -5339,8 +7556,10 @@
       if (r.compare) openDdi({ view: "compare", compare: r.compare, skipRoute: true, replaceRoute: true });
       else if (r.ac && r.interactor) openDdi({ view: "detail", ac: r.ac, interactor: r.interactor, skipRoute: true, replaceRoute: true });
       else openDdi({ view: "home", skipRoute: true, replaceRoute: true });
-    } else if (r.kind === "framework" || r.kind === "frameworks" || r.kind === "case" || r.kind === "cases" || r.kind === "nuance" || r.kind === "nuances" || r.kind === "reversal" || r.kind === "changelog") {
+    } else if (r.kind === "framework" || r.kind === "frameworks" || r.kind === "case" || r.kind === "cases" || r.kind === "nuance" || r.kind === "nuances" || r.kind === "reversal") {
       openTeach(r.kind, r.id || null, { skipRoute: true, replaceRoute: true });
+    } else if (r.kind === "open-questions") {
+      openTeach("open-questions", null, { skipRoute: true, replaceRoute: true });
     } else if (r.kind === "cacp") {
       openCacp({ questionId: r.questionId || null, skipRoute: true, replaceRoute: true });
     } else if (r.kind === "learn") {
@@ -5417,7 +7636,7 @@
   // Re-evaluate welcome after body embed class may have been set by parseRoute callers;
   // parseRoute itself runs in rAF below — refresh again there too.
   updateLearnWelcome();
-  requestAnimationFrame(() => {
+  const bootRoute = () => requestAnimationFrame(() => {
     const w = document.getElementById("canvas").offsetWidth;
     scroller.scrollLeft = Math.max(0, xOf(2017, w) - scroller.clientWidth * 0.35);
     // Ensure embed class from ?embed=1 is applied before welcome visibility
@@ -5431,6 +7650,8 @@
       setTimeout(prefetch, 2000);
     }
   });
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bootRoute, { once: true });
+  else bootRoute();
 })();
   </script>
 </body>

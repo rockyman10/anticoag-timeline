@@ -38,9 +38,9 @@
 | Cases | `#btn-cases` | `#/cases`, `#/case/{id}` |
 | Bleed & reversal | `#btn-reversal` | `#/reversal` |
 | Nuance | `#btn-nuance` | `#/nuances`, `#/nuance/{id}` |
-| Changelog | `#btn-changelog` | `#/changelog` |
+| Changelog (retired) | removed | `#/changelog` opens the home timeline. Log changes in `CHANGELOG.md`, not `js/site-meta.js`. |
 
-Deep links arriving via `location.hash` must keep working unchanged (router already maps these). Menu is only a chrome affordance, not a second router.
+Deep links arriving via `location.hash` must keep working unchanged (router already maps these), except `#/changelog`, which falls back to the home timeline. Menu is only a chrome affordance, not a second router.
 
 ---
 

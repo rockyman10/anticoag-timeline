@@ -1,0 +1,5 @@
+# Clinical data modules and the integrity check: owner review required.
+# Enforced only when branch protection on main has "Require review from Code Owners" enabled.
+/js/data/ @rockyman10
+/capacitor/www/js/data/ @rockyman10
+/scripts/verify-integrity.js @rockyman10

@@ -45,6 +45,7 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "acute-vte-doac" },
       deepen: { kind: "case", id: "vte-doac-choice" },
       deepenRequired: false,
+      hasEvidenceVisual: true,
       softInvites: [
         { kind: "framework", id: "doac-appropriateness", label: "Acute VTE DOAC choice isn’t done until indication and load→maintenance family are documented." },
         { kind: "compare", pairId: "B1", trialIds: ["amplify-ext", "einstein-choice"], label: "Extended VTE next: compare AMPLIFY-EXT and EINSTEIN-CHOICE — same ‘after initial therapy’ vibe, different comparators." },
@@ -56,16 +57,20 @@ window.ANTICOAG_LEARN_PATH = {
       order: 3,
       title: "Holding for procedures — BRIDGE thinking",
       whyThis:
-        "Elective procedures are where reflexive bridging shows up — use the peri framework + BRIDGE-era case.",
-      orientTip: "Open the peri-procedural OAC framework first.",
+        "Elective procedures are where reflexive bridging shows up. Walk the peri-procedural OAC treatment pathway, then the BRIDGE-era case. A typical AF DOAC hold is not a heparin bridge.",
+      orientTip: "Open the peri-procedural OAC treatment pathway first.",
       goals: [
-        "Use the peri-procedural framework",
-        "Confront reflexive LMWH bridging in typical NVAF"
+        "Walk the peri-procedural OAC treatment pathway",
+        "Separate typical AF on warfarin (BRIDGE) from a DOAC hold without a heparin bridge"
       ],
-      primary: { kind: "framework", id: "peri-procedural-oac" },
+      primary: { kind: "pathway-tx", id: "peri-procedural-oac" },
       deepen: { kind: "case", id: "af-warfarin-bridge-reflex" },
       deepenRequired: false,
-      softInvites: []
+      hasEvidenceVisual: true,
+      softInvites: [
+        { kind: "pathway-tx", id: "peri-procedural-oac", label: "Walk the peri-procedural OAC treatment pathway (BRIDGE-centered)." },
+        { kind: "framework", id: "peri-procedural-oac", label: "Optional: the peri-procedural OAC framework — the same four questions, as a card." }
+      ]
     },
     {
       id: "mech-valve",
@@ -80,8 +85,9 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "mechanical-valve-vka" },
       deepen: { kind: "case", id: "mechanical-avr-doac-request" },
       deepenRequired: false,
+      hasEvidenceVisual: true,
       softInvites: [
-        { kind: "framework", id: "doac-appropriateness", label: "If someone asks for a DOAC on a mechanical valve, the checklist should stop at niche — open the VKA framework." },
+        { kind: "framework", id: "doac-appropriateness", label: "If someone asks for a DOAC on a mechanical valve, the checklist stops at niche — open the VKA framework." },
         { kind: "framework", id: "ttr-vka-quality", label: "Optional: TTR is how VKA clinics talk about INR control quality — open TTR / VKA quality (not a DOAC metric)." }
       ]
     },
@@ -99,6 +105,7 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "aps-triple-positive-vka" },
       deepen: { kind: "case", id: "aps-triple-positive-doac" },
       deepenRequired: false,
+      hasEvidenceVisual: true,
       softInvites: [
         { kind: "framework", id: "doac-appropriateness", label: "Triple-positive APS: appropriateness means VKA-first teaching, not a DOAC default." }
       ]
@@ -116,6 +123,7 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "compass-vascular-dose" },
       deepen: { kind: "case", id: "compass-vs-af-dose-trap" },
       deepenRequired: false,
+      hasEvidenceVisual: true,
       softInvites: [
         { kind: "framework", id: "doac-appropriateness", label: "Spot-check: is this COMPASS vascular dosing or an AF/VTE dose trap? Use the appropriateness checklist." }
       ]
@@ -134,6 +142,7 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "post-tavi-antithrombotic" },
       deepen: { kind: "case", id: "tavi-sinus-routine-doac" },
       deepenRequired: false,
+      hasEvidenceVisual: true,
       softExtra: { kind: "nuance", id: "acasa-vs-notion4" },
       softInvites: []
     },
@@ -151,6 +160,7 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "doac-major-bleed-us" },
       deepen: { kind: "case", id: "fxa-ich-post-andexxa" },
       deepenRequired: true,
+      hasEvidenceVisual: true,
       softInvites: [
         { kind: "cacp", label: "Optional: unofficial CACP practice" },
         { kind: "framework", id: "doac-appropriateness", label: "Bleed stewardship is a different checklist — U.S. FXa care without Andexxa as default." },
@@ -170,6 +180,7 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "af-pci-dual-pathway" },
       deepen: { kind: "case", id: "af-pci-week2" },
       deepenRequired: false,
+      hasEvidenceVisual: true,
       softInvites: [
         { kind: "framework", id: "doac-appropriateness", label: "Dual-pathway patients still need a named OAC indication + a plan to drop aspirin — document duration." }
       ]
@@ -187,6 +198,7 @@ window.ANTICOAG_LEARN_PATH = {
       primary: { kind: "framework", id: "cancer-vte" },
       deepen: { kind: "case", id: "cancer-stepdown" },
       deepenRequired: false,
+      hasEvidenceVisual: true,
       softInvites: [
         { kind: "framework", id: "doac-appropriateness", label: "Optional: same documentation habit after you pick acute oral vs LMWH and any later step-down plan." },
         { kind: "compare", pairId: "B4", trialIds: ["renove", "api-cat"], label: "Both talk reduced vs full DOAC dosing after months of therapy — compare RENOVE vs API-CAT on who was studied (cancer extend ≠ RENOVE’s non-cancer high-risk extend)." }

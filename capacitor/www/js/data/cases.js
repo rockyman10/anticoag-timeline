@@ -4,11 +4,37 @@ window.ANTICOAG_CASES = [
     id: "af-renal-bleed",
     title: "AF with CKD and prior GI bleed",
     stem: "78-year-old with NVAF, CHA₂DS₂-VASc 5, CrCl ~38 mL/min, remote melena on aspirin. No mechanical valve. You are starting anticoagulation.",
-    keyQuestion: "Which DOAC framework and dosing mindset fit—and what must you verify before writing the script?",
+    keyQuestion: "Reasoning step: which DOAC framework and dosing checks belong in the discussion?",
     trialIds: ["aristotle", "rocket-af", "engage-af", "re-ly", "averroes"],
     frameworkIds: ["af-stroke-prevention"],
     modelReasoning: "Stroke risk clearly favors anticoagulation over aspirin alone (AVERROES teaching). Prefer a DOAC with labeled dosing at this CrCl; apply dose-reduction criteria only when met (do not ‘under-dose for fear’). Counsel on GI bleed risk differences across agents and gastroprotection/PPI when indicated by history. Recheck CrCl after initiation and with intercurrent illness.",
-    teachingPoint: "CKD shifts dose and agent choice—but fear of bleeding is not an indication for aspirin monotherapy when OAC is warranted. Verify renal cutoffs on the label you actually use."
+    teachingPoint: "CKD shifts dose and agent choice—but fear of bleeding is not an indication for aspirin monotherapy when OAC is warranted. Verify renal cutoffs on the label you actually use.",
+    links: [
+      { kind: "framework", id: "af-stroke-prevention", label: "Framework: AF stroke prevention" },
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "trial", id: "aristotle", label: "Trial: ARISTOTLE" },
+      { kind: "trial", id: "rocket-af", label: "Trial: ROCKET-AF" },
+      { kind: "trial", id: "engage-af", label: "Trial: ENGAGE AF" },
+      { kind: "trial", id: "re-ly", label: "Trial: RE-LY" },
+      { kind: "trial", id: "averroes", label: "Trial: AVERROES" }
+    ]
+  },
+  {
+    id: "af-hemodialysis-oac",
+    title: "AF on hemodialysis — apixaban, warfarin, or neither?",
+    stem: "Fictional teaching patient: a man in his late seventies with atrial fibrillation, hypertension, and diabetes, on in-center hemodialysis three times a week for kidney failure. He had a GI bleed on aspirin a few years ago; the aspirin was stopped and he is not on it now. He is not on an anticoagulant. His nephrologist asks the anticoagulation clinic whether to start one, and his daughter has read that apixaban is \"proven safer than warfarin in dialysis.\"",
+    keyQuestion: "What can the dialysis RCTs and guidelines actually support here, and how should the decision be framed?",
+    trialIds: ["axadia-afnet-8", "renal-af"],
+    frameworkIds: ["dialysis-af"],
+    modelReasoning: "Start with what is known. Two small randomized trials compared apixaban with a VKA in hemodialysis, and both were underpowered. RENAL-AF stopped early (154 of about 760 planned); major or CRNM bleeding at 1 year was 32% with apixaban vs 26% with warfarin (HR 1.20; 95% CI 0.63–2.30), and the authors said there was inadequate power to draw a conclusion. AXADIA-AFNET 8 (97 patients) used a primary safety composite that includes death from any cause (45.8% vs 51.0%; HR 0.93; 95% CI 0.53–1.65), and noninferiority was not shown. So the daughter's claim is not supported: neither trial shows apixaban is safer, or that the two drugs are equivalent. Whether any anticoagulant beats none in dialysis is unanswered by randomized trials; DANWARD and SACK are still recruiting, and SAFE-D was only a feasibility pilot. ACC/AHA 2023 says warfarin or an evidence-based dose of apixaban \"might be reasonable\" (Class 2b, LOE B-NR) and encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs. KDIGO 2024's DOAC-over-VKA recommendation covers CKD G1–G4, not dialysis, and ESC 2024 gives no graded dialysis recommendation. For this patient, that conversation with him, his family, and nephrology would cover his stroke risk, his prior GI bleed (bleeding outnumbered stroke in both trials), his values, and the monitoring burden of a VKA, whose time in therapeutic range was low in these trials (44% in RENAL-AF). If anticoagulation is chosen, the agent and dose come from the product label and local protocol, not from this case.",
+    teachingPoint: "Among the three guidelines checked here (ACC/AHA 2023, ESC 2024, KDIGO 2024), the only graded dialysis wording is ACC/AHA's \"might be reasonable\" (Class 2b), and two small trials that found no significant difference do not show that one drug is safer. ACC/AHA 2023 encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs; trial doses stay trial protocol.",
+    links: [
+      { kind: "framework", id: "dialysis-af", label: "Framework: AF on dialysis" },
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "trial", id: "axadia-afnet-8", label: "Trial: AXADIA-AFNET 8" },
+      { kind: "trial", id: "renal-af", label: "Trial: RENAL-AF" },
+      { kind: "framework", id: "ttr-vka-quality", label: "Framework: TTR / VKA quality" }
+    ]
   },
   {
     id: "cancer-stepdown",
@@ -18,7 +44,16 @@ window.ANTICOAG_CASES = [
     trialIds: ["caravaggio", "hokusai-vte-cancer", "api-cat", "select-d"],
     frameworkIds: ["cancer-vte"],
     modelReasoning: "Acute cancer VTE trials support DOAC options for many solid tumors; GI luminal tumors need extra caution. After adequate acute therapy, API-CAT informs reduced-dose apixaban for extended prevention in selected patients who still need anticoagulation. Reassess cancer activity, bleeding, interactions (including oral anticancer agents), and patient preference.",
-    teachingPoint: "Step-down is an extended-phase decision after Caravaggio-era acute care—not a week-2 shortcut. Reassess the cancer and the bleed risk every time you renew the script."
+    teachingPoint: "The reduced dose in API-CAT was an extended-phase assignment after at least 6 months of anticoagulation — not a week-2 shortcut. Reassess cancer activity and bleeding risk when the plan is renewed.",
+    links: [
+      { kind: "framework", id: "cancer-vte", label: "Framework: Cancer VTE" },
+      { kind: "tx-pathway", id: "cancer-vte", label: "TX: Cancer VTE" },
+      { kind: "pathway", id: "cancer-vte", label: "Playlist: Cancer-associated VTE" },
+      { kind: "trial", id: "api-cat", label: "Trial: API-CAT" },
+      { kind: "trial", id: "caravaggio", label: "Trial: Caravaggio" },
+      { kind: "trial", id: "hokusai-vte-cancer", label: "Trial: Hokusai VTE Cancer" },
+      { kind: "trial", id: "select-d", label: "Trial: SELECT-D" }
+    ]
   },
   {
     id: "af-pci-week2",
@@ -68,7 +103,7 @@ window.ANTICOAG_CASES = [
     keyQuestion: "How do ENRICH-AF and pending ASPIRE frame the options?",
     trialIds: ["enrich-af", "aspire", "prestige-af", "option"],
     frameworkIds: ["post-ich-anticoagulation", "laao-vs-oac"],
-    modelReasoning: "Lobar ICH with possible CAA raises recurrence risk; ENRICH-AF cautions against assuming net benefit from routine restart. Still weigh catastrophic cardioembolic risk. Multidisciplinary plan: delay vs carefully timed restart vs LAAO evaluation. Do not start aspirin as a comforting placebo if the question is OAC vs none.",
+    modelReasoning: "Lobar ICH with possible CAA raises recurrence risk; ENRICH-AF cautions against assuming net benefit from routine restart. Still weigh catastrophic cardioembolic risk. Multidisciplinary plan: delay vs carefully timed restart vs LAAO evaluation. When the question is OAC versus none, the case treats aspirin as no substitute for that decision.",
     teachingPoint: "Post-ICH AF is equipoise territory—document the why for restart, delay, or LAAO. Pending trials may refine subtypes; today’s decision still needs a named owner.",
     links: [
       { kind: "pathway", id: "post-ich", label: "TX: Post-ICH" },
@@ -83,7 +118,16 @@ window.ANTICOAG_CASES = [
     trialIds: ["protect-af", "prevail", "prague-17", "champion-af", "option"],
     frameworkIds: ["laao-vs-oac"],
     modelReasoning: "Guideline-supported OAC remains first-line when tolerated. Recurrent major bleeding with mandatory interruptions is a classic shared-decision LAAO scenario (PROTECT/PREVAIL-era framing, modern device iterations). Consent for procedural risk, DRT, and possible post-implant antithrombotic therapy. Optimize GI evaluation in parallel.",
-    teachingPoint: "LAAO is for OAC failure/intolerance narratives—not for patients who simply dislike monitoring. The consult should include life after the implant, not only the implant day."
+    teachingPoint: "LAAO is for OAC failure/intolerance narratives—not for patients who simply dislike monitoring. The consult should include life after the implant, not only the implant day.",
+    links: [
+      { kind: "framework", id: "laao-vs-oac", label: "Framework: LAAO versus anticoagulation" },
+      { kind: "pathway", id: "laao", label: "Playlist: LAAO vs OAC" },
+      { kind: "trial", id: "protect-af", label: "Trial: PROTECT-AF" },
+      { kind: "trial", id: "prevail", label: "Trial: PREVAIL" },
+      { kind: "trial", id: "prague-17", label: "Trial: PRAGUE-17" },
+      { kind: "trial", id: "champion-af", label: "Trial: CHAMPION-AF" },
+      { kind: "trial", id: "option", label: "Trial: OPTION" }
+    ]
   },
   {
     id: "vte-doac-choice",
@@ -93,13 +137,21 @@ window.ANTICOAG_CASES = [
     trialIds: ["amplify", "einstein-dvt", "cobrra", "hokusai-vte"],
     frameworkIds: ["acute-vte-doac"],
     modelReasoning: "Either labeled DOAC is guideline-congruent for eligible acute VTE. Bleeding-sensitive patients and COBRRA-style teaching may tip toward apixaban when both are accessible; rivaroxaban remains appropriate with food counseling for the 15/20 mg doses. Edoxaban if a heparin lead-in workflow is preferred. Exclude APS/pregnancy red flags.",
-    teachingPoint: "When efficacy is comparable in class, logistics and bleeding phenotype decide. Teach the load→maintenance calendar out loud before discharge."
+    teachingPoint: "When efficacy is comparable in class, logistics and bleeding phenotype decide. Teach the load→maintenance calendar out loud before discharge.",
+    links: [
+      { kind: "framework", id: "acute-vte-doac", label: "Framework: Acute VTE" },
+      { kind: "tx-pathway", id: "acute-vte", label: "TX: Acute VTE" },
+      { kind: "trial", id: "amplify", label: "Trial: AMPLIFY" },
+      { kind: "trial", id: "einstein-dvt", label: "Trial: EINSTEIN-DVT" },
+      { kind: "trial", id: "cobrra", label: "Trial: COBRRA" },
+      { kind: "trial", id: "hokusai-vte", label: "Trial: Hokusai-VTE" }
+    ]
   },
   {
     id: "fxa-ich-post-andexxa",
     title: "ICH on apixaban — U.S. reversal after Andexxa withdrawal",
     stem: "72-year-old with NVAF on apixaban 5 mg BID presents with acute lobar ICH, GCS declining. Last apixaban dose ~6 hours ago. BP being controlled. Neurosurgery and pharmacy are on the line. A trainee asks whether to ‘give Andexxa.’",
-    keyQuestion: "In U.S. practice after Dec 22, 2025, what is the teachable reversal branch — and what must you not order?",
+    keyQuestion: "Reasoning step: which reversal branch does the U.S. formulary support after Dec 22, 2025, and which agent sits outside that branch?",
     trialIds: ["annexa-i", "annexa-4"],
     frameworkIds: ["doac-major-bleed-us", "post-ich-anticoagulation"],
     modelReasoning: "ABCs and ICH bundle first; stop apixaban. This is an FXa inhibitor, not dabigatran — idarucizumab does not apply. Andexxa is not available in the U.S. after Dec 22, 2025 (voluntary BLA withdrawal after FDA concluded risks outweighed benefits; thromboembolic signal from the andexanet development program, including ANNEXA-I teaching context). Open the institutional anticoagulant-ICH / FXa-bleed pathway: supportive care and institutional/off-label 4F-PCC per protocol — not an FDA-labeled specific FXa antidote now that Andexxa is withdrawn. Do not invent PCC dose at the bedside; use the hospital order set. ANNEXA-4/I inform history and thrombosis trade-off teaching, not a current U.S. Andexxa order. After hemostasis, plan restart vs delay vs LAAO with a named multidisciplinary owner (post-ICH framework).",
@@ -115,9 +167,9 @@ window.ANTICOAG_CASES = [
     title: "Mechanical AVR — patient asks to switch to a DOAC",
     stem: "68-year-old with a bileaflet mechanical aortic valve (implanted 2019), no AF, on warfarin with recent INRs mostly in range. He read that ‘everyone is on Eliquis now’ and asks to switch so he can stop clinic fingersticks.",
     keyQuestion: "Is a DOAC switch appropriate, and what INR teaching frame do you use if he stays on warfarin?",
-    trialIds: ["invictus", "galileo"],
+    trialIds: ["re-align", "proact", "proact-xa", "invictus", "galileo"],
     frameworkIds: ["mechanical-valve-vka"],
-    modelReasoning: "This is a mechanical prosthesis — DOACs are contraindicated. Landmark DOAC stroke/VTE trials excluded mechanical valves; counsel that convenience does not override valve thrombogenicity. Keep dose-adjusted warfarin. For many contemporary bileaflet aortic valves without extra thromboembolic risk factors, society tables commonly use INR 2.0–3.0 — verify the implanted model against current ACC/AHA or ESC tables before changing targets. Discuss aspirin add-on only if guidance and bleed risk support it. Offer adherence supports (home meter if appropriate, clinic schedule, TTR stewardship) rather than an off-label DOAC. GALILEO is a TAVR (bioprosthetic pathway) contrast, not permission to DOAC a mechanical valve; INVICTUS reinforces VKA thinking in rheumatic MS — related niche, different anatomy.",
+    modelReasoning: "This is a mechanical prosthesis — DOACs are contraindicated. Landmark DOAC stroke/VTE trials excluded mechanical valves; counsel that convenience does not override valve thrombogenicity. Read RE-ALIGN, PROACT, and PROACT Xa on this site before discussing a DOAC or a lower INR. Keep dose-adjusted warfarin. For many contemporary bileaflet aortic valves without extra thromboembolic risk factors, society tables commonly use INR 2.0–3.0 — verify the implanted model against current ACC/AHA or ESC tables before changing targets. Discuss aspirin add-on only if guidance and bleed risk support it. Offer adherence supports (home meter if appropriate, clinic schedule, TTR stewardship) rather than an off-label DOAC. GALILEO is a TAVR (bioprosthetic pathway) contrast, not permission to DOAC a mechanical valve; INVICTUS reinforces VKA thinking in rheumatic MS — related niche, different anatomy.",
     teachingPoint: "Mechanical valve anticoagulation is a VKA conversation. A DOAC switch for convenience is a hard no — then teach the INR target from the valve’s society table, not from NVAF habit.",
     links: [
       { kind: "pathway", id: "mechanical-valve", label: "TX: Mechanical heart valve" }
@@ -169,10 +221,26 @@ window.ANTICOAG_CASES = [
     keyQuestion: "Is routine LMWH bridging appropriate for this warfarin interruption — and what peri-procedural frame do you use instead?",
     trialIds: ["bridge"],
     frameworkIds: ["peri-procedural-oac"],
-    modelReasoning: "This is typical nonvalvular AF interrupting warfarin for an elective procedure — the BRIDGE teaching population, not a mechanical-valve or acute-VTE niche. BRIDGE: forgoing bridging was noninferior for arterial thromboembolism, and major bleeding was higher with bridging — so do not routinely bridge. Cancel reflexive enoxaparin. Confirm the procedure’s bleed risk with GI (polypectomy raises bleed risk vs diagnostic-only) and whether any interruption is required; if holding warfarin, use an institutional hold/restart plan without routine LMWH bridge. Counsel that ‘never uncovered’ is not the same as safer — bridging itself bleeds. Document indication (NVAF), no high-risk prosthesis/recent VTE, no-bridge rationale citing BRIDGE-era teaching, and who owns the post-procedure INR/restart. If this were a mechanical mitral valve or very recent VTE, you would not import the BRIDGE ‘skip bridge’ default unchanged.",
-    teachingPoint: "Typical AF + elective warfarin hold → plan interruption and restart; do not add routine LMWH bridging. BRIDGE traded more bleeding for no thromboembolic gain in this phenotype.",
+    modelReasoning: "This is typical nonvalvular AF interrupting warfarin for an elective procedure — the BRIDGE teaching population, not a mechanical-valve or acute-VTE niche. BRIDGE: arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging), risk difference 0.1 percentage points (95% CI −0.6 to 0.8), P=0.01 for noninferiority; major bleeding 1.3% (no bridging) vs 3.2% (bridging), relative risk 0.41 (95% CI 0.20 to 0.78), P=0.005 for superiority — so skip routine LMWH bridging. Cancel reflexive enoxaparin. Confirm the procedure’s bleed risk with GI (polypectomy raises bleed risk vs diagnostic-only) and whether any interruption is required; if holding warfarin, use an institutional hold/restart plan without routine LMWH bridge. Counsel that ‘never uncovered’ is not the same as safer — bridging itself bleeds. Document indication (NVAF), no high-risk prosthesis/recent VTE, the no-bridge rationale citing those BRIDGE rates, and who owns the post-procedure INR/restart. If this were a mechanical mitral valve or very recent VTE, you would not import the BRIDGE ‘skip bridge’ default unchanged.",
+    teachingPoint: "Typical AF + elective warfarin hold → plan interruption and restart; do not add routine LMWH bridging. BRIDGE: arterial thromboembolism 0.4% vs 0.3% (noninferior), major bleeding 1.3% vs 3.2%.",
     links: [
+      { kind: "tx-pathway", id: "peri-procedural-oac", label: "TX: Peri-procedural OAC" },
       { kind: "trial", id: "bridge", label: "Trial: BRIDGE" }
+    ]
+  },
+  {
+    id: "doac-legacy-aspirin",
+    title: "VTE on a DOAC — still taking aspirin from years ago",
+    stem: "64-year-old on apixaban for extended treatment after an unprovoked PE. At the annual DOAC review, the medication list also shows low-dose aspirin that a previous clinician started “years ago.” No history of MI, coronary stent, CABG, stroke, or peripheral artery disease; no mechanical valve. Two nosebleeds this year. The patient asks whether they still need “both blood thinners.”",
+    keyQuestion: "What does the evidence say about keeping aspirin on top of a DOAC without a clear indication, and what is the right next step at this visit?",
+    trialIds: [],
+    frameworkIds: ["doac-appropriateness"],
+    modelReasoning: "First establish whether any vascular indication exists — ask the patient, check the record, and ask the original prescriber; a remote stent or known coronary disease moves this to the stable coronary disease branch of the treatment pathway. If none is found, the best direct evidence is observational: in the Michigan registry (Schaefer, JAMA Intern Med 2021), 33.8% of DOAC patients for AF or VTE were also on aspirin without a clear indication. In the matched cohort, any bleeding was 31.60 vs 26.00 per 100 patient-years (P=.009) and bleeding hospitalization 8.20 vs 5.30 (P=.006), with no difference in thrombosis (2.50 vs 2.30; P=.80). Major bleeding was numerically higher but not significant (4.95 vs 3.59; P=.09). Even in patients who do have stable coronary disease, randomized trials (AQUATIC, EPIC-CAD, ADAPT AF-DES, AFIRE) found more bleeding without demonstrated ischemic benefit when an antiplatelet was added to OAC. So the step here is to document the missing indication and raise stopping the aspirin with the prescriber who owns it — not to stop the DOAC, and not for the patient to stop aspirin on their own before that conversation.",
+    teachingPoint: "Every antithrombotic needs a named reason and a planned stop point. “Aspirin just because” on top of a DOAC is a deprescribing conversation with the prescriber — the evidence shows more bleeding and no thrombosis benefit, though the registry data are observational and major bleeding was not significantly different.",
+    links: [
+      { kind: "tx-pathway", id: "oac-antiplatelet-deprescribe", label: "TX: OAC + antiplatelet deprescribing" },
+      { kind: "framework", id: "doac-appropriateness", label: "Framework: DOAC appropriateness" },
+      { kind: "ddi", id: "aspirin", label: "Aspirin DDI card" }
     ]
   }
 ];

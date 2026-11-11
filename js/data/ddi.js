@@ -4,7 +4,7 @@ window.ANTICOAG_DDI = {
   "meta": {
     "title": "Evidence-based anticoagulant DDI library",
     "banner": "Educational resource — not a prescribing system. Verify current US/EU product labeling and institutional protocols. Evidence is graded; gaps are labeled. PK magnitudes are mostly healthy-volunteer studies unless noted.",
-    "lastCurated": "2026-09-26",
+    "lastCurated": "2026-10-07",
     "primaryReferences": [
       {
         "label": "EHRA 2021 Practical Guide on DOACs in AF",
@@ -37,7 +37,7 @@ window.ANTICOAG_DDI = {
     "tranche3": "Strong inducers + antiseizure drugs",
     "tranche4": "Antiplatelet/NSAID PD depth + herbals/OTC",
     "tranche5_oncology": "Oncology TKI / cancer-drug tranche — expansion paused for clinical review",
-    "expansionStatus": "Deferred tranche shipped 2026-09-26 (edoxaban-clarithromycin replace + 4 warfarin appends); oncology TKI suite remains paused for clinical review",
+    "expansionStatus": "Oncology TKI accuracy pass 2026-10-07 (label and Hellfritzsch corrections only); idelalisib and ribociclib US-label fold teaching 2026-10-07; oncology TKI suite remains paused for clinical review",
   "clinicGap": "Warfarin clinic gaps + azithromycin DOAC suite + edoxaban–erythromycin Parasrampuria PK + dabigatran–colchicine stack awareness",
   "deferredTranche": "2026-09-26: edoxaban-clarithromycin Lenard therapeutic-dose replace; warfarin omeprazole/pantoprazole/bosentan/erythromycin — bosentan×DOAC, rifabutin, erythromycin→apix/dabig, colchicine×other DOACs, oncology incomplete AUC remain re-deferred"
   },
@@ -61,7 +61,7 @@ window.ANTICOAG_DDI = {
       "Pick an anticoagulant or search an interactor (generic/brand synonyms).",
       "Optionally filter by mechanism (P-gp, CYP3A4, CYP2C9, PD bleed).",
       "Open a card for quantified PK (when curated), clinical signals, label/EHRA-style guidance, and honest uncertainty.",
-      "Use Compare on an interactor to see AUC/effect direction across DOACs side-by-side.",
+      "Use Compare on an interactor to see AUC/effect direction across anticoagulants side-by-side.",
       "Still verify the current country label before changing therapy.",
       "Oncology/CAT: search TKI names or use the Oncology quick chip; prefer LMWH when strong inducers/inhibitors dominate."
     ]
@@ -356,7 +356,7 @@ window.ANTICOAG_DDI = {
         }
       ],
       "evidenceGrade": "PK-volunteer",
-      "populationCaveats": "Label often recommends edoxaban 30 mg daily with certain P-gp inhibitors including ketoconazole.",
+      "populationCaveats": "Some edoxaban labels list 30 mg daily with certain P-gp inhibitors including ketoconazole.",
       "practiceInterpretation": "Dose-reduce per label when combination cannot be avoided.",
       "labelGuidance": "EHRA / label: dose reduce to 30 mg daily with ketoconazole (typical pathway).",
       "uncertainty": "Clinical outcome data limited vs PK+label.",
@@ -5988,7 +5988,7 @@ window.ANTICOAG_DDI = {
         }
       ],
       "evidenceGrade": "PK-volunteer",
-      "populationCaveats": "HV single-dose dabigatran 75 mg design. Ritonavir P-gp inhibition can persist for days after the last Paxlovid dose — resume full dabigatran only after the recommended washout (Liverpool often ~3 days after last dose). CPT/Liverpool note analogies to short-course darunavir/cobicistat for dosing algorithms.",
+      "populationCaveats": "HV single-dose dabigatran 75 mg design. Ritonavir P-gp inhibition can persist for days after the last Paxlovid dose. The University of Liverpool COVID-19 Drug Interactions checker (accessed Oct 2026; quality of evidence rated low, extrapolated from other ritonavir- or cobicistat-boosted regimens) describes resuming usual dabigatran treatment 3 days after the last dose of nirmatrelvir/ritonavir. CPT/Liverpool note analogies to short-course darunavir/cobicistat for dosing algorithms.",
       "practiceInterpretation": "Reduce dabigatran or avoid per indication/renal function and SmPC/Liverpool algorithms (e.g., 150→110 mg BID if normal renal function in some pathways; further cuts or LMWH bridge if high thrombotic risk). Do not restart full dose the morning after the last Paxlovid tablet without checking guidance.",
       "labelGuidance": "SmPC/Liverpool: dose-adjust or avoid; bleeding risk ↑.",
       "uncertainty": "AF patient steady-state magnitudes may differ from HV 75 mg single-dose study.",
@@ -7009,9 +7009,9 @@ window.ANTICOAG_DDI = {
       ],
       "evidenceGrade": "Clinical-cohort",
       "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %. Other covalent BTKis (acalabrutinib, zanubrutinib) also carry hemorrhage warnings in labeling — apply PD caution with any OAC. Ibrutinib itself is a sensitive CYP3A4 victim (strong inhibitors can markedly ↑ ibrutinib — classic ketoconazole-order increases in labeling); stacking CYP3A4 inhibitors raises ibrutinib (bleed) risk even before DOAC considerations. AF is a known ibrutinib adverse effect — anticoagulation decisions are common.",
-      "practiceInterpretation": "Minimize antiplatelets; shared heme-onc + cardiology plan; consider holding ibrutinib around procedures. Prefer careful DOAC choice/dose per specialty guidance — do not invent an ibrutinib-driven DOAC dose cut from missing AUC data. LMWH is an escape hatch when bleed risk is prohibitive.",
+      "practiceInterpretation": "This is the warfarin card. The teaching is PD hemorrhage with ibrutinib, not a DOAC dose cut. Do not invent an ibrutinib-driven warfarin dose from missing AUC data. LMWH is an escape hatch when bleed risk is prohibitive.",
       "labelGuidance": "BTKi hemorrhage warnings; avoid stacking CYP3A4 inhibitors with ibrutinib.",
-      "uncertainty": "No curated quantitative ibrutinib→DOAC AUC — omitted intentionally.",
+      "uncertainty": "No curated quantitative ibrutinib–anticoagulant AUC — omitted intentionally. This warfarin card does not set a dose.",
       "sources": [
         {
           "label": "Ibrutinib bleeding pathogenesis review",
@@ -10377,24 +10377,29 @@ window.ANTICOAG_DDI = {
       ],
       "mechanisms": [
         "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical, CYP3A4)",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Moderate CYP3A4 (± P-gp) inhibitor classification in CAT–DOAC DDI reviews — caution with apixaban/rivaroxaban; quantitative DOAC PK often lacking.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Theoretical increased exposure",
+          "signal": "Gleevec (effective 2026-07-13) increased simvastatin Cmax 2-fold and AUC 3.5-fold. Simvastatin is the CYP3A4 probe, not a DOAC. P-gp inhibition is stated under In Vitro Studies, not as a clinical DOAC result. No DOAC AUC is on this card. The theoretical increase is for the CYP3A4 substrates apixaban and rivaroxaban. A degree word is not added: this label states the fold-change, and Table 3 glyph weight was not re-readable.",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "The 2-fold and 3.5-fold figures are simvastatin, not apixaban or rivaroxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. In vitro P-gp inhibition is not a dabigatran or edoxaban exposure result.",
+      "labelGuidance": "Gleevec section 12.3, effective 2026-07-13. Simvastatin AUC increased 3.5-fold. In vitro, imatinib inhibits P-gp.",
+      "uncertainty": "No measured DOAC AUC. Do not read the in vitro P-gp line as a clinical exposure increase for dabigatran or edoxaban.",
       "sources": [
+        {
+          "label": "Gleevec US prescribing information",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -10432,24 +10437,29 @@ window.ANTICOAG_DDI = {
       ],
       "mechanisms": [
         "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical, CYP3A4)",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Moderate CYP3A4 (± P-gp) inhibitor classification in CAT–DOAC DDI reviews — caution with apixaban/rivaroxaban; quantitative DOAC PK often lacking.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Theoretical increased exposure",
+          "signal": "Gleevec (effective 2026-07-13) increased simvastatin Cmax 2-fold and AUC 3.5-fold. Simvastatin is the CYP3A4 probe, not a DOAC. P-gp inhibition is stated under In Vitro Studies, not as a clinical DOAC result. No DOAC AUC is on this card. The theoretical increase is for the CYP3A4 substrates apixaban and rivaroxaban. A degree word is not added: this label states the fold-change, and Table 3 glyph weight was not re-readable.",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "The 2-fold and 3.5-fold figures are simvastatin, not apixaban or rivaroxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. In vitro P-gp inhibition is not a dabigatran or edoxaban exposure result.",
+      "labelGuidance": "Gleevec section 12.3, effective 2026-07-13. Simvastatin AUC increased 3.5-fold. In vitro, imatinib inhibits P-gp.",
+      "uncertainty": "No measured DOAC AUC. Do not read the in vitro P-gp line as a clinical exposure increase for dabigatran or edoxaban.",
       "sources": [
+        {
+          "label": "Gleevec US prescribing information",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -10486,25 +10496,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Moderate CYP3A4 (± P-gp) inhibitor classification in CAT–DOAC DDI reviews — caution with apixaban/rivaroxaban; quantitative DOAC PK often lacking.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "There is no firm clinical exposure increase to quote. Gleevec P-gp inhibition is under In Vitro Studies. The simvastatin result (Cmax 2-fold, AUC 3.5-fold) is a CYP3A4 probe. Dabigatran and edoxaban are not meaningful CYP3A4 substrates.",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "Do not apply the simvastatin fold-change to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Imatinib does not have a firm dabigatran or edoxaban exposure increase on this card. The CYP3A4 probe result is for apixaban and rivaroxaban.",
+      "labelGuidance": "Gleevec in vitro transporter line lists P-gp inhibition. The section 12.3 simvastatin result is CYP3A4.",
+      "uncertainty": "No clinical dabigatran or edoxaban AUC with imatinib is transcribed here.",
       "sources": [
+        {
+          "label": "Gleevec US prescribing information",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -10541,25 +10555,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Moderate CYP3A4 (± P-gp) inhibitor classification in CAT–DOAC DDI reviews — caution with apixaban/rivaroxaban; quantitative DOAC PK often lacking.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "There is no firm clinical exposure increase to quote. Gleevec P-gp inhibition is under In Vitro Studies. The simvastatin result (Cmax 2-fold, AUC 3.5-fold) is a CYP3A4 probe. Dabigatran and edoxaban are not meaningful CYP3A4 substrates.",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "Do not apply the simvastatin fold-change to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Imatinib does not have a firm dabigatran or edoxaban exposure increase on this card. The CYP3A4 probe result is for apixaban and rivaroxaban.",
+      "labelGuidance": "Gleevec in vitro transporter line lists P-gp inhibition. The section 12.3 simvastatin result is CYP3A4.",
+      "uncertainty": "No clinical dabigatran or edoxaban AUC with imatinib is transcribed here.",
       "sources": [
+        {
+          "label": "Gleevec US prescribing information",
+          "citation": "Imatinib mesylate. DailyMed setid 211ef2da-2868-4a77-8055-1cb2cd78e24b. Effective 2026-07-13. Simvastatin Cmax increased 2-fold and AUC 3.5-fold. P-gp inhibition is under In Vitro Studies.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=211ef2da-2868-4a77-8055-1cb2cd78e24b"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -10949,24 +10967,29 @@ window.ANTICOAG_DDI = {
       ],
       "mechanisms": [
         "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical, CYP3A4)",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "CYP3A4/P-gp inhibitor classification in Semin Thromb Hemost–type tables — monitor/avoid stacking; no curated DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Theoretical increased exposure",
+          "signal": "Tasigna (effective 2025-12-16) increased oral midazolam exposure 2.6-fold. Midazolam is the CYP3A4 probe, not a DOAC. That label does not print a mild, moderate, or strong word next to the 2.6-fold result, so no degree is added. P-gp inhibition is under In Vitro Studies Where Drug Interaction Potential was not Further Evaluated Clinically. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "The 2.6-fold figure is oral midazolam, not apixaban or rivaroxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. In vitro P-gp inhibition was not evaluated clinically and is not a dabigatran or edoxaban exposure result.",
+      "labelGuidance": "Tasigna clinical pharmacology, effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is in the in vitro section.",
+      "uncertainty": "No degree word is taught from the 2.6-fold result. Table 3 glyph weight was not re-readable. No measured DOAC AUC.",
       "sources": [
+        {
+          "label": "Tasigna US prescribing information",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11003,24 +11026,29 @@ window.ANTICOAG_DDI = {
       ],
       "mechanisms": [
         "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical, CYP3A4)",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "CYP3A4/P-gp inhibitor classification in Semin Thromb Hemost–type tables — monitor/avoid stacking; no curated DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Theoretical increased exposure",
+          "signal": "Tasigna (effective 2025-12-16) increased oral midazolam exposure 2.6-fold. Midazolam is the CYP3A4 probe, not a DOAC. That label does not print a mild, moderate, or strong word next to the 2.6-fold result, so no degree is added. P-gp inhibition is under In Vitro Studies Where Drug Interaction Potential was not Further Evaluated Clinically. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "The 2.6-fold figure is oral midazolam, not apixaban or rivaroxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. In vitro P-gp inhibition was not evaluated clinically and is not a dabigatran or edoxaban exposure result.",
+      "labelGuidance": "Tasigna clinical pharmacology, effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is in the in vitro section.",
+      "uncertainty": "No degree word is taught from the 2.6-fold result. Table 3 glyph weight was not re-readable. No measured DOAC AUC.",
       "sources": [
+        {
+          "label": "Tasigna US prescribing information",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11056,25 +11084,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "CYP3A4/P-gp inhibitor classification in Semin Thromb Hemost–type tables — monitor/avoid stacking; no curated DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "There is no firm clinical exposure increase to quote. Tasigna P-gp inhibition is under in vitro studies that were not evaluated clinically. The 2.6-fold oral midazolam result is a CYP3A4 probe. Dabigatran and edoxaban are not meaningful CYP3A4 substrates.",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "Do not apply the midazolam fold-change to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Nilotinib does not have a firm dabigatran or edoxaban exposure increase on this card. The CYP3A4 probe result is for apixaban and rivaroxaban.",
+      "labelGuidance": "Tasigna, effective 2025-12-16. P-gp inhibition was not further evaluated clinically. The midazolam result is CYP3A4.",
+      "uncertainty": "No clinical dabigatran or edoxaban AUC with nilotinib is transcribed here.",
       "sources": [
+        {
+          "label": "Tasigna US prescribing information",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11110,25 +11142,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition",
-        "P-gp inhibition"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "CYP3A4/P-gp inhibitor classification in Semin Thromb Hemost–type tables — monitor/avoid stacking; no curated DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "There is no firm clinical exposure increase to quote. Tasigna P-gp inhibition is under in vitro studies that were not evaluated clinically. The 2.6-fold oral midazolam result is a CYP3A4 probe. Dabigatran and edoxaban are not meaningful CYP3A4 substrates.",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "Do not apply the midazolam fold-change to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Nilotinib does not have a firm dabigatran or edoxaban exposure increase on this card. The CYP3A4 probe result is for apixaban and rivaroxaban.",
+      "labelGuidance": "Tasigna, effective 2025-12-16. P-gp inhibition was not further evaluated clinically. The midazolam result is CYP3A4.",
+      "uncertainty": "No clinical dabigatran or edoxaban AUC with nilotinib is transcribed here.",
       "sources": [
+        {
+          "label": "Tasigna US prescribing information",
+          "citation": "Nilotinib. DailyMed setid 6093952a-5248-45cb-ad17-33716a411146. Effective 2025-12-16. Oral midazolam exposure increased 2.6-fold. P-gp inhibition is under in vitro studies not evaluated clinically.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6093952a-5248-45cb-ad17-33716a411146"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11225,22 +11261,27 @@ window.ANTICOAG_DDI = {
         "CYP3A4 inhibition",
         "PD hemorrhage risk"
       ],
-      "effectDirection": "↑ bleed PD ± theoretical PK",
+      "effectDirection": "↑ bleed PD; CYP3A4 inhibition without a fold-change",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Label hemorrhage warnings + PD platelet effects; CYP3A4 perpetrator notes in reviews. Clinical bleed caution with OAC even without DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Hemorrhage caution; unquantified CYP3A4 inhibition",
+          "signal": "Dasatinib label (effective 2026-03-05): dasatinib caused platelet dysfunction in vitro, and anticoagulants may increase the risk of hemorrhage. Dasatinib is a time-dependent inhibitor of CYP3A4. The label does not give a midazolam or DOAC fold-change, so no degree is stated. Dasatinib is not an inhibitor of P-gp in vitro.",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "Platelet dysfunction was shown in vitro. Do not invent a DOAC percent from the CYP3A4 sentence.",
+      "practiceInterpretation": "Teach the labeled hemorrhage caution with anticoagulants. Time-dependent CYP3A4 inhibition has no fold-change on this label, and there is no DOAC AUC.",
+      "labelGuidance": "Dasatinib US PI, effective 2026-03-05. Hemorrhage caution with anticoagulants. Time-dependent CYP3A4 inhibition without a fold-change. Not a P-gp inhibitor in vitro.",
+      "uncertainty": "No degree and no DOAC AUC. Table 3 glyph weight was not re-readable.",
       "sources": [
+        {
+          "label": "Dasatinib US prescribing information",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11279,22 +11320,27 @@ window.ANTICOAG_DDI = {
         "CYP3A4 inhibition",
         "PD hemorrhage risk"
       ],
-      "effectDirection": "↑ bleed PD ± theoretical PK",
+      "effectDirection": "↑ bleed PD; CYP3A4 inhibition without a fold-change",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Label hemorrhage warnings + PD platelet effects; CYP3A4 perpetrator notes in reviews. Clinical bleed caution with OAC even without DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Hemorrhage caution; unquantified CYP3A4 inhibition",
+          "signal": "Dasatinib label (effective 2026-03-05): dasatinib caused platelet dysfunction in vitro, and anticoagulants may increase the risk of hemorrhage. Dasatinib is a time-dependent inhibitor of CYP3A4. The label does not give a midazolam or DOAC fold-change, so no degree is stated. Dasatinib is not an inhibitor of P-gp in vitro.",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "Platelet dysfunction was shown in vitro. Do not invent a DOAC percent from the CYP3A4 sentence.",
+      "practiceInterpretation": "Teach the labeled hemorrhage caution with anticoagulants. Time-dependent CYP3A4 inhibition has no fold-change on this label, and there is no DOAC AUC.",
+      "labelGuidance": "Dasatinib US PI, effective 2026-03-05. Hemorrhage caution with anticoagulants. Time-dependent CYP3A4 inhibition without a fold-change. Not a P-gp inhibitor in vitro.",
+      "uncertainty": "No degree and no DOAC AUC. Table 3 glyph weight was not re-readable.",
       "sources": [
+        {
+          "label": "Dasatinib US prescribing information",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11330,25 +11376,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition",
         "PD hemorrhage risk"
       ],
-      "effectDirection": "↑ bleed PD ± theoretical PK",
+      "effectDirection": "↑ bleed PD; no exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Label hemorrhage warnings + PD platelet effects; CYP3A4 perpetrator notes in reviews. Clinical bleed caution with OAC even without DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Hemorrhage caution without an exposure increase",
+          "signal": "Dasatinib is not an inhibitor of P-gp in vitro (label effective 2026-03-05). Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so the time-dependent CYP3A4 inhibition line is not an exposure increase for this pair. The label does say anticoagulants may increase hemorrhage risk because dasatinib caused platelet dysfunction in vitro.",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "CYP3A4 inhibition on the dasatinib label is not an exposure result for dabigatran or edoxaban.",
+      "practiceInterpretation": "Teach PD hemorrhage caution. Do not teach a dabigatran or edoxaban exposure increase with dasatinib.",
+      "labelGuidance": "Dasatinib US PI, effective 2026-03-05. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+      "uncertainty": "No dabigatran or edoxaban AUC with dasatinib is transcribed here.",
       "sources": [
+        {
+          "label": "Dasatinib US prescribing information",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11384,25 +11434,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition",
         "PD hemorrhage risk"
       ],
-      "effectDirection": "↑ bleed PD ± theoretical PK",
+      "effectDirection": "↑ bleed PD; no exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "DDI classification / bleed caution",
-          "signal": "Label hemorrhage warnings + PD platelet effects; CYP3A4 perpetrator notes in reviews. Clinical bleed caution with OAC even without DOAC AUC.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost 2023; BJCP CAT reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Hemorrhage caution without an exposure increase",
+          "signal": "Dasatinib is not an inhibitor of P-gp in vitro (label effective 2026-03-05). Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so the time-dependent CYP3A4 inhibition line is not an exposure increase for this pair. The label does say anticoagulants may increase hemorrhage risk because dasatinib caused platelet dysfunction in vitro.",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Coordinate with oncology pharmacy. If strong dual inhibition concern + high bleed risk, consider LMWH for CAT. Dasatinib: take PD hemorrhage warning seriously even when PK is unquantified.",
-      "labelGuidance": "Check TKI and anticoagulant PIs; EHRA/CAT reviews for color-code style caution.",
-      "uncertainty": "Clinical outcome data for exact DOAC–TKI pairs remain sparse (Semin Thromb Hemost notes evidence gap).",
+      "populationCaveats": "CYP3A4 inhibition on the dasatinib label is not an exposure result for dabigatran or edoxaban.",
+      "practiceInterpretation": "Teach PD hemorrhage caution. Do not teach a dabigatran or edoxaban exposure increase with dasatinib.",
+      "labelGuidance": "Dasatinib US PI, effective 2026-03-05. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+      "uncertainty": "No dabigatran or edoxaban AUC with dasatinib is transcribed here.",
       "sources": [
+        {
+          "label": "Dasatinib US prescribing information",
+          "citation": "Dasatinib. DailyMed setid 02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4. Effective 2026-03-05. Time-dependent CYP3A4 inhibitor. Not an inhibitor of P-gp in vitro. Hemorrhage caution with anticoagulants.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=02b04c6f-4ea5-4fcb-bf6d-2631d5ab31e4"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11882,22 +11936,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 5.4-fold)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists idelalisib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. Midazolam is the CYP3A probe, not a DOAC. Section 7.2: coadministration with a CYP3A substrate may increase that substrate's concentrations, and the label says to avoid sensitive CYP3A substrates. This label does not print the word strong for idelalisib as a perpetrator. FDA's January 2020 clinical DDI guidance classifies a strong inhibitor as a drug that increases the AUC of a sensitive index CYP substrate ≥5-fold, and midazolam is a CYP3A sensitive index substrate, so the labeled 5.4-fold AUC meets that threshold. The fold-change is the labeled result. Digoxin (P-gp substrate) exposure was unchanged. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for idelalisib. The P-gp cell is blank.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Empty cell = no known effect. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No idelalisib degree (mild, moderate, or strong) is taught from the collapsed table glyphs.",
+      "populationCaveats": "The 2.4-fold and 5.4-fold figures are midazolam, not apixaban or rivaroxaban. Do not invent a DOAC percent. Unchanged digoxin is not a dabigatran or edoxaban exposure increase.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The 5.4-fold figure is midazolam, not a DOAC dose. Dabigatran and edoxaban are not given a PK exposure increase.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Section 7.2: avoid sensitive CYP3A substrates. Digoxin exposure was unchanged. The label does not print strong for idelalisib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The fold taught here is the labeled 5.4-fold midazolam AUC, which meets the FDA ≥5-fold strong-inhibitor criterion. The current ZYDELIG label does not itself print the word strong. Table 3 glyph weight was not re-readable and is not the source of the fold.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
+        {
+          "label": "FDA clinical DDI guidance — strong inhibitor criterion",
+          "citation": "FDA. Clinical Drug Interaction Studies — Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions. Guidance for Industry. January 2020. A strong inhibitor increases the AUC of a sensitive index CYP substrate ≥5-fold. The FDA table of substrates, inhibitors and inducers lists midazolam as a CYP3A sensitive index substrate and states that strong inhibitors increase the AUC of sensitive index substrates ≥5-fold.",
+          "url": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11930,22 +11994,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 5.4-fold)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists idelalisib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. Midazolam is the CYP3A probe, not a DOAC. Section 7.2: coadministration with a CYP3A substrate may increase that substrate's concentrations, and the label says to avoid sensitive CYP3A substrates. This label does not print the word strong for idelalisib as a perpetrator. FDA's January 2020 clinical DDI guidance classifies a strong inhibitor as a drug that increases the AUC of a sensitive index CYP substrate ≥5-fold, and midazolam is a CYP3A sensitive index substrate, so the labeled 5.4-fold AUC meets that threshold. The fold-change is the labeled result. Digoxin (P-gp substrate) exposure was unchanged. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for idelalisib. The P-gp cell is blank.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Empty cell = no known effect. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No idelalisib degree (mild, moderate, or strong) is taught from the collapsed table glyphs.",
+      "populationCaveats": "The 2.4-fold and 5.4-fold figures are midazolam, not apixaban or rivaroxaban. Do not invent a DOAC percent. Unchanged digoxin is not a dabigatran or edoxaban exposure increase.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The 5.4-fold figure is midazolam, not a DOAC dose. Dabigatran and edoxaban are not given a PK exposure increase.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Section 7.2: avoid sensitive CYP3A substrates. Digoxin exposure was unchanged. The label does not print strong for idelalisib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The fold taught here is the labeled 5.4-fold midazolam AUC, which meets the FDA ≥5-fold strong-inhibitor criterion. The current ZYDELIG label does not itself print the word strong. Table 3 glyph weight was not re-readable and is not the source of the fold.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
+        {
+          "label": "FDA clinical DDI guidance — strong inhibitor criterion",
+          "citation": "FDA. Clinical Drug Interaction Studies — Cytochrome P450 Enzyme- and Transporter-Mediated Drug Interactions. Guidance for Industry. January 2020. A strong inhibitor increases the AUC of a sensitive index CYP substrate ≥5-fold. The FDA table of substrates, inhibitors and inducers lists midazolam as a CYP3A sensitive index substrate and states that strong inhibitors increase the AUC of sensitive index substrates ≥5-fold.",
+          "url": "https://www.fda.gov/drugs/drug-interactions-labeling/drug-development-and-drug-interactions-table-substrates-inhibitors-and-inducers"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -11976,24 +12050,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Digoxin (P-gp substrate) unchanged"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Idelalisib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. That result is a CYP3A probe. No changes in digoxin exposure (P-gp substrate) were observed. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, and unchanged digoxin is not a PK exposure increase.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Idelalisib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with idelalisib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
-      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here.",
+      "populationCaveats": "Do not apply the midazolam 5.4-fold AUC to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given a PK exposure increase with idelalisib. The midazolam fold stays on apixaban and rivaroxaban.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Digoxin exposure was unchanged. The midazolam result is CYP3A.",
+      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here. Unchanged digoxin is not an exposure increase.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12024,24 +12103,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Digoxin (P-gp substrate) unchanged"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Idelalisib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. ZYDELIG (effective 2026-09-10) increased midazolam mean Cmax 2.4-fold and mean AUC 5.4-fold. That result is a CYP3A probe. No changes in digoxin exposure (P-gp substrate) were observed. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, and unchanged digoxin is not a PK exposure increase.",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Idelalisib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with idelalisib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
-      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here.",
+      "populationCaveats": "Do not apply the midazolam 5.4-fold AUC to dabigatran or edoxaban. Do not invent a DOAC percent.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given a PK exposure increase with idelalisib. The midazolam fold stays on apixaban and rivaroxaban.",
+      "labelGuidance": "ZYDELIG section 12.3, effective 2026-09-10. Digoxin exposure was unchanged. The midazolam result is CYP3A.",
+      "uncertainty": "No dabigatran or edoxaban AUC with idelalisib is transcribed here. Unchanged digoxin is not an exposure increase.",
       "sources": [
+        {
+          "label": "ZYDELIG US prescribing information",
+          "citation": "Idelalisib. DailyMed setid efbdafa9-d18c-4e85-b4a2-1e620fc74e50. Effective 2026-09-10. Midazolam mean Cmax increased 2.4-fold and mean AUC 5.4-fold. Digoxin exposure unchanged. The label does not print strong for idelalisib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=efbdafa9-d18c-4e85-b4a2-1e620fc74e50"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12074,22 +12158,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 3.8-fold at 400 mg, predicted 5.2-fold at 600 mg)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists ribociclib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "KISQALI (effective 2026-07-01): ribociclib 400 mg once daily for 8 days increased midazolam Cmax 2.1-fold and AUCinf 3.8-fold. KISQALI 600 mg once daily is predicted to increase midazolam Cmax 2.4-fold and AUC 5.2-fold. Midazolam is the CYP3A4 probe, not a DOAC. Section 7.3 says the dose of a sensitive CYP3A substrate may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA product information, secondary to these US folds, says ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for ribociclib. The P-gp cell is blank. No CYP3A4 degree is stated.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No CYP3A4 degree is stated for ribociclib.",
+      "populationCaveats": "The 2.1-fold, 3.8-fold, 2.4-fold, and 5.2-fold figures are midazolam. The 600 mg result is predicted. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The folds are midazolam, not a DOAC dose. Dabigatran and edoxaban are not given that increase.",
+      "labelGuidance": "KISQALI section 12.3, effective 2026-07-01. Midazolam Cmax 2.1-fold and AUCinf 3.8-fold after 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. Section 7.3: the sensitive CYP3A substrate dose may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The US folds are the teaching. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA degree words are secondary and are not US label language. The 600 mg midazolam AUC is predicted. Table 3 glyph weight was not re-readable and is not the source of the folds.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
+        {
+          "label": "EMA Kisqali product information",
+          "citation": "EMA Kisqali product information. Ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. Secondary to the US fold-changes.",
+          "url": "https://www.ema.europa.eu/en/documents/product-information/kisqali-epar-product-information_en.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12122,22 +12216,32 @@ window.ANTICOAG_DDI = {
       "mechanisms": [
         "CYP3A4 inhibition"
       ],
-      "effectDirection": "↑ exposure (theoretical)",
+      "effectDirection": "↑ exposure (theoretical; midazolam AUC 3.8-fold at 400 mg, predicted 5.2-fold at 600 mg)",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "Theoretical increased exposure",
-          "signal": "Hellfritzsch Table 3 lists ribociclib as a CYP3A4 inhibitor only. The P-gp cell is blank (empty cell = no known effect). The downloaded file collapsed the mild, moderate, and strong glyphs, so no degree is stated. Theoretical increased exposure stays on apixaban and rivaroxaban. Dabigatran and edoxaban are not given that increase.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "KISQALI (effective 2026-07-01): ribociclib 400 mg once daily for 8 days increased midazolam Cmax 2.1-fold and AUCinf 3.8-fold. KISQALI 600 mg once daily is predicted to increase midazolam Cmax 2.4-fold and AUC 5.2-fold. Midazolam is the CYP3A4 probe, not a DOAC. Section 7.3 says the dose of a sensitive CYP3A substrate may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA product information, secondary to these US folds, says ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "No measured anticoagulant AUC for this pair is on this card. Do not invent an exposure percent. Table 3 is CYP3A4 only for ribociclib. The P-gp cell is blank. No CYP3A4 degree is stated.",
-      "practiceInterpretation": "Keep a theoretical exposure increase on apixaban and rivaroxaban. It is not extended to dabigatran or edoxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596. Degree of CYP3A4 inhibition is not stated because the glyph weight was not re-readable.",
-      "uncertainty": "No CYP3A4 degree is stated for ribociclib.",
+      "populationCaveats": "The 2.1-fold, 3.8-fold, 2.4-fold, and 5.2-fold figures are midazolam. The 600 mg result is predicted. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban because they are CYP3A4 substrates. The folds are midazolam, not a DOAC dose. Dabigatran and edoxaban are not given that increase.",
+      "labelGuidance": "KISQALI section 12.3, effective 2026-07-01. Midazolam Cmax 2.1-fold and AUCinf 3.8-fold after 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. Section 7.3: the sensitive CYP3A substrate dose may need to be reduced. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+      "uncertainty": "No measured DOAC AUC. The US folds are the teaching. The US label does not print strong or moderate for ribociclib as a perpetrator. EMA degree words are secondary and are not US label language. The 600 mg midazolam AUC is predicted. Table 3 glyph weight was not re-readable and is not the source of the folds.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
+        {
+          "label": "EMA Kisqali product information",
+          "citation": "EMA Kisqali product information. Ribociclib is a strong CYP3A4 inhibitor at the 600 mg dose and a moderate CYP3A4 inhibitor at the 400 mg dose. Secondary to the US fold-changes.",
+          "url": "https://www.ema.europa.eu/en/documents/product-information/kisqali-epar-product-information_en.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12168,24 +12272,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Low in vitro P-gp potential (not a clinical increase)"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Ribociclib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. KISQALI midazolam folds are a CYP3A4 probe (400 mg once daily for 8 days: Cmax 2.1-fold and AUCinf 3.8-fold; 600 mg once daily predicted: Cmax 2.4-fold and AUC 5.2-fold). Dabigatran and edoxaban are not meaningful CYP3A4 substrates. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. That in vitro line is not a clinical DOAC AUC.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Ribociclib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
+      "populationCaveats": "Do not apply the midazolam folds to dabigatran or edoxaban. Do not invent a DOAC percent. Low in vitro P-gp potential is not an exposure increase.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The midazolam folds stay on apixaban and rivaroxaban.",
+      "labelGuidance": "KISQALI, effective 2026-07-01. The midazolam study is CYP3A4. In vitro, ribociclib has a low potential to inhibit P-gp. Hellfritzsch Table 3 P-gp cell is blank.",
       "uncertainty": "No dabigatran or edoxaban AUC with ribociclib is transcribed here.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12216,24 +12325,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 inhibition only (P-gp blank)"
+        "Low in vitro P-gp potential (not a clinical increase)"
       ],
-      "effectDirection": "No exposure increase from this table",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
           "outcome": "No increased exposure taught",
-          "signal": "An exposure increase is not supported. Ribociclib is a CYP3A4 inhibitor only in Hellfritzsch Table 3 (doi:10.1055/s-0043-1762596). The P-gp cell is blank. Dabigatran and edoxaban are not meaningful CYP3A4 substrates, so this table does not support an exposure increase. Keep the theoretical increase on apixaban and rivaroxaban.",
-          "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. Table 3. doi:10.1055/s-0043-1762596",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. KISQALI midazolam folds are a CYP3A4 probe (400 mg once daily for 8 days: Cmax 2.1-fold and AUCinf 3.8-fold; 600 mg once daily predicted: Cmax 2.4-fold and AUC 5.2-fold). Dabigatran and edoxaban are not meaningful CYP3A4 substrates. In vitro, ribociclib has a low potential to inhibit P-gp at clinically relevant concentrations. Hellfritzsch Table 3 leaves the P-gp cell blank. That in vitro line is not a clinical DOAC AUC.",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Ribociclib’s Table 3 mark is CYP3A4 only. A blank P-gp cell is not an exposure increase for dabigatran or edoxaban.",
-      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The theoretical increase stays on apixaban and rivaroxaban.",
-      "labelGuidance": "Hellfritzsch Table 3, doi:10.1055/s-0043-1762596.",
+      "populationCaveats": "Do not apply the midazolam folds to dabigatran or edoxaban. Do not invent a DOAC percent. Low in vitro P-gp potential is not an exposure increase.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with ribociclib. The midazolam folds stay on apixaban and rivaroxaban.",
+      "labelGuidance": "KISQALI, effective 2026-07-01. The midazolam study is CYP3A4. In vitro, ribociclib has a low potential to inhibit P-gp. Hellfritzsch Table 3 P-gp cell is blank.",
       "uncertainty": "No dabigatran or edoxaban AUC with ribociclib is transcribed here.",
       "sources": [
+        {
+          "label": "KISQALI US prescribing information",
+          "citation": "Ribociclib. DailyMed setid aaeaef94-f3f5-4367-8ea2-b181d7be2da8. Effective 2026-07-01. Midazolam Cmax increased 2.1-fold and AUCinf 3.8-fold with 400 mg once daily for 8 days. Predicted at 600 mg once daily: Cmax 2.4-fold and AUC 5.2-fold. The US label does not print strong or moderate for ribociclib as a perpetrator.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=aaeaef94-f3f5-4367-8ea2-b181d7be2da8"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12264,24 +12378,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 / P-gp weak–moderate notes"
+        "CYP3A4 inhibition"
       ],
-      "effectDirection": "Uncertain PK direction",
+      "effectDirection": "↑ exposure (theoretical, weak CYP3A)",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Mechanism-based caution",
-          "signal": "Weaker perpetrator signals than ribociclib/enzalutamide in many tables — still verify PI; quantitative DOAC PK usually absent.",
-          "citation": "Semin Thromb Hemost 2023; AHA cardio-oncology / oral anticancer DDI reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Theoretical increased exposure",
+          "signal": "IBRANCE is a weak time-dependent inhibitor of CYP3A (FDA label revised 09/2025). In healthy subjects (N=26), midazolam AUCINF increased 61% and Cmax 37%. Midazolam is the CYP3A probe, not a DOAC. Intestinal P-gp inhibition is in vitro. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Choose DOAC with oncology pharmacist input; LMWH if interaction burden is high or bleed risk extreme. See cancer-VTE pathway #/pathway/cancer-vte.",
-      "labelGuidance": "Monitor/avoid patterns per PI and CAT DDI reviews — not automatic dose formulas without PK.",
-      "uncertainty": "Sparse clinical DDI outcome data in cancer patients on concurrent antineoplastics.",
+      "populationCaveats": "The 61% and 37% figures are midazolam. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban from weak CYP3A inhibition. The 61% figure is midazolam, not a DOAC.",
+      "labelGuidance": "IBRANCE label revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF +61% and Cmax +37%.",
+      "uncertainty": "No palbociclib–DOAC AUC is transcribed here. Moderate is not the labeled word.",
       "sources": [
+        {
+          "label": "IBRANCE US prescribing information",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12312,24 +12431,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 / P-gp weak–moderate notes"
+        "CYP3A4 inhibition"
       ],
-      "effectDirection": "Uncertain PK direction",
+      "effectDirection": "↑ exposure (theoretical, weak CYP3A)",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Mechanism-based caution",
-          "signal": "Weaker perpetrator signals than ribociclib/enzalutamide in many tables — still verify PI; quantitative DOAC PK usually absent.",
-          "citation": "Semin Thromb Hemost 2023; AHA cardio-oncology / oral anticancer DDI reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Theoretical increased exposure",
+          "signal": "IBRANCE is a weak time-dependent inhibitor of CYP3A (FDA label revised 09/2025). In healthy subjects (N=26), midazolam AUCINF increased 61% and Cmax 37%. Midazolam is the CYP3A probe, not a DOAC. Intestinal P-gp inhibition is in vitro. No DOAC AUC is on this card. The theoretical increase is for apixaban and rivaroxaban.",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Choose DOAC with oncology pharmacist input; LMWH if interaction burden is high or bleed risk extreme. See cancer-VTE pathway #/pathway/cancer-vte.",
-      "labelGuidance": "Monitor/avoid patterns per PI and CAT DDI reviews — not automatic dose formulas without PK.",
-      "uncertainty": "Sparse clinical DDI outcome data in cancer patients on concurrent antineoplastics.",
+      "populationCaveats": "The 61% and 37% figures are midazolam. Do not invent a DOAC percent.",
+      "practiceInterpretation": "A theoretical increase applies to apixaban and rivaroxaban from weak CYP3A inhibition. The 61% figure is midazolam, not a DOAC.",
+      "labelGuidance": "IBRANCE label revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF +61% and Cmax +37%.",
+      "uncertainty": "No palbociclib–DOAC AUC is transcribed here. Moderate is not the labeled word.",
       "sources": [
+        {
+          "label": "IBRANCE US prescribing information",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12360,24 +12484,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 / P-gp weak–moderate notes"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "Uncertain PK direction",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Mechanism-based caution",
-          "signal": "Weaker perpetrator signals than ribociclib/enzalutamide in many tables — still verify PI; quantitative DOAC PK usually absent.",
-          "citation": "Semin Thromb Hemost 2023; AHA cardio-oncology / oral anticancer DDI reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. IBRANCE weak CYP3A inhibition is a midazolam result (AUCINF increased 61%). Dabigatran and edoxaban are not meaningful CYP3A4 substrates. In vitro, palbociclib may inhibit intestinal P-gp; that line was not a clinical DOAC study.",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Choose DOAC with oncology pharmacist input; LMWH if interaction burden is high or bleed risk extreme. See cancer-VTE pathway #/pathway/cancer-vte.",
-      "labelGuidance": "Monitor/avoid patterns per PI and CAT DDI reviews — not automatic dose formulas without PK.",
-      "uncertainty": "Sparse clinical DDI outcome data in cancer patients on concurrent antineoplastics.",
+      "populationCaveats": "Do not apply the midazolam 61% figure to dabigatran or edoxaban.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with palbociclib. The weak CYP3A result stays on apixaban and rivaroxaban.",
+      "labelGuidance": "IBRANCE label revised 09/2025. Weak CYP3A inhibition is the midazolam study. Intestinal P-gp inhibition is in vitro.",
+      "uncertainty": "No dabigatran or edoxaban AUC with palbociclib is transcribed here.",
       "sources": [
+        {
+          "label": "IBRANCE US prescribing information",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12408,24 +12537,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 / P-gp weak–moderate notes"
+        "P-gp inhibition (in vitro only)"
       ],
-      "effectDirection": "Uncertain PK direction",
+      "effectDirection": "No firm exposure increase",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Mechanism-based caution",
-          "signal": "Weaker perpetrator signals than ribociclib/enzalutamide in many tables — still verify PI; quantitative DOAC PK usually absent.",
-          "citation": "Semin Thromb Hemost 2023; AHA cardio-oncology / oral anticancer DDI reviews",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "An exposure increase is not supported for dabigatran or edoxaban. IBRANCE weak CYP3A inhibition is a midazolam result (AUCINF increased 61%). Dabigatran and edoxaban are not meaningful CYP3A4 substrates. In vitro, palbociclib may inhibit intestinal P-gp; that line was not a clinical DOAC study.",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %.",
-      "practiceInterpretation": "Choose DOAC with oncology pharmacist input; LMWH if interaction burden is high or bleed risk extreme. See cancer-VTE pathway #/pathway/cancer-vte.",
-      "labelGuidance": "Monitor/avoid patterns per PI and CAT DDI reviews — not automatic dose formulas without PK.",
-      "uncertainty": "Sparse clinical DDI outcome data in cancer patients on concurrent antineoplastics.",
+      "populationCaveats": "Do not apply the midazolam 61% figure to dabigatran or edoxaban.",
+      "practiceInterpretation": "Dabigatran and edoxaban are not given an exposure increase with palbociclib. The weak CYP3A result stays on apixaban and rivaroxaban.",
+      "labelGuidance": "IBRANCE label revised 09/2025. Weak CYP3A inhibition is the midazolam study. Intestinal P-gp inhibition is in vitro.",
+      "uncertainty": "No dabigatran or edoxaban AUC with palbociclib is transcribed here.",
       "sources": [
+        {
+          "label": "IBRANCE US prescribing information",
+          "citation": "Palbociclib. FDA label 207103s023, revised 09/2025. Weak time-dependent CYP3A inhibitor. Midazolam AUCINF increased 61% and Cmax 37%.",
+          "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2025/207103s023lbl.pdf"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12712,25 +12846,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 induction (dose-dependent)",
-        "P-gp induction possible"
+        "CYP3A4 induction"
       ],
       "effectDirection": "↓ exposure / ↓ efficacy concern",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Induction caution",
-          "signal": "Cancer-dose dexamethasone listed among CYP3A4 inducers in CAT–DOAC DDI tables — greatest practical concern for apixaban/rivaroxaban. Pulse/antiemetic schedules differ from chronic inducers like rifampin — judge dose and duration.",
-          "citation": "Semin Thromb Hemost 2023 CAT DDI tables",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Expected decreased exposure",
+          "signal": "Dexamethasone US labeling: dexamethasone is a moderate inducer of CYP3A4. Co-administration with drugs metabolized by CYP3A4 may increase their clearance and lower plasma concentration. The word moderate is on that label, not a Hellfritzsch glyph. The label does not describe P-gp induction. No DOAC AUC is on this card. The decreased-exposure direction is for apixaban and rivaroxaban. Pulse schedules and prolonged cancer doses are not separated by an AUC on this card.",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %. Short antiemetic courses may matter less than prolonged high-dose regimens — still document.",
-      "practiceInterpretation": "For prolonged cancer-dose dex with apixaban/rivaroxaban, reconsider DOAC choice or use LMWH if thrombosis risk is high and induction exposure is sustained.",
-      "labelGuidance": "Inducer caution — opposite clinical worry from inhibitor bleed risk.",
-      "uncertainty": "Schedule-dependent; no curated AUC for dex–DOAC pairs here.",
+      "populationCaveats": "Moderate is the dexamethasone label’s word for CYP3A4 induction. Do not invent a DOAC percent.",
+      "practiceInterpretation": "For prolonged cancer-dose dexamethasone, the CYP3A4-induction concern is lower apixaban or rivaroxaban exposure. LMWH is the teaching escape hatch when that interaction dominates.",
+      "labelGuidance": "Dexamethasone label: moderate CYP3A4 inducer. Opposite clinical worry from inhibitor-related bleeding.",
+      "uncertainty": "No curated dexamethasone–DOAC AUC. P-gp induction is not on the dexamethasone label.",
       "sources": [
+        {
+          "label": "Dexamethasone US prescribing information",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12763,25 +12901,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 induction (dose-dependent)",
-        "P-gp induction possible"
+        "CYP3A4 induction"
       ],
       "effectDirection": "↓ exposure / ↓ efficacy concern",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Induction caution",
-          "signal": "Cancer-dose dexamethasone listed among CYP3A4 inducers in CAT–DOAC DDI tables — greatest practical concern for apixaban/rivaroxaban. Pulse/antiemetic schedules differ from chronic inducers like rifampin — judge dose and duration.",
-          "citation": "Semin Thromb Hemost 2023 CAT DDI tables",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Expected decreased exposure",
+          "signal": "Dexamethasone US labeling: dexamethasone is a moderate inducer of CYP3A4. Co-administration with drugs metabolized by CYP3A4 may increase their clearance and lower plasma concentration. The word moderate is on that label, not a Hellfritzsch glyph. The label does not describe P-gp induction. No DOAC AUC is on this card. The decreased-exposure direction is for apixaban and rivaroxaban. Pulse schedules and prolonged cancer doses are not separated by an AUC on this card.",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %. Short antiemetic courses may matter less than prolonged high-dose regimens — still document.",
-      "practiceInterpretation": "For prolonged cancer-dose dex with apixaban/rivaroxaban, reconsider DOAC choice or use LMWH if thrombosis risk is high and induction exposure is sustained.",
-      "labelGuidance": "Inducer caution — opposite clinical worry from inhibitor bleed risk.",
-      "uncertainty": "Schedule-dependent; no curated AUC for dex–DOAC pairs here.",
+      "populationCaveats": "Moderate is the dexamethasone label’s word for CYP3A4 induction. Do not invent a DOAC percent.",
+      "practiceInterpretation": "For prolonged cancer-dose dexamethasone, the CYP3A4-induction concern is lower apixaban or rivaroxaban exposure. LMWH is the teaching escape hatch when that interaction dominates.",
+      "labelGuidance": "Dexamethasone label: moderate CYP3A4 inducer. Opposite clinical worry from inhibitor-related bleeding.",
+      "uncertainty": "No curated dexamethasone–DOAC AUC. P-gp induction is not on the dexamethasone label.",
       "sources": [
+        {
+          "label": "Dexamethasone US prescribing information",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12814,25 +12956,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 induction (dose-dependent)",
-        "P-gp induction possible"
+        "CYP3A4 induction does not apply"
       ],
-      "effectDirection": "Possible ↓ exposure (weaker CYP story)",
+      "effectDirection": "No firm exposure decrease",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Induction caution",
-          "signal": "Cancer-dose dexamethasone listed among CYP3A4 inducers in CAT–DOAC DDI tables — greatest practical concern for apixaban/rivaroxaban. Pulse/antiemetic schedules differ from chronic inducers like rifampin — judge dose and duration.",
-          "citation": "Semin Thromb Hemost 2023 CAT DDI tables",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "A decreased-exposure claim is not supported for dabigatran or edoxaban. Dexamethasone is a moderate CYP3A4 inducer on its US label. Dabigatran and edoxaban are not meaningful CYP3A4 substrates. The label does not describe P-gp induction. Decreased exposure remains the apixaban and rivaroxaban direction.",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %. Short antiemetic courses may matter less than prolonged high-dose regimens — still document.",
-      "practiceInterpretation": "For prolonged cancer-dose dex with apixaban/rivaroxaban, reconsider DOAC choice or use LMWH if thrombosis risk is high and induction exposure is sustained.",
-      "labelGuidance": "Inducer caution — opposite clinical worry from inhibitor bleed risk.",
-      "uncertainty": "Schedule-dependent; no curated AUC for dex–DOAC pairs here.",
+      "populationCaveats": "CYP3A4 induction on the dexamethasone label is not an exposure result for dabigatran or edoxaban.",
+      "practiceInterpretation": "Do not teach a dabigatran or edoxaban exposure decrease from dexamethasone CYP3A4 induction. That direction stays on apixaban and rivaroxaban.",
+      "labelGuidance": "Dexamethasone label: moderate CYP3A4 inducer. No P-gp induction sentence.",
+      "uncertainty": "No dabigatran or edoxaban AUC with dexamethasone is transcribed here.",
       "sources": [
+        {
+          "label": "Dexamethasone US prescribing information",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12865,25 +13011,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 induction (dose-dependent)",
-        "P-gp induction possible"
+        "CYP3A4 induction does not apply"
       ],
-      "effectDirection": "Possible ↓ exposure (weaker CYP story)",
+      "effectDirection": "No firm exposure decrease",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Induction caution",
-          "signal": "Cancer-dose dexamethasone listed among CYP3A4 inducers in CAT–DOAC DDI tables — greatest practical concern for apixaban/rivaroxaban. Pulse/antiemetic schedules differ from chronic inducers like rifampin — judge dose and duration.",
-          "citation": "Semin Thromb Hemost 2023 CAT DDI tables",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "No firm exposure change",
+          "signal": "A decreased-exposure claim is not supported for dabigatran or edoxaban. Dexamethasone is a moderate CYP3A4 inducer on its US label. Dabigatran and edoxaban are not meaningful CYP3A4 substrates. The label does not describe P-gp induction. Decreased exposure remains the apixaban and rivaroxaban direction.",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %. Short antiemetic courses may matter less than prolonged high-dose regimens — still document.",
-      "practiceInterpretation": "For prolonged cancer-dose dex with apixaban/rivaroxaban, reconsider DOAC choice or use LMWH if thrombosis risk is high and induction exposure is sustained.",
-      "labelGuidance": "Inducer caution — opposite clinical worry from inhibitor bleed risk.",
-      "uncertainty": "Schedule-dependent; no curated AUC for dex–DOAC pairs here.",
+      "populationCaveats": "CYP3A4 induction on the dexamethasone label is not an exposure result for dabigatran or edoxaban.",
+      "practiceInterpretation": "Do not teach a dabigatran or edoxaban exposure decrease from dexamethasone CYP3A4 induction. That direction stays on apixaban and rivaroxaban.",
+      "labelGuidance": "Dexamethasone label: moderate CYP3A4 inducer. No P-gp induction sentence.",
+      "uncertainty": "No dabigatran or edoxaban AUC with dexamethasone is transcribed here.",
       "sources": [
+        {
+          "label": "Dexamethasone US prescribing information",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",
@@ -12916,24 +13066,29 @@ window.ANTICOAG_DDI = {
         "cancer drug"
       ],
       "mechanisms": [
-        "CYP3A4 induction (dose-dependent)"
+        "Corticosteroid effect on warfarin response"
       ],
-      "effectDirection": "↓ INR risk if induction dominates",
+      "effectDirection": "Usually less warfarin response; reports conflict",
       "pkEffects": [],
       "clinicalEffects": [
         {
-          "outcome": "Induction caution",
-          "signal": "Cancer-dose dexamethasone listed among CYP3A4 inducers in CAT–DOAC DDI tables — greatest practical concern for apixaban/rivaroxaban. Pulse/antiemetic schedules differ from chronic inducers like rifampin — judge dose and duration.",
-          "citation": "Semin Thromb Hemost 2023 CAT DDI tables",
-          "url": "https://doi.org/10.1055/s-0043-1762596"
+          "outcome": "Warfarin response usually inhibited",
+          "signal": "Dexamethasone labeling, anticoagulants, oral: co-administration of corticosteroids and warfarin usually results in inhibition of response to warfarin, although there have been some conflicting reports. Coagulation indices should be monitored frequently. That is not a DOAC exposure sentence and not an INR target. The same label calls dexamethasone a moderate CYP3A4 inducer for CYP3A4 substrates.",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
         }
       ],
       "evidenceGrade": "Label/extrapolation",
-      "populationCaveats": "Quantitative DOAC victim AUC for this pair not identified in curated sources — mechanism + label/review teaching only. Do not invent exposure %. Short antiemetic courses may matter less than prolonged high-dose regimens — still document.",
-      "practiceInterpretation": "For prolonged cancer-dose dex with apixaban/rivaroxaban, reconsider DOAC choice or use LMWH if thrombosis risk is high and induction exposure is sustained.",
-      "labelGuidance": "Inducer caution — opposite clinical worry from inhibitor bleed risk.",
-      "uncertainty": "Schedule-dependent; no curated AUC for dex–DOAC pairs here.",
+      "populationCaveats": "The warfarin sentence is the corticosteroid label, including the conflicting reports. Do not invent an INR change.",
+      "practiceInterpretation": "Teach the labeled warfarin sentence: response is usually inhibited, reports conflict, and coagulation indices are monitored. Decreased CYP3A4-substrate exposure remains the apixaban and rivaroxaban direction. No INR target is on this card.",
+      "labelGuidance": "Dexamethasone label, oral anticoagulants section. The label says coagulation indices.",
+      "uncertainty": "Conflicting reports are part of the label sentence. No warfarin AUC percent is transcribed here.",
       "sources": [
+        {
+          "label": "Dexamethasone US prescribing information",
+          "citation": "Dexamethasone. DailyMed setid 537b424a-3e07-4c81-978c-1ad99014032a. Moderate CYP3A4 inducer. Corticosteroids and warfarin: usually inhibition of response, with conflicting reports.",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=537b424a-3e07-4c81-978c-1ad99014032a"
+        },
         {
           "label": "Semin Thromb Hemost 2023 — DOAC DDIs in CAT",
           "citation": "Hellfritzsch M, et al. Semin Thromb Hemost. 2023 DOI 10.1055/s-0043-1762596.",

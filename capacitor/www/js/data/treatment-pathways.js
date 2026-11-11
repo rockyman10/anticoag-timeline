@@ -3,7 +3,7 @@ window.ANTICOAG_TX_PATHWAYS = {
   "meta": {
     "title": "Interactive treatment pathways",
     "disclaimer": "Educational algorithms — not institutional protocols or medical advice. Verify guidelines, labels, and local pathways. NNTs shown only when derived from published absolute rates on this site’s trial cards; otherwise omitted.",
-    "version": "2026-09-23"
+    "version": "2026-10-07"
   },
   "pathways": [
     {
@@ -74,9 +74,9 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "af-vka-valve",
           "type": "recommendation",
-          "title": "Use dose-adjusted warfarin (VKA)",
-          "body": "Target INR per valve/guideline; do not switch to a DOAC for stroke prevention in this niche.",
-          "why": "ACC/AHA valvular heart disease guideline Class 1 (verify current table) for mechanical valves / moderate–severe MS.",
+          "title": "Dose-adjusted warfarin is what this niche’s evidence uses",
+          "body": "Mechanical valves and moderate–severe mitral stenosis sat outside the pivotal DOAC AF trials. The 2020 ACC/AHA valvular heart disease guideline lists VKA anticoagulation (dose-adjusted warfarin) for mechanical valves and for AF with rheumatic mitral stenosis, with the INR target from the guideline's valve table. A switch to a DOAC is outside that evidence.",
+          "why": "2020 ACC/AHA valvular heart disease guideline: VKA is Class 1 for mechanical valves and for AF with rheumatic mitral stenosis (verify the current table).",
           "evidence": [],
           "caveats": [
             "DOAC trials do not apply here"
@@ -113,7 +113,18 @@ window.ANTICOAG_TX_PATHWAYS = {
             }
           ],
           "caveats": [],
-          "links": [],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "alone-af",
+              "label": "Trial: ALONE-AF (after ablation)"
+            },
+            {
+              "kind": "trial",
+              "id": "ocean",
+              "label": "Trial: OCEAN (after ablation)"
+            }
+          ],
           "choices": [
             {
               "label": "OAC clearly indicated (elevated score)",
@@ -244,13 +255,19 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "af-doac-pick",
           "type": "recommendation",
-          "title": "Prescribe labeled-dose DOAC; verify dose-reduction criteria",
-          "body": "Apixaban, rivaroxaban, edoxaban, or dabigatran per label, renal function, and DDIs. Do not under-dose 'for safety' without meeting criteria.",
-          "why": "ARISTOTLE supports apixaban efficacy + bleed profile; all four agents are guideline options.",
+          "title": "Labeled-dose DOAC",
+          "body": "Apixaban, rivaroxaban, edoxaban, or dabigatran per label, renal function, and DDIs. Labels describe a lower dose when their dose-reduction criteria are met. The U.S. SAVAYSA label's boxed warning, titled 'Reduced efficacy in nonvalvular atrial fibrillation patients with CrCL > 95 mL/min', states that SAVAYSA 'should not be used in patients with CrCL > 95 mL/min', because, in the ENGAGE AF-TIMI 48 subgroup with CrCl above 95 mL/min, ischemic stroke was higher with edoxaban 60 mg than with warfarin (0.9% vs 0.4% per year; HR 2.16; 95% CI 1.17–3.97). In the label's indicated population (CrCl ≤ 95 mL/min), stroke or systemic embolic event was 1.2% vs 1.8% per year (HR 0.68; 95% CI 0.55–0.84). ENGAGE AF-TIMI 48 was noninferior overall.",
+          "why": "ARISTOTLE supports apixaban efficacy + bleed profile; all four agents are guideline options. The U.S. label's boxed warning is the edoxaban high-CrCl limit.",
+          "graphicId": "g-engage-crcl",
           "evidence": [
             {
               "trial": "aristotle",
-              "effect": "First-line apixaban option in eligible NVAF"
+              "effect": "ARISTOTLE compared apixaban with warfarin in eligible NVAF"
+            },
+            {
+              "trial": "engage-af",
+              "effect": "U.S. label Table 14.2 subgroup, CrCl > 95 mL/min: ischemic stroke 0.9% vs 0.4% per year (HR 2.16; 95% CI 1.17–3.97); stroke or systemic embolic event 1.0% vs 0.6% per year (HR 1.87; 95% CI 1.10–3.17). Indicated population (CrCl ≤ 95 mL/min): stroke or systemic embolic event 1.2% vs 1.8% per year (HR 0.68; 95% CI 0.55–0.84)",
+              "note": "SAVAYSA label, DailyMed set id e77d3400-56ad-11e3-949a-0800200c9a66, label version 28, effective 10 July 2025 (Table 14.2 unchanged since version 26), section 14.1. Subgroup rows, not the overall rate on the ENGAGE AF-TIMI 48 card."
             }
           ],
           "caveats": [
@@ -263,6 +280,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "trial",
               "id": "aristotle",
               "label": "ARISTOTLE"
+            },
+            {
+              "kind": "trial",
+              "id": "engage-af",
+              "label": "ENGAGE AF-TIMI 48"
             },
             {
               "kind": "page",
@@ -363,6 +385,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "label": "CHAMPION-AF"
             },
             {
+              "kind": "trial",
+              "id": "closure-af",
+              "label": "Trial: CLOSURE-AF"
+            },
+            {
               "kind": "framework",
               "id": "laao-vs-oac",
               "label": "LAAO framework"
@@ -384,13 +411,19 @@ window.ANTICOAG_TX_PATHWAYS = {
           "evidence": [],
           "caveats": [
             "Verify current US/EU label for the chosen agent — do not invent cutoffs",
-            "Severe CKD may push toward warfarin or agent-specific labeled options"
+            "Severe CKD may push toward warfarin or agent-specific labeled options",
+            "On dialysis, the randomized apixaban-vs-VKA evidence is two small, underpowered trials. See the AF-on-dialysis framework before calling either agent safer."
           ],
           "links": [
             {
               "kind": "case",
               "id": "af-renal-bleed",
               "label": "Case: AF + CKD"
+            },
+            {
+              "kind": "framework",
+              "id": "dialysis-af",
+              "label": "Framework: AF on dialysis"
             },
             {
               "kind": "trial",
@@ -553,7 +586,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "af-end",
           "type": "end",
           "title": "Pathway complete — AF stroke prevention",
-          "body": "Document indication, agent/dose, renal function, DDIs, and follow-up. Educational only — verify local protocols.",
+          "body": "The close of this pathway names indication, agent/dose, renal function, DDIs, and follow-up.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -791,8 +824,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "vte-apix",
           "type": "recommendation",
-          "title": "Apixaban 10 mg BID × 7 d → 5 mg BID",
-          "body": "Counsel load→maintenance calendar; verify renal/hepatic labels.",
+          "title": "AMPLIFY used apixaban 10 mg twice daily for 7 days, then 5 mg twice daily",
+          "body": "The trial’s load-then-maintenance calendar is what the evidence used. Renal and hepatic limits come from the label.",
           "why": "",
           "evidence": [
             {
@@ -824,8 +857,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "vte-riva",
           "type": "recommendation",
-          "title": "Rivaroxaban 15 mg BID × 21 d → 20 mg daily with food",
-          "body": "Food counseling is part of the prescription for 15/20 mg doses.",
+          "title": "EINSTEIN used rivaroxaban 15 mg twice daily for 3 weeks, then 20 mg once daily",
+          "body": "",
           "why": "",
           "evidence": [
             {
@@ -860,8 +893,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "vte-edo",
           "type": "recommendation",
-          "title": "Parenteral heparin ≥5 days → edoxaban 60/30 mg daily",
-          "body": "Not a single-drug start from diagnosis in the pivotal design.",
+          "title": "Hokusai-VTE used parenteral heparin for at least 5 days, then edoxaban 60 mg or 30 mg daily",
+          "body": "That program was not a single-drug start from diagnosis.",
           "why": "",
           "evidence": [
             {
@@ -943,7 +976,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "vte-end",
           "type": "end",
           "title": "Pathway complete — acute VTE",
-          "body": "Educational only. Verify dosing, renal cutoffs, and cancer screening as indicated.",
+          "body": "The close of this pathway names dosing, renal cutoffs, and cancer screening.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -1230,7 +1263,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "cat-end",
           "type": "end",
           "title": "Pathway complete — cancer VTE",
-          "body": "Reassess at cancer transitions. Educational only.",
+          "body": "The close of this pathway names cancer transitions as the reassessment point.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -1752,6 +1785,372 @@ window.ANTICOAG_TX_PATHWAYS = {
       ]
     },
     {
+      "id": "oac-antiplatelet-deprescribe",
+      "title": "OAC + antiplatelet: when to stop the antiplatelet",
+      "indication": "Patient on oral anticoagulation who is also taking an antiplatelet",
+      "summary": "Why is the antiplatelet there? Recent ACS/PCI, medically managed ACS, stable coronary disease beyond 12 months, prior stent thrombosis, or no clear indication.",
+      "guidelineSources": [
+        {
+          "society": "ACC/AHA",
+          "note": "2023 AF guideline: Class 1, LOE B-R — OAC monotherapy over OAC plus single antiplatelet in AF with chronic coronary disease beyond 1 year after revascularization (or CAD not requiring revascularization) without a history of stent thrombosis"
+        },
+        {
+          "society": "ESC",
+          "note": "2024 AF guidelines: Class III, LOE B — antiplatelet therapy beyond 12 months not recommended in stable chronic coronary or vascular disease treated with OAC"
+        },
+        {
+          "society": "ESC",
+          "note": "2024 CCS guidelines: Class I, LOE B — AF-dose VKA alone or, preferably, DOAC alone lifelong in CCS with a long-term OAC indication"
+        },
+        {
+          "society": "ESC",
+          "note": "2023 ACS guidelines: Class IIa, LOE B — single antiplatelet plus OAC for up to 1 year in medically managed patients requiring anticoagulation"
+        }
+      ],
+      "startNodeId": "dap-start",
+      "nodes": [
+        {
+          "id": "dap-start",
+          "type": "start",
+          "title": "Start: On an anticoagulant and an antiplatelet",
+          "body": "A patient takes oral anticoagulation (for AF or VTE) plus aspirin or a P2Y12 inhibitor. Before anything changes, the walk names why the antiplatelet was started, when, and by whom.",
+          "why": "Combination therapy is often continued by inertia long after the reason for it has passed. Each added antithrombotic adds bleeding risk.",
+          "evidence": [],
+          "caveats": [
+            "Mechanical valves and other VKA-only niches are outside this walk.",
+            "Antiplatelet therapy without any anticoagulant (for example DAPT after PCI in sinus rhythm) is not this question."
+          ],
+          "links": [
+            {
+              "kind": "tx",
+              "id": "af-pci",
+              "label": "TX: AF + PCI dual pathway"
+            },
+            {
+              "kind": "framework",
+              "id": "doac-appropriateness",
+              "label": "Framework: DOAC appropriateness"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Continue — why is the antiplatelet there?",
+              "nextNodeId": "dap-why"
+            }
+          ]
+        },
+        {
+          "id": "dap-why",
+          "type": "question",
+          "title": "What is the documented reason for the antiplatelet?",
+          "body": "Pick the branch that matches the record. If nobody can find a reason, use the last branch.",
+          "why": "The evidence differs sharply by indication: early after ACS or PCI the antiplatelet is part of a time-limited plan; in stable disease beyond 12 months, or with no vascular indication, it mostly adds bleeding.",
+          "evidence": [],
+          "caveats": [],
+          "links": [],
+          "choices": [
+            {
+              "label": "ACS or PCI within the past 12 months",
+              "nextNodeId": "dap-recent"
+            },
+            {
+              "label": "ACS managed medically (no PCI)",
+              "nextNodeId": "dap-medical-acs"
+            },
+            {
+              "label": "Stable coronary disease: beyond 12 months after revascularization, or CAD not needing revascularization",
+              "nextNodeId": "dap-ccs"
+            },
+            {
+              "label": "History of stent thrombosis",
+              "nextNodeId": "dap-st"
+            },
+            {
+              "label": "No clear vascular indication / legacy aspirin",
+              "nextNodeId": "dap-legacy"
+            }
+          ]
+        },
+        {
+          "id": "dap-recent",
+          "type": "caution",
+          "title": "Recent ACS or PCI: use the AF + PCI dual pathway",
+          "body": "Within the first year after ACS or PCI, the antiplatelet is part of a planned, time-limited sequence: brief triple therapy, then OAC plus a P2Y12 inhibitor, then OAC alone. Walk the AF + PCI pathway for that window. ESC CCS 2024 (Class I, LOE A) after uncomplicated PCI: early aspirin cessation (≤1 week), OAC plus clopidogrel up to 6 months if not at high ischaemic risk or up to 12 months if at high ischaemic risk, then OAC alone. ESC ACS 2023 (Class I, LOE B): discontinuation of antiplatelet treatment in patients on OAC is recommended after 12 months.",
+          "why": "Of the four DOAC dual-therapy trials, three showed significantly less bleeding with dual than triple therapy; ENTRUST-AF PCI was noninferior, not superior. Pooled, they also showed a stent thrombosis signal (Gargiulo 2019 RR 1.59; 95% CI 1.01–2.50), which is why the early window is planned, not skipped.",
+          "evidence": [
+            {
+              "trial": "augustus",
+              "effect": "ISTH major or CRNM bleeding: apixaban 10.5% vs VKA 14.7% (HR 0.69); aspirin 16.1% vs placebo 9.0% (HR 1.89), all on a P2Y12 inhibitor, 6 months"
+            },
+            {
+              "trial": "pioneer-af-pci",
+              "effect": "Clinically significant bleeding 16.8% and 18.0% (rivaroxaban strategies) vs 26.7% (VKA triple)"
+            },
+            {
+              "trial": "re-dual-pci",
+              "effect": "ISTH major or CRNM bleeding: lower-dose dabigatran dual 15.4% vs triple 26.9%; higher-dose dabigatran dual 20.2% vs corresponding triple 25.7%"
+            },
+            {
+              "trial": "entrust-af-pci",
+              "effect": "ISTH major or CRNM bleeding 17% vs 20% (HR 0.83; noninferior, not superior); ischemic composite 49/751 vs 46/755 events"
+            }
+          ],
+          "caveats": [
+            "Trial doses are trial regimens, not orders.",
+            "Pooled stent thrombosis risk was higher with dual than triple therapy in the Gargiulo meta-analysis (RR 1.59) — complex PCI may justify a longer aspirin window; document why."
+          ],
+          "links": [
+            {
+              "kind": "tx",
+              "id": "af-pci",
+              "label": "TX: AF + PCI dual pathway"
+            },
+            {
+              "kind": "nuance",
+              "id": "dual-pathway-duration",
+              "label": "Nuance: Dual-pathway duration"
+            },
+            {
+              "kind": "case",
+              "id": "af-pci-week2",
+              "label": "Case: AF + PCI week 2"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Past the planned dual-therapy window — review for OAC alone",
+              "nextNodeId": "dap-ccs"
+            },
+            {
+              "label": "Done",
+              "nextNodeId": "dap-end"
+            }
+          ]
+        },
+        {
+          "id": "dap-medical-acs",
+          "type": "caution",
+          "title": "ACS managed medically: guideline support exists, but the trial evidence has limits",
+          "body": "ESC ACS 2023 (Class IIa, LOE B): “In patients requiring anticoagulation and treated medically, a single antiplatelet agent in addition to an OAC should be considered for up to 1 year.” The guideline body text says “for at least 6 months”; quote the table wording and do not merge the two. Neither the 2023 ACC/AHA/ACCP/HRS AF guideline nor the 2024 ESC AF guideline has a recommendation specific to medically managed ACS.",
+          "why": "AUGUSTUS enrolled 1097 medically managed ACS patients (23.9% of the trial). Every patient was on a P2Y12 inhibitor and there was no OAC-alone arm. So it shows that aspirin adds bleeding and that apixaban bleeds less than VKA on a P2Y12 background — it does not show that dual therapy beats OAC alone.",
+          "evidence": [
+            {
+              "trial": "augustus",
+              "effect": "Medically managed ACS subgroup: ISTH major or CRNM bleeding apixaban vs VKA HR 0.44 (95% CI 0.28–0.68); death or hospitalization HR 0.71 (0.54–0.92); aspirin vs placebo bleeding HR 1.49 (0.98–2.26)",
+              "note": "Prespecified subgroup (Windecker, Circulation 2019, abstract). Death and ischemic subgroup HRs are not printed and are not shown. 6-month follow-up."
+            },
+            {
+              "trial": "augustus",
+              "effect": "ACS without PCI, 6-month ISTH major or CRNM bleeding: 3.4% apixaban + placebo, 7.6% apixaban + aspirin, 11.2% VKA + placebo, 13.3% VKA + aspirin",
+              "note": "Post hoc 4-way comparison (Berwanger, JACC 2024); hypothesis-generating, small groups (273–276 per arm)."
+            }
+          ],
+          "caveats": [
+            "No OAC-alone arm in AUGUSTUS — the question “antiplatelet or not” after medically managed ACS is untested.",
+            "The subgroup was not powered for ischemic end points.",
+            "The aspirin-vs-placebo bleeding CI crosses 1 in this subgroup (0.98–2.26)."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "augustus",
+              "label": "Trial: AUGUSTUS"
+            },
+            {
+              "kind": "tx",
+              "id": "af-pci",
+              "label": "TX: AF + PCI dual pathway"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Beyond 12 months and stable — review for OAC alone",
+              "nextNodeId": "dap-ccs"
+            },
+            {
+              "label": "Done",
+              "nextNodeId": "dap-end"
+            }
+          ]
+        },
+        {
+          "id": "dap-ccs",
+          "type": "recommendation",
+          "title": "Stable coronary disease beyond 12 months: guidelines favor OAC alone",
+          "body": "ACC/AHA 2023 (Class 1, LOE B-R): in AF with chronic coronary disease beyond 1 year after revascularization, or CAD not requiring revascularization, without history of stent thrombosis, oral anticoagulation monotherapy is recommended over OAC plus a single antiplatelet to decrease major bleeding. ESC AF 2024 (Class III, LOE B): antiplatelet therapy beyond 12 months is not recommended in stable chronic coronary or vascular disease on OAC. ESC CCS 2024 (Class I, LOE B): VKA alone or, preferably, DOAC alone lifelong. These statements concern stopping the antiplatelet, a step discussed with the prescriber or cardiologist; none of them supports stopping the anticoagulant.",
+          "why": "Adding an antiplatelet significantly increased bleeding in AFIRE, EPIC-CAD, ADAPT AF-DES, and AQUATIC (numerical only in OAC-ALONE), with no ischemic benefit in any. AQUATIC, the only double-blind trial, found harm with aspirin.",
+          "evidence": [
+            {
+              "trial": "aquatic",
+              "effect": "Aspirin vs placebo on long-term OAC, stent more than 6 months old: ischemic composite 16.9% vs 12.1% (aHR 1.53); all-cause death 13.4% vs 8.4% (aHR 1.72); major bleeding 10.2% vs 3.4% (aHR 3.35)",
+              "note": "Double-blind; stopped early for excess death with aspirin (median 2.2 years). The abstract describes long-term OAC without naming the agent."
+            },
+            {
+              "trial": "epic-cad",
+              "effect": "Net composite 6.8% vs 16.2% (HR 0.44); major or CRNM bleeding 4.7% vs 14.2% (HR 0.34); major ischemic events “appeared to be similar”",
+              "note": "Edoxaban alone vs edoxaban + single antiplatelet; open-label; 12 months."
+            },
+            {
+              "trial": "adapt-af-des",
+              "effect": "Net adverse clinical events 9.6% vs 17.2% (HR 0.54); major or CRNM bleeding 5.2% vs 13.2% (HR 0.38)",
+              "note": "DOAC alone vs DOAC + clopidogrel, drug-eluting stent at least 1 year old; open-label; 12 months."
+            },
+            {
+              "trial": "afire",
+              "effect": "Net adverse clinical events HR 0.62 (0.47–0.82); ISTH major bleeding HR 0.59 (0.39–0.89); efficacy noninferior (HR 0.72)",
+              "note": "Rivaroxaban alone vs rivaroxaban + antiplatelet; open-label; stopped early for higher all-cause death on combination therapy."
+            },
+            {
+              "trial": "oac-alone",
+              "effect": "Death, MI, stroke, or systemic embolism 15.7% vs 13.6% (HR 1.16; 0.79–1.72); noninferiority not met; major bleeding 7.8% vs 10.4%",
+              "note": "Underpowered (696 of 2000 planned), mostly warfarin — inconclusive, not contrary."
+            }
+          ],
+          "caveats": [
+            "Pooled (Galli 2026, 6 RCTs, n=5924): major bleeding HR 0.46 (0.32–0.66) with OAC alone; MACE HR 0.85 (0.66–1.09 in the full text; the abstract prints 0.64–1.09), not significant; all-cause death not significant. Pooled GRADE: high certainty that OAC alone reduced any bleeding (the pooled primary safety endpoint); moderate certainty for no difference in MACE.",
+            "Do not teach that OAC alone reduces mortality: AFIRE and AQUATIC each stopped early for excess death with combination therapy, but pooled cardiovascular-death findings are inconsistent and pooled all-cause death is not significant in any meta-analysis.",
+            "About 85% of pooled patients were East Asian; most trials were open-label; AQUATIC is the only European trial.",
+            "No guideline yet incorporates EPIC-CAD, AQUATIC (2025), or ADAPT AF-DES (2026)."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "aquatic",
+              "label": "Trial: AQUATIC"
+            },
+            {
+              "kind": "trial",
+              "id": "epic-cad",
+              "label": "Trial: EPIC-CAD"
+            },
+            {
+              "kind": "trial",
+              "id": "adapt-af-des",
+              "label": "Trial: ADAPT AF-DES"
+            },
+            {
+              "kind": "trial",
+              "id": "afire",
+              "label": "Trial: AFIRE"
+            },
+            {
+              "kind": "trial",
+              "id": "oac-alone",
+              "label": "Trial: OAC-ALONE"
+            }
+          ],
+          "choices": [
+            {
+              "label": "But there is a history of stent thrombosis",
+              "nextNodeId": "dap-st"
+            },
+            {
+              "label": "Done",
+              "nextNodeId": "dap-end"
+            }
+          ]
+        },
+        {
+          "id": "dap-st",
+          "type": "caution",
+          "title": "History of stent thrombosis: specialist exception",
+          "body": "The ACC/AHA OAC-monotherapy recommendation explicitly excludes patients with a history of stent thrombosis, and AFIRE excluded them. The trials do not answer this group's question. Keep the antiplatelet decision with the treating cardiologist, and document the reason and a planned review date.",
+          "why": "The ACC/AHA supportive text lists “previous history of stent thrombosis” among the features that make the perceived risk of stent thrombosis high (in the early post-PCI aspirin discussion).",
+          "evidence": [],
+          "caveats": [
+            "This is not a license for indefinite combination therapy — it is a reason for an individualized, documented specialist plan.",
+            "Bleeding risk still rises with every added antithrombotic; revisit the plan if bleeding occurs."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "afire",
+              "label": "Trial: AFIRE (excluded prior stent thrombosis)"
+            },
+            {
+              "kind": "tx",
+              "id": "af-pci",
+              "label": "TX: AF + PCI dual pathway"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Done",
+              "nextNodeId": "dap-end"
+            }
+          ]
+        },
+        {
+          "id": "dap-legacy",
+          "type": "recommendation",
+          "title": "No clear vascular indication or legacy aspirin: discuss stopping it with the prescriber",
+          "body": "When no one can name a current reason for the aspirin (no recent ACS or stent, no specialist plan), flag it at the DOAC review and raise it with the prescriber who owns the antiplatelet. The patient should not stop it on their own, and the anticoagulant stays.",
+          "why": "In a Michigan registry of DOAC patients for AF or VTE (Schaefer, JAMA Intern Med 2021), 1107 of 3280 (33.8%) were also on aspirin without a clear indication. In the propensity-matched cohort (1047 vs 1047), any bleeding was 31.60 vs 26.00 per 100 patient-years (P=.009), and bleeding hospitalization 8.20 vs 5.30 (P=.006). Major bleeding (4.95 vs 3.59; P=.09) and thrombosis (2.50 vs 2.30; P=.80) were not significantly different.",
+          "evidence": [],
+          "caveats": [
+            "Schaefer 2021 is observational; residual confounding is possible. Major bleeding was not significantly different — do not overclaim it.",
+            "Excluding anyone with MI, CAD, PAD, or prior PCI/CABG, bleeding was “similarly elevated” but no longer statistically significant.",
+            "ORBIT-AF (mostly warfarin): OAC + aspirin vs OAC alone, adjusted major bleeding HR 1.53 (1.20–1.96) over 6 months; 39% of the aspirin group had no atherosclerotic disease.",
+            "If a remote stent or CAD turns up in the history, switch to the stable coronary disease branch."
+          ],
+          "links": [
+            {
+              "kind": "case",
+              "id": "doac-legacy-aspirin",
+              "label": "Case: DOAC with legacy aspirin"
+            },
+            {
+              "kind": "framework",
+              "id": "doac-appropriateness",
+              "label": "Framework: DOAC appropriateness"
+            },
+            {
+              "kind": "ddi",
+              "id": "aspirin",
+              "label": "Aspirin DDI card"
+            }
+          ],
+          "choices": [
+            {
+              "label": "History shows stable coronary disease after all",
+              "nextNodeId": "dap-ccs"
+            },
+            {
+              "label": "Done",
+              "nextNodeId": "dap-end"
+            }
+          ]
+        },
+        {
+          "id": "dap-end",
+          "type": "end",
+          "title": "Pathway complete — OAC + antiplatelet review",
+          "body": "Record the indication for each antithrombotic, its planned stop point, and who owns the decision. Re-ask the question at every DOAC review.",
+          "why": "",
+          "evidence": [],
+          "caveats": [],
+          "links": [
+            {
+              "kind": "tx",
+              "id": "af-pci",
+              "label": "TX: AF + PCI dual pathway"
+            },
+            {
+              "kind": "case",
+              "id": "doac-legacy-aspirin",
+              "label": "Case: DOAC with legacy aspirin"
+            },
+            {
+              "kind": "framework",
+              "id": "doac-appropriateness",
+              "label": "Framework: DOAC appropriateness"
+            }
+          ],
+          "choices": []
+        }
+      ]
+    },
+    {
       "id": "intermediate-pe",
       "title": "Intermediate-risk PE — CDT vs anticoagulation",
       "indication": "Acute PE without shock",
@@ -1882,6 +2281,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "tx",
               "id": "acute-vte",
               "label": "Acute VTE pathway"
+            },
+            {
+              "kind": "trial",
+              "id": "prepic2",
+              "label": "Trial: PREPIC2 (filter added to anticoagulation)"
             }
           ],
           "choices": [
@@ -2394,8 +2798,8 @@ window.ANTICOAG_TX_PATHWAYS = {
         {
           "id": "bld-vka",
           "type": "recommendation",
-          "title": "4F-PCC + IV vitamin K per ICH/major bleed bundle",
-          "body": "For warfarin major bleed / ICH: 4F-PCC plus IV vitamin K per institutional bundle. FFP is not first-line when 4F-PCC is available.",
+          "title": "Warfarin major-bleed teaching: 4F-PCC plus IV vitamin K",
+          "body": "Warfarin ICH and major-bleed bundles describe 4-factor PCC plus IV vitamin K. The 2020 ACC Expert Consensus Decision Pathway lists plasma as the fallback when 4F-PCC is not available.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -2522,7 +2926,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "bld-end",
           "type": "end",
           "title": "Pathway complete — DOAC bleed (U.S.)",
-          "body": "Verify institutional protocol. Educational only.",
+          "body": "The close of this pathway points at the institutional protocol.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -2600,14 +3004,29 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "mv-doac-ban",
           "type": "caution",
           "title": "DOACs are contraindicated for mechanical valves",
-          "body": "Do not substitute a DOAC for warfarin in a mechanical prosthesis. Landmark DOAC AF/VTE trials excluded mechanical valves. Historical RE-ALIGN-era teaching (dabigatran vs warfarin in mechanical valves; trial not curated on this timeline) reinforced excess harm with a DOAC strategy — treat mechanical valves as VKA-only territory.",
+          "body": "Do not substitute a DOAC for warfarin in a mechanical prosthesis. Landmark DOAC AF/VTE trials excluded mechanical valves. RE-ALIGN stopped early after more ischemic or unspecified stroke and more major bleeding with dabigatran than with warfarin. PROACT Xa did not show apixaban noninferior to warfarin for an On-X mechanical aortic valve. Treat mechanical valves as VKA-only territory.",
           "why": "ACC/AHA valvular heart disease guideline Class 1 (verify current table) for VKA; DOAC labels and pivotal programs do not support mechanical valves.",
           "evidence": [],
           "caveats": [
-            "RE-ALIGN / PROACT-style valve programs are not trial cards on this site — cite primary literature if discussing them",
+            "Read the RE-ALIGN, PROACT, and PROACT Xa cards before quoting valve rates. PROACT is warfarin-based. PROACT Xa is apixaban and was stopped early.",
             "GALILEO addressed rivaroxaban after TAVR (bioprosthetic pathway), not mechanical valves"
           ],
           "links": [
+            {
+              "kind": "trial",
+              "id": "re-align",
+              "label": "RE-ALIGN"
+            },
+            {
+              "kind": "trial",
+              "id": "proact",
+              "label": "PROACT"
+            },
+            {
+              "kind": "trial",
+              "id": "proact-xa",
+              "label": "PROACT Xa"
+            },
             {
               "kind": "trial",
               "id": "galileo",
@@ -2686,7 +3105,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "recommendation",
           "title": "Typical teaching: INR 2.5–3.5 for mechanical mitral (and many higher-risk aortic)",
           "body": "Dose-adjusted warfarin to the higher guideline intensity appropriate for mitral position or higher-risk aortic prostheses. Coordinate cardiology/valve clinic follow-up.",
-          "why": "Mitral mechanical valves carry higher thromboembolic risk; guidelines generally recommend higher INR intensity than low-risk aortic bileaflet valves.",
+          "why": "Mitral mechanical valves carry higher thromboembolic risk; ACC/AHA and ESC valve guidelines set higher INR intensity than for low-risk aortic bileaflet valves.",
           "evidence": [],
           "caveats": [
             "Verify exact range for the implanted prosthesis and concurrent AF"
@@ -2704,13 +3123,25 @@ window.ANTICOAG_TX_PATHWAYS = {
           "type": "caution",
           "title": "On-X aortic lower-INR protocols are specialized — not a DOAC invitation",
           "body": "Selected On-X aortic pathways allow a lower INR target after an initial higher-intensity transition period, usually with aspirin, under protocol. This remains warfarin-based. It does not authorize a DOAC.",
-          "why": "PROACT-era On-X research (not a curated card on this site) informs manufacturer/guideline lower-INR options — follow the labeled protocol and surgical/cardiology ownership.",
+          "why": "The PROACT card reports the 2018 On-X lower-INR comparison. Follow the labeled protocol and surgical/cardiology ownership. PROACT Xa does not turn that pathway into a DOAC.",
           "evidence": [],
           "caveats": [
             "Not applicable to mitral On-X or off-label DOAC substitution",
-            "Confirm timing of transition phase and concomitant aspirin"
+            "Confirm timing of transition phase and concomitant aspirin",
+            "PROACT Xa tested apixaban in On-X aortic valves and did not meet noninferiority"
           ],
-          "links": [],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "proact",
+              "label": "PROACT"
+            },
+            {
+              "kind": "trial",
+              "id": "proact-xa",
+              "label": "PROACT Xa"
+            }
+          ],
           "choices": [
             {
               "label": "Peri-procedural / bridging considerations",
@@ -2741,6 +3172,11 @@ window.ANTICOAG_TX_PATHWAYS = {
               "label": "BRIDGE (AF — contrast)"
             },
             {
+              "kind": "tx",
+              "id": "peri-procedural-oac",
+              "label": "TX: Peri-procedural OAC (typical AF)"
+            },
+            {
               "kind": "page",
               "id": "ddi",
               "label": "DDI library"
@@ -2757,7 +3193,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "mv-end",
           "type": "end",
           "title": "Pathway complete — mechanical valve",
-          "body": "Document prosthesis, INR target, aspirin status, and who owns peri-procedural planning. Educational only.",
+          "body": "The close of this pathway names the prosthesis, the INR target, aspirin status, and who owns peri-procedural planning.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -2958,7 +3394,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "aps-end",
           "type": "end",
           "title": "Pathway complete — APS",
-          "body": "Document antibody profile, target INR, and specialty follow-up. Educational only.",
+          "body": "The close of this pathway names the antibody profile, the target INR, and specialty follow-up.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -3155,6 +3591,16 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "trial",
               "id": "voyager-pad",
               "label": "VOYAGER PAD"
+            },
+            {
+              "kind": "trial",
+              "id": "wave",
+              "label": "Trial: WAVE (INR-targeted anticoagulant in PAD)"
+            },
+            {
+              "kind": "trial",
+              "id": "waris-ii",
+              "label": "Trial: WARIS II (warfarin after MI, historical)"
             }
           ],
           "choices": [
@@ -3256,7 +3702,7 @@ window.ANTICOAG_TX_PATHWAYS = {
           "id": "cv-end",
           "type": "end",
           "title": "Pathway complete — COMPASS vascular",
-          "body": "Educational only. Verify label and local vascular pathways.",
+          "body": "The close of this pathway points at the product label and local vascular pathways.",
           "why": "",
           "evidence": [],
           "caveats": [],
@@ -3270,6 +3716,544 @@ window.ANTICOAG_TX_PATHWAYS = {
               "kind": "case",
               "id": "compass-vs-af-dose-trap",
               "label": "Case: COMPASS vs AF dose trap"
+            }
+          ],
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "peri-procedural-oac",
+      "title": "Peri-procedural OAC",
+      "indication": "Elective procedure on oral anticoagulation",
+      "summary": "Elective interruption and bridging teaching for typical AF and DOAC holds. BRIDGE anchors warfarin interruption; PAUSE anchors DOAC interruption. Mechanical-valve bridging stays on the valve pathway.",
+      "guidelineSources": [
+        {
+          "society": "ACC/AHA",
+          "note": "Periprocedural teaching aligned with the BRIDGE card: arterial thromboembolism 0.4% vs 0.3% (noninferior) and major bleeding 1.3% vs 3.2%; against routine LMWH bridging for warfarin interruption in typical AF"
+        },
+        {
+          "society": "CHEST",
+          "note": "Perioperative management aligned with no routine bridging for moderate-risk AF procedural interruptions"
+        }
+      ],
+      "startNodeId": "ppo-start",
+      "nodes": [
+        {
+          "id": "ppo-start",
+          "type": "start",
+          "title": "Start: Elective procedure, patient already on oral anticoagulation",
+          "body": "This walk is elective peri-procedural planning. Before a bridge is written, the walk names four things: whether interruption is needed at all, the agent class, the thrombotic risk of holding, and the bleed risk of the procedure and of bridging itself. The plan is discussed with the procedural team.",
+          "why": "Reflexive “never uncovered” bridging is the habit this pathway slows down. Typical nonvalvular AF is the BRIDGE population.",
+          "evidence": [],
+          "caveats": [
+            "AF plus a recent stent uses the AF + PCI pathway. “Bridge” there means a short aspirin window, not LMWH around a procedure.",
+            "Mechanical-valve bridging is not decided on this walk."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Continue — elective plan or emergency?",
+              "nextNodeId": "ppo-urgency"
+            }
+          ]
+        },
+        {
+          "id": "ppo-urgency",
+          "type": "question",
+          "title": "Is this elective planning, or emergency hemostasis?",
+          "body": "This pathway is for a planned procedure. Life-threatening bleeding or crash surgery is a reversal and hemostasis problem. It is not a hold-and-bridge worksheet.",
+          "why": "Elective BRIDGE teaching does not choose a reversal agent.",
+          "evidence": [],
+          "caveats": [],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "doac-major-bleed-us",
+              "label": "Framework: U.S. DOAC major bleed"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Elective or semi-elective procedure",
+              "nextNodeId": "ppo-interrupt"
+            },
+            {
+              "label": "Emergency major bleed or crash surgery",
+              "nextNodeId": "ppo-emergency"
+            }
+          ]
+        },
+        {
+          "id": "ppo-emergency",
+          "type": "caution",
+          "title": "Leave this elective pathway — use bleed and reversal teaching",
+          "body": "Stop here for elective interruption logic. Life-threatening bleed or crash surgery follows the bleed page. For a U.S. oral factor Xa inhibitor after December 22, 2025, the site teaches supportive care plus an institutional or off-label 4F-PCC pathway. Andexxa is not taught as available in the United States. Dabigatran uses idarucizumab when that agent is indicated. Post-ICH restart timing is a separate pathway. Discuss with the team caring for the bleed.",
+          "why": "Reversal, hemostasis, and a later restart decision are different conversations from BRIDGE.",
+          "evidence": [],
+          "caveats": [
+            "This node does not specify a 4F-PCC dose or a restart hour.",
+            "Non-U.S. formularies may differ — verify local labeling."
+          ],
+          "links": [
+            {
+              "kind": "tx",
+              "id": "doac-bleed-us",
+              "label": "TX: U.S. DOAC major bleed"
+            },
+            {
+              "kind": "page",
+              "id": "reversal",
+              "label": "Bleed & reversal"
+            },
+            {
+              "kind": "framework",
+              "id": "doac-major-bleed-us",
+              "label": "Framework: U.S. DOAC major bleed"
+            },
+            {
+              "kind": "tx",
+              "id": "post-ich",
+              "label": "TX: Post-ICH restart"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Done with this elective walk",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-interrupt",
+          "type": "question",
+          "title": "Does this procedure need an interruption at all?",
+          "body": "Many low-bleed-risk procedures can proceed without stopping therapeutic anticoagulation. A common teaching example is a dental procedure when local hemostasis is reliable. Higher-bleed procedures usually need a hold. Whether a hold is required is confirmed with the proceduralist.",
+          "why": "Holding a drug that did not need to be held creates a gap, and then a temptation to bridge it.",
+          "evidence": [],
+          "caveats": [
+            "Polypectomy raises bleed risk compared with a diagnostic look — the colonoscopy case asks you to confirm that with GI before assuming a hold."
+          ],
+          "links": [
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Low bleed risk — interruption may be unnecessary",
+              "nextNodeId": "ppo-continue"
+            },
+            {
+              "label": "Higher bleed risk — a hold is the usual teaching frame",
+              "nextNodeId": "ppo-who"
+            }
+          ]
+        },
+        {
+          "id": "ppo-continue",
+          "type": "recommendation",
+          "title": "Continue the current oral anticoagulant if the proceduralist agrees",
+          "body": "When the procedure can be done with local hemostasis and the proceduralist does not require a hold, this node describes continuing the current oral anticoagulant without adding a heparin bridge “just in case.” BRIDGE and the CHEST perioperative guideline cited on this pathway do not support bridging by default. The record names who confirmed that interruption is unnecessary, and what happens if bleeding occurs.",
+          "why": "An unnecessary interruption is a thrombotic gap you then have to manage.",
+          "evidence": [],
+          "caveats": [
+            "If the proceduralist later decides a hold is required, return to the phenotype question. BRIDGE and the CHEST perioperative guideline cited on this pathway do not support bridging by default."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "A hold is still being planned",
+              "nextNodeId": "ppo-who"
+            },
+            {
+              "label": "Done — no interruption",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-who",
+          "type": "question",
+          "title": "Whose thrombotic risk is this hold?",
+          "body": "Typical nonvalvular AF on warfarin is the BRIDGE population. A DOAC interruption in typical AF is a hold-and-restart question. Mechanical valves (especially mitral or a recent implant), recent VTE, and some high-risk antiphospholipid syndrome are not the BRIDGE default.",
+          "why": "“Skip routine bridging” (the BRIDGE finding) and a blanket bridging rule are both unsafe when applied to the wrong phenotype.",
+          "evidence": [],
+          "caveats": [
+            "Moderate–severe mitral stenosis and mechanical valves stay on VKA pathways. A DOAC is not a substitute there."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "framework",
+              "id": "af-stroke-prevention",
+              "label": "Framework: AF stroke prevention"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Typical nonvalvular AF on warfarin",
+              "nextNodeId": "ppo-vka-ask"
+            },
+            {
+              "label": "Typical AF on a DOAC",
+              "nextNodeId": "ppo-doac-ask"
+            },
+            {
+              "label": "Mechanical valve, recent VTE, or high-risk APS",
+              "nextNodeId": "ppo-high"
+            }
+          ]
+        },
+        {
+          "id": "ppo-vka-ask",
+          "type": "question",
+          "title": "Is routine LMWH being added for this warfarin hold?",
+          "body": "The usual proposal is a bridge “so the patient is never uncovered” while warfarin is held for an elective procedure. That sentence is the BRIDGE question for typical nonvalvular AF.",
+          "why": "BRIDGE compared bridging with no bridging in AF patients on warfarin having an elective procedure. Arterial thromboembolism was 0.4% without bridging versus 0.3% with bridging, and major bleeding was 1.3% versus 3.2%.",
+          "evidence": [],
+          "caveats": [],
+          "links": [
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Yes — a routine bridge is proposed",
+              "nextNodeId": "ppo-vka"
+            },
+            {
+              "label": "No — interruption without routine bridging",
+              "nextNodeId": "ppo-restart"
+            }
+          ]
+        },
+        {
+          "id": "ppo-vka",
+          "type": "caution",
+          "title": "Typical AF on warfarin — BRIDGE teaching is not routine bridging",
+          "body": "Arterial thromboembolism was 0.4% without bridging and 0.3% with bridging (risk difference 0.1 percentage points; 95% CI −0.6 to 0.8; P=0.01 for noninferiority). Major bleeding was 1.3% without bridging and 3.2% with bridging (relative risk 0.41; 95% CI 0.20 to 0.78; P=0.005 for superiority). In BRIDGE (patients with AF on warfarin; mechanical valves excluded), forgoing a heparin bridge was noninferior for arterial thromboembolism and had less major bleeding. “Never uncovered” is not the same as safer, because bridging itself bleeds. This pathway does not print hold-day counts or LMWH doses.",
+          "why": "The BRIDGE card is the reason the reflexive bridge is questioned in this phenotype.",
+          "evidence": [
+            {
+              "trial": "bridge",
+              "effect": "Arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging); risk difference 0.1 percentage points (95% CI −0.6 to 0.8); P=0.01 for noninferiority",
+              "note": "Major bleeding 1.3% (no bridging) vs 3.2% (bridging); relative risk 0.41 (95% CI 0.20 to 0.78); P=0.005 for superiority. Population: AF on warfarin, elective interruption."
+            }
+          ],
+          "caveats": [
+            "Very high thrombotic-risk subgroups were not the BRIDGE default.",
+            "If this is a mechanical valve, recent VTE, or high-risk APS, leave this node."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Drop the routine bridge and plan restart",
+              "nextNodeId": "ppo-restart"
+            },
+            {
+              "label": "This is not typical AF",
+              "nextNodeId": "ppo-high"
+            }
+          ]
+        },
+        {
+          "id": "ppo-doac-ask",
+          "type": "question",
+          "title": "Is a heparin bridge proposed while the DOAC is held?",
+          "body": "DOAC interruptions in typical AF are usually a timed hold and a restart, using the product monograph and the institutional checklist. A heparin bridge while the oral agent is held is a separate proposal. This site does not print surgical hold hours, kidney cutoffs, or doses.",
+          "why": "A warfarin-era “cover the gap” habit does not transfer to a drug with a short offset and onset. Clocks still differ by agent.",
+          "evidence": [],
+          "caveats": [
+            "Dabigatran clearance depends more on the kidneys than some factor Xa inhibitors. Do not invent one clock for every DOAC."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "framework",
+              "id": "af-stroke-prevention",
+              "label": "Framework: AF stroke prevention"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Yes — heparin bridge proposed during the DOAC hold",
+              "nextNodeId": "ppo-doac"
+            },
+            {
+              "label": "No — hold and restart only",
+              "nextNodeId": "ppo-doac-pause"
+            }
+          ]
+        },
+        {
+          "id": "ppo-doac",
+          "type": "caution",
+          "title": "Typical AF on a DOAC — teaching is hold and restart, without a heparin bridge",
+          "body": "The peri-procedural framework teaches that DOAC interruptions in typical AF generally do not need a heparin bridge while the oral agent is held. Timing on this node comes from the monograph and the local checklist. BRIDGE studied warfarin interruption (arterial thromboembolism 0.4% vs 0.3%, major bleeding 1.3% vs 3.2%), so it is context for the habit, not a DOAC protocol. This pathway does not print surgical hold hours or doses; the neuraxial caveat quotes the intervals the ASRA guideline lists.",
+          "why": "The short DOAC clock is the reason a parenteral bridge is not the usual teaching for this phenotype.",
+          "evidence": [],
+          "caveats": [
+            "Confirm the indication is still a DOAC-eligible niche. Mechanical valves are not.",
+            "Kidney function, interacting drugs, and procedure bleed risk change the clock. Verify the label locally.",
+            "What PAUSE studied (Douketis JD, et al. JAMA Intern Med 2019): 3,007 patients with AF taking apixaban, dabigatran, or rivaroxaban long term and scheduled for an elective surgery or procedure, all managed with one standardized interruption and resumption protocol without heparin bridging or preoperative coagulation testing. It was a cohort study with no comparator group. It excluded patients with kidney function below drug-specific creatinine clearance cutoffs, cognitive impairment or psychiatric illness, no consent, previous study participation, or more than one procedure planned within 30 days. Edoxaban was not studied. The 230 patients who had neuraxial anesthesia were managed on the high-bleed-risk schedule.",
+            "Neuraxial procedures are a separate question from surgical interruption. For high-dose regimens, the ASRA guideline (5th edition; Kopp SL, et al. Reg Anesth Pain Med 2025; doi 10.1136/rapm-2024-105766) lists an interval of at least 72 hours for the factor Xa inhibitors apixaban, rivaroxaban, and edoxaban, and 72 to 120 hours for dabigatran depending on kidney function, before neuraxial block or deep plexus or peripheral block. It lists shorter intervals for low-dose apixaban, rivaroxaban, and dabigatran, and notes that low-dose edoxaban has no FDA-approved indication. These are the guideline's listed intervals, quoted for teaching."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE (warfarin context)"
+            },
+            {
+              "kind": "trial",
+              "id": "pause",
+              "label": "Trial: PAUSE (DOAC cohort)"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            }
+          ],
+          "choices": [
+            {
+              "label": "No heparin bridge — see what PAUSE showed",
+              "nextNodeId": "ppo-doac-pause"
+            },
+            {
+              "label": "This is not a typical-AF DOAC interruption",
+              "nextNodeId": "ppo-high"
+            }
+          ]
+        },
+        {
+          "id": "ppo-doac-pause",
+          "type": "recommendation",
+          "title": "Typical AF on a DOAC — what PAUSE adds to a hold and restart",
+          "body": "PAUSE followed patients with AF taking apixaban, dabigatran, or rivaroxaban through an elective surgery or procedure. One standardized interruption and resumption protocol, set by the drug, the procedure bleed risk, and kidney function, was used without heparin bridging or preoperative coagulation testing. Major bleeding at 30 days was under 2% and arterial thromboembolism under 1% in each cohort, but only the dabigatran cohort passed the trial's prespecified bleeding test. The timed hold and restart without a heparin bridge that this pathway describes for typical AF is the strategy PAUSE studied. Timing still comes from the product monograph and the institutional checklist. This pathway does not print hold days, hours, kidney cutoffs, or doses.",
+          "why": "BRIDGE is warfarin evidence. PAUSE is the DOAC-specific anchor for a hold-and-restart plan without a heparin bridge, but it is a single-strategy cohort, not a randomized comparison with bridging.",
+          "evidence": [
+            {
+              "trial": "pause",
+              "effect": "30-day major bleeding 1.35% (apixaban), 0.90% (dabigatran), 1.85% (rivaroxaban); arterial thromboembolism 0.16%, 0.60%, 0.37%",
+              "note": "Prospective management cohort, not an RCT; primary-outcome CIs are 1-sided. The prespecified 2% major-bleeding threshold was excluded only for dabigatran (apixaban P=.051; rivaroxaban P=.36). The 1.5% arterial thromboembolism threshold was met in all three cohorts."
+            }
+          ],
+          "caveats": [
+            "No comparator arm: PAUSE shows low event rates with this protocol. It does not show that bridging, or a different schedule, is worse.",
+            "Bleeding was higher with high-bleeding-risk procedures in the apixaban and rivaroxaban cohorts.",
+            "Edoxaban was not studied, and patients with VTE were not included. Say so before extending the result.",
+            "The schedule on the PAUSE card is labeled trial protocol."
+          ],
+          "links": [
+            {
+              "kind": "trial",
+              "id": "pause",
+              "label": "Trial: PAUSE"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE (warfarin contrast)"
+            },
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Plan hold and restart without a heparin bridge",
+              "nextNodeId": "ppo-restart"
+            },
+            {
+              "label": "This is not a typical-AF DOAC interruption",
+              "nextNodeId": "ppo-high"
+            }
+          ]
+        },
+        {
+          "id": "ppo-high",
+          "type": "caution",
+          "title": "Not the BRIDGE default — do not finish the plan here",
+          "body": "Mechanical valves, especially mitral or a recent implant, recent VTE, and some high-risk APS are higher thrombotic-risk interruptions. Do not apply the typical-AF “skip routine bridging” line unchanged. Mechanical-valve bridging stays on the mechanical valve pathway and with the valve clinic. Recent VTE and high-risk APS use specialty or institutional plans. This pathway does not supply LMWH doses or a valve protocol. Discuss with the team that owns that niche.",
+          "why": "Extrapolating BRIDGE to a mechanical mitral valve is unsafe teaching. Importing valve bridging into typical AF is the other error.",
+          "evidence": [
+            {
+              "trial": "bridge",
+              "effect": "In nonvalvular AF, arterial thromboembolism was 0.4% (no bridging) vs 0.3% (bridging) and major bleeding was 1.3% vs 3.2% — do not generalize those rates to mechanical valves",
+              "note": "Open the BRIDGE card for the risk difference and the bleeding relative risk. Valve bridging is a different pathway."
+            }
+          ],
+          "caveats": [
+            "Low-bleed procedures may still not need interruption. Confirm with the proceduralist.",
+            "High-risk APS agent choice lives on the APS pathway. That pathway is not an LMWH dose chart."
+          ],
+          "links": [
+            {
+              "kind": "tx",
+              "id": "mechanical-valve",
+              "label": "TX: Mechanical heart valve"
+            },
+            {
+              "kind": "framework",
+              "id": "mechanical-valve-vka",
+              "label": "Framework: Mechanical valve"
+            },
+            {
+              "kind": "tx",
+              "id": "aps",
+              "label": "TX: Antiphospholipid syndrome"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE (contrast)"
+            },
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Done — plan belongs on another pathway",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-restart",
+          "type": "recommendation",
+          "title": "Name who restarts anticoagulation after hemostasis",
+          "body": "The first post-procedure dose waits until the proceduralist says hemostasis allows it. Warfarin and DOAC clocks differ. This site does not assign a restart hour. The pathway names who will confirm the restart, and what happens if bleeding continues.",
+          "why": "A hold without an owner for restart is an unfinished plan.",
+          "evidence": [],
+          "caveats": [
+            "Post-ICH timing is a different pathway.",
+            "Emergency reversal, if it happened, does not set the elective restart clock."
+          ],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            }
+          ],
+          "choices": [
+            {
+              "label": "Document the plan",
+              "nextNodeId": "ppo-end"
+            }
+          ]
+        },
+        {
+          "id": "ppo-end",
+          "type": "end",
+          "title": "Pathway complete — elective peri-procedural plan",
+          "body": "In teaching language, the close names whether interruption was needed, the agent class, the thrombotic risk of the hold, and the bleed risk of the procedure and of any bridge. Typical AF on warfarin: BRIDGE arterial thromboembolism 0.4% vs 0.3% (noninferior) and major bleeding 1.3% vs 3.2% — not routine LMWH bridging. Typical DOAC interruption: a timed hold and restart, not a heparin bridge (PAUSE). Mechanical-valve bridging was not decided here.",
+          "why": "The four named steps are the plan. A drug name without those steps is not.",
+          "evidence": [],
+          "caveats": [],
+          "links": [
+            {
+              "kind": "framework",
+              "id": "peri-procedural-oac",
+              "label": "Framework: Peri-procedural OAC"
+            },
+            {
+              "kind": "trial",
+              "id": "bridge",
+              "label": "Trial: BRIDGE"
+            },
+            {
+              "kind": "trial",
+              "id": "pause",
+              "label": "Trial: PAUSE"
+            },
+            {
+              "kind": "case",
+              "id": "af-warfarin-bridge-reflex",
+              "label": "Case: AF warfarin bridge reflex"
+            },
+            {
+              "kind": "tx",
+              "id": "mechanical-valve",
+              "label": "TX: Mechanical valve (bridging contrast)"
             }
           ],
           "choices": []

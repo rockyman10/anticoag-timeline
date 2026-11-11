@@ -14,7 +14,7 @@ window.ANTICOAG_NUANCES = [
     },
     synthesis: "Do not force a single post-TAVI cocktail. Stratify by AF vs no AF, recent coronary stent, and bleeding phenotype. Read both trials as population-specific, not as universal TAVI law.",
     whatWouldChange: "A guideline-endorsed default that clearly separates AF-TAVI from sinus-TAVI pathways—or new valve-thrombosis imaging endpoints that favor one strategy—would collapse much of this equipoise.",
-    trialIds: ["acasa-tavi", "notion-4", "galileo", "popular-tavi", "atlantis"],
+    trialIds: ["acasa-tavi", "notion-4", "galileo", "popular-tavi", "popular-tavi-oac", "atlantis"],
     links: [
       { kind: "framework", id: "post-tavi-antithrombotic", label: "Framework: Post-TAVI antithrombotic" },
       { kind: "case", id: "tavi-sinus-routine-doac", label: "Case: TAVI sinus — routine DOAC?" }
@@ -55,7 +55,10 @@ window.ANTICOAG_NUANCES = [
     },
     synthesis: "Separate agents, doses, and indications. Negative AF efficacy for one FXIa drug does not erase bleeding biology—nor does a bleeding win prove stroke prevention. Await LIBREXIA-AF / indication-specific readouts.",
     whatWouldChange: "A phase 3 FXIa AF trial that is noninferior for stroke and clearly safer for bleeding—or consistent failures across agents—would end the ‘hope vs hype’ split.",
-    trialIds: ["oceanic-af", "azalea-timi-71", "librexia-af", "pacific-stroke", "librexia-acs"]
+    trialIds: ["oceanic-af", "azalea-timi-71", "librexia-af", "pacific-stroke", "librexia-acs"],
+    links: [
+      { kind: "pathway", id: "whats-next", label: "Playlist: What's next (FXI)" }
+    ]
   },
   {
     id: "dual-pathway-duration",

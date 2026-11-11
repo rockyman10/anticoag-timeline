@@ -17,13 +17,23 @@ window.ANTICOAG_FRAMEWORKS = [
       "Severe renal impairment below labeled thresholds — check product labeling and local protocol",
       "High-risk PE needing reperfusion / hemodynamic support — stabilize first"
     ],
-    pearl: "Pick the DOAC you can dose correctly and the patient can take—then use bleeding-risk nuance (e.g., COBRRA teaching) only when choice among DOACs is otherwise equal. Verify renal cutoffs locally."
+    pearl: "Pick the DOAC you can dose correctly and the patient can take—then use bleeding-risk nuance (e.g., COBRRA teaching) only when choice among DOACs is otherwise equal. Verify renal cutoffs locally.",
+    links: [
+      { kind: "tx-pathway", id: "acute-vte", label: "TX: Acute VTE" },
+      { kind: "case", id: "vte-doac-choice", label: "Case: Acute DVT drug choice" },
+      { kind: "trial", id: "amplify", label: "Trial: AMPLIFY" },
+      { kind: "trial", id: "einstein-dvt", label: "Trial: EINSTEIN-DVT" },
+      { kind: "trial", id: "einstein-pe", label: "Trial: EINSTEIN-PE" },
+      { kind: "trial", id: "hokusai-vte", label: "Trial: Hokusai-VTE" },
+      { kind: "trial", id: "cobrra", label: "Trial: COBRRA" },
+      { kind: "trial", id: "hi-pro", label: "Trial: HI-PRO" }
+    ]
   },
   {
     id: "cancer-vte",
     question: "How do I treat cancer-associated VTE acutely and on extended therapy?",
     reasoning: "Acute phase: DOACs (apixaban, edoxaban after heparin, rivaroxaban) are acceptable alternatives to LMWH for many solid tumors (Hokusai VTE Cancer, SELECT-D, ADAM-VTE, Caravaggio). Individualize for luminal GI/GU cancers and drug–drug interactions. Extended phase: after ≥6 months, API-CAT supports reduced-dose apixaban for many who need ongoing anticoagulation—step-down is a shared decision, not automatic for every cancer type or bleeding phenotype.",
-    trialIds: ["catch", "hokusai-vte-cancer", "select-d", "adam-vte", "caravaggio", "api-cat"],
+    trialIds: ["catch", "hokusai-vte-cancer", "select-d", "adam-vte", "caravaggio", "canvas", "api-cat"],
     appliesTo: [
       "Active cancer with acute VTE when oral therapy is appropriate and interactions are manageable",
       "Extended secondary prevention after initial treatment when cancer-related risk persists"
@@ -34,13 +44,25 @@ window.ANTICOAG_FRAMEWORKS = [
       "Pregnancy-associated cancer VTE — specialist pathways",
       "Patients unable to take oral meds or with unresolved vomiting"
     ],
-    pearl: "Acute: DOAC vs LMWH is preference-sensitive after Caravaggio-era data. Extended: think API-CAT-style step-down only after adequate acute therapy and ongoing risk—reassess bleeding and cancer status."
+    pearl: "Acute: DOAC vs LMWH is preference-sensitive after Caravaggio-era data. Extended: think API-CAT-style step-down only after adequate acute therapy and ongoing risk—reassess bleeding and cancer status.",
+    links: [
+      { kind: "tx-pathway", id: "cancer-vte", label: "TX: Cancer VTE" },
+      { kind: "pathway", id: "cancer-vte", label: "Playlist: Cancer-associated VTE" },
+      { kind: "case", id: "cancer-stepdown", label: "Case: Cancer step-down" },
+      { kind: "trial", id: "catch", label: "Trial: CATCH" },
+      { kind: "trial", id: "hokusai-vte-cancer", label: "Trial: Hokusai VTE Cancer" },
+      { kind: "trial", id: "select-d", label: "Trial: SELECT-D" },
+      { kind: "trial", id: "adam-vte", label: "Trial: ADAM-VTE" },
+      { kind: "trial", id: "caravaggio", label: "Trial: Caravaggio" },
+      { kind: "trial", id: "canvas", label: "Trial: CANVAS" },
+      { kind: "trial", id: "api-cat", label: "Trial: API-CAT" }
+    ]
   },
   {
     id: "af-stroke-prevention",
     question: "How do I choose anticoagulation for AF stroke prevention—including intermediate-risk nuance?",
     reasoning: "For most eligible NVAF with elevated stroke risk, guidelines prefer a DOAC over VKA (RE-LY, ROCKET-AF, ARISTOTLE, ENGAGE). Dose-reduce only when labeled criteria are met. Intermediate-risk / shared-decision zones (including SINGLE-AF–type nuance for lower-risk or carefully selected populations) require explicit risk–benefit discussion, not reflexive full-dose therapy or reflexive aspirin. Aspirin alone is generally not a stroke-prevention substitute when OAC is indicated.",
-    trialIds: ["re-ly", "rocket-af", "aristotle", "engage-af", "averroes", "single-af", "eldercare-af"],
+    trialIds: ["active-w", "bafta", "re-ly", "rocket-af", "aristotle", "engage-af", "averroes", "single-af", "eldercare-af"],
     appliesTo: [
       "Nonvalvular AF with guideline-elevated stroke risk and acceptable bleeding risk",
       "Elderly patients who meet labeled dosing (including carefully selected very elderly programs such as ELDERCARE-AF context)"
@@ -51,7 +73,86 @@ window.ANTICOAG_FRAMEWORKS = [
       "Severe renal failure below DOAC labels — often VKA or specialist dosing",
       "Absolute contraindication to anticoagulation — consider LAAO pathways instead"
     ],
-    pearl: "Default: labeled-dose DOAC for indicated NVAF. Intermediate risk and SINGLE-AF–style questions are shared decisions—document CHA₂DS₂-VASc, bleeding risk, and patient values."
+    pearl: "Default: labeled-dose DOAC for indicated NVAF. Intermediate risk and SINGLE-AF–style questions are shared decisions—document CHA₂DS₂-VASc, bleeding risk, and patient values.",
+    links: [
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "case", id: "af-renal-bleed", label: "Case: CKD with GI bleed" },
+      { kind: "trial", id: "active-w", label: "Trial: ACTIVE-W" },
+      { kind: "trial", id: "bafta", label: "Trial: BAFTA" },
+      { kind: "trial", id: "re-ly", label: "Trial: RE-LY" },
+      { kind: "trial", id: "rocket-af", label: "Trial: ROCKET-AF" },
+      { kind: "trial", id: "aristotle", label: "Trial: ARISTOTLE" },
+      { kind: "trial", id: "engage-af", label: "Trial: ENGAGE AF" },
+      { kind: "trial", id: "averroes", label: "Trial: AVERROES" },
+      { kind: "trial", id: "single-af", label: "Trial: SINGLE-AF" },
+      { kind: "trial", id: "eldercare-af", label: "Trial: ELDERCARE-AF" }
+    ]
+  },
+  {
+    id: "dialysis-af",
+    question: "AF on dialysis: what does the evidence actually support for oral anticoagulation?",
+    deck: "Special population · two small, underpowered RCTs · guideline wording quoted · no dosing on this card",
+    reasoning: "Only two small randomized trials have compared apixaban with a VKA in AF on hemodialysis. AXADIA-AFNET 8 (97 patients, apixaban vs phenprocoumon) and RENAL-AF (154 patients, stopped early, apixaban vs warfarin) found no significant differences, and both were underpowered, so they do not show that either drug is safer or that the two are equivalent. Bleeding was far more common than stroke, and death was frequent in both trials. No randomized trial has yet reported whether anticoagulation beats no anticoagulation in dialysis: DANWARD and SACK are recruiting, AVKDIAL stopped for slow enrollment without published results, and SAFE-D was a feasibility pilot. ACC/AHA 2023 rates warfarin or an evidence-based dose of apixaban as Class 2b (\"might be reasonable\") in dialysis. ESC 2024 gives no graded recommendation for dialysis, and KDIGO 2024's recommendation favoring DOACs over VKA covers CKD G1–G4 only. ACC/AHA 2023 encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs. Any dose comes from the product label and local protocol, not from this card.",
+    trialIds: ["axadia-afnet-8", "renal-af"],
+    appliesTo: [
+      "Adults with AF on maintenance dialysis when stroke prevention with an oral anticoagulant is being discussed",
+      "Teaching what the dialysis RCTs can and cannot show (inconclusive, underpowered)",
+      "Shared decision-making conversations between the patient, nephrology, and the anticoagulation team"
+    ],
+    doesNotApply: [
+      "CKD G1–G4 not on dialysis — use the AF stroke prevention framework and the product label (KDIGO's DOAC-favoring recommendation applies there)",
+      "Mechanical heart valves or moderate–severe mitral stenosis (VKA territory)",
+      "Non-AF questions in kidney failure, such as VTE treatment or vascular-protection trials — different evidence"
+    ],
+    pearl: "In dialysis, \"no significant difference\" in two small trials is not evidence of equivalence. Bleeding outnumbered stroke, death was common in both arms, and VKA time in therapeutic range was poor. ACC/AHA 2023 encourages shared decision-making that weighs bleeding and thromboembolism risk, pending RCTs.",
+    teachBack: "In one sentence: why can't AXADIA-AFNET 8 or RENAL-AF tell you that apixaban is safer than a VKA in dialysis?",
+    teachingBlocks: [
+      {
+        title: "What the randomized trials show",
+        lead: "Inconclusive and underpowered. Read both as \"no difference detected\", not as equivalence.",
+        bullets: [
+          "AXADIA-AFNET 8 (Circulation 2023): 97 randomized (48 apixaban, 49 phenprocoumon) after the target was cut from 222 to 108 by amendment (powered for noninferiority) following a blinded review of recruitment and event rates in 2020 and newly published data. Primary safety composite of major bleeding, CRNM bleeding, or death from any cause — it includes all-cause death, so it is not a bleeding-only endpoint: 45.8% vs 51.0% (HR 0.93; 95% CI 0.53–1.65); noninferiority was not shown.",
+          "RENAL-AF (Circulation 2022): 154 randomized (82 apixaban, 72 warfarin) of about 760 planned; stopped early for enrollment challenges. Major or CRNM bleeding at 1 year (Kaplan–Meier): 32% vs 26% (HR 1.20; 95% CI 0.63–2.30). Stroke or systemic embolism at 1 year: 3.0% vs 3.3%.",
+          "Different endpoints: AXADIA-AFNET 8's primary safety composite includes death; RENAL-AF's primary is bleeding only. Do not put them side by side as the same endpoint.",
+          "Different comparators: phenprocoumon in AXADIA-AFNET 8, warfarin in RENAL-AF. Apixaban doses differed by protocol; see the trial cards."
+        ]
+      },
+      {
+        title: "Guideline wording",
+        bullets: [
+          "ACC/AHA/ACCP/HRS 2023, §6.8.4, Class 2b, LOE B-NR (verbatim): \"For patients with AF at elevated risk for stroke and who have end-stage CKD (CrCl <15 mL/min) or are on dialysis, it might be reasonable to prescribe warfarin (INR 2.0-3.0) or an evidence-based dose of apixaban for oral anticoagulation to reduce the risk of stroke.\" The supporting text encourages shared decision-making pending RCTs.",
+          "ESC 2024, §6.2.1 (paraphrased): no graded recommendation for dialysis. The narrative notes small hemodialysis trials, two of which found no difference between apixaban and VKA [the ESC sentence describes both as testing apixaban 2.5 mg twice daily; the RENAL-AF protocol used 5 mg twice daily, with 2.5 mg only for selected patients], and lists severe end-stage renal failure as an evidence gap.",
+          "KDIGO 2024, Recommendation 3.16.1 (1C), verbatim: \"We recommend use of non–vitamin K antagonist oral anticoagulants ([DOACs]) in preference to vitamin K antagonists (e.g., warfarin) for thromboprophylaxis in atrial fibrillation in people with CKD G1–G4 (1C).\" It applies to G1–G4 only, not dialysis; KDIGO notes that \"Data in CKD G5 on dialysis were limited to observational studies.\""
+        ]
+      },
+      {
+        title: "Pilot and ongoing trials (no answer yet)",
+        bullets: [
+          "SAFE-D (J Am Soc Nephrol 2025) was a feasibility pilot: 151 patients on dialysis randomized to apixaban, warfarin, or no oral anticoagulation for 26 weeks. Its primary outcomes were feasibility, and it was not powered for stroke, bleeding, or death.",
+          "DANWARD (Denmark; warfarin vs no oral anticoagulation) and SACK (Sweden; apixaban vs no anticoagulation) are recruiting. No results yet.",
+          "AVKDIAL (France; VKA vs no oral anticoagulation) was terminated for too few patients, with no results found. SAFE-D2 (apixaban vs no oral anticoagulation) is not yet recruiting.",
+          "Until one of these reports, no randomized trial answers whether anticoagulation beats no anticoagulation in dialysis."
+        ]
+      },
+      {
+        title: "Teaching points",
+        bullets: [
+          "Shared decision (ACC/AHA 2023 encourages it, pending RCTs): stroke risk, bleeding history, patient values, and monitoring burden.",
+          "Bleeding risk is high in both arms: major or CRNM bleeding at 1 year was 32% with apixaban and 26% with warfarin in RENAL-AF, and ACC/AHA notes significantly more bleeding than stroke events in both small trials.",
+          "VKA time in therapeutic range was poor in dialysis: 44% with warfarin in RENAL-AF and 50.7% with phenprocoumon in AXADIA-AFNET 8. These are trial descriptors, not clinic targets.",
+          "Death was common in both trials, which is part of why AXADIA-AFNET 8's death-inclusive composite was high in both arms.",
+          "Apixaban doses on the trial cards are trial protocol."
+        ]
+      }
+    ],
+    links: [
+      { kind: "tx-pathway", id: "af-stroke", label: "TX: AF stroke prevention" },
+      { kind: "framework", id: "af-stroke-prevention", label: "Framework: AF stroke prevention" },
+      { kind: "framework", id: "ttr-vka-quality", label: "Framework: TTR / VKA quality — INR follow-up literacy (not a DOAC metric)" },
+      { kind: "case", id: "af-hemodialysis-oac", label: "Case: AF on hemodialysis" },
+      { kind: "trial", id: "axadia-afnet-8", label: "Trial: AXADIA-AFNET 8" },
+      { kind: "trial", id: "renal-af", label: "Trial: RENAL-AF" }
+    ]
   },
   {
     id: "af-pci-dual-pathway",
@@ -110,7 +211,17 @@ window.ANTICOAG_FRAMEWORKS = [
       "Valvular AF requiring VKA for valve indication — LAAO does not replace VKA for the valve",
       "Inability to complete periprocedural antithrombotic / follow-up imaging"
     ],
-    pearl: "LAAO trades procedural risk for drug exposure—consent must include DRT, peri-device leaks, and the fact that some patients still need antithrombotic therapy afterward."
+    pearl: "LAAO trades procedural risk for drug exposure—consent must include DRT, peri-device leaks, and the fact that some patients still need antithrombotic therapy afterward.",
+    links: [
+      { kind: "pathway", id: "laao", label: "Playlist: LAAO vs OAC" },
+      { kind: "case", id: "laao-candidate", label: "Case: LAAO candidate" },
+      { kind: "trial", id: "protect-af", label: "Trial: PROTECT-AF" },
+      { kind: "trial", id: "prevail", label: "Trial: PREVAIL" },
+      { kind: "trial", id: "prague-17", label: "Trial: PRAGUE-17" },
+      { kind: "trial", id: "laaos-iii", label: "Trial: LAAOS III" },
+      { kind: "trial", id: "option", label: "Trial: OPTION" },
+      { kind: "trial", id: "champion-af", label: "Trial: CHAMPION-AF" }
+    ]
   },
   {
     id: "frail-elderly-vka-doac",
@@ -180,8 +291,8 @@ window.ANTICOAG_FRAMEWORKS = [
   {
     id: "mechanical-valve-vka",
     question: "How do I anticoagulate a mechanical heart valve?",
-    reasoning: "Mechanical prosthetic valves are VKA territory. Do not substitute a DOAC — landmark DOAC AF/VTE programs excluded mechanical valves, and RE-ALIGN-era teaching (primary literature; not a curated trial card on this site) reinforced harm with a dabigatran strategy in mechanical valves. Confirm prosthesis type, position (aortic vs mitral), and extra thromboembolic risk factors (AF, prior embolus, hypercoagulability, LV dysfunction, older-generation valve). Set INR intensity from current ACC/AHA or ESC tables for that valve — soft teaching frame on this site: many contemporary bileaflet aortic valves without extra risk use INR 2.0–3.0; soft teaching frame also used on this site: mechanical mitral (and many higher-risk aortic) often INR 2.5–3.5 — still verify the current society table for that prosthesis. On-X aortic lower-INR protocols are label/transition-path specific — verify, do not improvise. Add low-dose aspirin when society guidance and bleed risk support it. Plan reliable INR follow-up and TTR stewardship; peri-procedural bridging is institutional.",
-    trialIds: ["invictus", "galileo"],
+    reasoning: "Mechanical prosthetic valves are VKA territory. Do not substitute a DOAC — landmark DOAC AF/VTE programs excluded mechanical valves, and the RE-ALIGN card is the dabigatran mechanical-valve trial that stopped early for harm. PROACT is the warfarin-based On-X trial. PROACT Xa is the apixaban On-X trial and did not meet noninferiority. Confirm prosthesis type, position (aortic vs mitral), and extra thromboembolic risk factors (AF, prior embolus, hypercoagulability, LV dysfunction, older-generation valve). Set INR intensity from current ACC/AHA or ESC tables for that valve — soft teaching frame on this site: many contemporary bileaflet aortic valves without extra risk use INR 2.0–3.0; soft teaching frame also used on this site: mechanical mitral (and many higher-risk aortic) often INR 2.5–3.5 — still verify the current society table for that prosthesis. On-X aortic lower-INR protocols are label/transition-path specific — verify, do not improvise. Add low-dose aspirin when society guidance and bleed risk support it. Plan reliable INR follow-up and TTR stewardship; peri-procedural bridging is institutional.",
+    trialIds: ["re-align", "proact", "proact-xa", "invictus", "galileo"],
     appliesTo: [
       "Patients with a mechanical prosthetic valve requiring long-term anticoagulation",
       "Teaching contrasts with DOAC-eligible NVAF / bioprosthetic or TAVI pathways"
@@ -201,7 +312,7 @@ window.ANTICOAG_FRAMEWORKS = [
   {
     id: "aps-triple-positive-vka",
     question: "How do I choose long-term anticoagulation in antiphospholipid syndrome?",
-    reasoning: "Risk-tier APS before picking an oral agent. Confirm persistent antibodies (lupus anticoagulant, anticardiolipin, anti-β2-glycoprotein I) on repeat testing ≥12 weeks apart when classifying disease — but do not delay therapeutic anticoagulation in acute VTE for incomplete serology. Triple-positive and many high-risk / arterial APS phenotypes are taught as VKA-preferring: dose-adjusted warfarin (typical INR 2–3 unless a specialty clinic sets otherwise). Do not switch high-risk APS to a DOAC for convenience. Standard DOAC VTE programs (e.g., AMPLIFY-era teaching) were not built as dedicated high-risk APS replacement strategies — use them as contrast, not as APS order sets. Lower-risk or incomplete antibody profiles may still need hematology/rheumatology input before any DOAC rationale is documented. Arterial APS (stroke/MI phenotype) is not routine venous DOAC VTE — specialty pathways may use VKA ± antiplatelet. Pregnancy: LMWH pathways, not DOAC / warfarin embryopathy windows.",
+    reasoning: "Risk-tier APS before picking an oral agent. Confirm persistent antibodies (lupus anticoagulant, anticardiolipin, anti-β2-glycoprotein I) on repeat testing ≥12 weeks apart when classifying disease — but do not delay therapeutic anticoagulation in acute VTE for incomplete serology. Triple-positive and many high-risk / arterial APS phenotypes are taught as VKA-preferring: dose-adjusted warfarin (typical INR 2–3 unless a specialty clinic sets otherwise). TRAPS, cited in this framework, does not support switching high-risk APS to a DOAC for convenience. Standard DOAC VTE programs (e.g., AMPLIFY-era teaching) were not built as dedicated high-risk APS replacement strategies — use them as contrast, not as APS order sets. Lower-risk or incomplete antibody profiles may still need hematology/rheumatology input before any DOAC rationale is documented. Arterial APS (stroke/MI phenotype) is not routine venous DOAC VTE — specialty pathways may use VKA ± antiplatelet. Pregnancy: LMWH pathways, not DOAC / warfarin embryopathy windows.",
     trialIds: ["amplify"],
     appliesTo: [
       "Confirmed or suspected APS with thrombosis when long-term agent choice is the question",
@@ -245,8 +356,8 @@ window.ANTICOAG_FRAMEWORKS = [
   {
     id: "post-tavi-antithrombotic",
     question: "How do I choose antithrombotic therapy after TAVI?",
-    reasoning: "Fork first on whether the patient has a separate oral anticoagulation indication (most often atrial fibrillation), then on coronary stent / recent ACS needs. Without another OAC indication, do not start a routine DOAC ‘for the valve’ or for leaflet-thrombosis prophylaxis as default practice. GALILEO: a rivaroxaban-based strategy after TAVI without another OAC indication was stopped early for higher death or thromboembolic events versus an antiplatelet strategy. ATLANTIS: overall net outcome was not improved with apixaban; the no-indication stratum showed concerning signals versus antiplatelet care and reinforces avoiding routine DOAC without a separate anticoagulation indication. NOTION-4 teaches that a short post-TAVR DOAC HALT effect is not durable and supports avoiding routine DOAC without indication; the site caveat also notes the clinical composite was numerically unfavorable with the DOAC strategy (no effect size claimed here). ACASA-TAVI reports a HALT imaging signal with ongoing DOAC versus aspirin in selected patients without long-term OAC indication, but the site takeaway is suggestive imaging — not a mandate for routine post-TAVI OAC (clinical outcomes underpowered). For antiplatelet choice without OAC, prefer single antiplatelet therapy over routine DAPT when there is no separate dual-therapy indication (POPular TAVI teaching). With AF or another clear OAC indication, anticoagulate for that indication; layer antiplatelet duration from coronary disease / stent timing, not from a universal TAVI cocktail. Do not import mechanical-valve DOAC bans into every TAVI case, and do not import NVAF DOAC habits into sinus-rhythm TAVI without an OAC indication. Read ACASA and NOTION-4 as population-specific, not as universal TAVI law.",
-    trialIds: ["galileo", "popular-tavi", "atlantis", "acasa-tavi", "notion-4"],
+    reasoning: "Fork first on whether the patient has a separate oral anticoagulation indication (most often atrial fibrillation), then on coronary stent / recent ACS needs. Without another OAC indication, GALILEO and ATLANTIS did not support a routine DOAC ‘for the valve’ or for leaflet-thrombosis prophylaxis as default practice. GALILEO: a rivaroxaban-based strategy after TAVI without another OAC indication was stopped early for higher death or thromboembolic events versus an antiplatelet strategy. ATLANTIS: overall net outcome was not improved with apixaban; the no-indication stratum showed concerning signals versus antiplatelet care and reinforces avoiding routine DOAC without a separate anticoagulation indication. NOTION-4 teaches that a short post-TAVR DOAC HALT effect is not durable and supports avoiding routine DOAC without indication; the site caveat also notes the clinical composite was numerically unfavorable with the DOAC strategy (no effect size claimed here). ACASA-TAVI reports a HALT imaging signal with ongoing DOAC versus aspirin in selected patients without long-term OAC indication, but the site takeaway is suggestive imaging — not a mandate for routine post-TAVI OAC (clinical outcomes underpowered). For antiplatelet choice without OAC, prefer single antiplatelet therapy over routine DAPT when there is no separate dual-therapy indication (POPular TAVI teaching). When the patient is already on oral anticoagulation, the separate POPular TAVI OAC card compared anticoagulation alone with anticoagulation plus clopidogrel. With AF or another clear OAC indication, anticoagulate for that indication; layer antiplatelet duration from coronary disease / stent timing, not from a universal TAVI cocktail. Do not import mechanical-valve DOAC bans into every TAVI case, and do not import NVAF DOAC habits into sinus-rhythm TAVI without an OAC indication. Read ACASA and NOTION-4 as population-specific, not as universal TAVI law.",
+    trialIds: ["galileo", "popular-tavi", "popular-tavi-oac", "atlantis", "acasa-tavi", "notion-4"],
     appliesTo: [
       "Antithrombotic decisions after successful TAVI / TAVR",
       "Teaching contrasts between no-OAC-indication and AF/OAC-indication strata",
@@ -268,7 +379,7 @@ window.ANTICOAG_FRAMEWORKS = [
   {
     id: "peri-procedural-oac",
     question: "How do I plan anticoagulation around an elective procedure?",
-    reasoning: "Build a peri-procedural plan in four named steps — not a reflexive hold-and-bridge. (1) Decide whether interruption is needed at all: many low-bleed-risk procedures (e.g., many dental procedures with local hemostasis) can proceed without stopping therapeutic anticoagulation; higher-bleed procedures usually need a hold. (2) Name the agent class: warfarin/VKA vs DOAC — clocks and restart rules differ; use institutional checklists and product monographs (site practical heuristics are teaching patterns only, not protocols). (3) Name thrombotic risk of holding: typical nonvalvular AF on warfarin is the BRIDGE population — forgoing routine LMWH bridging was noninferior for arterial thromboembolism and major bleeding was higher with bridging, so do not routinely bridge warfarin interruptions in typical AF. Very high thrombotic-risk phenotypes (mechanical valves — especially mitral / recent implant — recent VTE, some high-risk APS) are not the BRIDGE default; use valve-clinic or specialty bridging protocols. (4) Name procedure bleed risk and who owns restart: plan the first post-procedure dose when hemostasis allows; DOAC interruptions in typical AF generally do not need a heparin ‘bridge’ while the oral agent is held. Emergency life-threatening bleed or crash surgery is a reversal/hemostasis pathway (U.S. FXa: supportive care + institutional/off-label 4F-PCC — not Andexxa after Dec 22, 2025; dabigatran: idarucizumab when indicated), not this elective planning card. Post-ICH restart timing is a separate framework.",
+    reasoning: "Build a peri-procedural plan in four named steps — not a reflexive hold-and-bridge. (1) Decide whether interruption is needed at all: many low-bleed-risk procedures (e.g., many dental procedures with local hemostasis) can proceed without stopping therapeutic anticoagulation; higher-bleed procedures usually need a hold. (2) Name the agent class: warfarin/VKA vs DOAC — clocks and restart rules differ; use institutional checklists and product monographs (site practical heuristics are teaching patterns only, not protocols). (3) Name thrombotic risk of holding: typical nonvalvular AF on warfarin is the BRIDGE population — arterial thromboembolism 0.4% (no bridging) vs 0.3% (bridging), risk difference 0.1 percentage points (95% CI −0.6 to 0.8), P=0.01 for noninferiority; major bleeding 1.3% (no bridging) vs 3.2% (bridging), relative risk 0.41 (95% CI 0.20 to 0.78), P=0.005 for superiority — so skip routine LMWH bridging for warfarin interruptions in typical AF. Very high thrombotic-risk phenotypes (mechanical valves — especially mitral / recent implant — recent VTE, some high-risk APS) are not the BRIDGE default; use valve-clinic or specialty bridging protocols. (4) Name procedure bleed risk and who owns restart: plan the first post-procedure dose when hemostasis allows; DOAC interruptions in typical AF generally do not need a heparin ‘bridge’ while the oral agent is held. Emergency life-threatening bleed or crash surgery is a reversal/hemostasis pathway (U.S. FXa: supportive care + institutional/off-label 4F-PCC — not Andexxa after Dec 22, 2025; dabigatran: idarucizumab when indicated), not this elective planning card. Post-ICH restart timing is a separate framework.",
     trialIds: ["bridge"],
     appliesTo: [
       "Elective peri-procedural planning for patients on oral anticoagulation (especially AF on VKA or DOAC)",
@@ -282,8 +393,9 @@ window.ANTICOAG_FRAMEWORKS = [
       "Post-ICH anticoagulation restart timing — use post-ich-anticoagulation framework",
       "AF + ACS/PCI antithrombotic duration — use af-pci-dual-pathway (different ‘bridge’ meaning)"
     ],
-    pearl: "Say three things out loud before you write LMWH: Must I interrupt? What is the thrombotic risk of the hold? What is the bleed risk of the procedure — and of bridging itself? Typical AF on warfarin → BRIDGE says skip routine bridging.",
+    pearl: "Say three things out loud before you write LMWH: Must I interrupt? What is the thrombotic risk of the hold? What is the bleed risk of the procedure — and of bridging itself? Typical AF on warfarin → BRIDGE: arterial thromboembolism 0.4% vs 0.3% (noninferior), major bleeding 1.3% vs 3.2% — skip routine bridging.",
     links: [
+      { kind: "tx-pathway", id: "peri-procedural-oac", label: "TX: Peri-procedural OAC" },
       { kind: "case", id: "af-warfarin-bridge-reflex", label: "Case: AF warfarin — reflexive bridge?" },
       { kind: "trial", id: "bridge", label: "Trial: BRIDGE" },
       { kind: "framework", id: "mechanical-valve-vka", label: "Framework: Mechanical valve (high-risk contrast)" },

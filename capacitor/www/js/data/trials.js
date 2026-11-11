@@ -218,14 +218,14 @@ window.ANTICOAG_TRIALS = [
         "society": "ACC/AHA/ACCP/HRS",
         "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
         "year": 2023,
-        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.4 (Chronic Kidney Disease/Kidney Failure) supportive text; Section 6.8.4 reference 23. Supports preferring anticoagulation over aspirin when OAC is indicated but VKA is unsuitable.",
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.8.4 (Chronic Kidney Disease/Kidney Failure) supportive text; Section 6.8.4 reference 23. Cited only to note that the pivotal apixaban trials excluded patients with CrCl <25 mL/min.",
         "url": "https://doi.org/10.1161/CIR.0000000000001193"
       },
       {
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 6 (Class III, Level A), page 3342; reference 242. Aligned with guidance against aspirin as AF stroke prevention when a DOAC can be used.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.1.1, Recommendation Table 6 (Class III, Level A), page 3342, with text in Section 6.1 (page 3341) and Section 6.3 (page 3346); reference 242. Aligned with guidance against aspirin as AF stroke prevention when a DOAC can be used.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -440,7 +440,7 @@ window.ANTICOAG_TRIALS = [
         "society": "CHEST",
         "document": "CHEST Guideline on Antithrombotic Therapy for VTE (Second Update)",
         "year": 2021,
-        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Guidance statement 15 (strong recommendation, moderate-certainty evidence), Table 8 and treatment-phase background text; reference 166. Early DOAC VTE evidence contributing to oral anticoagulation options after parenteral lead-in.",
+        "note": "2021 CHEST Guideline on Antithrombotic Therapy for VTE (Second Update), Guidance statement 15 (strong recommendation, moderate-certainty evidence), treatment-phase background text, page e570; reference 166. Early DOAC VTE evidence contributing to oral anticoagulation options after parenteral lead-in.",
         "url": "https://journal.chestnet.org/article/S0012-3692(21)01506-3/fulltext"
       },
       {
@@ -736,7 +736,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ASH",
         "document": "ASH Guidelines on Treatment of DVT and PE",
         "year": 2020,
-        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 3 and 4 evidence; reference 86. Supports apixaban among preferred DOACs for acute VTE in eligible patients.",
+        "note": "2020 ASH Guidelines on Treatment of DVT and PE, Recommendations 3 and 4 evidence; reference 86. Part of the DOAC-versus-VKA evidence behind Recommendation 3; the panel did not favor one DOAC over another (Recommendation 4).",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7556153/"
       }
     ],
@@ -1333,7 +1333,7 @@ window.ANTICOAG_TRIALS = [
         "society": "AHA/ACC",
         "document": "AHA/ACC Chronic Coronary Disease Guideline",
         "year": 2023,
-        "note": "2023 AHA/ACC Chronic Coronary Disease Guideline lists this trial as reference 32 in the Section 4.3.1 (Antiplatelet Therapy and Oral Anticoagulants) reference list; the recommendation text that uses it could not be read, so only the reference is given.",
+        "note": "2023 AHA/ACC Chronic Coronary Disease Guideline, Section 4.3.1 (Antiplatelet Therapy and Oral Anticoagulants), Recommendation 15 (Class 2a, Level of evidence B-R); Section 4.3.1 reference 32. Supports adding low-dose rivaroxaban to aspirin in chronic coronary disease with high ischemic risk and low-to-moderate bleeding risk.",
         "url": "https://doi.org/10.1161/CIR.0000000000001168"
       },
       {
@@ -1406,7 +1406,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ACC/AHA",
         "document": "ACC/AHA Lower Extremity Peripheral Artery Disease Guideline",
         "year": 2024,
-        "note": "2024 ACC/AHA Lower Extremity Peripheral Artery Disease Guideline, Section 5.1, Recommendation 6 (Class 1, Level of evidence A); also Recommendation 5, Section 9.1 Recommendation 1 and Section 12 Recommendation 4; reference 7. Supports low-dose rivaroxaban + aspirin after lower-extremity revascularization.",
+        "note": "2024 ACC/AHA Lower Extremity Peripheral Artery Disease Guideline, Section 5.1, Recommendation 6 (Class 1, Level of evidence A); also Section 5.1 Recommendation 5 (Class 1, Level of evidence B-R), Section 9.1 Recommendation 1 (Class 1, Level of evidence B-NR) and Section 12 Recommendation 4 (Class 1, Level of evidence A); Section 5.1 reference 7, Section 9.1 reference 1, Section 12 reference 10. Supports low-dose rivaroxaban + aspirin after lower-extremity revascularization.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12782132/"
       },
       {
@@ -1464,7 +1464,7 @@ window.ANTICOAG_TRIALS = [
         "society": "AHA/ACC/HFSA",
         "document": "AHA/ACC/HFSA Heart Failure Guideline",
         "year": 2022,
-        "note": "2022 AHA/ACC/HFSA Heart Failure Guideline lists this trial as reference 9 in one of its section reference lists; the section and recommendation that use it could not be read, so only the reference is given. Negative trial. It does not support adding low-dose rivaroxaban for heart failure in sinus rhythm.",
+        "note": "2022 AHA/ACC/HFSA Heart Failure Guideline, Section 7.3.6 (Other Drug Treatment), Recommendation 3 (Class 3: No Benefit, Level of evidence B-R); Section 7.3.6 reference 9. Negative trial. It does not support adding low-dose rivaroxaban for heart failure in sinus rhythm.",
         "url": "https://doi.org/10.1161/CIR.0000000000001063"
       },
       {
@@ -1569,7 +1569,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2020,
-        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, chronic coronary syndrome row (Class I, Level A), page 434; reference 1078. Historically informed shorter triple therapy / dual-pathway strategies.",
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, chronic coronary syndrome row (Class I, Level A), page 434; reference 1078. Historically informed shorter triple therapy and dual antithrombotic therapy strategies.",
         "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
@@ -1684,7 +1684,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2020,
-        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, DOAC-over-VKA row (Class I, Level A) and dabigatran 110 mg row (Class IIa, Level B), page 434; reference 1079. Aligned with dual-pathway DOAC strategies after stenting.",
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, DOAC-over-VKA row (Class I, Level A) and dabigatran 110 mg row (Class IIa, Level B), page 434; reference 1079. Aligned with dual antithrombotic therapy using a DOAC after stenting.",
         "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
@@ -1789,7 +1789,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2020,
-        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, DOAC-over-VKA row (Class I, Level A), page 434; reference 1081. Major evidence base for dual pathway with apixaban and limited aspirin.",
+        "note": "2020 ESC Atrial Fibrillation Guidelines, Section 11.3 recommendation table, DOAC-over-VKA row (Class I, Level A), page 434; reference 1081. Major evidence base for dual antithrombotic therapy with apixaban and limited aspirin.",
         "url": "https://doi.org/10.1093/eurheartj/ehaa612"
       }
     ],
@@ -2150,7 +2150,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ASH",
         "document": "ASH Guidelines on VTE in Patients With Cancer",
         "year": 2021,
-        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 20–25 evidence; reference 333. Supports edoxaban as a DOAC option vs dalteparin with attention to GI bleed risk.",
+        "note": "2021 ASH Guidelines on VTE in Patients With Cancer, Recommendations 23–25 evidence (DOAC versus LMWH for short-term treatment; conditional recommendation, low certainty); reference 333. Supports edoxaban as a DOAC option vs dalteparin with attention to GI bleed risk.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7903232/"
       },
       {
@@ -2164,7 +2164,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Cardio-Oncology Guidelines",
         "year": 2022,
-        "note": "2022 ESC Cardio-Oncology Guidelines, Section 6.6.4.1, Recommendation Table 34 (Class I, Level A), page 4306, with text in Section 6.7.1, page 4307; reference 578. Informs oral therapy alternatives to long-term LMWH in selected patients.",
+        "note": "2022 ESC Cardio-Oncology Guidelines, Section 6.6.4.1, Recommendation Table 34 (Class I, Level A), page 4305, with text in Section 6.6.4.1, page 4305, and Section 6.7.1, page 4306; reference 578. Informs oral therapy alternatives to long-term LMWH in selected patients.",
         "url": "https://doi.org/10.1093/eurheartj/ehac244"
       }
     ],
@@ -2725,7 +2725,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ASH",
         "document": "ASH Guidelines on VTE Prophylaxis in Medical Patients",
         "year": 2018,
-        "note": "2018 ASH Guidelines on VTE Prophylaxis in Medical Patients, Recommendation 13 evidence; reference 146. Post-discharge rivaroxaban versus placebo for 45 days. The primary composite was not reduced.",
+        "note": "2018 ASH Guidelines on VTE Prophylaxis in Medical Patients, Recommendation 13 (strong recommendation, moderate certainty), Other EtD criteria and considerations text, which notes the trial was published after the panel finalized the recommendation; reference 146. Post-discharge rivaroxaban versus placebo for 45 days. The primary composite was not reduced.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6258910/"
       }
     ],
@@ -2812,7 +2812,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 9.7, Recommendation Table 27 (Class III, Level A), page 3369; reference 876. Aligned with antiplatelet therapy unless AF or another OAC indication is found.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 9.7, Recommendation Table 27 (Class III, Level A), page 3369, with text on the same page; reference 876. The guideline does not recommend starting oral anticoagulation after embolic stroke of undetermined source without documented AF.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -3033,7 +3033,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.5 text, page 3347, citing the 5-year pooled PROTECT AF and PREVAIL follow-up; reference 364. Contributes to LAAO as an option when long-term OAC is problematic or per shared decision.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.5 text, page 3347, citing the 5-year pooled PROTECT AF and PREVAIL follow-up; reference 364. The guideline notes that warfarin control arms are no longer standard care, so the place of LAAO in current practice is unclear.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -3088,7 +3088,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ACC/AHA/ACCP/HRS",
         "document": "ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline",
         "year": 2023,
-        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.5.1 (Percutaneous Approaches to Occlude the Left Atrial Appendage) synopsis; Section 6.5.1 reference 4. Supports considering LAAO in high-risk AF with attention to bleeding and procedural risk.",
+        "note": "2023 ACC/AHA/ACCP/HRS Atrial Fibrillation Guideline, Section 6.5.1 (Percutaneous Approaches to Occlude the Left Atrial Appendage), Recommendation 1 (Class 2a, Level of evidence B-NR), synopsis; Section 6.5.1 reference 4. Supports considering LAAO in high-risk AF with attention to bleeding and procedural risk.",
         "url": "https://doi.org/10.1161/CIR.0000000000001193"
       }
     ],
@@ -3143,7 +3143,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 10 (Class I, Level B), page 3348; reference 401. Aligned with surgical LAA occlusion as additive stroke prevention. Not OAC replacement.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.6, Recommendation Table 11 (Class I, Level B), page 3348; Section 6.6 text, page 3347; reference 401. Aligned with surgical LAA occlusion as additive stroke prevention. Not OAC replacement.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -3333,7 +3333,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC/EACTS",
         "document": "ESC/EACTS Valvular Heart Disease Guidelines",
         "year": 2021,
-        "note": "2021 ESC/EACTS Valvular Heart Disease Guidelines, Section 11.3 recommendation table (Class III, Level B), page 603; text pages 602 and 604; reference 497. Aligned with antiplatelet strategies rather than routine OAC post-TAVI without indication.",
+        "note": "2021 ESC/EACTS Valvular Heart Disease Guidelines, Section 11.3 recommendation table (Class III, Level B), page 603; text page 602; reference 497. Aligned with antiplatelet strategies rather than routine OAC post-TAVI without indication.",
         "url": "https://doi.org/10.1093/eurheartj/ehab395"
       }
     ],
@@ -3637,7 +3637,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 7; reference 294. Aligned with VKA for moderate–severe mitral stenosis / rheumatic AF.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2, Recommendation Table 7 (Class I, Level A), page 3344, with text in Section 6.2.1 (page 3344) and Section 6.2.2 (page 3345); reference 294. Aligned with VKA rather than DOAC for AF with moderate-to-severe mitral stenosis.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -4019,7 +4019,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2.1 text; reference 329. No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap. Its sentence describes both trials as testing apixaban 2.5 mg twice daily [correction: the RENAL-AF protocol used 5 mg twice daily, with 2.5 mg only for age ≥80 years and/or weight ≤60 kg].",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2.1 text, page 3344; reference 329. No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap. The guideline sentence describes both trials as testing apixaban 2.5 mg twice daily, but the RENAL-AF protocol used 5 mg twice daily, with 2.5 mg twice daily only for age ≥80 years and/or weight ≤60 kg.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -4062,7 +4062,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2.1 text; reference 328. No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.2.1 text, page 3344; reference 328. No graded recommendation for dialysis. The narrative notes small hemodialysis trials finding no difference between apixaban and VKA, and lists severe end-stage renal failure as an evidence gap.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -4297,7 +4297,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 6 (Class IIb, Level B), page 3342; reference 282. It is read with NOAH-AFNET 6. A single rule for device-detected episodes does not follow.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.1.1, Recommendation Table 6 (Class IIb, Level B), page 3342; Section 6.2.3 text, page 3345; reference 282. It is read with NOAH-AFNET 6. A single rule for device-detected episodes does not follow.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
@@ -4353,7 +4353,7 @@ window.ANTICOAG_TRIALS = [
         "society": "ESC",
         "document": "ESC Atrial Fibrillation Guidelines",
         "year": 2024,
-        "note": "2024 ESC Atrial Fibrillation Guidelines, Recommendation Table 6 (Class IIb, Level B), page 3342; reference 281. It stands beside ARTESiA. NOAH-AFNET 6 did not establish a primary-endpoint benefit of edoxaban over placebo.",
+        "note": "2024 ESC Atrial Fibrillation Guidelines, Section 6.1.1, Recommendation Table 6 (Class IIb, Level B), page 3342; Section 6.2.3 text, page 3345; reference 281. It stands beside ARTESiA. NOAH-AFNET 6 did not establish a primary-endpoint benefit of edoxaban over placebo.",
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],

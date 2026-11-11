@@ -38,6 +38,7 @@ window.ANTICOAG_SITE_META = {
     ["EACTS", "European Association for Cardio-Thoracic Surgery"],
     ["ERS", "European Respiratory Society"],
     ["ESC", "European Society of Cardiology"],
+    ["EtD", "evidence-to-decision"],
     ["EULAR", "European Alliance of Associations for Rheumatology"],
     ["ESUS", "embolic stroke of undetermined source"],
     ["FDA", "Food and Drug Administration"],

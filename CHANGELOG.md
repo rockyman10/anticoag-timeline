@@ -52,6 +52,11 @@ Newest first. Record site changes here. The site does not render this file.
 - The disclaimer and handbook note cite the 2026 AC Forum CACP Candidate Handbook and state that AC Forum does not endorse this or any preparatory materials. These are not real exam questions. The home-page abbreviation for CACP is Certified Antithrombotic Care Provider.
 - Educational only. Wording stays DOAC. reviewedBy unchanged.
 
+## 2026-11-05 — Guideline note corrections
+
+- Twenty-three guideline notes now name the checked section, recommendation, page, or teaching line. Trial results are unchanged. The home-page abbreviation list adds EtD (evidence-to-decision) for the MARINER note.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-03 — ATIS-NVAF trial card
 
 - New card: ATIS-NVAF (Okazaki S, et al. JAMA Neurol. 2025). Japanese patients with ischemic stroke or TIA, nonvalvular atrial fibrillation, and atherosclerotic disease. An oral anticoagulant plus one antiplatelet did not significantly reduce the 2-year composite of ischemic cardiovascular events or major bleeding versus the anticoagulant alone (17.8% vs 19.6%; HR 0.91; 95% CI 0.53–1.55). Major or clinically relevant nonmajor bleeding was higher with combination therapy (19.5% vs 8.6%; HR 2.42). All-cause death is with the efficacy results. The trial stopped early for futility.

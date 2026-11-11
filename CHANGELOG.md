@@ -2,6 +2,16 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-10 — CACP practice bank raised to case-based difficulty
+
+- All 219 unofficial practice items were rewritten in place. Ids, domains, handbook objective ids, and related links are unchanged, so the 160-question quotas (I 40, II 56, III 16, IV 40, V 8) and objective coverage still hold.
+- The previous bank was mostly recall. 146 of 219 answers sat on choice B, and the keyed choice was uniquely the longest in 207 items. The new items are short cases (kidney function, interactions, INR trend, procedure timing, bleeding, or a clinic failure) with parallel choices. Keyed letters are balanced (A 56, B 55, C 54, D 54). Display order still shuffles. A second pass evened choice length: the keyed choice is uniquely the longest in 42 of 219 items (19 percent), the mean gap versus the next-longest choice is about -5 characters, and no keyed choice is more than 25 characters longer than the next choice. Which answer is correct did not change.
+- Each explanation states why the keyed choice is right and why the other three are wrong, and names a label, guideline, or trial already used on this site. Wording stays DOAC. No dosing order is issued.
+- A clinician review of every item, with the old and new keyed text, the source, and confidence notes, is in `docs/cacp-difficulty-review-2026-11-10.md`.
+- Items that name a fact a 2026 label or guideline was not re-opened for are listed in that review. They were not filled in with a guessed number.
+- Clinical and literature review fixes were applied after that pass: 23 items, 33 exact wording pairs, no answer-key changes. Keyed-choice length was recomputed afterward: uniquely longest in 43 of 219 items, mean gap about -5 characters, and no keyed choice more than 25 characters longer than the next choice.
+- The same bank is in the Capacitor copy. Educational only. AC Forum does not endorse this material. These are not real exam questions. reviewedBy unchanged.
+
 ## 2026-11-10 — OCEANIC-STROKE notes the FDA approval of asundexian
 
 - OCEANIC-STROKE caveats now say the FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on Nov 9, 2026, for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS ≤15) or high-risk TIA, and that it is not approved for AF. The card names the FDA press release. No DailyMed label is posted yet, so the card does not add label wording or bleeding-subgroup wording.

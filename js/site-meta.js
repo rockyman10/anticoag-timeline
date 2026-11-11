@@ -20,7 +20,7 @@ window.ANTICOAG_SITE_META = {
     ["BARC", "Bleeding Academic Research Consortium"],
     ["C-EO", "expert opinion (ACC/AHA level of evidence)"],
     ["C-LD", "limited data (ACC/AHA level of evidence)"],
-    ["CACP", "Certified Anticoagulation Care Provider"],
+    ["CACP", "Certified Antithrombotic Care Provider"],
     ["CAD", "coronary artery disease"],
     ["CDT", "catheter-directed therapy (thrombolysis or fibrinolysis in CaVenT and HI-PEITHO)"],
     ["CHA₂DS₂-VASc", "stroke risk score (congestive heart failure, hypertension, age, diabetes, prior stroke or TIA, vascular disease, and sex)"],

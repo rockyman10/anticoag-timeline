@@ -1,10 +1,24 @@
-/* Unofficial CACP (NCBAP) exam-prep practice module — educational only */
+/* Unofficial CACP exam-prep practice module — educational only. Not an AC Forum exam. */
 window.ANTICOAG_CACP = {
   "meta": {
     "title": "CACP exam prep (unofficial)",
-    "disclaimer": "Unofficial educational practice only. The National Certification Board for Anticoagulation Providers (NCBAP) does not endorse this or any preparatory materials. These are not real CACP examination questions. Verify all clinical decisions with current guidelines, product labeling, and institutional protocols.",
-    "handbookNote": "Domain weights follow the NCBAP CACP Candidate Handbook: I Applied Pathophysiology 25%, II Patient Assessment and Management 35%, III Patient Education 10%, IV Applied Pharmacology 25%, V Operational/Administrative 5%. Handbook PDF: https://ncbap.org/web/documents/CACP_Candidate_Handbook.pdf — NCBAP states it does not endorse prep courses or study guides (https://ncbap.org/web/exam-prep.php).",
-    "version": "2026-10-01",
+    "disclaimer": "Unofficial educational practice only. The Anticoagulation Forum (AC Forum) does not endorse this or any preparatory materials. These are not real CACP examination questions. The 2026 AC Forum Candidate Handbook names the credential Certified Antithrombotic Care Provider (CACP). Verify all clinical decisions with current guidelines, product labeling, and institutional protocols.",
+    "handbookNote": "Practice logistics follow the 2026 AC Forum CACP Candidate Handbook (https://acforum.org/web/resource_files/1793672914-37806.pdf). That handbook describes 160 multiple-choice questions — 150 scored and 10 unidentified unscored pilots — with 2 hours 30 minutes allowed, and a pass line of 80% of the 150 scored items. Domain weights: I Applied Pathophysiology of Thromboembolic Disease 25%, II Patient Assessment and Management 35%, III Patient Education 10%, IV Applied Pharmacology of Antithrombotic Agents 25%, V Operational (Administrative) Procedures 5%. A 160-question practice sitting uses quotas I 40, II 56, III 16, IV 40, V 8. AC Forum does not endorse this or any preparatory materials. These are not real exam questions.",
+    "version": "2026-11-10",
+    "exam": {
+      "questionCount": 160,
+      "scoredCount": 150,
+      "pilotCount": 10,
+      "durationMinutes": 150,
+      "passPercentOfScored": 80,
+      "quotas": {
+        "I": 40,
+        "II": 56,
+        "III": 16,
+        "IV": 40,
+        "V": 8
+      }
+    },
     "domains": [
       {
         "id": "I",
@@ -46,37 +60,38 @@ window.ANTICOAG_CACP = {
     "Use this site’s DDI library for P-gp/CYP3A4 teaching instead of guessing AUC numbers.",
     "HAS-BLED mitigates risk — it does not automatically cancel indicated OAC.",
     "Practice teach-back language for food (rivaroxaban 15–20 mg), missed doses, and NSAID caution.",
-    "TTR and POC/CLIA concepts show up in the small but real Domain V slice."
+    "TTR and POC/CLIA concepts show up in the small but real Domain V slice.",
+    "Many items are short cases. When age, weight, and serum creatinine are all given, creatinine clearance is part of the reasoning before a regimen is identified."
   ],
   "questions": [
     {
       "id": "i-01",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Which statement best distinguishes typical arterial from typical venous thrombus formation for anticoagulation teaching?",
+      "difficulty": "advanced",
+      "stem": "A 64-year-old man with hypertension and a 40-pack-year smoking history has abrupt chest pressure. Angiography shows an occluded coronary artery at a ruptured plaque. Hemoglobin is 13.8 g/dL. The same week, a 70-year-old woman develops a femoral-vein clot on day 3 after knee replacement, with leg swelling but no chest pain. Which description fits the coronary occlusion rather than the leg clot?",
       "choices": [
         {
           "id": "a",
-          "text": "Arterial thrombi are usually red-clot / fibrin-rich and always respond better to warfarin than DOACs"
+          "text": "Platelet-rich material built under high arterial shear on a ruptured plaque, the white-thrombus pattern"
         },
         {
           "id": "b",
-          "text": "Venous thrombi form mainly under high shear on ruptured plaques; arterial thrombi form in stasis"
+          "text": "Fibrin- and red-cell-rich material built in low-shear venous stasis, the red-thrombus pattern"
         },
         {
           "id": "c",
-          "text": "Arterial thrombi are more platelet-rich (white thrombi) under high shear; venous thrombi are more fibrin-/RBC-rich in lower-shear stasis"
+          "text": "A clot that requires venous stasis and cannot form on an arterial plaque at high shear"
         },
         {
           "id": "d",
-          "text": "The distinction is obsolete because all thrombi require the same intensity of anticoagulation"
+          "text": "A thrombus with the same platelet and fibrin mix in arteries and veins, so one intensity fits both in clinic"
         }
       ],
-      "correctId": "c",
-      "explanation": "Classic teaching: arterial white thrombi (platelet-rich, high shear) vs venous red thrombi (fibrin/RBC-rich, stasis). This frames why antiplatelet therapy is central in CAD/ACS while anticoagulants dominate venous and AF cardioembolic prevention — with important overlaps (e.g., AF+PCI dual pathway).",
+      "correctId": "a",
+      "explanation": "Choice A matches the coronary event: arterial thrombi at ruptured plaques are typically platelet-rich under high shear. Choice B describes the postoperative venous clot, not the coronary occlusion. Choice C denies arterial thrombosis at high shear. Choice D erases the composition difference that separates antiplatelet-centered arterial disease from anticoagulant-centered venous and cardioembolic disease. Source: standard hemostasis teaching used to frame arterial versus venous thrombosis.",
       "teachingPoints": [
-        "Virchow’s triad still organizes venous risk (stasis, endothelial injury, hypercoagulability).",
-        "AF stroke prevention targets cardioembolic fibrin-rich emboli — hence OAC, not aspirin alone when OAC is indicated."
+        "Arterial white thrombi are platelet-rich and form under high shear.",
+        "Venous red thrombi are fibrin- and red-cell-rich and form in stasis."
       ],
       "links": [
         {
@@ -84,36 +99,39 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke-prevention",
           "label": "AF stroke framework"
         }
+      ],
+      "objectiveIds": [
+        6
       ]
     },
     {
       "id": "i-02",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "When warfarin is started without a parenteral bridge in a high-risk VTE setting, why can protein C (and protein S) kinetics create a transient hypercoagulable window?",
+      "difficulty": "advanced",
+      "stem": "A 58-year-old man with an unprovoked proximal DVT starts warfarin alone. On day 3 his INR is 2.4. He then develops a painful dark skin lesion on the thigh, and duplex shows extension of thrombus. He takes no heparin, has a normal platelet count, and has no cough. Which mechanism best explains a transient prothrombotic window this early?",
       "choices": [
         {
           "id": "a",
-          "text": "Warfarin immediately blocks thrombin; protein C rises first, causing bleeding"
+          "text": "Warfarin raises protein C first, so the early INR rise is a bleeding signal rather than a clotting one today"
         },
         {
           "id": "b",
-          "text": "Vitamin K–dependent anticoagulant proteins (C/S) can fall before procoagulant factors fully decline, transiently tipping toward thrombosis"
+          "text": "Functional protein C falls early, before longer-lived prothrombin has fallen enough to protect the patient"
         },
         {
           "id": "c",
-          "text": "Warfarin induces antithrombin deficiency within hours"
+          "text": "Warfarin depletes antithrombin within hours, and that single loss explains the new skin lesion"
         },
         {
           "id": "d",
-          "text": "Only factor VII rises during initiation; other factors are unchanged"
+          "text": "Factor VII concentration rises during the first days, while factors II, IX, and X stay unchanged"
         }
       ],
       "correctId": "b",
-      "explanation": "Protein C (and protein S) are vitamin K–dependent and have relatively short half-lives. Early VKA effect can reduce natural anticoagulants before longer-lived procoagulant factors (notably II) fully fall — a rationale for overlapping parenteral anticoagulation when initiating warfarin for acute VTE.",
+      "explanation": "Choice B is the initiation physiology: vitamin K antagonism lowers functional protein C, which has a short half-life, before prothrombin (about 60 hours) has declined. The CHEST VTE guideline describes parenteral overlap with warfarin for at least 5 days and until the INR is at least 2.0 for 24 hours. Choice A reverses the protein C direction. Choice C names antithrombin, which warfarin does not deplete. Choice D reverses the factor VII change; factor VII falls early and drives much of the first INR rise. Half-lives are approximate textbook values.",
       "teachingPoints": [
-        "Factor II (prothrombin) has a long half-life — full anticoagulant effect lags INR rise driven partly by factor VII.",
-        "DOAC single-drug VTE regimens avoid this VKA initiation physiology."
+        "An early INR rise can reflect factor VII, not full prothrombin suppression.",
+        "Acute warfarin starts for VTE use a parenteral overlap because of this lag."
       ],
       "links": [
         {
@@ -121,36 +139,39 @@ window.ANTICOAG_CACP = {
           "id": "acute-vte",
           "label": "Acute VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        2
       ]
     },
     {
       "id": "i-03",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "CHA₂DS₂-VASc is best used in NVAF stroke-prevention counseling to:",
+      "difficulty": "advanced",
+      "stem": "A 76-year-old woman with NVAF has hypertension, diabetes, and a prior ischemic stroke. She takes ibuprofen daily for knee pain. Blood pressure today is 168/96 mm Hg. Hemoglobin is 13 g/dL and she has no mechanical valve. Her clinician calculates a high CHA₂DS₂-VASc score and a high HAS-BLED score because of uncontrolled hypertension, prior stroke, age, and the anti-inflammatory drug. Which use of the two scores fits the 2023 AF guideline?",
       "choices": [
         {
           "id": "a",
-          "text": "Automatically withhold anticoagulation whenever HAS-BLED is ≥3"
+          "text": "Cancel anticoagulation because a HAS-BLED score of 3 or more forbids a DOAC or warfarin"
         },
         {
           "id": "b",
-          "text": "Estimate stroke risk to guide whether OAC is indicated; bleeding scores inform mitigation, not automatic denial of indicated OAC"
+          "text": "Use HAS-BLED to pick the DOAC molecule and ignore the stroke score once bleeding risk is high"
         },
         {
           "id": "c",
-          "text": "Replace clinical judgment for mechanical valve anticoagulation intensity"
+          "text": "Treat the stroke score as the indication for OAC, and use the bleeding score to fix modifiable risks"
         },
         {
           "id": "d",
-          "text": "Select among DOAC agents by assigning each a unique score threshold"
+          "text": "Replace the valve-thrombosis assessment with these scores if a mechanical mitral valve is later found"
         }
       ],
-      "correctId": "b",
-      "explanation": "Guideline teaching: use stroke-risk scores to identify who benefits from OAC. HAS-BLED (or similar) flags modifiable bleed risks (BP, NSAIDs, alcohol, labile INR) — it should not automatically cancel indicated anticoagulation.",
+      "correctId": "c",
+      "explanation": "Choice C matches the 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: an estimated annual stroke risk of at least 2%, corresponding to a CHA₂DS₂-VASc score of 2 or more in men or 3 or more in women, supports anticoagulation, and a bleeding score is used to address modifiable risks rather than to withhold indicated OAC. This woman's stroke history, hypertension, diabetes, age, and sex put her well above that threshold. Choice A uses HAS-BLED as a stop rule. Choice B uses a bleeding score to choose a molecule. Choice D misapplies the scores to a mechanical valve, which is outside this NVAF discussion.",
       "teachingPoints": [
-        "Aspirin is not a stroke-prevention substitute when OAC is indicated (AVERROES-era teaching).",
-        "Intermediate CHA₂DS₂-VASc scores need shared decision — see SINGLE-AF nuance on this site."
+        "HAS-BLED flags blood pressure, anti-inflammatory drugs, alcohol, and labile INR.",
+        "A high bleeding score does not erase an indication for OAC."
       ],
       "links": [
         {
@@ -168,36 +189,39 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke-prevention",
           "label": "AF framework"
         }
+      ],
+      "objectiveIds": [
+        13
       ]
     },
     {
       "id": "i-04",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Wells or revised Geneva scores for suspected DVT/PE primarily help clinicians:",
+      "difficulty": "advanced",
+      "stem": "A 55-year-old woman has sudden pleuritic pain and dyspnea 10 days after pelvic surgery. Heart rate is 112 beats per minute. One calf is swollen. Hemoptysis is absent. She has no cancer and no prior VTE. The clinician judges PE more likely than an alternative diagnosis. Hemoglobin is 12 g/dL. Using the Wells PE items (leg findings 3, PE as leading diagnosis 3, heart rate above 100 gives 1.5, recent surgery 1.5), which next interpretation is sound?",
       "choices": [
         {
           "id": "a",
-          "text": "Choose between apixaban and rivaroxaban once VTE is confirmed"
+          "text": "A high Wells score is itself a prescription for systemic thrombolysis"
         },
         {
           "id": "b",
-          "text": "Estimate pretest probability to guide D-dimer / imaging pathways"
+          "text": "A normal D-dimer alone can send her home without imaging when the score is already high"
         },
         {
           "id": "c",
-          "text": "Determine INR targets for mechanical mitral valves"
+          "text": "The score chooses apixaban versus rivaroxaban after imaging has already confirmed the PE now"
         },
         {
           "id": "d",
-          "text": "Decide whether Andexxa is required for FXa bleeding in the U.S."
+          "text": "The score is high enough that imaging, not a D-dimer rule-out, is the next diagnostic step"
         }
       ],
-      "correctId": "b",
-      "explanation": "Pretest probability tools (Wells, revised Geneva) structure the diagnostic pathway (D-dimer vs imaging). They are not DOAC-selection tools after confirmed VTE.",
+      "correctId": "d",
+      "explanation": "Leg signs, PE as the leading diagnosis, tachycardia, and recent surgery sum to 9, which is a high Wells PE score. Choice D is the role of the score: high pretest probability moves to definitive imaging rather than a D-dimer exclusion. Choice A jumps from probability to reperfusion. Choice B misuses D-dimer, which is for lower probability. Choice C confuses a diagnostic score with a drug-choice tool. Source: Wells pretest-probability logic as used before D-dimer or imaging in suspected PE.",
       "teachingPoints": [
-        "PESI / sPESI risk-stratify PE severity after diagnosis — different job than Wells.",
-        "Hemodynamic instability overrides outpatient DOAC-start thinking."
+        "High pretest probability is an imaging pathway.",
+        "D-dimer exclusion is for lower probability, not a high score."
       ],
       "links": [
         {
@@ -209,8 +233,7 @@ window.ANTICOAG_CACP = {
           "kind": "framework",
           "id": "intermediate-pe-cdt",
           "label": "CDT framework"
-        }
-      ,
+        },
         {
           "kind": "case",
           "id": "intermediate-pe-pert",
@@ -220,44 +243,47 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "hi-peitho-enrichment",
           "label": "Nuance: HI-PEITHO enrichment"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        11
+      ]
     },
     {
       "id": "i-05",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Triple-positive antiphospholipid syndrome (lupus anticoagulant + anticardiolipin + anti-β2GP1) is high-risk for recurrent thrombosis. Best long-term anticoagulant teaching on this site’s APS pathway is:",
+      "stem": "A 45-year-old woman finished 4 months of apixaban for an unprovoked proximal DVT. Repeat testing 12 weeks apart shows a lupus anticoagulant, IgG anticardiolipin, and IgG anti-β2-glycoprotein I. She prefers a DOAC because the twice-daily schedule is easy. She is not pregnant, creatinine clearance is normal, and she has no mechanical valve. Which long-term strategy fits this triple-positive antiphospholipid phenotype?",
       "choices": [
         {
           "id": "a",
-          "text": "Any labeled DOAC is preferred over warfarin"
+          "text": "Transition toward dose-adjusted warfarin, the strategy TRAPS compared favorably with rivaroxaban"
         },
         {
           "id": "b",
-          "text": "Prefer dose-adjusted warfarin (VKA); avoid DOAC especially if triple-positive"
+          "text": "Continue apixaban indefinitely because any VTE label covers triple-positive antiphospholipid syndrome"
         },
         {
           "id": "c",
-          "text": "Aspirin monotherapy is guideline-preferred indefinite therapy"
+          "text": "Switch to the COMPASS rivaroxaban 2.5 mg twice-daily plus aspirin regimen used for stable CAD"
         },
         {
           "id": "d",
-          "text": "Low-dose rivaroxaban 2.5 mg BID + aspirin (COMPASS) is the APS standard"
+          "text": "Stop anticoagulation at 6 months because the first clot was in a vein and antibodies do not change duration"
         }
       ],
-      "correctId": "b",
-      "explanation": "Specialty guidance prefers VKA in high-risk / triple-positive APS. Standard DOAC VTE programs were not dedicated high-risk APS replacements. COMPASS vascular dosing is a different population entirely.",
+      "correctId": "a",
+      "explanation": "Choice A fits high-risk triple-positive antiphospholipid syndrome. In TRAPS, rivaroxaban was stopped early against warfarin targeted to an INR of 2.5 after excess events, including arterial events, in the rivaroxaban group. Choice B treats this as ordinary VTE. Choice C imports a vascular-prevention dose from COMPASS, a different population. Choice D ignores the persistent high-risk antibody profile. Source: TRAPS and the site's triple-positive pathway, which frames warfarin rather than a DOAC.",
       "teachingPoints": [
-        "TRAPS/RAPS-era literature informs DOAC caution — those trials are not curated cards on this timeline; avoid inventing their event rates.",
-        "Confirm persistent antibodies (≥12 weeks) when classifying APS."
+        "TRAPS tested rivaroxaban against INR-targeted warfarin in triple-positive disease.",
+        "Ordinary VTE DOAC evidence does not replace that high-risk phenotype."
       ],
       "links": [
         {
           "kind": "pathway",
           "id": "aps",
           "label": "APS pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "aps-triple-positive-vka",
@@ -267,36 +293,41 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "aps-triple-positive-doac",
           "label": "Case: Triple-positive APS DOAC request"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        18,
+        20
+      ]
     },
     {
       "id": "i-06",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Cardioembolic stroke risk in AF is primarily driven by thrombus formation in the:",
+      "difficulty": "advanced",
+      "stem": "A 79-year-old man with NVAF and a prior embolic stroke has no palpitations today. Transesophageal echocardiography shows spontaneous contrast and a thrombus in the left atrial appendage. Left ventricular wall motion is normal. Leg veins are compressible. Coronary angiography last year showed mild plaque. Which site best explains this thrombus?",
       "choices": [
         {
           "id": "a",
-          "text": "Left atrial appendage (and left atrium) under stagnant flow"
+          "text": "A high-shear coronary plaque, because AF thrombi form on ruptured arterial lesions"
         },
         {
           "id": "b",
-          "text": "Coronary arteries exclusively"
+          "text": "The left atrial appendage, where AF produces stasis in a blind pouch"
         },
         {
           "id": "c",
-          "text": "Deep calf veins with paradoxical embolus in every case"
+          "text": "A deep calf vein, because cardioembolic stroke begins as lower-extremity DVT"
         },
         {
           "id": "d",
-          "text": "Carotid bulb atherosclerotic plaque only"
+          "text": "The aortic arch only, because AF does not alter left atrial flow"
         }
       ],
-      "correctId": "a",
-      "explanation": "AF-related emboli commonly originate from left atrial appendage thrombus in the setting of atrial stasis — the anatomic rationale for both OAC and LAAO discussions when OAC is prohibitive.",
+      "correctId": "b",
+      "explanation": "Choice B is the anatomic source: AF promotes stasis in the left atrial appendage, and the study shows thrombus there. Choice A describes typical atherosclerotic coronary thrombosis, and last year's angiogram showed only mild plaque. Choice C describes venous thromboembolism, not this echo. Choice D contradicts the finding of appendage stasis. Source: AF cardioembolic pathophysiology used on this site's stroke-prevention framework.",
       "teachingPoints": [
-        "LAAO is not first-line for patients who can take long-term OAC.",
-        "See CHAMPION-AF / LAAO pathway teaching on this site."
+        "Appendage stasis is why OAC, not aspirin alone, is the stroke strategy when OAC is indicated.",
+        "Absence of palpitations does not clear appendage thrombus."
       ],
       "links": [
         {
@@ -309,36 +340,39 @@ window.ANTICOAG_CACP = {
           "id": "champion-af",
           "label": "CHAMPION-AF"
         }
+      ],
+      "objectiveIds": [
+        13
       ]
     },
     {
       "id": "i-07",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Which vitamin K–dependent clotting factor has the longest half-life and therefore most influences the delay to full warfarin anticoagulation?",
+      "difficulty": "advanced",
+      "stem": "A 69-year-old woman starts warfarin for AF with a heparin overlap. On day 2 the INR is already 2.1, and a colleague says the anticoagulant effect is therefore complete. She has no bleeding, platelets are stable, and she is not on a DOAC. Which factor's long half-life means the INR can rise before warfarin anticoagulation is fully established?",
       "choices": [
         {
           "id": "a",
-          "text": "Factor VII"
+          "text": "Factor VII, because its long half-life is what delays the full warfarin effect for weeks"
         },
         {
           "id": "b",
-          "text": "Factor IX"
+          "text": "Antithrombin, because warfarin directly lengthens the half-life of antithrombin"
         },
         {
           "id": "c",
-          "text": "Factor II (prothrombin)"
+          "text": "Prothrombin (factor II), whose half-life is far longer than that of factor VII"
         },
         {
           "id": "d",
-          "text": "Factor XI"
+          "text": "Fibrinogen, because warfarin blocks hepatic fibrinogen synthesis on the first day"
         }
       ],
       "correctId": "c",
-      "explanation": "Factor II has the longest half-life among the vitamin K–dependent procoagulant factors. Early INR changes often reflect factor VII decline; durable anticoagulation requires factor II reduction — another reason overlap matters in acute VTE VKA starts.",
+      "explanation": "Choice C is correct. Factor VII falls quickly (half-life about 6 hours) and moves the INR, while prothrombin's half-life is about 60 hours, so thrombin-generating potential lingers. Choice A assigns the long half-life to the short-lived factor. Choice B is wrong because warfarin does not act through antithrombin. Choice D is wrong because fibrinogen is not a vitamin K-dependent factor. Half-lives are approximate textbook values, not a label table.",
       "teachingPoints": [
-        "Factor XI is not vitamin K–dependent (FXI inhibitor pipeline is a separate story).",
-        "INR is a composite — interpret initiation kinetics clinically."
+        "The early INR is heavily influenced by factor VII.",
+        "Full suppression tracks the slower fall in prothrombin."
       ],
       "links": [
         {
@@ -346,36 +380,39 @@ window.ANTICOAG_CACP = {
           "id": "acute-vte",
           "label": "Acute VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        2
       ]
     },
     {
       "id": "i-08",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Cancer-associated thrombosis risk is multifactorial. Which statement is most accurate for teaching?",
+      "stem": "A 63-year-old woman with metastatic pancreatic cancer has a port, started a new chemotherapy cycle, and has been in bed with a fever. Duplex confirms femoral DVT. She has no AF and no mechanical valve. A student asks whether one mechanism explains cancer-associated thrombosis. Which answer is the most accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Only metastatic pancreatic cancers cause VTE; other cancers cancel DOAC eligibility"
+          "text": "Only the port matters, because cancer itself does not change coagulation at all"
         },
         {
           "id": "b",
-          "text": "Tumor biology, surgery, immobility, catheters, and some systemic therapies all contribute — agent choice still individualizes bleed and DDI risk"
+          "text": "Only arterial plaque rupture matters, because cancer raises stroke risk and not VTE"
         },
         {
           "id": "c",
-          "text": "All cancer VTE must use warfarin indefinitely"
+          "text": "Only a single inherited mutation matters, and the cancer history is incidental here"
         },
         {
           "id": "d",
-          "text": "DOACs are contraindicated in every solid tumor"
+          "text": "Tumor activity, the catheter, chemotherapy, and immobility all coexist"
         }
       ],
-      "correctId": "b",
-      "explanation": "CAT risk is multifactorial. Caravaggio-era evidence supports DOACs for many patients, with caution for luminal GI/GU bleed risk, thrombocytopenia, and oral anticancer DDIs.",
+      "correctId": "d",
+      "explanation": "Choice D matches multifactorial cancer-associated thrombosis: tissue-factor-rich tumors, venous compression or stasis, chemotherapy, and catheters can operate together. Choice A ignores the cancer. Choice B turns this DVT into an arterial-plaque disease. Choice C invents a requirement for a hereditary mutation. Source: standard cancer-thrombosis pathophysiology consistent with this site's cancer-VTE teaching.",
       "teachingPoints": [
-        "API-CAT addresses extended reduced-dose apixaban after initial therapy in selected patients.",
-        "Use the cancer VTE pathway and DDI oncology chips."
+        "Cancer-associated VTE is not a single-pathway disease.",
+        "A catheter can add local injury on top of the cancer-related risk."
       ],
       "links": [
         {
@@ -393,67 +430,74 @@ window.ANTICOAG_CACP = {
           "id": "api-cat",
           "label": "API-CAT"
         }
+      ],
+      "objectiveIds": [
+        7,
+        18
       ]
     },
     {
       "id": "i-09",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Heparin-induced thrombocytopenia (HIT) is best conceptualized as:",
+      "difficulty": "advanced",
+      "stem": "A 71-year-old man has been on unfractionated heparin for 8 days after a coronary stent. Platelets fell from 240 to 70 × 10⁹/L. The right leg is newly swollen and ultrasound shows femoral DVT. He has no schistocytes, no fever, and hemoglobin is unchanged. Which mechanism lets thrombosis occur despite thrombocytopenia?",
       "choices": [
         {
           "id": "a",
-          "text": "A simple dose-dependent bleeding toxicity of heparin"
+          "text": "Antibodies activate platelets and generate thrombin, so the low count is a clotting state"
         },
         {
           "id": "b",
-          "text": "An immune-mediated prothrombotic disorder (often PF4/heparin antibodies) that can cause thrombosis despite thrombocytopenia"
+          "text": "Platelets are absent, so thrombin cannot form and the leg swelling must be a bleed into the muscle"
         },
         {
           "id": "c",
-          "text": "Identical to warfarin skin necrosis in every patient"
+          "text": "Heparin has caused immune thrombocytopenia, which raises bleeding and forbids any new clot"
         },
         {
           "id": "d",
-          "text": "Prevented by switching from LMWH to unfractionated heparin"
+          "text": "The count fell from dilution only, and the ultrasound clot is unrelated to the heparin exposure"
         }
       ],
-      "correctId": "b",
-      "explanation": "HIT is immune-mediated and paradoxically prothrombotic. Management uses non-heparin anticoagulants and avoids warfarin until platelets recover — details follow specialty protocols.",
+      "correctId": "a",
+      "explanation": "Choice A is heparin-induced thrombocytopenia: platelet-factor-4 antibodies activate platelets and drive thrombin, so thrombosis and a falling count occur together. Choice B treats thrombocytopenia as an inability to clot. Choice C names the bleeding phenotype of ordinary immune thrombocytopenia, not this day-8 pattern with a new DVT. Choice D dismisses the timing. Source: standard heparin-induced thrombocytopenia mechanism (platelet factor 4 and heparin antibodies).",
       "teachingPoints": [
-        "4Ts score helps pretest probability before laboratory testing.",
-        "The ASH 2018 HIT guideline recommends against starting a VKA such as warfarin in acute HIT before platelet count recovery, citing harms that include new or progressive thrombosis and venous limb gangrene."
+        "The syndrome is a prothrombotic platelet-activation disorder.",
+        "A new clot plus a falling count after heparin is not simple bleeding."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        5
+      ]
     },
     {
       "id": "i-10",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Pulmonary embolism severity assessment (e.g., PESI / RV strain / biomarkers) matters because:",
+      "difficulty": "advanced",
+      "stem": "Two patients have acute PE on computed tomography. Patient A has systolic blood pressure 78 mm Hg, lactate 4 mmol/L, and needs a vasopressor. Patient B has systolic blood pressure 128 mm Hg, a dilated right ventricle, and an elevated troponin, with hemoglobin 13 g/dL. Which severity statement is the sound one?",
       "choices": [
         {
           "id": "a",
-          "text": "All PE should receive systemic thrombolysis on diagnosis"
+          "text": "Both are high-risk PE because any right-ventricular abnormality equals shock"
         },
         {
           "id": "b",
-          "text": "Shock / high-risk PE needs reperfusion pathways, whereas most intermediate-risk PE still defaults to anticoagulation — CDT only in enriched phenotypes"
+          "text": "Only patient A is high-risk PE; patient B is intermediate-risk, not automatic thrombolysis"
         },
         {
           "id": "c",
-          "text": "Severity scores replace the need for anticoagulation"
+          "text": "Only patient B needs reperfusion, because a normal blood pressure rules out a large clot"
         },
         {
           "id": "d",
-          "text": "Outpatient DOAC is mandatory even in hypotensive PE"
+          "text": "Neither patient needs anticoagulation once imaging has already shown the embolus"
         }
       ],
       "correctId": "b",
-      "explanation": "Risk stratification separates massive/high-risk PE (reperfusion) from intermediate-risk care where anticoagulation is the default and HI-PEITHO-style enrichment informs selective CDT.",
+      "explanation": "Choice B uses the hemodynamic split: sustained hypotension or shock defines high-risk PE, for which reperfusion is considered with anticoagulation. Patient B is normotensive with right-ventricular strain and biomarker injury, the intermediate-risk pattern, which is not treated as routine systemic thrombolysis. Choice A equates right-ventricular strain with shock. Choice C reverses the priority. Choice D drops anticoagulation. Source: the high-risk versus intermediate-risk distinction used on this site's PE materials and in the 2019 ESC PE guideline's hemodynamic classification.",
       "teachingPoints": [
-        "Do not market CDT for every intermediate-risk PE.",
-        "See HI-PEITHO NNT teaching only for the enriched trial composite."
+        "Shock or sustained hypotension marks high-risk PE.",
+        "Normotensive right-ventricular strain is intermediate-risk, not an automatic lysis case."
       ],
       "links": [
         {
@@ -465,8 +509,7 @@ window.ANTICOAG_CACP = {
           "kind": "trial",
           "id": "hi-peitho",
           "label": "HI-PEITHO"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "intermediate-pe-cdt",
@@ -481,36 +524,40 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "hi-peitho-enrichment",
           "label": "Nuance: HI-PEITHO enrichment"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        11
+      ]
     },
     {
       "id": "i-11",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Rheumatic moderate–severe mitral stenosis with AF is grouped with mechanical valves as a warfarin niche primarily because:",
+      "stem": "A 52-year-old woman with AF has moderate-to-severe rheumatic mitral stenosis and a dilated left atrium. She asks to switch from warfarin to apixaban because her sister with NVAF takes apixaban. Creatinine clearance is 78 mL/min, weight is 70 kg, and she has no mechanical prosthesis. Which interpretation fits this valve lesion?",
       "choices": [
         {
           "id": "a",
-          "text": "DOAC landmark AF trials excluded this population; INVICTUS-era teaching supports VKA over rivaroxaban in rheumatic valvular AF"
+          "text": "Apixaban is preferred because every AF case with a normal creatinine clearance uses a DOAC"
         },
         {
           "id": "b",
-          "text": "DOACs are more effective than warfarin in rheumatic MS"
+          "text": "Rivaroxaban replaces warfarin here because INVICTUS showed rivaroxaban was superior to a VKA in clinic"
         },
         {
           "id": "c",
-          "text": "Aspirin alone is preferred over any OAC"
+          "text": "This remains a VKA setting; INVICTUS did not support rivaroxaban in place of a VKA in rheumatic AF"
         },
         {
           "id": "d",
-          "text": "CHA₂DS₂-VASc does not apply so no anticoagulation is needed"
+          "text": "The COMPASS 2.5 mg rivaroxaban dose plus aspirin treats rheumatic mitral stenosis"
         }
       ],
-      "correctId": "a",
-      "explanation": "Pivotal DOAC NVAF trials excluded moderate–severe rheumatic MS. INVICTUS informs VKA preference in rheumatic valvular AF — see the trial card on this site.",
+      "correctId": "c",
+      "explanation": "Choice C matches INVICTUS and the site's VKA niche: AF with moderate-to-severe rheumatic mitral stenosis is not treated as ordinary NVAF. INVICTUS did not support replacing a VKA with rivaroxaban in rheumatic heart disease with AF. Choice A applies NVAF DOAC preference to a lesion the trials excluded. Choice B reverses the INVICTUS result. Choice D uses a chronic CAD/PAD regimen. Source: INVICTUS, as summarized on this site.",
       "teachingPoints": [
-        "“Nonvalvular” AF language exists because of these exclusions.",
-        "Cross-link the mechanical valve pathway for prosthesis cases."
+        "Moderate-to-severe rheumatic mitral stenosis stays with a VKA.",
+        "A family member's NVAF DOAC does not transfer to this lesion."
       ],
       "links": [
         {
@@ -523,67 +570,73 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke",
           "label": "AF pathway"
         }
+      ],
+      "objectiveIds": [
+        20
       ]
     },
     {
       "id": "i-12",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Which best describes the role of tissue factor (TF) in initiating coagulation in vivo?",
+      "difficulty": "advanced",
+      "stem": "A 40-year-old man has major trauma with extensive soft-tissue injury. A learner asks what starts coagulation at the wound, before any anticoagulant is chosen. His platelet count is normal and he has no lupus anticoagulant. Which process is the main in vivo trigger?",
       "choices": [
         {
           "id": "a",
-          "text": "TF activates the contact pathway exclusively via factor XII"
+          "text": "Contact activation by factor XII on glass, which is the dominant starter in a wound in clinic"
         },
         {
           "id": "b",
-          "text": "Exposed TF complexes with factor VIIa to initiate the extrinsic pathway, amplifying thrombin generation"
+          "text": "Direct platelet destruction by warfarin, which is why trauma patients start a VKA"
         },
         {
           "id": "c",
-          "text": "TF is the primary target of idarucizumab"
+          "text": "Isolated factor VIII release from muscle, without tissue factor or thrombin"
         },
         {
           "id": "d",
-          "text": "TF deficiency causes heparin resistance"
+          "text": "Tissue factor exposed at the injury site, which starts the extrinsic pathway and thrombin"
         }
       ],
-      "correctId": "b",
-      "explanation": "TF–VIIa initiates extrinsic pathway thrombin generation after vascular injury. Contact pathway (XII) is more relevant to some device/surface thrombosis and FXI-inhibitor rationale — not TF biology.",
+      "correctId": "d",
+      "explanation": "Choice D is the in vivo trigger: tissue factor on injured cells binds factor VII and starts thrombin generation. Choice A describes the contact pathway that matters more for laboratory activated partial thromboplastin time than for hemostasis after trauma. Choice B is not warfarin's action, and trauma is not a reason to start warfarin as the initiator of clotting. Choice C skips tissue factor. Source: standard in vivo coagulation model (tissue-factor pathway).",
       "teachingPoints": [
-        "DOACs target factor Xa or thrombin downstream of initiation.",
-        "Warfarin reduces multiple vitamin K–dependent factors including VII."
+        "Tissue factor, not factor XII, is the main starter after injury.",
+        "The contact pathway is more a laboratory issue than the wound trigger."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        1
+      ]
     },
     {
       "id": "ii-01",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "For eligible nonvalvular AF, major guidelines generally prefer:",
+      "difficulty": "advanced",
+      "stem": "A 68-year-old man has NVAF, hypertension, and diabetes. He has no mechanical valve, no rheumatic mitral stenosis, and no antiphospholipid antibodies. Weight is 82 kg, serum creatinine is 0.9 mg/dL, and he takes no enzyme inducer. A sister takes aspirin for 'stroke prevention.' Which long-term strategy fits an otherwise eligible patient?",
       "choices": [
         {
           "id": "a",
-          "text": "Dose-adjusted warfarin over any DOAC"
+          "text": "A treatment-dose DOAC, which the 2023 AF guideline prefers when no VKA-only condition is present"
         },
         {
           "id": "b",
-          "text": "A labeled DOAC over warfarin when the patient is DOAC-eligible"
+          "text": "Aspirin alone, because AVERROES showed aspirin prevents as many strokes as apixaban does"
         },
         {
           "id": "c",
-          "text": "Aspirin 325 mg daily as first-line stroke prevention"
+          "text": "Rivaroxaban 2.5 mg twice daily plus aspirin, the COMPASS dose, as if this were stable CAD without AF"
         },
         {
           "id": "d",
-          "text": "No antithrombotic therapy if HAS-BLED ≥2"
+          "text": "No antithrombotic drug, because diabetes and hypertension cancel the AF indication entirely"
         }
       ],
-      "correctId": "b",
-      "explanation": "ACC/AHA/ESC-era teaching prefers DOAC over VKA in eligible NVAF. Warfarin remains appropriate for DOAC niches (mechanical valves, mod–severe MS, many triple-positive APS) or when DOAC access/eligibility fails.",
+      "correctId": "a",
+      "explanation": "Choice A matches the 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: when moderate-to-severe rheumatic mitral stenosis and a mechanical valve are absent, a DOAC is preferred over warfarin for eligible patients, and this man's score (age 65 to 74, hypertension, diabetes) is in the range treated with anticoagulation. Choice B reverses AVERROES, in which apixaban was superior to aspirin. Choice C uses a vascular dose that does not replace AF treatment. Choice D drops indicated OAC. Cockcroft-Gault clearance with the stated weight is about 91 mL/min and is not the decision.",
       "teachingPoints": [
-        "Verify renal dosing and DDIs before declaring “eligible.”",
-        "FRAIL-AF cautions against auto-switching stable frail VKA patients to DOAC."
+        "DOACs are preferred over warfarin in eligible NVAF.",
+        "Aspirin is not the substitute when OAC is indicated."
       ],
       "links": [
         {
@@ -601,36 +654,39 @@ window.ANTICOAG_CACP = {
           "id": "frail-af",
           "label": "FRAIL-AF"
         }
+      ],
+      "objectiveIds": [
+        20
       ]
     },
     {
       "id": "ii-02",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "A patient has a mechanical mitral valve. Which anticoagulant strategy is appropriate?",
+      "difficulty": "advanced",
+      "stem": "A 63-year-old woman has a mechanical mitral valve placed 18 months ago and is in sinus rhythm. Serum creatinine is 0.8 mg/dL. She asks for apixaban to avoid INR checks. She has no bleeding. A note mentions an On-X aortic protocol used for a different patient. Which strategy fits this prosthesis?",
       "choices": [
         {
           "id": "a",
-          "text": "Apixaban 5 mg BID"
+          "text": "Apixaban 5 mg twice daily, because sinus rhythm removes the need for a VKA after valve surgery"
         },
         {
           "id": "b",
-          "text": "Rivaroxaban 20 mg daily with food"
+          "text": "Dose-adjusted warfarin with an INR target of 3.0 (range 2.5 to 3.5), not a DOAC and not an On-X aortic range"
         },
         {
           "id": "c",
-          "text": "Dose-adjusted warfarin to guideline INR for valve type/position; DOACs contraindicated"
+          "text": "Warfarin with an INR target of 1.5 to 2.0, borrowing the On-X aortic strategy for this mitral prosthesis"
         },
         {
           "id": "d",
-          "text": "Dabigatran 150 mg BID based on RE-LY"
+          "text": "Rivaroxaban 20 mg daily, because RE-ALIGN established dabigatran's target as safe for all mechanical valves now"
         }
       ],
-      "correctId": "c",
-      "explanation": "Mechanical valves are VKA territory. DOAC AF/VTE trials excluded them. The RE-ALIGN card is the dabigatran mechanical-valve trial that stopped early for harm. PROACT is warfarin-based On-X care, and PROACT Xa did not show apixaban noninferior to warfarin. Target INR by position/thrombogenicity per guideline tables.",
+      "correctId": "b",
+      "explanation": "Choice B matches the 2020 ACC/AHA valvular guideline for a mechanical mitral valve: warfarin with an INR target of 3.0 (range 2.5 to 3.5). DOACs are not that niche. RE-ALIGN stopped dabigatran in mechanical valves for harm. The On-X lower INR strategy is an aortic-prosthesis label issue, not a mitral strategy. Choice A offers apixaban. Choice C transplants the On-X range. Choice D reverses RE-ALIGN and swaps in rivaroxaban.",
       "teachingPoints": [
-        "BRIDGE (AF without valves) does not justify “never bridge” for mechanical mitral valves.",
-        "On-X lower-INR protocols remain warfarin-based specialties."
+        "Mechanical mitral valves stay on warfarin at a higher INR range.",
+        "An On-X aortic range does not transfer to the mitral position."
       ],
       "links": [
         {
@@ -657,8 +713,7 @@ window.ANTICOAG_CACP = {
           "kind": "trial",
           "id": "bridge",
           "label": "BRIDGE (AF contrast)"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "mechanical-valve-vka",
@@ -668,36 +723,41 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "mechanical-avr-doac-request",
           "label": "Case: Mechanical AVR DOAC request"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        15,
+        20
+      ]
     },
     {
       "id": "ii-03",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "In acute PE with hypotension and organ hypoperfusion, the immediate treatment priority is:",
+      "difficulty": "advanced",
+      "stem": "A 58-year-old man with acute PE has systolic blood pressure 76 mm Hg on a vasopressor, lactate 5 mmol/L, and a dilated right ventricle. Hemoglobin is 14 g/dL. He had a tooth extraction a year ago and takes no anticoagulant yet. A resident suggests discharging him on an oral lead-in dose because imaging already shows PE. Which priority fits this presentation?",
       "choices": [
         {
           "id": "a",
-          "text": "Start outpatient rivaroxaban 15 mg BID without parenteral therapy"
+          "text": "Outpatient apixaban 10 mg twice daily, because any imaged PE is low risk once oxygen is available"
         },
         {
           "id": "b",
-          "text": "Stabilization and institutional high-risk PE reperfusion / advanced therapy pathway — not oral DOAC alone"
+          "text": "A retrievable inferior vena cava filter first, and anticoagulation only if the filter cannot be placed"
         },
         {
           "id": "c",
-          "text": "COMPASS rivaroxaban 2.5 mg BID + aspirin"
+          "text": "Anticoagulation plus urgent reperfusion consideration, because he is in shock from high-risk PE"
         },
         {
           "id": "d",
-          "text": "Watchful waiting without anticoagulation"
+          "text": "The COMPASS regimen, because hypotension after PE is treated as stable PAD"
         }
       ],
-      "correctId": "b",
-      "explanation": "High-risk/massive PE is a reperfusion and critical-care pathway. Oral DOAC monotherapy is for eligible stable patients after appropriate triage.",
+      "correctId": "c",
+      "explanation": "Choice C matches high-risk PE: sustained hypotension and organ hypoperfusion make reperfusion, together with anticoagulation, the priority rather than an outpatient lead-in. Choice A sends a shocked patient home. Choice B substitutes a filter for reperfusion; PREPIC2 does not support routine filters in anticoagulated PE, and this patient is not yet anticoagulated and is unstable. Choice D uses a chronic vascular dose. Source: hemodynamic high-risk PE classification in the 2019 ESC PE guideline and this site's PE pathway.",
       "teachingPoints": [
-        "Link intermediate-risk PE pathway for CDT enrichment questions.",
-        "Anticoagulation remains foundational once bleeding risk allows."
+        "Shock defines high-risk PE.",
+        "An oral lead-in is not the first move in vasopressor-dependent PE."
       ],
       "links": [
         {
@@ -709,8 +769,7 @@ window.ANTICOAG_CACP = {
           "kind": "pathway",
           "id": "intermediate-pe",
           "label": "Intermediate PE pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "intermediate-pe-cdt",
@@ -725,36 +784,41 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "hi-peitho-enrichment",
           "label": "Nuance: HI-PEITHO enrichment"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        24,
+        47
+      ]
     },
     {
       "id": "ii-04",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "COBRRA informs shared decision between apixaban and rivaroxaban for eligible acute VTE primarily by showing:",
+      "difficulty": "advanced",
+      "stem": "A 61-year-old woman with acute proximal DVT and a prior nonmajor gastrointestinal bleed asks how apixaban and rivaroxaban compare. Both labeled regimens are accessible. Creatinine clearance is 70 mL/min. She takes no inducer. Which COBRRA finding can inform the shared choice?",
       "choices": [
         {
           "id": "a",
-          "text": "Rivaroxaban eliminated all bleeding vs apixaban"
+          "text": "COBRRA showed rivaroxaban prevents more recurrent VTE, so bleeding differences are irrelevant here"
         },
         {
           "id": "b",
-          "text": "Clinically relevant bleeding was lower with apixaban than rivaroxaban when both fit — see site NNT teaching from published absolute rates"
+          "text": "COBRRA used the COMPASS 2.5 mg dose, so either drug is given at 2.5 mg twice daily for acute DVT"
         },
         {
           "id": "c",
-          "text": "Neither agent treats PE"
+          "text": "COBRRA found more recurrent VTE with apixaban and identical bleeding, so rivaroxaban is required"
         },
         {
           "id": "d",
-          "text": "Warfarin was superior to both for bleeding"
+          "text": "Clinically relevant bleeding was lower with apixaban, while recurrent VTE was about 1% in each arm"
         }
       ],
-      "correctId": "b",
-      "explanation": "COBRRA found less clinically relevant bleeding with apixaban vs rivaroxaban (3.3% vs 7.1%). This site reports NNT ≈26 from that ARR — use it for counseling when both agents otherwise fit.",
+      "correctId": "d",
+      "explanation": "Choice D is the COBRRA result on this site: clinically relevant bleeding 3.3% with apixaban versus 7.1% with rivaroxaban (RR 0.46), and recurrent symptomatic VTE 1.1% versus 1.0%. That bleeding difference can inform a shared choice when both labeled regimens fit. Choice A invents an efficacy win for rivaroxaban. Choice B imports the COMPASS dose. Choice C reverses the bleeding finding and over-reads a similar VTE rate. The regimens in the trial were apixaban 10 mg twice daily for 7 days then 5 mg twice daily, and rivaroxaban 15 mg twice daily for 21 days then 20 mg daily.",
       "teachingPoints": [
-        "Both remain guideline options; logistics and once-daily preference still matter.",
-        "Open the COBRRA trial card for absolute rates."
+        "Use COBRRA for the bleeding comparison, not as a ban on rivaroxaban.",
+        "Both arms used full acute VTE regimens, not the vascular dose."
       ],
       "links": [
         {
@@ -767,36 +831,39 @@ window.ANTICOAG_CACP = {
           "id": "vte-doac-choice",
           "label": "Case: apixaban vs rivaroxaban"
         }
+      ],
+      "objectiveIds": [
+        24
       ]
     },
     {
       "id": "ii-05",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "FRAIL-AF’s practice takeaway for a frail older adult stable on warfarin with acceptable TTR is:",
+      "stem": "An 84-year-old frail woman with AF has been on warfarin with INR values mostly in range. Her Groningen Frailty Indicator is high. Her son asks to switch her to a DOAC before a holiday so INR checks can stop. She has no bleeding today and no mechanical valve. Which FRAIL-AF reading fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Automatically switch to any DOAC to reduce bleeding"
+          "text": "FRAIL-AF does not support a routine switch: bleeding was higher after the switch, without a thromboembolic gain"
         },
         {
           "id": "b",
-          "text": "Do not auto-switch to DOAC solely for frailty — switching increased bleeding in FRAIL-AF without a clear efficacy upside in that design"
+          "text": "FRAIL-AF showed fewer bleeds after switching, so frailty itself is the indication to change"
         },
         {
           "id": "c",
-          "text": "Stop all anticoagulation permanently"
+          "text": "FRAIL-AF enrolled only mechanical valves, so it does not apply to AF on warfarin"
         },
         {
           "id": "d",
-          "text": "Replace warfarin with aspirin 81 mg"
+          "text": "Any frail adult must switch, because ELDERCARE-AF tested edoxaban against warfarin and found harm from continuing a VKA"
         }
       ],
-      "correctId": "b",
-      "explanation": "FRAIL-AF reported higher major/CRNM bleeding after switch to DOAC (15.3% vs 9.4%). Stable VKA with good TTR can be reasonable; ELDERCARE-AF addresses a different question (carefully selected low-dose edoxaban initiation).",
+      "correctId": "a",
+      "explanation": "Choice A matches FRAIL-AF on this site: frail older adults stable on a VKA had more major or clinically relevant nonmajor bleeding after switching to a DOAC (15.3% versus 9.4%; HR 1.69), and the trial does not support a routine switch. Choice B reverses the bleed result. Choice C invents a valve population. Choice D misstates ELDERCARE-AF, which is not a VKA-switch trial and is not a mandate to change a stable patient. Source: FRAIL-AF.",
       "teachingPoints": [
-        "Unstable INR or access barriers may still favor DOAC — document why.",
-        "See frail framework on this site."
+        "Stable INR control in frailty is not a reason to switch for convenience.",
+        "The trial was stopped early for futility on the bleeding primary outcome."
       ],
       "links": [
         {
@@ -819,36 +886,39 @@ window.ANTICOAG_CACP = {
           "id": "frail-elderly-vka-doac",
           "label": "Frail framework"
         }
+      ],
+      "objectiveIds": [
+        26
       ]
     },
     {
       "id": "ii-06",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "After uncomplicated initial anticoagulation for a surgically provoked proximal DVT with resolved risk, the usual duration teaching is:",
+      "difficulty": "advanced",
+      "stem": "A 47-year-old man had a proximal DVT 10 days after knee replacement. He has now completed 3 months of anticoagulation. He is walking, the surgical risk has resolved, bleeding risk is ordinary, and a repeat ultrasound is not being used to set the stop date. Cancer screening is negative. Which duration principle fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Lifelong full-dose DOAC for everyone"
+          "text": "Continue indefinitely, because every proximal DVT is extended once 3 months have passed"
         },
         {
           "id": "b",
-          "text": "About 3 months, then stop if provocation resolved and bleed/VTE balance favors discontinuation"
+          "text": "Stop at the end of a finite course, because major surgery was a transient provoking factor that has resolved"
         },
         {
           "id": "c",
-          "text": "Indefinite COMPASS 2.5 mg rivaroxaban + aspirin"
+          "text": "Switch to aspirin 100 mg forever, because EINSTEIN CHOICE showed aspirin beats a DOAC after provoked VTE today"
         },
         {
           "id": "d",
-          "text": "Five days of heparin only"
+          "text": "Restart a 21-day rivaroxaban lead-in now, because month 3 is treated as a new acute clot"
         }
       ],
       "correctId": "b",
-      "explanation": "Major transient provocation with resolved risk often stops at ~3 months. Unprovoked or persistent risk prompts extension discussions (low-dose DOAC > aspirin when extending with a drug).",
+      "explanation": "Choice B matches the 2021 CHEST VTE guideline: VTE provoked by major transient surgery is treated for a finite period, typically 3 months, once that risk has resolved. Choice A extends every proximal clot. Choice C reverses EINSTEIN CHOICE, which found rivaroxaban superior to aspirin for extended prevention in patients who had already completed 6 to 12 months and were candidates for extension, not a reason to substitute aspirin for a completed provoked course. Choice D restarts acute dosing without a new event.",
       "teachingPoints": [
-        "EINSTEIN-CHOICE: rivaroxaban doses beat aspirin for extension.",
-        "Cancer persistence → cancer VTE extended pathway (API-CAT)."
+        "A resolved major surgical provocation supports a finite course.",
+        "Aspirin is not the completion strategy for that course."
       ],
       "links": [
         {
@@ -861,36 +931,39 @@ window.ANTICOAG_CACP = {
           "id": "einstein-choice",
           "label": "EINSTEIN-CHOICE"
         }
+      ],
+      "objectiveIds": [
+        38
       ]
     },
     {
       "id": "ii-07",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Default AUGUSTUS-era AF + PCI antithrombotic template is:",
+      "difficulty": "advanced",
+      "stem": "A 72-year-old man with AF underwent PCI with a drug-eluting stent 12 days ago for ACS. He is on apixaban at his labeled AF dose plus clopidogrel and aspirin. Creatinine clearance is 62 mL/min. There is no stent thrombosis and no bleeding. Hemoglobin is 13 g/dL. Which combination best reflects the AUGUSTUS-era approach at this point?",
       "choices": [
         {
           "id": "a",
-          "text": "Lifelong triple therapy with VKA + aspirin + prasugrel"
+          "text": "Continue aspirin, clopidogrel, and apixaban together for a full year as the default in clinic"
         },
         {
           "id": "b",
-          "text": "DOAC (often apixaban) + P2Y12 (usually clopidogrel); aspirin only briefly peri-PCI when feasible"
+          "text": "Stop apixaban and keep dual antiplatelet therapy, because a stent outranks AF"
         },
         {
           "id": "c",
-          "text": "Stop OAC for 12 months to protect the stent"
+          "text": "Drop aspirin after the brief peri-PCI window and continue the DOAC plus a P2Y12 inhibitor"
         },
         {
           "id": "d",
-          "text": "Aspirin + ticagrelor without any OAC if CHA₂DS₂-VASc ≥4"
+          "text": "Replace all three drugs with rivaroxaban 2.5 mg twice daily plus aspirin"
         }
       ],
-      "correctId": "b",
-      "explanation": "AUGUSTUS: apixaban beat VKA for bleeding; aspirin increased bleeding vs placebo on P2Y12 + OAC. Dual pathway is the Monday-morning template; triple therapy is a short bridge.",
+      "correctId": "c",
+      "explanation": "Choice C matches AUGUSTUS, in which apixaban plus a P2Y12 inhibitor, with aspirin limited to a brief peri-PCI window, had less bleeding than regimens that continued aspirin, without a detected excess of ischemic events in the trial's design. Choice A extends triple therapy for a year by default. Choice B drops the AF anticoagulant. Choice D substitutes the COMPASS dose for an AF-plus-stent indication. Source: AUGUSTUS, as used on this site's AF-plus-PCI pathway.",
       "teachingPoints": [
-        "Prefer clopidogrel over potent P2Y12 in most OAC combinations.",
-        "AFIRE: remote from PCI, DOAC monotherapy can beat long-term combination."
+        "The OAC stays. Aspirin is the drug that drops early.",
+        "Triple therapy for many months is the bleeding problem AUGUSTUS addressed."
       ],
       "links": [
         {
@@ -907,8 +980,7 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "af-pci-week2",
           "label": "Case: still on triple?"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "af-pci-dual-pathway",
@@ -918,36 +990,41 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "dual-pathway-duration",
           "label": "Nuance: Dual-pathway duration"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        20,
+        36
+      ]
     },
     {
       "id": "ii-08",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "ENRICH-AF’s main counseling implication for restarting OAC after ICH in AF is:",
+      "stem": "A 79-year-old man with AF and a CHA₂DS₂-VASc score of 5 had a spontaneous lobar intracranial hemorrhage 6 weeks ago. He has recovered enough to ask about restarting edoxaban 'because the score is high.' Blood pressure is now controlled. There is no mechanical valve. Which counseling point fits this site's ENRICH-AF teaching?",
       "choices": [
         {
           "id": "a",
-          "text": "Routine restart always reduces stroke/SE significantly — start for everyone at day 7"
+          "text": "Restart full-dose edoxaban today, because any high score after intracranial hemorrhage is a class effect win for a DOAC"
         },
         {
           "id": "b",
-          "text": "Do not assume net benefit from routine restart; individualize by ICH location/timing and cardioembolic risk (ASPIRE pending)"
+          "text": "Never discuss anticoagulation again, because a prior hemorrhage permanently cancels AF stroke risk"
         },
         {
           "id": "c",
-          "text": "Aspirin replaces OAC whenever ICH has occurred"
+          "text": "Use aspirin instead, because ENRICH-AF showed antiplatelet therapy superior to a DOAC after hemorrhage"
         },
         {
           "id": "d",
-          "text": "Only warfarin may be restarted; DOACs are absolutely forbidden forever"
+          "text": "Do not restart edoxaban routinely after unselected intracranial hemorrhage"
         }
       ],
-      "correctId": "b",
-      "explanation": "ENRICH-AF did not show a significant stroke/SE reduction with an edoxaban restart strategy (HR 0.88, NS on the site card). Lobar/CAA phenotypes need especial caution; LAAO may enter the conversation.",
+      "correctId": "d",
+      "explanation": "Choice D matches ENRICH-AF on this site. The 29 August 2026 congress press release, which is not a peer-reviewed paper, reported stroke or systemic embolism 11.8% versus 12.8% (HR 0.88; 95% CI 0.61–1.26) and major bleeding 11.6% versus 5.2% (HR 2.23). That does not support routine edoxaban after unselected intracranial hemorrhage. Lobar hemorrhage enrollment had already been stopped for safety. Choice A restarts automatically. Choice B erases stroke risk. Choice C invents an antiplatelet win. Source: ENRICH-AF card.",
       "teachingPoints": [
-        "Named owner and documented rationale if restarting.",
-        "See post-ICH pathway and enrich-vs-aspire nuance."
+        "Quote the press release as a press release, not as a journal result.",
+        "Lobar hemorrhage is a higher-risk subtype, not a routine restart."
       ],
       "links": [
         {
@@ -964,8 +1041,7 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "enrich-vs-aspire",
           "label": "ENRICH vs ASPIRE"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "post-ich-anticoagulation",
@@ -975,36 +1051,41 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "post-ich-af",
           "label": "Case: Post-ICH AF"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        24,
+        38
+      ]
     },
     {
       "id": "ii-09",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "U.S. practice after Andexxa withdrawal (Dec 22, 2025) for life-threatening apixaban/rivaroxaban bleeding is best summarized as:",
+      "difficulty": "advanced",
+      "stem": "A 77-year-old man on apixaban for AF has a sudden severe headache and vomiting. Computed tomography shows a cerebellar hemorrhage with early mass effect. Blood pressure is 188/100 mm Hg. He last took apixaban 4 hours ago. The hospital is in the United States. Which pathway matches current site teaching after the 22 December 2025 Andexxa withdrawal?",
       "choices": [
         {
           "id": "a",
-          "text": "Continue to order Andexxa as first-line specific reversal"
+          "text": "Supportive care plus institutional 4F-PCC for life-threatening factor Xa bleeding, not andexanet"
         },
         {
           "id": "b",
-          "text": "Supportive care + institutional 4F-PCC pathways; do not write Andexxa in U.S. order sets"
+          "text": "Idarucizumab 5 g, because every DOAC-related hemorrhage uses the dabigatran reversal antibody"
         },
         {
           "id": "c",
-          "text": "Idarucizumab reverses all DOACs"
+          "text": "Andexanet alfa, because ANNEXA-I still makes it the current United States order for this bleed now"
         },
         {
           "id": "d",
-          "text": "Vitamin K alone reverses FXa inhibitors within minutes"
+          "text": "Vitamin K alone, because a normal INR would mean the recent apixaban dose has already cleared"
         }
       ],
-      "correctId": "b",
-      "explanation": "AstraZeneca voluntarily withdrew the Andexxa BLA and ended U.S. sales Dec 22, 2025 after FDA concluded risks outweighed benefits; FXa major bleed teaching is supportive care + institutional/off-label 4F-PCC per protocol (not an FDA-labeled FXa antidote). Idarucizumab remains dabigatran-specific. ANNEXA-I TE figures contextualize why.",
+      "correctId": "a",
+      "explanation": "Choice A matches this site after 22 December 2025: Andexxa is not available in the United States, and life-threatening factor Xa inhibitor bleeding is taught as supportive care plus an institutional 4F-PCC pathway, which is not an FDA-labeled specific factor Xa antidote. Choice B uses dabigatran's antibody for apixaban. Choice C writes an Andexxa order the FDA withdrawal removed. Choice D uses vitamin K, which does not reverse apixaban. Source: FDA safety communication and this site's reversal page. ANNEXA-I remains historical context for thrombosis risk, not a current United States order.",
       "teachingPoints": [
-        "Geographic nuance: Ondexxya may persist outside the U.S.",
-        "Open #/reversal and the U.S. DOAC bleed pathway."
+        "Name the drug first. Apixaban is not dabigatran.",
+        "4F-PCC here is an institutional pathway, not a labeled specific antidote."
       ],
       "links": [
         {
@@ -1032,36 +1113,40 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        33,
+        41
       ]
     },
     {
       "id": "ii-10",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "BRIDGE trial implications for interrupting warfarin in typical nonvalvular AF without mechanical valves:",
+      "difficulty": "advanced",
+      "stem": "A 70-year-old man with NVAF on warfarin, CHA₂DS₂-VASc score 3, is scheduled for elective colonoscopy with possible polypectomy. He has no mechanical valve, no VTE in the past year, and no prior stroke. The endoscopy note asks for 'a heparin bridge so he is never uncovered.' Which BRIDGE reading fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Routine LMWH bridging reduces stroke and should be universal"
+          "text": "BRIDGE showed bridging lowers bleeding, so enoxaparin is routine for this AF warfarin interruption"
         },
         {
           "id": "b",
-          "text": "Routine bridging increased bleeding without thromboembolic benefit — avoid reflexive bridging in this population"
+          "text": "BRIDGE does not support routine bridging: thromboembolism was similar and major bleeding was higher"
         },
         {
           "id": "c",
-          "text": "BRIDGE proved mechanical mitral valves never need bridging"
+          "text": "BRIDGE enrolled mechanical mitral valves, so its no-bridge finding is the mitral-valve default"
         },
         {
           "id": "d",
-          "text": "BRIDGE mandates stopping aspirin 30 days before colonoscopy in all AF patients"
+          "text": "BRIDGE requires preoperative anti-Xa testing before any warfarin hold for colonoscopy"
         }
       ],
       "correctId": "b",
-      "explanation": "BRIDGE: no routine bridging for typical AF warfarin interruptions — more bleeding, no TE gain. Do not extrapolate that conclusion unchanged to mechanical valves or other high thrombotic-risk VKA indications.",
+      "explanation": "Choice B is BRIDGE, as printed on this site: arterial thromboembolism 0.4% without bridging versus 0.3% with bridging (noninferior), and major bleeding 1.3% versus 3.2% (relative risk 0.41 for no bridging). Typical NVAF without a mechanical valve is that population. Choice A reverses the bleed finding. Choice C applies the trial to valves it excluded. Choice D invents a preoperative anti-Xa requirement. Whether polypectomy changes bleed risk enough to alter the hold is a proceduralist question; it does not create a routine bridge.",
       "teachingPoints": [
-        "Risk-stratify procedure bleed risk vs thrombosis risk.",
-        "See mechanical valve pathway for prosthesis bridging teaching."
+        "Similar thrombosis, more bleeding: that is the BRIDGE trade.",
+        "A mechanical valve would be a different thrombotic-risk class."
       ],
       "links": [
         {
@@ -1073,42 +1158,45 @@ window.ANTICOAG_CACP = {
           "kind": "pathway",
           "id": "mechanical-valve",
           "label": "Mechanical valve pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "mechanical-valve-vka",
           "label": "Framework: Mechanical valve VKA"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        43
+      ]
     },
     {
       "id": "ii-11",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Pregnancy-associated VTE anticoagulation of choice in usual practice is:",
+      "difficulty": "advanced",
+      "stem": "A 29-year-old woman who is 18 weeks pregnant has a new proximal DVT. Creatinine is normal. She has no mechanical valve and no antiphospholipid syndrome. She asks for the same apixaban regimen her mother takes for AF. Which class fits usual treatment, with obstetric coordination?",
       "choices": [
         {
           "id": "a",
-          "text": "Apixaban 10 mg BID then 5 mg BID"
+          "text": "Apixaban at the acute VTE lead-in, because pregnancy does not change oral factor Xa inhibitor use"
         },
         {
           "id": "b",
-          "text": "Therapeutic LMWH; avoid DOACs in pregnancy"
+          "text": "Warfarin through the rest of pregnancy, because an INR target avoids injections"
         },
         {
           "id": "c",
-          "text": "Warfarin throughout all trimesters without counseling"
+          "text": "LMWH, because DOAC labeling does not support pregnancy use and warfarin carries fetal risk"
         },
         {
           "id": "d",
-          "text": "Rivaroxaban 2.5 mg BID + aspirin"
+          "text": "Aspirin 81 mg, because a pregnancy-associated DVT is treated as an antiplatelet condition"
         }
       ],
-      "correctId": "b",
-      "explanation": "DOACs are not used in pregnancy in usual practice. Therapeutic LMWH is standard; warfarin has embryopathy risk in critical windows and is generally avoided for VTE/AF pregnancy pathways.",
+      "correctId": "c",
+      "explanation": "Choice C matches usual practice and product labeling: DOACs are not used for pregnancy-associated VTE, and warfarin labeling describes fetal harm, especially with exposure in early pregnancy. LMWH does not cross the placenta in a clinically important way and is the usual treatment class, coordinated with obstetric care. Choice A copies an AF relative's DOAC. Choice B makes warfarin the default for the rest of pregnancy. Choice D uses aspirin for an acute DVT. Source: DOAC and warfarin labeling on pregnancy, and this site's statement that pregnancy is an LMWH pathway rather than a DOAC.",
       "teachingPoints": [
-        "Coordinate with maternal-fetal medicine.",
-        "Postpartum transition needs a deliberate plan."
+        "Pregnancy is not an AF-DOAC niche.",
+        "Obstetric co-management stays attached to the LMWH plan."
       ],
       "links": [
         {
@@ -1116,36 +1204,41 @@ window.ANTICOAG_CACP = {
           "id": "acute-vte",
           "label": "Acute VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        25,
+        26,
+        68
       ]
     },
     {
       "id": "ii-12",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "COMPASS regimen (rivaroxaban 2.5 mg BID + aspirin) is appropriate to consider in:",
+      "stem": "Which of these four people matches the COMPASS vascular regimen rather than a full-dose AF or VTE anticoagulant? All four have normal kidney function and no active bleeding.",
       "choices": [
         {
           "id": "a",
-          "text": "Any patient with AF as a substitute for full-dose OAC"
+          "text": "A 74-year-old with AF and a prior stroke who needs long-term stroke prevention"
         },
         {
           "id": "b",
-          "text": "Selected stable CAD/PAD without an indication for full-dose OAC, when ischemic benefit outweighs bleeding"
+          "text": "A 55-year-old on day 2 of an acute proximal DVT"
         },
         {
           "id": "c",
-          "text": "Triple-positive APS as first-line"
+          "text": "A 49-year-old with triple-positive antiphospholipid syndrome and a prior arterial clot"
         },
         {
           "id": "d",
-          "text": "Mechanical aortic valves after On-X implant"
+          "text": "A 66-year-old with stable CAD, no AF, and no VTE, already taking aspirin"
         }
       ],
-      "correctId": "b",
-      "explanation": "COMPASS is a vascular-dose strategy for selected chronic atherosclerosis — not AF stroke prevention, not APS, not mechanical valves. Screen out patients who already need full-dose OAC.",
+      "correctId": "d",
+      "explanation": "Choice D is the COMPASS population: stable atherosclerotic disease without an indication for full-intensity anticoagulation, in which rivaroxaban 2.5 mg twice daily was added to aspirin. Choice A needs an AF treatment dose, not 2.5 mg. Choice B needs acute VTE dosing. Choice C is a VKA phenotype (TRAPS), not COMPASS. Source: COMPASS, as kept separate from AF and VTE dosing on this site.",
       "teachingPoints": [
-        "VOYAGER PAD informs post lower-extremity revascularization vascular-dose use.",
-        "Bleeding and BP control matter for net benefit."
+        "COMPASS is 2.5 mg twice daily plus aspirin in stable CAD or PAD.",
+        "It does not treat AF, acute VTE, or triple-positive antiphospholipid syndrome."
       ],
       "links": [
         {
@@ -1162,8 +1255,7 @@ window.ANTICOAG_CACP = {
           "kind": "trial",
           "id": "voyager-pad",
           "label": "VOYAGER PAD"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "compass-vascular-dose",
@@ -1173,36 +1265,41 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "compass-vs-af-dose-trap",
           "label": "Case: COMPASS vs AF dose trap"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        20,
+        24
+      ]
     },
     {
       "id": "ii-13",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Before starting a DOAC for NVAF, which assessment is essential?",
+      "difficulty": "advanced",
+      "stem": "A 66-year-old man with new NVAF, hypertension, and diabetes weighs 88 kg. Serum creatinine is 0.7 mg/dL. He takes no inducer. A colleague reaches for edoxaban 60 mg daily because the serum creatinine 'looks low.' Hemoglobin is 14 g/dL and the INR is 1.0. Which assessment is the essential one before that choice?",
       "choices": [
         {
           "id": "a",
-          "text": "Only CHA₂DS₂-VASc — renal function is optional"
+          "text": "Cockcroft-Gault clearance, which here is about 129 mL/min and crosses the edoxaban AF ceiling"
         },
         {
           "id": "b",
-          "text": "Stroke indication, bleed risk mitigation, renal function for labeled dosing, and clinically important DDIs"
+          "text": "A baseline INR target, because edoxaban is titrated until the INR sits between 2 and 3 in clinic"
         },
         {
           "id": "c",
-          "text": "Mandatory thrombophilia panel in every patient"
+          "text": "Hemoglobin alone, because a value above 13 g/dL is the edoxaban dose-reduction rule"
         },
         {
           "id": "d",
-          "text": "Coronary CT angiography in every patient"
+          "text": "A D-dimer, because AF stroke prevention is started only after a positive fibrin marker"
         }
       ],
-      "correctId": "b",
-      "explanation": "Indication + renal dosing + DDI screen + shared bleed-risk planning are the core pre-start bundle. Under-dosing “for safety” without meeting label criteria is a common error.",
+      "correctId": "a",
+      "explanation": "Choice A is required. Using actual body weight, creatinine clearance is (140−66)×88/(72×0.7) = 129 mL/min. The U.S. SAVAYSA label's boxed warning, quoted on this site, says edoxaban should not be used for NVAF when creatinine clearance is above 95 mL/min, because ischemic stroke was higher than with warfarin in that ENGAGE subgroup. A low serum creatinine is why clearance is high, not why the drug is safer. Choice B doses a DOAC to an INR. Choice C uses hemoglobin. Choice D uses a D-dimer. The sentence with 'should not' is the label's boxed warning as already quoted on this site.",
       "teachingPoints": [
-        "Use the DDI library for P-gp/CYP3A4 checks.",
-        "Case: AF with CKD and prior GI bleed on this site."
+        "A low serum creatinine can mean a high clearance.",
+        "Edoxaban's AF ceiling is the fact a 'normal creatinine' skips."
       ],
       "links": [
         {
@@ -1215,36 +1312,42 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke",
           "label": "AF pathway"
         }
+      ],
+      "objectiveIds": [
+        22,
+        24,
+        30,
+        40
       ]
     },
     {
       "id": "ii-14",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "Edoxaban for acute VTE in the pivotal design requires:",
+      "stem": "A 54-year-old woman has an acute proximal DVT diagnosed this afternoon. Weight is 74 kg, creatinine clearance is 68 mL/min, and she takes no P-glycoprotein inhibitor. A discharge draft starts edoxaban 60 mg this evening with no heparin. She is not pregnant. Which sequence matches the pivotal edoxaban VTE program?",
       "choices": [
         {
           "id": "a",
-          "text": "Immediate oral start at diagnosis without any heparin"
+          "text": "Edoxaban 60 mg on day 1, because Hokusai-VTE used an oral-only lead-in like rivaroxaban"
         },
         {
           "id": "b",
-          "text": "Parenteral heparin lead-in (≥5 days in the program) before edoxaban"
+          "text": "At least 5 days of a parenteral anticoagulant, then edoxaban 60 mg daily"
         },
         {
           "id": "c",
-          "text": "Mandatory thrombolysis first"
+          "text": "Edoxaban 30 mg on day 1, because every VTE start is half the AF dose for the first week"
         },
         {
           "id": "d",
-          "text": "Combination with prasugrel indefinitely"
+          "text": "Rivaroxaban 2.5 mg twice daily plus aspirin, because an acute DVT uses the COMPASS sequence"
         }
       ],
       "correctId": "b",
-      "explanation": "Hokusai-VTE used heparin lead-in then edoxaban — unlike single-drug apixaban/rivaroxaban initiation regimens.",
+      "explanation": "Choice B is Hokusai-VTE, as described on this site: parenteral heparin for at least 5 days, then edoxaban 60 mg daily, or 30 mg daily if reduction criteria are met. At 74 kg, a clearance of 68 mL/min, and no P-glycoprotein inhibitor, she meets no edoxaban dose-reduction criterion. Choice A copies the rivaroxaban or apixaban oral-only start. Choice C halves the dose without a criterion. Choice D uses a vascular regimen. Source: Hokusai-VTE regimen on this site.",
       "teachingPoints": [
-        "Match the regimen to the workflow the evidence supports.",
-        "Cancer: Hokusai VTE Cancer similarly used LMWH lead-in."
+        "Edoxaban for acute VTE is not an oral-only start.",
+        "Parenteral lead-in of at least 5 days is the sequence the trial used."
       ],
       "links": [
         {
@@ -1257,36 +1360,39 @@ window.ANTICOAG_CACP = {
           "id": "acute-vte",
           "label": "Acute VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        36
       ]
     },
     {
       "id": "ii-15",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "For cancer-associated VTE with high luminal GI bleed risk or severe thrombocytopenia, the safer default teaching is often:",
+      "difficulty": "advanced",
+      "stem": "A 67-year-old man with esophageal cancer has acute PE. Platelets are 160 × 10⁹/L. Creatinine clearance is 64 mL/min. He is not bleeding today. A colleague defaults to rivaroxaban because it needs no heparin lead-in. Which management approach best fits the gastrointestinal bleeding concern?",
       "choices": [
         {
           "id": "a",
-          "text": "Force oral DOAC regardless of platelets"
+          "text": "Rivaroxaban is required, because SELECT-D showed less major bleeding in esophageal cancer than dalteparin"
         },
         {
           "id": "b",
-          "text": "Prefer therapeutic LMWH (or specialty-selected plan) until bleed/platelet issues improve"
+          "text": "Full-dose warfarin with an INR target of 3.5 to 4.5, because cancer automatically raises the target"
         },
         {
           "id": "c",
-          "text": "Stop all anticoagulation permanently on diagnosis of cancer"
+          "text": "An apixaban or LMWH plan is the cautious choice here, given SELECT-D's esophageal bleeding experience"
         },
         {
           "id": "d",
-          "text": "Use COMPASS 2.5 mg rivaroxaban alone"
+          "text": "Stop after 2 weeks, because cancer-associated PE is treated for a shorter time than provoked DVT"
         }
       ],
-      "correctId": "b",
-      "explanation": "Caravaggio-era DOACs help many CAT patients, but luminal GI/GU disease, severe thrombocytopenia, and major DDIs push toward LMWH or specialty plans.",
+      "correctId": "c",
+      "explanation": "Choice C is the cautious reading of SELECT-D on this site: major bleeding in esophageal or gastroesophageal cancer occurred in 4 of 11 patients on rivaroxaban versus 1 of 19 on dalteparin, and enrollment of those cancers later stopped as a precaution. Apixaban was studied against dalteparin in Caravaggio in cancer-associated VTE. Choice A reverses the SELECT-D caution. Choice B invents an INR range. Choice D shortens therapy while cancer is active. Source: SELECT-D figures on this site. No platelet threshold is used.",
       "teachingPoints": [
-        "CATCH-era LMWH remains relevant when oral therapy is unsafe.",
-        "Reassess at cancer transitions."
+        "Luminal esophageal disease changes the oral-agent comfort level.",
+        "A convenient once-daily start does not erase that bleeding experience."
       ],
       "links": [
         {
@@ -1304,36 +1410,40 @@ window.ANTICOAG_CACP = {
           "id": "cancer-stepdown",
           "label": "Case: API-CAT step-down"
         }
+      ],
+      "objectiveIds": [
+        22,
+        24
       ]
     },
     {
       "id": "ii-16",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "When extending anticoagulation after unprovoked VTE and choosing drug therapy, aspirin compared with low-dose DOAC is:",
+      "difficulty": "advanced",
+      "stem": "A 58-year-old woman completed 9 months of anticoagulation for unprovoked proximal DVT. Bleeding risk is low, kidney function is normal, and she agrees that extension is appropriate. She asks for aspirin 100 mg because a friend uses it 'to prevent clots.' Which comparison fits EINSTEIN CHOICE?",
       "choices": [
         {
           "id": "a",
-          "text": "Superior for preventing recurrent VTE"
+          "text": "Aspirin prevented more recurrent VTE than rivaroxaban 10 mg, and with less major bleeding"
         },
         {
           "id": "b",
-          "text": "Inferior to low-dose DOAC for recurrent VTE prevention (EINSTEIN-CHOICE teaching)"
+          "text": "Extension is impossible once 6 months have passed, so neither drug is evidence-based after that in clinic"
         },
         {
           "id": "c",
-          "text": "Identical to placebo in AMPLIFY-EXT"
+          "text": "The acute 15 mg twice-daily rivaroxaban lead-in is restarted for every extension year"
         },
         {
           "id": "d",
-          "text": "Required before any DOAC extension"
+          "text": "Rivaroxaban 10 mg or 20 mg daily prevented more recurrent VTE than aspirin, with similar major bleeding"
         }
       ],
-      "correctId": "b",
-      "explanation": "If the decision is to extend with a medication, low-dose DOAC outperforms aspirin for preventing recurrence. If bleed risk precludes anticoagulant extension, stopping may be cleaner than aspirin-as-false-reassurance.",
+      "correctId": "d",
+      "explanation": "Choice D is EINSTEIN CHOICE on this site: after 6 to 12 months of anticoagulation, rivaroxaban 20 mg or 10 mg daily was superior to aspirin 100 mg for recurrent VTE, and major bleeding was low and similar. The labeled extended dose often discussed from that trial is 10 mg daily, while 20 mg remains an option when recurrence risk is judged higher. Choice A reverses the trial. Choice B closes the door after 6 months. Choice C restarts acute lead-in dosing for extension. Source: EINSTEIN CHOICE and the 2021 CHEST support for low-dose rivaroxaban over aspirin when extension is chosen.",
       "teachingPoints": [
-        "AMPLIFY-EXT supports apixaban 2.5 mg BID vs placebo.",
-        "Reassess annually."
+        "Aspirin is the weaker extended-prevention option.",
+        "Extension dosing is not the 15 mg twice-daily acute lead-in."
       ],
       "links": [
         {
@@ -1351,36 +1461,39 @@ window.ANTICOAG_CACP = {
           "id": "extended-vte",
           "label": "Extended VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        38
       ]
     },
     {
       "id": "ii-17",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "A patient on dabigatran presents with life-threatening ICH. Specific reversal agent of choice (when indicated) is:",
+      "stem": "A 75-year-old man on dabigatran 150 mg twice daily for AF presents with collapse. Computed tomography shows a large intracerebral hemorrhage. He took a dose 2 hours ago. Creatinine clearance is 40 mL/min. The hospital stocks idarucizumab. Which agent is the specific reversal option when reversal is indicated?",
       "choices": [
         {
           "id": "a",
-          "text": "Andexanet alfa"
+          "text": "Idarucizumab 5 g intravenous, the antibody studied in RE-VERSE AD for dabigatran"
         },
         {
           "id": "b",
-          "text": "Idarucizumab"
+          "text": "Andexanet alfa, because dabigatran is a factor Xa inhibitor in current United States practice"
         },
         {
           "id": "c",
-          "text": "Vitamin K 10 mg IV alone"
+          "text": "Vitamin K and 4F-PCC as the specific dabigatran antidote pair"
         },
         {
           "id": "d",
-          "text": "Protamine 1 mg per mg dabigatran"
+          "text": "Protamine sulfate, because dabigatran's effect is the same as unfractionated heparin"
         }
       ],
-      "correctId": "b",
-      "explanation": "Idarucizumab is the specific dabigatran reversal agent (RE-VERSE AD). Andexanet targeted FXa inhibitors and is withdrawn in the U.S.; vitamin K does not reverse dabigatran; protamine reverses heparin, not dabigatran.",
+      "correctId": "a",
+      "explanation": "Choice A is specific reversal: RE-VERSE AD and the label studied idarucizumab 5 g intravenous for dabigatran in life-threatening bleeding or emergency surgery. Choice B names the withdrawn factor Xa binder and misclassifies dabigatran, which is a direct thrombin inhibitor. Choice C is the warfarin bundle. Choice D is heparin reversal. Source: RE-VERSE AD on this site and the idarucizumab program.",
       "teachingPoints": [
-        "Still run ABCs and source control.",
-        "Plan restart timing with a named owner after hemostasis."
+        "Identify dabigatran before choosing an antidote.",
+        "Idarucizumab remains the United States-specific option for dabigatran."
       ],
       "links": [
         {
@@ -1403,36 +1516,40 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        33,
+        41
       ]
     },
     {
       "id": "ii-18",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "HAS-BLED ≥3 in a patient with CHA₂DS₂-VASc 5 and NVAF should prompt the clinician to:",
+      "difficulty": "advanced",
+      "stem": "A 78-year-old woman with NVAF has a CHA₂DS₂-VASc score of 6 from age, hypertension, diabetes, and a prior stroke. HAS-BLED contributors include a blood pressure of 170/98 mm Hg and daily ibuprofen. Hemoglobin is 13 g/dL. She has no mechanical valve. How should the bleeding score shape the visit?",
       "choices": [
         {
           "id": "a",
-          "text": "Automatically withhold OAC forever"
+          "text": "Withhold OAC, because any HAS-BLED total of 3 or more cancels a high stroke score"
         },
         {
           "id": "b",
-          "text": "Address modifiable bleed risks and proceed with shared decision about indicated OAC"
+          "text": "Start indicated OAC and treat the modifiable bleed risks, including pressure and the anti-inflammatory drug"
         },
         {
           "id": "c",
-          "text": "Switch to aspirin as equivalent stroke prevention"
+          "text": "Choose the DOAC with the shortest half-life solely from the HAS-BLED total"
         },
         {
           "id": "d",
-          "text": "Use prophylactic-dose heparin only"
+          "text": "Switch the indication to aspirin, because a prior stroke plus a bleeding score favors an antiplatelet"
         }
       ],
       "correctId": "b",
-      "explanation": "High bleed scores flag modifiable factors (hypertension, NSAIDs/alcohol, labile INR, anemia) — they are not an automatic OAC cancellation when stroke risk is high.",
+      "explanation": "Choice B matches the 2023 ACC/AHA/ACCP/HRS atrial fibrillation guideline: her stroke score is well into the anticoagulation range, and a bleeding assessment is used to correct blood pressure and to stop a nonsteroidal anti-inflammatory drug, not to cancel OAC. Choice A uses HAS-BLED as a veto. Choice C uses it as a molecule picker. Choice D substitutes aspirin, which AVERROES does not support when OAC is indicated.",
       "teachingPoints": [
-        "Document the mitigation plan.",
-        "LAAO enters if long-term OAC is truly prohibitive."
+        "Fix the pressure and the anti-inflammatory drug.",
+        "Do not let the bleeding score erase a prior stroke."
       ],
       "links": [
         {
@@ -1445,35 +1562,40 @@ window.ANTICOAG_CACP = {
           "id": "laao-vs-oac",
           "label": "LAAO framework"
         }
+      ],
+      "objectiveIds": [
+        13,
+        41
       ]
     },
     {
       "id": "iii-01",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "Which counseling point is essential when dispensing rivaroxaban 20 mg for AF or VTE maintenance?",
+      "difficulty": "advanced",
+      "stem": "A pharmacist is counseling a 72-year-old man starting rivaroxaban 20 mg daily for AF. He also has a neighbor's 2.5 mg rivaroxaban tablet used with aspirin, and he plans on bedtime dosing of his own 20 mg strength on an empty stomach because 'blood thinners cause nausea with food.' Which counseling point is the essential one for this tablet?",
       "choices": [
         {
           "id": "a",
-          "text": "Take on an empty stomach at noon only"
+          "text": "The 15 mg and 20 mg tablets are taken with food, and the AF dose is taken with the evening meal"
         },
         {
           "id": "b",
-          "text": "Take 15–20 mg doses with food to support absorption"
+          "text": "The 20 mg tablet must be taken fasting, because food cuts rivaroxaban exposure by about half today"
         },
         {
           "id": "c",
-          "text": "Crush and mix with grapefruit juice daily"
+          "text": "All rivaroxaban strengths, including 2.5 mg, have the same food rule and the same indication"
         },
         {
           "id": "d",
-          "text": "Skip doses whenever an NSAID is used"
+          "text": "The 20 mg dose is doubled on an empty stomach to replace the food effect"
         }
       ],
-      "correctId": "b",
-      "explanation": "The XARELTO label states that 15 mg and 20 mg tablets should be taken with food; food raises 20 mg exposure.",
+      "correctId": "a",
+      "explanation": "Choice A matches the XARELTO label as already stated on this site: 15 mg and 20 mg tablets are taken with food, and the AF dose is taken with the evening meal. The label reports that food raises 20 mg exposure (area under the curve up 39%). The 2.5 mg tablet, used with aspirin in COMPASS, is taken with or without food and is not this man's AF dose. Choice B reverses the food effect. Choice C equates strengths. Choice D doubles the dose. Source: XARELTO food effect as printed on this site.",
       "teachingPoints": [
-        "The label also gives bleeding precautions and missed-dose instructions."
+        "Food raises, rather than lowers, 20 mg exposure.",
+        "A neighbor's 2.5 mg tablet is not the AF prescription."
       ],
       "links": [
         {
@@ -1486,67 +1608,73 @@ window.ANTICOAG_CACP = {
           "id": "acute-vte",
           "label": "Acute VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        52
       ]
     },
     {
       "id": "iii-02",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "Teach-back after starting anticoagulation is valuable primarily because it:",
+      "difficulty": "advanced",
+      "stem": "A clinician finishes a warfarin start and asks, 'Any questions? Do you understand?' The patient nods. He cannot later state the tablet strength, what an INR is, or which bleeding should prompt a call. Which evaluation of understanding is the useful one?",
       "choices": [
         {
           "id": "a",
-          "text": "Replaces the need for written instructions"
+          "text": "A nod after a closed question is sufficient documentation of understanding"
         },
         {
           "id": "b",
-          "text": "Confirms the patient can explain indication, dosing schedule, bleed warning signs, and whom to call"
+          "text": "Teach-back: ask him to explain the dose, the INR plan, and the bleeding call in his own words"
         },
         {
           "id": "c",
-          "text": "Is required only for warfarin, never DOACs"
+          "text": "A written brochure handed over, with no check that he can actually use it at home"
         },
         {
           "id": "d",
-          "text": "Documents that CHA₂DS₂-VASc was calculated by the patient"
+          "text": "A family member's signature, which substitutes for the patient's own explanation of the plan now"
         }
       ],
       "correctId": "b",
-      "explanation": "Teach-back improves confirmation of understanding across health-literacy levels — indication, how to take, what bleeding looks like, drug interactions (NSAIDs), and emergency contacts.",
+      "explanation": "Choice B is teach-back. Understanding is demonstrated when the patient restates the plan, not when he agrees that he understands. Choice A accepts a nod. Choice C stops at the paper. Choice D replaces his explanation with someone else's signature. Source: teach-back as a health-literacy method.",
       "teachingPoints": [
-        "Use plain language; avoid jargon like “thromboembolism” without translation.",
-        "Offer translated materials when needed."
+        "Ask for a restatement. Do not ask only 'Do you understand?'",
+        "The restatement has to include dose, monitoring, and a bleeding trigger."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        55
+      ]
     },
     {
       "id": "iii-03",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "A patient asks whether they can use over-the-counter ibuprofen freely while on apixaban. Best education response:",
+      "difficulty": "advanced",
+      "stem": "A 64-year-old woman on apixaban 5 mg twice daily for AF asks about taking ibuprofen 400 mg three times daily for a month for a sprain. She also takes low-dose aspirin. Creatinine clearance is 55 mL/min. She has had no ulcer. Which education point explains the interaction that matters here?",
       "choices": [
         {
           "id": "a",
-          "text": "NSAIDs have no interaction with DOACs — use liberally"
+          "text": "Ibuprofen raises apixaban concentrations through CYP3A4 the way ketoconazole does, so the dose is halved automatically"
         },
         {
           "id": "b",
-          "text": "NSAIDs add pharmacodynamic bleed risk; prefer acetaminophen when possible and ask before regular NSAID use"
+          "text": "Ibuprofen replaces apixaban on sprain days because both drugs block factor Xa"
         },
         {
           "id": "c",
-          "text": "Ibuprofen reverses apixaban and is encouraged"
+          "text": "Regular ibuprofen adds bleeding risk on top of apixaban and aspirin, even when the apixaban level is unchanged"
         },
         {
           "id": "d",
-          "text": "Only naproxen is safe; ibuprofen is not an NSAID"
+          "text": "Over-the-counter pain medicines have no anticoagulant interaction, so no counseling is needed"
         }
       ],
-      "correctId": "b",
-      "explanation": "NSAID + anticoagulant combinations raise bleeding risk via PD (and mucosal injury). Counsel patients to ask before sustained OTC NSAID use; check the DDI library for teaching cards.",
+      "correctId": "c",
+      "explanation": "Choice C is the pharmacodynamic point. Nonsteroidal anti-inflammatory drugs and aspirin impair platelet hemostasis and raise gastrointestinal bleeding risk alongside a DOAC without needing to change apixaban exposure. Choice A describes a strong combined CYP3A4 and P-glycoprotein inhibitor, which ibuprofen is not. Choice B treats ibuprofen as a factor Xa inhibitor. Choice D skips counseling. Source: pharmacodynamic bleeding interaction, as in this site's apixaban–anti-inflammatory teaching.",
       "teachingPoints": [
-        "Same caution for dual antiplatelet stacking without indication.",
-        "Alcohol binge counseling belongs in the same visit."
+        "This is a bleeding interaction, not a ketoconazole-type exposure interaction.",
+        "Aspirin plus ibuprofen plus a DOAC stacks three hemostatic insults."
       ],
       "links": [
         {
@@ -1554,67 +1682,74 @@ window.ANTICOAG_CACP = {
           "id": "apixaban-nsaids",
           "label": "Apixaban–NSAIDs"
         }
+      ],
+      "objectiveIds": [
+        52,
+        60
       ]
     },
     {
       "id": "iii-04",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "For warfarin education, which statement about dietary vitamin K is most accurate?",
+      "difficulty": "advanced",
+      "stem": "A 68-year-old man starting warfarin for AF says he will never eat spinach, broccoli, or kale so the INR 'cannot move.' His usual diet is otherwise steady. Which statement about dietary vitamin K is the accurate one to teach?",
       "choices": [
         {
           "id": "a",
-          "text": "Eliminate all green vegetables forever"
+          "text": "All vitamin K–containing foods are forbidden for the entire time he takes warfarin"
         },
         {
           "id": "b",
-          "text": "Aim for consistency in vitamin K intake rather than absolute avoidance; report major diet changes"
+          "text": "One large spinach dinner after weeks of avoidance is harmless because warfarin erases dietary vitamin K"
         },
         {
           "id": "c",
-          "text": "Vitamin K foods only matter for DOACs"
+          "text": "Vitamin K intake should swing widely from day to day so the INR is 'exercised'"
         },
         {
           "id": "d",
-          "text": "Spinach reverses DOACs within 30 minutes"
+          "text": "A consistent intake of vitamin K foods is the goal; a sudden ban followed by a binge is what moves the INR"
         }
       ],
-      "correctId": "b",
-      "explanation": "Warfarin education emphasizes consistent vitamin K intake, not lifelong vegetable avoidance. DOACs are not meaningfully affected by dietary vitamin K the way VKAs are.",
+      "correctId": "d",
+      "explanation": "Choice D is the diet teaching. Warfarin antagonism is more stable when vitamin K intake is consistent. A total ban is hard to sustain, and the first large salad after avoidance can drop the INR. Choice A forbids the foods. Choice B denies the binge effect. Choice C prescribes swings. Source: warfarin dietary counseling. No specific salad size or INR change is invented.",
       "teachingPoints": [
-        "Alcohol binge and new antibiotics still warrant contact.",
-        "TTR improves when patients understand “consistency.”"
+        "Consistency beats prohibition.",
+        "A binge after a ban is a common INR drop."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        52
+      ]
     },
     {
       "id": "iii-05",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "When discussing missed DOAC doses, the safest general education principle is:",
+      "stem": "A clinic prints one missed-dose card for every DOAC: 'If you miss a dose, take two tablets tonight.' It is handed to a patient on rivaroxaban 20 mg daily and to a patient on apixaban 5 mg twice daily. Which principle is the safe one?",
       "choices": [
         {
           "id": "a",
-          "text": "Double the next dose for any missed dose regardless of agent or timing"
+          "text": "Missed-dose teaching must name the drug, because doubling tonight is wrong for both schedules"
         },
         {
           "id": "b",
-          "text": "Follow the specific product’s missed-dose instructions; when unsure, call the clinic rather than improvising a double dose"
+          "text": "The card is correct for every DOAC, because all of them use a 15 mg twice-daily catch-up rule"
         },
         {
           "id": "c",
-          "text": "Missed doses never matter for AF stroke prevention"
+          "text": "Apixaban's missed dose is handled by taking 10 mg and skipping the next day, which the card captures"
         },
         {
           "id": "d",
-          "text": "Replace every missed DOAC dose with aspirin 325 mg"
+          "text": "Rivaroxaban 20 mg is caught up by taking 40 mg the next evening, which is also the AF food rule"
         }
       ],
-      "correctId": "b",
-      "explanation": "Missed-dose rules differ by agent and time window. Teach patients to use the label/clinic instructions and to call rather than double-dose by guesswork.",
+      "correctId": "a",
+      "explanation": "Choice A rejects a class-wide double-dose card. For once-daily rivaroxaban 20 mg, a missed dose is taken the same day if remembered then, and the next day's dose is not doubled. For apixaban, a missed dose is taken the same day and the dose is not doubled to catch up. The 'take two tonight' rule resembles only the separate 15 mg twice-daily VTE lead-in instruction, which is not either of these regimens. Choice B universalizes that lead-in. Choice C skips the next apixaban day. Choice D doubles the 20 mg dose. Source: XARELTO and ELIQUIS missed-dose labeling.",
       "teachingPoints": [
-        "Adherence aids (pillboxes, alarms) are part of the prescription.",
-        "Short half-lives mean missed DOAC doses lose coverage faster than missed warfarin doses in some scenarios."
+        "The 15 mg twice-daily catch-up rule is not the 20 mg rule.",
+        "Name the regimen on the card."
       ],
       "links": [
         {
@@ -1622,36 +1757,40 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke",
           "label": "AF pathway"
         }
+      ],
+      "objectiveIds": [
+        52,
+        57
       ]
     },
     {
       "id": "iv-01",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Dabigatran’s anticoagulant mechanism is best described as:",
+      "difficulty": "advanced",
+      "stem": "A 70-year-old man on dabigatran develops a life-threatening bleed. A learner reaches for the same reversal plan used for apixaban and says dabigatran, rivaroxaban, warfarin, and clopidogrel 'all block platelets the same way.' Which mechanism distinction is the correct one?",
       "choices": [
         {
           "id": "a",
-          "text": "Direct factor Xa inhibition"
+          "text": "Dabigatran directly inhibits thrombin, unlike factor Xa inhibitors, warfarin, and P2Y12 blockers"
         },
         {
           "id": "b",
-          "text": "Direct thrombin (factor IIa) inhibition"
+          "text": "Dabigatran blocks vitamin K epoxide reductase, the same enzyme target as warfarin"
         },
         {
           "id": "c",
-          "text": "Vitamin K epoxide reductase inhibition"
+          "text": "Dabigatran blocks glycoprotein IIb/IIIa, the same platelet target as therapeutic-dose aspirin today"
         },
         {
           "id": "d",
-          "text": "Irreversible COX-1 inhibition"
+          "text": "Dabigatran inhibits factor Xa, so andexanet is its specific reversal antibody"
         }
       ],
-      "correctId": "b",
-      "explanation": "Dabigatran is a direct thrombin inhibitor. Apixaban/rivaroxaban/edoxaban inhibit factor Xa. Warfarin inhibits VKOR; aspirin inhibits COX-1.",
+      "correctId": "a",
+      "explanation": "Choice A is dabigatran's target: thrombin (factor IIa). Apixaban, rivaroxaban, and edoxaban inhibit factor Xa. Warfarin inhibits vitamin K recycling. Clopidogrel blocks the platelet P2Y12 receptor. The specific reversal antibody idarucizumab applies to dabigatran, not to factor Xa inhibitors. Choice B assigns warfarin's target. Choice C assigns a platelet target. Choice D assigns factor Xa and the wrong antidote. Source: PRADAXA mechanism of action.",
       "teachingPoints": [
-        "Mechanism explains why idarucizumab is dabigatran-specific.",
-        "Renal clearance is especially important for dabigatran labeling."
+        "Name thrombin before choosing an antidote.",
+        "Dabigatran is not a factor Xa inhibitor and not an antiplatelet drug."
       ],
       "links": [
         {
@@ -1664,36 +1803,40 @@ window.ANTICOAG_CACP = {
           "id": "re-verse-ad",
           "label": "RE-VERSE AD"
         }
+      ],
+      "objectiveIds": [
+        3,
+        63
       ]
     },
     {
       "id": "iv-02",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Apixaban, rivaroxaban, and edoxaban share which primary target?",
+      "difficulty": "advanced",
+      "stem": "Three patients are on apixaban, rivaroxaban, and edoxaban. A slide says each drug has a different primary target, matching thrombin, platelets, and vitamin K. Which target do the three drugs actually share?",
       "choices": [
         {
           "id": "a",
-          "text": "Factor IIa (thrombin)"
+          "text": "Thrombin, the same primary target as dabigatran"
         },
         {
           "id": "b",
-          "text": "Factor Xa"
+          "text": "Factor Xa, which is why they are grouped as oral factor Xa inhibitors"
         },
         {
           "id": "c",
-          "text": "Factor XIII"
+          "text": "The platelet P2Y12 receptor, the same primary target as clopidogrel now"
         },
         {
           "id": "d",
-          "text": "Plasminogen"
+          "text": "Vitamin K epoxide reductase, the same primary target as warfarin"
         }
       ],
       "correctId": "b",
-      "explanation": "The oral FXa inhibitors block factor Xa. That shared target also framed why andexanet was developed — and why U.S. FXa bleed care changed after Andexxa withdrawal.",
+      "explanation": "Choice B is the shared target. Apixaban, rivaroxaban, and edoxaban are direct factor Xa inhibitors. Dabigatran is the direct thrombin inhibitor in the DOAC class. Choice A assigns thrombin. Choice C assigns a platelet receptor. Choice D assigns warfarin's enzyme. Source: class pharmacology used throughout this site.",
       "teachingPoints": [
-        "Food effect differs (notable for rivaroxaban 15–20 mg).",
-        "Dose-reduction rules are agent-specific."
+        "Three drug names, one enzyme.",
+        "Dabigatran is the thrombin inhibitor that does not belong in this trio."
       ],
       "links": [
         {
@@ -1716,36 +1859,40 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        3,
+        63
       ]
     },
     {
       "id": "iv-03",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Strong combined P-gp and CYP3A4 inducers (e.g., rifampin, carbamazepine, St John’s wort) with DOACs generally raise concern for:",
+      "difficulty": "advanced",
+      "stem": "A patient on apixaban for AF is started on rifampin for a staphylococcal infection. Weight, age, and serum creatinine still meet a 5 mg twice-daily AF plan. Two weeks later a clinician is surprised the anticoagulant 'should be stronger, not weaker.' What is the interaction?",
       "choices": [
         {
           "id": "a",
-          "text": "Increased DOAC exposure and bleeding only"
+          "text": "Rifampin inhibits CYP3A4 and raises apixaban exposure the way ketoconazole does"
         },
         {
           "id": "b",
-          "text": "Reduced DOAC exposure and loss of efficacy / thrombosis risk — often avoid combinations"
+          "text": "Rifampin has no transporter or enzyme effect, so any new clot is unrelated to it"
         },
         {
           "id": "c",
-          "text": "No interaction because DOACs are renally cleared only"
+          "text": "Rifampin induces CYP3A4 and P-glycoprotein, so the label avoids the pair"
         },
         {
           "id": "d",
-          "text": "Mandatory doubling of every DOAC dose without specialty input"
+          "text": "Rifampin raises the INR, and apixaban is increased until the INR exceeds 3"
         }
       ],
-      "correctId": "b",
-      "explanation": "Inducers can lower DOAC levels (see site DDI cards with published AUC decreases where available). Teaching frame: thrombosis risk, often avoid — opposite of strong-inhibitor bleed risk.",
+      "correctId": "c",
+      "explanation": "Choice C is the inducer problem. The ELIQUIS label says to avoid strong combined inducers of CYP3A4 and P-glycoprotein, and it names rifampin. Exposure falls, so the clinical surprise is breakthrough thrombosis, not excess anticoagulation. Choice A describes inhibition. Choice B denies the interaction. Choice D doses apixaban to an INR. Source: ELIQUIS drug interactions.",
       "teachingPoints": [
-        "Use the DDI library rather than memory for magnitudes.",
-        "Warfarin inducers lower INR — different monitoring story."
+        "Induction lowers the DOAC. Inhibition raises it.",
+        "A correct-looking renal dose does not survive rifampin."
       ],
       "links": [
         {
@@ -1758,129 +1905,144 @@ window.ANTICOAG_CACP = {
           "id": "apixaban-carbamazepine",
           "label": "Apixaban–carbamazepine"
         }
+      ],
+      "objectiveIds": [
+        69
       ]
     },
     {
       "id": "iv-04",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "INR is calibrated using ISI. Which statement is correct?",
+      "stem": "Two laboratories report prothrombin times of 18 seconds and 26 seconds on the same warfarin plasma because their thromboplastin reagents differ. Both report an INR near 2.5. A learner wants to dose from the raw seconds. What is the INR doing in this comparison?",
       "choices": [
         {
           "id": "a",
-          "text": "INR = patient PT / mean normal PT without any reagent adjustment"
+          "text": "The INR is the activated partial thromboplastin time, so the raw seconds should have matched"
         },
         {
           "id": "b",
-          "text": "INR standardizes PT across thromboplastin reagents using the International Sensitivity Index (ISI)"
+          "text": "The INR removes reagent differences by ignoring the International Sensitivity Index entirely"
         },
         {
           "id": "c",
-          "text": "ISI is only used for aPTT heparin monitoring"
+          "text": "The INR is valid only for apixaban and should replace the prothrombin time in DOAC clinics"
         },
         {
           "id": "d",
-          "text": "INR replaces the need for knowing the clinical indication’s target range"
+          "text": "The INR uses the International Sensitivity Index so different reagents can match"
         }
       ],
-      "correctId": "b",
-      "explanation": "INR = (PT_patient / PT_mean normal)^ISI. ISI accounts for thromboplastin sensitivity so targets can be shared across labs.",
+      "correctId": "d",
+      "explanation": "Choice D is the definition. INR = (patient prothrombin time / mean normal prothrombin time) raised to the International Sensitivity Index of that reagent, which is why the seconds differ and the INRs agree. Choice A names the wrong clotting time. Choice B says the index is ignored. Choice C moves the INR to apixaban, which is not how that drug is dosed. Source: INR definition.",
       "teachingPoints": [
-        "Point-of-care INR still needs quality systems (see Domain V).",
-        "DOACs are not monitored with INR for dosing."
+        "Raw seconds are reagent-specific. The INR is the comparable number.",
+        "The sensitivity index is why the exponent exists."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        27,
+        28
+      ]
     },
     {
       "id": "iv-05",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "aPTT is most traditionally used to monitor which anticoagulant?",
+      "difficulty": "advanced",
+      "stem": "Four inpatients are on different anticoagulants. The protocol says to adjust the infusion using the activated partial thromboplastin time. Which drug is that protocol traditionally built for?",
       "choices": [
         {
           "id": "a",
-          "text": "Apixaban therapeutic dosing"
+          "text": "Unfractionated heparin by intravenous infusion"
         },
         {
           "id": "b",
-          "text": "Unfractionated heparin (with institution-specific therapeutic ranges)"
+          "text": "Rivaroxaban 20 mg, which is held for a high activated partial thromboplastin time"
         },
         {
           "id": "c",
-          "text": "Fondaparinux level monitoring exclusively"
+          "text": "Warfarin, which is safer when dosed from the activated partial thromboplastin time than from the INR"
         },
         {
           "id": "d",
-          "text": "Aspirin response"
+          "text": "Apixaban, which is reduced when that time is below the normal range"
         }
       ],
-      "correctId": "b",
-      "explanation": "UFH is commonly monitored with aPTT (or anti-Xa). DOAC dosing is not guided by aPTT targets; LMWH often uses anti-Xa in selected populations.",
+      "correctId": "a",
+      "explanation": "Choice A is the traditional use: intravenous unfractionated heparin is adjusted with a protocolized activated partial thromboplastin time or an anti-Xa assay. Choice B holds rivaroxaban for a clotting time that is not its dosing test. Choice C substitutes that time for the INR. Choice D uses a low result to cut apixaban. Source: unfractionated heparin monitoring.",
       "teachingPoints": [
-        "Know your lab’s UFH therapeutic aPTT range mapped to anti-Xa.",
-        "Lupus anticoagulant can confound aPTT."
+        "Match the clotting time to the drug that is actually infused.",
+        "DOACs and warfarin are not titrated to that time."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        28,
+        65
+      ]
     },
     {
       "id": "iv-06",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Anti-Xa assays calibrated to LMWH are primarily used to:",
+      "difficulty": "advanced",
+      "stem": "A protocol allows an LMWH-calibrated anti-Xa level in selected patients, not in every prophylaxis prescription. A woman who is pregnant and on treatment-dose enoxaparin is one of the selected cases. What question can that level answer?",
       "choices": [
         {
           "id": "a",
-          "text": "Titrate aspirin"
+          "text": "Whether her apixaban dose should be 2.5 mg or 5 mg"
         },
         {
           "id": "b",
-          "text": "Assess LMWH exposure in selected patients (e.g., pregnancy, extremes of weight, renal impairment) per protocol"
+          "text": "Whether the enoxaparin anti-Xa effect is in the range that protocol expects for that LMWH"
         },
         {
           "id": "c",
-          "text": "Diagnose HIT antibodies"
+          "text": "Whether her INR should be raised above 3.5"
         },
         {
           "id": "d",
-          "text": "Replace CHA₂DS₂-VASc"
+          "text": "Whether she has heparin-induced thrombocytopenia, which an anti-Xa level diagnoses"
         }
       ],
       "correctId": "b",
-      "explanation": "LMWH anti-Xa levels guide dosing in special populations when protocols call for them — not routine for every LMWH patient.",
+      "explanation": "Choice B is the limited job of an LMWH-calibrated anti-Xa assay: it estimates that drug's anticoagulant effect when a protocol calls for it, such as pregnancy, extremes of weight, or reduced kidney function. It is not routine for every patient. Choice A uses it to pick an apixaban dose. Choice C turns it into an INR target. Choice D uses it to diagnose heparin-induced thrombocytopenia, which depends on the clinical pattern and antibody testing. Source: selective LMWH monitoring.",
       "teachingPoints": [
-        "Peak timing matters for interpretation.",
-        "DOAC-calibrated anti-Xa exists in some labs but is not a routine dosing tool like INR for warfarin."
+        "Calibrate the assay to the LMWH in use.",
+        "A level is not a DOAC dose chart and not a platelet-antibody test."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        28,
+        65
+      ]
     },
     {
       "id": "iv-07",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Warfarin major bleed / ICH emergency reversal bundle typically includes:",
+      "stem": "A patient on warfarin has an intracranial hemorrhage and an INR of 4.8. The team gives 4F-PCC and wonders whether vitamin K is redundant because the INR will correct immediately. Which bundle is the one that covers both speed and duration?",
       "choices": [
         {
           "id": "a",
-          "text": "Idarucizumab alone"
+          "text": "Vitamin K only, because factor replacement adds nothing once this bleed's INR is known in clinic"
         },
         {
           "id": "b",
-          "text": "4F-PCC plus IV vitamin K per institutional protocol"
+          "text": "Idarucizumab plus vitamin K, because every high INR is a dabigatran reversal problem"
         },
         {
           "id": "c",
-          "text": "Andexxa as first-line in the U.S. after Dec 2025"
+          "text": "4F-PCC for immediate factor replacement plus vitamin K so new functional factors can be made"
         },
         {
           "id": "d",
-          "text": "Oral vitamin K only, waiting 24 hours before PCC"
+          "text": "Protamine, because warfarin and unfractionated heparin share that same antidote"
         }
       ],
-      "correctId": "b",
-      "explanation": "VKA life-threatening bleed: rapid factor replacement with 4F-PCC plus vitamin K to sustain reversal. FFP is second-line when PCC unavailable. Andexxa is not a warfarin reversal agent and is U.S.-withdrawn.",
+      "correctId": "c",
+      "explanation": "Choice C is the warfarin major-bleed bundle on this site's 2020 ACC pathway: 4-factor PCC replaces factors quickly, and vitamin K allows the liver to synthesize new functional factors while warfarin is still blocking vitamin K recycling. PCC factors are cleared over hours, so vitamin K is not redundant. Choice A skips the rapid replacement. Choice B uses dabigatran's antibody. Choice D uses heparin's antidote. No unit dose is stated. Source: 2020 ACC expert consensus decision pathway cited on this site.",
       "teachingPoints": [
-        "Hold warfarin; investigate source.",
-        "Restart decisions differ for ICH vs GI bleed."
+        "PCC is the fast piece. Vitamin K is the durable piece.",
+        "Neither one replaces the other."
       ],
       "links": [
         {
@@ -1903,36 +2065,39 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        70
       ]
     },
     {
       "id": "iv-08",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Which statement about DOAC renal dosing is safest for exam teaching on this site?",
+      "difficulty": "advanced",
+      "stem": "An 81-year-old woman with NVAF weighs 58 kg. Serum creatinine is 1.1 mg/dL. She takes no inducer or strong combined inhibitor. A colleague continues apixaban 5 mg twice daily because 'the creatinine is under 1.5, so no reduction is allowed.' Which statement is the safe one?",
       "choices": [
         {
           "id": "a",
-          "text": "Invent a single CrCl cutoff that applies identically to all four DOACs"
+          "text": "Creatinine clearance must be below 15 mL/min before any apixaban reduction is even discussed"
         },
         {
           "id": "b",
-          "text": "Use agent-specific labeled dose-reduction criteria (and Cockcroft–Gault where labels expect it); do not under-dose without meeting criteria"
+          "text": "One criterion, any criterion, is enough, and her creatinine of 1.1 alone forces 2.5 mg"
         },
         {
           "id": "c",
-          "text": "Renal function never affects dabigatran"
+          "text": "The acute VTE lead-in, 10 mg twice daily for 7 days, is the AF starting dose at this age"
         },
         {
           "id": "d",
-          "text": "If CrCl is unknown, double the dose"
+          "text": "Age and weight are two criteria, so the AF dose is 2.5 mg twice daily"
         }
       ],
-      "correctId": "b",
-      "explanation": "Labels differ by agent (apixaban’s age/weight/Cr criteria vs rivaroxaban/edoxaban/dabigatran renal cutoffs). Prefer label language over memorized universal numbers; this site avoids inventing cutoffs.",
+      "correctId": "d",
+      "explanation": "Choice D applies the ELIQUIS AF rule as this site states it: 2.5 mg twice daily only when at least two of age 80 or older, weight 60 kg or less, and serum creatinine 1.5 mg/dL or higher are present. She meets age and weight. Creatinine clearance is about 37 mL/min by Cockcroft-Gault, (140−81)×58×0.85/(72×1.1), but that clearance is not the AF reduction rule. Choice A waits for dialysis-range function. Choice B reduces for a single creatinine that does not even meet 1.5. Choice C uses the VTE lead-in for AF. Source: ELIQUIS AF dose-reduction criteria, as printed on this site.",
       "teachingPoints": [
-        "Severe CKD may push to warfarin or specialty options.",
-        "Recheck CrCl when weight or creatinine changes."
+        "Count the three criteria. Creatinine is not a veto over the other two.",
+        "Do not import the rivaroxaban clearance cutoff into apixaban."
       ],
       "links": [
         {
@@ -1945,36 +2110,39 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke",
           "label": "AF pathway"
         }
+      ],
+      "objectiveIds": [
+        65
       ]
     },
     {
       "id": "iv-09",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Pharmacodynamically, combining a therapeutic DOAC with chronic NSAID therapy mainly increases:",
+      "difficulty": "advanced",
+      "stem": "A patient on rivaroxaban 20 mg daily starts scheduled ibuprofen and develops melena. A level, if measured, would not be expected to show a ketoconazole-like jump in rivaroxaban exposure. Which outcome is the likely one?",
       "choices": [
         {
           "id": "a",
-          "text": "DOAC hepatic metabolism via CYP2D6 induction"
+          "text": "More gastrointestinal bleeding from a platelet and mucosal effect, without a higher drug level"
         },
         {
           "id": "b",
-          "text": "Bleeding risk without necessarily changing DOAC plasma levels"
+          "text": "Loss of rivaroxaban efficacy, because scheduled ibuprofen induces CYP3A4 and drops the level now"
         },
         {
           "id": "c",
-          "text": "Vitamin K absorption"
+          "text": "A higher INR target, because ibuprofen is monitored and dose-adjusted exactly like warfarin"
         },
         {
           "id": "d",
-          "text": "Platelet count via bone marrow stimulation"
+          "text": "Protection from bleeding, because nonsteroidal drugs reverse factor Xa inhibition"
         }
       ],
-      "correctId": "b",
-      "explanation": "NSAID bleed risk with anticoagulants is largely PD (platelet function + mucosal injury), distinct from PK inhibitor/inducer stories. Site DDI cards separate PD stacks from PK exposure.",
+      "correctId": "a",
+      "explanation": "Choice A is a pharmacodynamic bleed. Ibuprofen impairs platelet function and injures gastric mucosa. It is not a strong CYP3A4 inducer and not a reversal agent. Choice B assigns induction. Choice C adds an INR target. Choice D reverses the direction. Source: pharmacodynamic interaction of nonsteroidal anti-inflammatory drugs with factor Xa inhibitors.",
       "teachingPoints": [
-        "Same frame for SSRI/SNRI PD bleed caution without forcing fake universal HRs.",
-        "Ask about OTC analgesics at every visit."
+        "Exposure and bleeding are different axes.",
+        "Melena can occur without a doubling of the rivaroxaban level."
       ],
       "links": [
         {
@@ -1982,36 +2150,40 @@ window.ANTICOAG_CACP = {
           "id": "apixaban-nsaids",
           "label": "Apixaban–NSAIDs"
         }
+      ],
+      "objectiveIds": [
+        67,
+        69
       ]
     },
     {
       "id": "iv-10",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Apixaban acute VTE dosing per AMPLIFY teaching starts with:",
+      "stem": "A clinician is writing the first week of apixaban for acute PE, then asks what changes months later if extension is chosen. Which description matches AMPLIFY, as distinct from the extended-prevention dose?",
       "choices": [
         {
           "id": "a",
-          "text": "2.5 mg BID from day 1"
+          "text": "Start 2.5 mg twice daily for 7 days, because extension dosing is also the acute dosing"
         },
         {
           "id": "b",
-          "text": "10 mg BID for 7 days, then 5 mg BID"
+          "text": "Start 10 mg twice daily for 7 days, then 5 mg twice daily, which is the acute AMPLIFY regimen"
         },
         {
           "id": "c",
-          "text": "20 mg once daily with food indefinitely"
+          "text": "Start 20 mg once daily with food, which is the apixaban acute regimen"
         },
         {
           "id": "d",
-          "text": "Parenteral heparin for 5 days then 2.5 mg BID"
+          "text": "Start 2.5 mg once daily, because AMPLIFY used the COMPASS schedule"
         }
       ],
       "correctId": "b",
-      "explanation": "AMPLIFY: apixaban 10 mg BID × 7 days → 5 mg BID. Extended prevention may later use 2.5 mg BID (AMPLIFY-EXT) — different phase.",
+      "explanation": "Choice B is AMPLIFY on this site: apixaban 10 mg twice daily for 7 days, then 5 mg twice daily. The 2.5 mg twice-daily dose is an extended-prevention dose after at least 6 months, not the acute start. Choice A swaps them. Choice C uses rivaroxaban's maintenance dose. Choice D uses a vascular idea and the wrong frequency. Source: AMPLIFY regimen on this site.",
       "teachingPoints": [
-        "The AMPLIFY protocol did not start acute VTE treatment at 2.5 mg BID.",
-        "COBRRA informs bleed comparison vs rivaroxaban when choosing."
+        "Acute apixaban is 10 mg then 5 mg, twice daily.",
+        "2.5 mg twice daily belongs to the extension decision, later."
       ],
       "links": [
         {
@@ -2024,36 +2196,39 @@ window.ANTICOAG_CACP = {
           "id": "amplify-ext",
           "label": "AMPLIFY-EXT"
         }
+      ],
+      "objectiveIds": [
+        65
       ]
     },
     {
       "id": "iv-11",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Rivaroxaban acute VTE load (EINSTEIN) is commonly taught as:",
+      "difficulty": "advanced",
+      "stem": "A patient with acute proximal DVT is prescribed rivaroxaban. The prescription says 20 mg daily starting today, with no lead-in. It is day 1. Which regimen matches the EINSTEIN acute VTE program?",
       "choices": [
         {
           "id": "a",
-          "text": "15 mg BID with food for 21 days, then 20 mg daily with food"
+          "text": "2.5 mg twice daily plus aspirin from day 1"
         },
         {
           "id": "b",
-          "text": "5 mg BID lifelong without load"
+          "text": "20 mg daily from day 1, with a 15 mg twice-daily phase only if a PE is present"
         },
         {
           "id": "c",
-          "text": "2.5 mg BID + aspirin from day 1 for DVT"
+          "text": "15 mg twice daily for 21 days, then 20 mg daily, taken with food"
         },
         {
           "id": "d",
-          "text": "150 mg BID after heparin lead-in"
+          "text": "10 mg twice daily for 7 days, then 5 mg twice daily"
         }
       ],
-      "correctId": "a",
-      "explanation": "EINSTEIN-DVT and EINSTEIN-PE used 15 mg twice daily for 3 weeks, then 20 mg once daily; the XARELTO label describes these doses as taken with food. COMPASS 2.5 mg BID is a different indication.",
+      "correctId": "c",
+      "explanation": "Choice C is EINSTEIN-DVT and EINSTEIN-PE on this site: rivaroxaban 15 mg twice daily for 21 days, then 20 mg daily. The 15 mg and 20 mg doses are taken with food. Choice A is the COMPASS regimen. Choice B skips the lead-in and invents a PE-only rule. Choice D is the apixaban acute regimen. Source: EINSTEIN regimen on this site.",
       "teachingPoints": [
-        "The label pairs the 15 mg and 20 mg tablets with food.",
-        "Edoxaban still needs heparin lead-in in its pivotal VTE design."
+        "Day 1 of rivaroxaban for VTE is 15 mg twice daily, not 20 mg once.",
+        "Food applies to both of those tablet strengths."
       ],
       "links": [
         {
@@ -2066,160 +2241,175 @@ window.ANTICOAG_CACP = {
           "id": "einstein-pe",
           "label": "EINSTEIN-PE"
         }
+      ],
+      "objectiveIds": [
+        65
       ]
     },
     {
       "id": "iv-12",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Strong P-gp/CYP3A4 inhibitors (e.g., certain azoles, ritonavir-containing regimens) with DOACs generally raise concern for:",
+      "stem": "A patient on rivaroxaban 20 mg daily for AF is prescribed ritonavir as part of an antiviral regimen. Creatinine clearance is 80 mL/min. Someone suggests the 15 mg renal tablet as the fix. What is the principal concern?",
       "choices": [
         {
           "id": "a",
-          "text": "Decreased DOAC levels and clotting only"
+          "text": "Ritonavir induces rivaroxaban clearance, so the AF dose should be raised to 40 mg daily in clinic"
         },
         {
           "id": "b",
-          "text": "Increased DOAC exposure and bleeding risk — avoid or adjust per label/DDI guidance"
+          "text": "Ritonavir has no P-glycoprotein or CYP3A4 effect on rivaroxaban exposure at all"
         },
         {
           "id": "c",
-          "text": "Mandatory conversion to aspirin"
+          "text": "The 15 mg renal tablet fully corrects a strong combined inhibitor such as ritonavir"
         },
         {
           "id": "d",
-          "text": "No relevance because all DOACs lack hepatic metabolism"
+          "text": "The label avoids ritonavir, a strong combined inhibitor, rather than using the 15 mg renal dose"
         }
       ],
-      "correctId": "b",
-      "explanation": "Inhibitors can raise DOAC exposure. Site DDI cards cite published AUC changes when available (e.g., azoles, Paxlovid, boosters) and label-extrapolation when not — never invent numbers.",
+      "correctId": "d",
+      "explanation": "Choice D is the inhibitor problem. Ritonavir can markedly raise rivaroxaban exposure. The renal 15 mg dose is for reduced creatinine clearance, not a substitute for avoiding a strong combined inhibitor. Choice A describes induction and a doubled dose. Choice B denies the interaction. Choice C trusts the renal tablet. Source: XARELTO drug interactions with combined P-glycoprotein and strong CYP3A4 inhibitors.",
       "teachingPoints": [
-        "Apixaban has specific PI/azole dose-reduction rules via label analogs — verify current labeling.",
-        "Separate PD bleed stacks from PK inhibitors conceptually."
+        "Inhibition is not a renal-dose problem.",
+        "Do not 'fix' ritonavir by prescribing the 15 mg AF tablet."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        69
+      ]
     },
     {
       "id": "iv-13",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "LMWH (e.g., enoxaparin) anticoagulant effect is primarily mediated by:",
+      "difficulty": "advanced",
+      "stem": "A learner says enoxaparin and apixaban are interchangeable because both 'block Xa.' A patient is being switched from one to the other. Which mechanism distinction is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Direct oral factor Xa active-site occupation like apixaban"
+          "text": "Enoxaparin inhibits factor Xa via antithrombin; apixaban inhibits factor Xa directly"
         },
         {
           "id": "b",
-          "text": "Antithrombin-dependent inhibition, with relatively greater anti-Xa than anti-IIa activity vs UFH"
+          "text": "Enoxaparin directly blocks thrombin's active site, the same site dabigatran blocks now"
         },
         {
           "id": "c",
-          "text": "Irreversible platelet COX-1 blockade"
+          "text": "Enoxaparin blocks vitamin K epoxide reductase, the same enzyme warfarin inhibits"
         },
         {
           "id": "d",
-          "text": "Vitamin K epoxide reductase blockade"
+          "text": "Enoxaparin is an antiplatelet drug and has no antithrombin-dependent effect at all"
         }
       ],
-      "correctId": "b",
-      "explanation": "LMWH potentiates antithrombin; chain-length distribution yields higher anti-Xa:anti-IIa ratios than UFH. It is not a DOAC and not a VKA.",
+      "correctId": "a",
+      "explanation": "Choice A is the distinction. LMWH binds antithrombin and preferentially inhibits factor Xa, with less anti-IIa effect than unfractionated heparin. Apixaban binds factor Xa directly and does not require antithrombin. Choice B equates enoxaparin with dabigatran. Choice C equates it with warfarin. Choice D calls it an antiplatelet. Source: LMWH versus direct factor Xa inhibitor pharmacology.",
       "teachingPoints": [
-        "Renal clearance matters for accumulation.",
-        "Protamine only partially reverses LMWH."
+        "Both affect factor Xa. Only one of them needs antithrombin.",
+        "A switch is not a milligram-for-milligram exchange."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        63
+      ]
     },
     {
       "id": "v-01",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "Time in Therapeutic Range (TTR) for warfarin clinics is primarily used as:",
+      "difficulty": "advanced",
+      "stem": "A quality committee asks what time in therapeutic range measures in the warfarin clinic and how to use it. A draft slide also calls it the DOAC success metric and prints a single national target the clinic has not adopted. Which description is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "A DOAC peak-level quality metric"
+          "text": "The share of time a warfarin INR is in range; it is not a DOAC metric or a national percentage"
         },
         {
           "id": "b",
-          "text": "A quality measure of how often INR values stay within the target range — stewardship for VKA programs"
+          "text": "It is the percentage of DOAC doses taken with food, and one national target percentage applies to every drug"
         },
         {
           "id": "c",
-          "text": "A replacement for CHA₂DS₂-VASc"
+          "text": "It replaces individual INR follow-up, so out-of-range calls can stop once the clinic average looks acceptable"
         },
         {
           "id": "d",
-          "text": "An FDA requirement to use Andexxa"
+          "text": "It measures enoxaparin anti-Xa levels and is improved by giving every warfarin patient vitamin K"
         }
       ],
-      "correctId": "b",
-      "explanation": "TTR quantifies INR control quality for warfarin-treated populations. Poor TTR may prompt adherence interventions, more frequent monitoring, or reconsideration of DOAC eligibility.",
+      "correctId": "a",
+      "explanation": "Choice A defines time in therapeutic range for a vitamin K antagonist clinic: how much of the time the INR is in the chosen range, often by a linear interpolation method such as Rosendaal's. It supports case review. It is not defined for DOACs, and this site does not use a single national percentage cutoff. Choice B reassigns it to food. Choice C retires individual follow-up. Choice D mixes LMWH and vitamin K. Source: warfarin clinic quality measurement. No target percentage is stated.",
       "teachingPoints": [
-        "Rosendaal linear interpolation is a common TTR method.",
-        "Clinic-level TTR supports program quality improvement."
+        "Use it to find unstable warfarin management.",
+        "Do not paste it onto a DOAC dashboard."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        76
+      ]
     },
     {
       "id": "v-02",
       "domainId": "V",
       "difficulty": "advanced",
-      "stem": "Point-of-care INR testing in an anticoagulation clinic conceptually requires:",
+      "stem": "An anticoagulation clinic wants to add fingerstick INR testing next month. The plan buys meters and starts dosing from them on day 1. There is no quality-control schedule, no training record, and no rule for when a result is rejected. Which infrastructure is actually required?",
       "choices": [
         {
           "id": "a",
-          "text": "No quality controls because POC devices are always accurate"
+          "text": "Meters alone, because a waived test has no quality duties once the devices are purchased"
         },
         {
           "id": "b",
-          "text": "A quality system consistent with applicable CLIA/waived-test rules, training, and correlation policies with the lab"
+          "text": "Training, controls, storage rules, and a written response when a control fails"
         },
         {
           "id": "c",
-          "text": "Daily arterial blood gases on every patient"
+          "text": "A policy that fingerstick results always override a same-day venous INR, even when they conflict"
         },
         {
           "id": "d",
-          "text": "Abandoning INR targets entirely"
+          "text": "Removal of venous INR capability so the new meter can never be checked against the laboratory"
         }
       ],
       "correctId": "b",
-      "explanation": "POC INR is convenient but still a regulated testing activity — training, QC, and policies for when to verify with a laboratory INR matter for patient safety.",
+      "explanation": "Choice B is the infrastructure. Point-of-care INR is a test system: people are trained, controls are run, strips are stored as the manufacturer requires, and discordant or failed runs are not used for doses. Choice A stops at the purchase. Choice C biases the system toward the meter. Choice D removes the comparison method. Source: point-of-care quality operations. No regulatory section number is cited.",
       "teachingPoints": [
-        "Know which tests are waived vs higher complexity in your setting.",
-        "Document device maintenance and staff competency."
+        "A meter without a control plan is not a clinic service.",
+        "Discordant results need a rejection rule before go-live."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        74
+      ]
     },
     {
       "id": "v-03",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "Anticoagulation stewardship programs commonly aim to:",
+      "difficulty": "advanced",
+      "stem": "A new stewardship program lists its aims. One draft says the aim is to switch every warfarin patient to a DOAC and to keep every aspirin prescription. Which set of activities actually describes anticoagulation stewardship?",
       "choices": [
         {
           "id": "a",
-          "text": "Maximize triple therapy duration after every PCI"
+          "text": "Maximize the number of anticoagulant starts, regardless of indication or bleeding risk"
         },
         {
           "id": "b",
-          "text": "Improve evidence-aligned agent selection, dosing, peri-procedural plans, and bleed/reversal readiness across the institution"
+          "text": "Remove INR monitoring so that no warfarin result can ever arrive late"
         },
         {
           "id": "c",
-          "text": "Eliminate all VKA use regardless of indication"
+          "text": "Match indication, dose, and duration, and keep monitoring ownership clear"
         },
         {
           "id": "d",
-          "text": "Replace shared decision-making with automatic EHR pop-ups alone"
+          "text": "Adopt one national DOAC for every diagnosis, including mechanical valves and pregnancy"
         }
       ],
-      "correctId": "b",
-      "explanation": "Stewardship aligns prescribing with evidence (DOAC niches vs VKA niches, dual pathway after PCI, U.S. FXa reversal reality) and builds reliable operational pathways.",
+      "correctId": "c",
+      "explanation": "Choice C is stewardship: the right anticoagulant for the indication, the labeled dose, a duration that matches the clot or the AF plan, removal of combinations such as a DOAC plus a leftover aspirin, and a named owner for monitoring and for procedure holds. Choice A counts starts. Choice B deletes warfarin safety. Choice D forces one drug into VKA niches and into pregnancy. Source: anticoagulation stewardship aims on this site.",
       "teachingPoints": [
-        "Track metrics that matter (appropriate agent, TTR, protocol deviations).",
-        "Education materials — including this unofficial CACP prep — support teams but are not a substitute for primary guidelines."
+        "Stewardship is indication, dose, and duration, not a switch quota.",
+        "A mechanical valve and a pregnancy are not DOAC defaults."
       ],
       "links": [
         {
@@ -2242,36 +2432,39 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        84
       ]
     },
     {
       "id": "i-13",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Post-thrombotic syndrome after proximal DVT is best described as:",
+      "difficulty": "advanced",
+      "stem": "A 66-year-old man had a proximal DVT eight months ago and completed anticoagulation. He describes chronic evening swelling and heaviness in that leg, unchanged for months. Today the same leg is suddenly more painful, with new pitting edema and a larger calf than last month. Hemoglobin is 14 g/dL. Which distinction matters most?",
       "choices": [
         {
           "id": "a",
-          "text": "An acute PE complication requiring immediate thrombolysis in all cases"
+          "text": "Chronic heaviness can be post-thrombotic syndrome, but today's change needs a recurrence check"
         },
         {
           "id": "b",
-          "text": "A chronic sequela of venous obstruction/reflux causing pain, edema, and skin changes that prevention of recurrent DVT and early care may help reduce"
+          "text": "Any swelling years later is post-thrombotic syndrome, so imaging for a new clot is unnecessary"
         },
         {
           "id": "c",
-          "text": "A synonym for HIT type II"
+          "text": "Post-thrombotic syndrome means the original clot is extending, so the INR target automatically rises"
         },
         {
           "id": "d",
-          "text": "Proof that DOACs are contraindicated after any DVT"
+          "text": "Chronic venous symptoms after DVT are arterial ischemia and are treated as acute limb ischemia"
         }
       ],
-      "correctId": "b",
-      "explanation": "PTS is a long-term venous insufficiency syndrome after DVT. Anticoagulation that prevents recurrence and appropriate acute care may lower risk; it is not an acute PE thrombolysis indication by itself.",
+      "correctId": "a",
+      "explanation": "Choice A separates post-thrombotic syndrome (chronic dependent swelling and heaviness after DVT) from a new acute change that can be recurrence and needs diagnostic evaluation. Choice B misses the abrupt change. Choice C invents an INR intensification for chronic syndrome symptoms. Choice D calls venous skin and swelling an arterial emergency. Source: post-thrombotic syndrome as a chronic venous consequence of DVT, distinct from recurrent acute DVT.",
       "teachingPoints": [
-        "Compression and symptomatic care are adjuncts — follow guideline/local protocols.",
-        "Iliofemoral DVT carries higher PTS risk than distal DVT."
+        "Chronic venous symptoms are not automatically a new clot.",
+        "A sudden change in pain or swelling still needs a recurrence assessment."
       ],
       "links": [
         {
@@ -2279,44 +2472,46 @@ window.ANTICOAG_CACP = {
           "id": "acute-vte",
           "label": "Acute VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        12
       ]
     },
     {
       "id": "i-14",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Valve thrombosis risk teaching (qualitative) is most accurate when stated as:",
+      "stem": "A clinic compares two patients who both ask about clot risk on the valve. Patient 1 has a mechanical mitral prosthesis placed two years ago and is in sinus rhythm. Patient 2 has a bioprosthetic aortic valve placed three years ago and is also in sinus rhythm, with no AF. Neither has active bleeding. Which comparison of thrombosis risk is sound?",
       "choices": [
         {
           "id": "a",
-          "text": "All bioprosthetic and mechanical valves have identical thrombosis risk regardless of position"
+          "text": "The bioprosthetic aortic valve carries the higher long-term thrombosis risk and needs a higher INR than a mechanical mitral valve"
         },
         {
           "id": "b",
-          "text": "Mechanical valves generally carry higher thrombosis risk than bioprostheses, and mitral (and right-sided) positions are often higher risk than aortic among mechanical valves — informing INR intensity and bridging judgments"
+          "text": "The mechanical mitral prosthesis is the higher-risk position and is a VKA case, not a tissue aortic valve in sinus rhythm"
         },
         {
           "id": "c",
-          "text": "Aortic mechanical valves never require anticoagulation"
+          "text": "Both valves have identical long-term clot risk, so a DOAC is appropriate for the mechanical mitral valve"
         },
         {
           "id": "d",
-          "text": "DOACs are preferred for all mechanical mitral valves after PROACT"
+          "text": "Valve position does not matter once three months have passed, and both patients stop anticoagulation then"
         }
       ],
       "correctId": "b",
-      "explanation": "Classic teaching: mechanical > bioprosthetic thrombosis risk; mitral/tricuspid mechanical positions tend to be higher risk than aortic. This underpins VKA-only niches and position-specific INR targets — not DOAC use for mechanical mitral valves.",
+      "explanation": "Choice B matches valve teaching: a mechanical mitral prosthesis has a higher thrombotic risk than a bioprosthetic aortic valve in sinus rhythm without another OAC indication, and mechanical valves are a VKA niche. The 2020 ACC/AHA valvular heart disease guideline describes a higher INR range for mechanical mitral valves (target 3.0, range 2.5 to 3.5) than for a bileaflet aortic valve without additional risk factors (target 2.5, range 2.0 to 3.0). Choice A reverses the positions. Choice C offers a DOAC for a mechanical valve. Choice D stops therapy on a calendar. Source: 2020 ACC/AHA valvular guideline and RE-ALIGN's failure of dabigatran on mechanical valves, as used on this site.",
       "teachingPoints": [
-        "Position and valve type inform intensity and peri-procedural risk, not a substitute for labeled INR goals.",
-        "See mechanical-valve pathway on this site."
+        "Mechanical mitral valves stay on a VKA with a higher INR range than a low-risk mechanical aortic valve.",
+        "A tissue aortic valve in sinus rhythm is not that prosthesis."
       ],
       "links": [
         {
           "kind": "pathway",
           "id": "mechanical-valve",
           "label": "Mechanical valve pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "mechanical-valve-vka",
@@ -2326,36 +2521,40 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "mechanical-avr-doac-request",
           "label": "Case: Mechanical AVR DOAC request"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        15
+      ]
     },
     {
       "id": "i-15",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Stroke versus ICH presentation triage for an anticoagulated patient hinges first on:",
+      "difficulty": "advanced",
+      "stem": "A 73-year-old man on warfarin for AF develops sudden right-arm weakness and aphasia 40 minutes ago. Blood pressure is 168/90 mm Hg. INR is 2.6. Glucose is 110 mg/dL. His daughter asks for immediate clot-busting medicine because the symptoms look like a stroke. Which distinction has to come before a reperfusion or reversal choice?",
       "choices": [
         {
           "id": "a",
-          "text": "Assuming every sudden neurologic deficit is ischemic stroke and giving tPA without imaging"
+          "text": "Symptoms on an anticoagulant are always hemorrhage, so imaging can wait until vitamin K is finished"
         },
         {
           "id": "b",
-          "text": "Rapid neuroimaging and clinical assessment to distinguish ischemic stroke from ICH (or other ICH mimics) before reperfusion or anticoagulation decisions"
+          "text": "Symptoms that sound cortical are always ischemic, so thrombolysis precedes any brain imaging"
         },
         {
           "id": "c",
-          "text": "Stopping all antiplatelets forever after any TIA"
+          "text": "Brain imaging must separate hemorrhage from ischemia before thrombolysis or a reversal strategy is chosen"
         },
         {
           "id": "d",
-          "text": "Using CHA₂DS₂-VASc alone to decide CT vs MRI"
+          "text": "An INR inside 2 to 3 rules out intracranial bleeding, so reversal is never part of the pathway"
         }
       ],
-      "correctId": "b",
-      "explanation": "Sudden focal deficits on OAC require urgent imaging and stroke-team pathways. You cannot safely thrombolyse or continue/restart OAC without knowing hemorrhage versus ischemia.",
+      "correctId": "c",
+      "explanation": "Choice C is the first branch: sudden focal signs on an anticoagulant can be ischemic stroke or intracranial hemorrhage, and imaging separates them. Choice A skips imaging and assumes a bleed. Choice B skips imaging and assumes ischemia. Choice D treats a therapeutic INR as proof against hemorrhage. Source: emergency stroke assessment; anticoagulant use does not replace imaging.",
       "teachingPoints": [
-        "ICH and ischemic stroke can look similar clinically — imaging is decisive.",
-        "Post-ICH restart decisions are separate from acute triage (ENRICH-AF nuance on this site)."
+        "Imaging distinguishes hemorrhage from ischemia.",
+        "A therapeutic INR does not exclude intracranial bleeding."
       ],
       "links": [
         {
@@ -2367,8 +2566,7 @@ window.ANTICOAG_CACP = {
           "kind": "trial",
           "id": "enrich-af",
           "label": "ENRICH-AF"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "post-ich-anticoagulation",
@@ -2383,36 +2581,41 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "enrich-vs-aspire",
           "label": "Nuance: ENRICH vs ASPIRE"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        14,
+        47
+      ]
     },
     {
       "id": "i-16",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Virchow’s triad organizes venous thrombosis risk as:",
+      "difficulty": "advanced",
+      "stem": "A learner is explaining a postoperative PE. The patient had pelvic surgery yesterday (vessel injury), is still immobile (stasis), and has metastatic cancer (a hypercoagulable state). She also has a penicillin allergy and a normal chest X-ray. Which set of mechanisms is Virchow's triad in this case?",
       "choices": [
         {
           "id": "a",
-          "text": "Hypertension, hyperlipidemia, and hyperglycemia only"
+          "text": "Penicillin allergy, a normal chest X-ray, and recent surgery"
         },
         {
           "id": "b",
-          "text": "Stasis, endothelial injury, and hypercoagulability"
+          "text": "High arterial shear, platelet count, and a therapeutic INR"
         },
         {
           "id": "c",
-          "text": "Platelet count, WBC, and hematocrit exclusively"
+          "text": "Only cancer, because stasis and surgical injury do not contribute once a tumor is present"
         },
         {
           "id": "d",
-          "text": "INR, aPTT, and anti-Xa alone"
+          "text": "Stasis from immobility, endothelial injury from surgery, and hypercoagulability from cancer"
         }
       ],
-      "correctId": "b",
-      "explanation": "Classic pathophysiology frame: venous thrombi arise when flow slows, endothelium is injured, and/or blood is hypercoagulable (cancer, APS, estrogen, inherited thrombophilia, etc.).",
+      "correctId": "d",
+      "explanation": "Choice D is Virchow's triad applied to the case: stasis, endothelial injury, and hypercoagulability. Choice A substitutes an allergy and an X-ray. Choice B lists arterial and laboratory items that are not the triad. Choice C drops two of the three elements that are present. Source: Virchow's triad as the organizing frame for venous thrombosis risk.",
       "teachingPoints": [
-        "AF cardioembolism is a different anatomic story (LAA stasis) but still fibrin-rich.",
-        "Use the triad to teach risk-factor counseling, not to replace imaging."
+        "The triad is stasis, endothelial injury, and hypercoagulability.",
+        "An allergy and a chest X-ray are not elements of the triad."
       ],
       "links": [
         {
@@ -2420,67 +2623,73 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke-prevention",
           "label": "AF framework"
         }
+      ],
+      "objectiveIds": [
+        7
       ]
     },
     {
       "id": "i-17",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "In HIT (heparin-induced thrombocytopenia) recognition, which clinical pattern should raise strongest suspicion?",
+      "stem": "Four inpatients have low platelets. Which pattern most strongly suggests heparin-induced thrombocytopenia rather than ordinary immune thrombocytopenia or a dilutional drop?",
       "choices": [
         {
           "id": "a",
-          "text": "Platelet rise after starting aspirin"
+          "text": "Heparin started 8 days ago, platelets fell by half, and a new lower-extremity DVT is present"
         },
         {
           "id": "b",
-          "text": "Otherwise unexplained platelet fall (often ≥50% from peak) typically 5–10 days after heparin exposure — or sooner if recent prior heparin — with or without thrombosis"
+          "text": "Petechiae, a platelet count of 12 × 10⁹/L, no heparin exposure, and no thrombosis"
         },
         {
           "id": "c",
-          "text": "Isolated INR prolongation without platelet change"
+          "text": "Platelets fell the hour after a 2-liter saline bolus, with no heparin and no new clot"
         },
         {
           "id": "d",
-          "text": "Mild eosinophilia after DOAC start"
+          "text": "Chronic thrombocytopenia for two years, unchanged, on no anticoagulant, and no new symptoms now"
         }
       ],
-      "correctId": "b",
-      "explanation": "HIT is an immune, platelet-activating disorder timed to heparin exposure. Suspect with characteristic timing of thrombocytopenia ± thrombosis (HITT); stop heparin and use a non-heparin anticoagulant per institutional HIT pathways — do not wait for confirmatory assays alone if suspicion is high.",
+      "correctId": "a",
+      "explanation": "Choice A is the recognition pattern: a platelet fall typically 5 to 10 days after heparin plus a new thrombus. Choice B is the bleeding phenotype of immune thrombocytopenia without heparin. Choice C is dilution. Choice D is chronic and unrelated to a heparin clock. Source: clinical pattern of heparin-induced thrombocytopenia (timing plus thrombosis), as distinct from isolated immune thrombocytopenia.",
       "teachingPoints": [
-        "4Ts score structures pretest probability.",
-        "LMWH has lower HIT risk than UFH but is not risk-free."
+        "Timing after heparin plus a new clot is the high-suspicion pattern.",
+        "Petechiae without heparin point away from this syndrome."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        5
+      ]
     },
     {
       "id": "i-18",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Arterial atherothrombosis teaching correctly emphasizes that:",
+      "difficulty": "advanced",
+      "stem": "A 59-year-old man with diabetes has rest chest pain, ST-segment depression, and a thrombotic coronary stenosis. He has no AF, no DVT, and a normal creatinine clearance. A colleague suggests that an anticoagulant alone can replace antiplatelet therapy because all clots are the same. Which interpretation fits typical atherosclerotic arterial thrombosis?",
       "choices": [
         {
           "id": "a",
-          "text": "Antiplatelet therapy is central because plaques and high shear favor platelet-rich thrombi"
+          "text": "Antiplatelet therapy is irrelevant because coronary thrombi are purely venous red clots"
         },
         {
           "id": "b",
-          "text": "Warfarin alone is first-line for every ACS patient instead of antiplatelets"
+          "text": "Antiplatelet therapy is central, because the lesion is a platelet-rich thrombus on a ruptured plaque"
         },
         {
           "id": "c",
-          "text": "Venous stasis is the main driver of coronary plaque rupture"
+          "text": "The COMPASS 2.5 mg rivaroxaban regimen replaces antiplatelet therapy in acute coronary thrombosis today"
         },
         {
           "id": "d",
-          "text": "DOACs replace P2Y12 inhibitors after all stents"
+          "text": "Warfarin monotherapy is the evidence-based acute treatment of plaque-rupture thrombosis"
         }
       ],
-      "correctId": "a",
-      "explanation": "Arterial coronary/cerebrovascular events are platelet-driven under high shear; dual antiplatelet therapy dominates ACS/PCI pathways. Anticoagulants have niche roles (AF overlap, COMPASS vascular dose) but do not erase antiplatelet primacy in pure atherothrombosis.",
+      "correctId": "b",
+      "explanation": "Choice B fits high-shear platelet-rich arterial thrombus, which is why antiplatelet therapy is central in CAD and ACS. Choice A calls it a venous clot. Choice C misuses the COMPASS vascular regimen, which was not an acute ACS antiplatelet replacement and was added to aspirin in stable disease. Choice D substitutes warfarin monotherapy for acute plaque rupture. Source: arterial thrombosis pathophysiology and the distinction from COMPASS, which this site keeps separate from ACS treatment.",
       "teachingPoints": [
-        "AF+PCI is a dual-pathway problem — see AUGUSTUS-era teaching.",
-        "COMPASS vascular rivaroxaban 2.5 mg BID + aspirin is not full-dose AF OAC."
+        "Platelet-rich arterial clot is why antiplatelet therapy is central in ACS.",
+        "COMPASS is a chronic CAD or PAD regimen with aspirin, not acute plaque-rupture treatment."
       ],
       "links": [
         {
@@ -2493,36 +2702,40 @@ window.ANTICOAG_CACP = {
           "id": "compass",
           "label": "COMPASS"
         }
+      ],
+      "objectiveIds": [
+        6,
+        17
       ]
     },
     {
       "id": "i-19",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Protein C and protein S relative to warfarin initiation are important because:",
+      "stem": "On day 3 of warfarin for acute PE, started together with enoxaparin, a patient's INR is 2.3. He feels well, hemoglobin is stable, and a learner says the enoxaparin can stop because the INR is in range. Which explanation is the accurate one?",
       "choices": [
         {
           "id": "a",
-          "text": "They are not vitamin K–dependent, so warfarin never affects them"
+          "text": "The INR fully reports antithrombin activity, so a value above 2 means every factor is already suppressed"
         },
         {
           "id": "b",
-          "text": "They are vitamin K–dependent natural anticoagulants with relatively short half-lives, so early VKA effect can lower them before longer-lived procoagulant factors fully decline"
+          "text": "Factor II is the first factor to disappear, so an early INR of 2.3 proves prothrombin is already gone"
         },
         {
           "id": "c",
-          "text": "They rise faster than factor II, causing immediate bleeding only"
+          "text": "Much of this early INR is factor VII loss, and prothrombin may not yet be suppressed, so overlap continues"
         },
         {
           "id": "d",
-          "text": "They only matter for DOAC loading doses"
+          "text": "Protein C rises in the first days, so the patient is protected against extension as soon as the INR exceeds 2"
         }
       ],
-      "correctId": "b",
-      "explanation": "Short-half-life vitamin K–dependent anticoagulants (C/S) can fall early during VKA start, contributing to a transient prothrombotic window — a rationale for overlapping parenteral anticoagulation in acute VTE initiation.",
+      "correctId": "c",
+      "explanation": "Choice C is the teaching point. Factor VII's short half-life moves the INR early, while prothrombin declines over days. The CHEST VTE guideline describes continuing a parenteral anticoagulant with warfarin for at least 5 days and until the INR is at least 2.0 for 24 hours. Choice A misstates what the INR measures. Choice B reverses the order of factor loss. Choice D reverses the early protein C change. Half-lives are approximate textbook values.",
       "teachingPoints": [
-        "Factor II’s long half-life means full anticoagulation lags early INR rises driven partly by factor VII.",
-        "Warfarin-induced skin necrosis risk is linked to this physiology in susceptible patients."
+        "Do not read a day-3 INR as full prothrombin suppression.",
+        "CHEST overlap is at least 5 days and an INR of at least 2.0 for 24 hours."
       ],
       "links": [
         {
@@ -2530,36 +2743,40 @@ window.ANTICOAG_CACP = {
           "id": "acute-vte",
           "label": "Acute VTE pathway"
         }
+      ],
+      "objectiveIds": [
+        2,
+        34
       ]
     },
     {
       "id": "i-20",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Extended anticoagulation after VTE is more often considered when:",
+      "difficulty": "advanced",
+      "stem": "Two people finish an initial VTE course and feel well. Patient A is a 44-year-old man with a first proximal DVT that started 10 days after major hip surgery; the surgical recovery is complete and bleeding risk is ordinary. Patient B is a 50-year-old man with a first unprovoked proximal DVT, no bleeding history, and normal kidney function. Which pattern best supports considering extended anticoagulation?",
       "choices": [
         {
           "id": "a",
-          "text": "The index event was clearly major surgery–provoked and the provocation has fully resolved with no ongoing risk factors"
+          "text": "Patient A, because every clot after surgery is treated indefinitely once the incision has healed"
         },
         {
           "id": "b",
-          "text": "The event was unprovoked, or provoked by persistent/recurrent risk (e.g., active cancer, ongoing estrogen if continued, strong thrombophilia in context) — balancing bleed risk"
+          "text": "Both patients equally, because the initial clot site, not the provoking factor, sets the duration"
         },
         {
           "id": "c",
-          "text": "Every distal DVT regardless of symptoms"
+          "text": "Neither patient, because feeling well at three months means the recurrence risk has ended"
         },
         {
           "id": "d",
-          "text": "The patient prefers lifelong aspirin over any anticoagulant discussion"
+          "text": "Patient B, because an unprovoked proximal event is the pattern for which extended therapy is considered"
         }
       ],
-      "correctId": "b",
-      "explanation": "Extension decisions weigh recurrence risk (unprovoked or persistent risks) against bleeding. Transient major provoking factors often allow stop after a finite course once resolved.",
+      "correctId": "d",
+      "explanation": "Choice D matches duration physiology and the CHEST VTE guideline: a VTE provoked by major transient surgery is usually a finite course (about 3 months) once the provoking factor is gone, whereas unprovoked proximal VTE is the setting in which extended anticoagulation is considered if bleeding risk is not high. Choice A extends the surgical clot. Choice B ignores the provoking factor. Choice C treats symptom resolution as the end of recurrence risk. Source: 2021 CHEST VTE guideline duration framework.",
       "teachingPoints": [
-        "Shared decision and bleed-risk mitigation matter as much as the label 'unprovoked.'",
-        "Low-dose extended DOAC options appear in EINSTEIN CHOICE / AMPLIFY-EXT teaching on this site."
+        "Major surgery as a transient provoking factor points to a finite course.",
+        "Unprovoked proximal VTE is the extended-therapy discussion when bleeding risk is acceptable."
       ],
       "links": [
         {
@@ -2572,36 +2789,40 @@ window.ANTICOAG_CACP = {
           "id": "einstein-choice",
           "label": "EINSTEIN CHOICE"
         }
+      ],
+      "objectiveIds": [
+        7,
+        38
       ]
     },
     {
       "id": "i-21",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Left atrial appendage thrombus in AF is favored by which pathophysiology?",
+      "difficulty": "advanced",
+      "stem": "A 70-year-old woman with AF has a CHA₂DS₂-VASc score of 5 from age, hypertension, and a prior stroke. She has had no palpitations for a month and assumes stroke risk has ended. Echocardiography shows a dilated left atrium and dense spontaneous contrast in the appendage, with a normal aortic valve and no DVT. Which pathophysiology still favors thrombus?",
       "choices": [
         {
           "id": "a",
-          "text": "High-shear plaque rupture inside the LAA as the sole mechanism"
+          "text": "Stasis in the left atrial appendage continues in AF even when palpitations are absent"
         },
         {
           "id": "b",
-          "text": "Stasis within the appendage in the setting of AF, promoting fibrin-rich thrombus that can embolize"
+          "text": "High shear on a normal aortic valve is the main source of AF thrombus"
         },
         {
           "id": "c",
-          "text": "Isolated factor XII deficiency"
+          "text": "Calf-vein stasis is required before an AF-related cardioembolic stroke can occur"
         },
         {
           "id": "d",
-          "text": "Vitamin K excess from leafy greens"
+          "text": "A month without symptoms remodels the appendage so that OAC is no longer mechanistically relevant"
         }
       ],
-      "correctId": "b",
-      "explanation": "AF impairs coordinated atrial contraction; LAA stasis promotes cardioembolic, fibrin-rich thrombi — the rationale for OAC rather than aspirin alone when stroke risk warrants anticoagulation.",
+      "correctId": "a",
+      "explanation": "Choice A is the mechanism: AF causes appendage stasis regardless of whether the patient feels palpitations, and the echo shows that stasis. The stroke score remains high. Choice B relocates the thrombus to a normal aortic valve under high shear. Choice C requires DVT for a cardioembolic stroke. Choice D treats a symptom-free month as biologic resolution. Source: AF appendage-stasis pathophysiology on this site's stroke framework.",
       "teachingPoints": [
-        "LAAO devices are an alternative pathway in selected patients — see site framework.",
-        "Rhythm control does not automatically remove OAC indication based on CHA₂DS₂-VASc."
+        "Symptom-free intervals do not remove appendage stasis.",
+        "The stroke score still reflects the prior stroke, age, and hypertension."
       ],
       "links": [
         {
@@ -2614,36 +2835,39 @@ window.ANTICOAG_CACP = {
           "id": "laao-vs-oac",
           "label": "LAAO vs OAC"
         }
+      ],
+      "objectiveIds": [
+        13
       ]
     },
     {
       "id": "i-22",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Cancer-associated VTE pathophysiology teaching should include that:",
+      "stem": "A 60-year-old man with gastric cancer has a mediastinal mass compressing the superior vena cava, a new central catheter, and started cisplatin this week. He is spending most of the day in a chair. Hemoglobin is 11 g/dL. Which combination best explains his elevated VTE risk?",
       "choices": [
         {
           "id": "a",
-          "text": "Only pancreatic cancer causes VTE; other cancers are irrelevant"
+          "text": "Only the hemoglobin value, because anemia is the coagulant in solid tumors"
         },
         {
           "id": "b",
-          "text": "Tumor biology, immobility, surgery, catheters, and some systemic therapies combine to raise VTE risk — agent choice also weighs bleed risk (e.g., GI luminal disease)"
+          "text": "Tumor-related procoagulant activity, venous compression, the catheter, and treatment-related stasis"
         },
         {
           "id": "c",
-          "text": "All CAT must be treated with aspirin monotherapy"
+          "text": "Only inherited factor V Leiden, which must be present before a cancer patient can form a clot"
         },
         {
           "id": "d",
-          "text": "DOACs are universally safer than LMWH in every GI cancer without exception"
+          "text": "Only arterial plaque, because cancer raises coronary risk and not venous risk"
         }
       ],
       "correctId": "b",
-      "explanation": "CAT risk is multifactorial. DOACs are options for many patients, but GI/GU luminal cancers and other bleed risks may favor LMWH — see cancer-VTE pathway and trial cards (CARAVAGGIO, Hokusai VTE Cancer, CATCH, API-CAT).",
+      "explanation": "Choice B stacks the real mechanisms: cancer-cell procoagulants such as tissue factor, mechanical venous compression, catheter-related injury, and immobility. Choice A uses anemia as the cause. Choice C requires a hereditary mutation. Choice D converts the problem to arterial plaque. Source: multifactorial pathophysiology of cancer-associated VTE.",
       "teachingPoints": [
-        "Thrombocytopenia and drug–drug interactions with oral anticancer agents also reshape choices.",
-        "Do not invent CAT incidence percentages on exams — reason qualitatively."
+        "Tissue factor, stasis, catheters, and compression can operate at once.",
+        "A normal thrombophilia test would not clear this risk."
       ],
       "links": [
         {
@@ -2656,36 +2880,40 @@ window.ANTICOAG_CACP = {
           "id": "cancer-vte",
           "label": "Cancer VTE framework"
         }
+      ],
+      "objectiveIds": [
+        7,
+        18
       ]
     },
     {
       "id": "i-23",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Deep vein thrombosis that embolizes to the pulmonary arteries produces PE. Which statement is most accurate?",
+      "difficulty": "advanced",
+      "stem": "A 48-year-old woman has a three-day history of unilateral calf swelling after a long flight. She then has abrupt dyspnea and pleuritic pain, with normal blood pressure and a clear chest X-ray. She has no coronary history. Which statement best connects the leg findings to the chest symptoms?",
       "choices": [
         {
           "id": "a",
-          "text": "All PE originates from upper-extremity superficial veins only"
+          "text": "The chest pain is in-situ pulmonary arterial plaque rupture, unrelated to the leg"
         },
         {
           "id": "b",
-          "text": "Lower-extremity proximal DVT is a common PE source; PE severity then depends on clot burden and right-ventricular response"
+          "text": "Calf swelling after travel is arterial embolism from the foot to the lung"
         },
         {
           "id": "c",
-          "text": "PE never occurs without visible leg swelling"
+          "text": "Lower-extremity DVT can embolize to the pulmonary arteries and produce PE"
         },
         {
           "id": "d",
-          "text": "Wells score replaces CT pulmonary angiography in unstable patients"
+          "text": "PE forms only in the arms, so a calf clot cannot explain dyspnea"
         }
       ],
-      "correctId": "b",
-      "explanation": "Proximal lower-extremity (and pelvic) veins are classic PE sources. After diagnosis, severity tools (PESI, RV imaging/biomarkers) guide intensity of care — distinct from pretest Wells use.",
+      "correctId": "c",
+      "explanation": "Choice C is the embolic link: lower-extremity DVT is the usual source of PE. Choice A invents in-situ pulmonary arterial plaque rupture and ignores the acute leg clot. Choice B reverses arterial and venous directions. Choice D denies lower-extremity embolization. Source: venous thromboembolism as one disease in which DVT embolizes to the lung.",
       "teachingPoints": [
-        "Hemodynamic instability overrides outpatient pathways.",
-        "Upper-extremity DVT can embolize but is a smaller share of PE overall."
+        "Most PE events arise from lower-extremity venous thrombus.",
+        "A normal blood pressure does not mean the embolus is absent."
       ],
       "links": [
         {
@@ -2697,8 +2925,7 @@ window.ANTICOAG_CACP = {
           "kind": "framework",
           "id": "intermediate-pe-cdt",
           "label": "Intermediate PE framework"
-        }
-      ,
+        },
         {
           "kind": "case",
           "id": "intermediate-pe-pert",
@@ -2708,171 +2935,191 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "hi-peitho-enrichment",
           "label": "Nuance: HI-PEITHO enrichment"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        9,
+        11
+      ]
     },
     {
       "id": "i-24",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Antiphospholipid syndrome (APS) arterial events differ from typical venous VTE teaching in that:",
+      "stem": "Patient 1 had a calf DVT two weeks after arthroscopy and has negative antiphospholipid tests. Patient 2 has had an unprovoked DVT and an arterial stroke, with lupus anticoagulant, IgG anticardiolipin, and IgG anti-β2-glycoprotein I persisting on repeat tests. Both feel well on an initial anticoagulant. Which comparison is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Arterial APS events are always treated with DOAC monotherapy as first-line worldwide"
+          "text": "The two histories are the same phenotype, so both stay on a standard VTE DOAC plan indefinitely today"
         },
         {
           "id": "b",
-          "text": "High-risk / triple-positive APS often involves arterial as well as venous thrombosis and is a warfarin niche where DOACs have failed in trials for many high-risk phenotypes"
+          "text": "Only patient 1 needs a VKA, because surgery raises the antiphospholipid risk"
         },
         {
           "id": "c",
-          "text": "APS only causes superficial thrombophlebitis"
+          "text": "Patient 2 can use the COMPASS low dose, because triple-positive disease is a stable-CAD regimen"
         },
         {
           "id": "d",
-          "text": "INR targets are irrelevant once lupus anticoagulant is positive"
+          "text": "Patient 2 has a high-risk antiphospholipid phenotype that is not managed as a routine provoked DVT"
         }
       ],
-      "correctId": "b",
-      "explanation": "APS can cause arterial and venous thrombosis. Triple-positive / high-risk APS is a VKA preference niche on this site; DOACs are generally avoided in that phenotype based on trial signals (e.g., TRAPS-era teaching).",
+      "correctId": "d",
+      "explanation": "Choice D separates a surgery-provoked VTE with negative antibodies from triple-positive antiphospholipid syndrome with both venous and arterial events. TRAPS compared rivaroxaban with warfarin in the triple-positive population and stopped early for excess events on rivaroxaban. Choice A collapses the phenotypes. Choice B assigns the VKA niche to the surgical clot. Choice C imports COMPASS. Source: TRAPS and this site's high-risk antiphospholipid pathway.",
       "teachingPoints": [
-        "Confirm persistent antibodies per diagnostic criteria — do not label APS on a single test.",
-        "See APS pathway."
+        "Provoked VTE with negative antibodies is not triple-positive disease.",
+        "Arterial plus venous events and persistent triple positivity change the agent discussion."
       ],
       "links": [
         {
           "kind": "pathway",
           "id": "aps",
           "label": "APS pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "aps-triple-positive-vka",
           "label": "Framework: APS triple-positive VKA"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        18,
+        20
+      ]
     },
     {
       "id": "i-25",
       "domainId": "I",
-      "difficulty": "core",
-      "stem": "Secondary hemostasis (coagulation cascade) ultimately leads to:",
+      "difficulty": "advanced",
+      "stem": "A teenager with severe hemophilia A bleeds into a joint after a minor twist. Platelets are normal and the first platelet plug can form. The bleeding continues because fibrin stabilization fails. Which process is the missing part of hemostasis?",
       "choices": [
         {
           "id": "a",
-          "text": "Only platelet adhesion without fibrin"
+          "text": "Secondary hemostasis, in which thrombin generates fibrin that stabilizes the platelet plug"
         },
         {
           "id": "b",
-          "text": "Thrombin generation and conversion of fibrinogen to fibrin that stabilizes the platelet plug"
+          "text": "Only vasoconstriction, because fibrin is not part of joint hemostasis"
         },
         {
           "id": "c",
-          "text": "Exclusive dependence on vitamin C"
+          "text": "Platelet adhesion to collagen, which is absent whenever factor VIII is low"
         },
         {
           "id": "d",
-          "text": "Irreversible COX-1 blockade as the sole pathway"
+          "text": "Warfarin-sensitive protein C activation, which is the main clot stabilizer in hemophilia"
         }
       ],
-      "correctId": "b",
-      "explanation": "Primary hemostasis (platelets) forms the plug; secondary hemostasis generates thrombin and fibrin. Anticoagulants target coagulation proteases; antiplatelets target platelet pathways — complementary teaching for mixed arterial/venous disease.",
+      "correctId": "a",
+      "explanation": "Choice A names secondary hemostasis: thrombin converts fibrinogen to fibrin and stabilizes the initial platelet plug. Hemophilia A is a factor VIII defect in that thrombin burst, with a normal platelet count. Choice B drops fibrin. Choice C confuses a platelet step with a coagulation-factor defect. Choice D assigns clot stability to protein C, which is an anticoagulant. Source: primary versus secondary hemostasis.",
       "teachingPoints": [
-        "TF–VIIa initiates the extrinsic pathway in vivo.",
-        "Common pathway factors Xa and IIa (thrombin) are major drug targets."
+        "Primary hemostasis is the platelet plug. Secondary hemostasis is fibrin.",
+        "A normal platelet count does not replace factor VIII."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        1
+      ]
     },
     {
       "id": "i-26",
       "domainId": "I",
       "difficulty": "advanced",
-      "stem": "Obesity-related VTE risk teaching for anticoagulation clinics should emphasize:",
+      "stem": "A 55-year-old man with acute proximal DVT weighs 138 kg. Height is 178 cm. Creatinine clearance using actual body weight is above 60 mL/min. He takes no interacting anticonvulsant, has no mechanical valve, and is not pregnant. A colleague proposes doubling whatever oral dose the label lists, solely because of the weight. Which assessment is sound?",
       "choices": [
         {
           "id": "a",
-          "text": "Fixed invented BMI cutoffs that always double DOAC dose"
+          "text": "Every DOAC is contraindicated once weight exceeds 100 kg, so no labeled regimen can be discussed"
         },
         {
           "id": "b",
-          "text": "Obesity can increase VTE risk and may complicate dosing/PK assumptions — use product labeling, institutional guidance, and specialty input rather than invented weight cutoffs"
+          "text": "Extreme weight is a reason for a careful label and specialty review, not for inventing a double dose"
         },
         {
           "id": "c",
-          "text": "Obese patients never need prophylaxis after surgery"
+          "text": "The labeled dose is doubled in all adults above 120 kg because volume of distribution always doubles"
         },
         {
           "id": "d",
-          "text": "Only arterial disease occurs in obesity; VTE risk is unchanged"
+          "text": "Warfarin is mandatory at this weight even when no VKA-only condition is present"
         }
       ],
       "correctId": "b",
-      "explanation": "Obesity is a VTE risk factor and a dosing caution zone (especially extremes of weight). Avoid fabricating BMI thresholds or AUC numbers; defer to labels and local protocols.",
+      "explanation": "Choice B matches cautious obesity teaching: very high body weight is a pharmacokinetics concern and a specialty check, and it is not an instruction to invent an unlisted double dose. The 2021 ISTH SSC guidance on DOACs in obesity suggests that standard doses of rivaroxaban or apixaban are among appropriate options for VTE treatment regardless of high body mass index and weight, with fewer supporting data for apixaban; a standard dose is the labeled dose, not a doubled one. Choice A sets a 100 kg ban that the item does not support. Choice C invents a doubling rule. Choice D forces warfarin without a VKA niche. No off-label milligram amount is endorsed here.",
       "teachingPoints": [
-        "Bariatric surgery can alter oral absorption — plan monitoring/agent choice carefully.",
-        "Document weight and renal function together when selecting regimens."
+        "Do not invent a double dose that the label does not list.",
+        "Very high weight still deserves a deliberate agent review."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        7,
+        22
+      ]
     },
     {
       "id": "ii-19",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Patient self-testing (PST) / patient self-management of INR is most appropriate when:",
+      "difficulty": "advanced",
+      "stem": "A 71-year-old man on warfarin for AF wants home INR testing before a winter in another state. On a supervised attempt he cannot place the strip correctly, and he cannot explain whom he would call for an unexpected result. His daughter can. Vision is adequate. Which feature set actually supports a home program?",
       "choices": [
         {
           "id": "a",
-          "text": "Any patient who owns a smartphone, without training"
+          "text": "Owning a meter, even if he cannot obtain a sample or report an unexpected result"
         },
         {
           "id": "b",
-          "text": "Selected patients who can demonstrate device competence, adhere to reporting/quality plans, and have clinic oversight policies in place"
+          "text": "A normal hemoglobin, which by itself certifies home self-testing competence"
         },
         {
           "id": "c",
-          "text": "Only patients with mechanical valves are banned from PST by definition"
+          "text": "Demonstrated technique plus a report path to a clinician who manages out-of-range values"
         },
         {
           "id": "d",
-          "text": "PST replaces the need for any target INR range"
+          "text": "A one-time class, after which he changes the weekly dose whenever the meter beeps in clinic"
         }
       ],
-      "correctId": "b",
-      "explanation": "PST can improve convenience and sometimes TTR in capable patients, but it requires training, QC mindset, and a covering anticoagulation service — not an unsupervised gadget.",
+      "correctId": "c",
+      "explanation": "Choice C is the program: competence with the sample, a reporting path, and a named clinician for dose changes. Choice A treats purchase as competence. Choice B uses a laboratory value as a skills test. Choice D turns an untrained user into an unsupervised prescriber. Home testing and home dose self-management are different privileges. Source: anticoagulation-clinic operations for patient self-testing.",
       "teachingPoints": [
-        "Know local coverage/billing and device correlation policies.",
-        "Unreliable reporters should stay on clinic-based testing."
+        "Technique and a closed reporting loop are the entry criteria.",
+        "A meter shipment is not a dosing privilege."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        44,
+        45
+      ]
     },
     {
       "id": "ii-20",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "For breastfeeding patients needing anticoagulation, usual practice teaching favors:",
+      "difficulty": "advanced",
+      "stem": "A 32-year-old woman is 3 weeks postpartum and needs ongoing anticoagulation for a DVT diagnosed in the third trimester. She is exclusively breastfeeding. Pregnancy itself has ended. She asks whether the drug rules are the same as they were at 20 weeks. Which comparison is the accurate one?",
       "choices": [
         {
           "id": "a",
-          "text": "Any DOAC freely because none enter milk"
+          "text": "Warfarin remains forbidden, because fetal risk and breast-milk exposure are the same problem"
         },
         {
           "id": "b",
-          "text": "Agents with established lactation safety profiles such as warfarin or LMWH in usual counseling — avoid DOACs unless specialist guidance says otherwise"
+          "text": "Every DOAC has the same established infant-safety record as warfarin during lactation"
         },
         {
           "id": "c",
-          "text": "High-dose aspirin as the only option"
+          "text": "Breastfeeding ends the indication, so anticoagulation stops on the day milk comes in"
         },
         {
           "id": "d",
-          "text": "Stopping all anticoagulation for 6 months postpartum regardless of indication"
+          "text": "Warfarin and LMWH have established lactation roles, while a DOAC is not the breastfeeding default"
         }
       ],
-      "correctId": "b",
-      "explanation": "Warfarin and LMWH are traditional lactation-compatible choices in teaching algorithms; DOACs generally lack adequate breastfeeding safety data and are typically avoided.",
+      "correctId": "d",
+      "explanation": "Choice D separates pregnancy from lactation. Warfarin's fetal risk does not mean a lactation ban; warfarin and LMWH are the agents with established breastfeeding use. DOAC labeling does not support routine use during breastfeeding. Choice A equates placenta and milk. Choice B equates DOAC infant data with warfarin. Choice C drops the maternal indication. Source: product labeling distinction between pregnancy and lactation, consistent with this site's note that breastfeeding is not a DOAC pathway.",
       "teachingPoints": [
-        "Pregnancy itself usually favors LMWH over warfarin (embryopathy/fetopathy concerns) and over DOACs.",
-        "Coordinate with obstetrics/hematology for peripartum plans."
+        "Placental transfer and breast-milk exposure are different questions.",
+        "The postpartum indication can continue while the drug class changes."
       ],
       "links": [
         {
@@ -2880,67 +3127,75 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke",
           "label": "AF pathway (special populations)"
         }
+      ],
+      "objectiveIds": [
+        25,
+        26,
+        68
       ]
     },
     {
       "id": "ii-21",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "Pediatric anticoagulation (high-level exam teaching) is best summarized as:",
+      "stem": "A 7-year-old child with acute VTE cannot be assumed to use a parent's AF dose. Weight-based references exist for some anticoagulants, and the child spits out tablets. The parent asks to split an adult apixaban tablet 'the way the label does for grandma.' Which principle guides the choice?",
       "choices": [
         {
           "id": "a",
-          "text": "Adult DOAC doses scaled only by age in years without weight or specialist protocols"
+          "text": "Use a pediatric reference and a formulation the child can take, not a relative's AF dose"
         },
         {
           "id": "b",
-          "text": "Weight-based regimens, age-specific physiology, and pediatric hematology protocols dominate — do not extrapolate adult AF DOAC schedules casually"
+          "text": "Adult NVAF dose-reduction criteria, age, weight, and serum creatinine, are the pediatric VTE rule"
         },
         {
           "id": "c",
-          "text": "Children never need anticoagulation"
+          "text": "Doubling the adult dose is appropriate because children clear every anticoagulant faster"
         },
         {
           "id": "d",
-          "text": "Only mechanical valves occur in pediatrics; VTE never does"
+          "text": "Aspirin replaces anticoagulation for pediatric VTE because injections are inconvenient for a child"
         }
       ],
-      "correctId": "b",
-      "explanation": "Pediatric VTE and cardiac indications require specialist pathways, weight-based dosing, and formulations suited to children. Adult trial doses are not plug-and-play.",
+      "correctId": "a",
+      "explanation": "Choice A keeps the decision in pediatric dosing references and an appropriate formulation, coordinated with a pediatric clinician. Adult AF criteria are not a child's VTE rule. Choice B transplants the apixaban 2-of-3 AF rule. Choice C invents a double dose. Choice D substitutes aspirin. U.S. labeling now has pediatric VTE dosing by weight (by age and weight for dabigatran pellets) with child-appropriate formulations for apixaban (tablets for oral suspension and sprinkle capsules), rivaroxaban (oral suspension, studied in EINSTEIN Junior), and dabigatran (oral pellets, studied in DIVERSITY); none uses a split adult AF tablet. No milligram amount is stated.",
       "teachingPoints": [
-        "VKAs still used in some pediatric cardiac niches with careful INR systems.",
-        "When in doubt, escalate to pediatric anticoagulation expertise."
+        "Adult AF doses are not a pediatric VTE schedule.",
+        "Formulation and a pediatric reference come before any tablet is split."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        26
+      ]
     },
     {
       "id": "ii-22",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Dental procedures and anticoagulation: risk-stratification teaching favors:",
+      "difficulty": "advanced",
+      "stem": "A 66-year-old man on warfarin for NVAF, INR 2.4 yesterday, needs extraction of one molar. The dentist can use local hemostatic measures and does not require a hold. There is no mechanical valve and no recent VTE. The patient expects heparin injections for five days around the visit. Which assessment fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Automatically stopping all OAC 7 days before any cleaning"
+          "text": "BRIDGE requires a heparin bridge for every dental extraction in a patient with AF"
         },
         {
           "id": "b",
-          "text": "Most low-bleed-risk dental procedures can proceed without interrupting therapeutic anticoagulation, using local hemostatic measures; higher-risk oral surgery needs individualized plans"
+          "text": "Minor dental work can stay on warfarin with local hemostasis, without routine bridging"
         },
         {
           "id": "c",
-          "text": "Bridging with enoxaparin for every filling in AF"
+          "text": "The INR must be driven below 1.2 with vitamin K before any dental instrument is used"
         },
         {
           "id": "d",
-          "text": "Switching every patient to Andexxa peri-procedurally"
+          "text": "Warfarin is stopped for 7 days and a DOAC is substituted for that one dental visit only"
         }
       ],
       "correctId": "b",
-      "explanation": "Many dental procedures are low bleed risk; uninterrupted OAC plus local measures is often preferred over reflexive holds that add thrombotic risk. Complex extractions need coordinated plans — not universal bridging.",
+      "explanation": "Choice B matches the 2022 ACCP (CHEST) perioperative guideline, which suggests continuing a VKA with a prohemostatic agent for minor dental procedures, and a heparin bridge is not routine. BRIDGE, in a broader elective-procedure AF population, likewise does not support routine bridging. Choice A misreads BRIDGE. Choice C aims for a normal INR with vitamin K for a minor extraction. Choice D invents a one-visit DOAC. The stem states that the dentist can provide local hemostasis.",
       "teachingPoints": [
-        "BRIDGE cautioned against routine bridging in typical NVAF.",
-        "Communicate the exact procedure bleed risk to the anticoagulation clinic."
+        "Ask whether interruption is required at all.",
+        "A molar extraction with local hemostasis is not an automatic bridge."
       ],
       "links": [
         {
@@ -2948,36 +3203,39 @@ window.ANTICOAG_CACP = {
           "id": "bridge",
           "label": "BRIDGE"
         }
+      ],
+      "objectiveIds": [
+        43
       ]
     },
     {
       "id": "ii-23",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "Peri-procedural bridging risk stratification should primarily weigh:",
+      "stem": "A clinician is deciding on a heparin bridge for two elective holds. Patient A has typical NVAF, no prior stroke, and a colonoscopy. Patient B has a mechanical mitral valve and a major abdominal operation. Neither is bleeding. Which competing risks decide whether bridging fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Only the dentist’s preference for a dry field"
+          "text": "Only the procedure's convenience, because thrombotic risk is the same for both of these patients"
         },
         {
           "id": "b",
-          "text": "Thrombotic risk of holding anticoagulation (valve type/position, recent VTE/stroke, CHADS-type risk) versus bleed risk of the procedure and of bridging itself"
+          "text": "Only the patient's preference for injections, because the bleed risk of the bridge itself can be ignored"
         },
         {
           "id": "c",
-          "text": "Always bridging because bridging never causes bleeding"
+          "text": "Thrombotic risk of the hold, bleed risk of the procedure, and bleed risk of the bridge"
         },
         {
           "id": "d",
-          "text": "HAS-BLED alone without considering the procedure"
+          "text": "A normal hemoglobin, which permits a heparin bridge for every warfarin interruption"
         }
       ],
-      "correctId": "b",
-      "explanation": "Bridging is not default. High thrombotic-risk phenotypes (e.g., mechanical mitral valves, very recent VTE) may still need careful parenteral cover; many NVAF patients do not benefit from routine bridging (BRIDGE).",
+      "correctId": "c",
+      "explanation": "Choice C is the three-way balance. Patient A is the BRIDGE population: arterial thromboembolism was similar and major bleeding was higher with bridging (1.3% versus 3.2% on this site), so routine bridging does not fit. Patient B's mechanical mitral valve was not that population, and interruption planning is risk-stratified with the valve team rather than copied from BRIDGE. Choice A equates the patients. Choice B ignores bridge bleeding. Choice D uses hemoglobin as a bridge permit. Source: BRIDGE and this site's contrast with mechanical valves.",
       "teachingPoints": [
-        "Procedure bleed risk categories guide hold duration more than ritual.",
-        "Document the plan in transitions of care."
+        "BRIDGE's no-routine-bridge finding is an AF finding.",
+        "A mechanical mitral valve is a higher thrombotic-risk hold."
       ],
       "links": [
         {
@@ -2989,115 +3247,126 @@ window.ANTICOAG_CACP = {
           "kind": "pathway",
           "id": "mechanical-valve",
           "label": "Mechanical valve pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "mechanical-valve-vka",
           "label": "Framework: Mechanical valve VKA"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        43
+      ]
     },
     {
       "id": "ii-24",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Chromogenic factor X activity is sometimes used in warfarin-treated patients when:",
+      "difficulty": "advanced",
+      "stem": "A 42-year-old woman with antiphospholipid syndrome and a lupus anticoagulant is on warfarin after an arterial stroke. The INR has been erratic, and the laboratory warns that the lupus anticoagulant may be prolonging the prothrombin time. Chromogenic factor X activity is available. When is that assay the useful one?",
       "choices": [
         {
           "id": "a",
-          "text": "Replacing all INRs in every outpatient forever"
+          "text": "Whenever a DOAC dose is being chosen, because chromogenic factor X sets the apixaban milligrams"
         },
         {
           "id": "b",
-          "text": "INR may be unreliable (e.g., certain lupus anticoagulant / baseline PT effects) and a complementary VKA-effect measure is needed per lab protocols"
+          "text": "Only during heparin therapy, because the assay is an anti-Xa test calibrated for enoxaparin"
         },
         {
           "id": "c",
-          "text": "Monitoring apixaban peaks exclusively"
+          "text": "Never, because a lupus anticoagulant shortens the INR and cannot disturb warfarin monitoring"
         },
         {
           "id": "d",
-          "text": "Diagnosing HIT"
+          "text": "When a lupus anticoagulant makes the INR unreliable, factor X activity can reflect warfarin"
         }
       ],
-      "correctId": "b",
-      "explanation": "Chromogenic factor X can help assess VKA effect when INR interpretation is confounded. It is not a DOAC assay and not a HIT test.",
+      "correctId": "d",
+      "explanation": "Choice D is the niche: a lupus anticoagulant can prolong the prothrombin time and make the INR a poor guide to warfarin intensity, and a chromogenic factor X assay measures factor X activity without depending on that clot-based interference. Choice A uses it as a DOAC dosing calculator. Choice B confuses it with an LMWH anti-Xa level. Choice C says the inhibitor shortens the INR. Source: laboratory practice for warfarin monitoring in lupus anticoagulant–positive patients. No target activity percent is stated.",
       "teachingPoints": [
-        "Know your lab’s reference ranges and when to order.",
-        "Still coordinate with specialty/lab medicine for APS on warfarin."
+        "The INR can be the wrong yardstick in a lupus anticoagulant.",
+        "Chromogenic factor X is not a DOAC dose table."
       ],
       "links": [
         {
           "kind": "pathway",
           "id": "aps",
           "label": "APS pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "aps-triple-positive-vka",
           "label": "Framework: APS triple-positive VKA"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        28,
+        29
+      ]
     },
     {
       "id": "ii-25",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "POC INR versus laboratory INR teaching should include that:",
+      "difficulty": "advanced",
+      "stem": "A point-of-care INR is 4.8. A venous INR drawn an hour later is 2.6 and matches the last three weekly results. The operator then notices that morning's quality control was skipped. The patient has no bleeding and is due for a warfarin dose. Which understanding of the disagreement is sound?",
       "choices": [
         {
           "id": "a",
-          "text": "Results are always identical to three decimal places"
+          "text": "Do not dose from the unchecked fingerstick; use the venous INR that fits the recent trend"
         },
         {
           "id": "b",
-          "text": "POC and lab INR can disagree — clinics need correlation policies, especially at extremes of INR or when clinical decisions are high-stakes"
+          "text": "The higher fingerstick is always right, because capillary blood is more sensitive than venous plasma"
         },
         {
           "id": "c",
-          "text": "Lab INR is obsolete and must never be used"
+          "text": "Average the two INRs and give vitamin K for a blended INR of about 3.7 with no bleeding"
         },
         {
           "id": "d",
-          "text": "Only arterial blood can be used for INR"
+          "text": "A skipped quality control makes the same-day venous laboratory INR invalid as well"
         }
       ],
-      "correctId": "b",
-      "explanation": "Method differences matter. Verify unexpected or critical POC values with a laboratory INR per policy before major dose changes or procedures.",
+      "correctId": "a",
+      "explanation": "Choice A is the operations rule: a point-of-care result without required quality control is not used for a dose, especially when it disagrees with a same-day venous INR and the recent trend. Choice B privileges the fingerstick. Choice C averages in a failed result and adds vitamin K for a value that is not a major-bleed INR. Choice D throws out the venous assay because a meter check was missed. Source: point-of-care INR quality practice.",
       "teachingPoints": [
-        "Hematocrit extremes and some interferences can affect POC devices.",
-        "Train staff on when to repeat or send out."
+        "Failed or skipped quality control removes the meter result from the dosing decision.",
+        "A venous INR that matches the trend is the result to document."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        27,
+        29
+      ]
     },
     {
       "id": "ii-26",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "AF + PCI dual-pathway duration concepts (AUGUSTUS-era) emphasize:",
+      "stem": "A 70-year-old man with AF and a drug-eluting stent placed 3 weeks ago is still taking apixaban, clopidogrel, and aspirin. He has had no ischemic event and no bleeding. Stent placement was uncomplicated. Kidney function is stable. Which de-escalation fits the balance of stent and bleeding risk?",
       "choices": [
         {
           "id": "a",
-          "text": "Indefinite triple therapy (OAC+DAPT) for all patients to minimize stent thrombosis at any bleed cost"
+          "text": "Continue all three drugs until month 12, because any earlier aspirin stop causes stent thrombosis"
         },
         {
           "id": "b",
-          "text": "Default early drop of aspirin after a short peri-PCI period, continuing OAC + P2Y12, then later de-escalation — balancing ischemic vs bleed risk"
+          "text": "Stop aspirin and continue the labeled DOAC plus clopidogrel, rather than stopping the anticoagulant"
         },
         {
           "id": "c",
-          "text": "Stopping OAC for 12 months whenever a stent is placed"
+          "text": "Stop apixaban and clopidogrel and continue aspirin alone, because the stent is now 'stable'"
         },
         {
           "id": "d",
-          "text": "Replacing P2Y12 inhibitors with vitamin K foods"
+          "text": "Replace the regimen with rivaroxaban 2.5 mg twice daily plus aspirin"
         }
       ],
       "correctId": "b",
-      "explanation": "Modern AF+PCI teaching shortens triple therapy, favors OAC+P2Y12 as the dual pathway backbone, and individualizes durations. Exact day counts follow guidelines/labels — do not invent trial HRs here.",
+      "explanation": "Choice B is the AUGUSTUS-era de-escalation: aspirin is limited to a brief peri-PCI window, and the oral anticoagulant plus a P2Y12 inhibitor continues. At 3 weeks an uncomplicated stent is past that brief window for most such patients. Choice A locks in a year of triple therapy. Choice C drops the AF drug. Choice D substitutes a vascular dose. Source: AUGUSTUS and this site's AF-plus-PCI pathway.",
       "teachingPoints": [
-        "Choose OAC dose appropriate for AF stroke prevention, not COMPASS vascular dose.",
-        "See AF+PCI pathway and AUGUSTUS."
+        "Aspirin is the usual drug to drop. The anticoagulant stays.",
+        "Week 3 is not a reason to restart a year of triple therapy."
       ],
       "links": [
         {
@@ -3114,8 +3383,7 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "af-pci-week2",
           "label": "AF+PCI case"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "af-pci-dual-pathway",
@@ -3125,36 +3393,41 @@ window.ANTICOAG_CACP = {
           "kind": "nuance",
           "id": "dual-pathway-duration",
           "label": "Nuance: Dual-pathway duration"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        36,
+        38
+      ]
     },
     {
       "id": "ii-27",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Cancer VTE with intact GI/GU luminal lesions: preferred teaching default when bleed risk is high is often:",
+      "difficulty": "advanced",
+      "stem": "A 64-year-old woman with cancer-associated femoral DVT has platelets of 28 × 10⁹/L after chemotherapy. She is not bleeding. Creatinine clearance is 70 mL/min. Yesterday's full-dose apixaban is due for refill. There is no esophageal lesion. Which influence of this blood count is the sound one?",
       "choices": [
         {
           "id": "a",
-          "text": "Full-dose rivaroxaban without discussing bleed risk"
+          "text": "Refill the full acute lead-in automatically, because platelets do not affect anticoagulant intensity"
         },
         {
           "id": "b",
-          "text": "LMWH as a safer default for many high luminal GI/GU bleed-risk scenarios, with DOAC reconsideration if risk evolves"
+          "text": "Transfuse platelets until the count exceeds 150 × 10⁹/L and only then allow any anticoagulant"
         },
         {
           "id": "c",
-          "text": "Aspirin 81 mg monotherapy for proximal DVT"
+          "text": "Pause the automatic refill and make the intensity decision with oncology or hematology at this count"
         },
         {
           "id": "d",
-          "text": "Inferior vena cava filter as first-line for every CAT"
+          "text": "Switch to warfarin and aim for an INR above 4, because thrombocytopenia requires a higher target"
         }
       ],
-      "correctId": "b",
-      "explanation": "DOAC cancer trials support use in many CAT patients, but luminal GI/GU cancer bleed signals push LMWH preference in high-risk anatomy — reassess over time.",
+      "correctId": "c",
+      "explanation": "Choice C refuses an automatic full-dose refill when platelets are 28 × 10⁹/L. Full-intensity anticoagulation at that count is a bleeding problem, and the adjustment belongs with the oncology and hematology clinicians rather than with a default refill or a homemade INR target. Choice A ignores the count. Choice B sets an unsupported transfusion goal of 150 × 10⁹/L before any anticoagulation. Choice D raises the INR. Source: cancer-VTE practice of individualizing intensity when platelets are very low. No single cutoff is declared as a universal rule.",
       "teachingPoints": [
-        "API-CAT and others inform extended CAT intensity discussions on this site.",
-        "Thrombocytopenia thresholds also reshape choices."
+        "A very low platelet count blocks autopilot refills.",
+        "The specialist decision is not a higher INR target."
       ],
       "links": [
         {
@@ -3172,67 +3445,75 @@ window.ANTICOAG_CACP = {
           "id": "caravaggio",
           "label": "CARAVAGGIO"
         }
+      ],
+      "objectiveIds": [
+        22,
+        24
       ]
     },
     {
       "id": "ii-28",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Transitions of care for anticoagulation should prioritize:",
+      "difficulty": "advanced",
+      "stem": "A patient on anticoagulation is transferring from the hospital to a skilled-nursing facility tonight. The draft handoff says only 'blood thinner, see home meds.' The chart shows apixaban started yesterday for a new PE, a creatinine clearance of 28 mL/min, and a hemoglobin drop being watched. Which content is the important handoff?",
       "choices": [
         {
           "id": "a",
-          "text": "Omitting the drug name from discharge summaries to save space"
+          "text": "The pharmacy phone number alone, without the drug, the indication, or the creatinine clearance"
         },
         {
           "id": "b",
-          "text": "Clear documentation of agent, dose, indication, target INR if VKA, hold/restart plans, labs due, and who follows the patient"
+          "text": "A statement that all anticoagulants are held on arrival at every skilled-nursing facility"
         },
         {
           "id": "c",
-          "text": "Assuming the patient will remember verbal instructions only"
+          "text": "The patient's preferred tablet color, which replaces both the dose and the indication"
         },
         {
           "id": "d",
-          "text": "Automatic 30-day supply of NSAIDs for pain"
+          "text": "Drug, indication, last doses, clearance, the hemoglobin concern, and who decides next"
         }
       ],
-      "correctId": "b",
-      "explanation": "Most anticoagulation harm at transitions comes from missing plans, wrong doses, or unclear follow-up. Structured handoffs reduce error.",
+      "correctId": "d",
+      "explanation": "Choice D is a usable handoff: the agent, why it was started, where in the course the patient is, kidney function that may change eligibility, active bleeding concern, and a named owner. Choice A omits the clinical content. Choice B holds every anticoagulant by policy. Choice C substitutes appearance for the regimen. Source: transitions-of-care standard for anticoagulants.",
       "teachingPoints": [
-        "Reconcile OTC NSAIDs and herbals at every transition.",
-        "Schedule the first INR or clinic call before discharge when relevant."
+        "Indication plus kidney function prevents a blind continuation.",
+        "A hemoglobin drop needs an owner, not a one-line slogan."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        37,
+        48
+      ]
     },
     {
       "id": "ii-29",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "Idarucizumab is indicated conceptually for:",
+      "stem": "Which of these situations is the specific role of idarucizumab, rather than a general hemostatic measure?",
       "choices": [
         {
           "id": "a",
-          "text": "Reversal of apixaban and rivaroxaban major bleeding in all countries"
+          "text": "Life-threatening bleeding on dabigatran, with the 5 g intravenous dose studied in RE-VERSE AD"
         },
         {
           "id": "b",
-          "text": "Specific reversal of dabigatran when rapid reversal is needed (e.g., life-threatening bleed or emergency surgery) per labeling"
+          "text": "An elective tooth cleaning next month in a patient on apixaban who is anxious about bleeding"
         },
         {
           "id": "c",
-          "text": "Routine reversal before every dental cleaning"
+          "text": "A therapeutic INR of 2.5 on warfarin with no bleeding before a routine clinic visit"
         },
         {
           "id": "d",
-          "text": "Reversal of warfarin instead of vitamin K"
+          "text": "Stable rivaroxaban use the day before a low-bleeding-risk skin biopsy that may not need a hold"
         }
       ],
-      "correctId": "b",
-      "explanation": "Idarucizumab is the monoclonal fragment that binds dabigatran. FXa DOAC major bleed in current U.S. teaching after Andexxa withdrawal relies on supportive care + institutional 4F-PCC — not idarucizumab.",
+      "correctId": "a",
+      "explanation": "Choice A is the indication RE-VERSE AD studied: idarucizumab 5 g intravenous for dabigatran when there is life-threatening bleeding or emergency surgery. Choice B uses it for anxiety before a minor procedure on the wrong drug. Choice C treats a therapeutic warfarin INR. Choice D is a possible no-hold factor Xa case, not a dabigatran reversal. Source: RE-VERSE AD and the idarucizumab label.",
       "teachingPoints": [
-        "RE-VERSE AD informs dabigatran reversal practice.",
-        "Still provide mechanical hemostasis and resuscitation."
+        "The antibody is for dabigatran, in bleeding or emergency surgery.",
+        "It is not a calming measure before a minor procedure."
       ],
       "links": [
         {
@@ -3260,36 +3541,40 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        33,
+        41
       ]
     },
     {
       "id": "ii-30",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "For VKA-associated major bleed, site-aligned emergency teaching includes:",
+      "difficulty": "advanced",
+      "stem": "A 73-year-old woman on warfarin for a mechanical mitral valve has hematemesis, heart rate 122 beats per minute, and blood pressure 82/50 mm Hg. INR is 6.4. Hemoglobin fell from 12 to 7 g/dL. She has not taken a DOAC. Which bundle fits this VKA bleed rather than a DOAC plan?",
       "choices": [
         {
           "id": "a",
-          "text": "Andexxa as first-line for warfarin"
+          "text": "Idarucizumab, because a high INR means a thrombin inhibitor is on board"
         },
         {
           "id": "b",
-          "text": "4F-PCC (per institutional protocol) plus vitamin K, with supportive care — not FFP-first as the modern preferred rapid option when PCC is available"
+          "text": "4F-PCC plus vitamin K, the warfarin major-bleed bundle, with the valve indication revisited after hemostasis"
         },
         {
           "id": "c",
-          "text": "Aspirin loading to counteract warfarin"
+          "text": "Andexanet alfa, because factor Xa reversal covers vitamin K antagonists"
         },
         {
           "id": "d",
-          "text": "Only holding the next warfarin dose without reversal assessment"
+          "text": "Oral vitamin K alone at home, because major gastrointestinal bleeding can wait for the INR to drift down"
         }
       ],
       "correctId": "b",
-      "explanation": "Warfarin major bleed bundles use 4F-PCC for rapid factor repletion plus vitamin K for sustained effect. Andexxa was an FXa-DOAC agent and is withdrawn in the U.S. (Dec 2025) — irrelevant to VKA reversal.",
+      "explanation": "Choice B matches the 2020 ACC expert consensus pathway cited on this site: 4-factor PCC plus vitamin K for warfarin-associated major bleeding. The mechanical valve means a later restart is a named decision, not an afterthought. Choice A uses dabigatran's antibody. Choice C uses a factor Xa agent that is also withdrawn in the United States. Choice D sends an unstable bleed home. Source: 2020 ACC expert consensus decision pathway on bleeding with oral anticoagulants, as cited on this site's reversal page. No unit-per-kilogram dose is stated.",
       "teachingPoints": [
-        "Confirm INR and bleed source in parallel.",
-        "Restart planning comes after hemostasis and risk re-evaluation."
+        "Warfarin major bleeding is 4F-PCC plus vitamin K.",
+        "The valve is why restart planning stays on the problem list."
       ],
       "links": [
         {
@@ -3312,36 +3597,40 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        33,
+        41
       ]
     },
     {
       "id": "ii-31",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "U.S. life-threatening FXa-DOAC bleeding after Andexxa withdrawal is taught on this site as:",
+      "stem": "A 69-year-old man on rivaroxaban 20 mg daily has ongoing melena, heart rate 118 beats per minute, and systolic blood pressure 86 mm Hg in a United States emergency department. He last took rivaroxaban 6 hours ago. Hemoglobin is 6.8 g/dL. Which strategy matches current site teaching for life-threatening factor Xa bleeding?",
       "choices": [
         {
           "id": "a",
-          "text": "Mandatory Andexxa infusion as the only standard of care"
+          "text": "Andexanet alfa, because ANNEXA-I makes it the present United States standard"
         },
         {
           "id": "b",
-          "text": "Supportive care and hemostasis plus institutional 4F-PCC protocols — do not teach Andexxa as an available U.S. option"
+          "text": "Idarucizumab 5 g, because rivaroxaban and dabigatran share that antibody"
         },
         {
           "id": "c",
-          "text": "Idarucizumab for rivaroxaban"
+          "text": "Supportive care plus the institutional 4F-PCC pathway, not andexanet after the December 2025 withdrawal"
         },
         {
           "id": "d",
-          "text": "High-dose vitamin K alone as specific FXa reversal"
+          "text": "Vitamin K and a two-day clinic follow-up, because gastrointestinal blood is minor if the patient can speak"
         }
       ],
-      "correctId": "b",
-      "explanation": "AstraZeneca voluntarily withdrew the Andexxa BLA and ended U.S. sales Dec 22, 2025 after FDA concluded risks outweighed benefits. Current site teaching: supportive care + institutional/off-label 4F-PCC per protocol (Andexxa was the labeled FXa agent; now unavailable in U.S.). Idarucizumab remains dabigatran-specific.",
+      "correctId": "c",
+      "explanation": "Choice C is this site's United States teaching after 22 December 2025: Andexxa is withdrawn, and life-threatening factor Xa inhibitor bleeding is supportive care plus institutional 4F-PCC, an off-label pathway rather than a labeled specific antidote. Choice A orders the withdrawn drug. Choice B uses dabigatran's antibody. Choice D under-calls shock and melena. ANNEXA-I remains the trial that showed a thrombosis tradeoff and is not a current order set. Source: FDA safety communication as used on this site.",
       "teachingPoints": [
-        "Know your hospital’s PCC dosing protocol.",
-        "ANNEXA-I is historical context — not a reason to claim current U.S. availability."
+        "Rivaroxaban is a factor Xa inhibitor, not dabigatran.",
+        "Shock and ongoing melena are major bleeding, not a clinic follow-up."
       ],
       "links": [
         {
@@ -3364,36 +3653,40 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        33,
+        41
       ]
     },
     {
       "id": "ii-32",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Selecting between DOACs for eligible acute VTE may include COBRRA-informed counseling that:",
+      "difficulty": "advanced",
+      "stem": "A 57-year-old man with acute PE can take either apixaban or rivaroxaban. He had a gastrointestinal bleed a year ago that did not require transfusion. Creatinine clearance is 80 mL/min. He can take tablets with food. How can COBRRA inform the choice without over-reading it?",
       "choices": [
         {
           "id": "a",
-          "text": "All DOACs are identical in every bleed outcome with no shared-decision role"
+          "text": "COBRRA proved rivaroxaban prevents more recurrent VTE, so the old bleed history is set aside now"
         },
         {
           "id": "b",
-          "text": "Apixaban versus rivaroxaban differences in clinically relevant bleeding can inform shared choice when both are otherwise appropriate"
+          "text": "COBRRA used a placebo comparator, so it cannot say anything about two active DOACs"
         },
         {
           "id": "c",
-          "text": "Edoxaban never requires heparin lead-in in its pivotal VTE design"
+          "text": "COBRRA requires the COMPASS 2.5 mg rivaroxaban dose for every acute PE"
         },
         {
           "id": "d",
-          "text": "COMPASS 2.5 mg BID is the acute VTE load"
+          "text": "Less clinically relevant bleeding with apixaban, and similar recurrent VTE, can favor apixaban"
         }
       ],
-      "correctId": "b",
-      "explanation": "COBRRA supports pairwise counseling on bleed differences between apixaban and rivaroxaban in VTE. Still consider renal function, food needs, cancer context, and patient preference.",
+      "correctId": "d",
+      "explanation": "Choice D uses COBRRA as this site reports it: clinically relevant bleeding 3.3% with apixaban versus 7.1% with rivaroxaban, and recurrent symptomatic VTE 1.1% versus 1.0%. That supports a bleeding-sensitive shared choice. It does not ban rivaroxaban when apixaban is unsuitable, and it does not change the labeled regimens. Choice A invents an efficacy advantage. Choice B calls the comparator placebo. Choice C imports the vascular dose. Source: COBRRA card.",
       "teachingPoints": [
-        "Rivaroxaban 15–20 mg needs food; apixaban does not have that same food rule.",
-        "See VTE DOAC choice case."
+        "The primary contrast is bleeding, not a recurrence win.",
+        "Both labeled acute regimens remain legitimate."
       ],
       "links": [
         {
@@ -3406,44 +3699,46 @@ window.ANTICOAG_CACP = {
           "id": "vte-doac-choice",
           "label": "VTE DOAC choice"
         }
+      ],
+      "objectiveIds": [
+        24
       ]
     },
     {
       "id": "ii-33",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "Mechanical valve patients needing temporary warfarin interruption for a high-bleed-risk procedure generally require:",
+      "stem": "A 60-year-old man with a mechanical mitral valve needs elective open hernia repair that the surgeon classifies as high bleeding risk. He has been on warfarin, INR 3.0. A colleague says BRIDGE proved no one needs heparin around a warfarin hold, and suggests stopping warfarin for 5 days with no further plan. Which planning statement fits the prosthesis?",
       "choices": [
         {
           "id": "a",
-          "text": "No planning because mechanical valves are low thrombotic risk"
+          "text": "Do not copy the AF no-bridge default onto a mechanical mitral valve; plan the hold with the valve team"
         },
         {
           "id": "b",
-          "text": "Individualized bridging with a parenteral agent based on valve position/type and patient risk — not the same casual hold used in low-risk NVAF"
+          "text": "BRIDGE enrolled this mechanical valve, so skipping heparin is the proven mitral strategy"
         },
         {
           "id": "c",
-          "text": "Switch to dabigatran perioperatively as preferred"
+          "text": "Stop warfarin permanently and start apixaban on the morning of the hernia repair"
         },
         {
           "id": "d",
-          "text": "Aspirin alone indefinitely afterward"
+          "text": "Continue warfarin straight through open hernia repair because no mechanical valve is ever interrupted now"
         }
       ],
-      "correctId": "b",
-      "explanation": "Mechanical valves are a high thrombotic-risk VKA niche; peri-procedural plans often include bridging, especially mitral/recent thrombosis risk. DOACs are not substitutes for mechanical mitral anticoagulation.",
+      "correctId": "a",
+      "explanation": "Choice A keeps mechanical mitral valves outside BRIDGE. The trial excluded mechanical valves, and this site treats mitral prostheses as a higher thrombotic-risk class whose interruption is protocolized with the valve clinicians rather than defaulted to 'no heparin.' Choice B claims the trial included the valve. Choice C starts a DOAC, which RE-ALIGN-era mechanical-valve teaching rejects. Choice D says a high-bleed operation never interrupts warfarin. No heparin dose or stop-day count is printed. Source: BRIDGE exclusion and this site's valve-versus-AF contrast.",
       "teachingPoints": [
-        "Coordinate cardiology/surgery/anticoagulation clinic early.",
-        "Document restart INR targets."
+        "BRIDGE's population was AF without mechanical valves.",
+        "A mitral prosthesis needs its own interruption plan."
       ],
       "links": [
         {
           "kind": "pathway",
           "id": "mechanical-valve",
           "label": "Mechanical valve pathway"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "mechanical-valve-vka",
@@ -3453,36 +3748,40 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "mechanical-avr-doac-request",
           "label": "Case: Mechanical AVR DOAC request"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        43
+      ]
     },
     {
       "id": "ii-34",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Before calling a VTE 'unprovoked' for extension decisions, clinicians should:",
+      "difficulty": "advanced",
+      "stem": "A 52-year-old man finished 6 months of anticoagulation for a first proximal DVT. The record calls it unprovoked. Before anyone agrees to extend therapy, which review is the one that changes the decision?",
       "choices": [
         {
           "id": "a",
-          "text": "Ignore cancer screening symptoms to avoid overwork"
+          "text": "Only the calendar, because the word 'unprovoked' forbids any questions about cancer, bleeding, or adherence"
         },
         {
           "id": "b",
-          "text": "Reassess for persistent risks (active cancer, ongoing hormonal therapy, inflammatory disease, prior unprovoked events) and bleed risks that change the stop-vs-extend calculus"
+          "text": "Confirm it was unprovoked, and review bleeding risk, adherence, and kidney function before extending"
         },
         {
           "id": "c",
-          "text": "Automatically extend every patient on full-dose DOAC lifelong without discussion"
+          "text": "A mandatory inferior vena cava filter, which replaces the whole extension decision"
         },
         {
           "id": "d",
-          "text": "Use Wells score as a duration tool"
+          "text": "Restarting the acute 7-day apixaban lead-in, which is what extension means"
         }
       ],
       "correctId": "b",
-      "explanation": "Labeling matters: persistent provocation ≠ transient surgical provocation. Extension is a shared decision using recurrence predictors and bleed risk — not Wells (diagnostic) scores.",
+      "explanation": "Choice B is the pre-extension review. An event labeled unprovoked still needs a check for a missed provoking factor or cancer, a bleeding assessment, adherence, and renal eligibility, because the 2021 CHEST VTE guideline reserves extended therapy for patients whose recurrence risk outweighs bleeding. Choice A treats the label as self-sufficient. Choice C inserts a filter; PREPIC2 does not support routine filters on top of anticoagulation. Choice D restarts acute lead-in dosing. Source: 2021 CHEST VTE duration guidance.",
       "teachingPoints": [
-        "Sex, site of VTE, and residual symptoms may enter counseling qualitatively.",
-        "Low-dose extended DOAC regimens are options for some."
+        "Extension is a decision, not an automatic anniversary.",
+        "Confirm the provocation story before promising indefinite therapy."
       ],
       "links": [
         {
@@ -3490,36 +3789,40 @@ window.ANTICOAG_CACP = {
           "id": "extended-vte",
           "label": "Extended VTE"
         }
+      ],
+      "objectiveIds": [
+        38,
+        42
       ]
     },
     {
       "id": "ii-35",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "Renal function assessment before DOAC prescribing is essential because:",
+      "difficulty": "advanced",
+      "stem": "A 78-year-old woman has been on rivaroxaban 20 mg daily with the evening meal for AF. She now weighs 64 kg and her serum creatinine is 1.2 mg/dL, up from 0.8 mg/dL last year. She takes no inducer and has no mechanical valve. Why does today's kidney function change the regimen assessment?",
       "choices": [
         {
           "id": "a",
-          "text": "All DOACs are exclusively hepatically cleared with no renal role"
+          "text": "Rivaroxaban AF dosing ignores creatinine clearance, so 20 mg remains mandatory at any clearance"
         },
         {
           "id": "b",
-          "text": "Each DOAC has label-specific renal dosing/avoid rules — CrCl/eGFR trends guide eligibility and dose without memorizing invented cut-point tables on this exam bank"
+          "text": "Serum creatinine of 1.2 mg/dL meets apixaban's two-criterion rule and is why rivaroxaban is stopped"
         },
         {
           "id": "c",
-          "text": "Creatinine never needs repeating after the first fill"
+          "text": "Clearance is now about 39 mL/min, and the AF label uses 15 mg daily with the evening meal in that range"
         },
         {
           "id": "d",
-          "text": "Only dabigatran is unaffected by kidney function"
+          "text": "Clearance above 30 mL/min means the COMPASS 2.5 mg dose replaces full AF treatment"
         }
       ],
-      "correctId": "b",
-      "explanation": "DOACs differ in renal dependence (dabigatran highest among them). Use current labeling and institutional calculators; this bank will not invent CrCl tables.",
+      "correctId": "c",
+      "explanation": "Choice C is the label consequence. Creatinine clearance = (140−78)×64×0.85/(72×1.2) = 39 mL/min. The U.S. XARELTO AF regimen is 20 mg daily with the evening meal when clearance is above 50 mL/min and 15 mg daily with the evening meal when clearance is 50 mL/min or less. Choice A freezes last year's dose. Choice B applies apixaban's serum creatinine criterion to a different drug; one laboratory value is not two apixaban criteria anyway. Choice D substitutes a vascular dose for AF. Source: U.S. XARELTO prescribing information, atrial fibrillation dosage. The label notes that ROCKET AF gave 15 mg at clearance 30 to 50 mL/min; the label cut point is 50 mL/min.",
       "teachingPoints": [
-        "Recheck renal function when patients age, get acute illness, or start interacting drugs.",
-        "See AF renal nodes on the pathway."
+        "Recompute clearance when creatinine moves. Do not reuse last year's 20 mg by habit.",
+        "The evening meal requirement still applies to the 15 mg AF dose."
       ],
       "links": [
         {
@@ -3532,36 +3835,39 @@ window.ANTICOAG_CACP = {
           "id": "af-renal-bleed",
           "label": "AF renal bleed case"
         }
+      ],
+      "objectiveIds": [
+        30
       ]
     },
     {
       "id": "ii-36",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "COMPASS vascular-dose rivaroxaban is NOT appropriate as a substitute for:",
+      "stem": "A discharge list uses rivaroxaban 2.5 mg twice daily plus aspirin for three different labels: 'stable CAD,' 'AF stroke prevention,' and 'acute DVT day 2.' Which indication cannot be covered by the COMPASS regimen?",
       "choices": [
         {
           "id": "a",
-          "text": "Discussing secondary CV prevention in selected CAD/PAD patients without an AF OAC indication"
+          "text": "Stable CAD with no AF and no VTE, which is the population the COMPASS regimen studied"
         },
         {
           "id": "b",
-          "text": "Full-dose anticoagulation for NVAF stroke prevention or acute VTE treatment"
+          "text": "Stable PAD with no indication for full anticoagulation, another COMPASS-type population"
         },
         {
           "id": "c",
-          "text": "Shared decision when bleeding risk is acceptable and indication matches COMPASS-like criteria"
+          "text": "Stable CAD together with PAD, with no AF and no VTE, also inside COMPASS enrollment"
         },
         {
           "id": "d",
-          "text": "Aspirin co-therapy in the COMPASS regimen as studied"
+          "text": "AF stroke prevention and acute DVT treatment, which need full anticoagulation, not 2.5 mg"
         }
       ],
-      "correctId": "b",
-      "explanation": "COMPASS used rivaroxaban 2.5 mg BID + aspirin for chronic CAD/PAD — a different intensity and indication than AF or VTE treatment doses. Mixing niches is a common stewardship error.",
+      "correctId": "d",
+      "explanation": "Choice D names the mismatch. COMPASS studied rivaroxaban 2.5 mg twice daily plus aspirin in stable atherosclerotic disease and excluded patients who needed full-dose anticoagulation. AF treatment doses and acute VTE lead-in doses are different regimens on this site. Choices A, B, and C describe stable CAD, PAD, or both without an indication for full anticoagulation, the populations COMPASS enrolled. Source: COMPASS and this site's vascular-dose framework.",
       "teachingPoints": [
-        "VOYAGER-PAD informs PAD revascularization contexts on this site.",
-        "See COMPASS vascular pathway."
+        "Write the indication before copying 2.5 mg.",
+        "AF and acute VTE are full-dose problems."
       ],
       "links": [
         {
@@ -3578,8 +3884,7 @@ window.ANTICOAG_CACP = {
           "kind": "trial",
           "id": "voyager-pad",
           "label": "VOYAGER-PAD"
-        }
-      ,
+        },
         {
           "kind": "framework",
           "id": "compass-vascular-dose",
@@ -3589,36 +3894,41 @@ window.ANTICOAG_CACP = {
           "kind": "case",
           "id": "compass-vs-af-dose-trap",
           "label": "Case: COMPASS vs AF dose trap"
-        }]
+        }
+      ],
+      "objectiveIds": [
+        20,
+        65
+      ]
     },
     {
       "id": "iii-06",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "An adherence-focused education plan after starting a BID DOAC should prioritize:",
+      "difficulty": "advanced",
+      "stem": "A 74-year-old man is newly prescribed apixaban 5 mg twice daily. He already forgets a once-daily vitamin. He lives alone, reads well, and has a phone. Which adherence plan actually matches a twice-daily drug?",
       "choices": [
         {
           "id": "a",
-          "text": "Telling the patient that missing half of doses is acceptable if weekly average looks fine"
+          "text": "Tell him twice daily is 'basically once daily' so he can take both tablets together at breakfast"
         },
         {
           "id": "b",
-          "text": "Practical routines (pillbox, linked habits), what to do if a dose is missed per that drug’s guidance, and teach-back of red-flag bleed symptoms"
+          "text": "Tie each dose to a daily event he never skips, and use teach-back to check which two events he named"
         },
         {
           "id": "c",
-          "text": "Switching counseling language to technical AUC percentages"
+          "text": "Switch the prescription to every other day so the bottle lasts longer and adherence looks better"
         },
         {
           "id": "d",
-          "text": "Encouraging frequent NSAID 'as needed' pain stacks"
+          "text": "Rely on one sentence in the visit, with no reminder and no check that he can state both dose times now"
         }
       ],
       "correctId": "b",
-      "explanation": "Adherence education is behavioral and concrete. Teach-back confirms understanding better than a monologue. Avoid inventing PK numbers in patient talk.",
+      "explanation": "Choice B builds two cues into an existing day and verifies them. Twice-daily DOACs fail when the second dose has no cue. Choice A collapses the schedule. Choice C changes the dose to stretch the bottle, which underdoses him. Choice D stops at information. Source: adherence support for twice-daily regimens.",
       "teachingPoints": [
-        "Health literacy adaptations beat jargon.",
-        "Involve caregivers when cognitive impairment is present — see FRAIL-AF caution against casual switches."
+        "A twice-daily drug needs two cues, not a slogan.",
+        "Teach-back confirms the cues he actually named."
       ],
       "links": [
         {
@@ -3626,98 +3936,111 @@ window.ANTICOAG_CACP = {
           "id": "frail-af",
           "label": "FRAIL-AF"
         }
+      ],
+      "objectiveIds": [
+        52,
+        57
       ]
     },
     {
       "id": "iii-07",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "Health-literacy–sensitive counseling for warfarin means:",
+      "difficulty": "advanced",
+      "stem": "A patient with limited health literacy is starting warfarin. The after-visit summary is four pages of unedited jargon, including 'titrate to a target international normalized ratio.' He cannot read it back. Which adaptation is the useful one?",
       "choices": [
         {
           "id": "a",
-          "text": "Using only the phrase ' Coumadin level' without explaining INR targets"
+          "text": "Speak faster and add a second jargon sheet so more information is delivered in the same visit"
         },
         {
           "id": "b",
-          "text": "Plain-language explanation of why INR is checked, what foods/consistency means, which OTC drugs to ask about, and when to seek care for bleeding"
+          "text": "Ask 'do you understand?' and accept a nod as proof that the warfarin plan is clear"
         },
         {
           "id": "c",
-          "text": "Providing a 40-page biochemistry handout as the sole method"
+          "text": "Short words, a tablet plan, and teach-back of a missed dose and of bleeding that needs a call"
         },
         {
           "id": "d",
-          "text": "Avoiding written materials for patients with limited literacy"
+          "text": "Have him sign the long summary, which documents understanding even if he cannot explain the plan"
         }
       ],
-      "correctId": "b",
-      "explanation": "Match language to the patient, use teach-back, and offer written/pictorial aids. Consistency of vitamin K intake beats absolute avoidance for most stable patients.",
+      "correctId": "c",
+      "explanation": "Choice C adapts the counseling: plain language, a concrete dose plan, and a check that he can say what a miss and what bleeding mean. Choice A adds density. Choice B accepts a nod. Choice D treats a signature as comprehension. Source: health-literacy methods, including teach-back.",
       "teachingPoints": [
-        "Interpreter services are part of safe anticoagulation education.",
-        "Document comprehension barriers and mitigation."
+        "Plain language plus a restatement beats a longer packet.",
+        "A signature is not teach-back."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        51,
+        54,
+        55
+      ]
     },
     {
       "id": "iii-08",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "Vitamin K food counseling nuance that matches modern warfarin education is:",
+      "stem": "A woman on warfarin asks whether she must drop all salads because her INR was 1.6 once after a holiday week of eating far more leafy greens than usual. Her usual diet is one small salad most days, and the INR is otherwise stable. Which explanation is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Never eat any green vegetables forever"
+          "text": "Any salad is prohibited from now on, including the small daily one that matched a stable INR"
         },
         {
           "id": "b",
-          "text": "Keep intake relatively consistent week to week rather than eliminating nutritious vitamin K sources; report major diet pattern changes"
+          "text": "She should binge on greens the day before each INR so the test looks controlled"
         },
         {
           "id": "c",
-          "text": "Eat unlimited kale smoothies the day before INR without mentioning it"
+          "text": "Vitamin K foods do not affect warfarin, so the holiday intake is irrelevant"
         },
         {
           "id": "d",
-          "text": "Vitamin K foods reverse DOACs"
+          "text": "Keep the usual small salad; the problem was the sudden large change, not the presence of vegetables"
         }
       ],
-      "correctId": "b",
-      "explanation": "Consistency — not prohibition — is the usual counseling frame. Sudden large changes swing INR. DOACs are not antagonized by dietary vitamin K the way warfarin is.",
+      "correctId": "d",
+      "explanation": "Choice D separates a consistent vitamin K intake, which her stable INRs reflect, from a holiday jump in intake, which can lower the INR. Choice A bans the pattern that was working. Choice B prescribes a binge. Choice C denies the interaction. One low INR after a high-intake week is explained by the change, not by the usual small salad. Source: warfarin diet counseling.",
       "teachingPoints": [
-        "Multivitamins with vitamin K matter too — ask explicitly.",
-        "Enteral nutrition changes should trigger INR vigilance."
+        "Teach consistency, not a permanent ban.",
+        "One high-intake week is not a reason to eliminate the usual pattern."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        39,
+        52
+      ]
     },
     {
       "id": "iii-09",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "When educating about red-flag bleeding, patients should be told to seek urgent care for:",
+      "difficulty": "advanced",
+      "stem": "A patient on apixaban asks which bleeding can wait for a routine refill call and which needs urgent assessment. He mentions black stools, a mild paper cut, and a headache after hitting his head on a cabinet with subsequent drowsiness. Which grouping is the urgent one?",
       "choices": [
         {
           "id": "a",
-          "text": "A single bruise the size of a dime after bumping a door"
+          "text": "Black stools, and head impact followed by drowsiness, need urgent assessment; a stopped paper cut does not"
         },
         {
           "id": "b",
-          "text": "Signs such as black stools, vomiting blood, severe uncontrolled bleeding, sudden severe headache/neurologic change, or coughing large amounts of blood"
+          "text": "A paper cut is the urgent finding, while black stools can wait because they are expected on a DOAC"
         },
         {
           "id": "c",
-          "text": "Only bleeding that lasts more than 30 days"
+          "text": "Drowsiness after head impact can wait for the next INR, because apixaban is monitored that way"
         },
         {
           "id": "d",
-          "text": "Bleeding exclusively on weekends"
+          "text": "No bleeding symptom is urgent unless an INR is already known to be above 4"
         }
       ],
-      "correctId": "b",
-      "explanation": "Teach specific catastrophic and major-bleed warning signs, including ICH symptoms. Minor bruising still deserves clinic advice but not every speck is an ED visit.",
+      "correctId": "a",
+      "explanation": "Choice A separates nuisance bleeding from signs of gastrointestinal or intracranial bleeding. Melena and progressive symptoms after head impact are urgent. A paper cut that has stopped is not. Choice B reverses the urgency. Choice C waits on an INR that does not monitor apixaban. Choice D requires an INR threshold for a DOAC emergency. Source: bleeding-precaution counseling.",
       "teachingPoints": [
-        "Give written wallet cards when possible.",
-        "Explain that head injury on anticoagulation warrants a low threshold for evaluation."
+        "Melena and neurologic change after head impact are urgent.",
+        "A stopped paper cut is the comparison case, not the emergency."
       ],
       "links": [
         {
@@ -3735,36 +4058,40 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        52,
+        60
       ]
     },
     {
       "id": "iii-10",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "Shared decision-making documentation after discussing OAC for AF should capture:",
+      "difficulty": "advanced",
+      "stem": "After a visit about OAC for NVAF, the note says only 'DOAC discussed, patient agreeable.' The clinician had actually covered stroke risk, bleeding risk, a warfarin alternative, and who to call for bleeding. The patient chose apixaban. Which record matches what a later clinician needs?",
       "choices": [
         {
           "id": "a",
-          "text": "Only the CHA₂DS₂-VASc number without patient goals"
+          "text": "The single word 'agreeable,' because shared decision-making is a mood, not a clinical note"
         },
         {
           "id": "b",
-          "text": "Stroke vs bleed tradeoffs discussed, patient values/preferences, and the agreed regimen/follow-up"
+          "text": "Indication, options discussed, risks named, the choice made, and the follow-up or bleeding plan"
         },
         {
           "id": "c",
-          "text": "A statement that guidelines remove all choice"
+          "text": "The drug name only, because the conversation cannot be documented without an audio recording"
         },
         {
           "id": "d",
-          "text": "Refusal of teach-back as unnecessary"
+          "text": "A statement that aspirin was selected, which does not match the apixaban choice from the visit"
         }
       ],
       "correctId": "b",
-      "explanation": "High-quality education includes recording what was discussed and chosen. Scores inform — they do not replace the conversation.",
+      "explanation": "Choice B is the record of a shared decision: why anticoagulation was discussed, which options were on the table, which harms were named, what was chosen, and what happens next. Choice A keeps a mood word. Choice C claims the talk cannot be written down. Choice D documents a drug that was not chosen. Source: shared-decision documentation for AF anticoagulation, including the intermediate-risk context SINGLE-AF studied, where the note matters even more.",
       "teachingPoints": [
-        "SINGLE-AF nuance: intermediate risk still needs individualized talk.",
-        "Revisit decisions when risk factors change."
+        "Write the choice and the alternatives, not only that the patient seemed agreeable.",
+        "A later clinician should be able to see why apixaban, not aspirin, was chosen."
       ],
       "links": [
         {
@@ -3777,67 +4104,74 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke-prevention",
           "label": "AF framework"
         }
+      ],
+      "objectiveIds": [
+        55,
+        79
       ]
     },
     {
       "id": "iii-11",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "Missed-dose education should be drug-specific because:",
+      "stem": "A missed-dose handout says the same thing for every anticoagulant. One reader is in week 1 of rivaroxaban for acute DVT (15 mg twice daily). Another is on rivaroxaban 20 mg daily for AF. A third missed warfarin last night. Why does one class-wide sentence fail?",
       "choices": [
         {
           "id": "a",
-          "text": "All DOACs share one universal make-up rule identical to warfarin double-dosing"
+          "text": "Because all three regimens use the same 'take two tonight' rule, so the handout is efficient and correct"
         },
         {
           "id": "b",
-          "text": "Half-lives, once-daily vs BID schedules, and label instructions differ — patients need the plan for their exact anticoagulant"
+          "text": "Because warfarin and rivaroxaban are both monitored with anti-Xa, so the miss is identical"
         },
         {
           "id": "c",
-          "text": "Patients should always take three doses at once to 'catch up'"
+          "text": "Because the 15 mg twice-daily lead-in, the 20 mg daily dose, and warfarin do not share one catch-up rule"
         },
         {
           "id": "d",
-          "text": "Missed doses only matter for antiplatelets"
+          "text": "Because a missed dose is ignored for every anticoagulant until the next clinic month"
         }
       ],
-      "correctId": "b",
-      "explanation": "Generic catch-up advice does not fit every product. Each product’s labeling gives its own missed-dose instructions, alongside clinic protocols; when unsure, patients call the clinic rather than improvising.",
+      "correctId": "c",
+      "explanation": "Choice C is why the handout has to name the drug. During the rivaroxaban 15 mg twice-daily lead-in, the label allows a same-day catch-up so the daily total stays 30 mg, which can mean two 15 mg tablets together. That instruction is not the 20 mg once-daily AF rule, and it is not a reason to double warfarin. Choice A universalizes the lead-in. Choice B invents anti-Xa monitoring for warfarin. Choice D ignores misses. Source: XARELTO missed-dose labeling versus warfarin counseling.",
       "teachingPoints": [
-        "Rivaroxaban food rules still apply when doses are taken.",
-        "Repeated misses are an adherence intervention trigger."
+        "The lead-in catch-up is real and easy to misapply.",
+        "Warfarin is not caught up by doubling."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        52
+      ]
     },
     {
       "id": "iv-14",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Strong antiseizure inducers (carbamazepine, phenytoin, phenobarbital, primidone) with DOACs raise concern for:",
+      "stem": "A patient with NVAF and a CHA₂DS₂-VASc score of 4 takes carbamazepine for seizures. The proposed anticoagulant is apixaban 5 mg twice daily. Kidney function would otherwise fit that dose. Which interaction concern dominates?",
       "choices": [
         {
           "id": "a",
-          "text": "Higher DOAC levels and only bleed risk"
+          "text": "Carbamazepine inhibits apixaban metabolism, so the 5 mg dose becomes an overdose"
         },
         {
           "id": "b",
-          "text": "Lower DOAC exposure via induction (P-gp/CYP3A4 pathways as relevant) and potential thrombosis — generally avoid combinations per label/DDI guidance"
+          "text": "Carbamazepine induces clearance and the label avoids apixaban with this strong inducer"
         },
         {
           "id": "c",
-          "text": "Mandatory superiority of DOACs over warfarin in this setting"
+          "text": "Carbamazepine only interacts with warfarin, so the DOAC needs no review"
         },
         {
           "id": "d",
-          "text": "No interaction because ASMs lack enzyme effects"
+          "text": "The interaction is solved by adding aspirin 81 mg"
         }
       ],
       "correctId": "b",
-      "explanation": "Inducers can reduce DOAC effect — opposite direction from inhibitors. Prefer regimens without the interaction (often VKA with close INR monitoring, or alternative ASM) rather than inventing AUC percentages.",
+      "explanation": "Choice B matches the ELIQUIS label: carbamazepine is named among strong combined CYP3A4 and P-glycoprotein inducers to avoid, because exposure falls and efficacy can fail. Choice A reverses the direction. Choice C limits interactions to warfarin. Choice D adds an antiplatelet. Stopping carbamazepine is a neurology decision and is not required to identify the problem. Source: ELIQUIS interactions.",
       "teachingPoints": [
-        "Levetiracetam/lamotrigine are often lower-concern ASMs in qualitative teaching.",
-        "Use this site’s DDI library cards for agent-specific notes."
+        "An inducer makes a textbook AF dose too small.",
+        "Aspirin does not replace lost anticoagulant exposure."
       ],
       "links": [
         {
@@ -3850,36 +4184,40 @@ window.ANTICOAG_CACP = {
           "id": "af-stroke",
           "label": "AF pathway"
         }
+      ],
+      "objectiveIds": [
+        26,
+        69
       ]
     },
     {
       "id": "iv-15",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Azole antifungals and boosted HIV regimens with DOACs qualitatively tend to:",
+      "stem": "A patient on apixaban 5 mg twice daily for AF develops a fungal infection and is prescribed oral ketoconazole. He is not on a reduced dose. Clearance is normal. How can this antifungal change the anticoagulant plan?",
       "choices": [
         {
           "id": "a",
-          "text": "Induce DOAC clearance and cause clotting exclusively"
+          "text": "Ketoconazole induces apixaban clearance, so the 5 mg dose is doubled while the azole is on board"
         },
         {
           "id": "b",
-          "text": "Inhibit P-gp/CYP3A4 to varying degrees, increasing DOAC exposure/bleed risk — avoid or dose-adjust per labeling and DDI resources"
+          "text": "Azole antifungals have no effect on P-glycoprotein or on CYP3A4, so the dose is unchanged"
         },
         {
           "id": "c",
-          "text": "Have zero relevance for rivaroxaban"
+          "text": "Ketoconazole is a strong combined inhibitor; the label halves 5 mg and avoids an existing 2.5 mg dose"
         },
         {
           "id": "d",
-          "text": "Replace the need for renal monitoring"
+          "text": "The fix is to add rivaroxaban 20 mg, because two factor Xa inhibitors cancel an azole interaction"
         }
       ],
-      "correctId": "b",
-      "explanation": "Many azoles and PK boosters (ritonavir/cobicistat) raise DOAC levels. Check pair-specific guidance; apixaban has notable label dose-reduction pathways for some strong inhibitors.",
+      "correctId": "c",
+      "explanation": "Choice C is the ELIQUIS strong-inhibitor rule. Combined strong CYP3A4 and P-glycoprotein inhibitors such as ketoconazole raise exposure. If the patient is on 5 mg or 10 mg twice daily, the labeled response is a 50 percent dose reduction. If the patient is already on 2.5 mg twice daily, the combination is avoided. This patient is on 5 mg, so the interaction is a reduction question, not a doubling and not a second DOAC. Choice A describes induction. Choice B denies the effect. Choice D stacks factor Xa inhibitors. Source: ELIQUIS dose modification with strong dual inhibitors.",
       "teachingPoints": [
-        "Paxlovid is a time-limited but potent interaction scenario — plan ahead.",
-        "Do not invent AUC numbers; cite site DDI cards when quantifying."
+        "Inhibition raises exposure. The label's response is a lower dose or avoidance.",
+        "Do not add a second factor Xa inhibitor."
       ],
       "links": [
         {
@@ -3897,129 +4235,142 @@ window.ANTICOAG_CACP = {
           "id": "apixaban-paxlovid",
           "label": "Apixaban–Paxlovid"
         }
+      ],
+      "objectiveIds": [
+        69
       ]
     },
     {
       "id": "iv-16",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Warfarin’s pharmacologic target is best described as:",
+      "difficulty": "advanced",
+      "stem": "A patient bleeds on warfarin. A learner says warfarin 'directly blocks circulating thrombin the way dabigatran does,' so the effect should end when the tablet wears off in a few hours. Which process is the accurate one?",
       "choices": [
         {
           "id": "a",
-          "text": "Direct inhibition of free factor Xa active sites like rivaroxaban"
+          "text": "Warfarin directly occupies thrombin's active site and is gone within one dosing interval"
         },
         {
           "id": "b",
-          "text": "Inhibition of vitamin K epoxide reductase (VKORC1), depleting reduced vitamin K needed to γ-carboxylate factors II, VII, IX, X and proteins C/S"
+          "text": "Warfarin raises vitamin K recycling, which is why the INR falls after the very first dose"
         },
         {
           "id": "c",
-          "text": "Irreversible antithrombin activation identical to fondaparinux"
+          "text": "Warfarin blocks the platelet P2Y12 receptor and has no effect on clotting-factor synthesis now"
         },
         {
           "id": "d",
-          "text": "P2Y12 ADP-receptor blockade"
+          "text": "Warfarin blocks vitamin K epoxide reductase, so new factors II, VII, IX, and X are not made"
         }
       ],
-      "correctId": "b",
-      "explanation": "VKAs block VKORC1, impairing vitamin K recycling and functional clotting-factor synthesis. That is mechanistically distinct from DOACs and heparins.",
+      "correctId": "d",
+      "explanation": "Choice D is the mechanism. Warfarin inhibits vitamin K epoxide reductase, so gamma-carboxylation of factors II, VII, IX, and X and of proteins C and S fails. Circulating factors persist until they are cleared, which is why the offset takes days and why vitamin K, not a short washout, is part of reversal. Choice A describes dabigatran. Choice B reverses the enzyme effect. Choice C describes a P2Y12 inhibitor. Source: warfarin mechanism.",
       "teachingPoints": [
-        "Genetic VKORC1/CYP2C9 variation influences dose — optional advanced teaching.",
-        "Dietary vitamin K and antibiotics alter effect."
+        "Warfarin does not neutralize factors already in the blood.",
+        "That is why the offset is slower than a DOAC's."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        63
+      ]
     },
     {
       "id": "iv-17",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "UFH monitoring traditionally relies on aPTT (or anti-Xa) because:",
+      "difficulty": "advanced",
+      "stem": "Two patients are anticoagulated. One is on a fixed dose of apixaban. The other is on an intravenous unfractionated heparin infusion after a bolus. Only the infusion has a nursing protocol for repeated clotting times. Why does that drug, and not the DOAC, commonly need that monitoring?",
       "choices": [
         {
           "id": "a",
-          "text": "UFH has completely predictable oral bioavailability"
+          "text": "Heparin's effect is variable and short, so a protocolized clotting time adjusts the infusion"
         },
         {
           "id": "b",
-          "text": "UFH anticoagulant response is variable; aPTT/anti-Xa protocols guide titration in venous/arterial indications"
+          "text": "Apixaban is adjusted to that same clotting time every 6 hours, just like the heparin infusion"
         },
         {
           "id": "c",
-          "text": "INR is the correct UFH titration test"
+          "text": "Heparin has a 3-day half-life, so the infusion is monitored once a month, the way warfarin is"
         },
         {
           "id": "d",
-          "text": "UFH never needs labs"
+          "text": "The infusion is monitored because heparin directly inhibits vitamin K epoxide reductase"
         }
       ],
-      "correctId": "b",
-      "explanation": "Unfractionated heparin requires monitoring due to variable binding and clearance. Protocol-driven aPTT or anti-Xa targets are institutional.",
+      "correctId": "a",
+      "explanation": "Choice A is the pharmacology. Unfractionated heparin binds variably to plasma proteins, has a short half-life, and is adjusted with an activated partial thromboplastin time or anti-Xa protocol. Apixaban is a fixed oral dose within its label rules and is not titrated to a clotting time. Choice B applies the protocol to apixaban. Choice C assigns heparin a warfarin-like half-life. Choice D assigns warfarin's target. Source: unfractionated heparin pharmacokinetics.",
       "teachingPoints": [
-        "LMWH usually needs less routine monitoring except special populations.",
-        "HIT surveillance remains important with UFH."
+        "Variable protein binding and a short half-life are why the protocol exists.",
+        "A DOAC's label dose is not retitrated each shift."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        28,
+        65
+      ]
     },
     {
       "id": "iv-18",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Fondaparinux’s mechanism is best summarized as:",
+      "stem": "A patient with a history of heparin-induced thrombocytopenia needs a parenteral anticoagulant. Fondaparinux is mentioned. A learner calls it 'an oral factor Xa inhibitor like apixaban, so idarucizumab reverses it.' Which distinction is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Oral direct thrombin inhibition"
+          "text": "Fondaparinux is an oral direct thrombin inhibitor, in the same class as dabigatran"
         },
         {
           "id": "b",
-          "text": "Indirect, antithrombin-mediated selective factor Xa inhibition (synthetic pentasaccharide)"
+          "text": "A parenteral pentasaccharide: it inhibits factor Xa through antithrombin and has no specific antidote"
         },
         {
           "id": "c",
-          "text": "Vitamin K antagonism"
+          "text": "Fondaparinux is reversed completely by protamine, in the same way a full heparin dose is neutralized"
         },
         {
           "id": "d",
-          "text": "GP IIb/IIIa blockade"
+          "text": "Fondaparinux blocks platelets and is monitored and dose-adjusted with the INR"
         }
       ],
       "correctId": "b",
-      "explanation": "Fondaparinux catalyzes antithrombin inhibition of Xa without meaningful IIa activity. It is parenteral and renally cleared — distinct from oral FXa DOACs.",
+      "explanation": "Choice B matches fondaparinux: a synthetic pentasaccharide given parenterally, antithrombin-dependent factor Xa inhibition, no direct thrombin effect, and, as this site quotes from the Arixtra overdosage text, no known antidote. Protamine is not its reversal. Choice A calls it oral dabigatran. Choice C promises complete protamine reversal. Choice D assigns an INR and a platelet target. Source: Arixtra overdosage statement on this site.",
       "teachingPoints": [
-        "No reliable protamine reversal.",
-        "Used in some HIT and VTE pathways per protocols."
+        "It is not a DOAC and not dabigatran.",
+        "No specific antidote is the label statement."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        63
+      ]
     },
     {
       "id": "iv-19",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Dabigatran etexilate is a prodrug; clinically that means:",
+      "difficulty": "advanced",
+      "stem": "A patient starts dabigatran etexilate. The capsule is swallowed whole. A learner says the capsule already contains active thrombin inhibitor and that opening it is a reasonable adherence plan. What does the prodrug status mean?",
       "choices": [
         {
           "id": "a",
-          "text": "It inhibits factor Xa after CYP3A4 activation only"
+          "text": "The capsule already contains active dabigatran, and opening it does not change absorption"
         },
         {
           "id": "b",
-          "text": "It is converted to active dabigatran that directly inhibits thrombin (factor IIa); P-gp affects absorption/exposure"
+          "text": "The drug is activated by CYP3A4, so systemic ketoconazole is required before any effect appears"
         },
         {
           "id": "c",
-          "text": "It is interchangeable with enoxaparin milligram-for-milligram"
+          "text": "Etexilate is a prodrug that becomes dabigatran after absorption; capsules stay closed"
         },
         {
           "id": "d",
-          "text": "Acid-reducing drugs never matter for its capsules"
+          "text": "The prodrug blocks platelets directly and never becomes a thrombin inhibitor at all"
         }
       ],
-      "correctId": "b",
-      "explanation": "Dabigatran is a direct thrombin inhibitor with P-gp relevance and notable renal clearance. Capsule integrity and absorption issues matter in counseling.",
+      "correctId": "c",
+      "explanation": "Choice C is the prodrug fact. Dabigatran etexilate is hydrolyzed to dabigatran, a direct thrombin inhibitor. It is a P-glycoprotein substrate and not a CYP3A4 substrate. Capsules are swallowed whole in ordinary use, which is why a weekly organizer or a sprinkle plan is the wrong adherence fix. Choice A says the capsule is already the active drug and may be opened. Choice B requires ketoconazole. Choice D keeps it a platelet drug. Source: PRADAXA clinical pharmacology.",
       "teachingPoints": [
-        "Idarucizumab reverses dabigatran specifically.",
-        "Avoid opening capsules unless labeling explicitly allows a given product technique."
+        "Etexilate is not the active thrombin inhibitor.",
+        "P-glycoprotein, not CYP3A4, is the relevant transport issue."
       ],
       "links": [
         {
@@ -4027,36 +4378,39 @@ window.ANTICOAG_CACP = {
           "id": "re-ly",
           "label": "RE-LY"
         }
+      ],
+      "objectiveIds": [
+        64
       ]
     },
     {
       "id": "iv-20",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Edoxaban pharmacology teaching for VTE should recall that pivotal regimens:",
+      "stem": "Two acute VTE orders are side by side. One starts rivaroxaban 15 mg twice daily today. The other starts edoxaban 60 mg today with no heparin. Both patients have normal kidneys and weigh more than 60 kg. Which sequence distinguishes the edoxaban program?",
       "choices": [
         {
           "id": "a",
-          "text": "Start with edoxaban monotherapy load identical to rivaroxaban 15 mg BID"
+          "text": "Both drugs require the same 7-day lead-in of 10 mg twice daily before any maintenance dose"
         },
         {
           "id": "b",
-          "text": "Use parenteral anticoagulation lead-in before edoxaban maintenance dosing"
+          "text": "Edoxaban is oral-only from the first hour, and rivaroxaban is the one that requires 5 days of heparin"
         },
         {
           "id": "c",
-          "text": "Require INR 2–3 throughout edoxaban use"
+          "text": "Both require an INR of at least 2 before the first tablet of either drug is given"
         },
         {
           "id": "d",
-          "text": "Are identical to COMPASS 2.5 mg BID"
+          "text": "Edoxaban in Hokusai-VTE followed at least 5 days of heparin; rivaroxaban in EINSTEIN did not"
         }
       ],
-      "correctId": "b",
-      "explanation": "Hokusai-VTE design used heparin lead-in then edoxaban. That differs from single-drug rivaroxaban/apixaban VTE starts.",
+      "correctId": "d",
+      "explanation": "Choice D is the design difference on this site. Hokusai-VTE used heparin for at least 5 days, then edoxaban. EINSTEIN started rivaroxaban 15 mg twice daily without a parenteral lead-in. Choice A assigns both the apixaban lead-in. Choice B swaps the lead-in. Choice C doses both to an INR. Source: Hokusai-VTE and EINSTEIN regimens on this site.",
       "teachingPoints": [
-        "Renal dose adjustments follow labeling — do not invent cutoffs here.",
-        "Cancer data exist in Hokusai VTE Cancer."
+        "Same indication, different first week.",
+        "Edoxaban's oral dose comes after the parenteral days."
       ],
       "links": [
         {
@@ -4064,36 +4418,39 @@ window.ANTICOAG_CACP = {
           "id": "hokusai-vte",
           "label": "Hokusai-VTE"
         }
+      ],
+      "objectiveIds": [
+        65
       ]
     },
     {
       "id": "iv-21",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Pharmacodynamic bleed stacking refers to:",
+      "difficulty": "advanced",
+      "stem": "A patient on apixaban adds daily ibuprofen and also, in a separate scenario, is prescribed ketoconazole. Both combinations can bleed. Which statement correctly sorts them?",
       "choices": [
         {
           "id": "a",
-          "text": "CYP3A4 induction reducing DOAC levels"
+          "text": "Ibuprofen is a pharmacodynamic bleeding risk; ketoconazole is a pharmacokinetic rise in exposure"
         },
         {
           "id": "b",
-          "text": "Additive bleeding tendency from combining anticoagulants with antiplatelets, NSAIDs, or SSRIs — even without a major PK AUC change"
+          "text": "Both drugs raise apixaban exposure by the same strong CYP3A4 and P-glycoprotein mechanism"
         },
         {
           "id": "c",
-          "text": "Only food–drug binding in the gut"
+          "text": "Ketoconazole is only a platelet problem, and ibuprofen is the strong CYP3A4 inhibitor of the pair"
         },
         {
           "id": "d",
-          "text": "CLIA waived-test QC failures"
+          "text": "Neither added drug matters unless the INR on apixaban has already exceeded 3"
         }
       ],
-      "correctId": "b",
-      "explanation": "PD interactions increase bleed risk via mechanism overlap (hemostasis). Separate them conceptually from PK inhibitors/inducers when counseling and reconciling meds.",
+      "correctId": "a",
+      "explanation": "Choice A sorts the mechanisms. Ibuprofen adds platelet dysfunction and gastrointestinal injury without being a combined strong CYP3A4 and P-glycoprotein inhibitor. Ketoconazole is that inhibitor and raises apixaban exposure, which is why the label changes the dose. Choice B gives them one mechanism. Choice C swaps them. Choice D waits for an INR. Source: pharmacodynamic versus pharmacokinetic interaction definitions, applied to the ELIQUIS label.",
       "teachingPoints": [
-        "Ask about OTC NSAIDs every visit.",
-        "Site DDI cards flag PD-bleed pairs without forcing invented HRs."
+        "Ask whether the level changes or the hemostatic system changes.",
+        "Both can bleed. The reason is not the same."
       ],
       "links": [
         {
@@ -4106,36 +4463,40 @@ window.ANTICOAG_CACP = {
           "id": "apixaban-aspirin",
           "label": "Apixaban–aspirin"
         }
+      ],
+      "objectiveIds": [
+        67,
+        69
       ]
     },
     {
       "id": "iv-22",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Protamine sulfate teaching is most accurate as:",
+      "stem": "Three bleeding patients need a reversal discussion: one on intravenous unfractionated heparin, one on enoxaparin, and one on apixaban. Someone orders protamine for all three. How do the effects differ?",
       "choices": [
         {
           "id": "a",
-          "text": "Complete reversal agent for all DOACs and fondaparinux"
+          "text": "Protamine fully reverses all three drugs, including the apixaban bleed"
         },
         {
           "id": "b",
-          "text": "Fully reverses UFH and only partially reverses LMWH; not a DOAC antidote"
+          "text": "Protamine neutralizes heparin, only partly reverses LMWH, and does not reverse a DOAC"
         },
         {
           "id": "c",
-          "text": "First-line warfarin reversal instead of 4F-PCC"
+          "text": "Protamine reverses apixaban only, and it has no neutralizing effect on heparin in clinic"
         },
         {
           "id": "d",
-          "text": "Equivalent to idarucizumab"
+          "text": "Protamine is vitamin K and therefore reverses warfarin rather than heparin"
         }
       ],
       "correctId": "b",
-      "explanation": "Protamine neutralizes UFH well and LMWH incompletely. It does not reverse DOACs; warfarin uses PCC/vitamin K; dabigatran uses idarucizumab.",
+      "explanation": "Choice B matches this site. Heparin labeling: about 1 mg of protamine neutralizes about 100 units of heparin, with a cap of 50 mg in any 10-minute period. Lovenox overdosage text: anti-factor Xa activity is never completely neutralized (maximum about 60%). Protamine is not a DOAC reversal. Choice A promises full reversal of apixaban. Choice C reverses the heparin effect. Choice D confuses protamine with vitamin K. Source: heparin and Lovenox labeling as quoted on this site.",
       "teachingPoints": [
-        "Dosing follows institutional UFH/LMWH reversal charts.",
-        "Allergy/fish product history can matter for protamine reactions."
+        "Heparin, LMWH, and a DOAC are three different protamine problems.",
+        "Partial is not complete, and none is not partial."
       ],
       "links": [
         {
@@ -4143,36 +4504,39 @@ window.ANTICOAG_CACP = {
           "id": "reversal",
           "label": "Reversal"
         }
+      ],
+      "objectiveIds": [
+        70
       ]
     },
     {
       "id": "iv-23",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Apixaban usual AF dosing teaching (without listing every reduction criterion) emphasizes:",
+      "difficulty": "advanced",
+      "stem": "An 80-year-old woman with NVAF weighs 72 kg. Serum creatinine is 1.3 mg/dL. She takes no interacting antifungal. A colleague prescribes apixaban 2.5 mg twice daily 'because she is 80 and the clearance looks modest.' Which principle distinguishes the labeled AF dose from that empiric reduction?",
       "choices": [
         {
           "id": "a",
-          "text": "One universal 20 mg daily with food dose for all adults"
+          "text": "Any single labeled criterion, including age alone, is enough to select 2.5 mg twice daily"
         },
         {
           "id": "b",
-          "text": "Twice-daily dosing with label-based dose reductions when specific age/weight/creatinine criteria are met — verify current labeling rather than memorizing contested cutoffs from unofficial banks"
+          "text": "Creatinine clearance below 50 mL/min is itself the apixaban AF reduction rule"
         },
         {
           "id": "c",
-          "text": "Subcutaneous administration only"
+          "text": "Only one of three criteria is met, so the AF dose stays 5 mg, not empiric 2.5 mg"
         },
         {
           "id": "d",
-          "text": "INR-titrated apixaban"
+          "text": "Acute VTE dosing, 10 mg twice daily for 7 days, is required for every new AF prescription"
         }
       ],
-      "correctId": "b",
-      "explanation": "Apixaban is BID; dose reductions follow labeled ABC-type criteria. This unofficial bank avoids inventing or debating exact numeric thresholds — check the label.",
+      "correctId": "c",
+      "explanation": "Choice C counts the criteria. Age 80 or older is present. Weight 72 kg is not 60 kg or less. Serum creatinine 1.3 mg/dL is not 1.5 or higher. One criterion does not select 2.5 mg. Cockcroft-Gault clearance is about 39 mL/min, (140−80)×72×0.85/(72×1.3), and that number is the rivaroxaban-style fact, not the apixaban rule. Choice A reduces for age alone. Choice B imports the rivaroxaban cutoff. Choice D starts VTE lead-in dosing for AF. Source: ELIQUIS AF criteria as printed on this site.",
       "teachingPoints": [
-        "ARISTOTLE informs NVAF efficacy/safety context on this site.",
-        "Acute VTE uses a different load (AMPLIFY)."
+        "Count to two. Age alone is not enough.",
+        "A clearance near 40 mL/min does not replace the three AF criteria."
       ],
       "links": [
         {
@@ -4185,36 +4549,39 @@ window.ANTICOAG_CACP = {
           "id": "amplify",
           "label": "AMPLIFY"
         }
+      ],
+      "objectiveIds": [
+        65
       ]
     },
     {
       "id": "iv-24",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "Laboratory assessment of DOAC effect in emergencies is best framed as:",
+      "stem": "A patient on dabigatran, last dose 4 hours ago, needs emergency surgery. The INR is 1.2. The activated partial thromboplastin time is prolonged. A thrombin time is available but not yet drawn. Which interpretation is sound?",
       "choices": [
         {
           "id": "a",
-          "text": "INR reliably quantifies all DOAC levels"
+          "text": "A normal INR clears dabigatran, so surgery proceeds as if no anticoagulant dose was taken"
         },
         {
           "id": "b",
-          "text": "Routine PT/INR/aPTT are imperfect; specialized assays may help but decisions often proceed based on last dose timing, renal function, and clinical bleed severity"
+          "text": "The INR is the therapeutic target for dabigatran and is raised with vitamin K before the incision"
         },
         {
           "id": "c",
-          "text": "A normal aPTT always excludes clinically relevant dabigatran"
+          "text": "A prolonged activated partial thromboplastin time is a precise dabigatran concentration in ng/mL"
         },
         {
           "id": "d",
-          "text": "Chromogenic factor X is the DOAC gold standard"
+          "text": "A normal INR does not clear dabigatran, and waiting for a level should not delay urgent reversal"
         }
       ],
-      "correctId": "b",
-      "explanation": "DOAC labs are nuanced. Do not delay resuscitation for exotic assays. Timing since last dose and supportive/reversal pathways drive care.",
+      "correctId": "d",
+      "explanation": "Choice D is the emergency reading. Dabigatran is not dosed by the INR. A thrombin time is highly sensitive to dabigatran and a normal thrombin time argues against an important on-board effect, but waiting for that tube does not delay reversal before emergency surgery, where idarucizumab is the specific agent. A prolonged activated partial thromboplastin time suggests an effect and is not a quantitative level. Choice A clears the drug with the INR. Choice B gives vitamin K. Choice C treats a clotting time as a concentration. Source: dabigatran laboratory interpretation and RE-VERSE AD.",
       "teachingPoints": [
-        "Know what your lab can actually run after hours.",
-        "Andexxa is not an available U.S. FXa option as of Dec 2025 withdrawal."
+        "The INR is the wrong clearance test.",
+        "Do not wait on a send-out level while a life-threatening bleed continues."
       ],
       "links": [
         {
@@ -4232,67 +4599,76 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        28,
+        29
       ]
     },
     {
       "id": "iv-25",
       "domainId": "IV",
-      "difficulty": "core",
-      "stem": "Enoxaparin renal accumulation risk means clinicians should:",
+      "difficulty": "advanced",
+      "stem": "A 78-year-old man weighs 80 kg. Serum creatinine is 2.4 mg/dL. He needs treatment-dose enoxaparin for acute VTE. A prior order from last year, when his creatinine was 0.9 mg/dL, says 1 mg/kg every 12 hours. Which renal concern changes that order?",
       "choices": [
         {
           "id": "a",
-          "text": "Ignore creatinine because LMWH is only hepatic"
+          "text": "Clearance is about 29 mL/min, so the labeled treatment dose is 1 mg/kg once daily"
         },
         {
           "id": "b",
-          "text": "Adjust or avoid per labeling in significant renal impairment and consider anti-Xa monitoring in selected patients per protocols"
+          "text": "Enoxaparin is cleared entirely by the liver, so the old twice-daily order continues at any creatinine"
         },
         {
           "id": "c",
-          "text": "Double the dose automatically when eGFR falls"
+          "text": "Clearance below 30 mL/min means the milligram dose is doubled to overcome uremia"
         },
         {
           "id": "d",
-          "text": "Prefer enoxaparin over all other options in ESRD without review"
+          "text": "The renal adjustment is an INR target of 2 to 3, not a change in the injection interval"
         }
       ],
-      "correctId": "b",
-      "explanation": "LMWH is renally cleared; impairment raises bleed risk via accumulation. Follow label/institutional adjustments; UFH is sometimes preferred in severe CKD.",
+      "correctId": "a",
+      "explanation": "Choice A is the accumulation issue. Cockcroft-Gault clearance is (140−78)×80/(72×2.4) = 29 mL/min. The U.S. Lovenox treatment label uses 1 mg/kg once daily, rather than 1 mg/kg every 12 hours, when creatinine clearance is below 30 mL/min. Choice B denies renal clearance. Choice C doubles the dose. Choice D substitutes an INR. Source: Lovenox renal dosage adjustment. This dose is a label fact and is not a table on this site.",
       "teachingPoints": [
-        "Obesity and pregnancy are other monitoring contexts.",
-        "Do not invent anti-Xa target numbers here."
+        "Recompute clearance before copying last year's twice-daily order.",
+        "Below 30 mL/min is a longer interval, not a bigger dose."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        64,
+        65,
+        67
+      ]
     },
     {
       "id": "iv-26",
       "domainId": "IV",
       "difficulty": "advanced",
-      "stem": "St John’s wort with DOACs is concerning primarily because it may:",
+      "stem": "A patient on apixaban starts St John's wort for sleep. No other interacting drug is present. The AF dose otherwise fits his age, weight, and creatinine. Why does this herbal product force an interaction review?",
       "choices": [
         {
           "id": "a",
-          "text": "Strongly inhibit CYP3A4 and raise levels only"
+          "text": "It inhibits CYP3A4 and is managed with the same dose cut used for ketoconazole"
         },
         {
           "id": "b",
-          "text": "Induce enzymes/transporters and reduce DOAC exposure — generally avoid"
+          "text": "It induces CYP3A4 and P-glycoprotein, and the apixaban label says to avoid that inducer"
         },
         {
           "id": "c",
-          "text": "Act as a vitamin K substitute reversing warfarin only, with no DOAC relevance"
+          "text": "It affects only warfarin, so a DOAC medication list needs no herbal section"
         },
         {
           "id": "d",
-          "text": "Serve as recommended herbal adherence support"
+          "text": "It replaces anticoagulation, so apixaban is stopped in favor of the herbal product in clinic"
         }
       ],
       "correctId": "b",
-      "explanation": "St John’s wort is an inducer concern for DOACs (and can affect warfarin). Counsel patients that 'natural' does not mean safe with anticoagulants.",
+      "explanation": "Choice B matches the ELIQUIS label, which names St John's wort with rifampin, carbamazepine, and phenytoin as a strong inducer combination to avoid. Choice A calls it an inhibitor and reaches for the half-dose rule. Choice C limits herbs to warfarin. Choice D treats the herb as an anticoagulant. Source: ELIQUIS inducer list.",
       "teachingPoints": [
-        "Reconcile herbals at every visit.",
-        "See DDI library rather than quoting invented percentages."
+        "An herbal inducer can look too mild to matter.",
+        "The label lists it beside rifampin, not beside ketoconazole."
       ],
       "links": [
         {
@@ -4300,129 +4676,142 @@ window.ANTICOAG_CACP = {
           "id": "rivaroxaban-st-johns-wort",
           "label": "Rivaroxaban–SJW"
         }
+      ],
+      "objectiveIds": [
+        69
       ]
     },
     {
       "id": "v-04",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "ICD-10 / CPT awareness for anticoagulation clinics mainly supports:",
+      "difficulty": "advanced",
+      "stem": "A coder asks why the anticoagulation service cares that an encounter says 'coagulopathy' when the clinician treated acute PE, and 'history of anticoagulant use' when the patient has mechanical-valve AF. Which coding practice supports the service?",
       "choices": [
         {
           "id": "a",
-          "text": "Inventing diagnosis codes that maximize payment without documentation"
+          "text": "Choose the highest-paying code available, even when it names a different disease than the one treated"
         },
         {
           "id": "b",
-          "text": "Accurate indication coding, visit/procedure coding for INR management and education, and audit-ready documentation aligned to the service performed"
+          "text": "Leave the diagnosis blank so that coding cannot affect the clinical anticoagulation record"
         },
         {
           "id": "c",
-          "text": "Replacing clinical notes entirely with billing codes"
+          "text": "Code the anticoagulant's name as the disease and omit the indication that was actually treated"
         },
         {
           "id": "d",
-          "text": "Coding Andexxa administration after 2026 U.S. withdrawal as routine"
+          "text": "Code the condition that was treated, so the record and the bill describe the same event"
         }
       ],
-      "correctId": "b",
-      "explanation": "Operational competency includes knowing that coding must match documented indication and services (INR checks, anticoagulation management codes as applicable). Fraudulent upcoding is unethical and illegal.",
+      "correctId": "d",
+      "explanation": "Choice D is the documentation point. Accurate coding of acute PE, or of AF with a mechanical valve, keeps the clinical indication visible to the next clinician and supports honest compensation. Choice A is upcoding. Choice B hides the indication. Choice C replaces the disease with a drug name. No code number is stated. Source: diagnosis coding as part of anticoagulation documentation.",
       "teachingPoints": [
-        "Keep problem lists updated when indications change (e.g., provoked VTE end date).",
-        "Local compliance office owns final billing rules."
+        "The indication in the note and the code should tell the same story.",
+        "A vague 'coagulopathy' label loses the PE."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        75
+      ]
     },
     {
       "id": "v-05",
       "domainId": "V",
       "difficulty": "advanced",
-      "stem": "A clinic quality dashboard for warfarin patients might reasonably track:",
+      "stem": "A warfarin clinic is building a safety dashboard. A vendor offers a single tile: average patient-satisfaction stars. Leadership wants measures that would actually show unsafe anticoagulation. Which set fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Only the number of DOAC commercials patients saw"
+          "text": "Time in range, extreme-INR follow-up, time to act on a critical result, and bleeding review"
         },
         {
           "id": "b",
-          "text": "TTR, extreme INR rates, time-to-follow-up after out-of-range values, and adverse event reviews"
+          "text": "Only the number of warfarin tablets dispensed, with no INR data on the dashboard at all today"
         },
         {
           "id": "c",
-          "text": "CHA₂DS₂-VASc as a clinic TTR substitute"
+          "text": "A DOAC INR target of 2 to 3, applied to the warfarin panel and the DOAC panel together"
         },
         {
           "id": "d",
-          "text": "Mandatory weekly CT scans"
+          "text": "The count of patients switched off warfarin, used as the clinic's only safety metric"
         }
       ],
-      "correctId": "b",
-      "explanation": "Domain V metrics focus on process/outcome quality for anticoagulation services. TTR is central for VKA cohorts; operational lag after critical INRs is a safety signal.",
+      "correctId": "a",
+      "explanation": "Choice A is a warfarin safety set: control (time in therapeutic range), the tail of extreme INRs, whether a critical result was acted on, and whether bleeding was reviewed. Choice B counts bottles. Choice C gives DOACs an INR target. Choice D treats switching as safety and would misread FRAIL-AF, which did not support routine switching of stable frail patients. Source: warfarin clinic dashboard design. No percentage cutoff is set.",
       "teachingPoints": [
-        "Pair metrics with improvement cycles (education, PST eligibility, recall systems).",
-        "Stewardship may also track DOAC dosing appropriateness."
+        "Look at the unsafe tail, not only a satisfaction star.",
+        "A switch count is not a bleeding review."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        76
+      ]
     },
     {
       "id": "v-06",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "CLIA concepts for POC INR programs require clinics to:",
+      "difficulty": "advanced",
+      "stem": "A clinic performs point-of-care INR testing and assumes the manufacturer visit last year transferred all responsibility away from the staff. Controls have not been documented for a week. Which responsibilities remain with the clinic?",
       "choices": [
         {
           "id": "a",
-          "text": "Ignore manufacturer QC because waived tests need no controls"
+          "text": "None, because a device manual replaces local duties"
         },
         {
           "id": "b",
-          "text": "Follow applicable complexity category rules, perform required QC, train staff, and maintain competency/documentation"
+          "text": "Training, quality control, result documentation, and a response when the test system fails"
         },
         {
           "id": "c",
-          "text": "Send every POC sample to three reference labs simultaneously always"
+          "text": "Only billing, because analytical quality belongs solely to the patient"
         },
         {
           "id": "d",
-          "text": "Use expired test strips to save cost"
+          "text": "A duty to release every result, including failed controls, so the dashboard stays full"
         }
       ],
       "correctId": "b",
-      "explanation": "Even waived testing carries regulatory and safety duties. QC failures should block patient result reporting until resolved.",
+      "explanation": "Choice B keeps the duties local: competent operators, documented controls, a record of the result that was actually used, and a stop rule when the system fails. Choice A transfers the duty to a manual. Choice C assigns quality to the patient. Choice D releases failed runs. Source: point-of-care responsibilities that remain with the testing site. No regulation section is numbered.",
       "teachingPoints": [
-        "Designate a clinical consultant/lab director relationship as required locally.",
-        "Correlate POC vs lab when results and clinical picture diverge."
+        "A vendor visit does not absorb the daily control log.",
+        "Failed controls are not reportable INRs."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        74,
+        77
+      ]
     },
     {
       "id": "iii-12",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "A patient on rivaroxaban 15 or 20 mg once daily with food will cross several time zones on a long flight and asks how to take tonight’s dose. Best education principle:",
+      "difficulty": "advanced",
+      "stem": "A man takes rivaroxaban 20 mg with the evening meal for AF and is flying east across several time zones. He proposes skipping two doses 'to reset' and then taking 40 mg with a breakfast when he lands. Which written plan is sound?",
       "choices": [
         {
           "id": "a",
-          "text": "Skip anticoagulation for the entire trip to avoid timing mistakes"
+          "text": "Skip two doses, then take 40 mg, because a time-zone change requires an AF loading dose"
         },
         {
           "id": "b",
-          "text": "Double the dose on departure day so timing no longer matters"
+          "text": "Switch the 20 mg tablet to an empty stomach for every travel day"
         },
         {
           "id": "c",
-          "text": "Keep roughly 24 hours between doses, take the labeled 15 or 20 mg dose with food, and use a written plan for the transition day rather than guessing at the gate"
+          "text": "Replace the AF dose with rivaroxaban 2.5 mg twice daily for the duration of the flight"
         },
         {
           "id": "d",
-          "text": "Switch to aspirin for travel days only"
+          "text": "Keep about a 24-hour interval, take 20 mg with an evening meal on local time, and do not double"
         }
       ],
-      "correctId": "c",
-      "explanation": "Travel counseling preserves the labeled interval and food requirement for rivaroxaban 15–20 mg. Patients need a simple written plan for the transition day—not skipped therapy, doubled doses, or aspirin substitution when OAC is indicated.",
+      "correctId": "d",
+      "explanation": "Choice D keeps the once-daily AF regimen: about 24 hours between doses, with food, without a double dose to compensate for the flight. Choice A skips and then doubles. Choice B drops the food requirement. Choice C substitutes the COMPASS dose for AF. Source: XARELTO once-daily administration with the evening meal, and the missed-dose instruction not to double the next dose.",
       "teachingPoints": [
-        "The label pairs 15 mg and 20 mg doses with food and once-daily dosing at about the same time each day; teach-back confirms the patient can state both before travel.",
-        "For complex itineraries, the answer points to a clinic call rather than improvising."
+        "Time zones change the clock, not the daily dose.",
+        "Doubling after a skip is the error to write down and forbid."
       ],
       "links": [
         {
@@ -4430,36 +4819,39 @@ window.ANTICOAG_CACP = {
           "id": "rocket-af",
           "label": "ROCKET AF"
         }
+      ],
+      "objectiveIds": [
+        52
       ]
     },
     {
       "id": "iii-13",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "Education for a patient on apixaban 5 mg BID who will spend a week in a time zone 7 hours different from home should emphasize:",
+      "stem": "A woman on apixaban 5 mg twice daily, usually 8 a.m. and 8 p.m., will land after a long eastbound flight and be tempted to take both tablets at the new breakfast 'to get back on schedule.' Which counseling principle fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Take both tablets together each morning while abroad"
+          "text": "Keep two doses in the new day, separated, rather than swallowing 10 mg at once to reset the clock"
         },
         {
           "id": "b",
-          "text": "Space doses about 12 hours apart on local clocks after a planned transition, and avoid inventing a ‘travel hold’"
+          "text": "Take 10 mg at the new breakfast and then skip the next two scheduled doses"
         },
         {
           "id": "c",
-          "text": "Stop apixaban until returning home to keep the home schedule sacred"
+          "text": "Stop apixaban for the whole travel week because time zones inactivate factor Xa inhibitors"
         },
         {
           "id": "d",
-          "text": "Replace one daily dose with an NSAID for jet-lag headaches"
+          "text": "Switch to a morning INR check to decide the timing of the travel doses"
         }
       ],
-      "correctId": "b",
-      "explanation": "BID DOAC education centers on maintaining roughly 12-hour spacing. After a planned shift to local time, patients continue twice daily—they do not stack doses, stop therapy for convenience, or add NSAIDs.",
+      "correctId": "a",
+      "explanation": "Choice A preserves the twice-daily schedule without a doubled dose. The ELIQUIS missed-dose instruction is to take a missed dose the same day and not to double to make up. Choice B doubles and then skips. Choice C stops therapy for convenience. Choice D uses an INR to time apixaban. Source: ELIQUIS dosing and missed-dose labeling.",
       "teachingPoints": [
-        "A written AM/PM local-time schedule beats memory during jet lag.",
-        "Missed-dose rules remain drug-specific—refer to label/clinic instructions rather than guessing."
+        "Two doses still happen. They are not combined into one.",
+        "The INR does not time this drug."
       ],
       "links": [
         {
@@ -4467,129 +4859,143 @@ window.ANTICOAG_CACP = {
           "id": "aristotle",
           "label": "ARISTOTLE"
         }
+      ],
+      "objectiveIds": [
+        52
       ]
     },
     {
       "id": "iii-14",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "Which travel-preparation point belongs in anticoagulation patient education?",
+      "difficulty": "advanced",
+      "stem": "A patient on warfarin is packing for a two-week trip. He has an INR due in 10 days, one bottle of tablets, and no plan for a bleed in another city. Which travel point belongs in the counseling?",
       "choices": [
         {
           "id": "a",
-          "text": "Pack anticoagulants only in checked luggage so they stay cool"
+          "text": "Leave the warfarin at home so that vacation bleeding risk falls to zero"
         },
         {
           "id": "b",
-          "text": "Leave all refill bottles at home to reduce theft risk"
+          "text": "Pack enough tablets, know where an INR can be drawn, and know where to go if bleeding starts"
         },
         {
           "id": "c",
-          "text": "Carry enough medication in hand luggage for the trip plus a buffer, keep a current med list, and know how to reach the clinic if doses are lost"
+          "text": "Double the dose on the day of departure so the two-week trip needs no INR monitoring in clinic"
         },
         {
           "id": "d",
-          "text": "Stop anticoagulation 72 hours before any flight longer than 4 hours"
+          "text": "Cancel the trip if the destination is more than one time zone from home"
         }
       ],
-      "correctId": "c",
-      "explanation": "Continuity counseling: keep critical meds in carry-on with a buffer supply and contact plan. Checked-bag-only storage, leaving refills behind, or routine pre-flight holds are unsafe teaching.",
+      "correctId": "b",
+      "explanation": "Choice B is the travel bundle: an adequate supply, a way to get the scheduled INR, and an urgent-care destination if bleeding occurs. Choice A creates an intentional interruption. Choice C preloads the dose. Choice D treats a time zone as a contraindication. Source: travel counseling for warfarin.",
       "teachingPoints": [
-        "A simple wallet card or phone med list helps if care is needed away from home.",
-        "VTE prevention on long flights is separate from stopping indicated therapeutic OAC—do not conflate."
+        "Supply, monitoring, and a bleeding plan travel with the patient.",
+        "A vacation is not a reason to stop or to double."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        52
+      ]
     },
     {
       "id": "iii-15",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "Before a vacation, a patient on warfarin asks about binge drinking at a wedding. Best education response:",
+      "difficulty": "advanced",
+      "stem": "A man on warfarin, usual INR around 2.4, plans to binge-drink at a wedding while traveling. He rarely drinks otherwise. He asks whether 'one big night' is fine because his INR was in range last month. Which response addresses the safety issue?",
       "choices": [
         {
           "id": "a",
-          "text": "Alcohol never interacts with warfarin, so no limits apply"
+          "text": "A binge is protective, because alcohol always lowers a warfarin INR into a safer range"
         },
         {
           "id": "b",
-          "text": "Binge drinking can destabilize INR and increase bleed risk—advise ahead with the clinic rather than guessing holds or double doses after the party"
+          "text": "Skip warfarin that night and double it the next day to compensate for the wedding alcohol"
         },
         {
           "id": "c",
-          "text": "Take an extra warfarin tablet the morning after drinking"
+          "text": "A binge can increase bleeding and move the INR, so last month's in-range value does not make it safe"
         },
         {
           "id": "d",
-          "text": "Replace warfarin with aspirin for the wedding week"
+          "text": "Alcohol interacts only with DOACs, so a warfarin patient can binge without added bleeding risk"
         }
       ],
-      "correctId": "b",
-      "explanation": "Warfarin education includes lifestyle consistency. Binge alcohol can perturb INR and bleeding risk; patients should call for guidance rather than self-adjusting doses or switching to aspirin.",
+      "correctId": "c",
+      "explanation": "Choice C is the counseling. Heavy episodic drinking raises bleeding risk and can perturb INR control; last month's in-range value does not cover a binge. Choice A gives alcohol a protective direction. Choice B skips and doubles warfarin. Choice D confines the issue to DOACs. No drink-count threshold is stated. Source: alcohol as a bleeding and INR risk with warfarin, which is also a HAS-BLED element.",
       "teachingPoints": [
-        "Pair with bleed red-flag teach-back already covered elsewhere in Domain III.",
-        "Document counseling when high-risk social events are anticipated."
+        "An old INR does not license a binge.",
+        "Do not pair the binge with a skipped or doubled warfarin dose."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        39,
+        52
+      ]
     },
     {
       "id": "v-07",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "A nurse catches a near-miss where a discharged patient almost received rivaroxaban 20 mg without food counseling. The most appropriate clinic operations response is:",
+      "difficulty": "advanced",
+      "stem": "A nurse catches a near-miss: a patient on rivaroxaban 20 mg almost leaves without being told to take it with the evening meal. She stopped the discharge. Which operational response best prevents the next miss?",
       "choices": [
         {
           "id": "a",
-          "text": "Ignore it because no harm reached the patient"
+          "text": "Counsel the nurse for delaying discharge, and leave the after-visit summary exactly as it was"
         },
         {
           "id": "b",
-          "text": "Report/document the near-miss through the clinic’s safety channel so counseling workflows can be improved"
+          "text": "Add the food warning only to the 2.5 mg product, because food matters solely for the COMPASS dose"
         },
         {
           "id": "c",
-          "text": "Punish only the discharging resident and close the file"
+          "text": "Put the 15 mg and 20 mg food rule in the discharge set and the teach-back, then watch for repeat misses"
         },
         {
           "id": "d",
-          "text": "Invent a new rivaroxaban AUC target for the next staff meeting"
+          "text": "Remove food counseling, because one caught near-miss means the discharge process already works"
         }
       ],
-      "correctId": "b",
-      "explanation": "Operational quality depends on capturing near-misses, not only harmful events. Reporting feeds system fixes (teach-back prompts, discharge checklists). Blame-only responses and invented PK targets are not Domain V practice.",
+      "correctId": "c",
+      "explanation": "Choice C turns the catch into a system change aimed at the doses that actually require food. This site states that 15 mg and 20 mg rivaroxaban tablets are taken with food, and the AF dose with the evening meal. Choice A punishes the interception. Choice B edits the wrong strength. Choice D treats one catch as proof the gap is closed. Source: near-miss response for a known label administration rule.",
       "teachingPoints": [
-        "Near-miss reporting is a stewardship/safety input, not optional trivia.",
-        "Close the loop: what workflow change prevents recurrence?"
+        "The near-miss names a missing hard stop.",
+        "Fix the 15 mg and 20 mg discharge path, not the 2.5 mg path."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        76,
+        84
+      ]
     },
     {
       "id": "v-08",
       "domainId": "V",
       "difficulty": "advanced",
-      "stem": "Pharmacy & Therapeutics (P&T) involvement in an anticoagulation program is most clearly demonstrated when the clinic:",
+      "stem": "The pharmacy and therapeutics committee is reviewing anticoagulation order sets after Andexxa was withdrawn in the United States. Which activity shows the committee doing governance rather than filing a memo?",
       "choices": [
         {
           "id": "a",
-          "text": "Lets each prescriber invent private DOAC reversal recipes without review"
+          "text": "Leave the Andexxa order set active so prescribers can still see the historical option"
         },
         {
           "id": "b",
-          "text": "Aligns formulary choices, order sets, and reversal pathways with reviewed protocols and updates them when labeling or availability changes (e.g., U.S. Andexxa status)"
+          "text": "Approve a DOAC order set that omits kidney function because the committee prefers shorter forms"
         },
         {
           "id": "c",
-          "text": "Bans all DOACs to simplify inventory"
+          "text": "Adopt one dose for mechanical valves and for pregnancy in order to shorten the monograph"
         },
         {
           "id": "d",
-          "text": "Uses social media polls to pick INR targets"
+          "text": "Retire the withdrawn order, and require an indication, a dose, and a current reversal path"
         }
       ],
-      "correctId": "b",
-      "explanation": "Domain V includes governance: formulary and order-set decisions should run through reviewed institutional processes (often P&T-linked) and stay current with labeling/availability—such as U.S. Andexxa withdrawal shifting FXa bleed teaching to supportive care + institutional/off-label 4F-PCC per local protocol.",
+      "correctId": "d",
+      "explanation": "Choice D is governance: the committee removes a product the FDA withdrawal took off the United States market effective 22 December 2025, and it requires order sets to carry the indication, the labeled dose, and a reversal path that matches current teaching (idarucizumab for dabigatran; supportive care plus institutional 4F-PCC for factor Xa inhibitors). Choice A keeps a dangerous order live. Choice B drops kidney function. Choice C collapses VKA niches. Source: formulary governance after the Andexxa withdrawal, as framed on this site.",
       "teachingPoints": [
-        "Operational updates after major labeling/availability shifts are a clinic responsibility.",
-        "Local protocols beat ad-hoc reversal improvisation."
+        "An order set is a clinical instruction, not an archive.",
+        "Indication and kidney function belong in the set the committee approves."
       ],
       "links": [
         {
@@ -4597,67 +5003,74 @@ window.ANTICOAG_CACP = {
           "id": "reversal",
           "label": "Bleed & reversal"
         }
+      ],
+      "objectiveIds": [
+        74,
+        84
       ]
     },
     {
       "id": "v-09",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "Staff competency for an anticoagulation clinic is best reflected by:",
+      "difficulty": "advanced",
+      "stem": "A service adds three new nurses and asks them to run the warfarin panel immediately. They have not been observed obtaining a point-of-care INR or acting on a critical result. Which process establishes competence?",
       "choices": [
         {
           "id": "a",
-          "text": "One-time orientation with no reassessment after protocol changes"
+          "text": "Training plus direct observation of the test and the critical-result action before independent practice"
         },
         {
           "id": "b",
-          "text": "Documented initial training plus periodic competency checks on dosing counseling, bleed triage escalation, and POC INR workflows when used"
+          "text": "A self-attestation email, with no one watching the task, accepted as full competence"
         },
         {
           "id": "c",
-          "text": "Allowing only physicians to speak to patients about missed doses"
+          "text": "Competence assumed from a general nursing license, with no anticoagulation-specific check"
         },
         {
           "id": "d",
-          "text": "Memorizing invented NNT tables for every DOAC trial"
+          "text": "Observation scheduled only after the first dosing error, and that error is the training program in clinic"
         }
       ],
-      "correctId": "b",
-      "explanation": "Operational programs maintain documented competencies and refresh them when protocols change. One-time orientation and inventing efficacy trivia are not quality systems.",
+      "correctId": "a",
+      "explanation": "Choice A is competence: training plus observed performance of the actual tasks, recorded before independent practice, and repeated when the process changes. Choice B accepts a self-report. Choice C treats a license as task-specific skill. Choice D waits for harm. Source: staff-competence process for an anticoagulation service.",
       "teachingPoints": [
-        "Competency includes knowing escalation paths, not only pill facts.",
-        "POC INR users also need CLIA/quality competencies (see related Domain V items)."
+        "Watch the task. Do not infer it from a license.",
+        "Record the observation before independent dosing."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        77
+      ]
     },
     {
       "id": "v-10",
       "domainId": "V",
       "difficulty": "advanced",
-      "stem": "After a major U.S. labeling/availability change (Andexxa withdrawn Dec 22, 2025), an anticoagulation clinic’s operational priority is:",
+      "stem": "It is January 2026 in a United States hospital. The electronic Andexxa order is still selectable for rivaroxaban-associated intracranial hemorrhage. Which operational response prevents an outdated order?",
       "choices": [
         {
           "id": "a",
-          "text": "Leave old Andexxa order sets active so staff have ‘something to click’"
+          "text": "Add a tooltip that says Andexxa is preferred, so the old order looks current"
         },
         {
           "id": "b",
-          "text": "Update order sets, policies, and staff education to U.S. supportive care + institutional/off-label 4F-PCC per protocol, and retire Andexxa as a U.S. orderable option"
+          "text": "Hard-stop the order, point to the institutional 4F-PCC pathway, and audit any remaining use"
         },
         {
           "id": "c",
-          "text": "Switch all FXa bleeds to idarucizumab automatically"
+          "text": "Keep the order for clinicians who trained before 2025, as a standing grandfather exception now"
         },
         {
           "id": "d",
-          "text": "Hide the change from trainees to avoid confusion"
+          "text": "Replace the Andexxa order with idarucizumab for every factor Xa inhibitor bleed"
         }
       ],
       "correctId": "b",
-      "explanation": "Domain V meets Domain IV at the policy layer: when U.S. availability changes, clinics must update order sets and educate staff toward supportive care + institutional/off-label 4F-PCC per protocol. Idarucizumab remains dabigatran-specific; dormant Andexxa buttons are a safety hazard.",
+      "explanation": "Choice B is the system fix after the 22 December 2025 withdrawal: the order cannot be selected, the current pathway is the one that opens, and an audit checks for stragglers. Choice A refreshes the wrong message. Choice C grandfathers a withdrawn drug. Choice D uses dabigatran's antibody for rivaroxaban. Source: this site's operational teaching after the Andexxa withdrawal.",
       "teachingPoints": [
-        "Pair operational updates with teach modules (`doac-major-bleed-us` / reversal page).",
-        "Document the effective date of pathway changes."
+        "A selectable order is an instruction.",
+        "Audit after the hard stop, because old favorites linger."
       ],
       "links": [
         {
@@ -4680,219 +5093,441 @@ window.ANTICOAG_CACP = {
           "id": "annexa-historical-vs-us-4fpcc",
           "label": "Nuance: ANNEXA vs U.S. 4F-PCC"
         }
+      ],
+      "objectiveIds": [
+        74,
+        84
       ]
     },
     {
-  "id": "i-27",
-  "domainId": "I",
-  "difficulty": "core",
-  "stem": "Compared with a mechanical prosthetic valve, a bioprosthetic TAVI/TAVR pathway differs most importantly for anticoagulation teaching because:",
-  "choices": [
-    { "id": "a", "text": "Both always require lifelong warfarin at INR 3.5–4.5 regardless of rhythm" },
-    { "id": "b", "text": "Mechanical valves are a VKA niche with DOAC contraindication teaching, whereas post-TAVI antithrombotic choice forks on whether a separate OAC indication (e.g., AF) exists — routine DOAC ‘for the valve’ without that indication is not the default" },
-    { "id": "c", "text": "TAVI patients must always receive therapeutic DOAC plus DAPT for life to prevent leaflet thrombosis" },
-    { "id": "d", "text": "Mechanical aortic valves are treated identically to sinus-rhythm TAVI on this site" }
-  ],
-  "correctId": "b",
-  "explanation": "Mechanical prostheses are VKA territory (DOAC contraindicated teaching). Post-TAVI care starts by asking whether a separate OAC indication exists; without one, antiplatelet pathways (often SAPT) are taught rather than routine DOAC for the prosthesis. Do not import mechanical-valve rules into every TAVI case or vice versa.",
-  "teachingPoints": [
-    "GALILEO/ATLANTIS/NOTION-4-era teaching argues against routine post-TAVI DOAC without another OAC indication.",
-    "See mechanical-valve and post-TAVI frameworks."
-  ],
-  "links": [
-    { "kind": "framework", "id": "mechanical-valve-vka", "label": "Framework: Mechanical valve" },
-    { "kind": "framework", "id": "post-tavi-antithrombotic", "label": "Framework: Post-TAVI" },
-    { "kind": "trial", "id": "galileo", "label": "GALILEO" }
-  ]
-},
+      "id": "i-27",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "Patient 1 is in sinus rhythm one month after TAVI, with no AF, no recent stent, and no other OAC indication. Patient 2 has a mechanical mitral valve. A neighbor tells patient 1 that all valve patients take warfarin for life, and tells patient 2 that a DOAC is simpler. Which comparison is sound?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Both patients share one lifelong warfarin plan, because TAVI and a mechanical mitral valve are the same prosthesis"
+        },
+        {
+          "id": "b",
+          "text": "The mechanical-valve patient may take a DOAC, and the TAVI patient needs the GALILEO rivaroxaban strategy"
+        },
+        {
+          "id": "c",
+          "text": "A mechanical mitral valve stays a VKA case, and GALILEO did not support a routine post-TAVI DOAC"
+        },
+        {
+          "id": "d",
+          "text": "Neither patient needs any antithrombotic plan after the first month, including antiplatelet therapy"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C separates the prostheses. Mechanical valves are a VKA niche (RE-ALIGN stopped dabigatran for harm). GALILEO tested a rivaroxaban-based strategy after TAVI in people without an OAC indication and stopped early, with more death or thromboembolism than an antiplatelet strategy. Choice A equates the valves. Choice B offers a DOAC for the mechanical valve and adopts the GALILEO strategy that did not succeed. Choice D drops therapy entirely. Source: GALILEO and RE-ALIGN, as on this site.",
+      "teachingPoints": [
+        "Mechanical valves are not a DOAC niche.",
+        "GALILEO does not make a DOAC the default after TAVI in sinus rhythm."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "mechanical-valve-vka",
+          "label": "Framework: Mechanical valve"
+        },
+        {
+          "kind": "framework",
+          "id": "post-tavi-antithrombotic",
+          "label": "Framework: Post-TAVI"
+        },
+        {
+          "kind": "trial",
+          "id": "galileo",
+          "label": "GALILEO"
+        }
+      ],
+      "objectiveIds": [
+        15,
+        20
+      ]
+    },
     {
-  "id": "ii-37",
-  "domainId": "II",
-  "difficulty": "advanced",
-  "stem": "Five days after successful TAVI, a patient in sinus rhythm with no AF, no recent coronary stent, and no other OAC indication is started on a DOAC ‘to prevent leaflet thrombosis,’ with aspirin continued. Best management teaching:",
-  "choices": [
-    { "id": "a", "text": "Continue DOAC + aspirin indefinitely — imaging studies mandate routine post-TAVI OAC" },
-    { "id": "b", "text": "This is typical no-OAC-indication post-TAVI care: prefer an antiplatelet pathway (usually SAPT when dual therapy is not otherwise indicated); do not start routine DOAC for HALT prophylaxis — GALILEO/ATLANTIS/NOTION-4-era teaching argues against routine DOAC without a separate indication, and ACASA’s HALT imaging signal is not a clinical mandate" },
-    { "id": "c", "text": "Switch to warfarin INR 2.5–3.5 because all aortic prostheses are mechanical-valve equivalents" },
-    { "id": "d", "text": "Add prasugrel to create full triple therapy for 12 months as default TAVI law" }
-  ],
-  "correctId": "b",
-  "explanation": "Fork on OAC indication first. Without one, do not invent a DOAC-for-HALT default. Site teaching: GALILEO stopped early for higher death or thromboembolic events with a rivaroxaban strategy vs antiplatelet care; ATLANTIS no-indication stratum showed concerning signals vs antiplatelet care; NOTION-4 short DOAC HALT effect is not durable; ACASA imaging ≠ mandate. POPular TAVI favors SAPT over routine DAPT when dual therapy is not indicated.",
-  "teachingPoints": [
-    "CHA₂DS₂-VASc without AF does not create an OAC indication after TAVI.",
-    "See case tavi-sinus-routine-doac and nuance acasa-vs-notion4."
-  ],
-  "links": [
-    { "kind": "framework", "id": "post-tavi-antithrombotic", "label": "Framework: Post-TAVI" },
-    { "kind": "case", "id": "tavi-sinus-routine-doac", "label": "Case: TAVI sinus DOAC" },
-    { "kind": "nuance", "id": "acasa-vs-notion4", "label": "Nuance: ACASA vs NOTION-4" },
-    { "kind": "trial", "id": "galileo", "label": "GALILEO" },
-    { "kind": "trial", "id": "popular-tavi", "label": "POPular TAVI" }
-  ]
-},
+      "id": "ii-37",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "Three weeks after TAVI, a 78-year-old man is in sinus rhythm with no AF, no recent coronary stent, and no other OAC indication. A clinic note starts rivaroxaban plus aspirin 'to prevent leaflet thrombus,' modeled on a neighbor's AF prescription. Hemoglobin is 13 g/dL. Which interpretation fits GALILEO?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "GALILEO stopped rivaroxaban early for harm versus antiplatelets when no other OAC indication existed"
+        },
+        {
+          "id": "b",
+          "text": "GALILEO made rivaroxaban plus aspirin the default after every TAVI, including mechanical mitral valves"
+        },
+        {
+          "id": "c",
+          "text": "GALILEO enrolled only mechanical valves, so a tissue valve in sinus rhythm should use dabigatran"
+        },
+        {
+          "id": "d",
+          "text": "Leaflet concern means the acute VTE lead-in, 15 mg twice daily for 21 days, starts after every implant"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A matches GALILEO on this site: patients after TAVI without an established OAC indication were randomized to a rivaroxaban-based strategy (rivaroxaban 10 mg daily plus aspirin for 3 months) or an antiplatelet strategy. The trial stopped early. Death or thromboembolism was higher with rivaroxaban (9.8 versus 7.2 per 100 person-years; HR 1.35). Choice B extends that strategy and even to mechanical valves. Choice C misstates the population and offers dabigatran. Choice D uses acute VTE dosing. Source: GALILEO card.",
+      "teachingPoints": [
+        "No AF and no stent is the GALILEO population, not an AF prescription.",
+        "A neighbor's DOAC does not transfer to this implant."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "post-tavi-antithrombotic",
+          "label": "Framework: Post-TAVI"
+        },
+        {
+          "kind": "case",
+          "id": "tavi-sinus-routine-doac",
+          "label": "Case: TAVI sinus DOAC"
+        },
+        {
+          "kind": "nuance",
+          "id": "acasa-vs-notion4",
+          "label": "Nuance: ACASA vs NOTION-4"
+        },
+        {
+          "kind": "trial",
+          "id": "galileo",
+          "label": "GALILEO"
+        },
+        {
+          "kind": "trial",
+          "id": "popular-tavi",
+          "label": "POPular TAVI"
+        }
+      ],
+      "objectiveIds": [
+        20,
+        24
+      ]
+    },
     {
-  "id": "ii-38",
-  "domainId": "II",
-  "difficulty": "core",
-  "stem": "For elective colonoscopy in typical nonvalvular AF on warfarin (no mechanical valve, no recent VTE), a reflexive LMWH bridge while warfarin is held is:",
-  "choices": [
-    { "id": "a", "text": "Required by BRIDGE because forgoing bridging increased stroke" },
-    { "id": "b", "text": "Not routine — BRIDGE found forgoing bridging noninferior for arterial thromboembolism and major bleeding higher with bridging; plan interruption/restart without reflexive LMWH in this phenotype" },
-    { "id": "c", "text": "Mandatory for every dental cleaning as well" },
-    { "id": "d", "text": "Preferred because bridging never increases bleeding" }
-  ],
-  "correctId": "b",
-  "explanation": "Matches BRIDGE and the peri-procedural-oac framework: typical AF ≠ mechanical-valve or acute-VTE bridging logic. Confirm whether interruption is needed with the proceduralist; do not equate ‘never uncovered’ with safer.",
-  "teachingPoints": [
-    "Existing items ii-10 / ii-23 remain valid; this item ties the new peri framework to a concrete elective procedure.",
-    "High thrombotic-risk VKA niches still need specialty bridging plans."
-  ],
-  "links": [
-    { "kind": "framework", "id": "peri-procedural-oac", "label": "Framework: Peri-procedural OAC" },
-    { "kind": "case", "id": "af-warfarin-bridge-reflex", "label": "Case: AF warfarin bridge reflex" },
-    { "kind": "trial", "id": "bridge", "label": "BRIDGE" }
-  ]
-},
+      "id": "ii-38",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 73-year-old woman with typical NVAF on warfarin is booked for elective colonoscopy. She has no mechanical valve, no recent VTE, and no prior stroke. The pre-procedure message says heparin shots will be given for the whole time warfarin is held. How should routine bridging be viewed?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "As required, because BRIDGE showed that bridging cuts major bleeding roughly in half in clinic"
+        },
+        {
+          "id": "b",
+          "text": "As unsupported here: thromboembolism was similar and major bleeding was higher with bridging"
+        },
+        {
+          "id": "c",
+          "text": "As mandatory, because colonoscopy of any kind was an exclusion from the BRIDGE trial"
+        },
+        {
+          "id": "d",
+          "text": "As a reason to switch her to a DOAC for the single night before the procedure"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B is BRIDGE on this site. Arterial thromboembolism was 0.4% without bridging and 0.3% with bridging. Major bleeding was 1.3% versus 3.2%. Typical NVAF is that population. Choice A reverses the bleeding result. Choice C claims an exclusion the trial did not use for colonoscopy in general. Choice D adds an unplanned one-night DOAC. Whether the endoscopy requires a hold at all is a separate proceduralist question. Source: BRIDGE.",
+      "teachingPoints": [
+        "Name the phenotype before writing heparin.",
+        "More bleeding with similar thrombosis is the BRIDGE result."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "peri-procedural-oac",
+          "label": "Framework: Peri-procedural OAC"
+        },
+        {
+          "kind": "case",
+          "id": "af-warfarin-bridge-reflex",
+          "label": "Case: AF warfarin bridge reflex"
+        },
+        {
+          "kind": "trial",
+          "id": "bridge",
+          "label": "BRIDGE"
+        }
+      ],
+      "objectiveIds": [
+        43
+      ]
+    },
     {
-  "id": "ii-39",
-  "domainId": "II",
-  "difficulty": "advanced",
-  "stem": "A patient with unprovoked DVT completes early DOAC therapy; repeat testing confirms triple-positive APS. They ask to ‘just stay on the DOAC like everyone else.’ Best long-term agent teaching:",
-  "choices": [
-    { "id": "a", "text": "Continue the DOAC indefinitely — antibody tier never changes agent choice" },
-    { "id": "b", "text": "Prefer transition to dose-adjusted warfarin (typical INR 2–3 teaching frame unless specialty sets otherwise); high-risk / triple-positive APS is not a convenience DOAC upgrade" },
-    { "id": "c", "text": "Stop all anticoagulation because APS only needs aspirin" },
-    { "id": "d", "text": "Switch to rivaroxaban 2.5 mg BID + aspirin (COMPASS) as APS standard of care" }
-  ],
-  "correctId": "b",
-  "explanation": "Risk-tier APS before renewing a DOAC. Triple-positive / high-risk APS is taught as VKA-preferring on this site. COMPASS vascular dosing is a different niche and not APS therapy.",
-  "teachingPoints": [
-    "Do not invent TRAPS/RAPS event rates — not curated as numeric teaching here.",
-    "See aps-triple-positive framework/case."
-  ],
-  "links": [
-    { "kind": "framework", "id": "aps-triple-positive-vka", "label": "Framework: APS VKA" },
-    { "kind": "case", "id": "aps-triple-positive-doac", "label": "Case: Triple-positive DOAC request" },
-    { "kind": "pathway", "id": "aps", "label": "TX: APS" }
-  ]
-},
+      "id": "ii-39",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 46-year-old man has been on rivaroxaban for 6 weeks after an unprovoked DVT. Repeat labs confirm lupus anticoagulant, IgG anticardiolipin, and IgG anti-β2-glycoprotein I. He feels well and wants to finish a standard 3-month DOAC course and stop. Creatinine clearance is normal. He is not a surgical provocation case. Which long-term strategy fits?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Stop at 3 months, because triple-positive antibodies shorten VTE therapy"
+        },
+        {
+          "id": "b",
+          "text": "Continue rivaroxaban 20 mg, because TRAPS found fewer arterial events than with warfarin"
+        },
+        {
+          "id": "c",
+          "text": "Transition to dose-adjusted warfarin, the comparator that TRAPS did not find inferior in this phenotype"
+        },
+        {
+          "id": "d",
+          "text": "Switch to rivaroxaban 2.5 mg twice daily plus aspirin, the COMPASS regimen, for antiphospholipid syndrome"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C matches the high-risk phenotype. TRAPS, in triple-positive patients, was stopped early because events were more frequent with rivaroxaban than with warfarin targeted to an INR of 2.5 (19% versus 3% on this site), and the thromboembolic events were in the rivaroxaban group. A short DOAC course does not fit persistent triple positivity with a clot. Choice A shortens therapy. Choice B reverses TRAPS. Choice D uses a CAD regimen. Source: TRAPS and this site's triple-positive pathway.",
+      "teachingPoints": [
+        "Confirm the antibodies, then change the long-term agent.",
+        "Feeling well does not convert this into a provoked 3-month clot."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "aps-triple-positive-vka",
+          "label": "Framework: APS VKA"
+        },
+        {
+          "kind": "case",
+          "id": "aps-triple-positive-doac",
+          "label": "Case: Triple-positive DOAC request"
+        },
+        {
+          "kind": "pathway",
+          "id": "aps",
+          "label": "TX: APS"
+        }
+      ],
+      "objectiveIds": [
+        18,
+        20,
+        36
+      ]
+    },
     {
-  "id": "iii-16",
-  "domainId": "III",
-  "difficulty": "core",
-  "stem": "A patient with typical NVAF on warfarin says: ‘For my colonoscopy they have to give me Lovenox shots the whole time my warfarin is stopped, or I’ll stroke.’ Best education response:",
-  "choices": [
-    { "id": "a", "text": "Agree — BRIDGE proved everyone on warfarin needs LMWH bridging for every procedure" },
-    { "id": "b", "text": "Explain that for many people with typical AF, routine bridging shots add bleeding risk without improving stroke prevention during a planned hold — the team will make a personalized hold/restart plan and only use bridging when thrombotic risk is unusually high (for example some valve situations)" },
-    { "id": "c", "text": "Tell them to stop warfarin permanently and use aspirin only around procedures" },
-    { "id": "d", "text": "Advise doubling warfarin the week before instead of any hold" }
-  ],
-  "correctId": "b",
-  "explanation": "Domain III translates BRIDGE into patient language without dumping trial jargon. Emphasize personalized plans and that bridging is not automatically protective.",
-  "teachingPoints": [
-    "Invite questions about mechanical valves / recent clots as ‘tell us if this applies to you’ screens.",
-    "Document education when patients arrive with bridging expectations."
-  ],
-  "links": [
-    { "kind": "framework", "id": "peri-procedural-oac", "label": "Framework: Peri-procedural OAC" },
-    { "kind": "trial", "id": "bridge", "label": "BRIDGE" },
-    { "kind": "case", "id": "af-warfarin-bridge-reflex", "label": "Case: Bridge reflex" }
-  ]
-},
+      "id": "iii-16",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A 70-year-old man with typical NVAF expects heparin shots for every warfarin hold around colonoscopy. He has no mechanical valve and no recent VTE. He says, 'I was told I am never safe unless I am on shots.' Which counseling response explains the evidence?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Agree with him, because BRIDGE showed that heparin shots prevent bleeding during a hold"
+        },
+        {
+          "id": "b",
+          "text": "Tell him shots are required only for a diagnostic colonoscopy and not if a polyp might be removed"
+        },
+        {
+          "id": "c",
+          "text": "Promise that heparin removes all stroke risk during the hold and adds no bleeding of its own"
+        },
+        {
+          "id": "d",
+          "text": "In BRIDGE, skipping a heparin bridge did not raise arterial events and caused less major bleeding"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the counseling version of BRIDGE. Arterial thromboembolism was 0.4% without bridging and 0.3% with bridging. Major bleeding was 1.3% versus 3.2%. 'Never uncovered' was not safer. Choice A reverses the bleed finding. Choice B invents a rule that only diagnostic studies skip the bridge; polyp removal changes bleed risk of the procedure, not the BRIDGE population. Choice C denies bridge bleeding. Source: BRIDGE card.",
+      "teachingPoints": [
+        "Use the trial numbers in plain language.",
+        "Shots are not the definition of safety for this phenotype."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "peri-procedural-oac",
+          "label": "Framework: Peri-procedural OAC"
+        },
+        {
+          "kind": "trial",
+          "id": "bridge",
+          "label": "BRIDGE"
+        },
+        {
+          "kind": "case",
+          "id": "af-warfarin-bridge-reflex",
+          "label": "Case: Bridge reflex"
+        }
+      ],
+      "objectiveIds": [
+        52
+      ]
+    },
     {
-  "id": "iii-17",
-  "domainId": "III",
-  "difficulty": "core",
-  "stem": "After TAVI, a patient in sinus rhythm without AF asks for ‘a blood thinner pill for the new valve like my neighbor with AFib.’ Best counseling:",
-  "choices": [
-    { "id": "a", "text": "Start full-dose DOAC because every TAVI valve requires lifelong anticoagulation" },
-    { "id": "b", "text": "Explain that the neighbor’s AF is a different reason for anticoagulation; after TAVI without AF or another OAC indication, care is usually antiplatelet-based, and routine DOAC just for the valve is not the standard teaching — decisions are individualized with the implant team" },
-    { "id": "c", "text": "Replace aspirin with herbal supplements for leaflet ‘thinning’" },
-    { "id": "d", "text": "Promise that CHA₂DS₂-VASc points from age alone mean they must start anticoagulation even without AF" }
-  ],
-  "correctId": "b",
-  "explanation": "Patient education should separate AF stroke prevention from prosthesis-only myths. CHA₂DS₂-VASc without AF does not create an OAC indication. Avoid promising imaging-paper DOAC mandates.",
-  "teachingPoints": [
-    "If new AF appears later, reopen the AF pathway — different conversation.",
-    "Pair with post-TAVI framework/case."
-  ],
-  "links": [
-    { "kind": "framework", "id": "post-tavi-antithrombotic", "label": "Framework: Post-TAVI" },
-    { "kind": "case", "id": "tavi-sinus-routine-doac", "label": "Case: TAVI sinus DOAC" },
-    { "kind": "framework", "id": "af-stroke-prevention", "label": "Framework: AF stroke prevention" }
-  ]
-},
+      "id": "iii-17",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A woman in sinus rhythm after TAVI, with no AF and no stent, asks for a DOAC because her neighbor takes one for AF 'and we both have heart valves now.' Which counseling distinction is the one to make?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The neighbor's AF dose is not hers, and GALILEO did not support that post-TAVI plan"
+        },
+        {
+          "id": "b",
+          "text": "Any valve procedure means a lifelong DOAC, so the neighbor's AF dose is copied onto this TAVI"
+        },
+        {
+          "id": "c",
+          "text": "TAVI in sinus rhythm is managed as a mechanical mitral valve, with an INR target above 3.5"
+        },
+        {
+          "id": "d",
+          "text": "Antiplatelet therapy is forbidden after TAVI, so a DOAC is the only remaining option"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A separates indications. GALILEO tested a rivaroxaban-based strategy after TAVI in patients without an OAC indication and stopped early, with more death or thromboembolism than antiplatelet therapy (9.8 versus 7.2 per 100 person-years; HR 1.35). Choice B copies the neighbor. Choice C applies a mechanical-valve target she does not have. Choice D bans antiplatelet therapy, which was the comparator strategy. Source: GALILEO and this site's post-TAVI framework.",
+      "teachingPoints": [
+        "Ask why the neighbor takes the drug before copying it.",
+        "Sinus rhythm after TAVI is not AF and is not a mechanical mitral valve."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "post-tavi-antithrombotic",
+          "label": "Framework: Post-TAVI"
+        },
+        {
+          "kind": "case",
+          "id": "tavi-sinus-routine-doac",
+          "label": "Case: TAVI sinus DOAC"
+        },
+        {
+          "kind": "framework",
+          "id": "af-stroke-prevention",
+          "label": "Framework: AF stroke prevention"
+        }
+      ],
+      "objectiveIds": [
+        52
+      ]
+    },
     {
-  "id": "iv-27",
-  "domainId": "IV",
-  "difficulty": "core",
-  "stem": "When a DOAC is held for an elective procedure in typical AF (no mechanical valve), the pharmacology teaching point about ‘bridging’ is:",
-  "choices": [
-    { "id": "a", "text": "Therapeutic LMWH bridge is routinely required whenever any DOAC is held, mirroring historical warfarin habits" },
-    { "id": "b", "text": "DOACs have relatively rapid onset/offset versus warfarin; typical AF interruptions usually use timed holds and restarts per renal function, bleed risk, and labeling — not a reflexive heparin bridge while the DOAC is stopped" },
-    { "id": "c", "text": "All DOACs must be bridged with fondaparinux for 10 days regardless of procedure" },
-    { "id": "d", "text": "Hold clocks are identical for dabigatran and apixaban even when CrCl is severely reduced" }
-  ],
-  "correctId": "b",
-  "explanation": "Class teaching: DOAC peri-procedural management is hold/restart planning, not automatic parenteral coverage for typical AF. Exact hours depend on agent, CrCl, and procedure bleed risk — verify locally / monograph (site practical heuristics are not protocols). Dabigatran is more renal-clearance sensitive than some FXa agents — do not invent one clock for all.",
-  "teachingPoints": [
-    "Emergency bleed reversal is a different Dom IV/II fork (U.S. FXa: supportive + institutional 4F-PCC; not Andexxa after Dec 22, 2025).",
-    "See peri-procedural-oac framework."
-  ],
-  "links": [
-    { "kind": "framework", "id": "peri-procedural-oac", "label": "Framework: Peri-procedural OAC" }
-  ]
-},
+      "id": "iv-27",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient with typical NVAF on apixaban, creatinine clearance 70 mL/min, is told to stop the DOAC for 5 days and to use heparin shots before a low-bleeding-risk procedure. Why does that plan misunderstand onset and offset?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Apixaban's offset is as slow as warfarin's, so 5 days plus a heparin bridge is the pharmacokinetic minimum"
+        },
+        {
+          "id": "b",
+          "text": "A DOAC hold always needs heparin because the oral drug has no offset until vitamin K is given"
+        },
+        {
+          "id": "c",
+          "text": "Apixaban's offset is short, and PAUSE did not use a heparin bridge for this low-bleeding-risk hold"
+        },
+        {
+          "id": "d",
+          "text": "Low-bleeding-risk procedures require a longer hold than high-bleeding-risk procedures do"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C combines the pharmacology with PAUSE. Apixaban's half-life supports a short interruption, and PAUSE omitted the DOAC for 1 day before a low-bleeding-risk procedure and 2 days before a high-bleeding-risk procedure, without heparin bridging. A 5-day warfarin-style hold plus shots copies the wrong drug. Choice A equates the offsets. Choice B requires vitamin K. Choice D reverses the risk-based timing. Source: PAUSE protocol on this site and DOAC half-life teaching. No numeric half-life is asserted.",
+      "teachingPoints": [
+        "Do not paste a warfarin hold onto a DOAC.",
+        "Low bleeding risk is the shorter omission in PAUSE, not the longer one."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "peri-procedural-oac",
+          "label": "Framework: Peri-procedural OAC"
+        }
+      ],
+      "objectiveIds": [
+        64,
+        65
+      ]
+    },
     {
-  "id": "v-11",
-  "domainId": "V",
-  "difficulty": "core",
-  "stem": "From an anticoagulation clinic operations perspective, the highest-yield peri-procedural documentation element is:",
-  "choices": [
-    { "id": "a", "text": "A vague note that ‘bridging will be figured out later’ with no owner, hold dates, or restart plan" },
-    { "id": "b", "text": "Named indication and thrombotic-risk class, whether interruption is needed, whether bridging is or is not planned (with rationale), agent-specific hold/restart plan, proceduralist contact, and a named owner for post-procedure restart" },
-    { "id": "c", "text": "Copying an Andexxa order into every pre-op packet for FXa patients after Dec 22, 2025 in the U.S." },
-    { "id": "d", "text": "Deleting INR history so the proceduralist is not biased" }
-  ],
-  "correctId": "b",
-  "explanation": "Domain V turns clinical peri-procedural teaching into clinic workflow: clear ownership and explicit bridge/no-bridge rationale reduce near-misses. U.S. Andexxa order sets should not be resuscitated after withdrawal — that is a separate safety/ops issue already covered in v-10.",
-  "teachingPoints": [
-    "Align notes with peri-procedural-oac framework language.",
-    "Mechanical-valve patients need valve-clinic protocol references when relevant."
-  ],
-  "links": [
-    { "kind": "framework", "id": "peri-procedural-oac", "label": "Framework: Peri-procedural OAC" },
-    { "kind": "case", "id": "af-warfarin-bridge-reflex", "label": "Case: Bridge reflex" }
-  ]
-},
+      "id": "v-11",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "Before elective colonoscopy, three services have written in the chart. Gastroenterology says 'hold blood thinners.' The anticoagulation clinic has not been notified. The patient uses warfarin for typical NVAF. Which documentation establishes ownership?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The phrase 'hold blood thinners,' with no drug name, no dates, and no restart owner in clinic"
+        },
+        {
+          "id": "b",
+          "text": "A heparin-bridge order copied from a mechanical-valve protocol and left unsigned"
+        },
+        {
+          "id": "c",
+          "text": "Name the drug, whether a hold is required, the timing, and which clinician owns the restart"
+        },
+        {
+          "id": "d",
+          "text": "A reminder that the patient should decide alone on the morning of the colonoscopy"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C is the peri-procedural record this site's framework asks for: the agent, whether interruption is even needed, the timing, and a named owner for the restart. For this typical AF patient, BRIDGE does not support routine heparin bridging, so a copied valve bridge does not belong in the note. Choice A is not an order a pharmacist can act on. Choice B imports the wrong protocol. Choice D leaves the decision at the bedside without a plan. Source: peri-procedural documentation and BRIDGE.",
+      "teachingPoints": [
+        "Name the owner of the restart before the procedure day.",
+        "A valve bridge is not the default documentation for this AF patient."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "peri-procedural-oac",
+          "label": "Framework: Peri-procedural OAC"
+        },
+        {
+          "kind": "case",
+          "id": "af-warfarin-bridge-reflex",
+          "label": "Case: Bridge reflex"
+        }
+      ],
+      "objectiveIds": [
+        79,
+        80
+      ]
+    },
     {
       "id": "iii-18",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "A patient newly started on dabigatran twice daily asks to pour the capsules into a weekly pill organizer “so I won’t forget.” Best counseling?",
+      "stem": "A man newly started on dabigatran twice daily wants to pour the capsules into a weekly pill organizer 'so I will not forget.' The bottle was opened today. Which counseling is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Yes — dabigatran is stable in any open container, and taking both capsules once a week is an equivalent schedule"
+          "text": "The weekly organizer is preferred, because dabigatran is more stable in a box than in its bottle"
         },
         {
           "id": "b",
-          "text": "Keep the capsules in the original bottle, tightly closed. They are moisture-sensitive. Use a reminder that does not empty the bottle, and teach-back the twice-daily schedule"
+          "text": "Keep the capsules in the original bottle, and do not pour them into a weekly organizer"
         },
         {
           "id": "c",
-          "text": "Store the opened bottle in a steamy bathroom so the capsules stay activated"
+          "text": "Open each capsule and sprinkle the pellets on food every morning so the doses are easier to remember"
         },
         {
           "id": "d",
-          "text": "Empty the bottle into the organizer and take the whole week’s capsules every Sunday morning"
+          "text": "The moisture warning applies only to warfarin tablets and not to dabigatran capsules"
         }
       ],
       "correctId": "b",
-      "explanation": "Dabigatran may be taken with or without food, and it should stay in the original bottle because it is moisture-sensitive. An adherence tool that exposes the capsules or collapses a twice-daily schedule into a weekly catch-up works against the labeled regimen.",
+      "explanation": "Choice B matches dabigatran handling on this site: the product is moisture-sensitive and stays in the original bottle. Standard labeling also tells patients not to put the capsules in pill boxes. Choice A reverses the stability. Choice C opens capsules for routine dosing. Choice D assigns the warning to warfarin. Source: this site's dabigatran practical note and the PRADAXA storage labeling.",
       "teachingPoints": [
-        "Do not invent a food rule for dabigatran the way rivaroxaban 15–20 mg has one.",
-        "If a pill organizer is non-negotiable, ask pharmacy for a method that protects the capsules rather than guessing."
+        "Adherence help cannot ignore the bottle.",
+        "A weekly box is the wrong fix for this capsule."
       ],
       "links": [
         {
@@ -4900,36 +5535,40 @@ window.ANTICOAG_CACP = {
           "id": "re-ly",
           "label": "RE-LY"
         }
+      ],
+      "objectiveIds": [
+        52,
+        57
       ]
     },
     {
       "id": "iii-19",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "A patient on rivaroxaban 20 mg once daily with the evening meal calls the next morning: “I missed last night. I’ll take two tablets with dinner tonight to catch up.” Best education?",
+      "stem": "A patient on rivaroxaban 20 mg once daily with the evening meal calls the next morning: 'I missed last night. I will take two tablets with dinner tonight to catch up.' Which education response fits the once-daily AF dose?",
       "choices": [
         {
           "id": "a",
-          "text": "Agree — any missed once-daily anticoagulant is corrected by doubling the next dose"
+          "text": "Agree, because the 15 mg twice-daily lead-in rule is to take two 20 mg tablets the next night"
         },
         {
           "id": "b",
-          "text": "Do not take two 20 mg tablets to catch up. Use that product’s missed-dose instructions or call before improvising; whenever a 15 or 20 mg dose is taken, it still goes with food"
+          "text": "Tell him to take 40 mg this morning on an empty stomach and skip dinner"
         },
         {
           "id": "c",
-          "text": "Skip rivaroxaban for the rest of the month so the schedule resets"
+          "text": "Take the usual 20 mg with tonight's meal, and do not double to replace last night"
         },
         {
           "id": "d",
-          "text": "Replace the missed dose with two aspirin 325 mg tablets"
+          "text": "Stop rivaroxaban for a week so the missed dose can 'wash out'"
         }
       ],
-      "correctId": "b",
-      "explanation": "The label's missed-dose instruction for once-daily rivaroxaban is to take the missed dose as soon as remembered on the same day and not to double the dose; 15 mg and 20 mg doses are labeled with food. This item adds no hour cutoff.",
+      "correctId": "c",
+      "explanation": "Choice C is the once-daily instruction. A dose missed yesterday is not replaced by doubling tonight. The separate rule that can put two 15 mg tablets together applies only to the acute VTE lead-in, not to 20 mg AF dosing. Choice A mixes those rules and the strengths. Choice B doubles on an empty stomach. Choice D stops therapy. Source: XARELTO once-daily missed-dose labeling.",
       "teachingPoints": [
-        "Repeated misses are an adherence problem, not a reason to invent a double dose.",
-        "The 15 mg twice-daily lead-in has a different labeled missed-dose rule (two 15 mg tablets may be taken at once to reach 30 mg that day)."
+        "Last night's miss is not tonight's double.",
+        "The lead-in catch-up rule is a different regimen."
       ],
       "links": [
         {
@@ -4937,36 +5576,39 @@ window.ANTICOAG_CACP = {
           "id": "rocket-af",
           "label": "ROCKET AF"
         }
+      ],
+      "objectiveIds": [
+        52
       ]
     },
     {
       "id": "iii-20",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "A patient on apixaban 5 mg twice daily remembers at the evening dose that the morning dose was missed and wants to swallow 10 mg now “to catch up,” then skip tomorrow morning. Best counseling?",
+      "stem": "A patient on apixaban 5 mg twice daily remembers at the evening dose that the morning dose was missed. He wants to swallow 10 mg now and skip tomorrow morning. Which response fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Yes — stacking both doses is the standard make-up rule for every twice-daily anticoagulant"
+          "text": "Agree, because a twice-daily drug is caught up by taking 10 mg now and skipping tomorrow morning"
         },
         {
           "id": "b",
-          "text": "Do not stack the morning and evening doses into one 10 mg sitting or skip the next morning by guesswork. Keep doses about 12 hours apart and follow apixaban’s missed-dose instructions or call the clinic"
+          "text": "Tell him to take 10 mg now and another 10 mg tomorrow night as the new permanent schedule"
         },
         {
           "id": "c",
-          "text": "Stop apixaban until the next routine clinic visit"
+          "text": "Stop apixaban until a measured INR is below 1.0, then restart the usual dose"
         },
         {
           "id": "d",
-          "text": "Take the extra 5 mg together with a scheduled ibuprofen"
+          "text": "Take the usual 5 mg this evening, do not take 10 mg, and take tomorrow morning's dose on schedule"
         }
       ],
-      "correctId": "b",
-      "explanation": "Apixaban adherence teaching keeps the twice-daily rhythm. Stacking 10 mg, skipping the next morning, or adding an NSAID are not make-up plans. Hour-by-hour cutoffs stay on the product label and the clinic line — they are not a new number to memorize here.",
+      "correctId": "d",
+      "explanation": "Choice D refuses the doubled dose and the skipped next morning. The ELIQUIS instruction is to take a missed dose as soon as possible on the same day and not to double to make up. Swallowing 10 mg now specifically 'to catch up,' then skipping tomorrow, is the double-and-skip plan. Choice A endorses it. Choice B makes 10 mg the new dose. Choice C inserts an INR stop rule apixaban does not use. Source: ELIQUIS missed-dose labeling.",
       "teachingPoints": [
-        "Apixaban may be taken with or without food; do not add a rivaroxaban food rule.",
-        "A written morning/evening card beats a verbal “catch up later.”"
+        "Do not turn a miss into 10 mg and a skipped morning.",
+        "The usual evening tablet still happens."
       ],
       "links": [
         {
@@ -4974,36 +5616,39 @@ window.ANTICOAG_CACP = {
           "id": "aristotle",
           "label": "ARISTOTLE"
         }
+      ],
+      "objectiveIds": [
+        52
       ]
     },
     {
       "id": "iii-21",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "A patient on warfarin for atrial fibrillation missed last night’s tablet and plans to take two tonight “so the level doesn’t drop.” Best counseling?",
+      "stem": "A patient on warfarin for AF missed last night's tablet and plans to take two tonight 'so the level does not drop.' The INR was 2.3 four days ago. There is no bleeding. Which counseling fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Agree — a missed warfarin dose is always corrected by doubling, and no INR check is needed"
+          "text": "Do not double tonight; ask the clinic, and do not replace a missed warfarin tablet with an extra one"
         },
         {
           "id": "b",
-          "text": "Do not double warfarin on your own. Call the clinic so the dose and the next INR follow-up can be planned. A missed VKA tablet is not a DOAC catch-up, and aspirin does not replace it"
+          "text": "Take two tonight and skip the next two nights, which keeps the weekly milligram total identical in clinic"
         },
         {
           "id": "c",
-          "text": "Eat a very large kale meal tonight instead of the tablet"
+          "text": "Take vitamin K tonight so the single missed tablet cannot cause a clot by morning"
         },
         {
           "id": "d",
-          "text": "Stop INR checks for the rest of the year because one missed tablet resets the range"
+          "text": "Double the dose for the rest of the week because one miss resets the INR to 1.0"
         }
       ],
-      "correctId": "b",
-      "explanation": "Warfarin missed-dose counseling goes through the clinic because INR monitoring is the feedback loop. Patients should not double the tablet, “replace” it with a vitamin K binge, or substitute aspirin when anticoagulation is indicated.",
+      "correctId": "a",
+      "explanation": "Choice A is the warfarin miss rule: an extra tablet tonight can overshoot the INR later, and the clinic gives the make-up plan rather than the patient inventing one. A single miss does not drop the INR to 1.0 the next morning, because warfarin's effect lags. Choice B rearranges several days without a plan. Choice C gives vitamin K for a missed dose. Choice D extends the double. Source: warfarin missed-dose counseling.",
       "teachingPoints": [
-        "Vitamin K teaching stays “consistent intake,” not a one-night rescue meal.",
-        "If misses are repeating, treat that as an adherence barrier, not a math problem."
+        "A missed warfarin tablet is not replaced by a double.",
+        "The effect lags, so one miss is not an INR of 1.0 in the morning."
       ],
       "links": [
         {
@@ -5011,36 +5656,39 @@ window.ANTICOAG_CACP = {
           "id": "ttr-vka-quality",
           "label": "Framework: TTR / VKA quality"
         }
+      ],
+      "objectiveIds": [
+        52
       ]
     },
     {
       "id": "iii-22",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "After rivaroxaban is started for atrial fibrillation, teach-back shows the patient can say “blood thinner” but cannot state once daily, with food, what bleeding should prompt a call, or whom to call. Best next step?",
+      "stem": "After rivaroxaban is started for AF, teach-back shows the patient can say 'blood thinner' but cannot state once daily, with food, or what bleeding should prompt a call. He nods that the leaflet was helpful. Which conclusion is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Document “education complete” because a package insert was placed in the bag"
+          "text": "The nod plus the words 'blood thinner' are enough to document that he understands the plan"
         },
         {
           "id": "b",
-          "text": "Do not close the encounter. Use plain language and a simple once-daily-with-food schedule (a picture card if reading is hard), an interpreter when needed, and repeat teach-back until schedule, food, bleed warnings, and the contact plan are clear"
+          "text": "Not adequate until he can state the schedule, the food rule, and a bleeding trigger"
         },
         {
           "id": "c",
-          "text": "Hand over the full prescribing monograph as the only remaining method"
+          "text": "Failure to restate the plan means rivaroxaban is stopped and aspirin is substituted the same day"
         },
         {
           "id": "d",
-          "text": "Reassure them that missing most doses is acceptable if the weekly average looks okay"
+          "text": "Teach-back is only for warfarin, so a nod is enough documentation for any DOAC start"
         }
       ],
       "correctId": "b",
-      "explanation": "A failed teach-back means the method changes — shorter words, a pictorial schedule, an interpreter when language is the barrier — and the teach-back is repeated. Printing a monograph is not proof the patient can take rivaroxaban 15–20 mg with food or recognize a bleed.",
+      "explanation": "Choice B is the point of teach-back. A category name plus a nod does not show he knows the once-daily evening-meal schedule or a bleeding trigger. Choice A accepts the nod. Choice C stops indicated therapy because education is incomplete. Choice D limits teach-back to warfarin. Source: teach-back applied to a new DOAC.",
       "teachingPoints": [
-        "Interpreter services are part of safe anticoagulation education, not an optional extra.",
-        "Document what the patient could and could not teach back, and the plan to close the gap."
+        "'Blood thinner' is not a schedule.",
+        "Keep teaching. Do not convert a failed restatement into an aspirin switch."
       ],
       "links": [
         {
@@ -5048,36 +5696,41 @@ window.ANTICOAG_CACP = {
           "id": "rocket-af",
           "label": "ROCKET AF"
         }
+      ],
+      "objectiveIds": [
+        51,
+        54,
+        55
       ]
     },
     {
       "id": "iii-23",
       "domainId": "III",
       "difficulty": "advanced",
-      "stem": "A patient on apixaban says they take it every other day “so the bottle lasts.” Best adherence counseling?",
+      "stem": "A patient on apixaban says they take it every other day 'so the bottle lasts.' They feel well and have had no clot. Cost is the stated reason. Which adherence counseling is appropriate?",
       "choices": [
         {
           "id": "a",
-          "text": "Approve alternate-day use as a safe way to stretch any DOAC"
+          "text": "Praise the every-other-day plan, because a lower average dose is always safer and still fully protective"
         },
         {
           "id": "b",
-          "text": "Do not endorse skipped days. Name the barrier (cost, routine, side effects, or understanding), connect them with the clinic or pharmacy for access help, and rebuild the labeled twice-daily schedule with teach-back"
+          "text": "Tell them to take two days of tablets every Sunday so the same number of tablets is saved"
         },
         {
           "id": "c",
-          "text": "Tell them to double up every Sunday so the week averages out"
+          "text": "Every-other-day use is not the regimen; address the cost without the patient changing the schedule alone"
         },
         {
           "id": "d",
-          "text": "Change them to rivaroxaban 2.5 mg twice daily plus aspirin without checking the indication"
+          "text": "Switch the off days to aspirin, which AVERROES supports as an equivalent stroke-prevention plan"
         }
       ],
-      "correctId": "b",
-      "explanation": "Stretching a DOAC by skipping days drops the labeled schedule. Counseling names the real barrier and routes access problems to the clinic or pharmacy instead of authorizing a homemade regimen or a COMPASS-dose switch.",
+      "correctId": "c",
+      "explanation": "Choice C names the behavior as underdosing and moves the cost problem to a legitimate assistance path rather than a homemade schedule. Choice A endorses the skip. Choice B bunches tablets. Choice D uses aspirin on alternate days; AVERROES found aspirin inferior to apixaban for stroke prevention. Source: adherence counseling and AVERROES.",
       "teachingPoints": [
-        "COMPASS vascular dosing is a different niche — not a cheaper substitute for AF apixaban.",
-        "Confirm the patient can state morning and evening after the new plan."
+        "Stretching the bottle changes the dose.",
+        "Cost is a real barrier and is not fixed by skipping."
       ],
       "links": [
         {
@@ -5090,36 +5743,40 @@ window.ANTICOAG_CACP = {
           "id": "aristotle",
           "label": "ARISTOTLE"
         }
+      ],
+      "objectiveIds": [
+        23,
+        57
       ]
     },
     {
       "id": "v-12",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "The quality committee asks the anticoagulation clinic to add a “DOAC TTR” tile and a single national target percent to the public dashboard. Best operational response?",
+      "difficulty": "advanced",
+      "stem": "The quality committee proposes a 'DOAC time in therapeutic range' tile and a single national target percentage for the public dashboard. Which operational response fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Build the tile from refill gaps and publish one pass/fail percent for every patient, including mechanical valves"
+          "text": "Publish the tile, because every anticoagulant, including each DOAC, has an INR range of 2 to 3"
         },
         {
           "id": "b",
-          "text": "Decline both. TTR is a warfarin/VKA INR-control lens (Rosendaal linear interpolation is a method name only). DOACs have no INR target, so they have no TTR, and this program does not adopt a memorized clinic or national target percent"
+          "text": "Set the national target at whatever percentage the dashboard vendor uses as its default"
         },
         {
           "id": "c",
-          "text": "Substitute the clinic’s average CHA₂DS₂-VASc score for TTR"
+          "text": "Apply the tile only to edoxaban, because of the AF clearance ceiling above 95 mL/min"
         },
         {
           "id": "d",
-          "text": "Use Andexxa doses administered as the TTR stand-in after the Dec 22, 2025 U.S. withdrawal"
+          "text": "Reject it: time in therapeutic range is a warfarin metric, not a national DOAC percentage"
         }
       ],
-      "correctId": "b",
-      "explanation": "TTR estimates time inside the prescribed INR range for someone on warfarin. It is not a DOAC metric, not a stroke-risk score, and not a leaderboard. Trial-reported warfarin TTRs describe those trials; they are not clinic goals. No target percent is taught here.",
+      "correctId": "d",
+      "explanation": "Choice D keeps the metric on warfarin. DOACs are not dosed to an INR, so a time-in-range percentage has no denominator. This site deliberately does not use a single cutoff percentage even for warfarin quality slogans. Choice A invents an INR target for DOACs. Choice B adopts a vendor default as a national standard. Choice C mixes the edoxaban clearance ceiling into a fake time-in-range tile. Source: this site's time-in-range teaching.",
       "teachingPoints": [
-        "A named INR target has to exist before TTR means anything — valve ranges are not the same conversation as typical AF teaching, and this item does not invent either number.",
-        "Poor control is a workup (see the related Domain V item), not a dashboard contest."
+        "No INR target means no time-in-range tile.",
+        "Do not let a dashboard default become a clinical standard."
       ],
       "links": [
         {
@@ -5127,36 +5784,39 @@ window.ANTICOAG_CACP = {
           "id": "ttr-vka-quality",
           "label": "Framework: TTR / VKA quality"
         }
+      ],
+      "objectiveIds": [
+        76
       ]
     },
     {
       "id": "v-13",
       "domainId": "V",
       "difficulty": "advanced",
-      "stem": "A warfarin panel’s TTR looks persistently poor. No numeric cutoff is used. Which operations response fits stewardship teaching?",
+      "stem": "A warfarin panel's time in therapeutic range has fallen over two quarters. The patients are mostly frail and older, and many INRs are now low after a switch campaign was proposed. No numeric cutoff is used. Which operations response fits?",
       "choices": [
         {
           "id": "a",
-          "text": "Auto-switch every patient to a DOAC the same day, including mechanical valves and stable frail patients"
+          "text": "Review causes of the unstable INRs and do not launch a routine switch of stable frail patients off warfarin"
         },
         {
           "id": "b",
-          "text": "Review adherence, vitamin K pattern, alcohol, new drugs and herbals, and whether out-of-range INRs have an owner. Offer a labeled DOAC only when the niche is DOAC-eligible. Do not auto-switch a stable frail patient solely because DOACs exist, and do not invent a TTR percent that forces the switch"
+          "text": "Switch every frail patient to a DOAC this week, because a falling percentage is itself the FRAIL-AF indication"
         },
         {
           "id": "c",
-          "text": "Delete out-of-range INRs so the dashboard improves"
+          "text": "Stop all INR checks until the percentage improves on its own"
         },
         {
           "id": "d",
-          "text": "Add full-dose rivaroxaban on top of warfarin until the next INR"
+          "text": "Adopt a single national cutoff and discharge patients who miss it"
         }
       ],
-      "correctId": "b",
-      "explanation": "A poor TTR is a process signal: adherence, diet, interacting substances, and follow-up ownership come first. A labeled DOAC is a consideration only in a DOAC-eligible niche. Mechanical valves stay on VKA teaching, and FRAIL-AF teaching argues against switching a stable frail patient just because a DOAC exists. No TTR percent is supplied here.",
+      "correctId": "a",
+      "explanation": "Choice A is the operations response. A falling time in range triggers a look at missed tests, interacting drugs, diet, and access. FRAIL-AF on this site found more bleeding when frail older adults who were stable on a VKA were switched to a DOAC (15.3% versus 9.4%; HR 1.69), so the campaign is not the remedy. Choice B makes the trial run backwards. Choice C stops measurement. Choice D invents a cutoff this site does not use. Source: FRAIL-AF and this site's quality teaching.",
       "teachingPoints": [
-        "Escalate a still-messy panel to the clinic pharmacist or physician pathway and document the handoff.",
-        "Do not quote a trial bleeding percentage in the operations note — the linked FRAIL-AF card already carries that teaching."
+        "Find why the INRs moved before changing the drug class.",
+        "FRAIL-AF is a reason not to switch stable frail patients routinely."
       ],
       "links": [
         {
@@ -5179,36 +5839,40 @@ window.ANTICOAG_CACP = {
           "id": "frail-vka-switch",
           "label": "Case: frail VKA switch"
         }
+      ],
+      "objectiveIds": [
+        76,
+        84
       ]
     },
     {
       "id": "v-14",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "An out-of-range INR posts late Friday and would change the warfarin plan. Which clinic design is the operations standard?",
+      "difficulty": "advanced",
+      "stem": "An INR of 7.4 posts late Friday from an outside laboratory. The patient is not bleeding. The clinic closes until Monday and has no on-call coverage. Which design is the operations standard?",
       "choices": [
         {
           "id": "a",
-          "text": "Rely on the patient to call if they feel unwell; nobody is assigned"
+          "text": "A policy that Friday afternoon results are not reviewed until the following Tuesday"
         },
         {
           "id": "b",
-          "text": "A named recall owner contacts the patient, documents the plan, and does not leave the result in an unowned queue over the weekend"
+          "text": "A covered path so a critical INR is seen the day it posts, including before the weekend"
         },
         {
           "id": "c",
-          "text": "Wait for the next annual visit to mention the result"
+          "text": "Automatic vitamin K for every Friday result above 2, released by the laboratory with no clinician"
         },
         {
           "id": "d",
-          "text": "Apply a standing rule to double the dose for every high INR, with no clinician review"
+          "text": "Deletion of after-hours results so Monday's inbox does not contain a Friday INR"
         }
       ],
       "correctId": "b",
-      "explanation": "Time-to-follow-up after an out-of-range INR is an operations metric only if someone owns it. An unassigned queue, an annual-visit delay, or a standing double-dose rule are not a recall system. This item does not set an hour limit or an INR cutoff.",
+      "explanation": "Choice B is the design: critical results need a same-day owner, including Friday afternoon. An INR of 7.4 without bleeding is not ignored until Monday and is not an automatic reversal protocol fired by the laboratory. The 2012 CHEST suggestion against routine vitamin K for a nonbleeding INR between 4.5 and 10 still leaves a clinician to hold or adjust the dose. Choice A delays review. Choice C automates vitamin K. Choice D hides the result. Source: critical-result coverage.",
       "teachingPoints": [
-        "Pair the contact with a documented plan, not a voicemail that nobody reads.",
-        "The same ownership idea applies when the result came from patient self-testing — the clinic still covers the patient."
+        "The clock starts when the result posts, not when the clinic reopens.",
+        "A nonbleeding high INR still needs a person."
       ],
       "links": [
         {
@@ -5216,67 +5880,74 @@ window.ANTICOAG_CACP = {
           "id": "ttr-vka-quality",
           "label": "Framework: TTR / VKA quality"
         }
+      ],
+      "objectiveIds": [
+        81
       ]
     },
     {
       "id": "v-15",
       "domainId": "V",
       "difficulty": "advanced",
-      "stem": "A point-of-care INR and a same-day laboratory INR disagree enough that the warfarin dose would change. Device QC was skipped this morning. Best operations rule?",
+      "stem": "A point-of-care INR is 5.1 and a same-day venous INR is 2.5. Required quality control on the meter was missed. The dose would change if 5.1 were believed. Which response addresses both the disagreement and the missed control?",
       "choices": [
         {
           "id": "a",
-          "text": "Report the point-of-care value now — waived tests never need controls or a correlation policy"
+          "text": "Dose from the fingerstick of 5.1, because a higher meter result outranks venous plasma now"
         },
         {
           "id": "b",
-          "text": "Do not dose from an unresolved split. Follow the correlation policy, repeat or verify, and hold patient-result reporting until QC and the discrepancy are addressed"
+          "text": "Average 5.1 and 2.5 and give vitamin K for a blended INR near 3.8"
         },
         {
           "id": "c",
-          "text": "Average the two numbers and dose to that average without a written policy"
+          "text": "Do not use the unchecked meter; document the missed control and dose from the venous INR"
         },
         {
           "id": "d",
-          "text": "Discard the laboratory result because point-of-care devices are always the higher-complexity method"
+          "text": "Report both INRs to the patient and ask the patient to choose today's warfarin dose"
         }
       ],
-      "correctId": "b",
-      "explanation": "Point-of-care INR still sits inside a quality system: QC, training, and a rule for when the lab must confirm. A skipped control plus a split that would change the dose is a stop-the-line event, not a moment to average numbers or to assume the waived result wins.",
+      "correctId": "c",
+      "explanation": "Choice C is the operations response. A missed control removes the meter result from use, the event is documented, and the venous INR is the dosing result once the specimen is confirmed. Choice A privileges the higher number. Choice B invents a midpoint and adds vitamin K. Choice D delegates the dose to the patient. Source: point-of-care nonconformance handling.",
       "teachingPoints": [
-        "Expired strips and failed QC block patient results the same way.",
-        "Document the lot, the control failure, and who released the device back into use."
+        "A missed control is a failed run, not a second opinion.",
+        "Document it so the next shift does not reuse the strips blindly."
       ],
-      "links": []
+      "links": [],
+      "objectiveIds": [
+        74,
+        81
+      ]
     },
     {
       "id": "v-16",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "A stewardship audit finds atrial-fibrillation patients on rivaroxaban 2.5 mg twice daily plus aspirin, and separate charts labeled “COMPASS” that were written for rivaroxaban 20 mg daily. Best operations response?",
+      "difficulty": "advanced",
+      "stem": "An audit finds two recurring patterns. Patients with AF are on rivaroxaban 2.5 mg twice daily plus aspirin. Other charts labeled 'COMPASS' were written for rivaroxaban 20 mg daily with no aspirin and no CAD. Which response fits stewardship?",
       "choices": [
         {
           "id": "a",
-          "text": "Ignore milligram and schedule differences; dose family is optional documentation"
+          "text": "Leave both patterns, because any rivaroxaban strength treats AF and stable CAD equally well"
         },
         {
           "id": "b",
-          "text": "Treat the mix-up as a tracked defect. COMPASS/vascular dosing is rivaroxaban 2.5 mg twice daily plus aspirin — not an AF or therapeutic VTE regimen — and it is not stacked on full-dose anticoagulation. Reconcile indication, regimen, and the note"
+          "text": "Move every patient to 20 mg daily, including those with stable CAD, no AF, and aspirin already on board"
         },
         {
           "id": "c",
-          "text": "Recode every chart as a mechanical valve so billing is uniform"
+          "text": "Move every patient to 2.5 mg twice daily, including those with AF and a prior stroke"
         },
         {
           "id": "d",
-          "text": "Resolve the audit by ordering Andexxa for the panel (U.S., after Dec 22, 2025)"
+          "text": "Correct each chart to the regimen for its indication, and block the swap in the order set"
         }
       ],
-      "correctId": "b",
-      "explanation": "Dose-family errors are an anticoagulation-stewardship metric. Vascular-dose rivaroxaban 2.5 mg twice daily plus aspirin is a different regimen from AF or therapeutic VTE dosing, and the two are not combined. Fixing the chart means indication, regimen, and documentation — not a fake valve code or a withdrawn reversal agent.",
+      "correctId": "d",
+      "explanation": "Choice D separates the regimens this site keeps apart. COMPASS is rivaroxaban 2.5 mg twice daily plus aspirin for stable CAD or PAD, not for AF. AF uses a treatment dose, 20 mg or 15 mg with the evening meal based on creatinine clearance, not 2.5 mg. A chart labeled COMPASS that contains 20 mg and no vascular indication is the opposite error. Choice A accepts both. Choices B and C impose one strength on both populations. Source: COMPASS versus AF dosing on this site.",
       "teachingPoints": [
-        "The same audit should catch acute VTE load schedules still running past the labeled lead-in, without inventing a new calendar here.",
-        "Local compliance owns coding; the clinical mix-up is still a clinic defect."
+        "Read the indication off the dose, then fix the order set.",
+        "2.5 mg plus aspirin is not an AF plan, and 20 mg is not COMPASS."
       ],
       "links": [
         {
@@ -5294,36 +5965,40 @@ window.ANTICOAG_CACP = {
           "id": "compass-vs-af-dose-trap",
           "label": "Case: COMPASS vs AF dose trap"
         }
+      ],
+      "objectiveIds": [
+        76,
+        84
       ]
     },
     {
       "id": "v-17",
       "domainId": "V",
       "difficulty": "advanced",
-      "stem": "The clinic wants to offer INR patient self-testing. Which operations package is required before go-live?",
+      "stem": "The clinic wants to offer INR patient self-testing. A vendor can ship meters next week. No competency checklist, no reporting pathway, and no clinician coverage for after-hours results exist yet. Which package is required before go-live?",
       "choices": [
         {
           "id": "a",
-          "text": "Mail devices to anyone who asks, with no training, no result path, and no covering service"
+          "text": "Training, competency, a reporting path, quality control, and a clinician for each result before go-live"
         },
         {
           "id": "b",
-          "text": "Documented training and competency, a result-reporting pathway, device quality-control expectations, and clinic oversight — self-testing is not an unsupervised gadget"
+          "text": "Meter shipment alone, because the device manual is the entire home-testing program"
         },
         {
           "id": "c",
-          "text": "A policy that self-testing abolishes the target INR range"
+          "text": "A public announcement of the service, which substitutes for competency checks and for after-hours coverage"
         },
         {
           "id": "d",
-          "text": "Procedure codes chosen to maximize payment without documenting the service performed"
+          "text": "Permission for patients to change their own doses as soon as the meter arrives at the house"
         }
       ],
-      "correctId": "b",
-      "explanation": "Who may self-test is a clinical selection question. Whether the program may open is operational: training, competency, quality control, a way for results to reach a covering clinic, and honest documentation. An unsupervised mail-out or a billing-only code is not that package.",
+      "correctId": "a",
+      "explanation": "Choice A is the go-live package. Hardware without a competency check, a way for the result to reach a person, and a person responsible for the dose is not a program. Choice B stops at shipping. Choice C announces an unsafe service. Choice D gives dose authority to an untrained user. Source: home INR program operations on this site.",
       "teachingPoints": [
-        "Unreliable reporters stay on clinic-based testing.",
-        "Out-of-range home results still need the same named recall owner as clinic results."
+        "Do not ship a program you cannot receive results from.",
+        "Competency is part of go-live, not a later upgrade."
       ],
       "links": [
         {
@@ -5331,36 +6006,40 @@ window.ANTICOAG_CACP = {
           "id": "ttr-vka-quality",
           "label": "Framework: TTR / VKA quality"
         }
+      ],
+      "objectiveIds": [
+        74,
+        79
       ]
     },
     {
       "id": "v-18",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "What should an auditor be able to find in a routine anticoagulation stewardship note?",
+      "difficulty": "advanced",
+      "stem": "An auditor opens a routine anticoagulation stewardship note. What should be findable without reading the entire hospital chart?",
       "choices": [
         {
           "id": "a",
-          "text": "Only the phrase “blood thinner — continue,” with no indication"
+          "text": "Only the brand name, with no indication, no dose, and no review date"
         },
         {
           "id": "b",
-          "text": "Indication, planned duration, and dose-family rationale (AF stroke prevention vs acute/therapeutic VTE vs extended prevention vs COMPASS vascular dosing), plus when and by whom it was reviewed"
+          "text": "Indication, regimen, a relevant renal or interaction check, and the next review date"
         },
         {
           "id": "c",
-          "text": "The patient’s copay and nothing clinical"
+          "text": "A statement that all DOACs are interchangeable, with no reason recorded for the one in use"
         },
         {
           "id": "d",
-          "text": "A line that Andexxa is the default U.S. reversal option after Dec 22, 2025"
+          "text": "The auditor's preferred drug, copied into every note regardless of the indication"
         }
       ],
       "correctId": "b",
-      "explanation": "Operational stewardship is auditable when the note names why the anticoagulant exists, how long it is planned, and which dose family was chosen. A one-line “blood thinner” note, a copay-only note, or a post-withdrawal Andexxa default fails that standard.",
+      "explanation": "Choice B is the auditable note: why the drug is used, exactly what is being taken, whether kidney function or a major interaction was considered when that would change the dose, and when someone looks again. Choice A cannot be audited. Choice C asserts interchangeability. Choice D standardizes the auditor's preference. Source: stewardship documentation.",
       "teachingPoints": [
-        "The same three lines belong in the discharge handoff, with a named follow-up owner.",
-        "Peri-procedural bridge/no-bridge detail is additional standard work when a procedure is planned — it does not replace indication and dose family."
+        "A note that cannot show the indication cannot show appropriateness.",
+        "The next review date is what makes the plan ongoing."
       ],
       "links": [
         {
@@ -5368,36 +6047,41 @@ window.ANTICOAG_CACP = {
           "id": "doac-appropriateness",
           "label": "Framework: DOAC appropriateness"
         }
+      ],
+      "objectiveIds": [
+        79,
+        80,
+        84
       ]
     },
     {
       "id": "ii-40",
       "domainId": "II",
-      "difficulty": "core",
-      "stem": "A patient with AF had a coronary stent placed 3 years ago, has had no ischemic events since, and no history of stent thrombosis. They take a DOAC plus aspirin. Which statement best reflects current guideline teaching?",
+      "difficulty": "advanced",
+      "stem": "A 74-year-old man with AF had a coronary stent 3 years ago, with no stent thrombosis and no ischemic event since. He takes a DOAC at his AF dose plus aspirin 81 mg. Kidney function is stable. There is no recent ACS. Which statement best fits AFIRE and AQUATIC?",
       "choices": [
         {
           "id": "a",
-          "text": "Continue both indefinitely, because every stent needs lifelong antiplatelet therapy"
+          "text": "Add clopidogrel now, because a stent placed 3 years ago returns the patient to triple therapy"
         },
         {
           "id": "b",
-          "text": "OAC alone is favored over OAC plus a single antiplatelet; raise stopping the aspirin with the prescriber, keeping the anticoagulant"
+          "text": "Stop the DOAC and continue aspirin, because stable coronary disease outranks AF"
         },
         {
           "id": "c",
-          "text": "Stop the DOAC and keep aspirin, because aspirin protects the stent"
+          "text": "Increase to the acute VTE lead-in, because a remote stent is managed as a new PE"
         },
         {
           "id": "d",
-          "text": "Switch to triple therapy to cover both stroke and stent risk"
+          "text": "Continue the anticoagulant and stop aspirin, the stable-disease direction of AFIRE and AQUATIC"
         }
       ],
-      "correctId": "b",
-      "explanation": "2023 ACC/AHA/ACCP/HRS (Class 1, LOE B-R): in AF with chronic coronary disease beyond 1 year after revascularization and without stent thrombosis, OAC monotherapy is recommended over OAC plus a single antiplatelet to decrease major bleeding. 2024 ESC AF (Class III, LOE B) recommends against antiplatelet therapy beyond 12 months in stable chronic coronary or vascular disease on OAC, and 2024 ESC CCS (Class I, LOE B) favors DOAC alone lifelong.",
+      "correctId": "d",
+      "explanation": "Choice D fits the stable AF-plus-CAD evidence on this site. AFIRE found rivaroxaban alone noninferior to rivaroxaban plus one antiplatelet for efficacy and superior for major bleeding, and it stopped early for higher mortality on combination therapy. AQUATIC, in chronic coronary syndrome with a stent more than 6 months old, found more ischemic events, death, and major bleeding when aspirin was added to oral anticoagulation, and stopped early for excess death. Choice A rebuilds triple therapy. Choice B drops the AF drug. Choice C uses VTE dosing. Source: AFIRE and AQUATIC cards.",
       "teachingPoints": [
-        "Aspirin is not a substitute for indicated anticoagulation in AF.",
-        "Trials in this population (AFIRE, EPIC-CAD, ADAPT AF-DES, AQUATIC) found more bleeding without demonstrated ischemic benefit from the added antiplatelet."
+        "Remote from the stent, the antiplatelet is the drug under question.",
+        "The oral anticoagulant for AF stays."
       ],
       "links": [
         {
@@ -5415,36 +6099,40 @@ window.ANTICOAG_CACP = {
           "id": "epic-cad",
           "label": "EPIC-CAD"
         }
+      ],
+      "objectiveIds": [
+        20,
+        38
       ]
     },
     {
       "id": "ii-41",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "AUGUSTUS included 1097 patients with AF and ACS managed medically (no PCI), all on a P2Y12 inhibitor. Which statement best describes the bleeding findings and limits of that subgroup?",
+      "stem": "A 70-year-old woman with AF is on day 4 of a medically managed non-ST-elevation myocardial infarction. She did not go to the catheterization laboratory. She is prescribed a P2Y12 inhibitor. A slide says AUGUSTUS proved that OAC alone is enough and that aspirin clearly increased bleeding in the 1097-patient medically managed subgroup. Which reading respects what that subgroup can support?",
       "choices": [
         {
           "id": "a",
-          "text": "Dual therapy (OAC plus a single antiplatelet) is proven superior to OAC alone after medically managed ACS"
+          "text": "Apixaban bled less than a VKA; aspirin's bleeding trend was not significant; OAC alone was not tested"
         },
         {
           "id": "b",
-          "text": "Medically managed ACS patients should never receive an antiplatelet with an OAC"
+          "text": "The medically managed subgroup proved that dual therapy is superior to anticoagulation alone after ACS"
         },
         {
           "id": "c",
-          "text": "Aspirin reduced ischemic events enough to offset its bleeding"
+          "text": "Aspirin reduced ischemic events in that subgroup enough to offset the extra bleeding it caused"
         },
         {
           "id": "d",
-          "text": "On a P2Y12 background, apixaban was associated with less bleeding than VKA, adding aspirin showed a non-significant trend toward more bleeding (CI crossed 1), and OAC alone was not tested"
+          "text": "Medically managed ACS forbids any antiplatelet drug alongside an oral anticoagulant"
         }
       ],
-      "correctId": "d",
-      "explanation": "Every AUGUSTUS patient was on a P2Y12 inhibitor and there was no OAC-alone arm. In the medically managed subgroup, ISTH major or CRNM bleeding was lower with apixaban vs VKA (HR 0.44; 95% CI 0.28–0.68). Aspirin vs placebo showed only a non-significant trend toward more bleeding (HR 1.49; 95% CI 0.98–2.26 — the CI crosses 1), although aspirin significantly increased bleeding in the full AUGUSTUS population. The trial cannot say whether a single antiplatelet adds benefit over OAC alone. ESC ACS 2023 gives OAC plus a single antiplatelet for up to 1 year a Class IIa, LOE B recommendation in medically treated patients.",
+      "correctId": "a",
+      "explanation": "Choice A states what the subgroup can support. Every AUGUSTUS patient was on a P2Y12 inhibitor, so there was no OAC-alone arm. In the medically managed subgroup, major or clinically relevant nonmajor bleeding was lower with apixaban than with a VKA (HR 0.44; 95% CI 0.28–0.68). Aspirin versus placebo showed a nonsignificant trend toward more bleeding (HR 1.49; 95% CI 0.98–2.26). Choice B claims a comparison the trial did not randomize. Choice C claims an ischemic offset the subgroup was not powered to prove. Choice D bans antiplatelet therapy. Source: AUGUSTUS prespecified subgroups (ACS treated medically, ACS treated with PCI, and elective PCI; Windecker et al., Circulation 2019;140(23):1921–1932, doi 10.1161/CIRCULATIONAHA.119.043308) and the trial's factorial design.",
       "teachingPoints": [
-        "Read what a trial did not randomize: no OAC-alone arm means no OAC-alone answer.",
-        "Subgroup follow-up was 6 months and not powered for ischemic end points."
+        "No OAC-alone arm means no OAC-alone conclusion.",
+        "A confidence interval that crosses 1 is not a clear aspirin-bleeding win in that subgroup."
       ],
       "links": [
         {
@@ -5457,36 +6145,39 @@ window.ANTICOAG_CACP = {
           "id": "oac-antiplatelet-deprescribe",
           "label": "TX: OAC + antiplatelet deprescribing"
         }
+      ],
+      "objectiveIds": [
+        24
       ]
     },
     {
       "id": "ii-42",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "AQUATIC randomized patients with chronic coronary syndrome, a stent more than 6 months old, and long-term oral anticoagulation to aspirin or placebo. What did it find?",
+      "stem": "A 76-year-old man with AF has a stent that is 2 years old, chronic coronary syndrome, and no recent ACS. He is on warfarin and aspirin. Someone cites AQUATIC as a reason to continue both because 'more antiplatelet is more protection.' What did AQUATIC find?",
       "choices": [
         {
           "id": "a",
-          "text": "Aspirin lowered ischemic events at the cost of a small bleeding increase"
+          "text": "Aspirin reduced the primary ischemic composite and also reduced major bleeding"
         },
         {
           "id": "b",
-          "text": "No difference in any outcome"
+          "text": "Adding aspirin raised ischemic events, bleeding, and death, and the trial stopped early"
         },
         {
           "id": "c",
-          "text": "Aspirin was associated with more ischemic events, more deaths, and more major bleeding; the trial stopped early for excess death"
+          "text": "AQUATIC was a trial of triple therapy in the first week after stent placement"
         },
         {
           "id": "d",
-          "text": "Aspirin reduced all-cause mortality"
+          "text": "AQUATIC showed aspirin and placebo were identical on every endpoint that was counted today"
         }
       ],
-      "correctId": "c",
-      "explanation": "AQUATIC (NEJM 2025; double-blind, n=872) was stopped early after a median 2.2 years because of excess all-cause death with aspirin: 13.4% vs 8.4% (adjusted HR 1.72; 95% CI 1.14–2.58). The primary ischemic composite was 16.9% vs 12.1% (adjusted HR 1.53; 1.07–2.18) and major bleeding 10.2% vs 3.4% (adjusted HR 3.35; 1.87–6.00).",
+      "correctId": "b",
+      "explanation": "Choice B is AQUATIC on this site. In chronic coronary syndrome with a stent placed more than 6 months earlier, adding aspirin 100 mg to ongoing oral anticoagulation increased the primary composite (16.9% versus 12.1%; adjusted HR 1.53), major bleeding (10.2% versus 3.4%), and all-cause death (13.4% versus 8.4%), and the trial stopped early for excess death. Choice A reverses the direction. Choice C relocates the trial to the first week after PCI. Choice D calls the endpoints identical. Source: AQUATIC card.",
       "teachingPoints": [
-        "Early stopping for harm can overestimate the size of the effect — teach the direction firmly and the exact HRs cautiously.",
-        "The abstract says “long-term oral anticoagulation” without naming the agent or limiting it to AF."
+        "This is stable disease, not the peri-PCI week.",
+        "Added aspirin was harmful on ischemia, bleeding, and death in this trial."
       ],
       "links": [
         {
@@ -5494,36 +6185,39 @@ window.ANTICOAG_CACP = {
           "id": "aquatic",
           "label": "AQUATIC"
         }
+      ],
+      "objectiveIds": [
+        24
       ]
     },
     {
       "id": "ii-43",
       "domainId": "II",
       "difficulty": "advanced",
-      "stem": "A colleague's slide says “OAC alone reduces mortality compared with OAC plus an antiplatelet in stable coronary disease.” Which statement best describes the evidence?",
+      "stem": "A colleague's slide says, 'OAC alone reduces mortality compared with OAC plus an antiplatelet in stable coronary disease,' and cites AFIRE, AQUATIC, and OAC-ALONE as if they were one result. Which description of that evidence is accurate?",
       "choices": [
         {
           "id": "a",
-          "text": "Overstated — two early-stopped trials (AFIRE, AQUATIC) showed excess death with combination therapy, but pooled all-cause death is not significant and pooled cardiovascular-death findings are inconsistent"
+          "text": "OAC-ALONE met noninferiority and is the mortality proof, while AFIRE and AQUATIC were neutral trials"
         },
         {
           "id": "b",
-          "text": "Correct — every meta-analysis shows a significant all-cause mortality reduction"
+          "text": "All three trials were stopped because oral anticoagulation alone increased death"
         },
         {
           "id": "c",
-          "text": "Wrong — OAC alone increases mortality"
+          "text": "AFIRE and AQUATIC signal harm from an added antiplatelet; OAC-ALONE did not prove a mortality cut"
         },
         {
           "id": "d",
-          "text": "Unknowable — no randomized trials exist"
+          "text": "The three trials forbid any antiplatelet drug during the first month after PCI"
         }
       ],
-      "correctId": "a",
-      "explanation": "The consistent finding is less bleeding with OAC alone (major bleeding HR 0.46; 95% CI 0.32–0.66 in the 6-trial Galli 2026 meta-analysis, n=5924) with no significant MACE difference. Mortality is a signal, not an established effect: all-cause death was not significant in any meta-analysis, and cardiovascular death was significant in some (Galli, Ibrahim, Garagoli) but not in the Bayesian analysis (Tsarouchas).",
+      "correctId": "c",
+      "explanation": "Choice C separates the trials on this site. AFIRE stopped early for higher mortality with combination therapy in stable AF and CAD. AQUATIC found higher all-cause death with aspirin added. OAC-ALONE did not meet noninferiority for its primary composite (HR 1.16; 95% CI 0.79–1.72), stopped near a third of planned enrollment, and is described on this site as inconclusive, not as proof that OAC alone reduces mortality. Choice A assigns the proof to the inconclusive trial. Choice B reverses the direction of the mortality signals. Choice D applies stable-disease trials to the first month after PCI. Source: AFIRE, AQUATIC, and OAC-ALONE cards.",
       "teachingPoints": [
-        "Single early-stopped trials are hypothesis-strengthening, not proof of a survival benefit.",
-        "The well-supported claim is fewer bleeds without demonstrated ischemic benefit from the added antiplatelet."
+        "Do not collapse three designs into one mortality slogan.",
+        "OAC-ALONE's noninferiority test was not met."
       ],
       "links": [
         {
@@ -5541,36 +6235,39 @@ window.ANTICOAG_CACP = {
           "id": "oac-alone",
           "label": "OAC-ALONE"
         }
+      ],
+      "objectiveIds": [
+        24
       ]
     },
     {
       "id": "iii-24",
       "domainId": "III",
-      "difficulty": "core",
-      "stem": "A patient on a DOAC for prior VTE has taken low-dose aspirin for years, and no one can find a reason for it. They ask, “Should I just stop the aspirin today?” Which response is most appropriate?",
+      "difficulty": "advanced",
+      "stem": "A patient on a DOAC for a prior VTE has taken aspirin 81 mg for years. No stent, no coronary disease, and no other aspirin indication is in the record. They ask, 'Should I just stop the aspirin today?' Which response is the sound one?",
       "choices": [
         {
           "id": "a",
-          "text": "“Yes, stop both pills today.”"
+          "text": "Stop the aspirin this minute, with no note, because every aspirin tablet taken with a DOAC is an error now"
         },
         {
           "id": "b",
-          "text": "“Aspirin is harmless, so it doesn't matter.”"
+          "text": "Continue aspirin for life, because a DOAC prescription is incomplete without an antiplatelet drug"
         },
         {
           "id": "c",
-          "text": "“Keep taking your anticoagulant. The aspirin may be adding bleeding risk without a clear benefit, so I'll raise stopping it with your prescriber — please don't change it until we hear back.”"
+          "text": "Double the DOAC on the day aspirin is stopped, to replace the lost platelet effect"
         },
         {
           "id": "d",
-          "text": "“Double the aspirin instead of taking the anticoagulant.”"
+          "text": "Aspirin may be leftover, but stopping it is a reconciled decision, not an unsupervised phone-call change"
         }
       ],
-      "correctId": "c",
-      "explanation": "Education separates the two drugs: the anticoagulant treats the documented indication; the aspirin needs a named reason. In a Michigan registry (Schaefer 2021), adding aspirin to a DOAC without a clear indication was associated with more bleeding (31.60 vs 26.00 per 100 patient-years) and more bleeding hospitalizations, with no difference in thrombosis. The change itself goes through the prescriber who owns the antiplatelet.",
+      "correctId": "d",
+      "explanation": "Choice D keeps the likely right clinical direction and the right process. Unindicated aspirin adds bleeding risk beside a DOAC, which is the deprescribing problem on this site, but a same-minute stop with no record can miss an indication the chart failed to show. Choice A skips reconciliation. Choice B makes aspirin mandatory. Choice C raises the DOAC to replace platelets. Source: DOAC-plus-aspirin deprescribing practice on this site, distinct from the early period after a stent.",
       "teachingPoints": [
-        "Teach-back: the patient should be able to say which pill is for which reason.",
-        "Teach bleeding warning signs and to report nosebleeds or dark stools."
+        "Look for a reason before celebrating a stop.",
+        "Do not replace aspirin by increasing the DOAC."
       ],
       "links": [
         {
@@ -5583,36 +6280,40 @@ window.ANTICOAG_CACP = {
           "id": "aspirin",
           "label": "Aspirin DDI card"
         }
+      ],
+      "objectiveIds": [
+        52,
+        60
       ]
     },
     {
       "id": "v-19",
       "domainId": "V",
-      "difficulty": "core",
-      "stem": "An anticoagulation clinic wants to reduce unintended DOAC plus aspirin combinations. Which operational step best fits the evidence and scope of practice?",
+      "difficulty": "advanced",
+      "stem": "The clinic wants fewer unindicated DOAC-plus-aspirin combinations. Several patients have AF, a stent from five years ago, and no documented aspirin indication after that. Which operational step fits the evidence and the clinic's scope?",
       "choices": [
         {
           "id": "a",
-          "text": "Automatically discontinue aspirin for every DOAC patient at intake"
+          "text": "Stop every antiplatelet in the health system, including during the first week after a new stent"
         },
         {
           "id": "b",
-          "text": "Ignore aspirin because it is over the counter"
+          "text": "Ignore DOAC-plus-aspirin combinations, because aspirin does not add bleeding on a DOAC"
         },
         {
           "id": "c",
-          "text": "At each DOAC review, document the indication and planned stop point for every antithrombotic and route unexplained antiplatelet use to the prescriber for a decision"
+          "text": "Review whether any aspirin indication remains, then a reconciled stop, tracked as stewardship"
         },
         {
           "id": "d",
-          "text": "Add aspirin for all patients over age 65"
+          "text": "Double the DOAC whenever aspirin is continued, as the safety compensation for the combination"
         }
       ],
       "correctId": "c",
-      "explanation": "In the Michigan registry (Schaefer 2021), 33.8% of DOAC patients for AF or VTE were also taking aspirin without a clear indication. A reconciliation step that names the reason and owner for each antithrombotic finds these patients without overriding indicated therapy (for example, a recent ACS or PCI plan).",
+      "explanation": "Choice C is an operational deprescribing step within clinic scope: find the combination, confirm the stent is remote and no other aspirin indication exists, stop in a documented way, and count the reviews. AFIRE and AQUATIC on this site support dropping the antiplatelet in stable disease, not during the early post-PCI window. Choice A is too broad and would hit new stents. Choice B denies the bleeding interaction. Choice D raises the DOAC. Source: this site's deprescribing pathway and AFIRE/AQUATIC.",
       "teachingPoints": [
-        "Stewardship is documentation plus a referral loop, not automatic discontinuation.",
-        "Over-the-counter aspirin belongs on the medication list."
+        "Scope the review to unindicated aspirin, not to every antiplatelet in the building.",
+        "Track the reconciliations so the work is visible."
       ],
       "links": [
         {
@@ -5625,7 +6326,3264 @@ window.ANTICOAG_CACP = {
           "id": "oac-antiplatelet-deprescribe",
           "label": "TX: OAC + antiplatelet deprescribing"
         }
+      ],
+      "objectiveIds": [
+        79,
+        84
+      ]
+    },
+    {
+      "id": "i-28",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A cook sustains a small clean cut. Bleeding slows within minutes as a platelet plug forms, before a firm fibrin clot is obvious. Platelet count is normal. She takes no anticoagulant. Which sequence best describes that early platelet response?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Fibrin polymer forms first, and platelets attach only after factor XIII has finished cross-linking"
+        },
+        {
+          "id": "b",
+          "text": "Protein C activation is the first step, and platelets adhere only if warfarin is present"
+        },
+        {
+          "id": "c",
+          "text": "Factor XII activation on the skin surface is required before any platelet can stick"
+        },
+        {
+          "id": "d",
+          "text": "Platelets adhere to exposed collagen and von Willebrand factor, activate, and aggregate"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is primary hemostasis: adhesion (collagen and von Willebrand factor), activation, and aggregation via fibrinogen and glycoprotein IIb/IIIa, before a stable fibrin mass dominates. Choice A reverses the order. Choice B starts with an anticoagulant protein. Choice C requires contact activation for a skin cut. Source: primary hemostasis sequence.",
+      "teachingPoints": [
+        "Adhesion, activation, and aggregation precede a stable fibrin clot.",
+        "von Willebrand factor and collagen anchor the first platelets."
+      ],
+      "links": [],
+      "objectiveIds": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "i-29",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 46-year-old woman has a platelet count of 18 × 10⁹/L, fragmented red cells, rising creatinine, and new confusion. She has not received heparin. Temperature is 37.9 °C and blood pressure is 150/92 mm Hg. The team wonders whether this is ordinary immune thrombocytopenia. Which process needs urgent consideration?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A thrombotic microangiopathy such as thrombotic thrombocytopenic purpura, not a heparin platelet syndrome"
+        },
+        {
+          "id": "b",
+          "text": "Heparin-induced thrombocytopenia, because confusion plus a low platelet count defines that syndrome in clinic"
+        },
+        {
+          "id": "c",
+          "text": "Isolated immune thrombocytopenia, because schistocytes are expected in that bleeding disorder"
+        },
+        {
+          "id": "d",
+          "text": "Warfarin-induced skin necrosis, because fragmented red cells are the skin finding of a VKA"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A fits thrombocytopenia, microangiopathic hemolysis, organ injury, and neurologic change without heparin: a thrombotic microangiopathy, including thrombotic thrombocytopenic purpura, until proven otherwise. Choice B requires heparin exposure that is absent. Choice C is a bleeding phenotype and does not produce schistocytes and organ ischemia as the core picture. Choice D is a skin lesion of warfarin initiation, not this blood film. Source: clinical distinction between thrombotic microangiopathy and heparin-induced thrombocytopenia.",
+      "teachingPoints": [
+        "Schistocytes plus organ injury point to a microangiopathy.",
+        "No heparin exposure argues against heparin-induced thrombocytopenia."
+      ],
+      "links": [],
+      "objectiveIds": [
+        5
+      ]
+    },
+    {
+      "id": "i-30",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 28-year-old woman has petechiae and a platelet count of 14 × 10⁹/L. Hemoglobin, creatinine, and the blood film are normal. She has not received heparin and has no thrombosis. Which comparison with heparin-induced thrombocytopenia is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Both illnesses are clotting disorders, so a new DVT is expected with this petechial picture"
+        },
+        {
+          "id": "b",
+          "text": "A bleeding platelet disorder, unlike heparin-induced thrombocytopenia after heparin"
+        },
+        {
+          "id": "c",
+          "text": "Both conditions begin 5 to 10 days after heparin, so a missing heparin history can be ignored"
+        },
+        {
+          "id": "d",
+          "text": "Both are treated by adding unfractionated heparin in order to raise the platelet count"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B separates isolated thrombocytopenia with petechiae and no heparin from heparin-induced thrombocytopenia, which follows heparin and causes thrombosis. Choice A expects a DVT from a petechial illness. Choice C invents a heparin timeline. Choice D adds the drug that causes the clotting syndrome. Source: immune thrombocytopenia versus heparin-induced thrombocytopenia.",
+      "teachingPoints": [
+        "Petechiae and an isolated low count are a bleeding pattern.",
+        "Heparin-induced thrombocytopenia is a prothrombotic pattern after heparin."
+      ],
+      "links": [],
+      "objectiveIds": [
+        5
+      ]
+    },
+    {
+      "id": "i-31",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 74-year-old man is admitted with pneumonia. He has active lymphoma on chemotherapy and has been in bed for two days. He had an appendectomy 20 years ago. There is no bleeding. The team wants a prophylaxis assessment rather than anticoagulation for every admission. Which tool use is appropriate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A surgical Caprini score, because every hospitalized adult is scored as a surgical case"
+        },
+        {
+          "id": "b",
+          "text": "No score, because active cancer means treatment-dose anticoagulation for VTE that has not been diagnosed"
+        },
+        {
+          "id": "c",
+          "text": "A medical-inpatient risk tool such as Padua, which gives weight to cancer and immobility"
+        },
+        {
+          "id": "d",
+          "text": "A CHA₂DS₂-VASc score, because pneumonia admission is scored as AF stroke risk"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C fits a medical inpatient: the Padua score assigns 3 points to active cancer and 3 to reduced mobility, and a total of 4 or more marks high VTE risk for a prophylaxis decision, not a treatment dose for an undiagnosed clot. Active cancer (3), age 70 or older (1), and acute infection (1) already total 5; Padua's 3 points for reduced mobility require bed rest of at least 3 days. Choice A uses a surgical score. Choice B jumps to treatment intensity without a VTE diagnosis. Choice D uses an AF stroke score. Source: Padua prediction score for medical inpatients.",
+      "teachingPoints": [
+        "Padua gives 3 points to active cancer and 3 to reduced mobility.",
+        "A high prophylaxis score is not a diagnosis of DVT or PE."
+      ],
+      "links": [
+        {
+          "kind": "pathway",
+          "id": "vte-prophylaxis",
+          "label": "VTE prophylaxis (medical and surgical)"
+        }
+      ],
+      "objectiveIds": [
+        8
+      ]
+    },
+    {
+      "id": "i-32",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A surgical service uses a Caprini score. A 68-year-old woman awaiting cancer surgery scores in a high stratum because of cancer, age, and a planned major operation. She is also vomiting blood this morning. Hemoglobin fell from 12 to 8 g/dL. Which safeguard matters when the score is applied?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A high Caprini score overrides active bleeding and requires an immediate treatment-dose DOAC"
+        },
+        {
+          "id": "b",
+          "text": "Caprini is a medical-inpatient tool, so a surgical patient cannot be scored"
+        },
+        {
+          "id": "c",
+          "text": "The score chooses the AF dose of apixaban for the operating room"
+        },
+        {
+          "id": "d",
+          "text": "The score supports a prophylaxis plan only after bleeding risk is judged"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the safeguard: Caprini stratifies surgical VTE risk and does not override active bleeding. Pharmacologic prophylaxis is reconsidered when bleeding is active, and mechanical prophylaxis is the alternative to evaluate. Choice A lets the score override hematemesis. Choice B swaps Caprini with a medical score. Choice C imports an AF dose. Source: Caprini score as a surgical risk stratifier, not a bleeding waiver.",
+      "teachingPoints": [
+        "A high surgical risk score does not cancel active bleeding.",
+        "Mechanical prophylaxis is the path to evaluate when a drug is unsafe."
+      ],
+      "links": [
+        {
+          "kind": "pathway",
+          "id": "vte-prophylaxis",
+          "label": "VTE prophylaxis (medical and surgical)"
+        }
+      ],
+      "objectiveIds": [
+        8
+      ]
+    },
+    {
+      "id": "i-33",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 36-year-old woman has three days of unilateral calf pain and swelling after a 12-hour car ride. She has no dyspnea, no chest pain, and normal blood pressure. Oxygen saturation is 98 percent on room air. She takes an oral contraceptive. Which interpretation best fits the presentation?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Suspected leg DVT: pretest probability, then ultrasound or D-dimer, is the diagnostic path"
+        },
+        {
+          "id": "b",
+          "text": "This is high-risk PE, so systemic thrombolysis comes before any imaging of the leg"
+        },
+        {
+          "id": "c",
+          "text": "Travel plus a swollen calf is acute arterial limb ischemia and needs an emergency embolectomy"
+        },
+        {
+          "id": "d",
+          "text": "A normal oxygen saturation excludes DVT, so no further diagnostic test is useful"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A keeps the problem in the leg: unilateral symptoms after stasis are suspected DVT, and a probability score then selects D-dimer or ultrasound. There are no chest symptoms and no hypotension to make this high-risk PE. Choice B starts lysis. Choice C calls a venous picture acute arterial ischemia. Choice D uses oxygen saturation to exclude a leg clot. Source: suspected DVT diagnostic sequence (pretest probability, then D-dimer or compression ultrasound).",
+      "teachingPoints": [
+        "No chest symptoms means this is not a reperfusion PE case.",
+        "A normal saturation does not clear a symptomatic calf."
+      ],
+      "links": [
+        {
+          "kind": "tx-pathway",
+          "id": "acute-vte",
+          "label": "Acute VTE (DVT/PE)"
+        }
+      ],
+      "objectiveIds": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": "i-34",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 57-year-old man who has been immobilized after a fracture has sudden dyspnea, pleuritic pain, and a brief syncopal spell. Blood pressure is 110/70 mm Hg. Heart rate is 108 beats per minute. He has no fever and no purulent sputum. Which explanation best ties the symptoms to PE pathophysiology?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Fever and sputum are required, so this pattern is bacterial pneumonia rather than vascular obstruction"
+        },
+        {
+          "id": "b",
+          "text": "Embolic obstruction raises dead space and can drop cardiac output enough to cause syncope"
+        },
+        {
+          "id": "c",
+          "text": "Pleuritic pain means the clot formed in a coronary artery under high shear"
+        },
+        {
+          "id": "d",
+          "text": "Syncope means the event is intracranial hemorrhage, so the lungs are not involved"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B connects acute pulmonary vascular obstruction to ventilation-perfusion mismatch, dead space, and a fall in left-heart filling that can cause syncope even before sustained shock. Choice A requires infectious findings he does not have. Choice C places the clot in a coronary artery. Choice D equates syncope with intracranial bleeding. Source: PE pathophysiology (increased dead space and acute right-ventricular pressure overload).",
+      "teachingPoints": [
+        "Syncope can be the cardiac-output consequence of a large embolus.",
+        "Pleuritic pain does not relocate the clot to a coronary plaque."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "intermediate-pe-cdt",
+          "label": "Who with intermediate-risk PE is a candidate for catheter-directed therapy?"
+        }
+      ],
+      "objectiveIds": [
+        9
+      ]
+    },
+    {
+      "id": "i-35",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 78-year-old woman with AF not on anticoagulation develops a suddenly painful, pale, cold right foot. Sensation is reduced and the dorsalis pedis pulse is absent. The other foot is warm with a palpable pulse. She can usually walk two blocks. Which interpretation distinguishes this from chronic stable claudication?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Reproducible calf pain on walking that resolves with rest, which is the definition of this pulseless foot"
+        },
+        {
+          "id": "b",
+          "text": "Chronic PAD treated with the COMPASS regimen, with no need for an urgent vascular assessment"
+        },
+        {
+          "id": "c",
+          "text": "Acute limb ischemia from cardioembolism, a vascular emergency rather than stable walking claudication"
+        },
+        {
+          "id": "d",
+          "text": "Venous DVT, because a pale cold foot with a missing pulse is the classic venous pattern"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C fits acute limb ischemia: sudden pain, pallor, coldness, sensory loss, and a missing pulse in a patient with AF, consistent with embolism. Chronic claudication is reproducible exertional pain that resolves with rest and does not present as an acutely cold pulseless foot. Choice A describes claudication. Choice B applies a chronic CAD/PAD regimen to an acute occlusion. Choice D calls an arterial emergency a venous clot. Source: acute limb ischemia versus chronic atherosclerotic claudication.",
+      "teachingPoints": [
+        "The five-P arterial emergency is not stable walking pain.",
+        "AF supplies a cardioembolic source for an acute arterial occlusion."
+      ],
+      "links": [],
+      "objectiveIds": [
+        10
+      ]
+    },
+    {
+      "id": "i-36",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 66-year-old man who smokes reports calf tightness after one block that resolves within a few minutes of standing still. The foot is warm, pulses are present, and there is no rest pain and no wound. Blood pressure is 138/80 mm Hg. Which disease process best explains the pattern?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Acute cardioembolic occlusion, because walking pain always means an absent pulse"
+        },
+        {
+          "id": "b",
+          "text": "PE, because calf symptoms after smoking are pulmonary emboli"
+        },
+        {
+          "id": "c",
+          "text": "Chronic venous insufficiency only, because arterial disease does not cause exertional calf pain"
+        },
+        {
+          "id": "d",
+          "text": "Flow-limiting atherosclerotic PAD, the chronic exertional pattern rather than an acute embolus"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is chronic stable claudication from atherosclerotic PAD: reproducible exertional pain, relief with rest, and a viable warm foot. Choice A describes acute ischemia, which this exam does not show. Choice B moves the symptom to the lung. Choice C denies arterial claudication. Source: pathophysiology of stable atherosclerotic PAD, the population context for vascular regimens such as COMPASS, which is not an acute-limb regimen.",
+      "teachingPoints": [
+        "Claudication is exertional and relieved by rest.",
+        "A warm foot with pulses argues against acute limb ischemia."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "compass-vascular-dose",
+          "label": "COMPASS vascular protection: appropriate populations and regimen limits"
+        }
+      ],
+      "objectiveIds": [
+        10
+      ]
+    },
+    {
+      "id": "i-37",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 74-year-old man on warfarin for AF has been in the therapeutic INR range for months. He now has worsening orthopnea, edema, and several days of poor intake during a heart-failure exacerbation. He was also prescribed a course of trimethoprim-sulfamethoxazole for bronchitis. There is no bleeding. Why should the anticoagulation plan be reassessed rather than assuming the old dose still fits?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Illness, poor intake, and the new antibiotic can move the INR off the old stable pattern"
+        },
+        {
+          "id": "b",
+          "text": "Heart failure permanently eliminates vitamin K stores, so warfarin is stopped for good"
+        },
+        {
+          "id": "c",
+          "text": "An exacerbation converts AF into a mechanical-valve indication and the INR goal becomes 4 to 5"
+        },
+        {
+          "id": "d",
+          "text": "Poor intake lowers the INR by increasing dietary vitamin K, so tonight's dose is doubled"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A is the interaction of illness, reduced vitamin K intake, hepatic congestion, and trimethoprim-sulfamethoxazole, which can potentiate warfarin. The dose that held a therapeutic INR last month is not assumed to hold today. Choice B stops warfarin forever. Choice C invents an INR target of 4 to 5. Choice D reverses the direction of poor intake and endorses a doubled dose. Source: warfarin sensitivity during heart-failure decompensation and with trimethoprim-sulfamethoxazole, a known potentiating antibiotic.",
+      "teachingPoints": [
+        "A previously stable weekly dose is not protected from acute illness.",
+        "Trimethoprim-sulfamethoxazole is a classic warfarin potentiator."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        16,
+        39
+      ]
+    },
+    {
+      "id": "i-38",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 70-year-old man in sinus rhythm has chronic heart failure with reduced ejection fraction and known CAD. He has no AF, no VTE, and no PAD symptoms. He asks whether low-dose rivaroxaban is automatically indicated to prevent cardiovascular events. Which interpretation fits COMMANDER HF?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "COMMANDER HF showed that rivaroxaban 2.5 mg twice daily reduced death, MI, or stroke in this sinus-rhythm population"
+        },
+        {
+          "id": "b",
+          "text": "COMMANDER HF did not show that benefit, so low-dose rivaroxaban is not an automatic heart-failure prescription"
+        },
+        {
+          "id": "c",
+          "text": "The COMPASS regimen is mandated for every patient with a reduced ejection fraction, with or without CAD"
+        },
+        {
+          "id": "d",
+          "text": "Sinus rhythm with heart failure is treated with an AF-treatment-dose DOAC to prevent cardioembolism"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B matches COMMANDER HF on this site: rivaroxaban 2.5 mg twice daily did not significantly reduce death, MI, or stroke versus placebo in worsening heart failure, sinus rhythm, and CAD. Choice A reverses the primary result. Choice C turns COMPASS into a heart-failure rule. Choice D gives an AF dose to a patient in sinus rhythm without an AF indication. Source: COMMANDER HF, as summarized on this site.",
+      "teachingPoints": [
+        "A negative primary trial is not an automatic prescription.",
+        "Sinus rhythm plus heart failure is not an AF anticoagulation niche."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "commander-hf",
+          "label": "Rivaroxaban in Patients with Heart Failure, Sinus Rhythm, and Coronary Disease"
+        },
+        {
+          "kind": "framework",
+          "id": "compass-vascular-dose",
+          "label": "COMPASS vascular protection: appropriate populations and regimen limits"
+        }
+      ],
+      "objectiveIds": [
+        16
+      ]
+    },
+    {
+      "id": "i-39",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 67-year-old woman with diabetes and known CAD calls to report 20 minutes of chest pressure, sweating, and breathlessness at rest. The pain is not reproducible by pressing on the chest wall. She is not hypotensive on her home cuff. Which interpretation is the appropriate one?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Reproducible walking calf pain, so this is chronic claudication and can wait for a routine clinic visit"
+        },
+        {
+          "id": "b",
+          "text": "Pleuritic pain with calf swelling only, so the call is low-risk DVT and the chest symptoms are ignored"
+        },
+        {
+          "id": "c",
+          "text": "Rest chest pressure with sweating in known CAD is assessed as possible ACS, not as stable exertional disease"
+        },
+        {
+          "id": "d",
+          "text": "A completed stroke, because sweating and new breathlessness are focal neurologic signs"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C recognizes rest chest pressure with autonomic symptoms in CAD as a possible ACS presentation, which is unstable and not the same as exertional stable angina or claudication. Choice A describes leg claudication she did not report. Choice B describes a venous pattern. Choice D turns nonfocal symptoms into a completed stroke. Source: clinical pattern of ACS (rest ischemic pain) versus stable exertional atherosclerosis.",
+      "teachingPoints": [
+        "Rest pain with sweating is not a routine stable-angina story.",
+        "Musculoskeletal pain is usually reproducible by palpation, which this is not."
+      ],
+      "links": [],
+      "objectiveIds": [
+        17,
+        47
+      ]
+    },
+    {
+      "id": "i-40",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A healthy 30-year-old woman with no VTE history receives a genetic report: homozygous factor V Leiden. Her sister is heterozygous for the same variant and also has no clot history. Both ask what the zygosity difference means for counseling. Which interpretation is sound?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Homozygous and heterozygous states carry the same clot risk, so zygosity can be left out of counseling"
+        },
+        {
+          "id": "b",
+          "text": "Heterozygous factor V Leiden is the higher-risk genotype of the two results"
+        },
+        {
+          "id": "c",
+          "text": "Either genotype means anticoagulation starts today, despite no personal clot and no other indication"
+        },
+        {
+          "id": "d",
+          "text": "Homozygosity carries higher risk than heterozygosity, but the genotype alone is not a VTE diagnosis"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the counseling point. Homozygous factor V Leiden carries a substantially higher relative risk of VTE than the heterozygous state, and neither genotype is itself a DVT or an automatic start of anticoagulation in an asymptomatic person. Choice A equates the risks. Choice B reverses them. Choice C starts an anticoagulant without an indication. Source: factor V Leiden gene-dose relationship; anticoagulation is for a clinical indication, not for a genotype alone. Relative-risk multiples are not printed here.",
+      "teachingPoints": [
+        "Zygosity changes the magnitude of risk.",
+        "A genotype is not a diagnosis of current thrombosis."
+      ],
+      "links": [],
+      "objectiveIds": [
+        18,
+        19
+      ]
+    },
+    {
+      "id": "i-41",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 49-year-old man is admitted with acute DVT. Warfarin was started yesterday with a heparin overlap. Protein C activity comes back low. He has no family history on file, and the sample was drawn while the INR was already rising. Which interpretation should come before anyone labels him with hereditary protein C deficiency?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Warfarin lowers functional protein C, so a low level during initiation does not prove a hereditary deficiency"
+        },
+        {
+          "id": "b",
+          "text": "A low protein C on day 1 of warfarin is diagnostic of homozygous deficiency and of skin necrosis already in progress"
+        },
+        {
+          "id": "c",
+          "text": "Heparin raises protein C, so a low value means the assay was run on the wrong drug"
+        },
+        {
+          "id": "d",
+          "text": "Protein C activity is unaffected by warfarin, vitamin K, or acute thrombosis"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A is the pre-analytical point: warfarin reduces vitamin K-dependent protein C, and acute thrombosis can also consume natural anticoagulants, so a low level during initiation is not a hereditary diagnosis. Choice B over-reads one value as homozygous deficiency. Choice C reverses heparin's effect; heparin does not raise protein C. Choice D denies the warfarin effect. Source: vitamin K-dependent synthesis of protein C and the requirement to interpret levels off warfarin, away from the acute clot.",
+      "teachingPoints": [
+        "Do not diagnose hereditary protein C deficiency from a level drawn on warfarin.",
+        "Repeat testing belongs off anticoagulation and away from the acute event."
+      ],
+      "links": [],
+      "objectiveIds": [
+        19,
+        31
+      ]
+    },
+    {
+      "id": "i-42",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A patient with the prothrombin G20210A variant asks how it differs from protein C deficiency. She is not currently anticoagulated. Her INR is 1.0 and she has no clot today. Which comparison is the accurate one?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Both are vitamin K-dependent protein deficiencies, so warfarin raises activity of the prothrombin variant"
+        },
+        {
+          "id": "b",
+          "text": "G20210A is a gain-of-function prothrombin mutation; protein C deficiency is loss of a natural anticoagulant"
+        },
+        {
+          "id": "c",
+          "text": "Both block platelet glycoprotein IIb/IIIa, so the only difference between them is tablet color"
+        },
+        {
+          "id": "d",
+          "text": "G20210A lowers factor II, and protein C deficiency raises factor II production"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B is the mechanistic contrast. Prothrombin G20210A increases prothrombin levels (a gain of function). Protein C deficiency removes a natural anticoagulant that inactivates factors Va and VIIIa. Choice A calls the mutation a vitamin K-dependent deficiency. Choice C turns both into antiplatelet targets. Choice D reverses both directions. Source: standard thrombophilia mechanisms.",
+      "teachingPoints": [
+        "G20210A raises prothrombin. Protein C deficiency lowers an inhibitor.",
+        "They are not two names for one vitamin K problem."
+      ],
+      "links": [],
+      "objectiveIds": [
+        18
+      ]
+    },
+    {
+      "id": "i-43",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A learner points at factor Xa on a coagulation diagram while discussing a patient on apixaban for NVAF. Platelet count is normal. The learner asks why fibrin formation falls even though apixaban does not directly bind the platelet receptor blocked by aspirin. Which connection is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Apixaban blocks glycoprotein IIb/IIIa, so the factor Xa label on the diagram is decorative in clinic"
+        },
+        {
+          "id": "b",
+          "text": "Apixaban raises thrombin generation, and fibrin falls because platelets are lysed"
+        },
+        {
+          "id": "c",
+          "text": "Apixaban inhibits factor Xa, so less thrombin is generated and less fibrin is formed downstream"
+        },
+        {
+          "id": "d",
+          "text": "Apixaban inhibits vitamin K epoxide reductase, the same target as warfarin"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C follows the cascade: factor Xa converts prothrombin to thrombin, and thrombin converts fibrinogen to fibrin. Apixaban is a direct factor Xa inhibitor, not an antiplatelet drug and not a vitamin K antagonist. Choice A assigns it the glycoprotein IIb/IIIa target. Choice B reverses the thrombin effect. Choice D assigns it warfarin's target. Source: apixaban mechanism (direct factor Xa inhibition), as in the ARISTOTLE-era pharmacology on this site.",
+      "teachingPoints": [
+        "Factor Xa sits upstream of thrombin and fibrin.",
+        "Apixaban is not an aspirin-like platelet blocker."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "aristotle",
+          "label": "Apixaban for Reduction in Stroke and Other Thromboembolic Events in Atrial Fibrillation"
+        }
+      ],
+      "objectiveIds": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "i-44",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "Eight months after a proximal DVT, a 62-year-old man has chronic dependent swelling and aching that are worse at the end of the day and better after elevation. Those symptoms have been stable. This morning the thigh became abruptly more painful, with 4 cm of new calf asymmetry. Which distinction is the important one?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The entire months-long story is one recurrent DVT, because any symptom after a clot is a new event"
+        },
+        {
+          "id": "b",
+          "text": "The entire story is post-thrombotic syndrome, so today's new calf asymmetry can be ignored"
+        },
+        {
+          "id": "c",
+          "text": "The new thigh pain is arterial ischemia, because venous disease does not cause asymmetric swelling"
+        },
+        {
+          "id": "d",
+          "text": "Stable aching can be post-thrombotic syndrome; today's abrupt asymmetry needs a recurrence check"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D splits the timeline. Chronic dependent aching relieved by elevation fits post-thrombotic syndrome. An abrupt increase in pain and calf size can be recurrent DVT and is evaluated rather than folded into the chronic syndrome. Choice A calls months of stable symptoms a single recurrence. Choice B ignores the acute change. Choice C relabels venous swelling as arterial ischemia. Source: post-thrombotic syndrome versus suspected recurrence.",
+      "teachingPoints": [
+        "Chronic venous symptoms and an acute change are different questions.",
+        "New asymmetry is not dismissed as the old syndrome."
+      ],
+      "links": [
+        {
+          "kind": "tx-pathway",
+          "id": "acute-vte",
+          "label": "Acute VTE (DVT/PE)"
+        }
+      ],
+      "objectiveIds": [
+        12
+      ]
+    },
+    {
+      "id": "i-45",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 72-year-old man with AF, hypertension, and diabetes feels well and reports no palpitations at a clinic visit. He stopped his DOAC last month because the rhythm 'feels normal.' Heart rate is 88 beats per minute and irregular. Blood pressure is 136/78 mm Hg. There is no valve disease. Which interpretation of stroke risk is sound?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Appendage stasis and the clinical risk factors persist whether or not he feels palpitations today"
+        },
+        {
+          "id": "b",
+          "text": "A week without palpitations resets his CHA₂DS₂-VASc score to zero"
+        },
+        {
+          "id": "c",
+          "text": "Stroke risk in AF exists only during an hour when the patient can feel the irregular rhythm"
+        },
+        {
+          "id": "d",
+          "text": "Feeling well converts the indication to aspirin alone, which AVERROES showed can replace an OAC"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A is the mechanism and the score: AF-related stasis does not require perceived palpitations, and hypertension plus diabetes plus age still count. AVERROES found apixaban superior to aspirin for stroke prevention in AF when a vitamin K antagonist was unsuitable, so aspirin is not the substitute once OAC is indicated. Choice B zeros the score. Choice C limits risk to symptomatic minutes. Choice D reverses AVERROES. Source: AF pathophysiology and AVERROES, as on this site.",
+      "teachingPoints": [
+        "Asymptomatic AF still stasis-prone.",
+        "Aspirin did not match apixaban in AVERROES."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "af-stroke-prevention",
+          "label": "How do I choose anticoagulation for AF stroke prevention—including intermediate-risk nuance?"
+        }
+      ],
+      "objectiveIds": [
+        13
+      ]
+    },
+    {
+      "id": "i-46",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 68-year-old woman on apixaban for AF had 15 minutes of unilateral arm weakness and trouble finding words. The deficits have resolved by the time she is assessed. Glucose is 102 mg/dL. Blood pressure is 150/88 mm Hg. She wants to go home because the episode ended. Why does resolution not close the evaluation?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Resolved arm weakness is always a seizure, so vascular imaging and stroke pathways are irrelevant in clinic"
+        },
+        {
+          "id": "b",
+          "text": "A transient ischemic attack is a warning ischemic event, and being on apixaban does not make it benign"
+        },
+        {
+          "id": "c",
+          "text": "Resolution proves the cause was an intracranial hemorrhage that has already reabsorbed"
+        },
+        {
+          "id": "d",
+          "text": "A deficit lasting under one hour is musculoskeletal, so no vascular cause is still possible"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B treats a focal deficit that resolves as a TIA, which carries short-term stroke risk and still needs urgent evaluation. Being on apixaban does not make the episode meaningless, and it does not distinguish ischemia from hemorrhage without assessment. Choice A assumes a seizure. Choice C assumes a bleed that vanished. Choice D dismisses a focal pattern as musculoskeletal. Source: TIA as a medical emergency despite symptom resolution.",
+      "teachingPoints": [
+        "Resolution is the definition of a TIA, not a reason to skip care.",
+        "Anticoagulant use does not identify the cause."
+      ],
+      "links": [],
+      "objectiveIds": [
+        14
+      ]
+    },
+    {
+      "id": "i-47",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 61-year-old woman with active pancreatic cancer walks her dog daily and is between chemotherapy cycles. She has no clot history and no bleeding. She asks whether every outpatient on cancer treatment needs prophylactic anticoagulation. Which interpretation matches a risk-based approach?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Every outpatient prescription for any cancer drug includes a treatment-dose DOAC from day 1"
+        },
+        {
+          "id": "b",
+          "text": "No outpatient with cancer is ever considered for prophylaxis, regardless of cancer site or other risk"
+        },
+        {
+          "id": "c",
+          "text": "Risk varies by cancer, treatment, and mobility, so prophylaxis is not automatic for every outpatient"
+        },
+        {
+          "id": "d",
+          "text": "Cancer prophylaxis is the same as treating an acute DVT, so lead-in doses start without a diagnosed clot"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C is the risk-based reading. Ambulatory cancer prophylaxis was tested in selected high-risk patients (AVERT used apixaban 2.5 mg twice daily in higher-risk outpatients; CASSINI used rivaroxaban 10 mg daily and did not meet its primary endpoint). It is not a rule that every mobile outpatient starts anticoagulation, and it is not acute VTE treatment dosing. Choice A uses treatment intensity for everyone. Choice B forbids any prophylaxis. Choice D confuses prophylaxis with acute treatment. Source: AVERT and CASSINI, as carried on this site, which show selected outpatient strategies rather than a universal rule.",
+      "teachingPoints": [
+        "Khorana-type risk and cancer site change the question.",
+        "A prophylaxis study is not an acute VTE lead-in regimen."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "avert",
+          "label": "Apixaban to Prevent Venous Thromboembolism in Patients with Cancer"
+        },
+        {
+          "kind": "trial",
+          "id": "cassini",
+          "label": "Rivaroxaban for Thromboprophylaxis in High-Risk Ambulatory Patients with Cancer"
+        },
+        {
+          "kind": "pathway",
+          "id": "cancer-vte",
+          "label": "Cancer-associated VTE"
+        }
+      ],
+      "objectiveIds": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": "i-48",
+      "domainId": "I",
+      "difficulty": "advanced",
+      "stem": "A 76-year-old man with AF has a bioprosthetic mitral valve placed 14 months ago. He asks whether the anticoagulant restrictions of a mechanical valve automatically apply, because both devices are 'valve surgery.' Kidney function is stable and there is no antiphospholipid syndrome. Which distinction anchors the discussion?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A tissue valve is managed exactly as a mechanical mitral valve, including a ban on every DOAC and an INR target of 3.5 to 4.5"
+        },
+        {
+          "id": "b",
+          "text": "AF with a tissue mitral valve forbids anticoagulation of any kind once 3 months have passed"
+        },
+        {
+          "id": "c",
+          "text": "Rivaroxaban is contraindicated in AF with a bioprosthetic mitral valve because RIVER favored warfarin"
+        },
+        {
+          "id": "d",
+          "text": "A mechanical prosthesis and a tissue valve are different niches, and RIVER did not treat the tissue valve as mechanical"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the distinction this site draws with RIVER: AF with a bioprosthetic mitral valve is not the mechanical-valve ban, and RIVER compared rivaroxaban with warfarin in that bioprosthetic population. Mechanical valves remain a VKA niche (RE-ALIGN). Choice A invents an INR range of 3.5 to 4.5 and applies the mechanical ban to tissue. Choice B drops the AF indication. Choice C reverses the reason RIVER is cited. Source: RIVER and the mechanical-valve contrast on this site.",
+      "teachingPoints": [
+        "Read the prosthesis before applying a mechanical-valve rule.",
+        "AF can still be an OAC indication after a tissue valve."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "mechanical-valve-vka",
+          "label": "How do I anticoagulate a mechanical heart valve?"
+        },
+        {
+          "kind": "framework",
+          "id": "post-tavi-antithrombotic",
+          "label": "How do I choose antithrombotic therapy after TAVI?"
+        },
+        {
+          "kind": "trial",
+          "id": "river",
+          "label": "Rivaroxaban in Patients with Atrial Fibrillation and a Bioprosthetic Mitral Valve"
+        }
+      ],
+      "objectiveIds": [
+        15
+      ]
+    },
+    {
+      "id": "ii-44",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A new anticoagulation service is building the intake record for a 69-year-old starting therapy. The clerk saved the medication name only. The patient has AF, a prior bleed, a serum creatinine drawn last week, and a P-glycoprotein inhibitor on the list. Which information actually supports longitudinal management?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Tablet color and pharmacy brand, with no indication, no dose, and no kidney function in clinic"
+        },
+        {
+          "id": "b",
+          "text": "A signed brochure, which replaces both the indication and the interaction check"
+        },
+        {
+          "id": "c",
+          "text": "The time of day the patient prefers phone calls, recorded as the only clinical field"
+        },
+        {
+          "id": "d",
+          "text": "Indication, dose, kidney function, bleed history, interacting drugs, and the monitoring plan"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the problem-oriented intake: why the anticoagulant exists, the exact regimen, whether kidney function still fits that regimen, prior bleeding, interacting drugs, and who monitors. Choice A keeps the commercial appearance. Choice B treats education paperwork as the clinical record. Choice C keeps a logistics preference and drops the medicine. Source: anticoagulation-service documentation practice on this site's appropriateness framework.",
+      "teachingPoints": [
+        "The indication is what later tells you whether a dose still fits.",
+        "An interacting drug and a creatinine belong in the first note."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        },
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        21,
+        37
+      ]
+    },
+    {
+      "id": "ii-45",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 63-year-old man on apixaban for AF is admitted with new ascites, jaundice, and an INR of 1.8 that he did not have last month. He is not on warfarin. Bilirubin and the prothrombin time are both newly abnormal. The refill is due. Which assessment comes before the previous regimen is renewed?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "New coagulopathy with decompensated liver disease is not an automatic DOAC renewal"
+        },
+        {
+          "id": "b",
+          "text": "Double the apixaban dose, because ascites dilutes every oral anticoagulant equally"
+        },
+        {
+          "id": "c",
+          "text": "Ignore the liver disease and titrate apixaban until the INR returns to 1.0"
+        },
+        {
+          "id": "d",
+          "text": "Switch to rivaroxaban 20 mg solely because factor Xa inhibitors are safer in hepatic failure"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A stops the autopilot refill. Decompensated cirrhosis with new coagulopathy changes bleeding risk and falls under labeled hepatic cautions and exclusions for oral factor Xa inhibitors, so the prior dose is not renewed until that eligibility is rechecked. Choice B invents a double dose. Choice C uses the INR as a DOAC target. Choice D switches factor Xa inhibitors as if hepatic failure were a reason to prefer one. Source: product labeling on hepatic impairment for factor Xa inhibitors. No Child-Pugh letter is used as the key.",
+      "teachingPoints": [
+        "New coagulopathy plus decompensated liver disease reopens the drug choice.",
+        "An INR is not the apixaban dose knob."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        }
+      ],
+      "objectiveIds": [
+        22,
+        24,
+        30
+      ]
+    },
+    {
+      "id": "ii-46",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 79-year-old man on warfarin has missed three INR visits. The only bus route to the clinic was canceled. He is taking the tablets and has no bleeding. A note calls him nonadherent and discharges him from the service. Which plan addresses the barrier that is actually present?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Discharge him, because three missed visits mean he does not want anticoagulation"
+        },
+        {
+          "id": "b",
+          "text": "Restore a way to get INRs, and keep a clinician responsible for the result"
+        },
+        {
+          "id": "c",
+          "text": "Stop warfarin permanently and name no replacement, because lack of a bus route is a contraindication"
+        },
+        {
+          "id": "d",
+          "text": "Double the home dose so he no longer needs INR checks at the clinic"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B treats a canceled bus route as an access failure, not as a refusal of therapy. The service arranges another way to obtain INRs and keeps a clinician responsible for the result. Choice A closes the chart. Choice C drops the indication because of transit. Choice D removes monitoring by escalating the dose. Source: adherence and access practice for warfarin monitoring.",
+      "teachingPoints": [
+        "Name the barrier before labeling the patient.",
+        "Monitoring has to move with the patient, not disappear."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        23
+      ]
+    },
+    {
+      "id": "ii-47",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 58-year-old woman with controlled focal seizures takes carbamazepine. She has new NVAF, a CHA₂DS₂-VASc score of 4, weight 70 kg, and creatinine clearance 78 mL/min. A colleague orders apixaban 5 mg twice daily on top of the antiseizure drug. Which plan handles both conditions?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Continue both, because carbamazepine changes warfarin exposure and does not affect any DOAC"
+        },
+        {
+          "id": "b",
+          "text": "Stop the antiseizure drug today, with no neurology input, so the DOAC can be started"
+        },
+        {
+          "id": "c",
+          "text": "Do not pair apixaban with this inducer; follow the label, and ask neurology before changing the seizure drug"
+        },
+        {
+          "id": "d",
+          "text": "Use rivaroxaban 2.5 mg twice daily plus aspirin, which avoids the inducer restriction and still treats AF"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C follows the apixaban label: strong combined CYP3A4 and P-glycoprotein inducers, including carbamazepine, are avoided because they lower exposure. Stopping carbamazepine abruptly is a seizure risk and is a neurology decision, not an anticoagulation shortcut. Choice A denies the induction. Choice B stops the seizure drug unilaterally. Choice D uses a vascular dose that does not treat AF and does not solve an inducer problem for a full-dose factor Xa inhibitor. Source: ELIQUIS prescribing information, drug interactions, strong inducers.",
+      "teachingPoints": [
+        "An inducer can make a correct-looking AF dose too small.",
+        "An abrupt stop of the seizure drug is a neurology decision, not an anticoagulation shortcut."
+      ],
+      "links": [
+        {
+          "kind": "ddi",
+          "id": "apixaban-carbamazepine",
+          "label": "apixaban-carbamazepine"
+        }
+      ],
+      "objectiveIds": [
+        26,
+        40
+      ]
+    },
+    {
+      "id": "ii-48",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 6-year-old with acute VTE gags on tablets. A parent proposes opening dabigatran capsules into applesauce, using a relative's AF dose. The child has normal kidneys and no mechanical valve. Which assessment best supports anticoagulant selection?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Opening dabigatran capsules into food is always acceptable, and the adult AF dose is used unchanged in clinic"
+        },
+        {
+          "id": "b",
+          "text": "Aspirin is substituted for anticoagulation until the child is old enough to swallow tablets"
+        },
+        {
+          "id": "c",
+          "text": "The adult 2-of-3 apixaban rule is applied using the child's age in years as one of the criteria"
+        },
+        {
+          "id": "d",
+          "text": "Use a formulation and a pediatric reference the child can take, not an opened adult capsule at an AF dose"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D keeps selection inside a pediatric reference and a formulation that can be administered. Dabigatran capsules are swallowed whole in ordinary adult use, and an adult AF dose is not this child's VTE dose. Choice A opens the capsule and copies the adult dose. Choice B substitutes aspirin. Choice C applies an older-adult dose-reduction rule to a child. No milligram dose is stated. Source: dabigatran capsule-handling principle and the separation of pediatric VTE dosing from adult AF dosing.",
+      "teachingPoints": [
+        "Formulation and a pediatric reference come before the first dose.",
+        "An adult AF regimen is the wrong template."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "acute-vte-doac",
+          "label": "Which DOAC for acute VTE when bleeding risk matters?"
+        }
+      ],
+      "objectiveIds": [
+        26
+      ]
+    },
+    {
+      "id": "ii-49",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "An 82-year-old patient on a stable warfarin dose develops poor intake during a viral illness and starts trimethoprim-sulfamethoxazole. The INR today is 6.8. There is no bleeding, no fall, and hemoglobin is unchanged. Which reasoning fits the INR?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The antibiotic and poor intake explain the INR of 6.8, and this nonbleeding value is not a 4F-PCC case"
+        },
+        {
+          "id": "b",
+          "text": "An INR of 6.8 with no bleeding is major hemorrhage and is treated with idarucizumab"
+        },
+        {
+          "id": "c",
+          "text": "Poor intake always lowers the INR, so tonight's warfarin dose is doubled"
+        },
+        {
+          "id": "d",
+          "text": "Trimethoprim-sulfamethoxazole induces warfarin metabolism, so the INR rise must be a laboratory error"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A links two potentiators: less vitamin K intake and trimethoprim-sulfamethoxazole. An INR of 6.8 without bleeding is not major hemorrhage and is not treated with a PCC reversal bundle or with dabigatran's antibody. The 2012 CHEST suggestion is against routine vitamin K when the INR is between 4.5 and 10 and there is no bleeding; the warfarin dose is reassessed instead. Choice B calls a nonbleeding INR major bleeding and picks the wrong antidote. Choice C reverses the effect of poor intake. Choice D reverses the antibiotic's direction. Source: warfarin interaction teaching and the 2012 CHEST suggestion on nonbleeding supratherapeutic INRs.",
+      "teachingPoints": [
+        "Name the interacting antibiotic before calling the INR a lab error.",
+        "No bleeding means this is not a PCC case."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        26,
+        32
+      ]
+    },
+    {
+      "id": "ii-50",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A fingerstick INR is 5.2. The patient's last four venous INRs were 2.2 to 2.6 on a stable dose. A same-day venous INR is 2.4. The fingerstick was done with a cold hand and a small sample. There is no bleeding. What is the best interpretation of the disagreement?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The fingerstick of 5.2 is the new baseline, and vitamin K is given even though it sits outside the recent trend"
+        },
+        {
+          "id": "b",
+          "text": "The venous INR fits the trend and the fingerstick is the outlier, so today's dose is not taken from the meter"
+        },
+        {
+          "id": "c",
+          "text": "Average 5.2 and 2.4 and aim the next warfarin dose at a blended INR of 3.8"
+        },
+        {
+          "id": "d",
+          "text": "Any disagreement between meter and laboratory means warfarin is stopped permanently"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B treats the venous INR that continues the trend as the dosing result and the poorly obtained fingerstick as the outlier. Choice A acts on the outlier and adds vitamin K. Choice C invents a target between the two. Choice D stops a needed anticoagulant because two methods disagreed once. Source: interpretation of discordant point-of-care and venous INRs.",
+      "teachingPoints": [
+        "Look at the trend before reacting to one meter result.",
+        "Technique (cold hand, small sample) is a reason to distrust the outlier."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        27,
+        29
+      ]
+    },
+    {
+      "id": "ii-51",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 68-year-old man on apixaban 5 mg twice daily, last dose 3 hours ago, has a normal INR of 1.1 before emergency surgery. The team documents that anticoagulation has worn off because the INR is normal. He has normal kidney function. Which conclusion is appropriate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A normal INR proves apixaban is absent and surgery can ignore the last dose"
+        },
+        {
+          "id": "b",
+          "text": "The INR should be raised with vitamin K before any DOAC case goes to the operating room"
+        },
+        {
+          "id": "c",
+          "text": "A normal INR does not measure apixaban, and a dose 3 hours ago is still clinically relevant"
+        },
+        {
+          "id": "d",
+          "text": "Apixaban is monitored by the activated partial thromboplastin time, and a normal INR sets that time"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C is the laboratory point. The INR is insensitive to apixaban and is not used to declare the effect gone. A dose taken 3 hours ago is near peak effect. Choice A clears the drug with the wrong test. Choice B gives vitamin K for a drug that is not a vitamin K antagonist. Choice D confuses the INR with an activated partial thromboplastin time monitoring plan used for unfractionated heparin. Source: apixaban labeling and standard DOAC laboratory teaching: routine INR monitoring is not the dosing method.",
+      "teachingPoints": [
+        "Do not clear a factor Xa inhibitor with an INR.",
+        "Timing of the last dose still matters when the INR is normal."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-major-bleed-us",
+          "label": "Life-threatening bleed on a DOAC (U.S.) — what do I reverse with?"
+        }
+      ],
+      "objectiveIds": [
+        28,
+        29
+      ]
+    },
+    {
+      "id": "ii-52",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 44-year-old woman with a first unprovoked proximal DVT, now on apixaban for 2 weeks, asks for a full inherited thrombophilia panel today. She has no family history in the chart yet. Which approach keeps the testing interpretable?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Draw protein C, protein S, and antithrombin today, because a DOAC does not affect activity assays"
+        },
+        {
+          "id": "b",
+          "text": "Draw a clot-based lupus anticoagulant today and treat a positive result as diagnostic"
+        },
+        {
+          "id": "c",
+          "text": "Start lifelong warfarin solely because the panel has not been drawn yet"
+        },
+        {
+          "id": "d",
+          "text": "Defer activity and clot-based assays until she is off anticoagulation and away from the acute clot"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D respects assay interference. Apixaban can disturb clot-based lupus anticoagulant tests and other clot-based assays, and acute thrombosis plus anticoagulation distorts protein C, protein S, and antithrombin interpretation. Factor V Leiden and prothrombin G20210A are DNA tests and are not cleared by stopping a DOAC, but they are not the whole panel she requested. Choice A draws the activity assays on therapy. Choice B treats a DOAC-era clot-based result as definitive. Choice C starts warfarin because a tube has not been sent. Source: thrombophilia testing practice and known DOAC interference with clot-based assays.",
+      "teachingPoints": [
+        "Acute thrombosis and a DOAC both spoil parts of the panel.",
+        "A DNA test is not the same as a protein activity."
+      ],
+      "links": [],
+      "objectiveIds": [
+        31,
+        19
+      ]
+    },
+    {
+      "id": "ii-53",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "Four days after warfarin is started for acute VTE, with a heparin overlap, a 55-year-old woman develops painful, dark, well-demarcated skin lesions on the thigh. External bleeding is absent. Platelets are stable. INR is 2.2. Which assessment fits this finding?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Warfarin-associated skin necrosis, a serious nonbleeding complication, not a bruise to watch at home"
+        },
+        {
+          "id": "b",
+          "text": "Expected heparin bruising, which is ignored because the INR is already in the target range"
+        },
+        {
+          "id": "c",
+          "text": "A minor local allergic rash, treated by increasing the daily warfarin dose"
+        },
+        {
+          "id": "d",
+          "text": "Heparin-induced thrombocytopenia, diagnosed from skin color alone without any fall in the platelet count"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A recognizes warfarin-associated skin necrosis: painful dark lesions early in therapy, classically when protein C falls before prothrombin, and not dependent on external bleeding. It is a stop-and-reassess emergency, not a home observation. Choice B calls it ordinary bruising. Choice C increases the warfarin dose. Choice D diagnoses heparin-induced thrombocytopenia without a platelet fall. Source: warfarin-induced skin necrosis as a nonhemorrhagic adverse event of initiation.",
+      "teachingPoints": [
+        "Painful dark plaques in the first days are not routine bruising.",
+        "An in-range INR does not make the lesions benign."
+      ],
+      "links": [
+        {
+          "kind": "tx-pathway",
+          "id": "acute-vte",
+          "label": "Acute VTE (DVT/PE)"
+        }
+      ],
+      "objectiveIds": [
+        34
+      ]
+    },
+    {
+      "id": "ii-54",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A hospitalized patient with active cancer and markedly reduced mobility has a high medical VTE risk score. He is also passing melena, and the hemoglobin fell from 11 to 7 g/dL overnight. Which prevention approach is the one to evaluate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Treatment-dose apixaban, because a high risk score means a clot is already present"
+        },
+        {
+          "id": "b",
+          "text": "Mechanical prophylaxis, because pharmacologic prophylaxis is a poor fit during active bleeding"
+        },
+        {
+          "id": "c",
+          "text": "An inferior vena cava filter as the default prevention device for every high score"
+        },
+        {
+          "id": "d",
+          "text": "Aspirin 325 mg, because gastrointestinal bleeding is a reason to choose an antiplatelet in clinic"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B separates risk from bleeding: the patient may still need mechanical prophylaxis (intermittent pneumatic compression) while melena and a falling hemoglobin make a pharmacologic dose unsafe. Choice A treats a risk score as a diagnosed clot and uses treatment intensity. Choice C makes a filter the default; filters are not routine prophylaxis. Choice D adds an antiplatelet during gastrointestinal bleeding. Source: VTE prevention principles when pharmacologic prophylaxis is contraindicated.",
+      "teachingPoints": [
+        "A high risk score does not override active bleeding.",
+        "Mechanical measures are the alternative to evaluate, not a filter by default."
+      ],
+      "links": [
+        {
+          "kind": "pathway",
+          "id": "vte-prophylaxis",
+          "label": "VTE prophylaxis (medical and surgical)"
+        }
+      ],
+      "objectiveIds": [
+        35,
+        8
+      ]
+    },
+    {
+      "id": "ii-55",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A hospital changes a patient from enoxaparin to apixaban at discharge for acute PE. The discharge summary lists both 'enoxaparin 1 mg/kg twice daily' and 'apixaban 5 mg twice daily' as active. The patient is on day 8, after a completed lead-in. Which action prevents an unintended overlap?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Continue both, because two anticoagulants are safer than one during the first outpatient week"
+        },
+        {
+          "id": "b",
+          "text": "Stop apixaban and restart the acute 10 mg lead-in, because any list that mentions heparin cancels the oral drug"
+        },
+        {
+          "id": "c",
+          "text": "Reconcile to a single active anticoagulant and remove the parenteral order once the oral regimen is the plan"
+        },
+        {
+          "id": "d",
+          "text": "Add warfarin the same day, because three agents are the standard handoff"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C is the reconciliation: two full-intensity anticoagulants at once are a bleeding error, and the summary has to show one active plan. On day 8 the apixaban lead-in is already behind the patient if it was completed, so the maintenance oral regimen is the one to keep and the enoxaparin order is the one to retire. Choice A overlaps them. Choice B restarts a lead-in because of a documentation artifact. Choice D adds a third agent. Source: anticoagulation discharge reconciliation.",
+      "teachingPoints": [
+        "One intended anticoagulant should appear as the active drug.",
+        "A copied order is not a reason to double the class."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        }
+      ],
+      "objectiveIds": [
+        36
+      ]
+    },
+    {
+      "id": "ii-56",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "After a major nosebleed, the emergency clinician tells a patient on warfarin to stop for 3 days. The anticoagulation clinic's note, written the same afternoon, says continue and recheck the INR tomorrow. The patient calls, confused. Which follow-up design fixes this?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Whichever instruction the patient remembers last becomes the plan, and no clinician owns it in clinic"
+        },
+        {
+          "id": "b",
+          "text": "The emergency note always overrides, and the anticoagulation clinic then closes the chart"
+        },
+        {
+          "id": "c",
+          "text": "The clinic note always overrides, and the emergency visit is left out of the record"
+        },
+        {
+          "id": "d",
+          "text": "One reconciled plan with a named owner, covering the bleed, the next INR, and when therapy resumes"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the design: conflicting instructions are a safety event, and the cure is a single plan with a named owner that accounts for the bleed and the original indication. Choice A leaves the patient as the tie-breaker. Choice B or C lets one service erase the other without a conversation. Source: post-bleed transitions practice.",
+      "teachingPoints": [
+        "Two truthful-sounding notes can still harm if they disagree.",
+        "The resume decision needs an owner and a time."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-major-bleed-us",
+          "label": "Life-threatening bleed on a DOAC (U.S.) — what do I reverse with?"
+        }
+      ],
+      "objectiveIds": [
+        37,
+        48
+      ]
+    },
+    {
+      "id": "ii-57",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 60-year-old woman is at a planned stop visit after 3 months of anticoagulation for a DVT that followed ankle surgery. The surgery has healed. This week she was diagnosed with pancreatic cancer. She is not bleeding. Which reassessment fits?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Do not stop on the old surgical date; active cancer reopens duration and is managed as cancer-associated VTE"
+        },
+        {
+          "id": "b",
+          "text": "Stop today, because the original provocation was surgery and a new cancer diagnosis does not count"
+        },
+        {
+          "id": "c",
+          "text": "Place an inferior vena cava filter and stop anticoagulation, because cancer forbids anticoagulant drugs"
+        },
+        {
+          "id": "d",
+          "text": "Restart an acute lead-in dose every 3 months for life, with no further duration review"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A updates the phenotype. A transient surgical provocation would have supported a finite course, but new active cancer is a persistent risk, and cancer-associated VTE is not stopped at the original 3-month date by reflex. Choice B follows the outdated calendar. Choice C substitutes a filter for anticoagulation. Choice D restarts acute dosing on a loop. Source: 2021 CHEST and cancer-VTE duration practice: active cancer is not a resolved transient risk.",
+      "teachingPoints": [
+        "A new cancer diagnosis changes the stop decision.",
+        "The original surgical story is no longer the whole risk."
+      ],
+      "links": [
+        {
+          "kind": "tx-pathway",
+          "id": "extended-vte",
+          "label": "Extended VTE secondary prevention"
+        },
+        {
+          "kind": "framework",
+          "id": "cancer-vte",
+          "label": "How do I treat cancer-associated VTE acutely and on extended therapy?"
+        }
+      ],
+      "objectiveIds": [
+        38,
+        42
+      ]
+    },
+    {
+      "id": "ii-58",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A man on a previously stable warfarin dose starts a diet that removes most green vegetables and also starts St John's wort for mood. The INR swings from 1.6 to 3.9 over two weeks. He reports no missed doses. Which review best addresses the likely causes?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Adherence only, because diet and herbal products cannot move the INR when every dose was taken"
+        },
+        {
+          "id": "b",
+          "text": "Both the drop in dietary vitamin K and the inducing herb, which can pull the INR in opposite directions"
+        },
+        {
+          "id": "c",
+          "text": "St John's wort alone, on the assumption that it always raises the INR the way an antibiotic does"
+        },
+        {
+          "id": "d",
+          "text": "A permanent INR target of 3.5 to 4.5, because any supplement turns AF into a mechanical-valve problem now"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B reviews both exposures. Cutting vitamin K–rich foods can raise the INR. St John's wort induces warfarin metabolism and can lower the INR. Together they make a swinging INR without missed doses. Choice A ignores both. Choice C gives the herb the wrong direction. Choice D invents a valve-range target. Source: warfarin interactions with dietary vitamin K and with St John's wort.",
+      "teachingPoints": [
+        "A stable pill count does not clear diet and herb effects.",
+        "Inducers and vitamin K deficiency move the INR in opposite directions."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        39,
+        40
+      ]
+    },
+    {
+      "id": "ii-59",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 71-year-old man on rivaroxaban has ongoing melena, systolic blood pressure 84 mm Hg, and a hemoglobin of 6.5 g/dL in a United States hospital. He is dizzy and last took the tablet 5 hours ago. Which pathway matches this site's current teaching?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Andexanet alfa, ordered as the current United States antidote for this factor Xa bleed"
+        },
+        {
+          "id": "b",
+          "text": "Idarucizumab, because gastrointestinal bleeding on any oral anticoagulant uses that antibody"
+        },
+        {
+          "id": "c",
+          "text": "Supportive resuscitation plus the institutional 4F-PCC pathway for this life-threatening factor Xa bleed"
+        },
+        {
+          "id": "d",
+          "text": "A clinic visit in 48 hours and no reversal talk, because melena with hypotension is always minor in clinic"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C matches post-withdrawal United States teaching on this site: life-threatening rivaroxaban bleeding is supportive care plus institutional 4F-PCC, not andexanet, which was withdrawn effective 22 December 2025. Choice A orders the withdrawn product. Choice B uses dabigatran's specific antibody. Choice D delays care of shock. Source: FDA safety communication as used on this site's major-bleed framework.",
+      "teachingPoints": [
+        "Hypotension and ongoing melena define major bleeding.",
+        "Name rivaroxaban before picking an antidote."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-major-bleed-us",
+          "label": "Life-threatening bleed on a DOAC (U.S.) — what do I reverse with?"
+        },
+        {
+          "kind": "nuance",
+          "id": "annexa-historical-vs-us-4fpcc",
+          "label": "ANNEXA-era andexanet vs U.S. 4F-PCC practice"
+        },
+        {
+          "kind": "page",
+          "id": "reversal",
+          "label": "Bleed & reversal"
+        }
+      ],
+      "objectiveIds": [
+        41,
+        33
+      ]
+    },
+    {
+      "id": "ii-60",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A patient on apixaban for AF is scheduled for a cataract extraction that the ophthalmologist classifies as low bleeding risk. The generic instruction says stop all blood thinners for 5 days and use heparin shots. Creatinine clearance is 70 mL/min. There is no mechanical valve. Which planning step should occur first?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Give heparin for 5 days, because PAUSE bridged every cataract extraction in patients with AF"
+        },
+        {
+          "id": "b",
+          "text": "Stop apixaban for 5 days even though the ophthalmologist does not require a hold for this extraction"
+        },
+        {
+          "id": "c",
+          "text": "Order an anti-Xa level the morning of surgery, because the PAUSE protocol required a drug level"
+        },
+        {
+          "id": "d",
+          "text": "If a hold is needed, PAUSE omitted the DOAC for 1 day before this low-risk procedure, with no bridge"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D follows the order of operations on this site and in PAUSE. First ask whether the low-risk procedure requires a hold. If it does, PAUSE omitted apixaban, dabigatran, or rivaroxaban for 1 day before a low-bleeding-risk procedure and for 2 days before a high-bleeding-risk procedure (2 and 4 days for dabigatran with a creatinine clearance below 50 mL/min), without heparin bridging and without preoperative coagulation testing. Choice A adds a bridge PAUSE did not use. Choice B imposes a 5-day hold. Choice C invents a required anti-Xa. Edoxaban was not in PAUSE. Source: PAUSE, as summarized on this site.",
+      "teachingPoints": [
+        "Many low-risk procedures never needed a hold.",
+        "PAUSE's low-risk omission was 1 day, without a heparin bridge."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "peri-procedural-oac",
+          "label": "How do I plan anticoagulation around an elective procedure?"
+        }
+      ],
+      "objectiveIds": [
+        43
+      ]
+    },
+    {
+      "id": "ii-61",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A patient performs home INR testing with good technique and reports results reliably. She now wants to change the warfarin dose herself whenever a result 'looks high,' without a written plan. Which distinction should the clinic explain?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Self-testing reports a result to a clinician who adjusts the dose"
+        },
+        {
+          "id": "b",
+          "text": "Any successful fingerstick authorizes unsupervised dose changes that same day"
+        },
+        {
+          "id": "c",
+          "text": "Home testing replaces the need for a clinician entirely, including for bleeding calls"
+        },
+        {
+          "id": "d",
+          "text": "A single class certificate from another disease makes her a warfarin prescriber"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A separates patient self-testing from patient self-management. She has shown the testing half. Dose changes remain with the clinician unless a formal self-management program and a dosing algorithm are in place. Choice B treats technique as prescribing authority. Choice C removes the clinician. Choice D imports an unrelated certificate. Source: home INR program design on this site.",
+      "teachingPoints": [
+        "Getting a drop of blood is not the same as changing the dose.",
+        "The reporting path she already uses is the self-testing model."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        44,
+        45
+      ]
+    },
+    {
+      "id": "ii-62",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "During home INR training, a patient cannot obtain an adequate sample after coaching and does not know how an unexpected result would reach the clinic. He is eager and owns the meter. What is the eligibility conclusion?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Eagerness plus a purchased meter is enough to start unsupervised testing tonight"
+        },
+        {
+          "id": "b",
+          "text": "He is not eligible yet, because both technique and a reporting plan are unmet"
+        },
+        {
+          "id": "c",
+          "text": "He may test at home if he promises to double the dose when the meter errors"
+        },
+        {
+          "id": "d",
+          "text": "Failed training means warfarin is stopped and a DOAC is mandatory the same day"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B is the eligibility conclusion: home testing requires a demonstrated sample and a known reporting path. Neither is present. Choice A substitutes motivation. Choice C builds an error into a dose increase. Choice D converts a training failure into an immediate drug-class change that has not been clinically assessed. Source: home INR competency criteria.",
+      "teachingPoints": [
+        "Competence is demonstrated, not promised.",
+        "A meter in the home is not a passed competency."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        45,
+        46
+      ]
+    },
+    {
+      "id": "ii-63",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A point-of-care INR operator finds that the test strips were left in a hot car, outside the manufacturer's storage range. A patient is in the chair expecting a warfarin dose. Controls have not been run on this lot today. Which procedure protects the result?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Run the patient now, because a person waiting in the chair outranks the storage rules"
+        },
+        {
+          "id": "b",
+          "text": "Use the hot-car strips if the first number looks close to last month's INR"
+        },
+        {
+          "id": "c",
+          "text": "Quarantine the strips, release no result from them, and get a venous INR if a dose is due"
+        },
+        {
+          "id": "d",
+          "text": "Average a result from the overheated strips with last month's venous INR and dose from that"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C protects the patient from a result the storage conditions do not support. The strips are quarantined, no INR is released from them, and a venous sample is the route to a dose today. Choice A prioritizes throughput. Choice B uses a plausible-looking number as quality control. Choice D mixes a bad sample with an old result. Source: point-of-care storage and quality-control practice.",
+      "teachingPoints": [
+        "Manufacturer storage limits are part of the test.",
+        "A convenient number is not a control."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        46
+      ]
+    },
+    {
+      "id": "ii-64",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 76-year-old man on warfarin calls after a fall with head impact. He is increasingly drowsy, vomited once, and has a new headache. The family asks whether this can wait for tomorrow's INR. Which triage response fits?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Wait for tomorrow's scheduled INR, because drowsiness after a head strike is expected and benign"
+        },
+        {
+          "id": "b",
+          "text": "Have him take an extra warfarin dose tonight in case the fall was an embolic event"
+        },
+        {
+          "id": "c",
+          "text": "Reassure by phone if the last INR was in range, because a therapeutic INR excludes intracranial bleeding"
+        },
+        {
+          "id": "d",
+          "text": "Emergency assessment now: head impact plus worsening alertness on an anticoagulant can be intracranial bleeding"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the triage: progressive drowsiness, vomiting, and headache after head impact on an anticoagulant are emergency features of possible intracranial hemorrhage. An in-range historical INR does not exclude bleeding, and tomorrow's blood draw is the wrong clock. Choice A delays. Choice B adds warfarin. Choice C uses the last INR as proof. Source: post-trauma anticoagulant triage.",
+      "teachingPoints": [
+        "Worsening alertness after head impact is not a next-day lab.",
+        "A past INR does not rule out bleeding tonight."
+      ],
+      "links": [
+        {
+          "kind": "page",
+          "id": "reversal",
+          "label": "Bleed & reversal"
+        },
+        {
+          "kind": "framework",
+          "id": "post-ich-anticoagulation",
+          "label": "If AF (or VTE) coexists with prior ICH, when do I restart anticoagulation?"
+        }
+      ],
+      "objectiveIds": [
+        47
+      ]
+    },
+    {
+      "id": "ii-65",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 59-year-old man on apixaban for a prior PE reports a newly painful, swollen leg. He has missed several doses during a trip, and his weight and serum creatinine have not been rechecked in a year. Cancer screening is not documented. Which evaluation precedes a declaration of anticoagulant failure?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Check missed doses and whether the dose still fits before calling the drug a failure"
+        },
+        {
+          "id": "b",
+          "text": "Label the drug a failure immediately and add aspirin plus a second full-dose DOAC"
+        },
+        {
+          "id": "c",
+          "text": "Place an inferior vena cava filter and stop anticoagulation, because one new swollen leg proves drug failure"
+        },
+        {
+          "id": "d",
+          "text": "Ignore the leg, because symptoms that appear while a DOAC is prescribed cannot be new VTE"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A is the workup before the word 'failure.' Missed doses are a common reason for a new clot on therapy. Kidney function and, for apixaban, the labeled AF or VTE dose rules may have changed. A new cancer or antiphospholipid syndrome can present as breakthrough thrombosis. Choice B stacks drugs. Choice C jumps to a filter; PREPIC2 does not support routine filters in anticoagulated PE, and this symptom has not even been imaged. Choice D denies that breakthrough VTE exists. Source: assessment of suspected anticoagulant failure.",
+      "teachingPoints": [
+        "Missed doses are the common 'failure.'",
+        "Recompute eligibility before adding a second anticoagulant."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "acute-vte-doac",
+          "label": "Which DOAC for acute VTE when bleeding risk matters?"
+        },
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        }
+      ],
+      "objectiveIds": [
+        49
+      ]
+    },
+    {
+      "id": "ii-66",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A hemodynamically stable patient with PE is started on anticoagulation and asks for a retrievable inferior vena cava filter 'for extra protection.' There is no contraindication to anticoagulation and no planned interruption. Which PREPIC2 reading fits?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "PREPIC2 showed filters cut recurrent PE in half when added to anticoagulation"
+        },
+        {
+          "id": "b",
+          "text": "Adding a retrievable filter to anticoagulation did not reduce symptomatic recurrent PE at 3 months"
+        },
+        {
+          "id": "c",
+          "text": "PREPIC2 forbids anticoagulation once a filter is placed"
+        },
+        {
+          "id": "d",
+          "text": "Filters are mandatory for every stable PE because the trial excluded anticoagulated patients"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B is PREPIC2 on this site: symptomatic recurrent PE at 3 months was 3.0% with a filter plus anticoagulation versus 1.5% with anticoagulation alone (relative risk 2.00; 95% CI 0.51 to 7.89; P = .50). Adding a filter did not reduce recurrent PE. Choice A reverses the result. Choice C stops the drug the trial continued. Choice D claims the trial excluded anticoagulated patients; both arms were anticoagulated. Source: PREPIC2 card.",
+      "teachingPoints": [
+        "Anticoagulation is the treatment. A filter is not routine extra protection.",
+        "The confidence interval and the point estimates do not show a benefit."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "prepic2",
+          "label": "Effect of a Retrievable Inferior Vena Cava Filter Plus Anticoagulation vs Anticoagulation Alone on Risk of Recurrent Pulmonary Embolism: A Randomized Clinical Trial"
+        },
+        {
+          "kind": "pathway",
+          "id": "pe-reperfusion",
+          "label": "PE reperfusion / intermediate-risk PE"
+        }
+      ],
+      "objectiveIds": [
+        50,
+        35
+      ]
+    },
+    {
+      "id": "ii-67",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A PE team is discussing catheter options for a normotensive patient with right-ventricular strain who is already on anticoagulation and is not bleeding. One clinician uses 'thrombectomy' and 'catheter-directed thrombolysis' as synonyms. Which distinction is essential before either is selected?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "They are the same procedure, so the two names do not change bleeding risk or the consent"
+        },
+        {
+          "id": "b",
+          "text": "Either catheter treatment is mandatory for every normotensive PE that has any biomarker rise"
+        },
+        {
+          "id": "c",
+          "text": "Device removal and catheter thrombolysis differ, and risk class comes before either is chosen"
+        },
+        {
+          "id": "d",
+          "text": "Catheter therapy replaces anticoagulation, so the heparin or DOAC stops as soon as a device is mentioned"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C separates the procedures. Catheter-directed thrombolysis infuses a fibrinolytic; mechanical thrombectomy removes clot with a device and does not automatically include that infusion. They are not synonyms, and choosing either still depends on whether the patient is high-risk, intermediate-risk, or low-risk, plus local expertise. This patient is normotensive with right-ventricular strain, which is intermediate-risk, not an automatic catheter case and not a reason to stop anticoagulation. Choice A collapses the procedures. Choice B mandates a procedure for every biomarker. Choice D stops the anticoagulant. Source: distinction between catheter modalities in PE, consistent with this site's intermediate-PE teaching that systemic lysis is not routine in normotensive patients.",
+      "teachingPoints": [
+        "Name the procedure. Lytic infusion and device extraction are not the same consent.",
+        "Intermediate-risk PE is not an automatic catheter indication."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "intermediate-pe-cdt",
+          "label": "Who with intermediate-risk PE is a candidate for catheter-directed therapy?"
+        },
+        {
+          "kind": "nuance",
+          "id": "hi-peitho-enrichment",
+          "label": "Intermediate-risk PE: anticoagulation vs CDT"
+        }
+      ],
+      "objectiveIds": [
+        50
+      ]
+    },
+    {
+      "id": "ii-68",
+      "domainId": "II",
+      "difficulty": "advanced",
+      "stem": "A 77-year-old woman with AF and recurrent major gastrointestinal bleeding is considering left atrial appendage occlusion. She declines follow-up imaging and says she will not take the post-implant antithrombotic regimen because she wants to be 'done with blood thinners.' Which concern is the central one?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The implant erases stroke risk the moment it is placed, so follow-up imaging is optional marketing"
+        },
+        {
+          "id": "b",
+          "text": "Post-implant antithrombotic therapy and imaging surveillance are optional if bleeding was the reason for referral"
+        },
+        {
+          "id": "c",
+          "text": "Appendage occlusion is a treatment for acute DVT and does not involve the left atrium"
+        },
+        {
+          "id": "d",
+          "text": "Device-related thrombus surveillance and the post-implant regimen are part of candidacy, not optional extras"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D matches this site's appendage-occlusion teaching: the procedure trades procedural and post-implant antithrombotic risk against long-term oral anticoagulation, and it is not 'set and forget.' Inability to complete imaging surveillance or the planned post-implant regimen is a candidacy problem. Choice A treats placement as the end of risk. Choice B drops the follow-up because bleeding was the indication. Choice C relocates the procedure to the leg. Source: left atrial appendage occlusion framework on this site.",
+      "teachingPoints": [
+        "Bleeding may be why she was referred. It does not erase the aftercare.",
+        "Device-related thrombus is why imaging is part of the plan."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "laao-vs-oac",
+          "label": "When is left atrial appendage occlusion reasonable versus long-term OAC?"
+        },
+        {
+          "kind": "case",
+          "id": "laao-candidate",
+          "label": "Recurrent bleeds on DOAC — LAAO consult?"
+        }
+      ],
+      "objectiveIds": [
+        50
+      ]
+    },
+    {
+      "id": "iii-25",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient with declining memory wants to manage warfarin independently. A family member already fills the other medicine boxes and is present for the visit. The patient can state the indication but cannot recall yesterday's dose. Which plan respects both autonomy and safety?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Keep him in the decision and use the family member who already handles medicines, with support"
+        },
+        {
+          "id": "b",
+          "text": "Exclude him from the conversation, because declining memory voids any consent about warfarin"
+        },
+        {
+          "id": "c",
+          "text": "Let him keep dosing independently, because he can still say the word 'warfarin'"
+        },
+        {
+          "id": "d",
+          "text": "Stop anticoagulation so that nobody has to manage a dose or an INR schedule"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A shares the work: he remains the decision-maker he can still be, and the person who already manages medicines is built into the plan with his agreement. Choice B erases him. Choice C treats one correct word as dosing competence. Choice D removes the indication to avoid a logistics problem. Source: supported decision-making when cognition is declining.",
+      "teachingPoints": [
+        "Autonomy and a safe medication system can be combined.",
+        "Saying the drug name is not the same as managing the dose."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "frail-elderly-vka-doac",
+          "label": "Should frail older adults on stable VKA switch to a DOAC?"
+        }
+      ],
+      "objectiveIds": [
+        53,
+        54
+      ]
+    },
+    {
+      "id": "iii-26",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient with limited reading ability is given a six-page anticoagulant leaflet in small type and cannot explain the schedule afterward. Which material is the better next step?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The same leaflet, printed smaller so it looks shorter"
+        },
+        {
+          "id": "b",
+          "text": "A short plain-language sheet, or a spoken teach-back, that he can restate"
+        },
+        {
+          "id": "c",
+          "text": "A statistical methods appendix from a trial, to raise the reading level"
+        },
+        {
+          "id": "d",
+          "text": "No material at all, because limited reading means education is impossible"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B changes the tool to something he can use and then checks learning. Choice A worsens access. Choice C raises the reading burden. Choice D abandons education. Source: health-literacy material design.",
+      "teachingPoints": [
+        "Match the material to the reading barrier.",
+        "A restatement shows whether the new tool worked."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        }
+      ],
+      "objectiveIds": [
+        56,
+        51
+      ]
+    },
+    {
+      "id": "iii-27",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient cannot afford transportation to INR checks and has unreliable access to food, including the meals that usually supply vitamin K. The INR has started to swing. Which community-support plan reinforces the anticoagulation care?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Discharge him until he can pay for both the bus fare and the groceries"
+        },
+        {
+          "id": "b",
+          "text": "Double the warfarin dose so that fewer INR visits are required"
+        },
+        {
+          "id": "c",
+          "text": "Arrange transport and food support, and keep INR checks while that is set up"
+        },
+        {
+          "id": "d",
+          "text": "Tell him vitamin K intake does not affect warfarin, so the food problem can be ignored"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C treats transportation and food as clinical problems: missed INRs and an unstable vitamin K intake will move the INR, so the supports are part of the anticoagulation plan. Choice A withholds monitoring. Choice B escalates the dose to avoid visits. Choice D denies the diet effect. Source: social-needs support as part of warfarin safety.",
+      "teachingPoints": [
+        "An unstable diet and a missed INR are medical problems.",
+        "The dose is not increased to avoid the visit."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        58,
+        23
+      ]
+    },
+    {
+      "id": "iii-28",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A clinic writes learning objectives for home INR device training. Which objective is the one that can verify a practical skill?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The patient will appreciate the importance of anticoagulation in general terms"
+        },
+        {
+          "id": "b",
+          "text": "The patient will understand quality well enough to feel confident about the meter in clinic"
+        },
+        {
+          "id": "c",
+          "text": "The patient will know about the INR as a concept mentioned during the class"
+        },
+        {
+          "id": "d",
+          "text": "The patient obtains an adequate sample and states whom to call for an unexpected result"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is observable. A preceptor can watch the sample and hear the reporting plan. Choices A, B, and C use verbs that cannot be checked. Source: objective-writing for skills training.",
+      "teachingPoints": [
+        "A skill objective names an action a trainer can watch.",
+        "'Understand' and 'appreciate' do not verify the device skill."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        59,
+        55
+      ]
+    },
+    {
+      "id": "iii-29",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "Chart audits show staff still telling DOAC patients to 'keep the INR between 2 and 3' as the dose target. Which education strategy addresses that staff learning need?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Retrain with a case showing the INR is not a DOAC dose target, then audit what staff say"
+        },
+        {
+          "id": "b",
+          "text": "Add an INR target of 2 to 3 to the DOAC after-visit summary so the old script becomes official"
+        },
+        {
+          "id": "c",
+          "text": "Teach that every DOAC is adjusted until the activated partial thromboplastin time is exactly 60 seconds"
+        },
+        {
+          "id": "d",
+          "text": "Remove INR teaching from the warfarin clinic so one sentence can cover both drug classes"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A uses a concrete error, an INR target written for a DOAC that is not dosed to the INR, and then checks what staff actually say. Choice B codifies the mistake. Choice C invents an activated partial thromboplastin time target for DOACs. Choice D damages warfarin teaching to hide a DOAC error. Source: staff education on what the INR does not do.",
+      "teachingPoints": [
+        "Teach the misread INR as the case.",
+        "A warfarin target pasted onto a DOAC is the sentence to retire."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        },
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        60
+      ]
+    },
+    {
+      "id": "iii-30",
+      "domainId": "III",
+      "difficulty": "advanced",
+      "stem": "A patient needs an interpreter and has reduced vision. The clinic explained anticoagulation verbally. Staff are unsure he can follow the plan at home. Which assessment answers that question?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Assume he understood, because an interpreter was present in the room for the explanation"
+        },
+        {
+          "id": "b",
+          "text": "Through the interpreter, have him restate the dose times and the bleeding plan"
+        },
+        {
+          "id": "c",
+          "text": "Hand him a small-print English leaflet and end the visit without a restatement"
+        },
+        {
+          "id": "d",
+          "text": "Skip the check, because using an interpreter makes teach-back invalid"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B checks follow-through in his language and fixes the visual barrier. Presence of an interpreter does not prove he can restate the plan. Choice A assumes it. Choice C uses a format he cannot read. Choice D abandons the check. Source: teach-back with an interpreter and an accessible format.",
+      "teachingPoints": [
+        "The interpreter is how teach-back happens, not a reason to skip it.",
+        "Vision changes the format, not the need to verify."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        }
+      ],
+      "objectiveIds": [
+        51,
+        54,
+        55
+      ]
+    },
+    {
+      "id": "iv-28",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A discharge list prints both 'Eliquis 5 mg twice daily' and 'apixaban 5 mg twice daily' as if they were two anticoagulants to take together. Which resolution is correct?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Give both lines, because a brand name and a generic name are two different molecules"
+        },
+        {
+          "id": "b",
+          "text": "Eliquis is rivaroxaban, so the list is an intended pair of factor Xa inhibitors"
+        },
+        {
+          "id": "c",
+          "text": "Eliquis is warfarin, so an INR target is added beside the apixaban line"
+        },
+        {
+          "id": "d",
+          "text": "Eliquis is apixaban; adult tablets are 2.5 mg and 5 mg, not two drugs taken together"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D collapses the duplicate. Eliquis is the brand of apixaban. Taking both lines would double the dose. U.S. adult tablets are 2.5 mg and 5 mg, and a 10 mg dose in acute VTE is two 5 mg tablets, not a second drug; the 0.5 mg tablet for oral suspension and the 0.15 mg sprinkle capsule are pediatric presentations. Choice A gives both. Choice B renames the brand. Choice C adds warfarin monitoring. Source: apixaban identity and usual adult tablet strengths.",
+      "teachingPoints": [
+        "A brand and a generic on the same list are one medicine.",
+        "Two lines of 5 mg would be 10 mg twice daily."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "aristotle",
+          "label": "Apixaban for Reduction in Stroke and Other Thromboembolic Events in Atrial Fibrillation"
+        }
+      ],
+      "objectiveIds": [
+        61,
+        62
+      ]
+    },
+    {
+      "id": "iv-29",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A pediatric order says 'apixaban for oral suspension' for a child who cannot swallow tablets. The dispensing team has adult 5 mg tablets and a bottle labeled as a different apixaban preparation. Why verify the exact product and the administration instructions?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Those apixaban products are not interchangeable, and a child's order is not an adult AF dose"
+        },
+        {
+          "id": "b",
+          "text": "Any adult apixaban tablet can be crushed into the suspension volume without changing the delivered dose"
+        },
+        {
+          "id": "c",
+          "text": "The adult 2-of-3 reduction rule sets the child's dose in milligrams per year of age"
+        },
+        {
+          "id": "d",
+          "text": "The suspension is reversed with vitamin K, so the product check is really an INR check"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A is the dispensing safety point. Pediatric apixaban products and adult tablets do not share one administration instruction, and an adult AF dose is not a child's VTE dose. Choice B crushes whatever is on the shelf. Choice C applies the older-adult reduction rule. Choice D uses vitamin K. U.S. ELIQUIS labeling lists pediatric presentations (a 0.15 mg sprinkle capsule and a 0.5 mg tablet for oral suspension) with weight-tiered dosing, and describes crushing adult 2.5 mg or 5 mg tablets only for patients weighing at least 35 kg. No pediatric milligram dose is stated. Source: ELIQUIS prescribing information, dosage and administration.",
+      "teachingPoints": [
+        "Read the preparation named on the order.",
+        "Do not convert an adult tablet into a pediatric dose at the counter."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "acute-vte-doac",
+          "label": "Which DOAC for acute VTE when bleeding risk matters?"
+        }
+      ],
+      "objectiveIds": [
+        62,
+        26
+      ]
+    },
+    {
+      "id": "iv-30",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "Patient A starts warfarin for AF and has an INR of 2.0 on day 2 while still on heparin overlap. Patient B took a first apixaban dose 3 hours ago. A learner says the two drugs are now 'equally on board' because both have a number in the chart. Which comparison is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Both drugs inhibit vitamin K epoxide reductase, so day 2 is full effect for warfarin and for apixaban"
+        },
+        {
+          "id": "b",
+          "text": "The early INR is mostly factor VII loss, whereas apixaban directly inhibits factor Xa within hours of a dose"
+        },
+        {
+          "id": "c",
+          "text": "Apixaban's full effect waits for an INR of 2, just as warfarin's full effect does"
+        },
+        {
+          "id": "d",
+          "text": "Warfarin directly inhibits factor Xa on day 1, and apixaban waits for protein C to fall"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B separates onset. Warfarin's early INR rise is driven largely by the short half-life of factor VII and does not prove prothrombin is fully suppressed. Apixaban inhibits factor Xa directly and does not wait for that synthesis lag. Choice A gives them one target. Choice C doses apixaban to an INR. Choice D swaps the mechanisms. Source: warfarin onset versus direct factor Xa inhibition. Half-lives are approximate.",
+      "teachingPoints": [
+        "An INR of 2 on day 2 is not proof of a completed warfarin effect.",
+        "A DOAC dose this morning is already a direct enzyme effect."
+      ],
+      "links": [
+        {
+          "kind": "tx-pathway",
+          "id": "acute-vte",
+          "label": "Acute VTE (DVT/PE)"
+        }
+      ],
+      "objectiveIds": [
+        64
+      ]
+    },
+    {
+      "id": "iv-31",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A warfarin pharmacogenetic report shows reduced-function CYP2C9 variants. The patient's INR rose faster than expected on a usual start. A colleague says the gene means the patient is resistant and needs a higher dose. Which mechanism is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "CYP2C9 reduced function clears S-warfarin faster, so doses must rise"
+        },
+        {
+          "id": "b",
+          "text": "The variant blocks platelet P2Y12, so warfarin is stopped"
+        },
+        {
+          "id": "c",
+          "text": "S-warfarin is cleared more slowly, so the same dose produces a higher INR than expected"
+        },
+        {
+          "id": "d",
+          "text": "CYP2C9 is the vitamin K epoxide reductase target, so the finding is a VKORC1 result under another name"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C is the direction. S-warfarin is the more potent enantiomer and a CYP2C9 substrate. Reduced-function variants slow clearance and increase sensitivity. Choice A reverses the clearance. Choice B assigns a platelet target. Choice D confuses CYP2C9 with VKORC1, the drug target, which is a different sensitivity mechanism. Source: warfarin pharmacokinetics. No genotype-to-milligram table is stated.",
+      "teachingPoints": [
+        "Reduced clearance means more sensitive, not resistant.",
+        "CYP2C9 is metabolism. VKORC1 is the target."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        64
+      ]
+    },
+    {
+      "id": "iv-32",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A report lists both a CYP2C9 variant and a VKORC1 variant for a patient starting warfarin. The clinician asks how the two lines differ. Which comparison is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "They are two names for one enzyme, so only one of the lines on the report is real"
+        },
+        {
+          "id": "b",
+          "text": "VKORC1 clears S-warfarin, and CYP2C9 is a receptor on the platelet surface"
+        },
+        {
+          "id": "c",
+          "text": "Either variant means warfarin cannot be used and a DOAC must be started the same day"
+        },
+        {
+          "id": "d",
+          "text": "CYP2C9 clears S-warfarin; VKORC1 is the sensitivity of warfarin's target enzyme"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D separates metabolism from target. CYP2C9 variants change how fast S-warfarin is cleared. VKORC1 variants change the sensitivity of vitamin K epoxide reductase, the enzyme warfarin inhibits. Choice A collapses them. Choice B swaps the jobs and adds a platelet receptor. Choice C converts a sensitivity report into an automatic DOAC start without an indication review. Source: warfarin pharmacogenetics, mechanism only. No dosing algorithm is applied.",
+      "teachingPoints": [
+        "One gene is clearance. The other is the drug target.",
+        "A genotype does not by itself pick the drug class."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        64
+      ]
+    },
+    {
+      "id": "iv-33",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "An 84-year-old woman has been on dabigatran 150 mg twice daily for AF. She now weighs 50 kg and the serum creatinine is 2.0 mg/dL. She is not bleeding. Which pharmacokinetic concern forces a reassessment?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Clearance is about 17 mL/min and dabigatran is mostly renal, so 150 mg is no longer automatic"
+        },
+        {
+          "id": "b",
+          "text": "Dabigatran is cleared by CYP3A4, so the serum creatinine does not change exposure"
+        },
+        {
+          "id": "c",
+          "text": "A creatinine of 2.0 mg/dL is a reason to add ketoconazole in order to boost absorption in clinic"
+        },
+        {
+          "id": "d",
+          "text": "Idarucizumab is started as a daily oral anticoagulant once clearance falls this low"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A is the concern. Cockcroft-Gault clearance is (140−84)×50×0.85/(72×2.0) = 17 mL/min. Dabigatran is about 80 percent renally excreted, so exposure rises as clearance falls, and a dose chosen when clearance was higher is reassessed rather than continued by habit. Choice B assigns CYP3A4 clearance. Choice C adds an inhibitor. Choice D turns the reversal antibody into a daily anticoagulant. The item does not select a 75 mg dose, because regional labels differ below 30 mL/min and this site tells clinicians to recheck the label. Source: dabigatran renal clearance.",
+      "teachingPoints": [
+        "Most of the drug leaves through the kidney.",
+        "Seventeen milliliters per minute is not a 'continue 150 mg' result."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "re-ly",
+          "label": "Randomized Evaluation of Long-term Anticoagulation Therapy"
+        },
+        {
+          "kind": "page",
+          "id": "reversal",
+          "label": "Bleed & reversal"
+        }
+      ],
+      "objectiveIds": [
+        64,
+        67
+      ]
+    },
+    {
+      "id": "iv-34",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient says every oral factor Xa inhibitor requires a full meal because that is the rivaroxaban 20 mg rule. He is actually being counseled on apixaban 5 mg and, separately, on edoxaban 60 mg. Which comparison is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Apixaban and edoxaban also require a large meal, and a fasting dose of either is subtherapeutic"
+        },
+        {
+          "id": "b",
+          "text": "Rivaroxaban 15 mg and 20 mg are taken with food; apixaban and edoxaban are taken with or without food"
+        },
+        {
+          "id": "c",
+          "text": "Only edoxaban requires food, and rivaroxaban 20 mg is taken on an empty stomach"
+        },
+        {
+          "id": "d",
+          "text": "Food rules apply only to warfarin and never to any oral factor Xa inhibitor"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B matches the labels as this site states them for rivaroxaban and the with-or-without-food administration for apixaban and edoxaban. The site notes that food raises rivaroxaban 20 mg exposure (area under the curve) by 39 percent. Choice A extends the food mandate. Choice C swaps it. Choice D confines food to warfarin. Source: administration sections cited on this site's practical pages.",
+      "teachingPoints": [
+        "Copy the food rule from the drug in front of you, not from rivaroxaban's 20 mg tablet.",
+        "A full meal is not a class law."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "rocket-af",
+          "label": "Rivaroxaban Once Daily Oral Direct Factor Xa Inhibition Compared with Vitamin K Antagonism for Prevention of Stroke and Embolism Trial in Atrial Fibrillation"
+        },
+        {
+          "kind": "trial",
+          "id": "aristotle",
+          "label": "Apixaban for Reduction in Stroke and Other Thromboembolic Events in Atrial Fibrillation"
+        }
+      ],
+      "objectiveIds": [
+        64,
+        69
+      ]
+    },
+    {
+      "id": "iv-35",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A learner compares an unfractionated heparin infusion with enoxaparin injections. Both are heparins. Which distinction best links the pharmacology to monitoring?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "They have identical half-lives and both infusions or injections are titrated to a daily INR"
+        },
+        {
+          "id": "b",
+          "text": "Enoxaparin is a direct thrombin inhibitor and unfractionated heparin is an oral factor Xa inhibitor"
+        },
+        {
+          "id": "c",
+          "text": "Unfractionated heparin is protocol-monitored because its effect is variable and short; routine LMWH is not"
+        },
+        {
+          "id": "d",
+          "text": "Neither heparin involves antithrombin, so an anti-Xa level has no meaning for either drug"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C links pharmacology to the ward routine. Unfractionated heparin needs a protocolized activated partial thromboplastin time or anti-Xa because of variable binding and a short half-life. LMWH has more predictable anti-Xa effect, is cleared by the kidney, and is monitored with anti-Xa only in selected cases. Choice A uses an INR for both. Choice B renames both drugs. Choice D removes antithrombin, which both depend on. Source: heparin versus LMWH pharmacology.",
+      "teachingPoints": [
+        "Routine clotting times follow the unpredictable infusion.",
+        "Renal clearance is the LMWH issue, not a daily INR."
+      ],
+      "links": [
+        {
+          "kind": "page",
+          "id": "reversal",
+          "label": "Bleed & reversal"
+        }
+      ],
+      "objectiveIds": [
+        63,
+        64
+      ]
+    },
+    {
+      "id": "iv-36",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient on fondaparinux has a serious bleed. The team assumes protamine will completely reverse it because protamine is 'the heparin antidote.' Why is that assumption wrong?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Protamine completely neutralizes fondaparinux anti-Xa activity within about 10 minutes in clinic"
+        },
+        {
+          "id": "b",
+          "text": "Fondaparinux is reversed by vitamin K because it is a vitamin K antagonist"
+        },
+        {
+          "id": "c",
+          "text": "Fondaparinux is dabigatran, so idarucizumab and protamine are the same decision"
+        },
+        {
+          "id": "d",
+          "text": "Fondaparinux has no known specific antidote, and protamine is not a complete reversal for it"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D matches the Arixtra overdosage statement on this site: there is no known antidote. Protamine is the heparin neutralization class and only a partial approach for enoxaparin, not a labeled fondaparinux reversal. Choice A promises complete neutralization. Choice B uses vitamin K. Choice C renames the drug. Source: Arixtra text on this site.",
+      "teachingPoints": [
+        "No specific antidote means supportive care and the institutional bleed pathway.",
+        "Protamine's heparin role does not transfer."
+      ],
+      "links": [
+        {
+          "kind": "page",
+          "id": "reversal",
+          "label": "Bleed & reversal"
+        }
+      ],
+      "objectiveIds": [
+        63,
+        70
+      ]
+    },
+    {
+      "id": "iv-37",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A clinician confuses the acute and extended apixaban VTE regimens and writes 2.5 mg twice daily on day 1 of a new PE. Which distinction is the correct one?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "AMPLIFY used 10 mg twice daily for 7 days then 5 mg twice daily"
+        },
+        {
+          "id": "b",
+          "text": "AMPLIFY-EXT used 10 mg twice daily as the acute treatment of a new PE"
+        },
+        {
+          "id": "c",
+          "text": "Both trials used 2.5 mg twice daily from the hour of diagnosis"
+        },
+        {
+          "id": "d",
+          "text": "Acute treatment is 20 mg once daily, and extension is the COMPASS dose"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A separates the trials on this site. AMPLIFY treated acute VTE with 10 mg twice daily for 7 days, then 5 mg twice daily. AMPLIFY-EXT and the label's extended-prevention dose use 2.5 mg twice daily after at least 6 months, not on day 1. Choice B assigns the lead-in to the extension trial. Choice C uses 2.5 mg for both from the start. Choice D imports other drugs. Source: AMPLIFY and AMPLIFY-EXT regimens on this site.",
+      "teachingPoints": [
+        "Day 1 is the 10 mg dose. Month 7 may be the 2.5 mg dose.",
+        "The smaller tablet is not safer on the first day of a new PE."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "amplify",
+          "label": "Oral Apixaban for the Treatment of Acute Venous Thromboembolism"
+        },
+        {
+          "kind": "trial",
+          "id": "amplify-ext",
+          "label": "Apixaban for Extended Treatment of Venous Thromboembolism"
+        }
+      ],
+      "objectiveIds": [
+        65
+      ]
+    },
+    {
+      "id": "iv-38",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A learner writes identical day-1 orders for edoxaban and rivaroxaban for two patients with acute DVT and normal kidneys. Which statement distinguishes the programs?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Both drugs start with edoxaban 60 mg on day 1, and neither acute regimen uses heparin"
+        },
+        {
+          "id": "b",
+          "text": "Rivaroxaban starts at 15 mg twice daily; edoxaban in Hokusai-VTE started after at least 5 days of heparin"
+        },
+        {
+          "id": "c",
+          "text": "Both acute regimens require a parenteral lead-in lasting 21 days before any tablet"
+        },
+        {
+          "id": "d",
+          "text": "Edoxaban uses the 15 mg twice-daily lead-in, and rivaroxaban is the drug that needs a heparin lead-in today"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B is the distinction on this site. EINSTEIN starts rivaroxaban at 15 mg twice daily. Hokusai-VTE places edoxaban after at least 5 days of heparin. Choice A starts edoxaban immediately. Choice C gives both a 21-day injection lead-in. Choice D swaps the designs. Source: Hokusai-VTE and EINSTEIN cards.",
+      "teachingPoints": [
+        "Same diagnosis, different first five days.",
+        "Edoxaban's 60 mg dose is not a day-1 oral-only start."
+      ],
+      "links": [
+        {
+          "kind": "trial",
+          "id": "hokusai-vte",
+          "label": "Edoxaban versus Warfarin for the Treatment of Symptomatic Venous Thromboembolism"
+        },
+        {
+          "kind": "trial",
+          "id": "einstein-dvt",
+          "label": "Oral Rivaroxaban for Symptomatic Venous Thromboembolism"
+        }
+      ],
+      "objectiveIds": [
+        65,
+        64
+      ]
+    },
+    {
+      "id": "iv-39",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient stable on warfarin develops melena a week after starting scheduled ibuprofen. The INR is unchanged at 2.4. A colleague says the new drug is irrelevant because the INR did not rise. Which mechanism explains the melena?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Ibuprofen induces warfarin clearance, which always raises the INR before any gastrointestinal bleed"
+        },
+        {
+          "id": "b",
+          "text": "Ibuprofen inhibits vitamin K epoxide reductase, so it must move the INR before melena appears"
+        },
+        {
+          "id": "c",
+          "text": "Ibuprofen can cause gastrointestinal bleeding by a platelet and mucosal effect even if the INR is unchanged"
+        },
+        {
+          "id": "d",
+          "text": "An unchanged INR of 2.4 proves the black stool is not gastrointestinal blood"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C is the pharmacodynamic point. Ibuprofen impairs platelets and injures the gastric mucosa. A bleed can occur without a change in the INR. Some patients also have an INR interaction, but this case's unchanged INR does not make the drug innocent. Choice A says induction raises the INR, which is the wrong direction for induction. Choice B makes ibuprofen a vitamin K antagonist. Choice D says a stable INR excludes melena. Source: nonsteroidal anti-inflammatory drug bleeding risk on warfarin.",
+      "teachingPoints": [
+        "The INR is not a full description of hemostasis.",
+        "A new gastric injury can bleed at a therapeutic INR."
+      ],
+      "links": [
+        {
+          "kind": "ddi",
+          "id": "apixaban-nsaids",
+          "label": "Apixaban and nonsteroidal anti-inflammatory drugs"
+        }
+      ],
+      "objectiveIds": [
+        66,
+        67
+      ]
+    },
+    {
+      "id": "iv-40",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A pregnant patient with a new VTE asks why warfarin is usually avoided and LMWH is the common choice. She is in the first trimester. She also asks about apixaban. Which distinction is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Warfarin does not cross the placenta, and LMWH is the teratogen"
+        },
+        {
+          "id": "b",
+          "text": "Apixaban is preferred in pregnancy because it does not cross the placenta"
+        },
+        {
+          "id": "c",
+          "text": "All three classes are equivalent for the fetus, and the choice is only about injections"
+        },
+        {
+          "id": "d",
+          "text": "Warfarin crosses the placenta and labeling describes fetal harm"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D matches labeling and usual practice. Warfarin crosses the placenta and is associated with fetal harm, particularly with early exposure. LMWH does not cross in a clinically important way and is the usual treatment for pregnancy-associated VTE. DOAC labeling does not support pregnancy use. Choice A swaps the placental facts. Choice B prefers apixaban. Choice C calls the classes equivalent. No milligram dose is stated. Source: warfarin and DOAC pregnancy labeling and this site's pregnancy pathway.",
+      "teachingPoints": [
+        "The placenta is the reason the classes separate.",
+        "An injection is not the indication. Fetal exposure is."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "acute-vte-doac",
+          "label": "Which DOAC for acute VTE when bleeding risk matters?"
+        }
+      ],
+      "objectiveIds": [
+        68,
+        25
+      ]
+    },
+    {
+      "id": "iv-41",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "The same patient is now 4 weeks postpartum, breastfeeding, and still needs anticoagulation. She says, 'If warfarin was dangerous for the fetus, it must be dangerous in milk, so start the DOAC my sister takes.' Which comparison is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Lactation differs from pregnancy: warfarin and LMWH have lactation roles; a DOAC is not the default"
+        },
+        {
+          "id": "b",
+          "text": "Warfarin is forbidden in milk for the same weeks it is a fetal teratogen, with no lactation exception"
+        },
+        {
+          "id": "c",
+          "text": "Every DOAC has the same published human-milk evidence as warfarin does"
+        },
+        {
+          "id": "d",
+          "text": "Breastfeeding ends the VTE indication, so every anticoagulant stops on that day"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A separates the two exposures. Warfarin's fetal toxicity does not equal a lactation ban; warfarin and LMWH are the agents with established breastfeeding use. Apixaban, dabigatran, and edoxaban labeling say breastfeeding is not recommended, rivaroxaban labeling cites insufficient data, and the 2018 ASH pregnancy guideline recommends against DOACs in breastfeeding women. Choice B equates milk with the placenta. Choice C equates the evidence. Choice D stops treatment because of feeding. Source: labeling distinction between pregnancy and lactation.",
+      "teachingPoints": [
+        "Ask where the drug would go: placenta or milk.",
+        "The sister's DOAC is an AF story, not a lactation study."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "acute-vte-doac",
+          "label": "Which DOAC for acute VTE when bleeding risk matters?"
+        }
+      ],
+      "objectiveIds": [
+        68,
+        25
+      ]
+    },
+    {
+      "id": "iv-42",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient on therapeutic anticoagulation for VTE has heavy menstrual bleeding and wants effective contraception. She has no other contraindication to an intrauterine device. Which option is the reasonable one to discuss?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A copper intrauterine device, chosen because it reliably lightens menstrual blood loss"
+        },
+        {
+          "id": "b",
+          "text": "A levonorgestrel intrauterine device, which can contracept and reduce menstrual bleeding"
+        },
+        {
+          "id": "c",
+          "text": "Stopping anticoagulation for the five heaviest days of every menstrual cycle"
+        },
+        {
+          "id": "d",
+          "text": "A combined estrogen pill, as the only contraceptive that is safe once an anticoagulant is prescribed"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B is the method that can address both fertility and bleeding: a levonorgestrel-releasing intrauterine device reduces menstrual blood loss and provides contraception. A copper device can increase bleeding. Stopping anticoagulation cyclically leaves the VTE untreated for those days. Estrogen-containing pills are not made safe by an anticoagulant. Source: contraceptive practice in anticoagulated patients with heavy menstrual bleeding. No Medical Eligibility Criteria category number is printed.",
+      "teachingPoints": [
+        "The device that lightens bleeding is the levonorgestrel device, not the copper one.",
+        "Cyclic interruption of the anticoagulant is not the contraceptive plan."
+      ],
+      "links": [],
+      "objectiveIds": [
+        71
+      ]
+    },
+    {
+      "id": "iv-43",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient with prior VTE is on a prophylactic-dose anticoagulant and asks whether every hormonal method is now equally safe. She is choosing between a combined estrogen pill and a levonorgestrel intrauterine device. Which principle is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Prophylactic anticoagulation cancels the thrombotic risk of estrogen"
+        },
+        {
+          "id": "b",
+          "text": "All hormonal methods have the same clot risk once any anticoagulant is prescribed"
+        },
+        {
+          "id": "c",
+          "text": "Estrogen-containing methods and a levonorgestrel device are not interchangeable"
+        },
+        {
+          "id": "d",
+          "text": "A copper device and a levonorgestrel device have the same effect on menstrual bleeding"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C keeps method-specific risk. Combined estrogen contraception raises thrombotic risk and is not rendered equivalent to a levonorgestrel intrauterine device by a prophylactic anticoagulant dose. Choice A treats prophylaxis as a permit for estrogen. Choice B equates methods. Choice D equates bleeding effects; copper devices can increase bleeding and levonorgestrel devices can reduce it. Source: contraceptive-method differences during anticoagulation. No category number is stated.",
+      "teachingPoints": [
+        "Intensity of anticoagulation does not flatten contraceptive risk.",
+        "Name the hormone and the route, not just 'a hormone.'"
+      ],
+      "links": [],
+      "objectiveIds": [
+        71
+      ]
+    },
+    {
+      "id": "iv-44",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A 74-year-old man with AF and a prior stroke asks for asundexian (Sunharbo) because it was approved on 9 November 2026 and 'works for stroke.' He has no recent non-cardioembolic stroke and his AF is the reason for anticoagulation. A second patient, after a mild non-cardioembolic ischemic stroke with an NIHSS of 6 and no AF, is being discussed for the same drug. Which description is appropriate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Asundexian replaces apixaban for AF because OCEANIC-AF showed fewer strokes with asundexian than with apixaban"
+        },
+        {
+          "id": "b",
+          "text": "Milvexian is FDA-approved for AF, so either factor XI drug can be substituted for apixaban today"
+        },
+        {
+          "id": "c",
+          "text": "Approval of one factor XI drug means every factor XI program, including milvexian, is approved for every indication now"
+        },
+        {
+          "id": "d",
+          "text": "Asundexian 50 mg with an antiplatelet is approved after recent non-cardioembolic stroke or high-risk TIA, not for AF"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D matches the OCEANIC-STROKE caveat on this site. The FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on 9 November 2026 for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS 15 or lower) or high-risk TIA. It is not approved for AF. OCEANIC-AF was stopped early because stroke or systemic embolism was higher with asundexian than with apixaban (1.3% versus 0.4%; HR 3.79). Milvexian is not that approval; LIBREXIA ACS was stopped for futility. Choice A reverses OCEANIC-AF. Choice B invents an AF approval for milvexian. Choice C treats one approval as a class license. Source: FDA press release of 9 November 2026, which states that SUNHARBO is not approved for stroke prevention in patients with AF.",
+      "teachingPoints": [
+        "Read the indication. Stroke add-on is not AF replacement.",
+        "One approval is not a class approval."
+      ],
+      "links": [
+        {
+          "kind": "pathway",
+          "id": "whats-next",
+          "label": "What's next (FXI / pending)"
+        },
+        {
+          "kind": "nuance",
+          "id": "oceanic-vs-azalea",
+          "label": "OCEANIC-AF failure vs AZALEA bleeding signal"
+        },
+        {
+          "kind": "trial",
+          "id": "librexia-af",
+          "label": "Milvexian versus Apixaban in Atrial Fibrillation"
+        }
+      ],
+      "objectiveIds": [
+        61,
+        63
+      ]
+    },
+    {
+      "id": "iv-45",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "During a major warfarin bleed, 4F-PCC is given and the INR falls. A learner says vitamin K can be skipped because the factors have been replaced. Why are both components in the pathway?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "PCC replaces factors now; vitamin K lets the liver make new factors while warfarin remains"
+        },
+        {
+          "id": "b",
+          "text": "Vitamin K works in minutes and PCC works only after several days, so the usual order is reversed"
+        },
+        {
+          "id": "c",
+          "text": "PCC permanently removes the thrombotic indication, and vitamin K in this pathway is an antibiotic"
+        },
+        {
+          "id": "d",
+          "text": "Vitamin K is the specific antibody for dabigatran, and PCC is another name for protamine"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A is the time course. PCC supplies factors now. Those factors are cleared, and warfarin continues to block vitamin K recycling until vitamin K repletion and a fall in warfarin effect allow new gamma-carboxylated factors. Choice B reverses the speeds. Choice C says the indication disappears. Choice D renames both products. Source: 2020 ACC pathway cited on this site.",
+      "teachingPoints": [
+        "Immediate replacement and sustained synthesis are different jobs.",
+        "A corrected INR after PCC can rise again if vitamin K was omitted."
+      ],
+      "links": [
+        {
+          "kind": "page",
+          "id": "reversal",
+          "label": "Bleed & reversal"
+        }
+      ],
+      "objectiveIds": [
+        70
+      ]
+    },
+    {
+      "id": "iv-46",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A trainee about to give protamine says it is harmless because it is an antidote. The patient is on an unfractionated heparin infusion and is bleeding. Which correction is accurate?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Protamine has no cardiovascular effects and can be injected as fast as the syringe allows"
+        },
+        {
+          "id": "b",
+          "text": "Protamine can cause hypotension and anaphylaxis-like reactions, so it is given slowly"
+        },
+        {
+          "id": "c",
+          "text": "Protamine is harmless only when the dose exceeds 50 mg inside a 10-minute period"
+        },
+        {
+          "id": "d",
+          "text": "Protamine fully reverses DOACs, which is why the infusion rate does not matter"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B matches the heparin label text on this site: protamine is infused slowly, no more than 50 mg in any 10-minute period, and fatal reactions resembling anaphylaxis are described, so resuscitation has to be available. Choice A says to push it. Choice C makes the excess dose the safe zone. Choice D claims DOAC reversal. Source: heparin sodium neutralization text quoted on this site.",
+      "teachingPoints": [
+        "An antidote can still harm.",
+        "The 50 mg in 10 minutes limit is a safety limit, not a target to exceed."
+      ],
+      "links": [
+        {
+          "kind": "page",
+          "id": "reversal",
+          "label": "Bleed & reversal"
+        }
+      ],
+      "objectiveIds": [
+        70,
+        66
+      ]
+    },
+    {
+      "id": "iv-47",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient's warfarin dose was increased while rifampin was coadministered. Rifampin has now been stopped. The higher warfarin dose is still in the pillbox. Which time course deserves attention?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The INR stays exactly where it was, because enzyme induction ends the hour rifampin is stopped in clinic"
+        },
+        {
+          "id": "b",
+          "text": "The INR falls further, because stopping an inducer is the same as adding a second inducer"
+        },
+        {
+          "id": "c",
+          "text": "The INR may rise over days as induction wears off, so the higher warfarin dose needs closer follow-up"
+        },
+        {
+          "id": "d",
+          "text": "Rifampin inhibits warfarin clearance, so stopping it removes a cause of high INRs"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C is the offset of induction. Rifampin induces warfarin metabolism; while it is present, a higher warfarin dose may have been required. After it stops, enzyme induction declines over days and the same higher dose can push the INR up. Choice A says the effect ends immediately. Choice B predicts a further fall. Choice D calls rifampin an inhibitor. Source: warfarin–rifampin time course.",
+      "teachingPoints": [
+        "Induction has an offset measured in days, not in one dose interval.",
+        "The dose that was 'right' last week may now be too high."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        64,
+        69
+      ]
+    },
+    {
+      "id": "iv-48",
+      "domainId": "IV",
+      "difficulty": "advanced",
+      "stem": "A patient on apixaban for AF has recurrent vomiting on the first day after major gastrointestinal surgery. Two doses have been 'given' and immediately vomited. Kidney function is unchanged. Which concern supports reassessment?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Vomiting raises apixaban exposure by inhibiting CYP3A4, so the dose is cut in half"
+        },
+        {
+          "id": "b",
+          "text": "A tablet that is vomited immediately still counts as a fully absorbed dose"
+        },
+        {
+          "id": "c",
+          "text": "The oral route does not matter, because apixaban is effective when worn as a skin patch"
+        },
+        {
+          "id": "d",
+          "text": "Vomited doses are not absorbed reliably, so the AF plan may need a non-oral route"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D is the absorption problem. A DOAC that is vomited is not a dose the patient received, and repeated vomiting is a reason to reassess the route with the surgical and anticoagulation teams rather than to document the oral dose as given. Choice A treats vomiting as enzyme inhibition. Choice B counts a vomited tablet. Choice C invents a patch. No parenteral dose is stated. Source: oral DOAC absorption and postoperative vomiting.",
+      "teachingPoints": [
+        "A dose that comes back up is not on board.",
+        "The indication can still be present when the route is not."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "cancer-vte",
+          "label": "How do I treat cancer-associated VTE acutely and on extended therapy?"
+        },
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        }
+      ],
+      "objectiveIds": [
+        67,
+        64
+      ]
+    },
+    {
+      "id": "v-20",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "A health system can initially staff a small anticoagulation service and must choose whom to enroll first. Which population best matches a monitoring and coordination need?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "People who take no anticoagulant, enrolled so the new panel looks larger"
+        },
+        {
+          "id": "b",
+          "text": "Every adult who reports a bruise, whether or not an anticoagulant is on the list"
+        },
+        {
+          "id": "c",
+          "text": "Patients whose only need is one dietary question and who need no follow-up visit"
+        },
+        {
+          "id": "d",
+          "text": "Warfarin patients, complex DOAC regimens, and procedure holds that need an owner"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D uses the scarce service for people whose safety depends on monitoring, interaction checks, or a peri-procedural owner. Choice A inflates the roster. Choice B has no anticoagulant focus. Choice C spends the panel on a question that does not need longitudinal management. Source: service-prioritization for an anticoagulation clinic.",
+      "teachingPoints": [
+        "Enroll the patients a missed result would harm.",
+        "Panel size is not the safety goal."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        },
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        72,
+        74
+      ]
+    },
+    {
+      "id": "v-21",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "A clinic has prescribers, pharmacists, nurses, and a laboratory, and no document that says who must act when a critical INR arrives. Two results sat overnight. Which design closes that gap?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A named owner for critical INRs whenever the lab releases them, plus a backup"
+        },
+        {
+          "id": "b",
+          "text": "A shared inbox that no person is assigned to open on any shift"
+        },
+        {
+          "id": "c",
+          "text": "A rule that the patient calls the clinic if the patient suspects the INR is high"
+        },
+        {
+          "id": "d",
+          "text": "A decision to stop measuring INRs so the question of who owns the result disappears"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A assigns a person and a backup to the hours when results actually post. Choice B is an inbox without a human. Choice C transfers surveillance to the patient. Choice D abandons the test. Source: critical-result responsibility design.",
+      "teachingPoints": [
+        "Name the person. Name the backup. Name the hours.",
+        "An unowned inbox is not a coverage system."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        73,
+        80
+      ]
+    },
+    {
+      "id": "v-22",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "An anticoagulation program is writing its policy manual. Staff disagree about which pile of documents counts as a usable manual. Which package supports reliable operations?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "A brand-name formulary list and no procedures for how the service actually works"
+        },
+        {
+          "id": "b",
+          "text": "Procedures for dosing, critical results, meter failures, handoffs, and competency"
+        },
+        {
+          "id": "c",
+          "text": "A folder of published trial PDFs and no local workflow for nights or weekends"
+        },
+        {
+          "id": "d",
+          "text": "A statement that each clinician will improvise, filed as the service's only policy"
+        }
+      ],
+      "correctId": "b",
+      "explanation": "Choice B is a manual someone can follow on a weekend: how doses are managed, what happens to a critical INR, what happens when a meter fails, how a procedure hold is communicated, and how competency is recorded. Choice A is a shopping list. Choice C is a library. Choice D institutionalizes improvisation. Source: anticoagulation policy content. No regulation number is cited.",
+      "teachingPoints": [
+        "A manual is a set of actions, not a reading list.",
+        "Competency and critical results belong in it."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "doac-appropriateness",
+          "label": "Is this DOAC appropriate — and is the indication documented?"
+        }
+      ],
+      "objectiveIds": [
+        74,
+        77
+      ]
+    },
+    {
+      "id": "v-23",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "A clinic reports acceptable INR control and receives repeated complaints that nobody answers the anticoagulation phone line. Patients delay calling about bleeding. Which evaluation measures experience rather than assuming the laboratory figure is the whole story?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The time-in-range figure alone, reported as proof that telephone access does not matter"
+        },
+        {
+          "id": "b",
+          "text": "A count of abandoned calls, collected and then left unchanged with no staffing response"
+        },
+        {
+          "id": "c",
+          "text": "Time in range plus whether a bleeding call actually reaches a person"
+        },
+        {
+          "id": "d",
+          "text": "Removal of the phone line, because an acceptable INR distribution makes advice unnecessary"
+        }
+      ],
+      "correctId": "c",
+      "explanation": "Choice C keeps the laboratory measure and adds the experience measure the complaints describe: whether a person answers, and whether a bleeding concern connects to that person. Choice A declares access irrelevant. Choice B counts failure and does not treat it as a result. Choice D removes the path. Source: patient-experience measurement alongside warfarin quality.",
+      "teachingPoints": [
+        "An acceptable INR distribution does not answer the phone.",
+        "Bleeding calls are part of the outcome, not a nuisance statistic."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        78,
+        76
+      ]
+    },
+    {
+      "id": "v-24",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "An outside laboratory was supposed to send an INR. It never appears in the clinic inbox. The patient assumes silence means the dose is unchanged. Which workflow prevents a missed monitoring event?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "Treat a result that never arrives as a normal INR and continue the same dose indefinitely"
+        },
+        {
+          "id": "b",
+          "text": "Ask the patient to guess the INR from symptoms and then dose from that guess"
+        },
+        {
+          "id": "c",
+          "text": "Stop tracking expected outside draws, because the outside laboratory owns the clinic inbox in clinic"
+        },
+        {
+          "id": "d",
+          "text": "An expected-result list flags a missing INR the day it is due, and someone obtains it or a repeat"
+        }
+      ],
+      "correctId": "d",
+      "explanation": "Choice D closes the loop. An expected draw that does not arrive is an event, not a normal result. Someone retrieves it or redraws it. Choice A treats silence as therapeutic. Choice B uses symptoms as an INR. Choice C assigns the clinic's inbox to the outside laboratory without a chase step. Source: closed-loop laboratory tracking.",
+      "teachingPoints": [
+        "No news is not a therapeutic INR.",
+        "The due date belongs on a work queue."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        81,
+        79
+      ]
+    },
+    {
+      "id": "v-26",
+      "domainId": "V",
+      "difficulty": "advanced",
+      "stem": "A clinic partners with an Independent Diagnostic Testing Facility for home INR meters. The facility will ship devices and transmit numbers. Which division of responsibilities fits?",
+      "choices": [
+        {
+          "id": "a",
+          "text": "The facility handles testing logistics; clinicians keep dosing, eligibility, and follow-up"
+        },
+        {
+          "id": "b",
+          "text": "A meter shipment from the facility replaces the clinician's order and the dose decision"
+        },
+        {
+          "id": "c",
+          "text": "Every number the facility transmits authorizes the patient to change the dose with no clinic"
+        },
+        {
+          "id": "d",
+          "text": "Enrollment with the facility cancels the clinic's duty to notice that a result never arrived"
+        }
+      ],
+      "correctId": "a",
+      "explanation": "Choice A splits the work the way this service should: the testing facility can supply meters and transmit results under its own requirements, and the treating clinicians remain responsible for who is eligible, what the dose becomes, and what happens when a result is unexpected or missing. Choice B lets a shipment become an order. Choice C hands over the dose. Choice D drops the chase for missing results. Source: division of responsibility for home INR testing. No coverage-policy number is cited.",
+      "teachingPoints": [
+        "Logistics are not prescribing.",
+        "A transmitted number still needs a clinical owner."
+      ],
+      "links": [
+        {
+          "kind": "framework",
+          "id": "ttr-vka-quality",
+          "label": "Time in therapeutic range and VKA clinic quality"
+        }
+      ],
+      "objectiveIds": [
+        83,
+        45
       ]
     }
   ]
-};
+}

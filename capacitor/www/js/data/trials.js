@@ -4929,10 +4929,10 @@ window.ANTICOAG_TRIALS = [
     "background": "After OCEANIC-AF failed, asundexian was tested as antiplatelet add-on after noncardioembolic stroke/TIA.",
     "designNotes": "Large randomized trial (N≈12,327) of asundexian 50 mg daily vs placebo on planned antiplatelet therapy. AF excluded.",
     "strengths": "First positive phase 3 FXIa hard-outcome win (ischemic stroke HR 0.74) without major bleeding increase.",
-    "limitations": "Not an AF trial. Regulatory adoption separate. Early hierarchical secondary nuance noted in reports.",
+    "limitations": "Not an AF trial. The FDA approval (Nov 9, 2026) covers stroke-risk reduction after a recent non-cardioembolic ischemic stroke or high-risk TIA, not AF. Early hierarchical secondary nuance noted in reports.",
     "journalClub": "OCEANIC-STROKE shows FXIa can work. But indication matters (stroke add-on is not AF replacement).",
     "guidelines": [],
-    "caveats": "Not an AF trial. Regulatory status separate. Early hierarchical secondary nuance in reports.",
+    "caveats": "Not an AF trial. FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on Nov 9, 2026, for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS ≤15) or high-risk TIA (FDA press release). It is not approved for AF. Early hierarchical secondary nuance in reports.",
     "practiceTakeaway": "In OCEANIC-STROKE, asundexian 50 mg daily added to antiplatelet therapy lowered ischemic stroke versus placebo after noncardioembolic ischemic stroke or high-risk TIA without AF (6.2% vs 8.4%; HR 0.74; 95% CI 0.65–0.84). ISTH major bleeding was 1.9% versus 1.7%.",
     "questionsAnswered": [
       {
@@ -4977,7 +4977,7 @@ window.ANTICOAG_TRIALS = [
     "journalClub": "In LIBREXIA ACS, FXIa add-on failed post-ACS. Another reminder that indication drives FXIa success or failure.",
     "guidelines": [],
     "caveats": "Futile for major adverse cardiovascular events at tested dose. AF/stroke milvexian programs still pending.",
-    "practiceTakeaway": "In LIBREXIA ACS, milvexian 25 mg twice daily added to antiplatelet therapy did not reduce cardiovascular death, myocardial infarction, or ischemic stroke versus placebo after ACS (5.4% vs 5.1%; HR 1.05). Intracranial or fatal bleeding was 0.3% in both arms, and the trial stopped for futility.",
+    "practiceTakeaway": "In LIBREXIA ACS, milvexian 25 mg twice daily added to antiplatelet therapy did not reduce cardiovascular death, myocardial infarction, or ischemic stroke versus placebo after ACS (5.4% vs 5.1%; HR 1.05). BARC type 3c or 5 bleeding (intracranial, vision-threatening intraocular, or fatal) was 0.3% in both arms, and the trial stopped for futility.",
     "questionsAnswered": [
       {
         "text": "After ACS, did the factor XIa inhibitor milvexian added to antiplatelet therapy reduce cardiovascular death, myocardial infarction or ischemic stroke compared with placebo? No. The trial was stopped for futility.",

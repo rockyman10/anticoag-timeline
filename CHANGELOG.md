@@ -2,6 +2,56 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-10 — CACP practice bank raised to case-based difficulty
+
+- All 219 unofficial practice items were rewritten in place. Ids, domains, handbook objective ids, and related links are unchanged, so the 160-question quotas (I 40, II 56, III 16, IV 40, V 8) and objective coverage still hold.
+- The previous bank was mostly recall. 146 of 219 answers sat on choice B, and the keyed choice was uniquely the longest in 207 items. The new items are short cases (kidney function, interactions, INR trend, procedure timing, bleeding, or a clinic failure) with parallel choices. Keyed letters are balanced (A 56, B 55, C 54, D 54). Display order still shuffles. A second pass evened choice length: the keyed choice is uniquely the longest in 42 of 219 items (19 percent), the mean gap versus the next-longest choice is about -5 characters, and no keyed choice is more than 25 characters longer than the next choice. Which answer is correct did not change.
+- Each explanation states why the keyed choice is right and why the other three are wrong, and names a label, guideline, or trial already used on this site. Wording stays DOAC. No dosing order is issued.
+- A clinician review of every item, with the old and new keyed text, the source, and confidence notes, is in `docs/cacp-difficulty-review-2026-11-10.md`.
+- Items that name a fact a 2026 label or guideline was not re-opened for are listed in that review. They were not filled in with a guessed number.
+- Clinical and literature review fixes were applied after that pass: 23 items, 33 exact wording pairs, no answer-key changes. Keyed-choice length was recomputed afterward: uniquely longest in 43 of 219 items, mean gap about -5 characters, and no keyed choice more than 25 characters longer than the next choice.
+- The same bank is in the Capacitor copy. Educational only. AC Forum does not endorse this material. These are not real exam questions. reviewedBy unchanged.
+
+## 2026-11-10 — Full screen for Teach and CACP
+
+- Teach pages, the Learn path, treatment pathways, and CACP exam prep share one full-screen control in the window header. Study practice and the full practice exam use that same CACP window. The control expands the window to the viewport and toggles back. It is a button with a visible label, an aria-label, and keyboard support. Esc leaves full screen first. A second Esc closes the window, which is the same close the window already used.
+- The layout is a CSS full-viewport mode. Where the browser allows it, the Fullscreen API is requested as well. If that API is missing or refuses the request, including on iOS Safari, the viewport mode stays.
+- In full screen, prose stays within a readable line length. Charts and tables in the Teach windows use the extra width, and the header and footer stay on screen. The exam clock, answers, bookmarks, and progress are left as they are. Print hides the control, leaves full screen, and keeps the existing print layout.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
+## 2026-11-10 — OCEANIC-STROKE notes the FDA approval of asundexian
+
+- OCEANIC-STROKE caveats now say the FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on Nov 9, 2026, for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS ≤15) or high-risk TIA, and that it is not approved for AF. The card names the FDA press release. No DailyMed label is posted yet, so the card does not add label wording or bleeding-subgroup wording.
+- The limitations line now says the FDA approval (Nov 9, 2026) covers stroke-risk reduction after a recent non-cardioembolic ischemic stroke or high-risk TIA, not AF.
+- CACP item iv-44 asks about milvexian and other FXI-pathway agents that are not yet approved. The choices and the explanation are unchanged.
+- The safety line is unchanged. The same strings are in the Capacitor copies. The card does not use a regulatoryNote field.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
+## 2026-11-09 — COMPASS, GALILEO, and LIBREXIA ACS Learn and takeaway text match the cards
+
+- COMPASS Learn visuals quote the figures already on the card. The VOYAGER hook says COMPASS prints 4.1% vs 5.4%. The COMPASS table prints 4.1% vs 5.4% (HR 0.76; 95% CI 0.66–0.86) and major bleeding 3.1% vs 1.9% (HR 1.70; 95% CI 1.40–2.05). The table caption is "What each card prints." The trial still reads as stopped early for superiority.
+- The GALILEO Learn visual quotes death or a first thromboembolic event at 9.8 versus 7.2 per 100 person-years (HR 1.35; 95% CI 1.01–1.81; P 0.04). The hook says the trial stopped early because of safety concerns. Primary safety bleeding stays 4.3 vs 2.8 per 100 person-years (HR 1.50; 95% CI 0.95–2.37; P=0.08), the card’s non-significant reading.
+- The LIBREXIA ACS practice takeaway uses the card’s BARC type 3c or 5 wording (intracranial, vision-threatening intraocular, or fatal). The rate stays 0.3% in both arms.
+- The same wording is in the site files and the Capacitor copies. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
+## 2026-11-07 — CACP practice bank fills a 160-question sitting
+
+- 79 reviewed unofficial practice items are appended (I 21, II 25, III 6, IV 21, V 6). v-25 was held (handbook objective 82): the handbook names patient agreements, and that draft’s policy claims were not added. The bank is 219 questions (I 48, II 68, III 30, IV 48, V 25).
+- Editorial and clinical wording patches are applied on existing items. `correctId` and choice ids are unchanged. Each original item now carries handbook `objectiveIds`. New items already include them.
+- A full practice exam now draws 160 items from the live bank and the quotas. The start screen and the exam header read that count from the bank. They do not keep the earlier shortfall number.
+- Answer choices still shuffle on screen in study practice and in the full exam. Scoring still compares `choice.id` with `correctId`.
+- Educational only. AC Forum does not endorse this material. These are not real exam questions. Wording stays DOAC. reviewedBy unchanged.
+
+## 2026-11-07 — Unofficial CACP full practice exam
+
+- CACP prep opens on a start screen. Study practice keeps the current flow: domain filters, one item at a time, shuffle on, explanation after submit or reveal, and Missed only. Full practice exam builds a new random sitting each time.
+- Quotas live in `js/data/cacp.js` (`meta.exam`): I 40, II 56, III 16, IV 40, V 8 (160). The draw takes items without replacement inside each domain. A short domain contributes every item once and does not repeat items or borrow from another domain. The start screen and the exam header show the real sitting size. With the current bank that sitting is under 160, and Domains I, II, and IV are short. A later item pack can fill the quotas without a change to the draw.
+- When an item has `objectiveIds`, the domain draw prefers items that cover objectives not yet covered, then fills the rest at random. Absent `objectiveIds` are ignored.
+- The sitting is shuffled across domains. Answer choices still shuffle for display, and scoring still uses `choice.id` against `correctId`. Explanations, teaching points, and correctness stay hidden until submit or until the clock ends. The 2 hour 30 minute clock starts when the learner confirms they are ready. They can move back, change an answer, bookmark an item, and submit early. At zero the recorded answers are submitted.
+- Results show the practice score for the sitting (correct / answered, and correct out of every item in the sitting), a per-domain table, and the handbook reference: 150 scored of 160, 10 unidentified pilots, 80% of scored items. The screen does not assign a certification result. Missed items, including unanswered ones, can be reviewed with explanations. Missed only still restudies them.
+- The disclaimer and handbook note cite the 2026 AC Forum CACP Candidate Handbook and state that AC Forum does not endorse this or any preparatory materials. These are not real exam questions. The home-page abbreviation for CACP is Certified Antithrombotic Care Provider.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-05 — Guideline note corrections
 
 - Twenty-three guideline notes now name the checked section, recommendation, page, or teaching line. Trial results are unchanged. The home-page abbreviation list adds EtD (evidence-to-decision) for the MARINER note.

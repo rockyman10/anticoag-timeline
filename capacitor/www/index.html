@@ -341,6 +341,91 @@
     }
     .x:hover { background: var(--muted-bg); }
     .x:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .m-head-tools {
+      display: flex; align-items: center; gap: .35rem; flex-shrink: 0;
+    }
+    .m-head:has(.m-head-tools) > div:first-child { min-width: 0; flex: 1 1 auto; }
+    .m-head-tools .x { width: 44px; height: 44px; }
+    .fs-toggle {
+      appearance: none; display: inline-flex; align-items: center; justify-content: center;
+      gap: .35rem; min-height: 44px; padding: .35rem .7rem; white-space: nowrap;
+      border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent);
+      border-radius: 3px; cursor: pointer; font: inherit; font-size: .8125rem;
+      font-weight: 700; line-height: 1.2; flex-shrink: 0;
+    }
+    .fs-toggle:hover { background: var(--paper); }
+    .fs-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .fs-toggle[aria-pressed="true"] { background: var(--accent); color: #fff; }
+    .fs-toggle .fs-ico { width: 1rem; height: 1rem; display: block; flex-shrink: 0; }
+    .fs-toggle .fs-ico-exit { display: none; }
+    .fs-toggle[aria-pressed="true"] .fs-ico-enter { display: none; }
+    .fs-toggle[aria-pressed="true"] .fs-ico-exit { display: block; }
+
+    /* Full-viewport mode (Teach, Learn, treatment pathways, CACP).
+       CSS fills the screen; the Fullscreen API is requested when the browser allows it. */
+    body.has-fs-modal { overflow: hidden; }
+    .bd.is-fullscreen {
+      padding: 0;
+      background: var(--paper);
+    }
+    .bd.is-fullscreen .modal.is-fullscreen {
+      position: fixed; inset: 0; z-index: 1;
+      width: auto; max-width: none; height: auto; max-height: none;
+      margin: 0; border: 0; border-radius: 0; box-shadow: none;
+      display: flex; flex-direction: column; overflow: hidden;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-head,
+    .bd.is-fullscreen .modal.is-fullscreen > .m-foot,
+    .bd.is-fullscreen .modal.is-fullscreen > #learn-progress {
+      flex: 0 0 auto; position: relative; top: auto; bottom: auto;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-head {
+      padding-top: max(1rem, env(safe-area-inset-top));
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-foot {
+      padding-bottom: max(.95rem, env(safe-area-inset-bottom));
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    .bd.is-fullscreen .modal.is-fullscreen > .m-body {
+      flex: 1 1 auto; align-self: center; min-height: 0; min-width: 0;
+      overflow: auto; width: min(100%, 72rem); max-width: 100%;
+      margin-inline: auto; box-sizing: border-box;
+      padding-left: max(1.15rem, env(safe-area-inset-left));
+      padding-right: max(1.15rem, env(safe-area-inset-right));
+    }
+    .modal.teach.is-fullscreen .teach-lead,
+    .modal.teach.is-fullscreen .jc-sec p,
+    .modal.teach.is-fullscreen .fw-deck,
+    .modal.teach.is-fullscreen .fw-check-help,
+    .modal.teach.is-fullscreen .fw-section-body,
+    .modal.teach.is-fullscreen .fw-teachback,
+    .modal.teach.is-fullscreen .case-stem,
+    .modal.teach.is-fullscreen .ddi-legend,
+    .modal.learn.is-fullscreen .learn-hero p,
+    .modal.learn.is-fullscreen .learn-goals,
+    .modal.learn.is-fullscreen .learn-why,
+    .modal.learn.is-fullscreen .learn-orient-tip,
+    .modal.txpath.is-fullscreen .txp-body,
+    .modal.cacp.is-fullscreen .cacp-stem,
+    .modal.cacp.is-fullscreen .cacp-explain,
+    .modal.cacp.is-fullscreen .cacp-banner,
+    .modal.cacp.is-fullscreen .cacp-ref,
+    .modal.cacp.is-fullscreen .cacp-tips,
+    .modal.cacp.is-fullscreen .cacp-home-card,
+    .modal.cacp.is-fullscreen .cacp-choices {
+      max-width: 68ch;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-chart {
+      max-width: none; padding: 1rem 1.1rem 1.15rem;
+    }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-title { font-size: 1.35rem; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-hook { font-size: 1.15rem; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-svg { width: 100%; height: auto; }
+    .bd.is-fullscreen .modal.is-fullscreen .lv-table,
+    .bd.is-fullscreen .modal.is-fullscreen .pk-table { font-size: 1rem; }
 
     .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .35rem; }
     .tag {
@@ -644,6 +729,51 @@
     }
     .cacp-tips summary { cursor: pointer; font-weight: 600; font-size: .875rem; }
     .cacp-tips ul { margin: .4rem 0 0; padding-left: 1.1rem; font-size: .8125rem; color: var(--ink-2); }
+    .cacp-h {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.2rem; margin: .2rem 0 .35rem;
+    }
+    .cacp-ref { font-size: .8125rem; color: var(--muted); line-height: 1.45; margin: .35rem 0 .65rem; }
+    .cacp-ref a { color: var(--accent); }
+    .cacp-actions { margin: .35rem 0 .85rem; }
+    .cacp-home-card {
+      display: block; width: 100%; text-align: left; cursor: pointer;
+      font: inherit; color: var(--ink);
+      border: 1px solid var(--line-2); background: var(--paper);
+      border-radius: 3px; padding: .8rem .9rem; min-height: 44px;
+    }
+    .cacp-home-card + .cacp-home-card { margin-top: .55rem; }
+    .cacp-home-card:hover { background: var(--muted-bg); }
+    .cacp-home-card:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+    .cacp-home-card strong { display: block; font-size: 1rem; margin-bottom: .25rem; }
+    .cacp-home-card span { display: block; font-size: .8125rem; font-weight: 500; color: var(--ink-2); line-height: 1.45; }
+    .cacp-home-card:disabled { opacity: .55; cursor: not-allowed; }
+    .cacp-table-wrap { overflow-x: auto; margin: .35rem 0 .75rem; }
+    .cacp-quota { width: 100%; border-collapse: collapse; font-size: .8125rem; }
+    .cacp-quota th, .cacp-quota td { border: 1px solid var(--line); padding: .35rem .45rem; text-align: left; }
+    .cacp-quota th { background: var(--muted-bg); font-weight: 600; }
+    .cacp-clock { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink); }
+    .cacp-clock.warn { color: var(--c-pe); }
+    .cacp-qnav { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .5rem; }
+    .cacp-qnav button {
+      font: inherit; font-size: .75rem; font-weight: 600; color: var(--ink);
+      min-width: 44px; min-height: 44px; padding: 0 .25rem;
+      border: 1px solid var(--line); background: var(--paper); border-radius: 3px; cursor: pointer;
+    }
+    .cacp-qnav button.answered { background: var(--muted-bg); }
+    .cacp-qnav button.current { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+    .cacp-qnav button.bookmarked { text-decoration: underline; text-underline-offset: 2px; }
+    .cacp-bar {
+      position: relative; height: 14px; background: var(--muted-bg);
+      border: 1px solid var(--line); border-radius: 2px; margin: .45rem 0 .25rem;
+    }
+    .cacp-bar-fill { display: block; height: 100%; background: var(--c-af); max-width: 100%; }
+    .cacp-bar-mark {
+      position: absolute; top: -3px; bottom: -3px; width: 2px;
+      background: var(--ink); transform: translateX(-1px);
+    }
+    .cacp-begin { min-height: 44px; margin-top: .35rem; }
+    #cacp-next, #cacp-reveal, #cacp-finish, #cacp-prev, #cacp-bookmark { min-height: 44px; }
 
 
     /* Learn path (Core Clinic Path) */
@@ -1214,8 +1344,31 @@
       body:not(.print-sheet) .tip,
       body:not(.print-sheet) .toast,
       body:not(.print-sheet) .x,
+      body:not(.print-sheet) .fs-toggle,
       body:not(.print-sheet) [data-close],
       body:not(.print-sheet) .m-foot { display: none !important; }
+      body.has-fs-modal { overflow: visible !important; }
+      body:not(.print-sheet) .bd.is-fullscreen {
+        display: block !important; position: static !important; height: auto !important;
+        background: none !important; padding: 0 !important; overflow: visible !important;
+      }
+      body:not(.print-sheet) .modal.is-fullscreen {
+        position: static !important; inset: auto !important; display: block !important;
+        height: auto !important; min-height: 0 !important; max-height: none !important;
+        width: auto !important; max-width: none !important; overflow: visible !important;
+        flex: none !important;
+      }
+      body:not(.print-sheet) .modal.is-fullscreen .m-body,
+      body:not(.print-sheet) .modal.is-fullscreen .teach-lead,
+      body:not(.print-sheet) .modal.is-fullscreen .jc-sec p,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-stem,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-choices,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-explain,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-banner,
+      body:not(.print-sheet) .modal.is-fullscreen .cacp-home-card,
+      body:not(.print-sheet) .modal.is-fullscreen .lv-chart {
+        max-width: none !important; width: auto !important; overflow: visible !important;
+      }
       body:not(.print-sheet) [style*="sticky"],
       body:not(.print-sheet) .m-head,
       body:not(.print-sheet) .axis { position: static !important; }
@@ -1800,7 +1953,14 @@
           <div class="yrline" id="learn-sub">First anticoagulation clinic week</div>
           <div class="learn-disclaimer" id="learn-disclaimer"></div>
         </div>
-        <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="learn" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="learn" aria-label="Close">×</button>
+        </div>
       </div>
       <div id="learn-progress" aria-live="polite">
         <div class="learn-progress-label" id="learn-progress-label">0 of 10 · no rush</div>
@@ -1838,7 +1998,14 @@
           <h2 id="teach-title">Teaching</h2>
           <div class="yrline" id="teach-sub"></div>
         </div>
-        <button type="button" class="x" data-close="teach" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="teach" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="teach" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="teach-body"></div>
       <div class="m-foot">
@@ -1856,7 +2023,14 @@
           <h2 id="txp-title">Treatment pathways</h2>
           <div class="yrline" id="txp-sub">Interactive algorithms · educational only</div>
         </div>
-        <button type="button" class="x" data-close="txpath" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="txpath" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="txpath" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="txp-body"></div>
       <div class="m-foot">
@@ -1876,10 +2050,20 @@
           <h2 id="cacp-title">CACP exam prep</h2>
           <div class="yrline" id="cacp-sub">Unofficial practice · educational only</div>
         </div>
-        <button type="button" class="x" data-close="cacp" aria-label="Close">×</button>
+        <div class="m-head-tools">
+          <button type="button" class="fs-toggle" data-fullscreen="cacp" aria-pressed="false" aria-label="Enter full screen">
+            <svg class="fs-ico fs-ico-enter" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M3.2 6.2V3.2H6.2M9.8 3.2h3v3M12.8 9.8v3h-3M6.2 12.8H3.2v-3"/></svg>
+            <svg class="fs-ico fs-ico-exit" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M6.2 3.2v3h-3M9.8 3.2v3h3M12.8 9.8h-3v3M6.2 12.8v-3h-3"/></svg>
+            <span class="fs-label">Full screen</span>
+          </button>
+          <button type="button" class="x" data-close="cacp" aria-label="Close">×</button>
+        </div>
       </div>
       <div class="m-body" id="cacp-body"></div>
       <div class="m-foot">
+        <button type="button" class="btn sm" id="cacp-prev" hidden>Previous</button>
+        <button type="button" class="btn sm" id="cacp-bookmark" hidden>Bookmark</button>
+        <button type="button" class="btn" id="cacp-finish" hidden>Submit exam</button>
         <button type="button" class="btn sm" id="cacp-copy">Copy link</button>
         <button type="button" class="btn sm" id="cacp-shuffle">Shuffle</button>
         <button type="button" class="btn sm" id="cacp-missed" hidden>Missed only</button>
@@ -3008,6 +3192,116 @@
     return [...el.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')]
       .filter(n => n.offsetParent !== null || n === el);
   }
+
+  const FS_MODALS = ["teach", "learn", "txpath", "cacp"];
+  let fsEscGuardUntil = 0;
+  function docFullscreenEl() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+  function modalFullscreenEls(name) {
+    const bd = document.getElementById("bd-" + name);
+    if (!bd) return null;
+    return { bd: bd, modal: bd.querySelector(".modal"), btn: bd.querySelector(".fs-toggle") };
+  }
+  function modalIsFullscreen(name) {
+    const els = modalFullscreenEls(name);
+    return !!(els && els.modal && els.modal.classList.contains("is-fullscreen"));
+  }
+  function syncFsButton(btn, on) {
+    if (!btn) return;
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.setAttribute("aria-label", on ? "Exit full screen" : "Enter full screen");
+    const label = btn.querySelector(".fs-label");
+    if (label) label.textContent = on ? "Exit full screen" : "Full screen";
+  }
+  function syncFsBodyClass() {
+    document.body.classList.toggle("has-fs-modal", !!document.querySelector(".bd.is-fullscreen"));
+  }
+  function applyModalFullscreen(name, on) {
+    const els = modalFullscreenEls(name);
+    if (!els || !els.modal) return;
+    const body = els.modal.querySelector(".m-body");
+    const from = on ? els.modal : body;
+    const saved = from ? from.scrollTop : 0;
+    els.bd.classList.toggle("is-fullscreen", !!on);
+    els.modal.classList.toggle("is-fullscreen", !!on);
+    syncFsButton(els.btn, !!on);
+    syncFsBodyClass();
+    const to = on ? body : els.modal;
+    if (to) to.scrollTop = saved || 0;
+  }
+  function enterModalFullscreen(name) {
+    applyModalFullscreen(name, true);
+    const els = modalFullscreenEls(name);
+    const el = els && els.modal;
+    if (!el) return;
+    const req = el.requestFullscreen || el.webkitRequestFullscreen;
+    if (!req) return;
+    try {
+      const ret = req.call(el);
+      if (ret && typeof ret.catch === "function") ret.catch(function () {});
+    } catch (err) { /* CSS viewport mode stays on where the API is unavailable. */ }
+  }
+  function exitModalFullscreen(name, focusToggle) {
+    if (!modalIsFullscreen(name)) return;
+    const els = modalFullscreenEls(name);
+    const modal = els && els.modal;
+    const fsEl = docFullscreenEl();
+    const apiOwns = !!(fsEl && modal && (fsEl === modal || modal.contains(fsEl)));
+    applyModalFullscreen(name, false);
+    if (apiOwns) {
+      const exit = document.exitFullscreen || document.webkitExitFullscreen;
+      if (exit) {
+        try {
+          const ret = exit.call(document);
+          if (ret && typeof ret.catch === "function") ret.catch(function () {});
+        } catch (err) {}
+      }
+    }
+    if (focusToggle && els && els.btn) els.btn.focus();
+  }
+  function toggleModalFullscreen(name) {
+    if (modalIsFullscreen(name)) exitModalFullscreen(name, true);
+    else enterModalFullscreen(name);
+  }
+  function resetModalScroll(modal) {
+    if (!modal) return;
+    modal.scrollTop = 0;
+    const body = modal.querySelector(".m-body");
+    if (body) body.scrollTop = 0;
+  }
+  function onFullscreenChange() {
+    const fsEl = docFullscreenEl();
+    let browserLeft = false;
+    FS_MODALS.forEach(name => {
+      if (modalIsFullscreen(name) && !fsEl) {
+        browserLeft = true;
+        applyModalFullscreen(name, false);
+      }
+    });
+    if (browserLeft) fsEscGuardUntil = Date.now() + 500;
+  }
+  document.addEventListener("fullscreenchange", onFullscreenChange);
+  document.addEventListener("webkitfullscreenchange", onFullscreenChange);
+  window.addEventListener("beforeprint", () => {
+    const fsEl = docFullscreenEl();
+    FS_MODALS.forEach(name => { if (modalIsFullscreen(name)) applyModalFullscreen(name, false); });
+    const exit = document.exitFullscreen || document.webkitExitFullscreen;
+    if (exit && fsEl) {
+      try {
+        const ret = exit.call(document);
+        if (ret && typeof ret.catch === "function") ret.catch(function () {});
+      } catch (err) {}
+    }
+  });
+  document.querySelectorAll(".fs-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const name = btn.getAttribute("data-fullscreen");
+      if (name) toggleModalFullscreen(name);
+    });
+  });
+
   function openModal(name) {
     const bd = document.getElementById("bd-" + name);
     const modal = bd.querySelector(".modal");
@@ -3029,6 +3323,7 @@
   function closeModal(name) {
     const bd = document.getElementById("bd-" + name);
     if (!bd || bd.hidden) return;
+    exitModalFullscreen(name);
     bd.classList.remove("open"); bd.hidden = true;
     if (bd._trap) bd.removeEventListener("keydown", bd._trap);
     const i = stack.lastIndexOf(name); if (i >= 0) stack.splice(i, 1);
@@ -3063,6 +3358,7 @@
     }
     if (name === "cacp") {
       teachRoute = null;
+      enterCacpHome();
       setRoute(null, null, true);
     }
     if (name === "learn") {
@@ -3284,6 +3580,17 @@
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       if (closeChromeMenus(true)) return;
+      const top = stack[stack.length - 1];
+      if (top && modalIsFullscreen(top)) {
+        e.preventDefault();
+        exitModalFullscreen(top, true);
+        return;
+      }
+      if (Date.now() < fsEscGuardUntil) {
+        e.preventDefault();
+        fsEscGuardUntil = 0;
+        return;
+      }
       hideTip(); closeTop();
     }
   });
@@ -3849,7 +4156,7 @@
     }
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else resetModalScroll(document.querySelector("#bd-teach .modal"));
   }
 
   function slugifyDdi(s) {
@@ -4215,7 +4522,7 @@
     wireTeachBody(body);
     const bd = document.getElementById("bd-teach");
     if (bd.hidden) openModal("teach");
-    else document.querySelector("#bd-teach .modal").scrollTop = 0;
+    else resetModalScroll(document.querySelector("#bd-teach .modal"));
   }
 
   function teachRelatedLinksHtml(links) {
@@ -4232,7 +4539,7 @@
     const main = list.filter(l => l.kind !== "cacp" && l.kind !== "cacp-domain");
     const cacp = list.filter(l => l.kind === "cacp" || l.kind === "cacp-domain");
     const note = cacp.length
-      ? `<p class="teach-lead fw-cacp-note">Unofficial educational practice only. NCBAP does not endorse this site or any preparatory materials.</p>`
+      ? `<p class="teach-lead fw-cacp-note">Unofficial educational practice only. AC Forum does not endorse this or any preparatory materials.</p>`
       : "";
     return `<div class="jc-sec"><h3>Related</h3><div class="cacp-links">${main.map(btn).join("")}${note}${cacp.map(btn).join("")}</div></div>`;
   }
@@ -4440,6 +4747,7 @@
         // Close teach UI without wiping return route
         const bd = document.getElementById("bd-teach");
         if (bd && !bd.hidden) {
+          exitModalFullscreen("teach");
           bd.classList.remove("open"); bd.hidden = true;
           if (bd._trap) bd.removeEventListener("keydown", bd._trap);
           const i = stack.lastIndexOf("teach"); if (i >= 0) stack.splice(i, 1);
@@ -4500,13 +4808,26 @@
     score: 0,
     answeredCount: 0,
     missedIds: [],
+    unansweredIds: [],
     byDomain: {},
     shuffle: true,
-    mode: 'quiz', // quiz | results
+    mode: 'home', // home | exam-ready | quiz | exam | review | results
+    session: null, // study | exam
     focusQId: null,
     choiceOrderQId: null,
-    choiceOrderIds: null
+    choiceOrderIds: null,
+    choiceOrders: {},
+    answers: {},
+    bookmarks: {},
+    shortDomains: [],
+    examTarget: 0,
+    examDeadline: null,
+    examSubmitted: false,
+    examTimedOut: false,
+    reviewQueue: []
   };
+  let cacpTimerId = null;
+  let cacpPaintKey = '';
 
   function cacpAllQs() { return cacpLib.questions || []; }
   function cacpQById(id) { return cacpAllQs().find(q => q.id === id); }
@@ -4526,25 +4847,248 @@
     cacpState.choiceOrderQId = null;
     cacpState.choiceOrderIds = null;
   }
-  /** Display order only — stable choice.id vs correctId for scoring; shuffle once per question view. */
+  /** Display order only — stable choice.id vs correctId for scoring. */
   function cacpChoicesForDisplay(q) {
     if (!q) return [];
     const bank = q.choices || [];
-    if (cacpState.choiceOrderQId === q.id && Array.isArray(cacpState.choiceOrderIds) && cacpState.choiceOrderIds.length) {
+    const persistent = cacpState.mode === 'exam' || cacpState.mode === 'review';
+    const stored = persistent
+      ? (cacpState.choiceOrders && cacpState.choiceOrders[q.id])
+      : (cacpState.choiceOrderQId === q.id ? cacpState.choiceOrderIds : null);
+    if (Array.isArray(stored) && stored.length) {
       const byId = {};
       bank.forEach(c => { byId[c.id] = c; });
-      const ordered = cacpState.choiceOrderIds.map(id => byId[id]).filter(Boolean);
+      const ordered = stored.map(id => byId[id]).filter(Boolean);
       if (ordered.length === bank.length) return ordered;
     }
     const copy = bank.slice();
     shuffleInPlace(copy);
-    cacpState.choiceOrderQId = q.id;
-    cacpState.choiceOrderIds = copy.map(c => c.id);
+    const ids = copy.map(c => c.id);
+    if (persistent) {
+      if (!cacpState.choiceOrders) cacpState.choiceOrders = {};
+      cacpState.choiceOrders[q.id] = ids;
+    } else {
+      cacpState.choiceOrderQId = q.id;
+      cacpState.choiceOrderIds = ids;
+    }
     return copy;
   }
   function resetDomainScores() {
     cacpState.byDomain = {};
     (cacpLib.meta.domains || []).forEach(d => { cacpState.byDomain[d.id] = { correct: 0, total: 0 }; });
+  }
+
+  /* cacp-exam-pure:start */
+  function cacpExamMeta() {
+    const exam = (cacpLib.meta && cacpLib.meta.exam) || {};
+    const quotas = (exam.quotas && typeof exam.quotas === 'object') ? exam.quotas : {};
+    return {
+      questionCount: Number(exam.questionCount) || 0,
+      scoredCount: Number(exam.scoredCount) || 0,
+      pilotCount: Number(exam.pilotCount) || 0,
+      durationMinutes: Number(exam.durationMinutes) || 0,
+      passPercentOfScored: Number(exam.passPercentOfScored) || 0,
+      quotas: quotas
+    };
+  }
+  function cacpQuestionsByDomain() {
+    const byDom = {};
+    const seen = new Set();
+    cacpAllQs().forEach(q => {
+      if (!q || !q.id || seen.has(q.id)) return;
+      seen.add(q.id);
+      const bucket = byDom[q.domainId] || (byDom[q.domainId] = []);
+      bucket.push(q);
+    });
+    return byDom;
+  }
+  function cacpExamPlanPreview() {
+    const meta = cacpExamMeta();
+    const domains = (cacpLib.meta && cacpLib.meta.domains) || [];
+    const byDom = cacpQuestionsByDomain();
+    const lines = [];
+    const short = [];
+    let drawn = 0;
+    let quotaSum = 0;
+    domains.forEach(d => {
+      if (!Object.prototype.hasOwnProperty.call(meta.quotas, d.id)) return;
+      const quota = Number(meta.quotas[d.id]);
+      if (!Number.isFinite(quota) || quota < 0) return;
+      const have = (byDom[d.id] || []).length;
+      const take = Math.min(have, quota);
+      drawn += take;
+      quotaSum += quota;
+      if (have < quota) short.push(d);
+      lines.push({ domain: d, have: have, quota: quota, take: take });
+    });
+    return {
+      lines: lines,
+      short: short,
+      drawn: drawn,
+      target: meta.questionCount || quotaSum,
+      meta: meta
+    };
+  }
+  function drawCacpDomain(pool, quota) {
+    const n = Math.min(pool.length, Math.max(0, Number(quota) || 0));
+    const items = pool.slice();
+    const useCoverage = items.some(q => q && Array.isArray(q.objectiveIds) && q.objectiveIds.length);
+    if (!useCoverage) {
+      shuffleInPlace(items);
+      return items.slice(0, n);
+    }
+    const chosen = [];
+    const covered = new Set();
+    while (chosen.length < n && items.length) {
+      const fresh = items.filter(q => {
+        const ids = q && Array.isArray(q.objectiveIds) ? q.objectiveIds : [];
+        return ids.some(id => !covered.has(id));
+      });
+      const bag = fresh.length ? fresh : items;
+      const pick = bag[Math.floor(Math.random() * bag.length)];
+      chosen.push(pick);
+      const ids = pick && Array.isArray(pick.objectiveIds) ? pick.objectiveIds : [];
+      ids.forEach(id => covered.add(id));
+      items.splice(items.indexOf(pick), 1);
+    }
+    return chosen;
+  }
+  function sampleCacpExam() {
+    const preview = cacpExamPlanPreview();
+    const byDom = cacpQuestionsByDomain();
+    const queue = [];
+    preview.lines.forEach(line => {
+      const pool = (byDom[line.domain.id] || []).slice();
+      queue.push.apply(queue, drawCacpDomain(pool, line.quota));
+    });
+    shuffleInPlace(queue);
+    return {
+      queue: queue,
+      short: preview.short,
+      target: preview.target,
+      drawn: queue.length,
+      lines: preview.lines
+    };
+  }
+  function cacpDomainPhrase(domains) {
+    const ids = (domains || []).map(d => (d && d.id) ? d.id : d).filter(Boolean);
+    if (!ids.length) return '';
+    if (ids.length === 1) return 'Domain ' + ids[0];
+    if (ids.length === 2) return 'Domains ' + ids[0] + ' and ' + ids[1];
+    return 'Domains ' + ids.slice(0, -1).join(', ') + ', and ' + ids[ids.length - 1];
+  }
+  function cacpSittingLabel(drawn, target, shortDomains) {
+    const nDrawn = Number(drawn) || 0;
+    const nTarget = Number(target) || 0;
+    if (!nTarget || nDrawn >= nTarget) return 'Practice exam · ' + nDrawn;
+    const phrase = cacpDomainPhrase(shortDomains);
+    const tail = phrase ? ' — more items coming for ' + phrase : '';
+    return 'Practice exam · ' + nDrawn + ' of ' + nTarget + tail;
+  }
+  /* cacp-exam-pure:end */
+
+  function cacpDurationPhrase(mins) {
+    const m = Number(mins) || 0;
+    if (!m) return '';
+    const h = Math.floor(m / 60);
+    const rem = m % 60;
+    if (h && rem) return h + (h === 1 ? ' hour ' : ' hours ') + rem + ' minutes';
+    if (h) return h + (h === 1 ? ' hour' : ' hours');
+    return rem + ' minutes';
+  }
+  function cacpOfficialScoreNote() {
+    const meta = cacpExamMeta();
+    const scored = meta.scoredCount;
+    const pilots = meta.pilotCount;
+    const total = meta.questionCount || (scored + pilots);
+    const pct = meta.passPercentOfScored;
+    const need = (scored && pct) ? Math.round((scored * pct) / 100) : 0;
+    return 'The real exam scores ' + scored + ' of ' + total + ' items (' + pilots + ' unidentified pilots) and requires ' + pct + '% of scored items (' + need + '/' + scored + '). This unofficial practice sitting scores every item. It is not a certification result.';
+  }
+  function cacpSittingNeed(total) {
+    const pct = cacpExamMeta().passPercentOfScored;
+    if (!total || !pct) return null;
+    return { pct: pct, need: Math.ceil((total * pct) / 100) };
+  }
+  function cacpReferenceLine(total) {
+    const need = cacpSittingNeed(total);
+    if (!need) return '';
+    return 'An ' + need.pct + '% reference line on this sitting is ' + need.need + ' of ' + total + '. That line is a practice comparison only.';
+  }
+  function formatCacpClock(ms) {
+    const total = Math.max(0, Math.ceil(Number(ms) / 1000));
+    const h = Math.floor(total / 3600);
+    const m = Math.floor((total % 3600) / 60);
+    const s = total % 60;
+    const pad = n => (n < 10 ? '0' : '') + n;
+    return h + ':' + pad(m) + ':' + pad(s);
+  }
+  function cacpExamMsLeft() {
+    if (!cacpState.examDeadline) return 0;
+    return Math.max(0, cacpState.examDeadline - Date.now());
+  }
+  function stopCacpTimer() {
+    if (cacpTimerId) {
+      clearInterval(cacpTimerId);
+      cacpTimerId = null;
+    }
+  }
+  function cacpTimerTick() {
+    if (cacpState.mode !== 'exam') { stopCacpTimer(); return; }
+    const left = cacpExamMsLeft();
+    const el = document.getElementById('cacp-timer');
+    if (el) {
+      el.textContent = formatCacpClock(left);
+      el.classList.toggle('warn', left > 0 && left <= 5 * 60 * 1000);
+    }
+    if (left <= 0) submitCacpExam({ timedOut: true });
+  }
+  function startCacpTimer() {
+    stopCacpTimer();
+    cacpTimerId = setInterval(cacpTimerTick, 250);
+  }
+  function cacpSetSub(text, withTimer) {
+    const sub = document.getElementById('cacp-sub');
+    if (!sub) return;
+    if (!withTimer) {
+      sub.textContent = text;
+      return;
+    }
+    const left = cacpExamMsLeft();
+    const warn = left > 0 && left <= 5 * 60 * 1000 ? ' warn' : '';
+    sub.innerHTML = esc(text) + ' · Time left <span id="cacp-timer" class="cacp-clock' + warn + '">' + esc(formatCacpClock(left)) + '</span>';
+  }
+  function cacpBannerHtml() {
+    const text = (cacpLib.meta && cacpLib.meta.disclaimer) || '';
+    return '<div class="cacp-banner"><strong>Disclaimer:</strong> ' + linkifyText(text) + '</div>';
+  }
+  function cacpShortBannerHtml() {
+    return '<div class="cacp-banner"><strong>Unofficial practice.</strong> AC Forum does not endorse this or any preparatory materials. These are not real exam questions.</div>';
+  }
+  function cacpHandbookHtml() {
+    const text = (cacpLib.meta && cacpLib.meta.handbookNote) || '';
+    return '<p class="cacp-ref">' + linkifyText(text) + '</p>';
+  }
+  function cacpTipsHtml(includeNote) {
+    const tips = (cacpLib.studyTips || []).map(t => '<li>' + esc(t) + '</li>').join('');
+    const note = includeNote ? cacpHandbookHtml() : '';
+    const summary = includeNote ? 'Study tips and handbook note' : 'Study tips';
+    return '<div class="cacp-tips"><details><summary>' + summary + '</summary><ul>' + tips + '</ul>' + note + '</details></div>';
+  }
+  function cacpQuotaTableHtml(preview) {
+    const rows = (preview.lines || []).map(line => {
+      const d = line.domain;
+      const short = line.have < line.quota ? ' · short' : '';
+      return '<tr><td>Domain ' + esc(d.id) + '</td><td>' + esc(d.name) + '</td><td>' + esc(String(d.weightPct)) + '%</td><td>' + line.quota + '</td><td>' + line.have + '</td><td>' + line.take + short + '</td></tr>';
+    }).join('');
+    return '<div class="cacp-table-wrap"><table class="cacp-quota"><thead><tr><th>Domain</th><th>Name</th><th>Weight</th><th>Quota</th><th>In bank</th><th>This sitting</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+  }
+  function cacpDomainRowsHtml() {
+    return (cacpLib.meta.domains || []).map(d => {
+      const s = cacpState.byDomain[d.id] || { correct: 0, total: 0 };
+      const pct = s.total ? Math.round(100 * s.correct / s.total) + '%' : '—';
+      return '<tr><td>Domain ' + esc(d.id) + ' · ' + esc(d.name) + '</td><td>' + s.correct + '/' + s.total + '</td><td>' + pct + '</td></tr>';
+    }).join('');
   }
 
   function buildCacpQueue(opts) {
@@ -4566,11 +5110,135 @@
     cacpState.pickedId = null;
     cacpState.revealedCount = 0;
     clearCacpChoiceOrder();
+    cacpState.choiceOrders = {};
     cacpState.score = 0;
     cacpState.answeredCount = 0;
     if (!opts.keepMissed) cacpState.missedIds = [];
+    cacpState.unansweredIds = [];
     resetDomainScores();
     cacpState.mode = 'quiz';
+  }
+
+  function enterCacpHome() {
+    stopCacpTimer();
+    cacpState.mode = 'home';
+    cacpState.focusQId = null;
+    cacpState.idx = 0;
+    cacpState.answered = false;
+    cacpState.revealed = false;
+    cacpState.pickedId = null;
+    cacpState.examDeadline = null;
+  }
+  function startCacpStudy(opts) {
+    opts = opts || {};
+    stopCacpTimer();
+    cacpState.session = 'study';
+    cacpState.examDeadline = null;
+    cacpState.examSubmitted = false;
+    cacpState.examTimedOut = false;
+    cacpState.answers = {};
+    cacpState.bookmarks = {};
+    cacpState.shortDomains = [];
+    cacpState.reviewQueue = [];
+    if (opts.fromHome) {
+      cacpState.shuffle = true;
+      cacpState.domainId = 'all';
+      cacpState.focusQId = null;
+    }
+    buildCacpQueue(opts);
+  }
+  function showCacpExamReady() {
+    stopCacpTimer();
+    cacpState.mode = 'exam-ready';
+    cacpState.focusQId = null;
+    cacpState.idx = 0;
+    cacpState.examDeadline = null;
+    cacpState.examSubmitted = false;
+  }
+  function beginCacpExam() {
+    const sampled = sampleCacpExam();
+    if (!sampled.queue.length) return;
+    stopCacpTimer();
+    cacpState.session = 'exam';
+    cacpState.mode = 'exam';
+    cacpState.focusQId = null;
+    cacpState.queue = sampled.queue;
+    cacpState.shortDomains = sampled.short;
+    cacpState.examTarget = sampled.target;
+    cacpState.idx = 0;
+    cacpState.answers = {};
+    cacpState.bookmarks = {};
+    cacpState.choiceOrders = {};
+    cacpState.missedIds = [];
+    cacpState.unansweredIds = [];
+    cacpState.score = 0;
+    cacpState.answeredCount = 0;
+    cacpState.revealedCount = 0;
+    cacpState.answered = false;
+    cacpState.revealed = false;
+    cacpState.pickedId = null;
+    cacpState.examSubmitted = false;
+    cacpState.examTimedOut = false;
+    cacpState.reviewQueue = [];
+    clearCacpChoiceOrder();
+    resetDomainScores();
+    const mins = cacpExamMeta().durationMinutes;
+    cacpState.examDeadline = mins > 0 ? Date.now() + mins * 60 * 1000 : null;
+    if (cacpState.examDeadline) startCacpTimer();
+  }
+  function scoreCacpExam() {
+    resetDomainScores();
+    cacpState.score = 0;
+    cacpState.answeredCount = 0;
+    cacpState.missedIds = [];
+    cacpState.unansweredIds = [];
+    cacpState.queue.forEach(q => {
+      const pick = cacpState.answers[q.id];
+      const dstat = cacpState.byDomain[q.domainId] || (cacpState.byDomain[q.domainId] = { correct: 0, total: 0 });
+      dstat.total++;
+      if (!pick) {
+        cacpState.unansweredIds.push(q.id);
+        cacpState.missedIds.push(q.id);
+        return;
+      }
+      cacpState.answeredCount++;
+      if (pick === q.correctId) {
+        cacpState.score++;
+        dstat.correct++;
+      } else {
+        cacpState.missedIds.push(q.id);
+      }
+    });
+  }
+  function submitCacpExam(opts) {
+    opts = opts || {};
+    if (cacpState.mode !== 'exam' || cacpState.examSubmitted) return;
+    cacpState.examSubmitted = true;
+    cacpState.examTimedOut = !!opts.timedOut;
+    stopCacpTimer();
+    scoreCacpExam();
+    cacpState.mode = 'results';
+    cacpState.session = 'exam';
+    renderCacp();
+  }
+  function requestCacpExamSubmit() {
+    if (cacpState.mode !== 'exam' || cacpState.examSubmitted) return;
+    const unanswered = cacpState.queue.filter(q => !cacpState.answers[q.id]).length;
+    if (unanswered) {
+      const noun = unanswered === 1 ? '1 item has' : (unanswered + ' items have');
+      const ok = window.confirm('Submit the practice exam now? ' + noun + ' no answer yet. Unanswered items are not correct.');
+      if (!ok) return;
+    }
+    submitCacpExam({ timedOut: false });
+  }
+  function beginCacpReview() {
+    stopCacpTimer();
+    const ids = new Set(cacpState.missedIds);
+    let list = (cacpState.queue || []).filter(q => q && ids.has(q.id));
+    if (!list.length) list = cacpState.missedIds.map(cacpQById).filter(Boolean);
+    cacpState.reviewQueue = list;
+    cacpState.idx = 0;
+    cacpState.mode = 'review';
   }
 
   function openCacp(opts) {
@@ -4578,19 +5246,18 @@
     if (opts.questionId) {
       cacpState.focusQId = opts.questionId;
       cacpState.domainId = 'all';
-      buildCacpQueue({ focusQId: opts.questionId });
+      startCacpStudy({ focusQId: opts.questionId });
     } else if (opts.domainId) {
       cacpState.focusQId = null;
       cacpState.domainId = opts.domainId;
-      buildCacpQueue({});
+      startCacpStudy({});
     } else if (opts.missedOnly) {
       cacpState.focusQId = null;
-      buildCacpQueue({ missedOnly: true, keepMissed: true });
-    } else if (opts.resume && cacpState.queue.length) {
-      // keep
+      startCacpStudy({ missedOnly: true, keepMissed: true });
+    } else if (opts.examReady) {
+      showCacpExamReady();
     } else {
-      cacpState.focusQId = null;
-      buildCacpQueue({});
+      enterCacpHome();
     }
     renderCacp();
     const bd = document.getElementById('bd-cacp');
@@ -4613,7 +5280,6 @@
     else if (l.kind === 'cacp') openCacp({ questionId: l.id });
     else if (l.kind === 'cacp-domain') openCacp({ domainId: l.id });
     else if (l.kind === 'pathway') {
-      // Playlist if the id is a trial pathway; otherwise treatment pathway (TX-only ids).
       const inPlaylist = (pathways || []).some(p => p.id === l.id);
       if (inPlaylist) startPathway(l.id, 0, false);
       else openTxPath({ pathwayId: l.id });
@@ -4624,88 +5290,274 @@
     }
   }
 
-  function renderCacp() {
-    const body = document.getElementById('cacp-body');
-    const title = document.getElementById('cacp-title');
-    const sub = document.getElementById('cacp-sub');
-    const nextBtn = document.getElementById('cacp-next');
-    const revealBtn = document.getElementById('cacp-reveal');
-    const missedBtn = document.getElementById('cacp-missed');
-    title.textContent = (cacpLib.meta && cacpLib.meta.title) || 'CACP exam prep';
-    sub.textContent = 'Unofficial practice · not NCBAP-endorsed';
-
-    if (cacpState.mode === 'results') {
-      missedBtn.hidden = cacpState.missedIds.length === 0;
-      if (revealBtn) revealBtn.hidden = true;
-      nextBtn.disabled = false;
-      nextBtn.textContent = 'Restart';
-      const rows = (cacpLib.meta.domains || []).map(d => {
-        const s = cacpState.byDomain[d.id] || { correct: 0, total: 0 };
-        const pct = s.total ? Math.round(100 * s.correct / s.total) : '—';
-        return `<tr><td>Domain ${esc(d.id)} · ${esc(d.name)}</td><td>${s.correct}/${s.total}</td><td>${pct}${s.total?'%':''}</td></tr>`;
-      }).join('');
-      body.innerHTML = `
-        <div class="cacp-banner"><strong>Disclaimer:</strong> ${esc(cacpLib.meta.disclaimer || '')}</div>
-        <div class="cacp-results">
-          <h3 style="font-family:'Source Serif 4',Georgia,serif;font-size:1.2rem;margin-bottom:.35rem;">Session complete</h3>
-          <p class="cacp-meta">Score: <strong>${cacpState.score}</strong> / ${cacpState.answeredCount}
-            ${cacpState.missedIds.length ? ` · Missed: ${cacpState.missedIds.length}` : ''}</p>
-          <table><thead><tr><th>Domain</th><th>Correct</th><th>%</th></tr></thead><tbody>${rows}</tbody></table>
-          ${cacpState.revealedCount ? `<p class="cacp-unscored">Revealed explanations: ${cacpState.revealedCount}. Those are not included in the score.</p>` : ''}
-          <p style="font-size:.8125rem;color:var(--muted);line-height:1.45">${esc(cacpLib.meta.handbookNote || '')}</p>
-        </div>`;
-      return;
+  function syncCacpFoot() {
+    const prev = document.getElementById('cacp-prev');
+    const bookmark = document.getElementById('cacp-bookmark');
+    const finish = document.getElementById('cacp-finish');
+    const copy = document.getElementById('cacp-copy');
+    const shuffle = document.getElementById('cacp-shuffle');
+    const missed = document.getElementById('cacp-missed');
+    const reveal = document.getElementById('cacp-reveal');
+    const next = document.getElementById('cacp-next');
+    const mode = cacpState.mode;
+    const show = (el, on) => { if (el) el.hidden = !on; };
+    show(prev, mode === 'exam' || mode === 'review');
+    show(bookmark, mode === 'exam');
+    show(finish, mode === 'exam');
+    show(copy, mode === 'home' || mode === 'quiz' || mode === 'results' || mode === 'exam-ready');
+    show(shuffle, mode === 'quiz');
+    show(missed, (mode === 'results' || mode === 'review' || mode === 'home' || mode === 'exam-ready') && cacpState.missedIds.length > 0);
+    show(reveal, false);
+    show(next, mode !== 'home');
+    if (shuffle) shuffle.setAttribute('aria-pressed', cacpState.shuffle ? 'true' : 'false');
+    if (mode === 'exam') {
+      const q = cacpState.queue[cacpState.idx];
+      if (prev) prev.disabled = cacpState.idx <= 0;
+      if (next) {
+        next.disabled = !cacpState.queue.length || cacpState.idx >= cacpState.queue.length - 1;
+        next.textContent = 'Next question';
+      }
+      if (bookmark) {
+        const on = !!(q && cacpState.bookmarks[q.id]);
+        bookmark.textContent = on ? 'Bookmarked' : 'Bookmark';
+        bookmark.setAttribute('aria-pressed', on ? 'true' : 'false');
+      }
+      if (finish) finish.disabled = !cacpState.queue.length;
+    } else if (mode === 'review') {
+      const qn = (cacpState.reviewQueue || []).length;
+      if (prev) prev.disabled = cacpState.idx <= 0;
+      if (next) {
+        next.disabled = false;
+        next.textContent = cacpState.idx >= qn - 1 ? 'Back to results' : 'Next missed';
+      }
+    } else if (mode === 'results') {
+      if (next) { next.disabled = false; next.textContent = 'Back to start'; }
+    } else if (mode === 'exam-ready') {
+      if (next) { next.disabled = false; next.textContent = 'Back'; }
     }
+  }
 
-    missedBtn.hidden = true;
+  function renderCacpHome() {
+    const preview = cacpExamPlanPreview();
+    const bankCount = cacpAllQs().length;
+    const label = cacpSittingLabel(preview.drawn, preview.target, preview.short);
+    const examSpan = preview.drawn
+      ? (label + '. Newly randomized each time. Explanations stay hidden until you submit or the clock ends.')
+      : 'Exam quotas are not available for this bank yet.';
+    cacpSetSub('Unofficial practice · educational only', false);
+    return '<div data-cacp-screen="home">' +
+      cacpBannerHtml() +
+      '<div class="cacp-actions">' +
+        '<button type="button" class="cacp-home-card" data-cacp-action="study"><strong>Study practice</strong><span>All ' + bankCount + ' questions in the current bank. Domain filters stay available. Shuffle starts on. The explanation opens after you submit or reveal an item.</span></button>' +
+        '<button type="button" class="cacp-home-card" data-cacp-action="exam"' + (preview.drawn ? '' : ' disabled') + '><strong>Full practice exam</strong><span>' + esc(examSpan) + '</span></button>' +
+      '</div>' +
+      '<h3 class="cacp-h">Exam quotas</h3>' +
+      '<p class="cacp-ref">' + esc(label) + '. A domain with fewer items than its quota contributes each item once. Items are not repeated and are not borrowed from another domain.</p>' +
+      cacpQuotaTableHtml(preview) +
+      cacpHandbookHtml() +
+      cacpTipsHtml(false) +
+    '</div>';
+  }
+
+  function renderCacpExamReady() {
+    const preview = cacpExamPlanPreview();
+    const label = cacpSittingLabel(preview.drawn, preview.target, preview.short);
+    const duration = cacpDurationPhrase(preview.meta.durationMinutes);
+    const clockLine = duration
+      ? ('The clock is ' + duration + '. It starts when you confirm you are ready. ')
+      : '';
+    cacpSetSub('Full practice exam · clock starts when you are ready', false);
+    const startLabel = duration ? "I'm ready — start the clock" : 'Start the practice exam';
+    return '<div data-cacp-screen="exam-ready" data-drawn="' + preview.drawn + '" data-target="' + preview.target + '">' +
+      cacpShortBannerHtml() +
+      '<h3 class="cacp-h">' + esc(label) + '</h3>' +
+      '<p class="cacp-ref">' + esc(clockLine) + 'You can move back, change an answer, and bookmark an item. Explanations, teaching points, and correctness stay hidden until you submit or the clock ends. You can submit early. At zero, recorded answers are submitted.</p>' +
+      '<p class="cacp-ref">' + esc(cacpOfficialScoreNote()) + '</p>' +
+      cacpQuotaTableHtml(preview) +
+      '<button type="button" class="btn primary cacp-begin" data-cacp-action="begin-exam"' + (preview.drawn ? '' : ' disabled') + '>' + esc(startLabel) + '</button>' +
+    '</div>';
+  }
+
+  function renderCacpResults() {
+    const examSession = cacpState.session === 'exam';
+    const sittingPct = (examSession && cacpState.queue.length)
+      ? Math.round(100 * cacpState.score / cacpState.queue.length)
+      : (cacpState.answeredCount ? Math.round(100 * cacpState.score / cacpState.answeredCount) : 0);
+    const rows = cacpDomainRowsHtml();
+    cacpSetSub(examSession ? 'Practice exam · results' : 'Study practice · session complete', false);
+    let scoreLine;
+    let extra = '';
+    if (examSession) {
+      const need = cacpSittingNeed(cacpState.queue.length);
+      const markPct = need ? need.pct : 0;
+      scoreLine = 'Practice score: <strong>' + cacpState.score + '</strong> correct / ' + cacpState.answeredCount + ' answered · ' + cacpState.queue.length + ' in this sitting (' + sittingPct + '% of the sitting).';
+      if (cacpState.unansweredIds.length) {
+        extra += '<p class="cacp-meta">Unanswered: ' + cacpState.unansweredIds.length + '. Those items are not correct.</p>';
+      }
+      if (cacpState.examTimedOut) {
+        extra = '<p class="cacp-meta">Time ran out. The sitting was submitted with the answers recorded.</p>' + extra;
+      }
+      extra += '<div class="cacp-bar" role="img" aria-label="' + esc('Practice percentage ' + sittingPct + ' percent of this sitting. The mark is the ' + markPct + ' percent reference line.') + '">' +
+        '<span class="cacp-bar-fill" style="width:' + sittingPct + '%"></span>' +
+        (need ? '<span class="cacp-bar-mark" style="left:' + markPct + '%"></span>' : '') +
+        '</div>';
+      extra += '<p class="cacp-ref">' + esc(cacpReferenceLine(cacpState.queue.length)) + '</p>';
+      extra += '<p class="cacp-ref">' + esc(cacpOfficialScoreNote()) + '</p>';
+      extra += '<p class="cacp-ref">' + esc(cacpSittingLabel(cacpState.queue.length, cacpState.examTarget, cacpState.shortDomains)) + '.</p>';
+    } else {
+      scoreLine = 'Score: <strong>' + cacpState.score + '</strong> / ' + cacpState.answeredCount +
+        (cacpState.missedIds.length ? ' · Missed: ' + cacpState.missedIds.length : '');
+      if (cacpState.revealedCount) {
+        extra += '<p class="cacp-unscored">Revealed explanations: ' + cacpState.revealedCount + '. Those are not included in the score.</p>';
+      }
+    }
+    const actions = [];
+    if (cacpState.missedIds.length) {
+      actions.push('<button type="button" class="btn" data-cacp-action="review">Review missed with explanations</button>');
+    }
+    if (examSession) actions.push('<button type="button" class="btn" data-cacp-action="exam">New full exam</button>');
+    else actions.push('<button type="button" class="btn" data-cacp-action="study">Study again</button>');
+    const caption = examSession
+      ? 'Domain totals count every item drawn for that domain. Unanswered items are not correct.'
+      : 'Domain totals count submitted answers.';
+    return '<div data-cacp-screen="results" data-session="' + (examSession ? 'exam' : 'study') + '">' +
+      cacpBannerHtml() +
+      '<div class="cacp-results">' +
+        '<h3 class="cacp-h">' + (examSession ? 'Practice exam results' : 'Session complete') + '</h3>' +
+        '<p class="cacp-meta">' + scoreLine + '</p>' +
+        extra +
+        '<p class="cacp-ref">' + esc(caption) + '</p>' +
+        '<div class="cacp-table-wrap"><table><thead><tr><th>Domain</th><th>Correct</th><th>%</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
+        cacpHandbookHtml() +
+        '<div class="cacp-actions">' + actions.join('') + '</div>' +
+      '</div></div>';
+  }
+
+  function renderCacpExam() {
+    const q = cacpState.queue[cacpState.idx];
+    const label = cacpSittingLabel(cacpState.queue.length, cacpState.examTarget, cacpState.shortDomains);
+    cacpSetSub(label, !!cacpState.examDeadline);
+    if (!q) {
+      return '<div data-cacp-screen="exam">' + cacpShortBannerHtml() + '<p>No questions in this sitting.</p></div>';
+    }
+    const dom = (cacpLib.meta.domains || []).find(d => d.id === q.domainId);
+    const pick = cacpState.answers[q.id] || '';
+    const answeredN = cacpState.queue.filter(item => cacpState.answers[item.id]).length;
+    const marked = cacpState.queue.filter(item => cacpState.bookmarks[item.id]).length;
+    const choices = cacpChoicesForDisplay(q).map(c => {
+      const on = c.id === pick;
+      return '<button type="button" class="btn' + (on ? ' selected' : '') + '" data-cacp-choice="' + esc(c.id) + '" aria-pressed="' + (on ? 'true' : 'false') + '">' + esc(c.text) + '</button>';
+    }).join('');
+    const nav = cacpState.queue.map((item, i) => {
+      const cls = [
+        i === cacpState.idx ? 'current' : '',
+        cacpState.answers[item.id] ? 'answered' : '',
+        cacpState.bookmarks[item.id] ? 'bookmarked' : ''
+      ].filter(Boolean).join(' ');
+      const name = 'Question ' + (i + 1) + (cacpState.answers[item.id] ? ', answered' : ', unanswered') + (cacpState.bookmarks[item.id] ? ', bookmarked' : '');
+      return '<button type="button" class="' + cls + '" data-cacp-jump="' + i + '" data-nav-id="' + esc(item.id) + '" aria-label="' + esc(name) + '"' + (i === cacpState.idx ? ' aria-current="true"' : '') + '>' + (i + 1) + '</button>';
+    }).join('');
+    return '<div data-cacp-screen="exam" data-qid="' + esc(q.id) + '" data-drawn="' + cacpState.queue.length + '" data-target="' + cacpState.examTarget + '">' +
+      cacpShortBannerHtml() +
+      '<div class="cacp-meta">Question ' + (cacpState.idx + 1) + ' of ' + cacpState.queue.length +
+        ' · Domain ' + esc(q.domainId) + (dom ? ' — ' + esc(dom.name) : '') +
+        ' · Answered ' + answeredN + ' · Bookmarked ' + marked + '</div>' +
+      '<div class="cacp-stem">' + esc(q.stem) + '</div>' +
+      '<div class="cacp-choices">' + choices + '</div>' +
+      '<div class="cacp-tips"><details><summary>Question list · ' + answeredN + ' answered · ' + marked + ' bookmarked</summary><div class="cacp-qnav">' + nav + '</div></details></div>' +
+    '</div>';
+  }
+
+  function renderCacpReview() {
+    const list = cacpState.reviewQueue || [];
+    const q = list[cacpState.idx];
+    cacpSetSub('Review missed items', false);
+    if (!q) {
+      return '<div data-cacp-screen="review"><p>No missed items to review.</p></div>';
+    }
+    const dom = (cacpLib.meta.domains || []).find(d => d.id === q.domainId);
+    const pick = cacpState.answers[q.id] || '';
+    const choices = cacpChoicesForDisplay(q).map(c => {
+      let cls = 'btn';
+      if (c.id === q.correctId) cls += ' correct';
+      else if (pick && c.id === pick) cls += ' wrong';
+      return '<button type="button" class="' + cls + '" disabled>' + esc(c.text) + '</button>';
+    }).join('');
+    const links = (q.links || []).map(l =>
+      '<button type="button" class="btn sm" data-cacp-link="' + esc(l.kind) + '|' + esc(l.id || '') + '">' + esc(l.label || l.id) + '</button>'
+    ).join('');
+    const tps = (q.teachingPoints || []).map(t => '<li>' + esc(t) + '</li>').join('');
+    const unanswered = !pick ? '<p class="cacp-unscored">No answer recorded.</p>' : '';
+    const marked = cacpState.bookmarks[q.id] ? '<p class="cacp-unscored">Bookmarked during the sitting.</p>' : '';
+    return '<div data-cacp-screen="review" data-qid="' + esc(q.id) + '">' +
+      cacpShortBannerHtml() +
+      '<div class="cacp-meta">Missed item ' + (cacpState.idx + 1) + ' of ' + list.length +
+        ' · Domain ' + esc(q.domainId) + (dom ? ' — ' + esc(dom.name) : '') + '</div>' +
+      marked +
+      '<div class="cacp-stem">' + esc(q.stem) + '</div>' +
+      '<div class="cacp-choices">' + choices + '</div>' +
+      '<div class="cacp-explain"><h4>Explanation</h4>' + unanswered +
+        '<p>' + esc(q.explanation || '') + '</p>' +
+        (tps ? '<h4>Teaching points</h4><ul>' + tps + '</ul>' : '') +
+        (links ? '<div class="cacp-links">' + links + '</div>' : '') +
+      '</div></div>';
+  }
+
+  function renderCacpQuiz() {
+    const missedBtn = document.getElementById('cacp-missed');
+    const revealBtn = document.getElementById('cacp-reveal');
+    const nextBtn = document.getElementById('cacp-next');
+    if (missedBtn) missedBtn.hidden = true;
+    cacpSetSub('Study practice · explanations after each item', false);
     const q = cacpState.queue[cacpState.idx];
     if (!q) {
-      body.innerHTML = `<div class="cacp-banner">${esc(cacpLib.meta.disclaimer || '')}</div>
-        <p>No questions in this filter.</p>`;
       if (revealBtn) revealBtn.hidden = true;
-      nextBtn.disabled = false;
-      nextBtn.textContent = 'Close';
-      return;
+      if (nextBtn) {
+        nextBtn.hidden = false;
+        nextBtn.disabled = false;
+        nextBtn.textContent = 'Close';
+      }
+      return '<div data-cacp-screen="quiz">' + cacpBannerHtml() + '<p>No questions in this filter.</p></div>';
     }
-
     const dom = (cacpLib.meta.domains || []).find(d => d.id === q.domainId);
-    const chips = [`<button type="button" class="chip ${cacpState.domainId==='all'?'active':''}" data-cacp-dom="all">All</button>`]
+    const chips = ['<button type="button" class="chip ' + (cacpState.domainId === 'all' ? 'active' : '') + '" data-cacp-dom="all">All</button>']
       .concat((cacpLib.meta.domains || []).map(d =>
-        `<button type="button" class="chip ${cacpState.domainId===d.id?'active':''}" data-cacp-dom="${esc(d.id)}">` +
-        `${esc(d.id)} · ${d.weightPct}%</button>`
+        '<button type="button" class="chip ' + (cacpState.domainId === d.id ? 'active' : '') + '" data-cacp-dom="' + esc(d.id) + '">' +
+        esc(d.id) + ' · ' + d.weightPct + '%</button>'
       )).join('');
-
-    const tips = (cacpLib.studyTips || []).map(t => `<li>${esc(t)}</li>`).join('');
     const resolved = cacpState.answered || cacpState.revealed;
     let explain = '';
     if (resolved) {
       const links = (q.links || []).map(l =>
-        `<button type="button" class="btn sm" data-cacp-link="${esc(l.kind)}|${esc(l.id || '')}">${esc(l.label || l.id)}</button>`
+        '<button type="button" class="btn sm" data-cacp-link="' + esc(l.kind) + '|' + esc(l.id || '') + '">' + esc(l.label || l.id) + '</button>'
       ).join('');
-      const tps = (q.teachingPoints || []).map(t => `<li>${esc(t)}</li>`).join('');
+      const tps = (q.teachingPoints || []).map(t => '<li>' + esc(t) + '</li>').join('');
       const unscored = cacpState.revealed && !cacpState.answered
-        ? `<p class="cacp-unscored">Not scored — you did not submit an answer.</p>`
+        ? '<p class="cacp-unscored">Not scored — you did not submit an answer.</p>'
         : '';
-      explain = `<div class="cacp-explain">
-        <h4>Explanation</h4>
-        ${unscored}
-        <p>${esc(q.explanation || '')}</p>
-        ${tps ? `<h4>Teaching points</h4><ul>${tps}</ul>` : ''}
-        ${links ? `<div class="cacp-links">${links}</div>` : ''}
-      </div>`;
+      explain = '<div class="cacp-explain"><h4>Explanation</h4>' + unscored +
+        '<p>' + esc(q.explanation || '') + '</p>' +
+        (tps ? '<h4>Teaching points</h4><ul>' + tps + '</ul>' : '') +
+        (links ? '<div class="cacp-links">' + links + '</div>' : '') +
+      '</div>';
       if (revealBtn) revealBtn.hidden = true;
-      nextBtn.disabled = false;
-      nextBtn.textContent = cacpState.idx >= cacpState.queue.length - 1 ? 'See results' : 'Next question';
+      if (nextBtn) {
+        nextBtn.hidden = false;
+        nextBtn.disabled = false;
+        nextBtn.textContent = cacpState.idx >= cacpState.queue.length - 1 ? 'See results' : 'Next question';
+      }
     } else {
       if (revealBtn) {
         revealBtn.hidden = false;
         revealBtn.disabled = false;
         revealBtn.textContent = 'Reveal explanation';
       }
-      nextBtn.disabled = !cacpState.pickedId;
-      nextBtn.textContent = 'Submit answer';
+      if (nextBtn) {
+        nextBtn.hidden = false;
+        nextBtn.disabled = !cacpState.pickedId;
+        nextBtn.textContent = 'Submit answer';
+      }
     }
-
     const choices = cacpChoicesForDisplay(q).map(c => {
       let cls = 'btn';
       if (cacpState.answered) {
@@ -4716,27 +5568,52 @@
       } else if (c.id === cacpState.pickedId) {
         cls += ' selected';
       }
-      return `<button type="button" class="${cls}" data-cacp-choice="${esc(c.id)}" ${resolved?'disabled':''}>${esc(c.text)}</button>`;
+      return '<button type="button" class="' + cls + '" data-cacp-choice="' + esc(c.id) + '"' + (resolved ? ' disabled' : '') + '>' + esc(c.text) + '</button>';
     }).join('');
+    return '<div data-cacp-screen="quiz" data-qid="' + esc(q.id) + '">' +
+      cacpShortBannerHtml() +
+      cacpTipsHtml(true) +
+      '<div class="cacp-domains">' + chips + '</div>' +
+      '<div class="cacp-meta">Question ' + (cacpState.idx + 1) + ' of ' + cacpState.queue.length +
+        ' · Domain ' + esc(q.domainId) + (dom ? ' — ' + esc(dom.name) : '') +
+        ' · ' + esc(q.difficulty || 'core') +
+        ' · Score ' + cacpState.score + '/' + cacpState.answeredCount + '</div>' +
+      '<div class="cacp-stem">' + esc(q.stem) + '</div>' +
+      '<div class="cacp-choices">' + choices + '</div>' +
+      explain +
+    '</div>';
+  }
 
-    // mark picked for re-render: store on choice objects temporarily via state
-    body.innerHTML = `
-      <div class="cacp-banner"><strong>Unofficial practice.</strong> NCBAP does not endorse prep materials; these are not real exam questions. Educational use only.</div>
-      <div class="cacp-tips"><details><summary>Study tips & handbook note</summary>
-        <ul>${tips}</ul>
-        <p style="font-size:.75rem;color:var(--muted);margin-top:.45rem;line-height:1.4">${esc(cacpLib.meta.handbookNote || '')}</p>
-      </details></div>
-      <div class="cacp-domains">${chips}</div>
-      <div class="cacp-meta">Question ${cacpState.idx + 1} of ${cacpState.queue.length}
-        · Domain ${esc(q.domainId)}${dom ? ' — ' + esc(dom.name) : ''}
-        · ${esc(q.difficulty || 'core')}
-        · Score ${cacpState.score}/${cacpState.answeredCount}</div>
-      <div class="cacp-stem">${esc(q.stem)}</div>
-      <div class="cacp-choices">${choices}</div>
-      ${explain}`;
-
+  function renderCacp() {
+    const body = document.getElementById('cacp-body');
+    const title = document.getElementById('cacp-title');
+    if (!body || !title) return;
+    if (cacpState.mode === 'exam' && cacpState.examDeadline && cacpExamMsLeft() <= 0 && !cacpState.examSubmitted) {
+      submitCacpExam({ timedOut: true });
+      return;
+    }
+    title.textContent = (cacpLib.meta && cacpLib.meta.title) || 'CACP exam prep';
+    syncCacpFoot();
+    let html = '';
+    if (cacpState.mode === 'home') html = renderCacpHome();
+    else if (cacpState.mode === 'exam-ready') html = renderCacpExamReady();
+    else if (cacpState.mode === 'results') html = renderCacpResults();
+    else if (cacpState.mode === 'exam') html = renderCacpExam();
+    else if (cacpState.mode === 'review') html = renderCacpReview();
+    else html = renderCacpQuiz();
+    body.innerHTML = html;
+    wireCacpBody(body);
+    const paintKey = cacpState.mode + ':' + cacpState.idx + ':' + (cacpState.focusQId || '');
+    if (paintKey !== cacpPaintKey) {
+      cacpPaintKey = paintKey;
+      const modal = document.querySelector('#bd-cacp .modal');
+      resetModalScroll(modal);
+    }
+  }
+  function wireCacpBody(body) {
     body.querySelectorAll('[data-cacp-dom]').forEach(b => {
       b.onclick = () => {
+        if (cacpState.mode !== 'quiz') return;
         cacpState.domainId = b.dataset.cacpDom;
         cacpState.focusQId = null;
         buildCacpQueue({});
@@ -4746,6 +5623,14 @@
     });
     body.querySelectorAll('[data-cacp-choice]').forEach(b => {
       b.onclick = () => {
+        if (cacpState.mode === 'exam') {
+          const q = cacpState.queue[cacpState.idx];
+          if (!q) return;
+          cacpState.answers[q.id] = b.dataset.cacpChoice;
+          renderCacp();
+          return;
+        }
+        if (cacpState.mode !== 'quiz') return;
         if (cacpState.answered || cacpState.revealed) return;
         cacpState.pickedId = b.dataset.cacpChoice;
         renderCacp();
@@ -4753,8 +5638,37 @@
     });
     body.querySelectorAll('[data-cacp-link]').forEach(b => {
       b.onclick = () => {
-        const [kind, id] = b.dataset.cacpLink.split('|');
-        cacpLinkClick({ kind, id, label: b.textContent });
+        const parts = b.dataset.cacpLink.split('|');
+        cacpLinkClick({ kind: parts[0], id: parts[1], label: b.textContent });
+      };
+    });
+    body.querySelectorAll('[data-cacp-jump]').forEach(b => {
+      b.onclick = () => {
+        const i = Number(b.dataset.cacpJump);
+        if (!Number.isFinite(i)) return;
+        const list = cacpState.mode === 'review' ? cacpState.reviewQueue : cacpState.queue;
+        if (i < 0 || i >= list.length) return;
+        cacpState.idx = i;
+        renderCacp();
+      };
+    });
+    body.querySelectorAll('[data-cacp-action]').forEach(b => {
+      b.onclick = () => {
+        const action = b.dataset.cacpAction;
+        if (action === 'study') {
+          startCacpStudy({ fromHome: true });
+          if (!optsSkip()) setRoute('cacp', null, false);
+          renderCacp();
+        } else if (action === 'exam') {
+          showCacpExamReady();
+          renderCacp();
+        } else if (action === 'begin-exam') {
+          beginCacpExam();
+          renderCacp();
+        } else if (action === 'review') {
+          beginCacpReview();
+          renderCacp();
+        }
       };
     });
   }
@@ -4762,13 +5676,32 @@
 
   document.getElementById('btn-cacp').onclick = () => openCacp({});
   document.getElementById('cacp-shuffle').onclick = () => {
+    if (cacpState.mode !== 'quiz') return;
     cacpState.shuffle = !cacpState.shuffle;
+    cacpState.focusQId = null;
     buildCacpQueue({});
+    setRoute('cacp', null, false);
     renderCacp();
     toast(cacpState.shuffle ? 'Shuffle on' : 'Shuffle off (handbook order)');
   };
   document.getElementById('cacp-missed').onclick = () => openCacp({ missedOnly: true });
+  document.getElementById('cacp-prev').onclick = () => {
+    if (cacpState.mode !== 'exam' && cacpState.mode !== 'review') return;
+    if (cacpState.idx <= 0) return;
+    cacpState.idx--;
+    renderCacp();
+  };
+  document.getElementById('cacp-bookmark').onclick = () => {
+    if (cacpState.mode !== 'exam') return;
+    const q = cacpState.queue[cacpState.idx];
+    if (!q) return;
+    if (cacpState.bookmarks[q.id]) delete cacpState.bookmarks[q.id];
+    else cacpState.bookmarks[q.id] = true;
+    renderCacp();
+  };
+  document.getElementById('cacp-finish').onclick = () => requestCacpExamSubmit();
   function submitCacpAnswer() {
+    if (cacpState.mode !== 'quiz') return;
     if (cacpState.answered || cacpState.revealed) return;
     const q = cacpState.queue[cacpState.idx];
     if (!q || !cacpState.pickedId) return;
@@ -4785,6 +5718,7 @@
     renderCacp();
   }
   function revealCacpExplanation() {
+    if (cacpState.mode !== 'quiz') return;
     if (cacpState.answered || cacpState.revealed) return;
     if (!cacpState.queue[cacpState.idx]) return;
     cacpState.revealed = true;
@@ -4793,7 +5727,25 @@
   }
   document.getElementById('cacp-reveal').onclick = () => revealCacpExplanation();
   document.getElementById('cacp-next').onclick = () => {
-    if (cacpState.mode === 'results') { openCacp({}); return; }
+    if (cacpState.mode === 'results' || cacpState.mode === 'exam-ready') {
+      enterCacpHome();
+      renderCacp();
+      return;
+    }
+    if (cacpState.mode === 'review') {
+      const qn = (cacpState.reviewQueue || []).length;
+      if (cacpState.idx < qn - 1) cacpState.idx++;
+      else cacpState.mode = 'results';
+      renderCacp();
+      return;
+    }
+    if (cacpState.mode === 'exam') {
+      if (cacpState.idx < cacpState.queue.length - 1) {
+        cacpState.idx++;
+        renderCacp();
+      }
+      return;
+    }
     if (!cacpState.queue.length) { closeModal('cacp'); return; }
     if (!cacpState.answered && !cacpState.revealed) {
       submitCacpAnswer();
@@ -4819,8 +5771,6 @@
     const url = `${location.origin}${location.pathname}${location.search}${hash}`;
     navigator.clipboard.writeText(url).then(() => toast('Link copied'), () => prompt('Copy:', url));
   };
-
-
 
   /* —— Learn path (Core Clinic Path) —— */
   const LEARN_STORAGE_KEY = "anticoag-learn-v1";
@@ -5689,6 +6639,7 @@
   function yieldLearnShell() {
     const bd = document.getElementById("bd-learn");
     if (!bd || bd.hidden) return;
+    exitModalFullscreen("learn");
     bd.classList.remove("open");
     bd.hidden = true;
     if (bd._trap) bd.removeEventListener("keydown", bd._trap);
@@ -6186,7 +7137,7 @@
     if (bd && bd.hidden) openModal("learn");
     else if (bd) {
       const modal = bd.querySelector(".modal");
-      if (modal) modal.scrollTop = 0;
+      resetModalScroll(modal);
     }
   }
 

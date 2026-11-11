@@ -12,6 +12,13 @@ Newest first. Record site changes here. The site does not render this file.
 - Clinical and literature review fixes were applied after that pass: 23 items, 33 exact wording pairs, no answer-key changes. Keyed-choice length was recomputed afterward: uniquely longest in 43 of 219 items, mean gap about -5 characters, and no keyed choice more than 25 characters longer than the next choice.
 - The same bank is in the Capacitor copy. Educational only. AC Forum does not endorse this material. These are not real exam questions. reviewedBy unchanged.
 
+## 2026-11-10 — Full screen for Teach and CACP
+
+- Teach pages, the Learn path, treatment pathways, and CACP exam prep share one full-screen control in the window header. Study practice and the full practice exam use that same CACP window. The control expands the window to the viewport and toggles back. It is a button with a visible label, an aria-label, and keyboard support. Esc leaves full screen first. A second Esc closes the window, which is the same close the window already used.
+- The layout is a CSS full-viewport mode. Where the browser allows it, the Fullscreen API is requested as well. If that API is missing or refuses the request, including on iOS Safari, the viewport mode stays.
+- In full screen, prose stays within a readable line length. Charts and tables in the Teach windows use the extra width, and the header and footer stay on screen. The exam clock, answers, bookmarks, and progress are left as they are. Print hides the control, leaves full screen, and keeps the existing print layout.
+- Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-10 — OCEANIC-STROKE notes the FDA approval of asundexian
 
 - OCEANIC-STROKE caveats now say the FDA approved asundexian (Sunharbo) 50 mg with antiplatelet therapy on Nov 9, 2026, for adults after a recent mild-to-moderate non-cardioembolic ischemic stroke (NIHSS ≤15) or high-risk TIA, and that it is not approved for AF. The card names the FDA press release. No DailyMed label is posted yet, so the card does not add label wording or bleeding-subgroup wording.

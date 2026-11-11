@@ -2,6 +2,11 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-11 — Phone-width layout
+
+- Viewports 640px and narrower reflow the same library in place: 16px sheet text, controls at least 44px tall, full-width sheets, and data tables stacked so the page does not scroll sideways. The timeline pans inside its board. The full-screen control on Teach, Learn, treatment pathways, and CACP exam prep still fills the viewport. At 641px and wider the layout is unchanged.
+- The same layout is in the Capacitor copy. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-10 — CACP practice bank raised to case-based difficulty
 
 - All 219 unofficial practice items were rewritten in place. Ids, domains, handbook objective ids, and related links are unchanged, so the 160-question quotas (I 40, II 56, III 16, IV 40, V 8) and objective coverage still hold.

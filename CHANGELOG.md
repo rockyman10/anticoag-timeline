@@ -4,7 +4,7 @@ Newest first. Record site changes here. The site does not render this file.
 
 ## 2026-11-12 — PEPPER added to the EPCAT II open question
 
-- The EPCAT II open question no longer says the question of aspirin from surgery onward “stays open.” It now includes PEPPER (Pellegrini et al., N Engl J Med 2026; doi:10.1056/NEJMoa2602435): after elective hip or knee arthroplasty, patients were randomized to aspirin 81 mg twice daily, warfarin (target INR 2.0), or rivaroxaban 10 mg daily for 30 days from surgery. The abstract concludes that aspirin prophylaxis was not noninferior to rivaroxaban or warfarin with respect to death or symptomatic VTE, and that warfarin and rivaroxaban were not noninferior to aspirin for safety.
+- The EPCAT II open question no longer says the question of aspirin from surgery onward “stays open.” It now includes PEPPER (Pellegrini et al., N Engl J Med 2026; doi:10.1056/NEJMoa2602435): patients undergoing elective hip or knee arthroplasty were randomized to aspirin 81 mg twice daily, warfarin (target INR 2.0), or rivaroxaban 10 mg daily for 30 days. The abstract concludes that aspirin prophylaxis was not noninferior to rivaroxaban or warfarin with respect to death or symptomatic VTE, and that warfarin and rivaroxaban were not noninferior to aspirin for safety.
 - The CRISTAL journal club has a matching PEPPER line. The VTE prophylaxis pathway now names PEPPER as later evidence beside EPCAT II and CRISTAL. There is no PEPPER card; only the PubMed abstract was read.
 - The same strings are in the Capacitor copies. Educational only. Wording stays DOAC. reviewedBy unchanged.
 

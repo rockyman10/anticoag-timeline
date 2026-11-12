@@ -21,7 +21,7 @@ window.ANTICOAG_PATHWAYS = [
   {
     id: "vte-prophylaxis",
     title: "VTE prophylaxis (medical and surgical)",
-    description: "Thromboprophylaxis outside cancer: acutely ill medical inpatients (MEDENOX and MAGELLAN), medically ill patients after discharge (MARINER), and prophylaxis after hip or knee arthroplasty (EPCAT II and CRISTAL, with PEPPER later testing aspirin from surgery onward against rivaroxaban and warfarin).",
+    description: "Thromboprophylaxis outside cancer: acutely ill medical inpatients (MEDENOX and MAGELLAN), medically ill patients after discharge (MARINER), and prophylaxis after hip or knee arthroplasty (EPCAT II and CRISTAL, with PEPPER later comparing aspirin with rivaroxaban and warfarin).",
     trialIds: ["medenox", "magellan", "mariner", "epcat-ii", "cristal"]
   },
   {

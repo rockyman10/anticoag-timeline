@@ -2,6 +2,13 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-13 — EPCAT III and PEPPER trial cards
+
+- New cards for EPCAT III (Shivakumar S, et al. N Engl J Med. 2026;395(19):1885-1895; doi:10.1056/NEJMoa2603649; PMID 42437501) and PEPPER (Pellegrini VD Jr, et al. N Engl J Med. 2026;395(19):1896-1910; doi:10.1056/NEJMoa2602435; PMID 43013818). Both are 2026, status Recent, indication VTE, placed after CRISTAL. Guidelines lists are empty; no guideline citing either trial was verified. Numbers are from the PubMed abstracts. The NEJM full text was not accessible.
+- EPCAT III found aspirin alone not inferior to rivaroxaban for 5 days followed by aspirin for symptomatic proximal DVT or PE within 90 days (0.48% vs 0.45%). PEPPER found aspirin was not noninferior to rivaroxaban or warfarin for death or symptomatic VTE through 6 months, and that warfarin and rivaroxaban were not noninferior to aspirin for safety. The PEPPER card does not state start timing or a lead-in; those details are not in the abstract.
+- The EPCAT II open question and the CRISTAL and EPCAT II journal clubs now name both trials. The VTE prophylaxis pathway adds both cards. The Open questions index lists each card’s open question and adds EPCAT III and PEPPER to the later-trial map.
+- The same strings are in the Capacitor copies. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-12 — PEPPER added to the EPCAT II open question
 
 - The EPCAT II open question no longer says the question of aspirin from surgery onward “stays open.” It now includes PEPPER (Pellegrini et al., N Engl J Med 2026; doi:10.1056/NEJMoa2602435): patients undergoing elective hip or knee arthroplasty were randomized to aspirin 81 mg twice daily, warfarin (target INR 2.0), or rivaroxaban 10 mg daily for 30 days. The abstract concludes that aspirin prophylaxis was not noninferior to rivaroxaban or warfarin with respect to death or symptomatic VTE, and that warfarin and rivaroxaban were not noninferior to aspirin for safety.

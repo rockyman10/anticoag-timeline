@@ -544,6 +544,14 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         [
           "cristal",
           0
+        ],
+        [
+          "epcat-iii",
+          0
+        ],
+        [
+          "pepper",
+          0
         ]
       ]
     },
@@ -637,6 +645,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "ELDERCARE-AF": "eldercare-af",
     "ENTRUST-AF PCI": "entrust-af-pci",
     "ENVISAGE-TAVI AF": "envisage-tavi-af",
+    "EPCAT III": "epcat-iii",
     "EPIC-CAD": "epic-cad",
     "FRAIL-AF": "frail-af",
     "HI-PEITHO": "hi-peitho",
@@ -648,6 +657,7 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "OPTIMAS": "optimas",
     "OPTION": "option",
     "PAUSE": "pause",
+    "PEPPER": "pepper",
     "PRAGUE-17": "prague-17",
     "PRESTIGE-AF": "prestige-af",
     "PREVAIL": "prevail",

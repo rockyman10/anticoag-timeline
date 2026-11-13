@@ -2,6 +2,13 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-13 — EPCAT III and PEPPER wording fixes
+
+- The PEPPER and EPCAT III open questions no longer name each other as taking up the question. Unused CRISTAL and PEPPER keys are off the Open questions later-trial map; EPCAT III stays, for the EPCAT II open question.
+- PEPPER caveats, limitations, and journal club no longer say the pairwise 6-month risks were the figures used for noninferiority. They now say the abstract does not say how those risks were estimated, and the journal club gives the confidence intervals next to the 0.69-point margin.
+- The EPCAT III takeaway now uses the abstract’s “bleeding events” wording, with major or CRNM bleeding still shown in parentheses. Both limitations fields drop the process note that only the PubMed abstract was read.
+- Numbers are unchanged. The same strings are in the Capacitor copies. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-13 — EPCAT III and PEPPER trial cards
 
 - New cards for EPCAT III (Shivakumar S, et al. N Engl J Med. 2026;395(19):1885-1895; doi:10.1056/NEJMoa2603649; PMID 42437501) and PEPPER (Pellegrini VD Jr, et al. N Engl J Med. 2026;395(19):1896-1910; doi:10.1056/NEJMoa2602435; PMID 43013818). Both are 2026, status Recent, indication VTE, placed after CRISTAL. Guidelines lists are empty; no guideline citing either trial was verified. Numbers are from the PubMed abstracts. The NEJM full text was not accessible.

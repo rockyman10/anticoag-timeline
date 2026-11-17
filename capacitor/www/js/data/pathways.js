@@ -21,8 +21,8 @@ window.ANTICOAG_PATHWAYS = [
   {
     id: "vte-prophylaxis",
     title: "VTE prophylaxis (medical and surgical)",
-    description: "Thromboprophylaxis outside cancer: acutely ill medical inpatients (MEDENOX and MAGELLAN), medically ill patients after discharge (MARINER), and prophylaxis after hip or knee arthroplasty (EPCAT II and CRISTAL).",
-    trialIds: ["medenox", "magellan", "mariner", "epcat-ii", "cristal"]
+    description: "Thromboprophylaxis outside cancer: acutely ill medical inpatients (MEDENOX and MAGELLAN), medically ill patients after discharge (MARINER), and prophylaxis after hip or knee arthroplasty (EPCAT II, CRISTAL, EPCAT III, and PEPPER).",
+    trialIds: ["medenox", "magellan", "mariner", "epcat-ii", "cristal", "epcat-iii", "pepper"]
   },
   {
     id: "af-pci",

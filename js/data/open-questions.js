@@ -544,6 +544,14 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         [
           "cristal",
           0
+        ],
+        [
+          "epcat-iii",
+          0
+        ],
+        [
+          "pepper",
+          0
         ]
       ]
     },
@@ -631,12 +639,12 @@ window.ANTICOAG_OPEN_QUESTIONS = {
     "Caravaggio": "caravaggio",
     "CHAMPION-AF": "champion-af",
     "COMPASS": "compass",
-    "CRISTAL": "cristal",
     "EINSTEIN-CHOICE": "einstein-choice",
     "ELAN": "elan",
     "ELDERCARE-AF": "eldercare-af",
     "ENTRUST-AF PCI": "entrust-af-pci",
     "ENVISAGE-TAVI AF": "envisage-tavi-af",
+    "EPCAT III": "epcat-iii",
     "EPIC-CAD": "epic-cad",
     "FRAIL-AF": "frail-af",
     "HI-PEITHO": "hi-peitho",

@@ -5362,7 +5362,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Multicenter, double-blind, randomized, controlled trial. Every patient received rivaroxaban until postoperative day 5 before randomization. Follow-up 90 days. The primary effectiveness outcome was symptomatic VTE. The primary safety outcome was major or clinically relevant nonmajor bleeding.",
     "strengths": "Double-blind. Large. DOAC comparator. Symptomatic end point.",
     "limitations": "Aspirin was studied only after a rivaroxaban lead-in to postoperative day 5, so the trial does not describe aspirin as the only prophylaxis drug after surgery. Low event rates in both groups.",
-    "journalClub": "The design comes before the result. Randomization happened on postoperative day 5, after every patient had received rivaroxaban. CRISTAL (JAMA 2022) randomized 31 Australian hospitals to aspirin or enoxaparin for 35 days after hip and 14 days after knee arthroplasty, counted below-knee DVT in its primary outcome, and found that aspirin did not meet noninferiority (symptomatic VTE 3.45% vs 1.82%).",
+    "journalClub": "The design comes before the result. Randomization happened on postoperative day 5, after every patient had received rivaroxaban. CRISTAL (JAMA 2022) randomized 31 Australian hospitals to aspirin or enoxaparin for 35 days after hip and 14 days after knee arthroplasty, counted below-knee DVT in its primary outcome, and found that aspirin did not meet noninferiority (symptomatic VTE 3.45% vs 1.82%). EPCAT III (N Engl J Med 2026) compared aspirin alone with rivaroxaban for 5 days followed by aspirin and found aspirin alone was not inferior for symptomatic proximal DVT or PE within 90 days. PEPPER (N Engl J Med 2026) found aspirin was not noninferior to rivaroxaban or warfarin for death or symptomatic VTE through 6 months.",
     "guidelines": [],
     "caveats": "Doses are shown only as the trial arms. The result describes aspirin after a rivaroxaban lead-in to postoperative day 5.",
     "practiceTakeaway": "In EPCAT II, after 5 days of rivaroxaban 10 mg following hip or knee arthroplasty, aspirin 81 mg was noninferior to continued rivaroxaban for symptomatic VTE within 90 days (0.64% vs 0.70%). Major bleeding was 0.47% versus 0.29%.",
@@ -5374,9 +5374,9 @@ window.ANTICOAG_TRIALS = [
     ],
     "questionsOpen": [
       {
-        "text": "Does aspirin perform as well when it is the prophylaxis drug from surgery onward, without a rivaroxaban lead-in? CRISTAL (JAMA 2022), across 31 Australian hospitals, compared aspirin with enoxaparin and found that aspirin did not meet noninferiority for symptomatic VTE within 90 days (3.45% vs 1.82%), with below-knee DVT included in the outcome. The trials differ in comparator, outcome definition, and design, so the question stays open.",
+        "text": "Does aspirin perform as well when it is the prophylaxis drug from surgery onward, without a rivaroxaban lead-in? EPCAT III (N Engl J Med 2026; doi:10.1056/NEJMoa2603649) compared aspirin alone with rivaroxaban for 5 days followed by aspirin and found aspirin alone was not inferior for symptomatic proximal DVT or PE within 90 days (0.48% vs 0.45%). PEPPER (N Engl J Med 2026; doi:10.1056/NEJMoa2602435) randomized patients undergoing elective hip or knee arthroplasty to aspirin 81 mg twice daily, warfarin (target INR 2.0), or rivaroxaban 10 mg daily for 30 days. The abstract concludes that aspirin prophylaxis after total hip or knee arthroplasty was not noninferior to rivaroxaban or warfarin with respect to death or symptomatic VTE, and that warfarin and rivaroxaban were not noninferior to aspirin for safety. CRISTAL (JAMA 2022), across 31 Australian hospitals, compared aspirin with enoxaparin and found that aspirin did not meet noninferiority for symptomatic VTE within 90 days (3.45% vs 1.82%), with below-knee DVT included in the outcome. The trials differ in comparator, outcome definition, and design.",
         "source": "EPCAT II",
-        "addressedBy": "CRISTAL"
+        "addressedBy": "EPCAT III"
       }
     ]
   },
@@ -5614,7 +5614,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "Cluster-randomized, crossover, registry-nested noninferiority trial in 31 Australian hospitals that each performed more than 250 hip or knee arthroplasties a year. Hospitals, not patients, were randomized, and 16 of 31 crossed over before the trial stopped. Enrollment stopped when an interim analysis met the stopping rule, at 9,711 of a planned 15,562 patients (62%). Analyses were by randomization group. Registered as ACTRN12618001879257.",
     "strengths": "Large, pragmatic, and embedded in a national joint registry. The outcome was symptomatic VTE rather than screening-detected clots.",
     "limitations": "Hospital-level allocation with uneven group sizes (5,675 vs 4,036). Stopped early at 62% of planned enrollment. Below-knee DVT made up most of the events, so the difference rests largely on distal clots.",
-    "journalClub": "EPCAT II found aspirin noninferior to rivaroxaban after a 5-day rivaroxaban lead-in. CRISTAL gave aspirin from surgery onward and found it inferior to enoxaparin. Discuss how the lead-in, the comparator, and counting below-knee DVT could each explain the different answers.",
+    "journalClub": "EPCAT II found aspirin noninferior to rivaroxaban after a 5-day rivaroxaban lead-in. CRISTAL gave aspirin from surgery onward and found it inferior to enoxaparin. EPCAT III (N Engl J Med 2026; doi:10.1056/NEJMoa2603649) compared aspirin alone with rivaroxaban for 5 days followed by aspirin and found aspirin alone was not inferior for symptomatic proximal DVT or PE within 90 days. PEPPER (N Engl J Med 2026; doi:10.1056/NEJMoa2602435) randomized patients to aspirin 81 mg twice daily, warfarin, or rivaroxaban 10 mg daily for 30 days. Aspirin was not noninferior to rivaroxaban or warfarin for death or symptomatic VTE through 6 months, and warfarin and rivaroxaban were not noninferior to aspirin for safety. Discuss how the lead-in, the comparator, outcome definition, and design differ across these trials.",
     "guidelines": [],
     "caveats": "Doses are shown only as the trial arms. Allocation was by hospital, not by patient.",
     "practiceTakeaway": "In CRISTAL, after hip or knee arthroplasty, aspirin from surgery onward had more symptomatic VTE within 90 days than enoxaparin (3.45% vs 1.82%) and did not meet noninferiority.",
@@ -5628,6 +5628,94 @@ window.ANTICOAG_TRIALS = [
       {
         "text": "Whether the difference matters once below-knee DVT is set aside, and whether aspirin is cost-effective despite more events, is not settled by the trial. The authors point to a cost-effectiveness analysis.",
         "source": "CRISTAL"
+      }
+    ]
+  },
+  {
+    "id": "epcat-iii",
+    "acronym": "EPCAT III",
+    "year": 2026,
+    "yearLabel": "2026",
+    "indication": "VTE",
+    "status": "recent",
+    "title": "Rivaroxaban Then Aspirin vs. Aspirin Alone after Total Hip or Knee Arthroplasty",
+    "population": "5,429 patients after total hip or total knee arthroplasty underwent randomization.",
+    "intervention": "Aspirin 81 mg once daily, including for the first 5 days after arthroplasty, then 81 mg daily for 9 additional days after knee arthroplasty or 30 additional days after hip arthroplasty, as given in the trial.",
+    "comparator": "Rivaroxaban 10 mg once daily for the first 5 days, then aspirin 81 mg daily for the same additional periods, as given in the trial.",
+    "primaryResult": "Symptomatic VTE, consisting of proximal DVT or pulmonary embolism, within 90 days occurred in 13 of 2,718 (0.48%) with aspirin alone vs 12 of 2,647 (0.45%) with rivaroxaban then aspirin (risk difference 0.02 percentage points; 95% CI −0.34 to 0.39; P<0.001 for noninferiority). The noninferiority margin was 0.7 percentage points.",
+    "safety": "Major bleeding or clinically relevant nonmajor bleeding occurred in 45 of 2,718 (1.66%) with aspirin alone vs 54 of 2,647 (2.04%) with rivaroxaban then aspirin (risk difference −0.38%; 95% CI −1.11 to 0.34).",
+    "takeaway": "After total hip or total knee arthroplasty, aspirin 81 mg daily alone was not inferior to rivaroxaban 10 mg daily for 5 days followed by aspirin for symptomatic proximal DVT or PE within 90 days (0.48% vs 0.45%). The abstract reports no clinically relevant difference in bleeding events (major or CRNM bleeding 1.66% vs 2.04%).",
+    "cite": "Shivakumar S, et al. N Engl J Med. 2026;395(19):1885-1895.",
+    "doi": "10.1056/NEJMoa2603649",
+    "url": "https://doi.org/10.1056/NEJMoa2603649",
+    "pmid": "42437501",
+    "expectedResults": null,
+    "background": "EPCAT II found aspirin after an initial short course of rivaroxaban noninferior to continued rivaroxaban for VTE prevention after hip or knee arthroplasty, but uncertainty remained about the use of aspirin alone.",
+    "designNotes": "Multicenter, double-blind, randomized, controlled noninferiority trial. Patients were assigned to once-daily thromboprophylaxis with either aspirin 81 mg or oral rivaroxaban 10 mg for the first 5 days after total hip or total knee arthroplasty; all patients then received aspirin 81 mg daily for 9 additional days after knee arthroplasty and for 30 additional days after hip arthroplasty. Patients were followed for 90 days. The primary effectiveness outcome was symptomatic VTE, consisting of proximal DVT or pulmonary embolism. The primary safety outcome was bleeding complications. The noninferiority margin for aspirin alone as compared with rivaroxaban-aspirin was 0.7 percentage points. Funded by the Canadian Institutes of Health Research. ClinicalTrials.gov NCT04075240.",
+    "strengths": "Multicenter and double-blind. The effectiveness outcome was symptomatic proximal DVT or PE rather than screening-detected or below-knee DVT. The noninferiority margin was 0.7 percentage points, and the 95% CI upper bound was 0.39.",
+    "limitations": "5,429 patients underwent randomization, and the reported analysis uses 2,718 and 2,647 patients; the abstract does not explain the difference. Hip versus knee results, and major bleeding separately from clinically relevant nonmajor bleeding, are not in the abstract.",
+    "journalClub": "EPCAT III compared aspirin alone with rivaroxaban for 5 days followed by aspirin, and found aspirin alone not inferior for symptomatic proximal DVT or PE within 90 days (0.48% vs 0.45%; risk difference 0.02 percentage points; 95% CI −0.34 to 0.39). Major or CRNM bleeding was 1.66% vs 2.04%. PEPPER, in the same issue, found aspirin was not noninferior to rivaroxaban or warfarin for death or symptomatic VTE through 6 months, and that warfarin and rivaroxaban were not noninferior to aspirin for safety. CRISTAL found aspirin not noninferior to enoxaparin when below-knee DVT was counted. Discuss how the outcome definition, comparator, and follow-up could explain the different answers.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms. The primary effectiveness outcome is proximal DVT or pulmonary embolism, not below-knee DVT. The abstract does not report hip versus knee results.",
+    "practiceTakeaway": "In EPCAT III, after total hip or total knee arthroplasty, aspirin 81 mg daily alone was not inferior to rivaroxaban 10 mg daily for 5 days followed by aspirin for symptomatic proximal DVT or PE within 90 days (0.48% vs 0.45%; risk difference 0.02 percentage points; 95% CI −0.34 to 0.39; P<0.001 for noninferiority). Major or CRNM bleeding was 1.66% vs 2.04% (risk difference −0.38%; 95% CI −1.11 to 0.34).",
+    "questionsAnswered": [
+      {
+        "text": "After total hip or total knee arthroplasty, was aspirin 81 mg daily alone noninferior to rivaroxaban 10 mg daily for 5 days followed by aspirin for symptomatic proximal DVT or PE within 90 days? Yes. The rates were 0.48% vs 0.45% (risk difference 0.02 percentage points; 95% CI −0.34 to 0.39; P<0.001 for noninferiority).",
+        "source": "EPCAT III"
+      },
+      {
+        "text": "Was there a clinically relevant difference in bleeding? Major or CRNM bleeding was 1.66% with aspirin alone vs 2.04% with rivaroxaban then aspirin (risk difference −0.38%; 95% CI −1.11 to 0.34). The abstract describes no clinically relevant difference in bleeding events.",
+        "source": "EPCAT III"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "How this result should be read beside PEPPER, which found aspirin was not noninferior to rivaroxaban or warfarin for death or symptomatic VTE through 6 months, and beside CRISTAL, which found aspirin was not noninferior to enoxaparin when below-knee DVT was counted, depends on the different outcome definitions, comparators, and follow-up. Hip versus knee results, and major bleeding separately from clinically relevant nonmajor bleeding, are not in the abstract.",
+        "source": "EPCAT III"
+      }
+    ]
+  },
+  {
+    "id": "pepper",
+    "acronym": "PEPPER",
+    "year": 2026,
+    "yearLabel": "2026",
+    "indication": "VTE",
+    "status": "recent",
+    "title": "Prevention of Venous Thromboembolism after Total Hip or Knee Replacement",
+    "population": "18,883 patients undergoing elective hip or knee arthroplasty were randomized; 15,317 (7,214 hip and 8,103 knee) were included in the primary per-protocol analysis.",
+    "intervention": "Aspirin 81 mg twice daily for 30 days, as given in the trial.",
+    "comparator": "Warfarin (target INR 2.0) or rivaroxaban 10 mg daily for 30 days, as given in the trial.",
+    "primaryResult": "In the primary per-protocol analysis, death from any cause or symptomatic VTE through 6 months occurred in 77 of 6,090 (1.26%) with aspirin, 52 of 4,231 (1.23%) with warfarin, and 47 of 4,996 (0.94%) with rivaroxaban. In pairwise comparisons, 6-month risks were 1.24% vs 0.94% for aspirin versus rivaroxaban (difference 0.30 percentage points; 95% CI −0.20 to 0.81); 1.24% vs 1.01% for aspirin versus warfarin (difference 0.23 percentage points; 95% CI −0.34 to 0.81); and 1.13% vs 1.10% for warfarin versus rivaroxaban (difference 0.03 percentage points; 95% CI −0.57 to 0.63). The noninferiority margin for the risk difference was 0.69 percentage points. The abstract concludes that aspirin was not noninferior to rivaroxaban or warfarin with respect to death or symptomatic VTE. Intention-to-treat analyses yielded similar results; the abstract does not print those counts.",
+    "safety": "A primary safety outcome event (bleeding, reoperation for wound problems, or myocardial infarction) occurred in 177 (2.91%) with aspirin, 142 (3.36%) with warfarin, and 174 (3.48%) with rivaroxaban in the same per-protocol groups. In pairwise comparisons, 6-month risks were 3.70% vs 3.02% for rivaroxaban versus aspirin (difference 0.68 percentage points; 95% CI −0.04 to 1.41); 3.65% vs 2.88% for warfarin versus aspirin (difference 0.77 percentage points; 95% CI −0.04 to 1.58); and 3.59% vs 3.61% for rivaroxaban versus warfarin (difference −0.02 percentage points; 95% CI −0.89 to 0.85). The abstract concludes that warfarin and rivaroxaban were not noninferior to aspirin for safety.",
+    "takeaway": "After elective hip or knee arthroplasty, aspirin 81 mg twice daily for 30 days was not noninferior to rivaroxaban 10 mg daily or to warfarin (target INR 2.0) for death or symptomatic VTE through 6 months. Warfarin and rivaroxaban were not noninferior to aspirin for the composite safety outcome.",
+    "cite": "Pellegrini VD Jr, et al. N Engl J Med. 2026;395(19):1896-1910.",
+    "doi": "10.1056/NEJMoa2602435",
+    "url": "https://doi.org/10.1056/NEJMoa2602435",
+    "pmid": "43013818",
+    "expectedResults": null,
+    "background": "Studies comparing aspirin with anticoagulants for VTE prophylaxis after total hip or knee arthroplasty have had conflicting results. EPCAT II found aspirin noninferior to rivaroxaban after a 5-day rivaroxaban lead-in. CRISTAL found aspirin was not noninferior to enoxaparin when below-knee DVT was counted.",
+    "designNotes": "Comparative-effectiveness noninferiority trial. Patients undergoing elective hip or knee arthroplasty were randomly assigned to aspirin 81 mg twice daily, warfarin (target INR 2.0), or rivaroxaban 10 mg daily for 30 days. The composite primary effectiveness outcome (death from any cause or symptomatic VTE) and the primary safety outcome (bleeding, reoperation for wound problems, or myocardial infarction) were evaluated through 6 months in a blinded fashion. The noninferiority margin for the risk difference was 0.69 percentage points. The primary analysis was per-protocol. Funded by the Patient-Centered Outcomes Research Institute. ClinicalTrials.gov NCT02810704.",
+    "strengths": "Large randomized three-arm trial (18,883 randomized; 15,317 in the primary analysis). Outcomes were evaluated in a blinded fashion through 6 months. The effectiveness outcome was death or symptomatic VTE rather than screening-detected clots. Intention-to-treat analyses were reported as similar to the per-protocol results.",
+    "limitations": "The primary analysis used the per-protocol population (15,317 of 18,883). The abstract does not print intention-to-treat counts, hip versus knee results, or the components of the effectiveness or safety composites. It also does not state when prophylaxis started relative to surgery, or whether there was a lead-in. The pairwise 6-month risks differ slightly from the per-protocol event percentages, and the abstract does not say how they were estimated.",
+    "journalClub": "PEPPER randomized patients undergoing elective hip or knee arthroplasty to aspirin 81 mg twice daily, warfarin (target INR 2.0), or rivaroxaban 10 mg daily for 30 days. Aspirin was not noninferior to rivaroxaban or warfarin for death or symptomatic VTE through 6 months (pairwise 6-month risks 1.24% vs 0.94% and 1.24% vs 1.01%; 95% CIs for the differences −0.20 to 0.81 and −0.34 to 0.81, against a 0.69-point margin), and warfarin and rivaroxaban were not noninferior to aspirin for safety. EPCAT III, in the same issue, found aspirin alone not inferior to rivaroxaban for 5 days then aspirin for symptomatic proximal DVT or PE within 90 days. CRISTAL found aspirin not noninferior to enoxaparin when below-knee DVT was counted. Discuss how the outcome definition, comparator, follow-up, and what is known about start timing differ across these trials. The PEPPER abstract does not state when prophylaxis started relative to surgery.",
+    "guidelines": [],
+    "caveats": "Doses are shown only as the trial arms. The abstract does not state when prophylaxis started relative to surgery, or whether there was a lead-in. The pairwise 6-month risks differ slightly from the per-protocol event percentages, and the abstract does not say how they were estimated.",
+    "practiceTakeaway": "In PEPPER, in patients undergoing elective hip or knee arthroplasty, aspirin 81 mg twice daily for 30 days was not noninferior to rivaroxaban 10 mg daily or to warfarin (target INR 2.0) for death or symptomatic VTE through 6 months. Pairwise 6-month risks were 1.24% vs 0.94% against rivaroxaban (difference 0.30 percentage points; 95% CI −0.20 to 0.81) and 1.24% vs 1.01% against warfarin (difference 0.23 percentage points; 95% CI −0.34 to 0.81), against a 0.69-point noninferiority margin. Warfarin and rivaroxaban were not noninferior to aspirin for a safety composite of bleeding, reoperation for wound problems, or myocardial infarction.",
+    "questionsAnswered": [
+      {
+        "text": "In patients undergoing elective hip or knee arthroplasty, was aspirin 81 mg twice daily for 30 days noninferior to rivaroxaban 10 mg daily or to warfarin (target INR 2.0) for death or symptomatic VTE through 6 months? No. The abstract concludes that aspirin was not noninferior to either comparator.",
+        "source": "PEPPER"
+      },
+      {
+        "text": "Were warfarin and rivaroxaban noninferior to aspirin for safety? No. The abstract concludes that they were not noninferior to aspirin for the composite of bleeding, reoperation for wound problems, or myocardial infarction.",
+        "source": "PEPPER"
+      }
+    ],
+    "questionsOpen": [
+      {
+        "text": "The abstract does not state when prophylaxis started relative to surgery, or whether there was a lead-in, so start timing remains unverified. EPCAT III, published in the same issue, compared aspirin alone with rivaroxaban for 5 days followed by aspirin. Hip versus knee results and the components of the effectiveness and safety composites are not in the abstract.",
+        "source": "PEPPER"
       }
     ]
   },

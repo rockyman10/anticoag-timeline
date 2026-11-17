@@ -2,6 +2,11 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-17 — ASAP-TOO wording
+
+- The exploratory disabling or fatal stroke sentence now names the arms and says the difference was nominal. The limitations line and the open question attribute the early-bleeding conclusion to the abstract. The takeaway says the abstract reports increased early bleeding. No figure changed.
+- The same strings are in the Capacitor copy. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-17 — ASAP-TOO trial card
 
 - New card: ASAP-TOO (Reddy VY, et al. J Am Coll Cardiol. Published online October 31, 2026. doi:10.1016/j.jacc.2026.10.007. PMID 43018511). Watchman left atrial appendage closure versus single antiplatelet therapy or no therapy in AF considered unsuitable for OAC, with a CHA₂DS₂-VASc score of 2 or more. Year 2026, status Recent, indication LAAO. The card sits with the other LAAO cards.

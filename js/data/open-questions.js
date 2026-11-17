@@ -426,6 +426,14 @@ window.ANTICOAG_OPEN_QUESTIONS = {
         [
           "closure-af",
           1
+        ],
+        [
+          "asap-too",
+          0
+        ],
+        [
+          "asap-too",
+          1
         ]
       ]
     },

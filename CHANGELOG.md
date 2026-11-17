@@ -2,6 +2,14 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-17 — ASAP-TOO trial card
+
+- New card: ASAP-TOO (Reddy VY, et al. J Am Coll Cardiol. Published online October 31, 2026. doi:10.1016/j.jacc.2026.10.007. PMID 43018511). Watchman left atrial appendage closure versus single antiplatelet therapy or no therapy in AF considered unsuitable for OAC, with a CHA₂DS₂-VASc score of 2 or more. Year 2026, status Recent, indication LAAO. The card sits with the other LAAO cards.
+- Numbers are the ones in the PubMed abstract (PMID 43018511). 481 of a planned 888 were randomized (320 closure, 161 control) after enrollment stopped early for slow accrual. The primary safety endpoint was 1.0% of implant-attempted patients and met the prespecified performance goal. Ischemic stroke or systemic embolism at up to 5 years was 7.8% versus 11.4% (HR 0.73; 95% CI 0.35–1.52; P = 0.39), from 31 of 101 planned events. Major bleeding was 22.1% versus 15.7% (HR 1.64; 95% CI 0.96–2.81; P = 0.067), concentrated in the first 3 months. Withdrawal was 7.8% with closure and 24.2% with control treatment. The trial was sponsored by Boston Scientific.
+- The abstract reports the effectiveness hazard ratio and P value and calls the trial underpowered. It does not say the effectiveness endpoint could not be formally tested, and it does not say the trial was open-label. Those phrases are not on the card. Guidelines is empty. No guideline that cites the trial was verified, so the Guidelines heading stays hidden.
+- The LAAO playlist and the LAAO-versus-OAC framework link the card. Both open questions are on the left atrial appendage occlusion theme of the Open questions index. That index is maintained by hand. The off-repo generator is not in this repository, so a regeneration would drop the entries unless the bundle is updated separately. The question wording is read from the trial card.
+- The same strings are in the Capacitor copies. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-13 — EPCAT III and PEPPER wording fixes
 
 - The PEPPER and EPCAT III open questions no longer name each other as taking up the question. Unused CRISTAL and PEPPER keys are off the Open questions later-trial map; EPCAT III stays, for the EPCAT II open question.

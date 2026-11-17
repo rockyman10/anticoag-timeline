@@ -200,8 +200,8 @@ window.ANTICOAG_FRAMEWORKS = [
   {
     id: "laao-vs-oac",
     question: "When is left atrial appendage occlusion reasonable versus long-term OAC?",
-    reasoning: "PROTECT-AF / PREVAIL established percutaneous LAAO as an alternative stroke-prevention strategy with procedure risk traded against long-term bleeding on OAC. PRAGUE-17, LAAOS III (surgical), OPTION (post-ablation), and CHAMPION-AF refine who benefits. LAAO is not “set and forget”—periprocedural antithrombotic regimens and device-related thrombus surveillance matter. Shared decision when OAC is contraindicated, poorly tolerated, or patient priorities favor procedural risk over indefinite drug therapy.",
-    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af"],
+    reasoning: "PROTECT-AF / PREVAIL established percutaneous LAAO as an alternative stroke-prevention strategy with procedure risk traded against long-term bleeding on OAC. PRAGUE-17, LAAOS III (surgical), OPTION (post-ablation), and CHAMPION-AF refine who benefits. ASAP-TOO tested Watchman closure against single antiplatelet therapy or no therapy in patients unsuitable for OAC. Enrollment stopped early, the safety performance goal was met, and the ischemic stroke or systemic embolism estimate was imprecise. LAAO is not “set and forget”—periprocedural antithrombotic regimens and device-related thrombus surveillance matter. Shared decision when OAC is contraindicated, poorly tolerated, or patient priorities favor procedural risk over indefinite drug therapy.",
+    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af", "asap-too"],
     appliesTo: [
       "NVAF with stroke risk where long-term OAC is contraindicated, refused, or repeatedly interrupted for bleeding",
       "Selected post-ablation discussions (OPTION-type) when ongoing OAC vs LAAO is in equipoise"
@@ -220,7 +220,8 @@ window.ANTICOAG_FRAMEWORKS = [
       { kind: "trial", id: "prague-17", label: "Trial: PRAGUE-17" },
       { kind: "trial", id: "laaos-iii", label: "Trial: LAAOS III" },
       { kind: "trial", id: "option", label: "Trial: OPTION" },
-      { kind: "trial", id: "champion-af", label: "Trial: CHAMPION-AF" }
+      { kind: "trial", id: "champion-af", label: "Trial: CHAMPION-AF" },
+      { kind: "trial", id: "asap-too", label: "Trial: ASAP-TOO" }
     ]
   },
   {

@@ -33,8 +33,8 @@ window.ANTICOAG_PATHWAYS = [
   {
     id: "laao",
     title: "LAAO vs OAC",
-    description: "Percutaneous and surgical left atrial appendage strategies versus anticoagulation, plus Amulet versus Watchman (AMULET IDE), which is a device comparison rather than a DOAC comparison.",
-    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af", "closure-af", "amulet-ide"]
+    description: "Percutaneous and surgical left atrial appendage strategies versus anticoagulation, ASAP-TOO (closure versus single antiplatelet therapy or no therapy when OAC is unsuitable), plus Amulet versus Watchman (AMULET IDE), which is a device comparison rather than a DOAC comparison.",
+    trialIds: ["protect-af", "prevail", "prague-17", "laaos-iii", "option", "champion-af", "closure-af", "asap-too", "amulet-ide"]
   },
   {
     id: "pe-reperfusion",

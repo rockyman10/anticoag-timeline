@@ -4983,7 +4983,7 @@ window.ANTICOAG_TRIALS = [
     "expectedResults": null,
     "background": "After OCEANIC-AF failed, asundexian was tested as antiplatelet add-on after noncardioembolic stroke/TIA.",
     "designNotes": "Large randomized trial (N≈12,327) of asundexian 50 mg daily vs placebo on planned antiplatelet therapy. AF excluded.",
-    "strengths": "First positive phase 3 FXIa hard-outcome win (ischemic stroke HR 0.74) without major bleeding increase.",
+    "strengths": "First positive phase 3 FXIa hard-outcome win (ischemic stroke HR 0.74) without a significant overall increase in major bleeding.",
     "limitations": "Not an AF trial. The FDA approval (Nov 9, 2026) covers stroke-risk reduction after a recent non-cardioembolic ischemic stroke or high-risk TIA, not AF. Early hierarchical secondary nuance noted in reports.",
     "journalClub": "OCEANIC-STROKE shows FXIa can work. But indication matters (stroke add-on is not AF replacement).",
     "guidelines": [],
@@ -4995,7 +4995,7 @@ window.ANTICOAG_TRIALS = [
         "source": "OCEANIC-STROKE"
       },
       {
-        "text": "Did it add major bleeding? Major bleeding was not significantly increased.",
+        "text": "Did it add major bleeding? Not significantly overall. The U.S. label reports higher bleeding in the first 90 days, in patients older than 75, in high-risk TIA, and for GI bleeding (see Safety).",
         "source": "OCEANIC-STROKE"
       }
     ],

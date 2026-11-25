@@ -2,6 +2,10 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-25 — OCEANIC-STROKE safety cites the SUNHARBO label
+
+- OCEANIC-STROKE safety keeps ISTH major bleeding 1.9% vs 1.7% and now says no significant overall increase, then adds the U.S. SUNHARBO label figures for 90-day ISTH major bleeding, age older than 75, high-risk TIA, and GI bleeding (DailyMed setid f48aee87-69a8-45a6-afa5-0917807efb70, effective 2026-11-09, NDA221291), while strengths and the answered bleeding question now say there was no significant overall increase and the question points to the label figures in Safety. The same strings are in the Capacitor copy. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-25 — EPCAT II open question
 
 - The EPCAT II open question now notes that the PEPPER abstract does not state when prophylaxis started relative to surgery or whether there was a lead-in. addressedBy stays EPCAT III. The same sentence is in the Capacitor copy. Educational only. Wording stays DOAC. reviewedBy unchanged.

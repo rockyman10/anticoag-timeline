@@ -4968,11 +4968,18 @@ window.ANTICOAG_TRIALS = [
     "intervention": "Asundexian 50 mg daily + planned antiplatelet therapy.",
     "comparator": "Placebo + antiplatelet.",
     "primaryResult": "Ischemic stroke 6.2% vs 8.4%. HR 0.74 (95% CI 0.65–0.84). P<0.001.",
-    "safety": "ISTH major bleeding 1.9% vs 1.7%. No significant increase.",
+    "safety": "ISTH major bleeding 1.9% vs 1.7%. No significant overall increase. The U.S. label reports higher ISTH major bleeding within 90 days of starting (4.5 vs 3.1 per 100 person-years; HR 1.46, 95% CI 0.99–2.16), in patients older than 75 (2.6 vs 1.7) and in high-risk TIA (2.9 vs 1.0), and more GI bleeding (2.7 vs 2.1 per 100 patient-years; HR 1.3, 95% CI 1.0–1.6).",
     "takeaway": "First positive phase 3 FXIa hard-outcome win. As add-on after noncardioembolic stroke.",
-    "cite": "Sharma M, et al. N Engl J Med. 2026;394:1467-1479.",
+    "cite": "Sharma M, et al. N Engl J Med. 2026;394:1467-1479. SUNHARBO (asundexian). DailyMed setid f48aee87-69a8-45a6-afa5-0917807efb70. Effective 2026-11-09. NDA221291. https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f48aee87-69a8-45a6-afa5-0917807efb70",
     "doi": "10.1056/NEJMoa2513880",
     "url": "https://doi.org/10.1056/NEJMoa2513880",
+    "sources": [
+      {
+        "label": "SUNHARBO (asundexian) U.S. prescribing information",
+        "citation": "SUNHARBO (asundexian). DailyMed setid f48aee87-69a8-45a6-afa5-0917807efb70. Effective 2026-11-09. NDA221291.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f48aee87-69a8-45a6-afa5-0917807efb70"
+      }
+    ],
     "expectedResults": null,
     "background": "After OCEANIC-AF failed, asundexian was tested as antiplatelet add-on after noncardioembolic stroke/TIA.",
     "designNotes": "Large randomized trial (N≈12,327) of asundexian 50 mg daily vs placebo on planned antiplatelet therapy. AF excluded.",

@@ -2,6 +2,12 @@
 
 Newest first. Record site changes here. The site does not render this file.
 
+## 2026-11-28 — Trial snapshot Deeper detail pilot and five-card corrections
+
+- ARISTOTLE, RE-LY, ROCKET AF, ENGAGE AF-TIMI 48 and AUGUSTUS now have a collapsible Deeper detail section in the Trial snapshot (baseline, other outcomes, subgroups, NNT, trial dosing vs the current U.S. label, TTR, conduct, funding, limitations), with each number tied to a page or table source note. scripts/verify-detail.js was added, and "sourceNotes" was added to TRIAL_ATTRIBUTED in scripts/verify-integrity.js.
+- Existing-card wording was also corrected from the same papers and labels, after an AC Lit Inspector FIX: AUGUSTUS intervention, safety and journal club now use the full paper (doses and absolute ischemic rates). RE-LY keeps the 2009 primary rates and adds the current U.S. label Table 11 figures once, in 110 mg / 150 mg / warfarin order (DailyMed setid ba74e3cd-b06f-4145-b284-5fd6b84ff3c9, v48, §14.1). ROCKET AF limitations no longer say the per-protocol primary "drew scrutiny" and now cite the intention-to-treat P=0.12 and the paper's TTR comparison (55% vs 64 to 68%). ARISTOTLE caveats replace the unsourced under-dosing line with the trial's 2.5 mg use (428 patients, 4.7%). ENGAGE caveats add the SAVAYSA boxed warning on reduced efficacy in NVAF with CrCl above 95 mL/min.
+- The same strings are in the Capacitor copies. Educational only. Wording stays DOAC. reviewedBy unchanged.
+
 ## 2026-11-25 — OCEANIC-STROKE safety cites the SUNHARBO label
 
 - OCEANIC-STROKE safety keeps ISTH major bleeding 1.9% vs 1.7% and now says no significant overall increase, then adds the U.S. SUNHARBO label figures for 90-day ISTH major bleeding, age older than 75, high-risk TIA, and GI bleeding (DailyMed setid f48aee87-69a8-45a6-afa5-0917807efb70, effective 2026-11-09, NDA221291), while strengths and the answered bleeding question now say there was no significant overall increase and the question points to the label figures in Safety. The same strings are in the Capacitor copy. Educational only. Wording stays DOAC. reviewedBy unchanged.

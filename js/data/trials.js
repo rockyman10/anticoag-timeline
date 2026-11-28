@@ -10,7 +10,7 @@ window.ANTICOAG_TRIALS = [
     "population": "18,113 patients with AF and risk of stroke.",
     "intervention": "Dabigatran 110 mg twice daily or 150 mg twice daily.",
     "comparator": "Warfarin (INR 2–3).",
-    "primaryResult": "Stroke/SE was dabigatran 150 mg 1.11%/y vs warfarin 1.69%/y (RR 0.66; 95% CI 0.53–0.82; P<0.001 superiority). 110 mg 1.53%/y (RR 0.91; 95% CI 0.74–1.11; P<0.001 noninferiority).",
+    "primaryResult": "Stroke/SE was dabigatran 150 mg 1.11%/y vs warfarin 1.69%/y (RR 0.66; 95% CI 0.53–0.82; P<0.001 superiority). 110 mg 1.53%/y (RR 0.91; 95% CI 0.74–1.11; P<0.001 noninferiority). The current U.S. label (Table 11, DailyMed setid ba74e3cd-b06f-4145-b284-5fd6b84ff3c9, v48, §14.1), which counts events identified after the 2009 database lock, reports stroke or systemic embolism of 1.54% (110 mg), 1.12% (150 mg) and 1.72% (warfarin) per year.",
     "safety": "Major bleeding was 110 mg 2.71%/y vs warfarin 3.36%/y (P=0.003). 150 mg 3.11%/y (P=0.31). Higher major GI bleed with 150 mg (1.51%/y vs 1.02%/y). Lower ICH with both doses (0.23%/y and 0.30%/y vs 0.74%/y).",
     "takeaway": "First large DOAC AF trial. Oral dabigatran matches or beats warfarin without routine INR monitoring.",
     "cite": "Connolly SJ, et al. N Engl J Med. 2009;361:1139-1151.",
@@ -61,6 +61,469 @@ window.ANTICOAG_TRIALS = [
         "source": "RE-VERSE AD",
         "addressedBy": "RE-VERSE AD"
       }
+    ],
+    "detail": {
+      "baseline": [
+        {
+          "label": "Age",
+          "value": "Mean 71.4, 71.5 and 71.6 years (110 mg, 150 mg, warfarin).",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Women",
+          "value": "The paper reports 63.6% men overall, so about 36.4% were women.",
+          "src": [
+            "A2",
+            "A4"
+          ]
+        },
+        {
+          "label": "Renal function (CrCl)",
+          "value": "Below 50 mL/min: 3,505 patients; 50–79: 8,766; 80 or above: 5,826 (subgroup counts). CrCl below 30 was excluded.",
+          "src": [
+            "S1",
+            "D1"
+          ]
+        },
+        {
+          "label": "Stroke risk",
+          "value": "Mean CHADS2 2.1, 2.2 and 2.1; CHADS2 3–6 in 32.7%, 32.6% and 32.1%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Prior stroke or TIA",
+          "value": "19.9%, 20.3% and 19.8%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Aspirin at baseline",
+          "value": "40.0%, 38.7% and 40.6%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "VKA-naive",
+          "value": "Long-term VKA use (lifetime 61 days or more) was 50.1%, 50.2% and 48.6%, so about half were VKA-naive by the trial definition.",
+          "src": [
+            "A1",
+            "A3"
+          ]
+        }
+      ],
+      "endpoints": [
+        {
+          "arms": [
+            "Dabigatran 110 mg",
+            "Dabigatran 150 mg",
+            "Warfarin"
+          ],
+          "unit": "% per year",
+          "comparisons": [
+            "110 mg vs warfarin",
+            "150 mg vs warfarin"
+          ],
+          "rows": [
+            {
+              "label": "Ischemic or unspecified stroke",
+              "values": [
+                "1.34",
+                "0.92",
+                "1.20"
+              ],
+              "effects": [
+                "RR 1.11 (95% CI 0.89–1.40); P=0.35",
+                "RR 0.76 (95% CI 0.60–0.98); P=0.03"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Hemorrhagic stroke",
+              "values": [
+                "0.12",
+                "0.10",
+                "0.38"
+              ],
+              "effects": [
+                "RR 0.31 (95% CI 0.17–0.56); P<0.001",
+                "RR 0.26 (95% CI 0.14–0.49); P<0.001"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Intracranial bleeding",
+              "values": [
+                "0.23",
+                "0.30",
+                "0.74"
+              ],
+              "effects": [
+                "RR 0.31 (95% CI 0.20–0.47); P<0.001",
+                "RR 0.40 (95% CI 0.27–0.60); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Major GI bleeding",
+              "values": [
+                "1.12",
+                "1.51",
+                "1.02"
+              ],
+              "effects": [
+                "RR 1.10 (95% CI 0.86–1.41); P=0.43",
+                "RR 1.50 (95% CI 1.19–1.89); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Myocardial infarction",
+              "values": [
+                "0.72",
+                "0.74",
+                "0.53"
+              ],
+              "effects": [
+                "RR 1.35 (95% CI 0.98–1.87); P=0.07",
+                "RR 1.38 (95% CI 1.00–1.91); P=0.048"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Death from any cause",
+              "values": [
+                "3.75",
+                "3.64",
+                "4.13"
+              ],
+              "effects": [
+                "RR 0.91 (95% CI 0.80–1.03); P=0.13",
+                "RR 0.88 (95% CI 0.77–1.00); P=0.051"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Net clinical benefit outcome",
+              "values": [
+                "7.09",
+                "6.91",
+                "7.64"
+              ],
+              "effects": [
+                "RR 0.92 (95% CI 0.84–1.02); P=0.10",
+                "RR 0.91 (95% CI 0.82–1.00); P=0.04"
+              ],
+              "src": [
+                "E2"
+              ]
+            }
+          ],
+          "note": "Net clinical benefit was stroke, systemic embolism, pulmonary embolism, myocardial infarction, death or major bleeding. All analyses were intention-to-treat. The current U.S. label (Table 11), which counts events identified after the 2009 database lock, reports stroke or systemic embolism of 1.54% (110 mg), 1.12% (150 mg) and 1.72% (warfarin) per year.",
+          "noteSrc": [
+            "E2",
+            "C3",
+            "U1"
+          ]
+        }
+      ],
+      "subgroups": [
+        {
+          "label": "Renal function",
+          "text": "Stroke or systemic embolism with CrCl below 50 mL/min: 2.15 (110 mg), 1.52 (150 mg) and 2.78 (warfarin) %/yr. Interaction P=0.60 (110 mg) and P=0.54 (150 mg).",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Weight",
+          "text": "Below 50 kg (376 patients): 2.58, 2.24 and 5.04 %/yr. Interaction P=0.48 and P=0.42.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Prior VKA use",
+          "text": "Without long-term VKA use: 1.57, 1.07 and 1.67 %/yr; with it: 1.49, 1.15 and 1.70 %/yr. Interaction P=0.72 and P=0.81.",
+          "src": [
+            "S1"
+          ]
+        }
+      ],
+      "nnt": [
+        {
+          "label": "150 mg vs warfarin, stroke or systemic embolism",
+          "value": "About 172 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "150 mg vs warfarin, intracranial bleeding",
+          "value": "About 227 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "110 mg vs warfarin, major bleeding",
+          "value": "About 154 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "150 mg vs warfarin, major GI bleeding (harm)",
+          "value": "About 204 per year.",
+          "src": [
+            "N1"
+          ]
+        }
+      ],
+      "dosing": [
+        {
+          "label": "In the trial",
+          "text": "Fixed, blinded dabigatran 110 mg or 150 mg twice daily with no dose adjustment, against open-label warfarin (INR 2.0–3.0). CrCl below 30 mL/min was excluded. Aspirin below 100 mg per day was permitted; quinidine was prohibited by amendment 2 years after the trial started.",
+          "src": [
+            "D1",
+            "D2"
+          ]
+        },
+        {
+          "label": "Current U.S. label",
+          "text": "The PRADAXA capsule label's NVAF row lists 150 mg twice daily for CrCl above 30 mL/min and 75 mg twice daily for CrCl 15 to 30, with no dosing for CrCl below 15 or dialysis. It also lists 75 mg twice daily for CrCl 30 to 50 with dronedarone or systemic ketoconazole. The 110 mg arm is not in the label's NVAF row, and 75 mg was not a RE-LY arm.",
+          "src": [
+            "L1",
+            "D1"
+          ]
+        }
+      ],
+      "ttr": {
+        "text": "Warfarin group mean time in therapeutic range 64% (Rosendaal method, excluding the first week and after stopping study drug).",
+        "src": [
+          "T1"
+        ]
+      },
+      "conduct": [
+        {
+          "label": "Follow-up",
+          "value": "Median 2.0 years; complete follow-up in 99.9%, 20 patients lost to follow-up.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Stopped study drug",
+          "value": "At 1 year 14.5%, 15.5% and 10.2%; at 2 years 20.7%, 21.2% and 16.6% (higher with dabigatran, P<0.001).",
+          "src": [
+            "C1",
+            "C2"
+          ]
+        },
+        {
+          "label": "Analysis population",
+          "value": "Intention-to-treat for all analyses.",
+          "src": [
+            "C3"
+          ]
+        },
+        {
+          "label": "Noninferiority margin",
+          "value": "Upper bound of the one-sided 97.5% CI for the relative risk below 1.46.",
+          "src": [
+            "C3"
+          ]
+        },
+        {
+          "label": "Blinding",
+          "value": "Dabigatran doses blinded; warfarin open-label; outcome events adjudicated blind to assignment.",
+          "src": [
+            "C4"
+          ]
+        }
+      ],
+      "funding": {
+        "text": "Boehringer Ingelheim. The Population Health Research Institute coordinated the trial and independently managed the database and primary analyses.",
+        "src": [
+          "F1"
+        ]
+      },
+      "limitations": [
+        {
+          "text": "The authors note open-label warfarin could have biased reporting or adjudication; blinded outcome adjudication was used to reduce this risk.",
+          "src": [
+            "L2"
+          ]
+        },
+        {
+          "text": "Myocardial infarction was more frequent with both doses in the 2009 report (0.72 and 0.74 vs 0.53 %/yr), and the authors call the explanation uncertain.",
+          "src": [
+            "L3",
+            "E1"
+          ]
+        }
+      ]
+    },
+    "sourceNotes": [
+      {
+        "id": "A1",
+        "doc": "main",
+        "locus": "Main p.1143 (PDF p.5), Table 1 (110 mg / 150 mg / warfarin)",
+        "quote": "Age 71.4±8.6 / 71.5±8.8 / 71.6±8.6. Male sex 3865/6015 (64.3) / 3840/6076 (63.2) / 3809/6022 (63.3). CHADS2 2.1±1.1 / 2.2±1.2 / 2.1±1.1; 3–6: (32.7) / (32.6) / (32.1). Previous stroke or TIA 1195/6015 (19.9) / 1233/6076 (20.3) / 1195/6022 (19.8). Aspirin 2404/6013 (40.0) / 2352/6075 (38.7) / 2442/6017 (40.6). Long-term VKA therapy 3011/6015 (50.1) / 3049/6076 (50.2) / 2929/6022 (48.6); long-term = lifetime VKA use of 61 or more days."
+      },
+      {
+        "id": "A2",
+        "doc": "main",
+        "locus": "Main p.1142 (PDF p.4), Results",
+        "quote": "The mean age of the patients was 71 years, and 63.6% were men. Half the patients had received long-term therapy with vitamin K antagonists."
+      },
+      {
+        "id": "A3",
+        "doc": "main",
+        "locus": "Main p.1142 (PDF p.4), Statistical Analysis",
+        "quote": "patients who had not received long-term therapy with a vitamin K antagonist (i.e., had a total lifetime use of <61 days) and those who had (i.e., had a total lifetime use of ≥61 days)."
+      },
+      {
+        "id": "A4",
+        "doc": "arithmetic",
+        "locus": "Derived from A2",
+        "quote": "Men 63.6% (A2).",
+        "arithmetic": "Women = 100 − 63.6 = 36.4%."
+      },
+      {
+        "id": "E1",
+        "doc": "main",
+        "locus": "Main p.1144 (PDF p.6), Table 2 (2009 paper; 110 mg / 150 mg / warfarin, %/yr; RR vs warfarin)",
+        "quote": "Hemorrhagic 0.12 / 0.10 / 0.38; 0.31 (0.17–0.56) <0.001; 0.26 (0.14–0.49) <0.001. Ischemic or unspecified 1.34 / 0.92 / 1.20; 1.11 (0.89–1.40) 0.35; 0.76 (0.60–0.98) 0.03. Myocardial infarction 0.72 / 0.74 / 0.53; 1.35 (0.98–1.87) 0.07; 1.38 (1.00–1.91) 0.048. Death from any cause 3.75 / 3.64 / 4.13; 0.91 (0.80–1.03) 0.13; 0.88 (0.77–1.00) 0.051. Relative Risk (95% CI)."
+      },
+      {
+        "id": "E2",
+        "doc": "main",
+        "locus": "Main p.1146 (PDF p.8), Table 3 (2009 paper)",
+        "quote": "Gastrointestinal 1.12 / 1.51 / 1.02; 1.10 (0.86–1.41) 0.43; 1.50 (1.19–1.89) <0.001. Intracranial bleeding 0.23 / 0.30 / 0.74; 0.31 (0.20–0.47) <0.001; 0.40 (0.27–0.60) <0.001. Net clinical benefit outcome 7.09 / 6.91 / 7.64; 0.92 (0.84–1.02) 0.10; 0.91 (0.82–1.00) 0.04. Major bleeding 2.71 / 3.11 / 3.36. Footnote: net clinical benefit = stroke, systemic embolism, pulmonary embolism, myocardial infarction, death, or major bleeding. 95% CI."
+      },
+      {
+        "id": "U1",
+        "doc": "label",
+        "locus": "PRADAXA label (setid ba74e3cd-b06f-4145-b284-5fd6b84ff3c9, v48), Section 14.1, Table 11",
+        "quote": "Patients (% per yr) with events 135 (1.12%) [150 mg] / 183 (1.54%) [110 mg] / 203 (1.72%) [warfarin]; HR vs warfarin 0.65 (0.52, 0.81) and 0.89 (0.73, 1.09).",
+        "note": "Label Table 11 figures. The 2010 letter (PMID 21047252) printed its own revised table, which was not checked against the letter; it is not the source of these numbers."
+      },
+      {
+        "id": "S1",
+        "doc": "main",
+        "locus": "Main p.1149 (PDF p.11), Figure 2 (stroke or systemic embolism, % per yr: 110 mg / 150 mg / warfarin; P for interaction 110 mg, 150 mg)",
+        "quote": "Long-term VKA No 9,123: 1.57 / 1.07 / 1.67; Yes 8,989: 1.49 / 1.15 / 1.70; P 0.72, 0.81. Weight <50 kg 376: 2.58 / 2.24 / 5.04; P 0.48, 0.42. Creatinine clearance <50 ml/min 3,505: 2.15 / 1.52 / 2.78; 50–79 ml/min 8,766; ≥80 ml/min 5,826; P 0.60, 0.54. No age subgroup in Figure 2."
+      },
+      {
+        "id": "N1",
+        "doc": "arithmetic",
+        "locus": "Derived from Table 2 (p.1144) and Table 3 (p.1146) annual rates",
+        "quote": "Stroke or SE 1.69 − 1.11 = 0.58 %/yr (150 mg). Intracranial bleeding 0.74 − 0.30 = 0.44 %/yr (150 mg). Major bleeding 3.36 − 2.71 = 0.65 %/yr (110 mg). Major GI bleeding 1.51 − 1.02 = 0.49 %/yr (150 mg, harm).",
+        "arithmetic": "100/0.58 = 172.4 (about 172); 100/0.44 = 227.3 (about 227); 100/0.65 = 153.8 (about 154); 100/0.49 = 204.1 (about 204). Per year of treatment; assumes constant annual rates; median follow-up 2.0 years."
+      },
+      {
+        "id": "D1",
+        "doc": "main",
+        "locus": "Main p.1140 (PDF p.2), Study Participants and Procedures",
+        "quote": "a creatinine clearance of less than 30 ml per minute [excluded] ... capsules containing either 110 mg or 150 mg of the drug, to be taken twice daily. Warfarin ... adjusted locally to an international normalized ratio (INR) of 2.0 to 3.0 ... Concomitant use of aspirin (at a dose of <100 mg per day) or other antiplatelet agents was permitted."
+      },
+      {
+        "id": "D2",
+        "doc": "main",
+        "locus": "Main p.1141 (PDF p.3), Procedures",
+        "quote": "Quinidine use was permitted until 2 years after the trial started, when the protocol was amended to prohibit its use.",
+        "note": "Fixed (blinded) dabigatran doses are also stated in the abstract, p.1139."
+      },
+      {
+        "id": "L1",
+        "doc": "label",
+        "locus": "PRADAXA capsules label (setid ba74e3cd-b06f-4145-b284-5fd6b84ff3c9, v48, effective 2025-06-25), Section 2.2",
+        "quote": "Reduction in Risk of Stroke and Systemic Embolism in Non-valvular AF: CrCl > 30 mL/min: 150 mg twice daily; CrCl 15 to 30 mL/min: 75 mg twice daily; CrCl < 15 mL/min or on dialysis: Dosing recommendations cannot be provided; CrCl 30 to 50 mL/min with concomitant use of P-gp inhibitors: Reduce dosage to 75 mg twice daily if given with P-gp inhibitors dronedarone or systemic ketoconazole.",
+        "note": "110 mg is not listed in the NVAF row."
+      },
+      {
+        "id": "T1",
+        "doc": "main",
+        "locus": "Main p.1142 (PDF p.4), Results; method p.1140",
+        "quote": "In the warfarin group, the mean percentage of the study period during which the INR was within the therapeutic range was 64%. Method of Rosendaal, excluding INRs from the first week and after discontinuation of the study drug."
+      },
+      {
+        "id": "C1",
+        "doc": "main",
+        "locus": "Main p.1142 (PDF p.4), Follow-up Data",
+        "quote": "The median duration of the follow-up period was 2.0 years, and complete follow-up was achieved in 99.9% of patients, with 20 patients lost to follow-up. The rates of discontinuation ... were 14.5%, 15.5%, and 10.2%, respectively, at 1 year and 20.7%, 21.2%, and 16.6% at 2 years."
+      },
+      {
+        "id": "C2",
+        "doc": "main",
+        "locus": "Main p.1147 (PDF p.9), Table 4 footnote",
+        "quote": "Rates of discontinuation at 1 and 2 years were higher with dabigatran than with warfarin (P<0.001)."
+      },
+      {
+        "id": "C3",
+        "doc": "main",
+        "locus": "Main p.1141 (PDF p.3), Statistical Analysis",
+        "quote": "the upper bound of the one-sided 97.5% confidence interval for the relative risk ... needed to fall below 1.46 ... All analyses were based on the intention-to-treat principle."
+      },
+      {
+        "id": "C4",
+        "doc": "main",
+        "locus": "Main p.1139–1141 (PDF p.1–3), Abstract and Outcomes",
+        "quote": "fixed doses of dabigatran — 110 mg or 150 mg twice daily — [in a blinded fashion] or, in an unblinded fashion, adjusted-dose warfarin ... Each primary and secondary outcome event was adjudicated by two independent investigators who were unaware of the treatment assignments."
+      },
+      {
+        "id": "F1",
+        "doc": "main",
+        "locus": "Main p.1140 (PDF p.2), Trial Design",
+        "quote": "The study was funded by Boehringer Ingelheim and was coordinated by the Population Health Research Institute (Hamilton, ON, Canada), which independently managed the database and performed the primary data analyses."
+      },
+      {
+        "id": "L2",
+        "doc": "main",
+        "locus": "Main p.1148 (PDF p.10), Discussion",
+        "quote": "The use of open-label warfarin could have introduced a bias in the reporting or adjudication of events. This risk was reduced by the implementation of several validated procedures, including blinded evaluation of outcome events."
+      },
+      {
+        "id": "L3",
+        "doc": "main",
+        "locus": "Main p.1148 (PDF p.10), Discussion",
+        "quote": "The rate of myocardial infarction was higher with both doses of dabigatran than with warfarin ... The explanation for this finding is therefore uncertain."
+      }
+    ],
+    "sources": [
+      {
+        "label": "RE-LY Supplementary Appendix",
+        "citation": "Connolly SJ, et al. N Engl J Med. 2009;361:1139-1151, Supplementary Appendix (NEJM.org). PMID 19717844.",
+        "url": "https://doi.org/10.1056/NEJMoa0905561"
+      },
+      {
+        "label": "Newly identified events in the RE-LY trial (letter)",
+        "citation": "Connolly SJ, et al. N Engl J Med. 2010;363:1875-1876. PMID 21047252.",
+        "url": "https://doi.org/10.1056/NEJMc1007378"
+      },
+      {
+        "label": "PRADAXA (dabigatran etexilate) capsules U.S. prescribing information",
+        "citation": "PRADAXA capsules. DailyMed setid ba74e3cd-b06f-4145-b284-5fd6b84ff3c9. Version 48, effective 2025-06-25.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba74e3cd-b06f-4145-b284-5fd6b84ff3c9"
+      }
     ]
   },
   {
@@ -84,7 +547,7 @@ window.ANTICOAG_TRIALS = [
     "background": "After RE-LY, once-daily factor Xa inhibition was tested in a higher-risk AF population where warfarin alternatives were still needed.",
     "designNotes": "Double-blind randomized trial. Rivaroxaban 20 mg daily (15 mg if CrCl 30–49) vs warfarin. N≈14,264 moderate–high risk nonvalvular AF.",
     "strengths": "Large, higher-risk cohort. Once-daily dosing relevant to adherence. Less intracranial/fatal bleeding vs warfarin.",
-    "limitations": "Per-protocol primary framing drew scrutiny. Intention-to-treat did not show superiority (P=0.12). More GI bleeding. Warfarin mean time in therapeutic range was 55% (modest vs some AF trials).",
+    "limitations": "The prespecified primary analysis was per-protocol, as-treated; in the intention-to-treat analysis rivaroxaban was noninferior but not superior (P=0.12). More GI bleeding. Warfarin mean time in therapeutic range was 55%, lower than the 64 to 68% reported in other new-anticoagulant AF trials, per the paper.",
     "journalClub": "ROCKET-AF established once-daily rivaroxaban as a warfarin alternative in higher-risk AF, with ICH benefit but GI bleeding trade-off.",
     "guidelines": [
       {
@@ -123,6 +586,475 @@ window.ANTICOAG_TRIALS = [
         "text": "Does rivaroxaban work in AF with rheumatic heart disease, which was excluded? INVICTUS later found VKA outperformed rivaroxaban in that population.",
         "source": "INVICTUS",
         "addressedBy": "INVICTUS"
+      }
+    ],
+    "detail": {
+      "baseline": [
+        {
+          "label": "Age",
+          "value": "Median 73 years (IQR 65–78); a quarter were 78 or older.",
+          "src": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "label": "Women",
+          "value": "39.7%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Renal function (CrCl)",
+          "value": "Median 67 mL/min (IQR 52–88 vs 52–86), Cockcroft–Gault.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Stroke risk",
+          "value": "Mean CHADS2 3.48 vs 3.46; mean 3.5 and median 3.0 overall.",
+          "src": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "label": "Prior stroke, systemic embolism or TIA",
+          "value": "54.9% vs 54.6%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Previous aspirin use",
+          "value": "36.3% vs 36.7%. During the trial, 34.9% vs 36.2% took aspirin with the study drug.",
+          "src": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "label": "VKA-naive",
+          "value": "Previous VKA use was reported by 62.4%, so about 37.6% were VKA-naive.",
+          "src": [
+            "A2",
+            "A3"
+          ]
+        }
+      ],
+      "endpoints": [
+        {
+          "arms": [
+            "Rivaroxaban",
+            "Warfarin"
+          ],
+          "unit": "events per 100 patient-years",
+          "comparisons": [
+            "Rivaroxaban vs warfarin"
+          ],
+          "rows": [
+            {
+              "label": "Ischemic stroke",
+              "values": [
+                "1.34",
+                "1.42"
+              ],
+              "effects": [
+                "HR 0.94 (95% CI 0.75–1.17); P=0.581"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Hemorrhagic stroke",
+              "values": [
+                "0.26",
+                "0.44"
+              ],
+              "effects": [
+                "HR 0.59 (95% CI 0.37–0.93); P=0.024"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Intracranial hemorrhage",
+              "values": [
+                "0.5",
+                "0.7"
+              ],
+              "effects": [
+                "HR 0.67 (95% CI 0.47–0.93); P=0.02"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Major bleeding",
+              "values": [
+                "3.6",
+                "3.4"
+              ],
+              "effects": [
+                "HR 1.04 (95% CI 0.90–1.20); P=0.58"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Fatal bleeding",
+              "values": [
+                "0.2",
+                "0.5"
+              ],
+              "effects": [
+                "HR 0.50 (95% CI 0.31–0.79); P=0.003"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Myocardial infarction",
+              "values": [
+                "0.91",
+                "1.12"
+              ],
+              "effects": [
+                "HR 0.81 (95% CI 0.63–1.06); P=0.121"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Death from any cause, on treatment",
+              "values": [
+                "1.87",
+                "2.21"
+              ],
+              "effects": [
+                "HR 0.85 (95% CI 0.70–1.02); P=0.073"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Death from any cause, intention-to-treat",
+              "values": [
+                "4.5",
+                "4.9"
+              ],
+              "effects": [
+                "HR 0.92 (95% CI 0.82–1.03); P=0.15"
+              ],
+              "src": [
+                "E4"
+              ]
+            }
+          ],
+          "note": "Efficacy rows are the as-treated safety population during treatment unless labeled. Bleeding rows are the safety population during treatment. No net clinical outcome was reported. Major GI bleeding (upper, lower and rectal) occurred in 224 of 7111 patients (3.15%) vs 154 of 7125 (2.16%) during treatment (P<0.001); the paper reports no per-100-patient-year rate or hazard ratio for it.",
+          "noteSrc": [
+            "E1",
+            "E2",
+            "E3",
+            "E3b"
+          ]
+        }
+      ],
+      "subgroups": [
+        {
+          "label": "Age 75 or older",
+          "text": "Stroke or systemic embolism 4.06% vs 5% of patients (HR 0.8; 95% CI 0.63–1.02). Interaction P=0.313.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Renal function",
+          "text": "CrCl below 50 mL/min: 5.17% vs 5.89% (HR 0.88; 95% CI 0.65–1.19). Interaction P=0.900.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Weight 70 kg or less",
+          "text": "HR 0.86 (95% CI 0.65–1.14). Interaction P=0.713.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Prior VKA use",
+          "text": "HR 0.97 (95% CI 0.78–1.19) with prior VKA use and 0.76 (95% CI 0.59–0.98) without. Interaction P=0.160.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Center TTR",
+          "text": "HR by quartile of center TTR: 0.70, 0.89, 0.89 and 0.74 (highest quartile 1.33 vs 1.80 per 100 patient-years). Interaction P=0.736.",
+          "src": [
+            "S2"
+          ]
+        }
+      ],
+      "nnt": [
+        {
+          "label": "Hemorrhagic stroke",
+          "value": "About 556 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "Major GI bleeding (harm)",
+          "value": "About 101 over the on-treatment period (median exposure 590 days).",
+          "src": [
+            "N1"
+          ]
+        }
+      ],
+      "dosing": [
+        {
+          "label": "In the trial",
+          "text": "Rivaroxaban 20 mg once daily, or 15 mg once daily with CrCl 30 to 49 mL/min, against warfarin (target INR 2.0–3.0), double-blind with sham INRs.",
+          "src": [
+            "D1"
+          ]
+        },
+        {
+          "label": "Current U.S. label",
+          "text": "The XARELTO label lists 20 mg once daily with the evening meal for CrCl above 50 mL/min and 15 mg once daily for CrCl 50 or below, and notes CrCl below 30 was not studied. The label describes the ROCKET AF 15 mg group as CrCl 30 to 50; the NEJM paper says 30 to 49.",
+          "src": [
+            "L1",
+            "D1"
+          ]
+        }
+      ],
+      "ttr": {
+        "text": "Warfarin group INR 2.0–3.0 a mean 55% of the time (median 58%; IQR 43–71). The paper notes this was lower than other new-anticoagulant AF trials (64 to 68%).",
+        "src": [
+          "T1",
+          "T2"
+        ]
+      },
+      "conduct": [
+        {
+          "label": "Follow-up",
+          "value": "Median follow-up 707 days (intention-to-treat); median treatment exposure 590 days.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Stopped study drug early",
+          "value": "23.7% vs 22.2% stopped permanently before an end point and before the termination date.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Lost to follow-up",
+          "value": "32 patients. 93 patients at one site were excluded from all efficacy analyses for Good Clinical Practice violations.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Analysis populations",
+          "value": "Primary: per-protocol, as-treated. Superiority: safety population on treatment. Intention-to-treat tested for noninferiority and superiority.",
+          "src": [
+            "C2"
+          ]
+        },
+        {
+          "label": "Noninferiority margin",
+          "value": "1.46 (one-sided alpha 0.025); 405 events prespecified.",
+          "src": [
+            "C2"
+          ]
+        },
+        {
+          "label": "End-of-study transition",
+          "value": "More primary events in the first month after stopping blinded rivaroxaban than warfarin (22 vs 7; P=0.008); median time to therapeutic INR 13 vs 3 days.",
+          "src": [
+            "C3"
+          ]
+        }
+      ],
+      "funding": {
+        "text": "Johnson & Johnson Pharmaceutical Research and Development and Bayer HealthCare. The Duke Clinical Research Institute coordinated the trial and ran the primary analyses independently of the sponsors.",
+        "src": [
+          "F1"
+        ]
+      },
+      "limitations": [
+        {
+          "text": "Warfarin TTR (mean 55%) was lower than in other new-anticoagulant AF trials (64 to 68%), though the treatment effect did not differ by center TTR quartile (interaction P=0.74).",
+          "src": [
+            "T2",
+            "S3"
+          ]
+        },
+        {
+          "text": "Superiority was not shown in the intention-to-treat analysis (P=0.12), and more primary events occurred after the end-of-study switch from rivaroxaban to a VKA (22 vs 7; P=0.008).",
+          "src": [
+            "E5",
+            "C3"
+          ]
+        }
+      ]
+    },
+    "sourceNotes": [
+      {
+        "id": "A1",
+        "doc": "main",
+        "locus": "Main p.886 (PDF p.4), Table 1 (intention-to-treat)",
+        "quote": "Age median 73 / 73; IQR 65–78 / 65–78. Female sex 2831 (39.7) / 2832 (39.7). Previous medication use: Aspirin 2586 (36.3) / 2619 (36.7); Vitamin K antagonist 4443 (62.3) / 4461 (62.5). CHADS2 mean 3.48±0.94 / 3.46±0.95. Previous stroke, systemic embolism, or TIA 3916 (54.9) / 3895 (54.6). Creatinine clearance median 67 / 67; IQR 52–88 / 52–86 (Cockcroft–Gault)."
+      },
+      {
+        "id": "A2",
+        "doc": "main",
+        "locus": "Main p.886 (PDF p.4), Results text",
+        "quote": "The median age was 73 years (a quarter of the patients were 78 years of age or older), and 39.7% of the patients were women ... The mean and median CHADS2 scores were 3.5 and 3.0, respectively ... Previous use of vitamin K antagonists was reported by 62.4% of patients. At some time during the study, 34.9% of patients in the rivaroxaban group and 36.2% of those in the warfarin group took aspirin concurrently with the assigned study drug."
+      },
+      {
+        "id": "A3",
+        "doc": "arithmetic",
+        "locus": "Derived from A2",
+        "quote": "Previous VKA use 62.4% (A2).",
+        "arithmetic": "VKA-naive = 100 − 62.4 = 37.6%."
+      },
+      {
+        "id": "E1",
+        "doc": "supp",
+        "locus": "Supplement printed p.17 (PDF p.18), Online Table 4 (safety on-treatment population; events per 100 patient-years)",
+        "quote": "Hemorrhagic 0.26 / 0.44; 0.59 (0.37, 0.93); 0.024. Ischemic 1.34 / 1.42; 0.94 (0.75, 1.17); 0.581. Myocardial infarction 0.91 / 1.12; 0.81 (0.63, 1.06); 0.121. All-cause mortality 1.87 / 2.21; 0.85 (0.70, 1.02); 0.073. 95% CI; 100 Pt-Yr."
+      },
+      {
+        "id": "E2",
+        "doc": "main",
+        "locus": "Main p.890 (PDF p.8), Table 3 (safety population during treatment; no./100 patient-yr)",
+        "quote": "Major bleeding Any 3.6 / 3.4; 1.04 (0.90–1.20); 0.58. Fatal bleeding 0.2 / 0.5; 0.50 (0.31–0.79); 0.003. Intracranial hemorrhage 0.5 / 0.7; 0.67 (0.47–0.93); 0.02. 95% CI; per 100 patient-yr."
+      },
+      {
+        "id": "E3",
+        "doc": "supp",
+        "locus": "Supplement printed p.15 (PDF p.16), Online Table 2 (n (%) of patients; no per-100-patient-year rate)",
+        "quote": "Gastrointestinal (upper, lower, and rectal) 224/7111 (3.15) / 154/7125 (2.16); Combined gastrointestinal bleed rate P<0.001."
+      },
+      {
+        "id": "E3b",
+        "doc": "main",
+        "locus": "Main p.887 (PDF p.5), Results: Safety",
+        "quote": "224 bleeding events (3.2%), as compared with 154 events in the warfarin group (2.2%, P<0.001)."
+      },
+      {
+        "id": "E4",
+        "doc": "main",
+        "locus": "Main p.888 (PDF p.6), Results",
+        "quote": "in the intention-to-treat analysis throughout the trial, there were 582 deaths in the rivaroxaban group and 632 deaths in the warfarin group (4.5% and 4.9% per year, respectively; hazard ratio, 0.92; 95% CI, 0.82 to 1.03; P = 0.15)."
+      },
+      {
+        "id": "E5",
+        "doc": "main",
+        "locus": "Main p.887 (PDF p.5), Table 2 and text",
+        "quote": "Intention-to-treat population 269, 2.1 / 306, 2.4; HR 0.88 (0.75–1.03); noninferiority <0.001; superiority 0.12.",
+        "note": "The abstract and Results text print this CI as 0.74 to 1.03; Table 2 prints 0.75 to 1.03."
+      },
+      {
+        "id": "S1",
+        "doc": "supp",
+        "locus": "Supplement printed p.21 (PDF p.22), Online Figure 3 (ITT to site notification; % of patients with event)",
+        "quote": "Age ≥75: 125/3082 (4.06%) / 154/3082 (5%); HR 0.8 (0.63, 1.02); P-value for interaction 0.313. Weight ≤70 kg: 0.86 (0.65, 1.14); P 0.713. CrCl <50 mL/min: 77/1490 (5.17%) / 86/1459 (5.89%); 0.88 (0.65, 1.19); P 0.900. Prior VKA use Yes 0.97 (0.78, 1.19); No 0.76 (0.59, 0.98); P 0.160. 95% CI.",
+        "note": "Image-only forest plot; values transcribed from a rendered crop of the PDF page."
+      },
+      {
+        "id": "S2",
+        "doc": "supp",
+        "locus": "Supplement printed p.18 (PDF p.19), Online Table 5 (center TTR quartiles; per 100 patient-years)",
+        "quote": "0.00–50.6%: HR 0.70 (0.48, 1.03); 50.7–58.5%: 0.89 (0.62, 1.29); 58.6–65.7%: 0.89 (0.62, 1.28); 65.7–100.0%: 1.33 / 1.80, 0.74 (0.49, 1.12). P value for interaction=0.736. 95% CI; 100 Pt-Yr."
+      },
+      {
+        "id": "S3",
+        "doc": "main",
+        "locus": "Main p.888 (PDF p.6), Selected Subgroup Analyses",
+        "quote": "the effect of rivaroxaban did not differ across quartiles of the duration of time that INR values were within the therapeutic range according to study center (P = 0.74 for interaction)."
+      },
+      {
+        "id": "N1",
+        "doc": "arithmetic",
+        "locus": "Derived from Online Table 4 and Online Table 2; median exposure 590 days (main p.886)",
+        "quote": "Hemorrhagic stroke 0.44 − 0.26 = 0.18 per 100 patient-years. Major GI bleeding 3.15 − 2.16 = 0.99% of patients over on-treatment follow-up; median exposure 590 days (p.886).",
+        "arithmetic": "100/0.18 = 555.6 (about 556) per year; 100/0.99 = 101.0 (about 101) over the on-treatment period."
+      },
+      {
+        "id": "D1",
+        "doc": "main",
+        "locus": "Main p.884 (PDF p.2), Study Treatment",
+        "quote": "fixed-dose rivaroxaban (20 mg daily or 15 mg daily in patients with a creatinine clearance of 30 to 49 ml per minute) or adjusted-dose warfarin (target international normalized ratio [INR], 2.0 to 3.0) ... sham values (for patients in the rivaroxaban group receiving placebo warfarin)."
+      },
+      {
+        "id": "L1",
+        "doc": "label",
+        "locus": "XARELTO label (setid 10db92f9-2300-4a80-836b-673e1ae91610, v65, effective 2026-09-10), Section 2.1 Table 1 and Section 14.1",
+        "quote": "Reduction in Risk of Stroke in Nonvalvular Atrial Fibrillation: CrCl >50 mL/min 20 mg once daily, Take with evening meal; CrCl ≤50 mL/min 15 mg once daily, Take with evening meal. Patients with CrCl <30 mL/min were not studied. Section 14.1: XARELTO (at a dose of 20 mg once daily with the evening meal in patients with CrCl >50 mL/min and 15 mg once daily with the evening meal in patients with CrCl 30 to 50 mL/min)."
+      },
+      {
+        "id": "T1",
+        "doc": "main",
+        "locus": "Main p.886 (PDF p.4), Results",
+        "quote": "Among patients in the warfarin group, INR values were within the therapeutic range (2.0 to 3.0) a mean of 55% of the time (median, 58%; interquartile range, 43 to 71)."
+      },
+      {
+        "id": "T2",
+        "doc": "main",
+        "locus": "Main p.889 (PDF p.7), Discussion",
+        "quote": "the proportion of time in which the intensity of anticoagulation was in the therapeutic range (mean, 55%) ... was lower than in previous studies of other new anticoagulants in patients with atrial fibrillation (range, 64 to 68%)."
+      },
+      {
+        "id": "C1",
+        "doc": "main",
+        "locus": "Main p.886 (PDF p.4), Recruitment and Follow-up",
+        "quote": "permanently stopped their assigned therapy before an end-point event and before the termination date were 23.7% in the rivaroxaban group and 22.2% in the warfarin group. The median duration of treatment exposure was 590 days; the median follow-up period was 707 days. Only 32 patients were lost to follow-up ... 93 patients (50 in the rivaroxaban group and 43 in the warfarin group) were excluded from all efficacy analyses before unblinding."
+      },
+      {
+        "id": "C2",
+        "doc": "main",
+        "locus": "Main p.885 (PDF p.3), Statistical Analysis",
+        "quote": "The primary analysis was prespecified to be performed in the per-protocol population ... a minimum of 363 events would provide a power of 95% to calculate a noninferiority margin of 1.46 with a one-sided alpha level of 0.025. However, 405 events were selected ... superiority in the safety population during treatment ... Testing for noninferiority and superiority was also performed in the intention-to-treat population."
+      },
+      {
+        "id": "C3",
+        "doc": "supp",
+        "locus": "Supplement printed p.13 (PDF p.14), Time to Events in Patients Off Treatment",
+        "quote": "the median times to reach therapeutic INR were 13 days for those previously assigned to rivaroxaban versus 3 days for the warfarin group. Significantly more patients transitioning from rivaroxaban than from warfarin developed primary events during the first month after termination of randomized treatment (22 vs. 7; P=0.008)."
+      },
+      {
+        "id": "F1",
+        "doc": "main",
+        "locus": "Main p.884 (PDF p.2), Study Design and Oversight",
+        "quote": "The study was supported by Johnson & Johnson Pharmaceutical Research and Development and Bayer HealthCare. The Duke Clinical Research Institute coordinated the trial, managed the database, and performed the primary analyses independently of the sponsors."
+      }
+    ],
+    "sources": [
+      {
+        "label": "ROCKET AF Supplementary Appendix",
+        "citation": "Patel MR, et al. N Engl J Med. 2011;365:883-891, Supplementary Appendix (NEJM.org). PMID 21830957.",
+        "url": "https://doi.org/10.1056/NEJMoa1009638"
+      },
+      {
+        "label": "XARELTO (rivaroxaban) U.S. prescribing information",
+        "citation": "XARELTO (rivaroxaban). DailyMed setid 10db92f9-2300-4a80-836b-673e1ae91610. Version 65, effective 2026-09-10.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610"
       }
     ]
   },
@@ -165,7 +1097,7 @@ window.ANTICOAG_TRIALS = [
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
-    "caveats": "The 2.5 mg dose follows the trial's age, weight, and creatinine criteria. Under-dosing without criteria is a common error.",
+    "caveats": "The 2.5 mg dose follows the trial's age, weight and creatinine criteria; in ARISTOTLE it was given to 428 apixaban patients (4.7%) who met at least two of them.",
     "practiceTakeaway": "In ARISTOTLE, apixaban 5 mg twice daily lowered stroke or systemic embolism versus warfarin in AF (1.27% vs 1.60% per year; HR 0.79; 95% CI 0.66–0.95). It also caused less major bleeding (2.13% vs 3.09% per year; HR 0.69). Patients who met the trial's dose-reduction criteria took 2.5 mg twice daily.",
     "questionsAnswered": [
       {
@@ -187,6 +1119,498 @@ window.ANTICOAG_TRIALS = [
         "text": "How does apixaban behave when combined with antiplatelet therapy after ACS or PCI? AUGUSTUS later tested apixaban against VKA in that setting.",
         "source": "AUGUSTUS",
         "addressedBy": "AUGUSTUS"
+      }
+    ],
+    "detail": {
+      "baseline": [
+        {
+          "label": "Age",
+          "value": "Median 70 years (IQR 63–76) in both groups; 31.2% vs 31.1% were 75 or older.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Women",
+          "value": "35.3% overall.",
+          "src": [
+            "A2"
+          ]
+        },
+        {
+          "label": "Renal function (CrCl)",
+          "value": "Above 80 mL/min 41.2% vs 41.4%; above 50 to 80 41.9% vs 41.5%; above 30 to 50 15.0% vs 15.2%; 30 or below 1.5% vs 1.5%.",
+          "src": [
+            "A3"
+          ]
+        },
+        {
+          "label": "Stroke risk",
+          "value": "Mean CHADS2 2.1 (SD 1.1); CHADS2 3 or higher in 30.2% of each group.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Prior stroke, TIA or systemic embolism",
+          "value": "19.2% vs 19.7%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Aspirin at randomization",
+          "value": "31.3% vs 30.5%.",
+          "src": [
+            "A3"
+          ]
+        },
+        {
+          "label": "VKA-naive",
+          "value": "Prior VKA use for more than 30 consecutive days was 57.1% vs 57.2%, so 42.9% vs 42.8% were VKA-naive by the trial definition.",
+          "src": [
+            "A1",
+            "A4"
+          ]
+        }
+      ],
+      "endpoints": [
+        {
+          "arms": [
+            "Apixaban",
+            "Warfarin"
+          ],
+          "unit": "% per year",
+          "comparisons": [
+            "Apixaban vs warfarin"
+          ],
+          "rows": [
+            {
+              "label": "Ischemic or uncertain-type stroke",
+              "values": [
+                "0.97",
+                "1.05"
+              ],
+              "effects": [
+                "HR 0.92 (95% CI 0.74–1.13); P=0.42"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Hemorrhagic stroke",
+              "values": [
+                "0.24",
+                "0.47"
+              ],
+              "effects": [
+                "HR 0.51 (95% CI 0.35–0.75); P<0.001"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Intracranial bleeding",
+              "values": [
+                "0.33",
+                "0.80"
+              ],
+              "effects": [
+                "HR 0.42 (95% CI 0.30–0.58); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Major GI bleeding",
+              "values": [
+                "0.76",
+                "0.86"
+              ],
+              "effects": [
+                "HR 0.89 (95% CI 0.70–1.15); P=0.37"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Major or clinically relevant nonmajor bleeding",
+              "values": [
+                "4.07",
+                "6.01"
+              ],
+              "effects": [
+                "HR 0.68 (95% CI 0.61–0.75); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Myocardial infarction",
+              "values": [
+                "0.53",
+                "0.61"
+              ],
+              "effects": [
+                "HR 0.88 (95% CI 0.66–1.17); P=0.37"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Death from any cause",
+              "values": [
+                "3.52",
+                "3.94"
+              ],
+              "effects": [
+                "HR 0.89 (95% CI 0.80–0.99); P=0.047"
+              ],
+              "src": [
+                "E1",
+                "E3"
+              ]
+            },
+            {
+              "label": "Net clinical outcome: stroke, systemic embolism, major bleeding or death",
+              "values": [
+                "6.13",
+                "7.20"
+              ],
+              "effects": [
+                "HR 0.85 (95% CI 0.78–0.92); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            }
+          ],
+          "note": "Efficacy rows are intention-to-treat through the January 30, 2011 cutoff. Bleeding rows and the net clinical outcome use bleeding events from the first dose to 2 days after the last dose. Table 2 prints the death CI upper bound as 0.998.",
+          "noteSrc": [
+            "E1",
+            "E2",
+            "E3"
+          ]
+        }
+      ],
+      "subgroups": [
+        {
+          "label": "Age 75 or older",
+          "text": "Stroke or systemic embolism 1.6 vs 2.2 %/yr (interaction P=0.12 across the age groups). Major bleeding 3.3 vs 5.2 %/yr (interaction P=0.64).",
+          "src": [
+            "S1",
+            "S2"
+          ]
+        },
+        {
+          "label": "Moderate or severe renal impairment",
+          "text": "Stroke or systemic embolism 2.1 vs 2.7 %/yr (interaction P=0.72). Major bleeding 3.2 vs 6.4 %/yr; the bleeding reduction was larger with worse renal function (interaction P=0.03).",
+          "src": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        },
+        {
+          "label": "Weight 60 kg or less",
+          "text": "Stroke or systemic embolism 2.0 vs 3.2 %/yr (interaction P=0.26). Major bleeding 2.3 vs 4.3 %/yr (interaction P=0.22).",
+          "src": [
+            "S1",
+            "S2"
+          ]
+        },
+        {
+          "label": "Prior VKA use",
+          "text": "Stroke or systemic embolism 1.1 vs 1.5 %/yr with prior VKA use and 1.5 vs 1.8 %/yr without (interaction P=0.39).",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "2.5 mg dose group (or matching placebo)",
+          "text": "831 patients. Stroke or systemic embolism 1.7 vs 3.3 %/yr (interaction P=0.22). Major bleeding 3.3 vs 6.7 %/yr (interaction P=0.21).",
+          "src": [
+            "S1",
+            "S2"
+          ]
+        },
+        {
+          "label": "Diabetes",
+          "text": "Major bleeding 3.0 vs 3.1 %/yr with diabetes and 1.9 vs 3.1 %/yr without (interaction P=0.003).",
+          "src": [
+            "S2",
+            "S3"
+          ]
+        }
+      ],
+      "nnt": [
+        {
+          "label": "Paper's per-1000 estimate",
+          "value": "Per 1000 patients treated for 1.8 years, apixaban instead of warfarin prevented 6 strokes, 15 major bleeds and 8 deaths (NNT about 167, 67 and 125 over 1.8 years).",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "Per year, from the annual rates",
+          "value": "Stroke or systemic embolism: about 303 per year. Major bleeding: about 104 per year. Death: about 238 per year.",
+          "src": [
+            "N2"
+          ]
+        }
+      ],
+      "dosing": [
+        {
+          "label": "In the trial",
+          "text": "Apixaban 5 mg twice daily, or 2.5 mg twice daily with two or more of: age 80 or older, weight 60 kg or less, serum creatinine 1.5 mg/dL or higher. 428 apixaban patients (4.7%) and 403 warfarin patients (4.4%) received the 2.5 mg dose or its placebo. Creatinine above 2.5 mg/dL or CrCl below 25 mL/min was excluded.",
+          "src": [
+            "D1",
+            "D2",
+            "D3"
+          ]
+        },
+        {
+          "label": "Current U.S. label",
+          "text": "The ELIQUIS label lists 5 mg twice daily for NVAF and 2.5 mg twice daily with at least 2 of the same three characteristics, so it matches the trial rule. The label notes that efficacy studies did not enroll patients with ESRD on dialysis.",
+          "src": [
+            "L1"
+          ]
+        }
+      ],
+      "ttr": {
+        "text": "Warfarin group INR 2.0–3.0 for a median 66.0% and mean 62.2% of the time (Rosendaal method, excluding the first 7 days and interruptions).",
+        "src": [
+          "T1"
+        ]
+      },
+      "conduct": [
+        {
+          "label": "Follow-up",
+          "value": "Median 1.8 years.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Stopped study drug early",
+          "value": "25.3% vs 27.5% (P=0.001).",
+          "src": [
+            "C2"
+          ]
+        },
+        {
+          "label": "Missing vital status",
+          "value": "380 patients (2.1%): consent withdrawn 1.0% vs 1.2%, lost to follow-up 0.4% vs 0.4%.",
+          "src": [
+            "C2"
+          ]
+        },
+        {
+          "label": "Analysis populations",
+          "value": "Efficacy: intention-to-treat. Bleeding: patients who took at least one dose, from first dose to 2 days after the last.",
+          "src": [
+            "C3"
+          ]
+        },
+        {
+          "label": "Noninferiority margin",
+          "value": "Apixaban had to preserve at least 50% of warfarin's effect: upper 95% CI below 1.38 (and upper 99% CI below 1.44). Superiority was then tested in order for the primary outcome, major bleeding and death.",
+          "src": [
+            "C4",
+            "C5"
+          ]
+        }
+      ],
+      "funding": {
+        "text": "Bristol-Myers Squibb and Pfizer. Sponsor representatives sat on the steering committee, and primary analyses were run at Bristol-Myers Squibb and at the Duke Clinical Research Institute.",
+        "src": [
+          "F1",
+          "F2"
+        ]
+      },
+      "limitations": [
+        {
+          "text": "The paper notes the stroke benefit was mainly from fewer hemorrhagic strokes (4 per 1000 prevented vs 2 per 1000 for ischemic or unknown type); ischemic or uncertain-type stroke alone was not significantly lower (HR 0.92; 95% CI 0.74–1.13).",
+          "src": [
+            "N1",
+            "E1"
+          ]
+        },
+        {
+          "text": "Creatinine above 2.5 mg/dL or CrCl below 25 mL/min was excluded, and only 1.5% of each group had CrCl of 30 mL/min or less.",
+          "src": [
+            "D3",
+            "A3"
+          ]
+        }
+      ]
+    },
+    "sourceNotes": [
+      {
+        "id": "A1",
+        "doc": "main",
+        "locus": "Main p.984 (PDF p.4), Table 1",
+        "quote": "Age median 70 / 70; IQR 63–76 / 63–76. Prior use of VKA for >30 consecutive days 5208 (57.1) / 5193 (57.2). Age ≥75 yr 2850 (31.2) / 2828 (31.1). Prior stroke, TIA, or systemic embolism 1748 (19.2) / 1790 (19.7). CHADS2 mean 2.1±1.1 / 2.1±1.1; ≥3: 2758 (30.2) / 2744 (30.2)."
+      },
+      {
+        "id": "A2",
+        "doc": "main",
+        "locus": "Main p.986 (PDF p.6), Results: Patients and Follow-up",
+        "quote": "The median age was 70 years; 35.3% of the patients were women, and the mean CHADS2 score was 2.1."
+      },
+      {
+        "id": "A3",
+        "doc": "main",
+        "locus": "Main p.985 (PDF p.5), Table 1 (continued)",
+        "quote": "Aspirin 2859 (31.3) / 2773 (30.5). Renal function, creatinine clearance: Normal, >80 ml/min 3761 (41.2) / 3757 (41.4); Mild impairment, >50 to 80 ml/min 3817 (41.9) / 3770 (41.5); Moderate (>30 to 50 ml/min) 1365 (15.0) / 1382 (15.2); Severe (≤30 ml/min) 137 (1.5) / 133 (1.5)."
+      },
+      {
+        "id": "A4",
+        "doc": "arithmetic",
+        "locus": "Derived from A1 (Table 1, p.984); definition Main p.982 (PDF p.2)",
+        "quote": "Prior long-term warfarin or other VKA 57.1% (apixaban) / 57.2% (warfarin). Patients were classified as not having received warfarin previously if they had used a VKA for no more than 30 consecutive days.",
+        "arithmetic": "VKA-naive = 100 − 57.1 = 42.9% (apixaban); 100 − 57.2 = 42.8% (warfarin)."
+      },
+      {
+        "id": "E1",
+        "doc": "main",
+        "locus": "Main p.985 (PDF p.5), Table 2 (ITT, events through January 30, 2011)",
+        "quote": "Ischemic or uncertain type of stroke 162, 0.97 / 175, 1.05; HR 0.92 (0.74–1.13); P 0.42. Hemorrhagic stroke 40, 0.24 / 78, 0.47; 0.51 (0.35–0.75); <0.001. Death from any cause 603, 3.52 / 669, 3.94; 0.89 (0.80–0.998); 0.047. Myocardial infarction 90, 0.53 / 102, 0.61; 0.88 (0.66–1.17); 0.37. Rates %/yr; 95% CI."
+      },
+      {
+        "id": "E2",
+        "doc": "main",
+        "locus": "Main p.987 (PDF p.7), Table 3",
+        "quote": "Intracranial 52, 0.33 / 122, 0.80; HR 0.42 (0.30–0.58); <0.001. Gastrointestinal 105, 0.76 / 119, 0.86; 0.89 (0.70–1.15); 0.37. Major or clinically relevant nonmajor bleeding 613, 4.07 / 877, 6.01; 0.68 (0.61–0.75); <0.001. Stroke, systemic embolism, major bleeding, or death from any cause 1009, 6.13 / 1168, 7.20; 0.85 (0.78–0.92); <0.001. Footnote: bleeding from first dose through 2 days after last dose; 95% CI."
+      },
+      {
+        "id": "E3",
+        "doc": "main",
+        "locus": "Main p.987 (PDF p.7), Key Secondary Outcomes text",
+        "quote": "3.52% per year vs. 3.94% per year; hazard ratio, 0.89; 95% CI, 0.80 to 0.99; P = 0.047."
+      },
+      {
+        "id": "S1",
+        "doc": "main",
+        "locus": "Main p.988 (PDF p.8), Figure 2A (stroke or systemic embolism, %/yr)",
+        "quote": "Prior VKA Yes 102 (1.1) / 138 (1.5); No 110 (1.5) / 127 (1.8); P interaction 0.39. Age ≥75 yr 79 (1.6) / 109 (2.2); P 0.12. Weight ≤60 kg 34 (2.0) / 52 (3.2); P 0.26. Renal impairment severe or moderate 54 (2.1) / 69 (2.7); P 0.72. Apixaban dose 2.5 mg twice daily or placebo n=831, 12 (1.7) / 22 (3.3); P 0.22. Age: <65 yr; 65 to <75 yr; ≥75 yr."
+      },
+      {
+        "id": "S2",
+        "doc": "main",
+        "locus": "Main p.989 (PDF p.9), Figure 2B (major bleeding, %/yr)",
+        "quote": "Age ≥75 yr 151 (3.3) / 224 (5.2); P interaction 0.64. Weight ≤60 kg 36 (2.3) / 62 (4.3); P 0.22. Diabetes Yes 112 (3.0) / 114 (3.1); No 215 (1.9) / 348 (3.1); P 0.003. Renal severe or moderate 73 (3.2) / 142 (6.4); P 0.03. 2.5 mg twice daily or placebo 20 (3.3) / 37 (6.7); P 0.21."
+      },
+      {
+        "id": "S3",
+        "doc": "main",
+        "locus": "Main p.990 (PDF p.10), Subgroups text",
+        "quote": "With respect to major bleeding, the only baseline characteristics for which the interaction was significant were diabetes status and renal function, with a greater reduction in bleeding among patients who did not have diabetes (P = 0.003 for interaction) and among patients with moderate or severe renal impairment (P = 0.03 for interaction)."
+      },
+      {
+        "id": "N1",
+        "doc": "main",
+        "locus": "Main p.990 (PDF p.10), Discussion",
+        "quote": "For every 1000 patients treated for 1.8 years, apixaban, as compared with warfarin, prevented a stroke in 6 patients, major bleeding in 15 patients, and death in 8 patients. The predominant effect on stroke prevention was on hemorrhagic stroke, with prevention of a hemorrhagic stroke in 4 patients per 1000 and prevention of an ischemic or unknown type of stroke in 2 patients per 1000.",
+        "arithmetic": "NNT over 1.8 years = 1000/6 = 166.7 (about 167); 1000/15 = 66.7 (about 67); 1000/8 = 125."
+      },
+      {
+        "id": "N2",
+        "doc": "arithmetic",
+        "locus": "Derived from Table 2 and Table 3 annual rates (Main p.985 and p.987)",
+        "quote": "Stroke or SE 1.60 − 1.27 = 0.33 %/yr; major bleeding 3.09 − 2.13 = 0.96 %/yr; death 3.94 − 3.52 = 0.42 %/yr.",
+        "arithmetic": "NNT per year = 100/0.33 = 303; 100/0.96 = 104.2 (about 104); 100/0.42 = 238.1 (about 238). Assumes a constant annual rate; per year of treatment, not over the whole trial."
+      },
+      {
+        "id": "D1",
+        "doc": "main",
+        "locus": "Main p.983 (PDF p.3), Randomization and Study Drugs",
+        "quote": "apixaban given in 5-mg doses; 2.5-mg doses were used in a subset of patients with two or more of the following criteria: an age of at least 80 years, a body weight of no more than 60 kg, or a serum creatinine level of 1.5 mg per deciliter (133 µmol per liter) or more."
+      },
+      {
+        "id": "D2",
+        "doc": "main",
+        "locus": "Main p.986 (PDF p.6), Results",
+        "quote": "A reduced dose of apixaban (2.5 mg twice daily) or placebo was administered in 428 patients in the apixaban group (4.7%) and 403 in the warfarin group (4.4%)."
+      },
+      {
+        "id": "D3",
+        "doc": "main",
+        "locus": "Main p.982 (PDF p.2), Study Population",
+        "quote": "severe renal insufficiency (serum creatinine level of >2.5 mg per deciliter [221 µmol per liter] or calculated creatinine clearance of <25 ml per minute)."
+      },
+      {
+        "id": "L1",
+        "doc": "label",
+        "locus": "ELIQUIS label (DailyMed setid e9481622-7cc6-418a-acb6-c5450daae9b0, v39, effective 2026-08-17), Highlights (Dosage and Administration, 2.1) and Section 8.6",
+        "quote": "NVAF: The recommended dose is 5 mg orally twice daily. In patients with at least 2 of the following characteristics: age greater than or equal to 80 years, body weight less than or equal to 60 kg, or serum creatinine greater than or equal to 1.5 mg/dL, the recommended dose is 2.5 mg orally twice daily. Section 8.6: Clinical efficacy and safety studies with ELIQUIS did not enroll patients with end-stage renal disease (ESRD) on dialysis."
+      },
+      {
+        "id": "T1",
+        "doc": "main",
+        "locus": "Main p.986 (PDF p.6), Results; method p.983",
+        "quote": "Patients in the warfarin group had an INR in the therapeutic range (2.0 to 3.0) for a median of 66.0% of the time and a mean of 62.2% of the time, after the exclusion of INR values during the first 7 days after randomization and during study-drug interruptions.",
+        "note": "Rosendaal method is named in Statistical Analysis, p.983."
+      },
+      {
+        "id": "C1",
+        "doc": "main",
+        "locus": "Main p.981 (PDF p.1), Abstract",
+        "quote": "The median duration of follow-up was 1.8 years."
+      },
+      {
+        "id": "C2",
+        "doc": "main",
+        "locus": "Main p.986 (PDF p.6), Results",
+        "quote": "discontinued a study drug before the end of the study: 25.3% of the patients in the apixaban group ... versus 27.5% of patients in the warfarin group (P = 0.001). Data on vital status at the end of the trial were missing for 380 patients (2.1%) ... withdrawal of consent ... 92 patients in the apixaban group (1.0%) and 107 patients in the warfarin group (1.2%) ... loss to follow-up ... 35 patients in the apixaban group (0.4%) and 34 in the warfarin group (0.4%)."
+      },
+      {
+        "id": "C3",
+        "doc": "main",
+        "locus": "Main p.984 (PDF p.4), Statistical Analysis",
+        "quote": "The primary and secondary efficacy analyses included all patients who underwent randomization (intention-to-treat population) ... The analyses of bleeding events included all patients who received at least one dose of a study drug and included all events from the time the first dose of a study drug was received until 2 days after the last dose was received."
+      },
+      {
+        "id": "C4",
+        "doc": "main",
+        "locus": "Main p.983 (PDF p.3), Statistical Analysis",
+        "quote": "apixaban preserve at least 50% of the relative reduction ... upper boundary of the 99% confidence interval for the relative risk would be less than 1.44 and that the upper boundary of the 95% confidence interval for the relative risk would be less than 1.38."
+      },
+      {
+        "id": "C5",
+        "doc": "main",
+        "locus": "Main p.982 (PDF p.2), Trial Design",
+        "quote": "prespecified hierarchical sequential testing was performed first on the primary outcome for noninferiority, then on the primary outcome for superiority, then on major bleeding, and finally on death from any cause."
+      },
+      {
+        "id": "F1",
+        "doc": "main",
+        "locus": "Main p.991 (PDF p.11) and Abstract p.981",
+        "quote": "Supported by Bristol-Myers Squibb and Pfizer. (Funded by Bristol-Myers Squibb and Pfizer.)"
+      },
+      {
+        "id": "F2",
+        "doc": "main",
+        "locus": "Main p.982 (PDF p.2), Study Oversight",
+        "quote": "steering committee that included academic investigators and representatives of the sponsors (Bristol-Myers Squibb and Pfizer) ... The primary analyses were performed both at Bristol-Myers Squibb and at the Duke Clinical Research Institute."
+      }
+    ],
+    "sources": [
+      {
+        "label": "ARISTOTLE Supplementary Appendix",
+        "citation": "Granger CB, et al. N Engl J Med. 2011;365:981-992, Supplementary Appendix (NEJM.org). PMID 21870978.",
+        "url": "https://doi.org/10.1056/NEJMoa1107039"
+      },
+      {
+        "label": "ELIQUIS (apixaban) U.S. prescribing information",
+        "citation": "ELIQUIS (apixaban). DailyMed setid e9481622-7cc6-418a-acb6-c5450daae9b0. Version 39, effective 2026-08-17.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9481622-7cc6-418a-acb6-c5450daae9b0"
       }
     ]
   },
@@ -387,7 +1811,7 @@ window.ANTICOAG_TRIALS = [
         "url": "https://doi.org/10.1093/eurheartj/ehae176"
       }
     ],
-    "caveats": "Dose reduction rules affect efficacy. High-dose increased GI bleeding. The trial halved the dose by CrCl, weight, or potent P-glycoprotein inhibitor use (see design notes). The U.S. label's AF dose reduction is by CrCl alone.",
+    "caveats": "Dose reduction rules affect efficacy. High-dose increased GI bleeding. The trial halved the dose by CrCl, weight, or potent P-glycoprotein inhibitor use (see design notes). The U.S. label's AF dose reduction is by CrCl alone. The U.S. label carries a boxed warning on reduced efficacy in NVAF with CrCl above 95 mL/min: in ENGAGE AF-TIMI 48 those patients had more ischemic stroke with edoxaban 60 mg once daily than with warfarin, and the label's limitation of use excludes them.",
     "practiceTakeaway": "In ENGAGE AF-TIMI 48, high-dose edoxaban (60 mg once daily) was noninferior to warfarin for stroke or systemic embolism in AF (1.18% vs 1.50% per year; HR 0.79; 97.5% CI 0.63–0.99). Patients who met the trial's criteria for low creatinine clearance, low weight, or a potent P-glycoprotein inhibitor received half the dose.",
     "questionsAnswered": [
       {
@@ -409,6 +1833,503 @@ window.ANTICOAG_TRIALS = [
         "text": "Is switching frail older adults already stable on a VKA to a DOAC beneficial? FRAIL-AF later found more bleeding after switching.",
         "source": "FRAIL-AF",
         "addressedBy": "FRAIL-AF"
+      }
+    ],
+    "detail": {
+      "baseline": [
+        {
+          "label": "Age",
+          "value": "Median 72 years (IQR 64–78) in all three groups; 40.1% (warfarin), 40.5% (high-dose) and 39.9% (low-dose) were 75 or older.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Women",
+          "value": "37.5% (warfarin), 37.9% (high-dose) and 38.8% (low-dose).",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Renal function (CrCl)",
+          "value": "CrCl 50 mL/min or below in 19.3%, 19.6% and 19.0% (warfarin, high-dose, low-dose). CrCl below 30 was excluded.",
+          "src": [
+            "A1",
+            "D1"
+          ]
+        },
+        {
+          "label": "Stroke risk",
+          "value": "Mean CHADS2 2.8 (SD 1.0); CHADS2 4–6 in 22.6%, 22.9% and 22.2% (warfarin, high-dose, low-dose).",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Prior stroke or TIA",
+          "value": "28.3%, 28.1% and 28.5% (warfarin, high-dose, low-dose).",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Aspirin at randomization",
+          "value": "29.7%, 29.4% and 28.7% (warfarin, high-dose, low-dose).",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "VKA-naive",
+          "value": "Previous VKA use for 60 days or more was 58.8%, 58.8% and 59.2% (warfarin, high-dose, low-dose); 8,663 of 21,105 patients were VKA-naive.",
+          "src": [
+            "A1",
+            "S1"
+          ]
+        },
+        {
+          "label": "Dose halved at randomization",
+          "value": "25.4% in each group.",
+          "src": [
+            "A1"
+          ]
+        }
+      ],
+      "endpoints": [
+        {
+          "arms": [
+            "High-dose edoxaban",
+            "Low-dose edoxaban",
+            "Warfarin"
+          ],
+          "unit": "% per year",
+          "comparisons": [
+            "High-dose vs warfarin",
+            "Low-dose vs warfarin"
+          ],
+          "rows": [
+            {
+              "label": "Ischemic stroke",
+              "values": [
+                "1.25",
+                "1.77",
+                "1.25"
+              ],
+              "effects": [
+                "HR 1.00 (95% CI 0.83–1.19); P=0.97",
+                "HR 1.41 (95% CI 1.19–1.67); P<0.001"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Hemorrhagic stroke",
+              "values": [
+                "0.26",
+                "0.16",
+                "0.47"
+              ],
+              "effects": [
+                "HR 0.54 (95% CI 0.38–0.77); P<0.001",
+                "HR 0.33 (95% CI 0.22–0.50); P<0.001"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Any intracranial bleeding",
+              "values": [
+                "0.39",
+                "0.26",
+                "0.85"
+              ],
+              "effects": [
+                "HR 0.47 (95% CI 0.34–0.63); P<0.001",
+                "HR 0.30 (95% CI 0.21–0.43); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Major GI bleeding",
+              "values": [
+                "1.51",
+                "0.82",
+                "1.23"
+              ],
+              "effects": [
+                "HR 1.23 (95% CI 1.02–1.50); P=0.03",
+                "HR 0.67 (95% CI 0.53–0.83); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Myocardial infarction",
+              "values": [
+                "0.70",
+                "0.89",
+                "0.75"
+              ],
+              "effects": [
+                "HR 0.94 (95% CI 0.74–1.19); P=0.60",
+                "HR 1.19 (95% CI 0.95–1.49); P=0.13"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Death from any cause",
+              "values": [
+                "3.99",
+                "3.80",
+                "4.35"
+              ],
+              "effects": [
+                "HR 0.92 (95% CI 0.83–1.01); P=0.08",
+                "HR 0.87 (95% CI 0.79–0.96); P=0.006"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Death from cardiovascular causes",
+              "values": [
+                "2.74",
+                "2.71",
+                "3.17"
+              ],
+              "effects": [
+                "HR 0.86 (95% CI 0.77–0.97); P=0.013",
+                "HR 0.85 (95% CI 0.76–0.96); P=0.008"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Primary net clinical outcome",
+              "values": [
+                "7.26",
+                "6.79",
+                "8.11"
+              ],
+              "effects": [
+                "HR 0.89 (95% CI 0.83–0.96); P=0.003",
+                "HR 0.83 (95% CI 0.77–0.90); P<0.001"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Stroke or systemic embolism, intention-to-treat overall period",
+              "values": [
+                "1.57",
+                "2.04",
+                "1.80"
+              ],
+              "effects": [
+                "HR 0.87 (97.5% CI 0.73–1.04); P=0.08",
+                "HR 1.13 (97.5% CI 0.96–1.34); P=0.10"
+              ],
+              "src": [
+                "E1",
+                "E1a"
+              ]
+            }
+          ],
+          "note": "High-dose was 60 mg and low-dose 30 mg once daily, each halved for prespecified criteria. Efficacy rows are intention-to-treat over the overall study period. Bleeding rows are the safety population during treatment. The primary net clinical outcome was stroke, systemic embolism, major bleeding or death from any cause.",
+          "noteSrc": [
+            "E1",
+            "E2",
+            "D1"
+          ]
+        }
+      ],
+      "subgroups": [
+        {
+          "label": "Age 75 or older",
+          "text": "Stroke or systemic embolism 1.91 (high-dose), 2.55 (low-dose) and 2.31 (warfarin) %/yr. Interaction P=0.59 (high-dose) and P=0.87 (low-dose).",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Dose halved (CrCl 50 or below, weight 60 kg or less, or verapamil or quinidine)",
+          "text": "Stroke or systemic embolism 2.32, 3.14 and 2.68 %/yr (interaction P=0.97 and P=0.74). Major bleeding 3.05, 1.50 and 4.85 %/yr, a larger bleeding reduction than without dose halving (interaction P=0.02 and P<0.01).",
+          "src": [
+            "S1",
+            "S2",
+            "A2"
+          ]
+        },
+        {
+          "label": "Prior VKA use",
+          "text": "VKA-naive: 1.49, 1.97 and 2.12 %/yr; VKA-experienced: 1.62, 2.08 and 1.60 %/yr. Interaction P=0.03 and P=0.02.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Center TTR",
+          "text": "Centers above 66.4% TTR: 1.41, 1.88 and 1.54 %/yr; 66.4% or below: 1.73, 2.17 and 2.07 %/yr. Interaction P=0.57 and P=0.24.",
+          "src": [
+            "S1"
+          ]
+        }
+      ],
+      "nnt": [
+        {
+          "label": "High-dose vs warfarin, major bleeding",
+          "value": "About 147 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "High-dose vs warfarin, intracranial bleeding",
+          "value": "About 217 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "High-dose vs warfarin, cardiovascular death",
+          "value": "About 233 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "High-dose vs warfarin, major GI bleeding (harm)",
+          "value": "About 357 per year.",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "Low-dose vs warfarin, ischemic stroke (harm)",
+          "value": "About 192 per year.",
+          "src": [
+            "N1"
+          ]
+        }
+      ],
+      "dosing": [
+        {
+          "label": "In the trial",
+          "text": "High-dose 60 mg or low-dose 30 mg once daily, halved at randomization or during the study for CrCl 30 to 50 mL/min, weight 60 kg or less, or verapamil or quinidine (dronedarone added by amendment on December 22, 2010). Standard dosing resumed if the interacting drug was stopped. 5330 patients (25.3%) started on a halved dose.",
+          "src": [
+            "D1",
+            "D2"
+          ]
+        },
+        {
+          "label": "Current U.S. label",
+          "text": "The SAVAYSA label lists 60 mg once daily for NVAF with CrCl above 50 to 95 mL/min and 30 mg once daily for CrCl 15 to 50. Its boxed warning states it is not for use when CrCl is above 95 mL/min, because ENGAGE AF-TIMI 48 patients in that range had more ischemic stroke with 60 mg than with warfarin. Weight and P-glycoprotein inhibitor reductions in the label apply to DVT and PE, not NVAF, and the trial's low-dose regimen is not a U.S. NVAF regimen.",
+          "src": [
+            "L1"
+          ]
+        }
+      ],
+      "ttr": {
+        "text": "Warfarin group median TTR 68.4% (IQR 56.5–77.4); mean 64.9% (SD 18.7). INR was 1.8–3.2 for 83.1% of the treatment period.",
+        "src": [
+          "T1"
+        ]
+      },
+      "conduct": [
+        {
+          "label": "Follow-up",
+          "value": "Median 2.8 years (1022 days); median treatment exposure 907 days.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Completeness",
+          "value": "Primary end point known for 99.5% of 56,346 potential patient-years: one patient was lost to follow-up and 244 withdrew consent.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Stopped study drug permanently",
+          "value": "34.5% (warfarin), 34.4% (high-dose) and 33.0% (low-dose).",
+          "src": [
+            "C2"
+          ]
+        },
+        {
+          "label": "Analysis populations",
+          "value": "Noninferiority: modified intention-to-treat during treatment (at least one dose). Superiority: intention-to-treat over the overall study period.",
+          "src": [
+            "C3",
+            "C3b"
+          ]
+        },
+        {
+          "label": "Noninferiority margin",
+          "value": "Upper bound of the one-sided 97.5% CI below 1.38, preserving at least 50% of warfarin's benefit over placebo.",
+          "src": [
+            "C3"
+          ]
+        }
+      ],
+      "funding": {
+        "text": "Daiichi Sankyo Pharma Development. The TIMI Study Group coordinated the trial and performed all analyses independently using raw data.",
+        "src": [
+          "F1"
+        ]
+      },
+      "limitations": [
+        {
+          "text": "The low-dose regimen had more ischemic stroke than warfarin (1.77 vs 1.25 %/yr; HR 1.41) and an unfavorable intention-to-treat trend for stroke or systemic embolism (HR 1.13; P=0.10).",
+          "src": [
+            "E1",
+            "E1a"
+          ]
+        },
+        {
+          "text": "The U.S. label's boxed warning reports reduced efficacy of 60 mg in NVAF with CrCl above 95 mL/min in ENGAGE AF-TIMI 48 (more ischemic stroke than warfarin).",
+          "src": [
+            "L1"
+          ]
+        }
+      ]
+    },
+    "sourceNotes": [
+      {
+        "id": "A1",
+        "doc": "main",
+        "locus": "Main p.2096 (PDF p.4), Table 1 (warfarin / high-dose / low-dose)",
+        "quote": "Age median 72 / 72 / 72; IQR 64–78. Female sex 2641 (37.5) / 2669 (37.9) / 2730 (38.8). Age ≥75 yr 2820 (40.1) / 2848 (40.5) / 2806 (39.9). Prior stroke or TIA 1991 (28.3) / 1976 (28.1) / 2006 (28.5). CHADS2 2.8±1.0; 4–6: 1591 (22.6) / 1613 (22.9) / 1564 (22.2). Dose reduction at randomization 1787 (25.4) / 1784 (25.4) / 1785 (25.4); Creatinine clearance ≤50 ml/min 1361 (19.3) / 1379 (19.6) / 1334 (19.0); Weight ≤60 kg; Use of verapamil or quinidine. Previous use of VKA for ≥60 days 4138 (58.8) / 4140 (58.8) / 4163 (59.2). Aspirin 2092 (29.7) / 2070 (29.4) / 2018 (28.7)."
+      },
+      {
+        "id": "A2",
+        "doc": "main",
+        "locus": "Main p.2096 (PDF p.4), Table 1 footnote ‡",
+        "quote": "Patients with a creatinine clearance of 50 ml per minute or less, those with a body weight of 60 kg or less, and those who were receiving the concomitant potent P-glycoprotein inhibitors verapamil or quinidine at randomization received a dose of edoxaban that was reduced by 50%."
+      },
+      {
+        "id": "E1",
+        "doc": "main",
+        "locus": "Main p.2098 (PDF p.6), Table 2 (ITT overall study period; % of patients/yr: warfarin / high / low)",
+        "quote": "Intention-to-treat population in the overall study period 1.80 / 1.57 / 2.04; high vs warfarin 0.87 (0.73–1.04) P 0.08; low 1.13 (0.96–1.34) P 0.10. Hemorrhagic 0.47 / 0.26 / 0.16; 0.54 (0.38–0.77) <0.001; 0.33 (0.22–0.50) <0.001. Ischemic 1.25 / 1.25 / 1.77; 1.00 (0.83–1.19) 0.97; 1.41 (1.19–1.67) <0.001.",
+        "note": "95% CI except the ITT primary row, which uses 97.5% CI."
+      },
+      {
+        "id": "E1a",
+        "doc": "main",
+        "locus": "Main p.2093 (PDF p.1), Abstract",
+        "quote": "In the intention-to-treat analysis, there was a trend favoring high-dose edoxaban versus warfarin (hazard ratio, 0.87; 97.5% CI, 0.73 to 1.04; P = 0.08) and an unfavorable trend with low-dose edoxaban versus warfarin (hazard ratio, 1.13; 97.5% CI, 0.96 to 1.34; P = 0.10)."
+      },
+      {
+        "id": "E2",
+        "doc": "main",
+        "locus": "Main p.2101 (PDF p.9), Table 3 (safety cohort during treatment; net clinical outcomes over overall period)",
+        "quote": "Any intracranial bleeding 0.85 / 0.39 / 0.26; 0.47 (0.34–0.63) <0.001; 0.30 (0.21–0.43) <0.001. Gastrointestinal bleeding 1.23 / 1.51 / 0.82; 1.23 (1.02–1.50) 0.03; 0.67 (0.53–0.83) <0.001. Major bleeding 3.43 / 2.75 / 1.61. Net clinical outcome Primary 8.11 / 7.26 / 6.79; 0.89 (0.83–0.96) 0.003; 0.83 (0.77–0.90) <0.001. Primary net clinical outcome = stroke, systemic embolic event, major bleeding, or death from any cause. 95% CI."
+      },
+      {
+        "id": "E3",
+        "doc": "main",
+        "locus": "Main p.2099 (PDF p.7), Table 2 continued (Other end points; rotated table)",
+        "quote": "Death any cause 4.35 / 3.99 / 3.80; 0.92 (0.83–1.01) 0.08; 0.87 (0.79–0.96) 0.006. Cardiovascular causes 3.17 / 2.74 / 2.71; 0.86 (0.77–0.97) 0.013; 0.85 (0.76–0.96) 0.008. Myocardial infarction 0.75 / 0.70 / 0.89; 0.94 (0.74–1.19) 0.60; 1.19 (0.95–1.49) 0.13. 95% CI."
+      },
+      {
+        "id": "S1",
+        "doc": "supp",
+        "locus": "Supplement printed p.32 (PDF p.33), Figure S3 (ITT overall period; %/yr: high / low / warfarin; interaction P high, low)",
+        "quote": "Age >=75 Years 8474: 1.91 / 2.55 / 2.31; 0.59, 0.87. Dose Adjusted Yes 5356: 2.32 / 3.14 / 2.68; 0.97, 0.74. VKA Naive Yes 8663: 1.49 / 1.97 / 2.12; No 12441: 1.62 / 2.08 / 1.60; 0.03, 0.02. Center Level TTR >66.4% 9974: 1.41 / 1.88 / 1.54; <=66.4% 10679: 1.73 / 2.17 / 2.07; 0.57, 0.24. All Patients 21105.",
+        "note": "Image-only forest plot; values transcribed from a rendered crop of the PDF page."
+      },
+      {
+        "id": "S2",
+        "doc": "supp",
+        "locus": "Supplement printed p.33 (PDF p.34), Figure S4 (major bleeding, safety population on treatment)",
+        "quote": "Dose Adjusted Yes 5330: 3.05 / 1.50 / 4.85; interaction p-value 0.02 (high), <0.01 (low).",
+        "note": "Image-only forest plot; values transcribed from a rendered crop of the PDF page."
+      },
+      {
+        "id": "N1",
+        "doc": "arithmetic",
+        "locus": "Derived from Table 2 (p.2098–2099) and Table 3 (p.2101) annual rates",
+        "quote": "Major bleeding 3.43 − 2.75 = 0.68. ICH 0.85 − 0.39 = 0.46. CV death 3.17 − 2.74 = 0.43. Major GI bleeding 1.51 − 1.23 = 0.28 (harm). Ischemic stroke low-dose 1.77 − 1.25 = 0.52 (harm). All % per year.",
+        "arithmetic": "100/0.68 = 147.1 (about 147); 100/0.46 = 217.4 (about 217); 100/0.43 = 232.6 (about 233); 100/0.28 = 357.1 (about 357); 100/0.52 = 192.3 (about 192). Per year of treatment; assumes constant annual rates; median follow-up 2.8 years."
+      },
+      {
+        "id": "D1",
+        "doc": "main",
+        "locus": "Main p.2094–2095 (PDF p.2–3), Study Population and Randomization",
+        "quote": "Key exclusion criteria were ... an estimated creatinine clearance of less than 30 ml per minute ... The high-dose edoxaban group received 60 mg, and the low-dose group 30 mg. For patients in either group, the dose was halved if any of the following characteristics were present at the time of randomization or during the study: estimated creatinine clearance of 30 to 50 ml per minute, a body weight of 60 kg or less, or the concomitant use of verapamil or quinidine ... A protocol amendment on December 22, 2010, mandated similar dose modifications in the case of concomitant use of dronedarone. After randomization, standard dosing was resumed if verapamil, quinidine, or dronedarone was discontinued."
+      },
+      {
+        "id": "D2",
+        "doc": "main",
+        "locus": "Main p.2097 (PDF p.5), Study Drugs",
+        "quote": "A total of 5330 patients (25.3%) received a reduced dose of edoxaban or matching placebo at randomization."
+      },
+      {
+        "id": "L1",
+        "doc": "label",
+        "locus": "SAVAYSA label (setid e77d3400-56ad-11e3-949a-0800200c9a66, v28, effective 2025-07-10), Boxed Warning, Sections 1.1, 2.1, 2.2, 5.1",
+        "quote": "2.1: The recommended dose is 60 mg once daily in patients with CrCL >50 to ≤ 95 mL/min. Do not use SAVAYSA in patients with CrCL > 95 mL/min. Reduce SAVAYSA dose to 30 mg once daily in patients with CrCL 15 to 50 mL/min. Boxed Warning: In the ENGAGE AF-TIMI 48 study, nonvalvular atrial fibrillation patients with CrCL > 95 mL/min had an increased rate of ischemic stroke with SAVAYSA 60 mg once daily compared to patients treated with warfarin. 2.2 (DVT and PE): Reduce dose to 30 mg once daily for patients with CrCL 15 to 50 mL/min or body weight less than or equal to 60 kg or who use certain P-gp inhibitors."
+      },
+      {
+        "id": "T1",
+        "doc": "main",
+        "locus": "Main p.2097 (PDF p.5), Study Drugs",
+        "quote": "In the warfarin group, the median time in the therapeutic range was 68.4% of the treatment period (interquartile range, 56.5 to 77.4), and the mean (±SD) time in the therapeutic range was 64.9±18.7% of the treatment period; the INR was between 1.8 and 3.2 for 83.1% of the treatment period."
+      },
+      {
+        "id": "C1",
+        "doc": "main",
+        "locus": "Main p.2097 (PDF p.5), Patients and Follow-up; Study Drugs",
+        "quote": "Complete information on the primary end point was ascertained for 99.5% of the total 56,346 patient-years of potential follow-up ... One patient was lost to follow-up, and 244 patients withdrew consent ... The median duration of treatment exposure was 907 days, excluding interruptions; the median follow-up was 1022 days (2.8 years)."
+      },
+      {
+        "id": "C2",
+        "doc": "supp",
+        "locus": "Supplement printed p.31 (PDF p.32), Table S1",
+        "quote": "Permanently discontinued study drug at any time 2417 (34.5) / 2415 (34.4) / 2309 (33.0)."
+      },
+      {
+        "id": "C3",
+        "doc": "main",
+        "locus": "Main p.2095 (PDF p.3), Statistical Analysis",
+        "quote": "This analysis included data from patients who underwent randomization and received at least one dose of the study drug during the treatment period (modified intention-to-treat population) ... the upper boundary of the one-sided 97.5% confidence interval for the hazard ratio of the primary efficacy end point comparing edoxaban with warfarin could not exceed 1.38, which was an estimate that preserved at least 50% of the benefit of warfarin over placebo."
+      },
+      {
+        "id": "C3b",
+        "doc": "main",
+        "locus": "Main p.2096 (PDF p.4), Statistical Analysis (continued)",
+        "quote": "was then compared with warfarin in a test of superiority with the use of data from the intention-to-treat population, with all primary-endpoint events that occurred during the overall study period."
+      },
+      {
+        "id": "F1",
+        "doc": "main",
+        "locus": "Main p.2103 (PDF p.11) and p.2094 (PDF p.2)",
+        "quote": "Supported by Daiichi Sankyo Pharma Development. The Thrombolysis in Myocardial Infarction Study Group coordinated the trial and performed all the analyses independently using raw data."
+      }
+    ],
+    "sources": [
+      {
+        "label": "ENGAGE AF-TIMI 48 Supplementary Appendix",
+        "citation": "Giugliano RP, et al. N Engl J Med. 2013;369:2093-2104, Supplementary Appendix (NEJM.org). PMID 24251359.",
+        "url": "https://doi.org/10.1056/NEJMoa1310907"
+      },
+      {
+        "label": "SAVAYSA (edoxaban) U.S. prescribing information",
+        "citation": "SAVAYSA (edoxaban). DailyMed setid e77d3400-56ad-11e3-949a-0800200c9a66. Version 28, effective 2025-07-10.",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e77d3400-56ad-11e3-949a-0800200c9a66"
       }
     ]
   },
@@ -1769,10 +3690,10 @@ window.ANTICOAG_TRIALS = [
     "status": "published",
     "title": "Antithrombotic Therapy after Acute Coronary Syndrome or PCI in Atrial Fibrillation",
     "population": "4,614 patients from 33 countries with AF and ACS and/or PCI, all on a P2Y12 inhibitor background.",
-    "intervention": "This was a 2×2 factorial for 6 months on a P2Y12 inhibitor background, comparing apixaban vs VKA. It also compared aspirin vs placebo (trial protocol; the abstract does not print the doses).",
+    "intervention": "This was a 2×2 factorial for 6 months on a P2Y12 inhibitor background: apixaban (5 mg twice daily, or 2.5 mg twice daily with two or more of age 80 or older, weight 60 kg or less, creatinine 1.5 mg/dL or higher) vs a VKA (target INR 2.0–3.0), and aspirin 81 mg vs matching placebo once daily.",
     "comparator": "VKA with or without aspirin.",
     "primaryResult": "Primary outcome, major or clinically relevant nonmajor (CRNM) bleeding, was apixaban 10.5% vs VKA 14.7% (HR 0.69; 95% CI 0.58–0.81; P<0.001 for both noninferiority and superiority). Aspirin 16.1% vs placebo 9.0% (HR 1.89; 95% CI 1.59–2.24; P<0.001). No significant interactions between the two randomization factors.",
-    "safety": "Death or hospitalization was apixaban 23.5% vs VKA 27.4% (HR 0.83; 95% CI 0.74–0.93; P=0.002), with a similar incidence of ischemic events. For aspirin vs placebo, death or hospitalization and ischemic events were similar. The abstract prints no absolute rates for those comparisons or for the ischemic composite.",
+    "safety": "Death or hospitalization was apixaban 23.5% vs VKA 27.4% (HR 0.83; 95% CI 0.74–0.93; P=0.002); death or ischemic event was 6.7% vs 7.1% (HR 0.93; 95% CI 0.75–1.16). For aspirin vs placebo, death or hospitalization was 26.2% vs 24.7% (HR 1.08; 95% CI 0.96–1.21) and death or ischemic event 6.5% vs 7.3% (HR 0.89; 95% CI 0.71–1.11; not formally tested).",
     "takeaway": "Apixaban plus a P2Y12 inhibitor had less bleeding than VKA, and adding aspirin increased bleeding, with ischemic events reported as similar in both comparisons. The factorial design is why AUGUSTUS is the main teaching trial for both the anticoagulant question and the aspirin question.",
     "cite": "Lopes RD, et al. N Engl J Med. 2019;380:1509-1524.",
     "doi": "10.1056/NEJMoa1817083",
@@ -1783,7 +3704,7 @@ window.ANTICOAG_TRIALS = [
     "designNotes": "This was a 2×2 factorial randomized trial (N≈4,614), comparing apixaban vs VKA. It also compared aspirin vs placebo. On P2Y12 background after ACS and/or PCI.",
     "strengths": "Factorial design separately tested anticoagulant and aspirin questions. Apixaban superior for bleeding vs VKA.",
     "limitations": "Aspirin drop timing and ACS subtypes require nuanced application. Not a pure potent-P2Y12 study.",
-    "journalClub": "The two factorial questions stand apart. Apixaban had less major or CRNM bleeding than a VKA (10.5% vs 14.7%), and aspirin had more major or CRNM bleeding than placebo (16.1% vs 9.0%). The abstract calls ischemic events similar without printing absolute rates, so AUGUSTUS is stronger evidence about bleeding than about ischemic protection.",
+    "journalClub": "The two factorial questions stand apart. Apixaban had less major or CRNM bleeding than a VKA (10.5% vs 14.7%), and aspirin had more major or CRNM bleeding than placebo (16.1% vs 9.0%). Death or ischemic events were 6.7% vs 7.1% (apixaban vs VKA) and 6.5% vs 7.3% (aspirin vs placebo), and the authors note the trial was not large enough to detect differences in less common ischemic outcomes, so AUGUSTUS is stronger evidence about bleeding than about ischemic protection.",
     "guidelines": [
       {
         "society": "ESC",
@@ -1814,6 +3735,590 @@ window.ANTICOAG_TRIALS = [
         "text": "Can the antiplatelet be stopped altogether once patients are stable beyond the first year? AFIRE later studied rivaroxaban alone in AF with stable coronary disease.",
         "source": "AFIRE",
         "addressedBy": "AFIRE"
+      }
+    ],
+    "detail": {
+      "baseline": [
+        {
+          "label": "Age",
+          "value": "Median 70.7 years (IQR 64.2–77.2).",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Women",
+          "value": "29.0%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Renal function",
+          "value": "CrCl was not reported; serum creatinine 1.5 mg/dL or higher in 8.4%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Stroke and bleeding risk",
+          "value": "Mean CHA2DS2-VASc 3.9 (SD 1.6), median 4 (IQR 3–5); mean HAS-BLED 2.9 (SD 0.9), median 3.",
+          "src": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "label": "Prior stroke, TIA or thromboembolism",
+          "value": "13.8%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Index event",
+          "value": "ACS with PCI 37.3%, medically managed ACS 23.9%, elective PCI 38.8%; median 6 days from index event to randomization.",
+          "src": [
+            "A1",
+            "A2"
+          ]
+        },
+        {
+          "label": "P2Y12 inhibitor",
+          "value": "Clopidogrel 92.6%, ticagrelor 6.2%, prasugrel 1.1%.",
+          "src": [
+            "A1"
+          ]
+        },
+        {
+          "label": "Prior anticoagulant use",
+          "value": "29.0% had used a VKA for 30 consecutive days at any time; 49.0% had recently used any oral anticoagulant.",
+          "src": [
+            "A2"
+          ]
+        }
+      ],
+      "endpoints": [
+        {
+          "title": "Apixaban vs VKA",
+          "arms": [
+            "Apixaban",
+            "VKA"
+          ],
+          "unit": "% of patients at 6 months",
+          "comparisons": [
+            "Apixaban vs VKA"
+          ],
+          "rows": [
+            {
+              "label": "ISTH major bleeding",
+              "values": [
+                "3.0",
+                "4.6"
+              ],
+              "effects": [
+                "HR 0.64 (95% CI 0.47–0.86)"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Intracranial hemorrhage",
+              "values": [
+                "0.2",
+                "0.6"
+              ],
+              "effects": [
+                "HR 0.39 (95% CI 0.14–1.12)"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Stroke",
+              "values": [
+                "0.6",
+                "1.1"
+              ],
+              "effects": [
+                "HR 0.50 (95% CI 0.26–0.97)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Myocardial infarction",
+              "values": [
+                "3.1",
+                "3.5"
+              ],
+              "effects": [
+                "HR 0.89 (95% CI 0.65–1.23)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Definite or probable stent thrombosis",
+              "values": [
+                "0.6",
+                "0.8"
+              ],
+              "effects": [
+                "HR 0.77 (95% CI 0.38–1.56)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Death",
+              "values": [
+                "3.3",
+                "3.2"
+              ],
+              "effects": [
+                "HR 1.03 (95% CI 0.75–1.42)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Death or hospitalization",
+              "values": [
+                "23.5",
+                "27.4"
+              ],
+              "effects": [
+                "HR 0.83 (95% CI 0.74–0.93); P=0.002"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Death or ischemic event",
+              "values": [
+                "6.7",
+                "7.1"
+              ],
+              "effects": [
+                "HR 0.93 (95% CI 0.75–1.16); not significant"
+              ],
+              "src": [
+                "E1"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Aspirin vs placebo",
+          "arms": [
+            "Aspirin",
+            "Placebo"
+          ],
+          "unit": "% of patients at 6 months",
+          "comparisons": [
+            "Aspirin vs placebo"
+          ],
+          "rows": [
+            {
+              "label": "ISTH major bleeding",
+              "values": [
+                "4.7",
+                "2.9"
+              ],
+              "effects": [
+                "HR 1.70 (95% CI 1.25–2.31)"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Intracranial hemorrhage",
+              "values": [
+                "0.4",
+                "0.4"
+              ],
+              "effects": [
+                "HR 0.82 (95% CI 0.32–2.07)"
+              ],
+              "src": [
+                "E2"
+              ]
+            },
+            {
+              "label": "Stroke",
+              "values": [
+                "0.9",
+                "0.8"
+              ],
+              "effects": [
+                "HR 1.06 (95% CI 0.56–1.98)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Myocardial infarction",
+              "values": [
+                "2.9",
+                "3.6"
+              ],
+              "effects": [
+                "HR 0.81 (95% CI 0.59–1.12)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Definite or probable stent thrombosis",
+              "values": [
+                "0.5",
+                "0.9"
+              ],
+              "effects": [
+                "HR 0.52 (95% CI 0.25–1.08)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Death",
+              "values": [
+                "3.1",
+                "3.4"
+              ],
+              "effects": [
+                "HR 0.91 (95% CI 0.66–1.26)"
+              ],
+              "src": [
+                "E3"
+              ]
+            },
+            {
+              "label": "Death or hospitalization",
+              "values": [
+                "26.2",
+                "24.7"
+              ],
+              "effects": [
+                "HR 1.08 (95% CI 0.96–1.21); not significant"
+              ],
+              "src": [
+                "E1"
+              ]
+            },
+            {
+              "label": "Death or ischemic event",
+              "values": [
+                "6.5",
+                "7.3"
+              ],
+              "effects": [
+                "HR 0.89 (95% CI 0.71–1.11); not tested"
+              ],
+              "src": [
+                "E1"
+              ]
+            }
+          ],
+          "note": "Bleeding rows are as-treated; efficacy rows are by randomized group. Ischemic event = stroke, myocardial infarction, definite or probable stent thrombosis, or urgent revascularization. GI bleeding and a net clinical outcome were not reported in the main paper.",
+          "noteSrc": [
+            "E3",
+            "C3"
+          ]
+        }
+      ],
+      "subgroups": [
+        {
+          "label": "Age 80 or older",
+          "text": "Apixaban vs VKA, major or clinically relevant nonmajor bleeding: HR 0.85 (95% CI 0.59–1.21), vs 0.68 below 65 and 0.64 at 65 to below 80. Interaction P=0.429.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Weight 60 kg or less",
+          "text": "HR 0.47 (95% CI 0.26–0.87) vs 0.71 (95% CI 0.60–0.84) above 60 kg. Interaction P=0.207.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Serum creatinine 1.5 mg/dL or higher",
+          "text": "HR 0.57 (95% CI 0.33–0.97) vs 0.70 below 1.5. Interaction P=0.452.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "With or without aspirin",
+          "text": "HR 0.71 (95% CI 0.57–0.87) with aspirin and 0.65 (95% CI 0.49–0.86) with placebo. Interaction P=0.635.",
+          "src": [
+            "S1"
+          ]
+        },
+        {
+          "label": "Index event",
+          "text": "HR 0.44 (95% CI 0.28–0.68) for ACS without PCI, 0.68 (95% CI 0.52–0.89) for ACS with PCI and 0.82 (95% CI 0.64–1.04) for elective PCI. Interaction P=0.052.",
+          "src": [
+            "S1"
+          ]
+        }
+      ],
+      "nnt": [
+        {
+          "label": "Apixaban vs VKA, major or clinically relevant nonmajor bleeding",
+          "value": "24 over 6 months (paper's own figure).",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "Apixaban vs VKA, death or hospitalization",
+          "value": "26 over 6 months (paper's own figure).",
+          "src": [
+            "N1"
+          ]
+        },
+        {
+          "label": "Aspirin vs placebo, major or clinically relevant nonmajor bleeding (harm)",
+          "value": "14 over 6 months (paper's own figure).",
+          "src": [
+            "N1"
+          ]
+        }
+      ],
+      "dosing": [
+        {
+          "label": "In the trial",
+          "text": "Apixaban 5 mg twice daily, or 2.5 mg twice daily with two or more of: age 80 or older, weight 60 kg or less, creatinine 1.5 mg/dL or higher (the paper cites the apixaban label's NVAF criteria). 229 of 2290 apixaban patients (10.0%) received 2.5 mg. VKA to INR 2.0–3.0. Aspirin 81 mg or matching placebo once daily. P2Y12 inhibitor chosen by the treating physician. Trial therapy lasted 6 months.",
+          "src": [
+            "D1",
+            "D2"
+          ]
+        },
+        {
+          "label": "Current U.S. label",
+          "text": "The ELIQUIS label's NVAF dosing (5 mg twice daily; 2.5 mg twice daily with at least 2 of the same three characteristics) is unchanged from the criteria the trial used.",
+          "src": [
+            "L1"
+          ]
+        }
+      ],
+      "ttr": {
+        "text": "VKA group median TTR 59% (Rosendaal); mean 55.95%. Median time with INR below 2.0 was 23% and above 3.0 was 3%.",
+        "src": [
+          "T1",
+          "T2"
+        ]
+      },
+      "conduct": [
+        {
+          "label": "Follow-up",
+          "value": "6 months, with a month-7 visit to record therapy transitions.",
+          "src": [
+            "C1"
+          ]
+        },
+        {
+          "label": "Stopped trial drug early",
+          "value": "Apixaban 12.7%, VKA 13.8%, aspirin 16.9%, placebo 14.8%.",
+          "src": [
+            "C2"
+          ]
+        },
+        {
+          "label": "Lost to follow-up",
+          "value": "13 patients (0.3%) for vital status.",
+          "src": [
+            "C2"
+          ]
+        },
+        {
+          "label": "Analysis populations",
+          "value": "Primary bleeding outcome: patients who took at least one dose, to 2 days after stopping (as-treated). Secondary outcomes: all randomized patients through 6 months.",
+          "src": [
+            "C3"
+          ]
+        },
+        {
+          "label": "Noninferiority margin",
+          "value": "Relative margin 1.2 at the upper one-sided 97.5% confidence level.",
+          "src": [
+            "C4"
+          ]
+        },
+        {
+          "label": "Blinding and interaction",
+          "value": "Apixaban vs VKA was open-label; aspirin vs placebo was double-blind. No interaction between the two factors for the primary outcome (P=0.64).",
+          "src": [
+            "C5",
+            "C2"
+          ]
+        }
+      ],
+      "funding": {
+        "text": "Bristol-Myers Squibb and Pfizer. Statistical analyses were performed independently at the Duke Clinical Research Institute, with data-management help from Bristol-Myers Squibb.",
+        "src": [
+          "F1"
+        ]
+      },
+      "limitations": [
+        {
+          "text": "The authors note TTR in the VKA group was modestly lower than in some earlier AF trials.",
+          "src": [
+            "L2"
+          ]
+        },
+        {
+          "text": "The authors note the trial was not large enough to detect potentially important differences in less common ischemic outcomes such as stent thrombosis.",
+          "src": [
+            "L2"
+          ]
+        }
+      ]
+    },
+    "sourceNotes": [
+      {
+        "id": "A1",
+        "doc": "main",
+        "locus": "Main eprint p.5 (PDF p.6), Table 1 (Total column)",
+        "quote": "Age median 70.7; IQR 64.2–77.2. Female sex 1337 (29.0). Serum creatinine ≥1.5 mg/dl 380/4532 (8.4). CHA2DS2-VASc 3.9±1.6. HAS-BLED 2.9±0.9. Stroke, TIA, or thromboembolism 633/4581 (13.8). Clopidogrel 4165/4496 (92.6); Prasugrel 51/4496 (1.1); Ticagrelor 280/4496 (6.2). Acute coronary syndrome and PCI 1714/4595 (37.3); Medically managed acute coronary syndrome 1097/4595 (23.9); Elective PCI 1784/4595 (38.8)."
+      },
+      {
+        "id": "A2",
+        "doc": "main",
+        "locus": "Main eprint p.4 (PDF p.5), Results: Patients",
+        "quote": "The median time from the index event to randomization was 6 days ... The median CHA2DS2-VASc score was 4 (interquartile range, 3 to 5), and the median HAS-BLED score was 3 (interquartile range, 2 to 3). Less than one third of the patients (29.0%) had previous use of a vitamin K antagonist for 30 consecutive days at any time, and approximately half the patients (49.0%) had recently used an oral anticoagulant of any kind."
+      },
+      {
+        "id": "E1",
+        "doc": "main",
+        "locus": "Main eprint p.9 (PDF p.10), Table 2",
+        "quote": "Death or hospitalization 541/2306 (23.5) / 632/2308 (27.4); 0.83 (0.74–0.93); 0.002. Death or ischemic event 154/2306 (6.7) / 163/2308 (7.1); 0.93 (0.75–1.16); NS. Aspirin vs placebo: Death or hospitalization 604/2307 (26.2) / 569/2307 (24.7); 1.08 (0.96–1.21); NS. Death or ischemic event 149/2307 (6.5) / 168/2307 (7.3); 0.89 (0.71–1.11); NT (not tested).",
+        "note": "95% CI; outcomes through 6 months (Table 2 title)."
+      },
+      {
+        "id": "E2",
+        "doc": "main",
+        "locus": "Main eprint p.10 (PDF p.11), Table 3 safety outcomes",
+        "quote": "ISTH major bleeding 69 (3.0) / 104 (4.6); 0.64 (0.47–0.86); aspirin 108 (4.7) / placebo 65 (2.9); 1.70 (1.25–2.31). Intracranial hemorrhage 5 (0.2) / 13 (0.6); 0.39 (0.14–1.12); 8 (0.4) / 10 (0.4); 0.82 (0.32–2.07). 95% CI. At 6 months."
+      },
+      {
+        "id": "E3",
+        "doc": "main",
+        "locus": "Main eprint p.11 (PDF p.12), Table 3 efficacy outcomes and footnote",
+        "quote": "Death 77 (3.3) / 74 (3.2); 1.03 (0.75–1.42); 72 (3.1) / 79 (3.4); 0.91 (0.66–1.26). Stroke 13 (0.6) / 26 (1.1); 0.50 (0.26–0.97); 20 (0.9) / 19 (0.8); 1.06 (0.56–1.98). Myocardial infarction 72 (3.1) / 80 (3.5); 0.89 (0.65–1.23); 68 (2.9) / 84 (3.6); 0.81 (0.59–1.12). ARC definite or probable stent thrombosis 14 (0.6) / 18 (0.8); 0.77 (0.38–1.56); 11 (0.5) / 21 (0.9); 0.52 (0.25–1.08). Footnote: safety outcome analyses as-treated; efficacy by randomized group.",
+        "note": "95% CI."
+      },
+      {
+        "id": "S1",
+        "doc": "supp",
+        "locus": "Supplement printed p.8 (PDF p.9), Figure S1A (major or clinically relevant nonmajor bleeding, apixaban vs VKA)",
+        "quote": "Antiplatelet therapy P 0.635: Aspirin 0.71 (0.57, 0.87); Aspirin placebo 0.65 (0.49, 0.86). Age P 0.429: <65 0.68 (0.47, 0.99); >=65 to <80 0.64 (0.52, 0.80); >=80 0.85 (0.59, 1.21). Weight P 0.207: <=60 kg 0.47 (0.26, 0.87); >60 kg 0.71 (0.60, 0.84). Serum creatinine P 0.452: <1.5 mg/dL 0.70 (0.59, 0.84); >=1.5 mg/dL 0.57 (0.33, 0.97). Indication P 0.052: ACS and no PCI 0.44 (0.28, 0.68); ACS and PCI 0.68 (0.52, 0.89); PCI only 0.82 (0.64, 1.04).",
+        "note": "Image-only forest plot; values transcribed from a rendered crop. 95% CI."
+      },
+      {
+        "id": "N1",
+        "doc": "main",
+        "locus": "Main eprint p.6 (PDF p.7), Results: Bleeding; Death or Hospitalization",
+        "quote": "The number needed to treat over a period of 6 months to avoid one ISTH major or clinically relevant nonmajor bleeding event with apixaban instead of a vitamin K antagonist was 24 ... to avoid one death or hospitalization ... was 26 ... The number needed to harm over a period of 6 months to cause one ... bleeding event with aspirin instead of placebo was 14.",
+        "arithmetic": "Check: 14.7 − 10.5 = 4.2 points, 100/4.2 = 23.8 (24); 27.4 − 23.5 = 3.9, 100/3.9 = 25.6 (26); 16.1 − 9.0 = 7.1, 100/7.1 = 14.1 (14). Over 6 months, not per year."
+      },
+      {
+        "id": "D1",
+        "doc": "main",
+        "locus": "Main eprint p.3 (PDF p.4), Trial Regimen and Outcomes",
+        "quote": "In accordance with the apixaban label instructions for stroke prevention in patients with atrial fibrillation, patients ... were directed to take 5 mg twice daily or to take 2.5 mg twice daily if they met two or more of the following dose-reduction criteria: were at least 80 years of age, had a weight of no more than 60 kg, or had a creatinine level of at least 1.5 mg per deciliter ... target international normalized ratio (INR) within a range of 2.0 to 3.0 ... aspirin at a dose of 81 mg or a matching placebo once daily. After 6 months, patients were transitioned ... The choice of P2Y12 inhibitor was left to the discretion of the treating physician."
+      },
+      {
+        "id": "D2",
+        "doc": "main",
+        "locus": "Main eprint p.4 (PDF p.5), Results",
+        "quote": "A total of 229 of 2290 patients (10.0%) who had been randomly assigned to receive apixaban received the dose of 2.5 mg twice daily."
+      },
+      {
+        "id": "L1",
+        "doc": "label",
+        "locus": "ELIQUIS label (DailyMed setid e9481622-7cc6-418a-acb6-c5450daae9b0, v39, effective 2026-08-17), Highlights (Dosage and Administration, 2.1)",
+        "quote": "NVAF: The recommended dose is 5 mg orally twice daily. In patients with at least 2 of the following characteristics: age greater than or equal to 80 years, body weight less than or equal to 60 kg, or serum creatinine greater than or equal to 1.5 mg/dL, the recommended dose is 2.5 mg orally twice daily."
+      },
+      {
+        "id": "T1",
+        "doc": "main",
+        "locus": "Main eprint p.6 (PDF p.7), Results",
+        "quote": "The median percentage of time in the therapeutic range, as calculated by the Rosendaal method, was 59% among patients assigned to receive a vitamin K antagonist ... time ... INR above 3.0 was 3%, and the median percentage of time with an INR below 2.0 was 23%."
+      },
+      {
+        "id": "T2",
+        "doc": "supp",
+        "locus": "Supplement printed p.21 (PDF p.22), Table S2",
+        "quote": "Time in target INR range (Rosendaal Method): n 1977; Median 58.57% (33.31%, 81.03%); Mean (SD) 55.95% (30.586%)."
+      },
+      {
+        "id": "C1",
+        "doc": "main",
+        "locus": "Main eprint p.3 (PDF p.4), Outcomes",
+        "quote": "All the patients who underwent randomization were to be followed through 6 months, with an additional visit at month 7 to record transitions in antithrombotic therapy."
+      },
+      {
+        "id": "C2",
+        "doc": "main",
+        "locus": "Main eprint p.6 (PDF p.7), Results",
+        "quote": "12.7% stopped apixaban and 13.8% stopped the vitamin K antagonist ... 16.9% stopped aspirin and 14.8% stopped placebo ... A total of 13 patients (0.3%) were lost to follow-up for vital status ... No significant interaction was noted between the two randomization factors with regard to the primary outcome (P = 0.64 for interaction)."
+      },
+      {
+        "id": "C3",
+        "doc": "main",
+        "locus": "Main eprint p.4 (PDF p.5), Statistical Analysis; Outcomes p.3",
+        "quote": "The population for the primary outcome analysis included all the patients who underwent randomization and received at least one dose of a trial drug or placebo. Events were counted ... through 2 days after the permanent discontinuation ... secondary outcome analyses included all the patients who underwent randomization ... through the 6-month visit. Ischemic events (stroke, myocardial infarction, stent thrombosis [definite or probable], or urgent revascularization)."
+      },
+      {
+        "id": "C4",
+        "doc": "main",
+        "locus": "Main eprint p.4 (PDF p.5), Statistical Analysis",
+        "quote": "a prespecified noninferiority relative margin of 1.2 at the upper one-sided 97.5% level of confidence."
+      },
+      {
+        "id": "C5",
+        "doc": "main",
+        "locus": "Main eprint p.3 (PDF p.4), Trial Regimen",
+        "quote": "The treatment regimen comparing apixaban with a vitamin K antagonist was open-label; however, the regimen comparing aspirin with matching placebo was double-blind."
+      },
+      {
+        "id": "F1",
+        "doc": "main",
+        "locus": "Main eprint p.14 (PDF p.15) and p.2 (PDF p.3)",
+        "quote": "Supported by Bristol-Myers Squibb and Pfizer. Although Bristol-Myers Squibb assisted with data management, all the statistical analyses were performed independently at the DCRI."
+      },
+      {
+        "id": "L2",
+        "doc": "main",
+        "locus": "Main eprint p.14 (PDF p.15), Discussion",
+        "quote": "There are limitations to our trial. The time in the therapeutic range for the patients who received a vitamin K antagonist was modestly lower than in some previous randomized trials ... Our trial was not designed to be large enough to detect potentially clinically important differences in less common but important individual ischemic outcomes."
+      }
+    ],
+    "sources": [
+      {
+        "label": "AUGUSTUS Supplementary Appendix",
+        "citation": "Lopes RD, et al. N Engl J Med. 2019;380:1509-1524, Supplementary Appendix (NEJM.org). PMID 30883055.",
+        "url": "https://doi.org/10.1056/NEJMoa1817083"
+      },
+      {
+        "label": "AUGUSTUS published version (open access eprint)",
+        "citation": "White Rose Research Online eprint 143884 (NEJM version; pages numbered 1–16).",
+        "url": "https://eprints.whiterose.ac.uk/id/eprint/143884/1/nejmoa1817083.pdf"
       }
     ]
   },

@@ -2014,7 +2014,19 @@
         border-radius: 0;
       }
     }
-  </style>
+    .dd-sec{border-top:1px solid var(--line);padding:.35rem 0}
+  .dd-sec>summary{cursor:pointer;font-weight:600;list-style:revert}
+  .dd-body{padding:.35rem 0 .2rem}
+  .dd-list{display:grid;grid-template-columns:minmax(8rem,34%) 1fr;gap:.25rem .75rem;margin:0}
+  .dd-list dt{color:var(--muted)} .dd-list dd{margin:0}
+  .dd-tw{overflow-x:auto} .dd-table{border-collapse:collapse;width:100%;font-size:.88em}
+  .dd-table caption{caption-side:top;text-align:left;color:var(--muted);font-size:.85em;padding-bottom:.2rem}
+  .dd-table th,.dd-table td{border-bottom:1px solid var(--line);padding:.25rem .4rem;text-align:left;vertical-align:top}
+  .dd-tt{font-weight:600;margin:.4rem 0 .2rem}
+  .dd-note{color:var(--muted);font-size:.85em;margin:.35rem 0 0}
+  .dd-ul,.dd-ol{margin:0;padding-left:1.1rem} .dd-p{margin:0}
+  @media (max-width:600px){.dd-list{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
   <div class="app">
@@ -3013,6 +3025,45 @@
     else lead = "This card is revealed in this browser.";
     return `<div class="predict-feedback">${wrote}<p>${lead} The key takeaway above is the result already on this card for ${esc(t.acronym)} (${esc(t.indication)}): the intervention compared with the comparator.</p></div>`;
   }
+
+  const DETAIL_SECTIONS = [
+    ["baseline", "Who was enrolled"],
+    ["endpoints", "Other outcomes"],
+    ["subgroups", "Subgroups (hypothesis-generating)"],
+    ["nnt", "Numbers needed to treat"],
+    ["dosing", "Trial dosing and current U.S. label"],
+    ["ttr", "Warfarin control (TTR)"],
+    ["conduct", "Follow-up and analysis"],
+    ["funding", "Funding"],
+    ["limitations", "Limitations"]
+  ];
+  function renderDetailBlock(t) {
+    const D = t && t.detail;
+    if (!D) return "";
+    const rows = L => `<dl class="dd-list">${L.map(it => `<dt>${esc(it.label)}</dt><dd>${esc(it.value ?? it.text)}</dd>`).join("")}</dl>`;
+    const para = o => `<p class="dd-p">${esc(o.text)}</p>`;
+    const plain = L => `<ul class="dd-ul">${L.map(it => `<li>${esc(it.text)}</li>`).join("")}</ul>`;
+    const table = tb => `
+      ${tb.title ? `<div class="dd-tt">${esc(tb.title)}</div>` : ""}
+      <div class="dd-tw"><table class="dd-table">
+        <caption>${esc(tb.unit)}</caption>
+        <thead><tr><th scope="col">Outcome</th>${tb.arms.map(a => `<th scope="col">${esc(a)}</th>`).join("")}${(tb.comparisons || []).map(c => `<th scope="col">${esc(c)}</th>`).join("")}</tr></thead>
+        <tbody>${tb.rows.map(r => `<tr><th scope="row">${esc(r.label)}</th>${r.values.map(v => `<td>${esc(v)}</td>`).join("")}${(r.effects || []).map(e => `<td>${esc(e)}</td>`).join("")}</tr>`).join("")}</tbody>
+      </table></div>
+      ${tb.note ? `<p class="dd-note">${esc(tb.note)}</p>` : ""}`;
+    const body = (k, v) => {
+      if (k === "endpoints") return v.map(table).join("");
+      if (k === "ttr" || k === "funding") return para(v);
+      if (k === "limitations") return plain(v);
+      if (k === "subgroups") return rows(v) + `<p class="dd-note">Subgroup results are hypothesis-generating; interaction P values are shown where the paper reports them.</p>`;
+      return rows(v);
+    };
+    const secs = DETAIL_SECTIONS.filter(([k]) => D[k] && (!Array.isArray(D[k]) || D[k].length))
+      .map(([k, h]) => `<details class="dd-sec"><summary>${h}</summary><div class="dd-body">${body(k, D[k])}</div></details>`).join("");
+    const notes = Array.isArray(t.sourceNotes) ? t.sourceNotes : [];
+    const src = notes.length ? `<details class="dd-sec dd-src"><summary>Sources and page loci</summary><div class="dd-body"><ol class="dd-ol">${notes.map(n => `<li><strong>${esc(n.id)}</strong> · ${esc(n.locus)}${n.arithmetic ? ` · <em>${esc(n.arithmetic)}</em>` : ""}</li>`).join("")}</ol></div></details>` : "";
+    return `<div class="fld dd-wrap" style="margin-top:.55rem"><div class="lab">Deeper detail</div>${secs}${src}</div>`;
+  }
   function renderSummaryAnswer(t, jc, doi) {
     const rec = predictRecord(t.id);
     const g = renderGuidelinesBlock(jc.guidelines, true);
@@ -3031,6 +3082,7 @@
         <div class="fld span2"><div class="lab">Important caveats</div><div class="val">${esc(jc.caveats)}</div></div>
       </div>
       ${gSec}
+      ${renderDetailBlock(t)}
       <div class="cite">${linkifyText(t.cite)}${doi}</div>`;
   }
   function renderPredictGate() {

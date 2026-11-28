@@ -122,7 +122,7 @@ for (const h of HTML) {
 
 // ---------- wording rules ----------
 const EXEMPT_KEYS = new Set(["cite", "doi", "url", "pmid", "href", "reference", "references", "citation", "source", "id"]);
-const TRIAL_ATTRIBUTED = new Set(["population", "intervention", "comparator", "primaryResult", "safety", "designNotes", "title", "cite", "expectedResults", "questionsAnswered", "questionsOpen", "text", "guidelines", "note", "document", "society", "regulatoryNote", "labelGuidance", "guidelineSources"]);
+const TRIAL_ATTRIBUTED = new Set(["population", "intervention", "comparator", "primaryResult", "safety", "designNotes", "title", "cite", "expectedResults", "questionsAnswered", "questionsOpen", "text", "guidelines", "note", "document", "society", "regulatoryNote", "labelGuidance", "guidelineSources", "sourceNotes"]);
 // exam distractors (multiple-choice options) are deliberately wrong statements: listed as INFO
 const DISTRACTOR = p => /ANTICOAG_CACP\.questions\[\d+\]\.choices\[/.test(p);
 const visible = strings.filter(x => !EXEMPT_KEYS.has(x.key) && !/^(https?:|10\.\d)/.test(x.s));
